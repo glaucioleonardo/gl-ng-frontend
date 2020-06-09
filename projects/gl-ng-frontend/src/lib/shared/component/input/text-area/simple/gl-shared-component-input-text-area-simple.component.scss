@@ -1,0 +1,72 @@
+@import "../../assets/style/colors/black";
+@import "../../assets/style/colors/gray";
+@import "../../assets/style/colors/white";
+@import "../../assets/style/fonts/montserrat";
+@import "../../assets/style/components/scrollbar/native-scrollbar";
+@import "../../assets/style/general/required-fields";
+
+:host::ng-deep {
+  display: flex;
+  flex: 1 0 auto;
+
+  .item-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0.5px;
+    flex: 1 0 auto;
+
+    gl-shared-component-title-label-simple {
+      flex-grow: 0;
+    }
+
+    .item-content {
+      @include font-family;
+      resize: none;
+      padding: 0.8em;
+      font-size: 0.45em;
+      text-align: left;
+      flex-grow: 1;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-color: $dark-gray-2;
+      border: none;
+      color: $white;
+      @extend %native-scrollbar;
+
+      &::placeholder {
+        color: $dark-gray;
+      }
+
+      &.light {
+        background-color: $black-translucid-1;
+      }
+    }
+
+    .item-content:-ms-input-placeholder {
+      color: $dark-gray !important;
+    }
+    .item-content.light:-ms-input-placeholder {
+      color: $white-translucid-2 !important;
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  :host::ng-deep {
+    .item-container {
+      .scroll-wrapper {
+        //noinspection CssRedundantUnit
+        height: 0%;
+        .scroll-content {
+          .item-content {
+            height: 100% !important;
+            //noinspection CssRedundantUnit
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}

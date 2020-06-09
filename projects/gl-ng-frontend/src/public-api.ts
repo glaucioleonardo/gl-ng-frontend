@@ -1,0 +1,53 @@
+/*
+ * Public API Surface of gl-ng-frontend
+ */
+// region Main
+export * from './lib/gl-ng-frontend.module';
+//
+
+// region Shared
+export * from './lib/shared/gl-shared.module';
+
+// region Component
+export * from './lib/shared/component/gl-component.module';
+
+export * from './lib/shared/component/footer/simple/gl-shared-component-footer-simple.component';
+export * from './lib/shared/component/footer/container/gl-shared-component-footer-container.component';
+
+export * from './lib/shared/component/input/button/simple/gl-shared-component-input-button-simple.component';
+export * from './lib/shared/component/input/option/simple/gl-shared-component-input-option-simple.component';
+export * from './lib/shared/component/input/text/simple/gl-shared-component-input-text-simple.component';
+export * from './lib/shared/component/input/text/label/gl-shared-component-input-text-label.component';
+export * from './lib/shared/component/input/text-area/simple/gl-shared-component-input-text-area-simple.component';
+export * from './lib/shared/component/input/text-area/label/gl-shared-component-input-text-area-label.component';
+export * from './lib/shared/component/input/button/hyperlink/gl-shared-component-input-button-hyperlink.component';
+
+export * from './lib/shared/component/menu/background/gl-shared-component-menu-background.component';
+export * from './lib/shared/component/menu/item/gl-shared-component-menu-item.component';
+export * from './lib/shared/component/menu/item/gl-shared-component-menu-item.interface';
+export * from './lib/shared/component/menu/gl-shared-component-menu.component';
+export * from './lib/shared/component/menu/gl-shared-component-menu.interface';
+export * from './lib/shared/component/menu/gl-shared-component-menu.service';
+
+export * from './lib/shared/component/modal/alert/gl-shared-component-modal-alert.component';
+export * from './lib/shared/component/modal/alert/gl-shared-component-modal-alert.service';
+export * from './lib/shared/component/modal/header/gl-shared-component-modal-header.component';
+export * from './lib/shared/component/modal/loading/gl-shared-component-modal-loading.component';
+export * from './lib/shared/component/modal/loading/gl-shared-component-modal-loading.service';
+
+export * from './lib/shared/component/title/label/simple/gl-shared-component-title-label-simple.component';
+export * from './lib/shared/component/title/page/gl-shared-component-title-page.component';
+export * from './lib/shared/component/title/label/button/simple/gl-shared-component-title-label-button-simple.component';
+export * from './lib/shared/component/title/label/button/container/gl-shared-component-title-label-button-container.component';
+// endregion
+
+// endregion
+
+// region Core
+export * from './lib/core/gl-core.module';
+
+// region Directives
+export * from './lib/core/directives/autofocus/core-directives-autofocus.directive';
+// endregion
+
+// endregion

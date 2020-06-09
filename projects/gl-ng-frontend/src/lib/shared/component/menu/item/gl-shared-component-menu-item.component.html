@@ -1,0 +1,12 @@
+<li id={this.props.id} class="menu-title {{ itemClass }}">
+  <img [src]="src" class="menu-icons" [alt]="alt"/>
+  <a
+    *ngIf="absolute"
+    [href]="'externalRedirect'"
+    (click)="openAbsoluteLink($event, href)"
+  >{{ content }}</a>
+  <a *ngIf="!absolute"
+     [routerLink]="href"
+     (click)="onClick.emit(null)"
+  >{{ content }}</a>
+</li>

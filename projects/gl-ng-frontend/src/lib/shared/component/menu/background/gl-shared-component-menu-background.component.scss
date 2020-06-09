@@ -1,0 +1,10 @@
+@import "../../assets/style/colors/black";
+
+:host::ng-deep {
+  .menu-background {
+    background-color: $black-translucid-3;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+  }
+}

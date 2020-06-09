@@ -1,0 +1,77 @@
+@import "../../assets/style/colors/gray";
+@import "../../assets/style/colors/gradient";
+@import "../../assets/style/colors/pink";
+@import "../../assets/style/colors/white";
+@import "../../assets/style/fonts/montserrat";
+
+:host::ng-deep {
+  .menu-title {
+    background: $standard-gradient;
+    margin: 0 0 0.14em 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-left: solid $pink 0.2em;
+
+    .material-icons {
+      color: rgba($color: $white, $alpha: 0.6);
+      font-size: 1.2em;
+      padding: 0.3em;
+      margin: 0 0.5em 0 0.3em;
+    }
+
+    .material-icons.expand {
+      position: absolute;
+      color: $white;
+      top: 0.5em;
+      right: 0.3em;
+    }
+
+    .menu-icons {
+      padding: 0.2em 0.5em 0.2em 0.5em;
+      height: 1.5em;
+      width: 1.5em;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 0.6em;
+      @include font-family('light');
+      text-transform: uppercase;
+      color: $white-translucid-4;
+      padding: 1.5em 0.7em;
+      flex-grow: 1;
+    }
+  }
+
+  .menu-title.dark {
+    margin: 0;
+    border-bottom: solid 1px $dark-gray-1-8;
+    border-left: none;
+
+    &:not(hover) {
+      background: $dark-gray-2-3;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background: $dark-gray-1;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .menu-title.translucid {
+    margin: 0;
+    border-bottom: solid 0.5px rgba($white, 0.1);
+    border-left: none;
+
+    &:not(hover) {
+      background: rgba($white, 0.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background: rgba($white, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}

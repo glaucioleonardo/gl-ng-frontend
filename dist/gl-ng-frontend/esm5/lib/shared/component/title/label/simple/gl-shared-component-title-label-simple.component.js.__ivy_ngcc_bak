@@ -1,0 +1,37 @@
+import { __decorate } from "tslib";
+import { Component, Input } from '@angular/core';
+var GlSharedComponentTitleLabelSimpleComponent = /** @class */ (function () {
+    function GlSharedComponentTitleLabelSimpleComponent() {
+        this.class = '';
+        this.required = false;
+        this.requiredLabel = 'Required field';
+    }
+    __decorate([
+        Input()
+    ], GlSharedComponentTitleLabelSimpleComponent.prototype, "labelValue", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentTitleLabelSimpleComponent.prototype, "id", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentTitleLabelSimpleComponent.prototype, "labelAlignment", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentTitleLabelSimpleComponent.prototype, "class", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentTitleLabelSimpleComponent.prototype, "required", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentTitleLabelSimpleComponent.prototype, "requiredLabel", void 0);
+    GlSharedComponentTitleLabelSimpleComponent = __decorate([
+        Component({
+            selector: 'gl-shared-component-title-label-simple',
+            template: "<label\n  class=\"header-data {{ labelAlignment }} {{ class }}\"\n  [attr.for]=\"id\">{{ labelValue }}\n</label>\n<img\n  *ngIf=\"required\"\n  src=\"../../assets/img/icon/label/dot.svg\"\n  class=\"required-fill-dot {{ class }}\"\n  [title]=\"requiredLabel\"\n  alt=\"Required fill icon\">\n",
+            styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .header-data{position:relative;flex-grow:1;font-family:Montserrat,sans-serif;font-weight:700;background-color:#2c2c2f;color:#fff;font-size:.4em;padding:1.25em 1em;text-align:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .header-data.light{background-color:rgba(0,0,0,.3)}:host::ng-deep .header-data.left{text-align:left}:host::ng-deep .header-data.center{text-align:center}:host::ng-deep .header-data.right{text-align:right}:host::ng-deep .header-data.report{background-color:rgba(210,64,119,.8);font-size:.7em;padding:.5em}:host::ng-deep .required-fill-dot{position:absolute;top:.5em;right:.2em;width:.3em;height:.3em}:host::ng-deep .required-fill-dot.light{opacity:.5}"]
+        })
+    ], GlSharedComponentTitleLabelSimpleComponent);
+    return GlSharedComponentTitleLabelSimpleComponent;
+}());
+export { GlSharedComponentTitleLabelSimpleComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC10aXRsZS1sYWJlbC1zaW1wbGUuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Im5nOi8vZ2wtbmctZnJvbnRlbmQvIiwic291cmNlcyI6WyJsaWIvc2hhcmVkL2NvbXBvbmVudC90aXRsZS9sYWJlbC9zaW1wbGUvZ2wtc2hhcmVkLWNvbXBvbmVudC10aXRsZS1sYWJlbC1zaW1wbGUuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLEtBQUssRUFBRSxNQUFNLGVBQWUsQ0FBQztBQU9qRDtJQVVFO1FBTFMsVUFBSyxHQUFHLEVBQUUsQ0FBQztRQUVYLGFBQVEsR0FBRyxLQUFLLENBQUM7UUFDakIsa0JBQWEsR0FBRyxnQkFBZ0IsQ0FBQztJQUUxQixDQUFDO0lBUlI7UUFBUixLQUFLLEVBQUU7a0ZBQVk7SUFDWDtRQUFSLEtBQUssRUFBRTswRUFBSTtJQUNIO1FBQVIsS0FBSyxFQUFFO3NGQUF3QjtJQUN2QjtRQUFSLEtBQUssRUFBRTs2RUFBWTtJQUVYO1FBQVIsS0FBSyxFQUFFO2dGQUFrQjtJQUNqQjtRQUFSLEtBQUssRUFBRTtxRkFBa0M7SUFSL0IsMENBQTBDO1FBTHRELFNBQVMsQ0FBQztZQUNULFFBQVEsRUFBRSx3Q0FBd0M7WUFDbEQsZ1RBQXNFOztTQUV2RSxDQUFDO09BQ1csMENBQTBDLENBV3REO0lBQUQsaURBQUM7Q0FBQSxBQVhELElBV0M7U0FYWSwwQ0FBMEMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIElucHV0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2dsLXNoYXJlZC1jb21wb25lbnQtdGl0bGUtbGFiZWwtc2ltcGxlJyxcbiAgdGVtcGxhdGVVcmw6ICcuL2dsLXNoYXJlZC1jb21wb25lbnQtdGl0bGUtbGFiZWwtc2ltcGxlLmNvbXBvbmVudC5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJy4vZ2wtc2hhcmVkLWNvbXBvbmVudC10aXRsZS1sYWJlbC1zaW1wbGUuY29tcG9uZW50LnNjc3MnXVxufSlcbmV4cG9ydCBjbGFzcyBHbFNoYXJlZENvbXBvbmVudFRpdGxlTGFiZWxTaW1wbGVDb21wb25lbnQge1xuXG4gIEBJbnB1dCgpIGxhYmVsVmFsdWU7XG4gIEBJbnB1dCgpIGlkO1xuICBASW5wdXQoKSBsYWJlbEFsaWdubWVudDogc3RyaW5nO1xuICBASW5wdXQoKSBjbGFzcyA9ICcnO1xuXG4gIEBJbnB1dCgpIHJlcXVpcmVkID0gZmFsc2U7XG4gIEBJbnB1dCgpIHJlcXVpcmVkTGFiZWwgPSAnUmVxdWlyZWQgZmllbGQnO1xuXG4gIGNvbnN0cnVjdG9yKCkgeyB9XG59XG4iXX0=

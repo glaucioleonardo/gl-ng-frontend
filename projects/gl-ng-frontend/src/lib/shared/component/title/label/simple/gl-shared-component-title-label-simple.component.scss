@@ -1,0 +1,54 @@
+@import "../../assets/style/colors/black";
+@import "../../assets/style/colors/gray";
+@import "../../assets/style/colors/pink";
+@import "../../assets/style/colors/white";
+@import "../../assets/style/fonts/montserrat";
+
+:host::ng-deep {
+  display: flex;
+  flex-grow: 1;
+
+  .header-data {
+    position: relative;
+    flex-grow: 1;
+    @include font-family(bold);
+    background-color: $dark-gray-2-3;
+    color: $white;
+    font-size: 0.4em;
+    padding: 1.25em 1em;
+    text-align: center;
+    user-select: none;
+
+    &.light {
+      background-color: $black-translucid-3;
+    }
+
+    &.left {
+      text-align: left;
+    }
+    &.center {
+      text-align: center;
+    }
+    &.right {
+      text-align: right;
+    }
+
+    &.report {
+      background-color: $pink-translucid-8;
+      font-size: 0.7em;
+      padding: 0.5em;
+    }
+  }
+
+  .required-fill-dot {
+    position: absolute;
+    top: 0.5em;
+    right: 0.2em;
+    width: 0.3em;
+    height: 0.3em;
+
+    &.light {
+      opacity: 0.5;
+    }
+  }
+}

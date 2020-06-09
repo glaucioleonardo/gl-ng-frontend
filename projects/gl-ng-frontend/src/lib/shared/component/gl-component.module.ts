@@ -1,0 +1,76 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
+import { GlCoreModule } from '../../core/gl-core.module';
+
+import { GlSharedComponentInputButtonSimpleComponent } from './input/button/simple/gl-shared-component-input-button-simple.component';
+import { GlSharedComponentInputOptionSimpleComponent } from './input/option/simple/gl-shared-component-input-option-simple.component';
+import { GlSharedComponentInputTextSimpleComponent } from './input/text/simple/gl-shared-component-input-text-simple.component';
+import { GlSharedComponentTitleLabelSimpleComponent } from './title/label/simple/gl-shared-component-title-label-simple.component';
+import { GlSharedComponentInputTextLabelComponent } from './input/text/label/gl-shared-component-input-text-label.component';
+import { GlSharedComponentInputTextAreaSimpleComponent } from './input/text-area/simple/gl-shared-component-input-text-area-simple.component';
+import { GlSharedComponentInputTextAreaLabelComponent } from './input/text-area/label/gl-shared-component-input-text-area-label.component';
+import { GlSharedComponentModalAlertComponent } from './modal/alert/gl-shared-component-modal-alert.component';
+import { GlSharedComponentModalHeaderComponent } from './modal/header/gl-shared-component-modal-header.component';
+import { GlSharedComponentModalLoadingComponent } from './modal/loading/gl-shared-component-modal-loading.component';
+import { GlSharedComponentTitlePageComponent } from './title/page/gl-shared-component-title-page.component';
+import { GlSharedComponentTitleLabelButtonSimpleComponent } from './title/label/button/simple/gl-shared-component-title-label-button-simple.component';
+import { GlSharedComponentTitleLabelButtonContainerComponent } from './title/label/button/container/gl-shared-component-title-label-button-container.component';
+import { GlSharedComponentMenuBackgroundComponent } from './menu/background/gl-shared-component-menu-background.component';
+import { GlSharedComponentMenuComponent } from './menu/gl-shared-component-menu.component';
+import { GlSharedComponentMenuItemComponent } from './menu/item/gl-shared-component-menu-item.component';
+import { GlSharedComponentFooterSimpleComponent } from './footer/simple/gl-shared-component-footer-simple.component';
+import { GlSharedComponentInputButtonHyperlinkComponent } from './input/button/hyperlink/gl-shared-component-input-button-hyperlink.component';
+import { GlSharedComponentFooterContainerComponent } from './footer/container/gl-shared-component-footer-container.component';
+
+@NgModule({
+  declarations: [
+    GlSharedComponentFooterContainerComponent,
+    GlSharedComponentFooterSimpleComponent,
+    GlSharedComponentInputButtonSimpleComponent,
+    GlSharedComponentInputButtonHyperlinkComponent,
+    GlSharedComponentInputOptionSimpleComponent,
+    GlSharedComponentInputTextSimpleComponent,
+    GlSharedComponentInputTextLabelComponent,
+    GlSharedComponentInputTextAreaSimpleComponent,
+    GlSharedComponentInputTextAreaLabelComponent,
+    GlSharedComponentModalAlertComponent,
+    GlSharedComponentModalHeaderComponent,
+    GlSharedComponentModalLoadingComponent,
+    GlSharedComponentMenuBackgroundComponent,
+    GlSharedComponentMenuComponent,
+    GlSharedComponentMenuItemComponent,
+    GlSharedComponentTitleLabelSimpleComponent,
+    GlSharedComponentTitleLabelButtonSimpleComponent,
+    GlSharedComponentTitleLabelButtonContainerComponent,
+    GlSharedComponentTitlePageComponent,
+  ],
+  imports: [
+    CommonModule,
+    GlCoreModule,
+    RouterModule
+  ],
+  exports: [
+    GlSharedComponentFooterContainerComponent,
+    GlSharedComponentFooterSimpleComponent,
+    GlSharedComponentInputButtonSimpleComponent,
+    GlSharedComponentInputButtonHyperlinkComponent,
+    GlSharedComponentInputOptionSimpleComponent,
+    GlSharedComponentInputTextAreaSimpleComponent,
+    GlSharedComponentInputTextAreaLabelComponent,
+    GlSharedComponentInputTextLabelComponent,
+    GlSharedComponentInputTextSimpleComponent,
+    GlSharedComponentModalAlertComponent,
+    GlSharedComponentModalHeaderComponent,
+    GlSharedComponentModalLoadingComponent,
+    GlSharedComponentMenuBackgroundComponent,
+    GlSharedComponentMenuComponent,
+    GlSharedComponentMenuItemComponent,
+    GlSharedComponentTitlePageComponent,
+    GlSharedComponentTitleLabelButtonSimpleComponent,
+    GlSharedComponentTitleLabelButtonContainerComponent,
+    GlSharedComponentTitleLabelSimpleComponent,
+  ]
+})
+export class GlComponentModule { }

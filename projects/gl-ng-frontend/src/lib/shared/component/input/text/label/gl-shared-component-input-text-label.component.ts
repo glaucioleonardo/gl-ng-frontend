@@ -1,0 +1,32 @@
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ICurrencyTypes } from 'gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.interface';
+
+@Component({
+  selector: 'gl-shared-component-input-text-label',
+  templateUrl: './gl-shared-component-input-text-label.component.html',
+  styleUrls: ['./gl-shared-component-input-text-label.component.scss']
+})
+export class GlSharedComponentInputTextLabelComponent {
+  @Input() disabled = false;
+  @Input() autocomplete = false;
+  @Input() id: string;
+  @Input() labelAlignment: string;
+  @Input() labelValue: string;
+  @Input() placeholder: string;
+  @Input() itemContentAlignment: string;
+  @Input() class: string;
+  @Input() value: string = null;
+
+  @Input() mask: string | ICurrencyTypes;
+  @Input() maskSymbol: string;
+  @Input() maxLength = 255;
+  @Input() required: boolean;
+
+  @Input() requiredLabel = 'Required field';
+
+  @Output() currentValue = new EventEmitter();
+
+  constructor() { }
+
+  onKeyUp(values) { this.currentValue.emit(values); }
+}

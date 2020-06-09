@@ -1,0 +1,15 @@
+import { EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
+export declare class GlSharedComponentMenuItemComponent {
+    private _router;
+    itemClass: string;
+    absolute: boolean;
+    menuLogo: string;
+    src: string;
+    href: any;
+    alt: any;
+    content: any;
+    onClick: EventEmitter<any>;
+    constructor(_router: Router);
+    openAbsoluteLink(event: any, href: any): void;
+}

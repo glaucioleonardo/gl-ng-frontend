@@ -1,0 +1,30 @@
+@import "../../colors/gray";
+
+%native-scrollbar {
+
+  scrollbar-face-color: $dark-gray-2;
+  scrollbar-shadow-color: $dark-gray-1-8;
+  scrollbar-track-color: $dark-gray-2-3;
+  scrollbar-arrow-color: $dark-gray;
+
+  &::-webkit-scrollbar:horizontal {
+    height: 0.5em;
+  }
+  &::-webkit-scrollbar:vertical {
+    width: 0.5em;
+  }
+  &::-webkit-scrollbar-button {
+    background-color: $dark-gray-2;
+    display: none !important;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: green;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background-color: $dark-gray-2-3;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $dark-gray;
+    border: solid 1px $dark-gray-1-8;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="input-container">
+  <!--suppress HtmlFormInputWithoutLabel -->
+  <input
+    #input
+    [checked]="checked"
+    class="input-radio"
+    type="radio"
+    [value]="value"
+    [id]="id"
+    [name]="name"
+    (click)="onCheck()"
+  >
+  <span (click)="onCheck()" class="check-mark"></span>
+  <label class="label" [for]="id">{{ label }}</label>
+</div>

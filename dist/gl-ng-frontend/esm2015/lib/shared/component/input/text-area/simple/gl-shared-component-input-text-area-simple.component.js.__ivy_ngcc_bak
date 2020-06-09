@@ -1,0 +1,58 @@
+import { __decorate } from "tslib";
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+let GlSharedComponentInputTextAreaSimpleComponent = class GlSharedComponentInputTextAreaSimpleComponent {
+    constructor() {
+        this.disabled = false;
+        this.value = '';
+        this.currentValue = new EventEmitter();
+    }
+    onKeyUp(args) {
+        const value = args.target.value;
+        if (value.trim().length > 0) {
+            this.textArea.nativeElement.classList.remove('required-fill');
+        }
+        this.currentValue.emit({ value });
+    }
+};
+__decorate([
+    ViewChild('textArea', { read: ElementRef, static: true })
+], GlSharedComponentInputTextAreaSimpleComponent.prototype, "textArea", void 0);
+__decorate([
+    Input()
+], GlSharedComponentInputTextAreaSimpleComponent.prototype, "disabled", void 0);
+__decorate([
+    Input()
+], GlSharedComponentInputTextAreaSimpleComponent.prototype, "id", void 0);
+__decorate([
+    Input()
+], GlSharedComponentInputTextAreaSimpleComponent.prototype, "labelAlignment", void 0);
+__decorate([
+    Input()
+], GlSharedComponentInputTextAreaSimpleComponent.prototype, "labelValue", void 0);
+__decorate([
+    Input()
+], GlSharedComponentInputTextAreaSimpleComponent.prototype, "placeholder", void 0);
+__decorate([
+    Input()
+], GlSharedComponentInputTextAreaSimpleComponent.prototype, "itemContentAlignment", void 0);
+__decorate([
+    Input()
+], GlSharedComponentInputTextAreaSimpleComponent.prototype, "class", void 0);
+__decorate([
+    Input()
+], GlSharedComponentInputTextAreaSimpleComponent.prototype, "value", void 0);
+__decorate([
+    Input()
+], GlSharedComponentInputTextAreaSimpleComponent.prototype, "maxLength", void 0);
+__decorate([
+    Output()
+], GlSharedComponentInputTextAreaSimpleComponent.prototype, "currentValue", void 0);
+GlSharedComponentInputTextAreaSimpleComponent = __decorate([
+    Component({
+        selector: 'gl-shared-component-input-text-area-simple',
+        template: "<div class=\"item-container\">\n  <ng-content></ng-content>\n  <!--suppress HtmlFormInputWithoutLabel -->\n  <textarea\n    #textArea\n    class=\"item-content {{ itemContentAlignment }} {{ class }}\"\n    [id]=\"id\"\n    [placeholder]=\"placeholder\"\n    (keyup)=\"onKeyUp($event)\"\n    [value]=\"value\"\n    [disabled]=\"disabled\"\n    [maxLength]=\"maxLength\"\n  ></textarea>\n</div>\n",
+        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .item-container .item-content::-webkit-scrollbar:horizontal{height:.5em}:host::ng-deep .item-container .item-content::-webkit-scrollbar:vertical{width:.5em}:host::ng-deep .item-container .item-content::-webkit-scrollbar-button{background-color:#333437;display:none!important}:host::ng-deep .item-container .item-content::-webkit-scrollbar-track{background-color:green}:host::ng-deep .item-container .item-content::-webkit-scrollbar-track-piece{background-color:#2c2c2f}:host::ng-deep .item-container .item-content::-webkit-scrollbar-thumb{background-color:#64666c;border:1px solid #38393c}.required-fill{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::placeholder{color:rgba(255,255,255,.3)!important}:host::ng-deep{display:flex;flex:1 0 auto}:host::ng-deep .item-container{position:relative;display:flex;flex-direction:column;align-items:stretch;margin:.5px;flex:1 0 auto}:host::ng-deep .item-container gl-shared-component-title-label-simple{flex-grow:0}:host::ng-deep .item-container .item-content{scrollbar-face-color:#333437;scrollbar-shadow-color:#38393c;scrollbar-track-color:#2c2c2f;scrollbar-arrow-color:#64666c;font-family:Montserrat,sans-serif;font-weight:300;resize:none;padding:.8em;font-size:.45em;text-align:left;flex-grow:1;overflow-x:hidden;overflow-y:auto;background-color:#333437;border:none;color:#fff}:host::ng-deep .item-container .item-content::-moz-placeholder{color:#64666c}:host::ng-deep .item-container .item-content::-ms-input-placeholder{color:#64666c}:host::ng-deep .item-container .item-content::placeholder{color:#64666c}:host::ng-deep .item-container .item-content.light{background-color:rgba(0,0,0,.1)}:host::ng-deep .item-container .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-container .item-content.light:-ms-input-placeholder{color:rgba(255,255,255,.2)!important}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){:host::ng-deep .item-container .scroll-wrapper{height:0%}:host::ng-deep .item-container .scroll-wrapper .scroll-content .item-content{height:100%!important;margin-right:0}}"]
+    })
+], GlSharedComponentInputTextAreaSimpleComponent);
+export { GlSharedComponentInputTextAreaSimpleComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1pbnB1dC10ZXh0LWFyZWEtc2ltcGxlLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2dsLW5nLWZyb250ZW5kLyIsInNvdXJjZXMiOlsibGliL3NoYXJlZC9jb21wb25lbnQvaW5wdXQvdGV4dC1hcmVhL3NpbXBsZS9nbC1zaGFyZWQtY29tcG9uZW50LWlucHV0LXRleHQtYXJlYS1zaW1wbGUuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLFVBQVUsRUFBRSxZQUFZLEVBQUUsS0FBSyxFQUFFLE1BQU0sRUFBRSxTQUFTLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFPOUYsSUFBYSw2Q0FBNkMsR0FBMUQsTUFBYSw2Q0FBNkM7SUFleEQ7UUFaUyxhQUFRLEdBQUcsS0FBSyxDQUFDO1FBUWpCLFVBQUssR0FBRyxFQUFFLENBQUM7UUFFVixpQkFBWSxHQUFHLElBQUksWUFBWSxFQUFFLENBQUM7SUFFNUIsQ0FBQztJQUVqQixPQUFPLENBQUMsSUFBSTtRQUNWLE1BQU0sS0FBSyxHQUFHLElBQUksQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDO1FBRWhDLElBQUksS0FBSyxDQUFDLElBQUksRUFBRSxDQUFDLE1BQU0sR0FBRyxDQUFDLEVBQUU7WUFDM0IsSUFBSSxDQUFDLFFBQVEsQ0FBQyxhQUFhLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxlQUFlLENBQUMsQ0FBQztTQUMvRDtRQUVELElBQUksQ0FBQyxZQUFZLENBQUMsSUFBSSxDQUFDLEVBQUUsS0FBSyxFQUFFLENBQUMsQ0FBQztJQUNwQyxDQUFDO0NBQ0YsQ0FBQTtBQXpCNEQ7SUFBMUQsU0FBUyxDQUFDLFVBQVUsRUFBRSxFQUFFLElBQUksRUFBRSxVQUFVLEVBQUUsTUFBTSxFQUFFLElBQUksRUFBRSxDQUFDOytFQUEyQztBQUU1RjtJQUFSLEtBQUssRUFBRTsrRUFBa0I7QUFDakI7SUFBUixLQUFLLEVBQUU7eUVBQVk7QUFDWDtJQUFSLEtBQUssRUFBRTtxRkFBd0I7QUFDdkI7SUFBUixLQUFLLEVBQUU7aUZBQW9CO0FBQ25CO0lBQVIsS0FBSyxFQUFFO2tGQUFxQjtBQUNwQjtJQUFSLEtBQUssRUFBRTsyRkFBOEI7QUFDN0I7SUFBUixLQUFLLEVBQUU7NEVBQWU7QUFFZDtJQUFSLEtBQUssRUFBRTs0RUFBWTtBQUNYO0lBQVIsS0FBSyxFQUFFO2dGQUFtQjtBQUNqQjtJQUFULE1BQU0sRUFBRTttRkFBbUM7QUFiakMsNkNBQTZDO0lBTHpELFNBQVMsQ0FBQztRQUNULFFBQVEsRUFBRSw0Q0FBNEM7UUFDdEQsc1pBQTBFOztLQUUzRSxDQUFDO0dBQ1csNkNBQTZDLENBMEJ6RDtTQTFCWSw2Q0FBNkMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIEVsZW1lbnRSZWYsIEV2ZW50RW1pdHRlciwgSW5wdXQsIE91dHB1dCwgVmlld0NoaWxkIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2dsLXNoYXJlZC1jb21wb25lbnQtaW5wdXQtdGV4dC1hcmVhLXNpbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAnLi9nbC1zaGFyZWQtY29tcG9uZW50LWlucHV0LXRleHQtYXJlYS1zaW1wbGUuY29tcG9uZW50Lmh0bWwnLFxuICBzdHlsZVVybHM6IFsnLi9nbC1zaGFyZWQtY29tcG9uZW50LWlucHV0LXRleHQtYXJlYS1zaW1wbGUuY29tcG9uZW50LnNjc3MnXVxufSlcbmV4cG9ydCBjbGFzcyBHbFNoYXJlZENvbXBvbmVudElucHV0VGV4dEFyZWFTaW1wbGVDb21wb25lbnQge1xuICBAVmlld0NoaWxkKCd0ZXh0QXJlYScsIHsgcmVhZDogRWxlbWVudFJlZiwgc3RhdGljOiB0cnVlIH0pIHRleHRBcmVhOiBFbGVtZW50UmVmPEhUTUxUZXh0QXJlYUVsZW1lbnQ+O1xuXG4gIEBJbnB1dCgpIGRpc2FibGVkID0gZmFsc2U7XG4gIEBJbnB1dCgpIGlkOiBzdHJpbmc7XG4gIEBJbnB1dCgpIGxhYmVsQWxpZ25tZW50OiBzdHJpbmc7XG4gIEBJbnB1dCgpIGxhYmVsVmFsdWU6IHN0cmluZztcbiAgQElucHV0KCkgcGxhY2Vob2xkZXI6IHN0cmluZztcbiAgQElucHV0KCkgaXRlbUNvbnRlbnRBbGlnbm1lbnQ6IHN0cmluZztcbiAgQElucHV0KCkgY2xhc3M6IHN0cmluZztcblxuICBASW5wdXQoKSB2YWx1ZSA9ICcnO1xuICBASW5wdXQoKSBtYXhMZW5ndGg6IG51bWJlcjtcbiAgQE91dHB1dCgpIGN1cnJlbnRWYWx1ZSA9IG5ldyBFdmVudEVtaXR0ZXIoKTtcblxuICBjb25zdHJ1Y3RvcigpIHsgfVxuXG4gIG9uS2V5VXAoYXJncykge1xuICAgIGNvbnN0IHZhbHVlID0gYXJncy50YXJnZXQudmFsdWU7XG5cbiAgICBpZiAodmFsdWUudHJpbSgpLmxlbmd0aCA+IDApIHtcbiAgICAgIHRoaXMudGV4dEFyZWEubmF0aXZlRWxlbWVudC5jbGFzc0xpc3QucmVtb3ZlKCdyZXF1aXJlZC1maWxsJyk7XG4gICAgfVxuXG4gICAgdGhpcy5jdXJyZW50VmFsdWUuZW1pdCh7IHZhbHVlIH0pO1xuICB9XG59XG4iXX0=
