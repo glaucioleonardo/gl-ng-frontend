@@ -1,0 +1,24 @@
+.menu-buttons {
+  height: 1.5em;
+  width: 1.5em;
+  margin: 0 0 0 0.3em;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:not(hover) {
+    transform: scale(1);
+    opacity: 0.5;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+  :host {
+    display: block;
+  }
+}

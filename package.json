@@ -11,7 +11,7 @@
     "copy-assets": "copyfiles -a -u3 projects/gl-ng-frontend/src/assets/** dist/gl-ng-frontend",
     "production": "ng build --prod && ngcc && npm run copy-assets",
     "postinstall": "ngcc",
-    "glw": "cd D:\\_local-development\\gl-w-frontend && npm run production && cd D:\\_local-development\\gl-ng-frontend && npm pack D:\\_local-development\\gl-w-frontend && npm i --prefer-offline ./gl-w-frontend-1.4.19.tgz && shx rm -rf ./gl-w-frontend-1.4.19.tgz"
+    "glw": "cd D:\\_local-development\\gl-w-frontend && npm run production && cd D:\\_local-development\\gl-ng-frontend && npm pack D:\\_local-development\\gl-w-frontend && npm i --prefer-offline ./gl-w-frontend-1.4.25.tgz && shx rm -rf ./gl-w-frontend-1.4.25.tgz"
   },
   "private": true,
   "dependencies": {
@@ -23,7 +23,7 @@
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
-    "gl-w-frontend": "^1.4.20",
+    "gl-w-frontend": "^1.4.25",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

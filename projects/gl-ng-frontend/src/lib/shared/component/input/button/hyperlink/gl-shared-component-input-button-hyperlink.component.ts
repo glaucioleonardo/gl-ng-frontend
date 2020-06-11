@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'gl-gl-shared-component-input-button-hyperlink',
+  selector: 'gl-shared-component-input-button-hyperlink',
   templateUrl: './gl-shared-component-input-button-hyperlink.component.html',
   styleUrls: ['./gl-shared-component-input-button-hyperlink.component.scss']
 })

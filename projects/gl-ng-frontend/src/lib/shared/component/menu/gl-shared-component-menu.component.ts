@@ -21,7 +21,7 @@ export class GlSharedComponentMenuComponent implements OnInit {
   @Input() className: string;
   @Input() settingsUrl: string;
   @Input() settingsTarget: string = '_blank';
-  @Input() menuLogo: string = '../../assets/img/logo/glaucio-logo-colored.svg';
+  @Input() menuLogo: string = '../assets/img/logo/glaucio-logo-colored.svg';
   @Input() menuBottomTitle: string;
   @Input() menuBottomVersion: string = '1.0.0';
   @Input() menuPosition: TMenuPosition = 'right';

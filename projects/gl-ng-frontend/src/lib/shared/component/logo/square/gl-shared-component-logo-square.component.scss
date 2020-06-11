@@ -1,0 +1,13 @@
+:host::ng-deep {
+  .logo {
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    opacity: 0.1;
+
+    &.top { top: 1em; }
+    &.right { right: 1em; }
+    &.bottom { bottom: 1em; }
+    &.left { left: 1em; }
+  }
+}

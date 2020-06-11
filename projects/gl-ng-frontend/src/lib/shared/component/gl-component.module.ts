@@ -23,9 +23,20 @@ import { GlSharedComponentMenuItemComponent } from './menu/item/gl-shared-compon
 import { GlSharedComponentFooterSimpleComponent } from './footer/simple/gl-shared-component-footer-simple.component';
 import { GlSharedComponentInputButtonHyperlinkComponent } from './input/button/hyperlink/gl-shared-component-input-button-hyperlink.component';
 import { GlSharedComponentFooterContainerComponent } from './footer/container/gl-shared-component-footer-container.component';
+import { GlSharedComponentErrorMessageComponent } from './error-message/gl-shared-component-error-message.component';
+import { GlSharedComponentLogoSquareComponent } from './logo/square/gl-shared-component-logo-square.component';
+import { GlSharedComponentButtonImageSimpleComponent } from './button/image/simple/gl-shared-component-button-image-simple.component';
+import { GlSharedComponentButtonImageTooltipComponent } from './button/image/tooltip/gl-shared-component-button-image-tooltip.component';
+import { GlSharedComponentButtonMenuSimpleComponent } from './button/menu/simple/gl-shared-component-button-menu-simple.component';
+import { GlSharedComponentButtonMenuTooltipComponent } from './button/menu/tooltip/gl-shared-component-button-menu-tooltip.component';
 
 @NgModule({
   declarations: [
+    GlSharedComponentButtonImageSimpleComponent,
+    GlSharedComponentButtonImageTooltipComponent,
+    GlSharedComponentButtonMenuSimpleComponent,
+    GlSharedComponentButtonMenuTooltipComponent,
+    GlSharedComponentErrorMessageComponent,
     GlSharedComponentFooterContainerComponent,
     GlSharedComponentFooterSimpleComponent,
     GlSharedComponentInputButtonSimpleComponent,
@@ -35,6 +46,7 @@ import { GlSharedComponentFooterContainerComponent } from './footer/container/gl
     GlSharedComponentInputTextLabelComponent,
     GlSharedComponentInputTextAreaSimpleComponent,
     GlSharedComponentInputTextAreaLabelComponent,
+    GlSharedComponentLogoSquareComponent,
     GlSharedComponentModalAlertComponent,
     GlSharedComponentModalHeaderComponent,
     GlSharedComponentModalLoadingComponent,
@@ -52,6 +64,11 @@ import { GlSharedComponentFooterContainerComponent } from './footer/container/gl
     RouterModule
   ],
   exports: [
+    GlSharedComponentButtonImageSimpleComponent,
+    GlSharedComponentButtonImageTooltipComponent,
+    GlSharedComponentButtonMenuSimpleComponent,
+    GlSharedComponentButtonMenuTooltipComponent,
+    GlSharedComponentErrorMessageComponent,
     GlSharedComponentFooterContainerComponent,
     GlSharedComponentFooterSimpleComponent,
     GlSharedComponentInputButtonSimpleComponent,
@@ -61,12 +78,13 @@ import { GlSharedComponentFooterContainerComponent } from './footer/container/gl
     GlSharedComponentInputTextAreaLabelComponent,
     GlSharedComponentInputTextLabelComponent,
     GlSharedComponentInputTextSimpleComponent,
-    GlSharedComponentModalAlertComponent,
-    GlSharedComponentModalHeaderComponent,
-    GlSharedComponentModalLoadingComponent,
+    GlSharedComponentLogoSquareComponent,
     GlSharedComponentMenuBackgroundComponent,
     GlSharedComponentMenuComponent,
     GlSharedComponentMenuItemComponent,
+    GlSharedComponentModalAlertComponent,
+    GlSharedComponentModalHeaderComponent,
+    GlSharedComponentModalLoadingComponent,
     GlSharedComponentTitlePageComponent,
     GlSharedComponentTitleLabelButtonSimpleComponent,
     GlSharedComponentTitleLabelButtonContainerComponent,

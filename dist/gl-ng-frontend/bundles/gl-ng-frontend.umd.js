@@ -157,6 +157,38 @@ function GlSharedComponentFooterContainerComponent_img_3_Template(rf, ctx) { if 
     var ctx_r0 = ɵngcc0.ɵɵnextContext();
     ɵngcc0.ɵɵproperty("alt", ctx_r0.imageDescription)("src", ctx_r0.imageLogo, ɵngcc0.ɵɵsanitizeUrl);
 } }
+function GlSharedComponentButtonImageTooltipComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "div", 1);
+    ɵngcc0.ɵɵelement(1, "gl-shared-component-button-image-simple", 2);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    var ctx_r0 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵclassProp("hidden", !ctx_r0.show);
+    ɵngcc0.ɵɵproperty("id", ctx_r0.id);
+    ɵngcc0.ɵɵattribute("tooltip", ctx_r0.alt);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("src", ctx_r0.src)("alt", ctx_r0.alt)("id", ctx_r0.id)("callback", ctx_r0.callback);
+} }
+function GlSharedComponentButtonMenuTooltipComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    var _r2 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "div", 1);
+    ɵngcc0.ɵɵelementStart(1, "gl-shared-component-button-menu-simple", 2);
+    ɵngcc0.ɵɵlistener("click", function GlSharedComponentButtonMenuTooltipComponent_div_0_Template_gl_shared_component_button_menu_simple_click_1_listener($event) { ɵngcc0.ɵɵrestoreView(_r2); var ctx_r1 = ɵngcc0.ɵɵnextContext(); return ctx_r1.callback($event); });
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    var ctx_r0 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵattribute("alt", ctx_r0.alt);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("src", ctx_r0.src)("id", ctx_r0.id)("alt", ctx_r0.alt);
+} }
+var _c7 = ["mainContainer"];
+function GlSharedViewErrorMessageComponent_gl_shared_component_input_button_hyperlink_5_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelement(0, "gl-shared-component-input-button-hyperlink", 6);
+} if (rf & 2) {
+    var ctx_r1 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵproperty("description", ctx_r1.footerDescription)("imageDescription", ctx_r1.footerImageDescription)("imageSrc", ctx_r1.footerImageSrc)("link", ctx_r1.footerLink);
+} }
 'use strict';
 
     /*! *****************************************************************************
@@ -684,7 +716,7 @@ GlSharedComponentInputTextSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ 
             core.Input()
         ], GlSharedComponentTitleLabelSimpleComponent.prototype, "requiredLabel", void 0);
 GlSharedComponentTitleLabelSimpleComponent.ɵfac = function GlSharedComponentTitleLabelSimpleComponent_Factory(t) { return new (t || GlSharedComponentTitleLabelSimpleComponent)(); };
-GlSharedComponentTitleLabelSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentTitleLabelSimpleComponent, selectors: [["gl-shared-component-title-label-simple"]], inputs: { class: "class", required: "required", requiredLabel: "requiredLabel", labelValue: "labelValue", id: "id", labelAlignment: "labelAlignment" }, decls: 3, vars: 7, consts: [["src", "../../assets/img/icon/label/dot.svg", "alt", "Required fill icon", 3, "class", "title", 4, "ngIf"], ["src", "../../assets/img/icon/label/dot.svg", "alt", "Required fill icon", 3, "title"]], template: function GlSharedComponentTitleLabelSimpleComponent_Template(rf, ctx) { if (rf & 1) {
+GlSharedComponentTitleLabelSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentTitleLabelSimpleComponent, selectors: [["gl-shared-component-title-label-simple"]], inputs: { class: "class", required: "required", requiredLabel: "requiredLabel", labelValue: "labelValue", id: "id", labelAlignment: "labelAlignment" }, decls: 3, vars: 7, consts: [["src", "../assets/img/icon/label/dot.svg", "alt", "Required fill icon", 3, "class", "title", 4, "ngIf"], ["src", "../assets/img/icon/label/dot.svg", "alt", "Required fill icon", 3, "title"]], template: function GlSharedComponentTitleLabelSimpleComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵelementStart(0, "label");
         ɵngcc0.ɵɵtext(1);
         ɵngcc0.ɵɵelementEnd();
@@ -701,7 +733,7 @@ GlSharedComponentTitleLabelSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({
         type: core.Component,
         args: [{
                 selector: 'gl-shared-component-title-label-simple',
-                template: "<label\n  class=\"header-data {{ labelAlignment }} {{ class }}\"\n  [attr.for]=\"id\">{{ labelValue }}\n</label>\n<img\n  *ngIf=\"required\"\n  src=\"../../assets/img/icon/label/dot.svg\"\n  class=\"required-fill-dot {{ class }}\"\n  [title]=\"requiredLabel\"\n  alt=\"Required fill icon\">\n",
+                template: "<label\n  class=\"header-data {{ labelAlignment }} {{ class }}\"\n  [attr.for]=\"id\">{{ labelValue }}\n</label>\n<img\n  *ngIf=\"required\"\n  src=\"../assets/img/icon/label/dot.svg\"\n  class=\"required-fill-dot {{ class }}\"\n  [title]=\"requiredLabel\"\n  alt=\"Required fill icon\">\n",
                 styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .header-data{position:relative;flex-grow:1;font-family:Montserrat,sans-serif;font-weight:700;background-color:#2c2c2f;color:#fff;font-size:.4em;padding:1.25em 1em;text-align:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .header-data.light{background-color:rgba(0,0,0,.3)}:host::ng-deep .header-data.left{text-align:left}:host::ng-deep .header-data.center{text-align:center}:host::ng-deep .header-data.right{text-align:right}:host::ng-deep .header-data.report{background-color:rgba(210,64,119,.8);font-size:.7em;padding:.5em}:host::ng-deep .required-fill-dot{position:absolute;top:.5em;right:.2em;width:.3em;height:.3em}:host::ng-deep .required-fill-dot.light{opacity:.5}"]
             }]
     }], function () { return []; }, { class: [{
@@ -1427,7 +1459,7 @@ GlSharedComponentTitlePageComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: 
             core.Input()
         ], GlSharedComponentTitleLabelButtonSimpleComponent.prototype, "requiredFieldDescription", void 0);
 GlSharedComponentTitleLabelButtonSimpleComponent.ɵfac = function GlSharedComponentTitleLabelButtonSimpleComponent_Factory(t) { return new (t || GlSharedComponentTitleLabelButtonSimpleComponent)(); };
-GlSharedComponentTitleLabelButtonSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentTitleLabelButtonSimpleComponent, selectors: [["gl-shared-component-title-label-button-simple"]], inputs: { required: "required", requiredFieldDescription: "requiredFieldDescription", id: "id", alt: "alt", src: "src", class: "class" }, decls: 4, vars: 8, consts: [[1, "tooltip", "top"], [1, "label-button", 3, "id", "src", "alt"], ["src", "../../assets/img/icon/label/dot.svg", "class", "required-fill-dot", "alt", "Required fill icon", 3, "title", 4, "ngIf"], ["src", "../../assets/img/icon/label/dot.svg", "alt", "Required fill icon", 1, "required-fill-dot", 3, "title"]], template: function GlSharedComponentTitleLabelButtonSimpleComponent_Template(rf, ctx) { if (rf & 1) {
+GlSharedComponentTitleLabelButtonSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentTitleLabelButtonSimpleComponent, selectors: [["gl-shared-component-title-label-button-simple"]], inputs: { required: "required", requiredFieldDescription: "requiredFieldDescription", id: "id", alt: "alt", src: "src", class: "class" }, decls: 4, vars: 8, consts: [[1, "tooltip", "top"], [1, "label-button", 3, "id", "src", "alt"], ["src", "../assets/img/icon/label/dot.svg", "class", "required-fill-dot", "alt", "Required fill icon", 3, "title", 4, "ngIf"], ["src", "../assets/img/icon/label/dot.svg", "alt", "Required fill icon", 1, "required-fill-dot", 3, "title"]], template: function GlSharedComponentTitleLabelButtonSimpleComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵelementStart(0, "div");
         ɵngcc0.ɵɵelementStart(1, "div", 0);
         ɵngcc0.ɵɵelement(2, "img", 1);
@@ -1447,7 +1479,7 @@ GlSharedComponentTitleLabelButtonSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineCompo
         type: core.Component,
         args: [{
                 selector: 'gl-shared-component-title-label-button-simple',
-                template: "<div class=\"label-button-container {{ class }}\">\n  <div\n    [attr.alt]=\"alt\"\n    class=\"tooltip top\">\n    <img\n      class=\"label-button\"\n      [id]=\"id\"\n      [src]=\"src\"\n      [alt]=\"alt\">\n  </div>\n  <img\n    *ngIf=\"required\"\n    src=\"../../assets/img/icon/label/dot.svg\"\n    class=\"required-fill-dot\"\n    [title]=\"requiredFieldDescription\"\n    alt=\"Required fill icon\">\n</div>\n",
+                template: "<div class=\"label-button-container {{ class }}\">\n  <div\n    [attr.alt]=\"alt\"\n    class=\"tooltip top\">\n    <img\n      class=\"label-button\"\n      [id]=\"id\"\n      [src]=\"src\"\n      [alt]=\"alt\">\n  </div>\n  <img\n    *ngIf=\"required\"\n    src=\"../assets/img/icon/label/dot.svg\"\n    class=\"required-fill-dot\"\n    [title]=\"requiredFieldDescription\"\n    alt=\"Required fill icon\">\n</div>\n",
                 styles: [".required-fill{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::placeholder{color:rgba(255,255,255,.3)!important}.label-button-container{display:flex;position:absolute;top:.19em;right:.2em}.label-button-container .label-button{cursor:pointer;height:1em;width:1em;margin:0 .1em}.label-button-container .label-button:hover{transform:scale(1.1);opacity:1;transition:.2s ease-in-out}.label-button-container .label-button:not(hover){transform:scale(1);opacity:.5;transition:.2s ease-in-out}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){:host::ng-deep{height:.5em}}"]
             }]
     }], function () { return []; }, { required: [{
@@ -1600,7 +1632,7 @@ GlSharedComponentMenuService.ɵfac = function GlSharedComponentMenuService_Facto
             this.service = service;
             this.router = router;
             this.settingsTarget = '_blank';
-            this.menuLogo = '../../assets/img/logo/glaucio-logo-colored.svg';
+            this.menuLogo = '../assets/img/logo/glaucio-logo-colored.svg';
             this.menuBottomVersion = '1.0.0';
             this.menuPosition = 'right';
             this.closeButton = '../assets/img/icon/side-menu/close.svg';
@@ -1875,13 +1907,13 @@ GlSharedComponentFooterSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ typ
         ɵngcc0.ɵɵtextInterpolate(ctx.description);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", ctx.imageLogo != null);
-    } }, directives: [ɵngcc1.NgIf], styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%] {z-index:100;max-width:100vw}[_nghost-%COMP%]  .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}[_nghost-%COMP%]  .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}[_nghost-%COMP%]  .footer-container .image-logo{height:1em;margin:0 0 0 .3em}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){[_nghost-%COMP%]  .footer-container{border-top:.1em solid #d24077!important}}"] });
+    } }, directives: [ɵngcc1.NgIf], styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%] {z-index:100;max-width:100vw;min-width:100vw;position:fixed;bottom:0;flex-grow:1}[_nghost-%COMP%]  .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}[_nghost-%COMP%]  .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}[_nghost-%COMP%]  .footer-container .image-logo{height:1em;margin:0 0 0 .3em}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){[_nghost-%COMP%]  .footer-container{border-top:.1em solid #d24077!important}}"] });
 /*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentFooterSimpleComponent, [{
         type: core.Component,
         args: [{
                 selector: 'gl-shared-component-footer-simple',
                 template: "<section class=\"footer-container\">\n  <span class=\"description\">{{ description }}</span>\n  <img\n    *ngIf=\"imageLogo != null\"\n    class=\"image-logo\"\n    [alt]=\"imageDescription\"\n    [src]=\"imageLogo\">\n</section>\n",
-                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{z-index:100;max-width:100vw}:host::ng-deep .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}:host::ng-deep .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}:host::ng-deep .footer-container .image-logo{height:1em;margin:0 0 0 .3em}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){:host::ng-deep .footer-container{border-top:.1em solid #d24077!important}}"]
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{z-index:100;max-width:100vw;min-width:100vw;position:fixed;bottom:0;flex-grow:1}:host::ng-deep .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}:host::ng-deep .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}:host::ng-deep .footer-container .image-logo{height:1em;margin:0 0 0 .3em}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){:host::ng-deep .footer-container{border-top:.1em solid #d24077!important}}"]
             }]
     }], function () { return []; }, { imageDescription: [{
             type: core.Input
@@ -1909,7 +1941,7 @@ GlSharedComponentFooterSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ typ
             core.Input()
         ], GlSharedComponentInputButtonHyperlinkComponent.prototype, "link", void 0);
 GlSharedComponentInputButtonHyperlinkComponent.ɵfac = function GlSharedComponentInputButtonHyperlinkComponent_Factory(t) { return new (t || GlSharedComponentInputButtonHyperlinkComponent)(); };
-GlSharedComponentInputButtonHyperlinkComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentInputButtonHyperlinkComponent, selectors: [["gl-gl-shared-component-input-button-hyperlink"]], inputs: { imageSrc: "imageSrc", imageDescription: "imageDescription", description: "description", link: "link" }, decls: 4, vars: 4, consts: [[1, "hyperlink-container"], [1, "logo", 3, "src", "alt"], ["target", "_blank", 1, "message", 3, "href"]], template: function GlSharedComponentInputButtonHyperlinkComponent_Template(rf, ctx) { if (rf & 1) {
+GlSharedComponentInputButtonHyperlinkComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentInputButtonHyperlinkComponent, selectors: [["gl-shared-component-input-button-hyperlink"]], inputs: { imageSrc: "imageSrc", imageDescription: "imageDescription", description: "description", link: "link" }, decls: 4, vars: 4, consts: [[1, "hyperlink-container"], [1, "logo", 3, "src", "alt"], ["target", "_blank", 1, "message", 3, "href"]], template: function GlSharedComponentInputButtonHyperlinkComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵelementStart(0, "div", 0);
         ɵngcc0.ɵɵelement(1, "img", 1);
         ɵngcc0.ɵɵelementStart(2, "a", 2);
@@ -1923,13 +1955,13 @@ GlSharedComponentInputButtonHyperlinkComponent.ɵcmp = ɵngcc0.ɵɵdefineCompone
         ɵngcc0.ɵɵproperty("href", ctx.link, ɵngcc0.ɵɵsanitizeUrl);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵtextInterpolate(ctx.description);
-    } }, styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%]  .hyperlink-container{display:flex;flex-direction:row;align-items:center;position:absolute;right:.3em;bottom:.3em}[_nghost-%COMP%]  .hyperlink-container .logo{width:.7em;height:.7em;margin:0 .2em 0 0}[_nghost-%COMP%]  .hyperlink-container .message{margin:0 0 0 .2em;font-family:Montserrat,sans-serif;font-weight:400;font-size:.5em;color:#f60}"] });
+    } }, styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%]  .hyperlink-container{display:flex;flex-direction:row;align-items:center;position:absolute;right:.3em;bottom:.3em}[_nghost-%COMP%]  .hyperlink-container .logo{width:.7em;height:.7em;margin:0 .2em 0 0}[_nghost-%COMP%]  .hyperlink-container .message{margin:0 0 0 .2em;font-family:Montserrat,sans-serif;font-weight:400;font-size:.5em;color:#ff9800}"] });
 /*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentInputButtonHyperlinkComponent, [{
         type: core.Component,
         args: [{
-                selector: 'gl-gl-shared-component-input-button-hyperlink',
+                selector: 'gl-shared-component-input-button-hyperlink',
                 template: "<div class=\"hyperlink-container\">\n  <img\n    class=\"logo\"\n    [src]=\"imageSrc\"\n    [alt]=\"imageDescription\">\n  <a\n    class=\"message\"\n    [href]=\"link\"\n    target=\"_blank\">{{ description }}</a>\n</div>\n",
-                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .hyperlink-container{display:flex;flex-direction:row;align-items:center;position:absolute;right:.3em;bottom:.3em}:host::ng-deep .hyperlink-container .logo{width:.7em;height:.7em;margin:0 .2em 0 0}:host::ng-deep .hyperlink-container .message{margin:0 0 0 .2em;font-family:Montserrat,sans-serif;font-weight:400;font-size:.5em;color:#f60}"]
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .hyperlink-container{display:flex;flex-direction:row;align-items:center;position:absolute;right:.3em;bottom:.3em}:host::ng-deep .hyperlink-container .logo{width:.7em;height:.7em;margin:0 .2em 0 0}:host::ng-deep .hyperlink-container .message{margin:0 0 0 .2em;font-family:Montserrat,sans-serif;font-weight:400;font-size:.5em;color:#ff9800}"]
             }]
     }], function () { return []; }, { imageSrc: [{
             type: core.Input
@@ -1973,13 +2005,13 @@ GlSharedComponentFooterContainerComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ 
         ɵngcc0.ɵɵtextInterpolate(ctx.description);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", ctx.imageLogo != null);
-    } }, directives: [ɵngcc1.NgIf], styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%] {z-index:100;max-width:100vw}[_nghost-%COMP%]  .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}[_nghost-%COMP%]  .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}[_nghost-%COMP%]  .footer-container .image-logo{height:1em;margin:0 0 0 .3em}[_nghost-%COMP%]  .footer-container .user-container{align-self:flex-end;margin:0 .3em 0 0}[_nghost-%COMP%]  .footer-container .user-container .user-container{display:flex;align-items:center;justify-content:center}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){[_nghost-%COMP%]  .footer-container{border-top:.1em solid #d24077!important}}"] });
+    } }, directives: [ɵngcc1.NgIf], styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%] {z-index:100;max-width:100vw;min-width:100vw;position:fixed;bottom:0;flex-grow:1}[_nghost-%COMP%]  .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}[_nghost-%COMP%]  .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}[_nghost-%COMP%]  .footer-container .image-logo{height:1em;margin:0 0 0 .3em}[_nghost-%COMP%]  .footer-container .user-container{align-self:flex-end;margin:0 .3em 0 0}[_nghost-%COMP%]  .footer-container .user-container .user-container{display:flex;align-items:center;justify-content:center}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){[_nghost-%COMP%]  .footer-container{border-top:.1em solid #d24077!important}}"] });
 /*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentFooterContainerComponent, [{
         type: core.Component,
         args: [{
                 selector: 'gl-shared-component-footer-container',
                 template: "<section class=\"footer-container\">\n  <span class=\"description\">{{ description }}</span>\n  <img\n    *ngIf=\"imageLogo != null\"\n    class=\"image-logo\"\n    [alt]=\"imageDescription\"\n    [src]=\"imageLogo\">\n  <div class=\"user-container\">\n    <ng-content></ng-content>\n  </div>\n</section>\n",
-                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{z-index:100;max-width:100vw}:host::ng-deep .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}:host::ng-deep .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}:host::ng-deep .footer-container .image-logo{height:1em;margin:0 0 0 .3em}:host::ng-deep .footer-container .user-container{align-self:flex-end;margin:0 .3em 0 0}:host::ng-deep .footer-container .user-container .user-container{display:flex;align-items:center;justify-content:center}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){:host::ng-deep .footer-container{border-top:.1em solid #d24077!important}}"]
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{z-index:100;max-width:100vw;min-width:100vw;position:fixed;bottom:0;flex-grow:1}:host::ng-deep .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}:host::ng-deep .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}:host::ng-deep .footer-container .image-logo{height:1em;margin:0 0 0 .3em}:host::ng-deep .footer-container .user-container{align-self:flex-end;margin:0 .3em 0 0}:host::ng-deep .footer-container .user-container .user-container{display:flex;align-items:center;justify-content:center}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){:host::ng-deep .footer-container{border-top:.1em solid #d24077!important}}"]
             }]
     }], function () { return []; }, { imageDescription: [{
             type: core.Input
@@ -1991,6 +2023,302 @@ GlSharedComponentFooterContainerComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ 
         return GlSharedComponentFooterContainerComponent;
     }());
 
+    var GlSharedComponentErrorMessageComponent = /** @class */ (function () {
+        function GlSharedComponentErrorMessageComponent() {
+            this.position = 'left';
+            this.buttonAction$ = new core.EventEmitter();
+        }
+        GlSharedComponentErrorMessageComponent.prototype.buttonAction = function () {
+            this.buttonAction$.emit();
+        };
+        __decorate([
+            core.Input()
+        ], GlSharedComponentErrorMessageComponent.prototype, "position", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentErrorMessageComponent.prototype, "errorCode", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentErrorMessageComponent.prototype, "errorMessage", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentErrorMessageComponent.prototype, "buttonLabel", void 0);
+        __decorate([
+            core.Output()
+        ], GlSharedComponentErrorMessageComponent.prototype, "buttonAction$", void 0);
+GlSharedComponentErrorMessageComponent.ɵfac = function GlSharedComponentErrorMessageComponent_Factory(t) { return new (t || GlSharedComponentErrorMessageComponent)(); };
+GlSharedComponentErrorMessageComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentErrorMessageComponent, selectors: [["gl-shared-component-error-message"]], inputs: { position: "position", errorCode: "errorCode", errorMessage: "errorMessage", buttonLabel: "buttonLabel" }, outputs: { buttonAction$: "buttonAction$" }, decls: 6, vars: 6, consts: [[1, "main-title"], [1, "message"], [1, "home-button", 3, "innerValue", "click"]], template: function GlSharedComponentErrorMessageComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelementStart(0, "div");
+        ɵngcc0.ɵɵelementStart(1, "h1", 0);
+        ɵngcc0.ɵɵtext(2);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(3, "h2", 1);
+        ɵngcc0.ɵɵtext(4);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(5, "gl-shared-component-input-button-simple", 2);
+        ɵngcc0.ɵɵlistener("click", function GlSharedComponentErrorMessageComponent_Template_gl_shared_component_input_button_simple_click_5_listener() { return ctx.buttonAction(); });
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵclassMapInterpolate1("content-container ", ctx.position === "right" ? "right" : "left", "");
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵtextInterpolate(ctx.errorCode);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵtextInterpolate(ctx.errorMessage);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("innerValue", ctx.buttonLabel);
+    } }, directives: [GlSharedComponentInputButtonSimpleComponent], styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%] {display:flex;flex-grow:1}[_nghost-%COMP%]  .content-container{display:flex;flex-direction:column;position:absolute;top:25%;justify-content:center;align-content:center;text-align:center;align-items:center}[_nghost-%COMP%]  .content-container.right{right:10vw}[_nghost-%COMP%]  .content-container.left{left:10vw}[_nghost-%COMP%]  .content-container .main-title{font-family:Montserrat,sans-serif;font-weight:800;color:rgba(255,255,255,.3);font-size:11em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}[_nghost-%COMP%]  .content-container .message{font-family:Montserrat,sans-serif;font-weight:100;color:rgba(255,255,255,.3);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:1.5em}[_nghost-%COMP%]  .content-container gl-shared-component-input-button-simple{display:block;align-items:center;flex-direction:column;margin:3em 0}[_nghost-%COMP%]  .content-container gl-shared-component-input-button-simple .default-button{border-radius:10em;display:block;padding:1.5em 4em;background-color:rgba(0,0,0,.4);font-family:Montserrat,sans-serif;font-weight:300}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentErrorMessageComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'gl-shared-component-error-message',
+                template: "<div class=\"content-container {{ position === 'right' ? 'right' : 'left' }}\">\n  <h1 class=\"main-title\">{{ errorCode }}</h1>\n  <h2 class=\"message\">{{ errorMessage }}</h2>\n  <gl-shared-component-input-button-simple\n    class=\"home-button\"\n    [innerValue]=\"buttonLabel\"\n    (click)=\"buttonAction()\"\n  ></gl-shared-component-input-button-simple>\n</div>\n",
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .content-container{display:flex;flex-direction:column;position:absolute;top:25%;justify-content:center;align-content:center;text-align:center;align-items:center}:host::ng-deep .content-container.right{right:10vw}:host::ng-deep .content-container.left{left:10vw}:host::ng-deep .content-container .main-title{font-family:Montserrat,sans-serif;font-weight:800;color:rgba(255,255,255,.3);font-size:11em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .content-container .message{font-family:Montserrat,sans-serif;font-weight:100;color:rgba(255,255,255,.3);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:1.5em}:host::ng-deep .content-container gl-shared-component-input-button-simple{display:block;align-items:center;flex-direction:column;margin:3em 0}:host::ng-deep .content-container gl-shared-component-input-button-simple .default-button{border-radius:10em;display:block;padding:1.5em 4em;background-color:rgba(0,0,0,.4);font-family:Montserrat,sans-serif;font-weight:300}"]
+            }]
+    }], function () { return []; }, { position: [{
+            type: core.Input
+        }], buttonAction$: [{
+            type: core.Output
+        }], errorCode: [{
+            type: core.Input
+        }], errorMessage: [{
+            type: core.Input
+        }], buttonLabel: [{
+            type: core.Input
+        }] }); })();
+        return GlSharedComponentErrorMessageComponent;
+    }());
+
+    var GlSharedComponentLogoSquareComponent = /** @class */ (function () {
+        function GlSharedComponentLogoSquareComponent() {
+            this.horizontalPosition = 'left';
+            this.verticalPosition = 'top';
+        }
+        __decorate([
+            core.Input()
+        ], GlSharedComponentLogoSquareComponent.prototype, "imageScr", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentLogoSquareComponent.prototype, "imageAlt", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentLogoSquareComponent.prototype, "horizontalPosition", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentLogoSquareComponent.prototype, "verticalPosition", void 0);
+GlSharedComponentLogoSquareComponent.ɵfac = function GlSharedComponentLogoSquareComponent_Factory(t) { return new (t || GlSharedComponentLogoSquareComponent)(); };
+GlSharedComponentLogoSquareComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentLogoSquareComponent, selectors: [["gl-shared-component-logo-square"]], inputs: { horizontalPosition: "horizontalPosition", verticalPosition: "verticalPosition", imageScr: "imageScr", imageAlt: "imageAlt" }, decls: 1, vars: 6, consts: [[3, "src", "alt"]], template: function GlSharedComponentLogoSquareComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelement(0, "img", 0);
+    } if (rf & 2) {
+        ɵngcc0.ɵɵclassMapInterpolate2("logo ", ctx.horizontalPosition == "right" ? "right" : "left", " ", ctx.verticalPosition == "bottom" ? "bottom" : "top", "");
+        ɵngcc0.ɵɵproperty("src", ctx.imageScr, ɵngcc0.ɵɵsanitizeUrl)("alt", ctx.imageAlt);
+    } }, styles: ["[_nghost-%COMP%]  .logo{width:3em;height:3em;position:absolute;opacity:.1}[_nghost-%COMP%]  .logo.top{top:1em}[_nghost-%COMP%]  .logo.right{right:1em}[_nghost-%COMP%]  .logo.bottom{bottom:1em}[_nghost-%COMP%]  .logo.left{left:1em}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentLogoSquareComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'gl-shared-component-logo-square',
+                template: "<img\n  class=\"logo {{ horizontalPosition == 'right' ? 'right' : 'left' }} {{ verticalPosition == 'bottom' ? 'bottom' : 'top' }}\"\n  [src]=\"imageScr\"\n  [alt]=\"imageAlt\">\n",
+                styles: [":host::ng-deep .logo{width:3em;height:3em;position:absolute;opacity:.1}:host::ng-deep .logo.top{top:1em}:host::ng-deep .logo.right{right:1em}:host::ng-deep .logo.bottom{bottom:1em}:host::ng-deep .logo.left{left:1em}"]
+            }]
+    }], function () { return []; }, { horizontalPosition: [{
+            type: core.Input
+        }], verticalPosition: [{
+            type: core.Input
+        }], imageScr: [{
+            type: core.Input
+        }], imageAlt: [{
+            type: core.Input
+        }] }); })();
+        return GlSharedComponentLogoSquareComponent;
+    }());
+
+    var GlSharedComponentButtonImageSimpleComponent = /** @class */ (function () {
+        function GlSharedComponentButtonImageSimpleComponent() {
+        }
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonImageSimpleComponent.prototype, "id", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonImageSimpleComponent.prototype, "alt", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonImageSimpleComponent.prototype, "src", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonImageSimpleComponent.prototype, "callback", void 0);
+GlSharedComponentButtonImageSimpleComponent.ɵfac = function GlSharedComponentButtonImageSimpleComponent_Factory(t) { return new (t || GlSharedComponentButtonImageSimpleComponent)(); };
+GlSharedComponentButtonImageSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentButtonImageSimpleComponent, selectors: [["gl-shared-component-button-image-simple"]], inputs: { id: "id", alt: "alt", src: "src", callback: "callback" }, decls: 1, vars: 3, consts: [[1, "button", 3, "id", "src", "alt", "click"]], template: function GlSharedComponentButtonImageSimpleComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelementStart(0, "img", 0);
+        ɵngcc0.ɵɵlistener("click", function GlSharedComponentButtonImageSimpleComponent_Template_img_click_0_listener($event) { return ctx.callback($event); });
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵproperty("id", ctx.id)("src", ctx.src, ɵngcc0.ɵɵsanitizeUrl)("alt", ctx.alt);
+    } }, styles: ["[_nghost-%COMP%] {display:flex;align-items:center}[_nghost-%COMP%]  .button{width:1em;height:1em}[_nghost-%COMP%]  .button:not(hover){opacity:.5;transform:scale(1);transition:.2s ease-in-out}[_nghost-%COMP%]  .button:hover{opacity:1;transform:scale(1.1);transition:.2s ease-in-out}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentButtonImageSimpleComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'gl-shared-component-button-image-simple',
+                template: "<img\n  class=\"button\"\n  [id]=\"id\"\n  [src]=\"src\"\n  [alt]=\"alt\"\n  (click)=\"callback($event)\">\n",
+                styles: [":host::ng-deep{display:flex;align-items:center}:host::ng-deep .button{width:1em;height:1em}:host::ng-deep .button:not(hover){opacity:.5;transform:scale(1);transition:.2s ease-in-out}:host::ng-deep .button:hover{opacity:1;transform:scale(1.1);transition:.2s ease-in-out}"]
+            }]
+    }], function () { return []; }, { id: [{
+            type: core.Input
+        }], alt: [{
+            type: core.Input
+        }], src: [{
+            type: core.Input
+        }], callback: [{
+            type: core.Input
+        }] }); })();
+        return GlSharedComponentButtonImageSimpleComponent;
+    }());
+
+    var GlSharedComponentButtonImageTooltipComponent = /** @class */ (function () {
+        function GlSharedComponentButtonImageTooltipComponent() {
+            this.show = true;
+        }
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonImageTooltipComponent.prototype, "id", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonImageTooltipComponent.prototype, "alt", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonImageTooltipComponent.prototype, "src", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonImageTooltipComponent.prototype, "show", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonImageTooltipComponent.prototype, "callback", void 0);
+GlSharedComponentButtonImageTooltipComponent.ɵfac = function GlSharedComponentButtonImageTooltipComponent_Factory(t) { return new (t || GlSharedComponentButtonImageTooltipComponent)(); };
+GlSharedComponentButtonImageTooltipComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentButtonImageTooltipComponent, selectors: [["gl-shared-component-button-image-tooltip"]], inputs: { show: "show", id: "id", alt: "alt", src: "src", callback: "callback" }, decls: 1, vars: 1, consts: [["class", "tooltip top", 3, "hidden", "id", 4, "ngIf"], [1, "tooltip", "top", 3, "id"], [3, "src", "alt", "id", "callback"]], template: function GlSharedComponentButtonImageTooltipComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵtemplate(0, GlSharedComponentButtonImageTooltipComponent_div_0_Template, 2, 8, "div", 0);
+    } if (rf & 2) {
+        ɵngcc0.ɵɵproperty("ngIf", ctx.show);
+    } }, directives: [ɵngcc1.NgIf, GlSharedComponentButtonImageSimpleComponent], styles: [".tooltip-menu[_ngcontent-%COMP%]{z-index:100;position:relative;display:flex}.tooltip-menu[_ngcontent-%COMP%]::before{content:\"\";position:absolute;left:80%;transform:translateX(-137%) translateY(100%) rotate(180deg);border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100}.tooltip-menu[_ngcontent-%COMP%]::after{content:attr(tooltip);position:absolute;left:80%;transform:translateX(-57%) translateY(124%);background:#fff;text-align:left;color:#64666c;font-weight:600;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em}.tooltip-menu[_ngcontent-%COMP%]:not(hover)::before{opacity:0;bottom:-.3em;transition:.1s ease-in-out}.tooltip-menu[_ngcontent-%COMP%]:not(hover)::after{opacity:0;bottom:0;transition:.1s ease-in-out}.tooltip-menu[_ngcontent-%COMP%]:hover::after, .tooltip-menu[_ngcontent-%COMP%]:hover::before{opacity:1;bottom:-.11em;transition:.1s ease-in-out}.tooltip.top[_ngcontent-%COMP%]{z-index:1000;position:relative}.tooltip.top[_ngcontent-%COMP%]::before{content:\"\";position:absolute;left:82%;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-200%) translateY(90%)}.tooltip.top[_ngcontent-%COMP%]::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;left:0}.tooltip.top[_ngcontent-%COMP%]:hover::before, .tooltip.top[_ngcontent-%COMP%]:not(hover)::before{top:-.5em;left:93%}.tooltip.top[_ngcontent-%COMP%]:hover::after, .tooltip.top[_ngcontent-%COMP%]:not(hover)::after{left:0;top:-3.1em}.tooltip.top[_ngcontent-%COMP%]:not(hover)::after, .tooltip.top[_ngcontent-%COMP%]:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.top[_ngcontent-%COMP%]:hover::after, .tooltip.top[_ngcontent-%COMP%]:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.top.status-table[_ngcontent-%COMP%]{z-index:1000;position:relative}.tooltip.top.status-table[_ngcontent-%COMP%]::before{content:\"\";position:absolute;left:82%;border-width:.6em .6em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-237%) translateY(-15%)}.tooltip.top.status-table[_ngcontent-%COMP%]::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;left:0;font-size:.9em}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.tooltip-menu[_ngcontent-%COMP%]{margin:0 0 0 .3em;width:1.5em}.tooltip-menu[_ngcontent-%COMP%]::before{transform:translateX(-150%) translateY(100%) rotate(180deg)}.tooltip-menu[_ngcontent-%COMP%]::after{font-size:11.5px;transform:translateX(-55%) translateY(124%)}.tooltip.top.status-table[_ngcontent-%COMP%]::after{left:.9em;font-size:2em}}.tooltip.top.status-table[_ngcontent-%COMP%]:not(hover)::after, .tooltip.top.status-table[_ngcontent-%COMP%]:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.top.status-table[_ngcontent-%COMP%]:hover::after, .tooltip.top.status-table[_ngcontent-%COMP%]:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.bottom[_ngcontent-%COMP%]{z-index:1000;position:relative}.tooltip.bottom[_ngcontent-%COMP%]::before{content:\"\";position:absolute;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;left:107%;transform:translateX(-137%) translateY(100%) rotate(180deg)}.tooltip.bottom[_ngcontent-%COMP%]::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.tooltip.bottom[_ngcontent-%COMP%]:hover::before, .tooltip.bottom[_ngcontent-%COMP%]:not(hover)::before{bottom:.1em}.tooltip.bottom[_ngcontent-%COMP%]:hover::after, .tooltip.bottom[_ngcontent-%COMP%]:not(hover)::after{left:0;bottom:-2.7em}.tooltip.bottom[_ngcontent-%COMP%]:not(hover)::after, .tooltip.bottom[_ngcontent-%COMP%]:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.bottom[_ngcontent-%COMP%]:hover::after, .tooltip.bottom[_ngcontent-%COMP%]:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.bottom-right[_ngcontent-%COMP%]{z-index:1000;position:relative}.tooltip.bottom-right[_ngcontent-%COMP%]::before{content:\"\";position:absolute;left:82%;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-137%) translateY(100%) rotate(180deg)}.tooltip.bottom-right[_ngcontent-%COMP%]::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.tooltip.bottom-right[_ngcontent-%COMP%]:hover::before, .tooltip.bottom-right[_ngcontent-%COMP%]:not(hover)::before{left:94%}.tooltip.bottom-right[_ngcontent-%COMP%]:hover::after, .tooltip.bottom-right[_ngcontent-%COMP%]:not(hover)::after{left:-200%;bottom:-2.7em}.tooltip.bottom-right[_ngcontent-%COMP%]:not(hover)::after, .tooltip.bottom-right[_ngcontent-%COMP%]:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.bottom-right[_ngcontent-%COMP%]:hover::after, .tooltip.bottom-right[_ngcontent-%COMP%]:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.bottom-gantt[_ngcontent-%COMP%]{z-index:1000;position:relative}.tooltip.bottom-gantt[_ngcontent-%COMP%]::before{content:\"\";position:absolute;left:82%;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-137%) translateY(100%) rotate(180deg)}.tooltip.bottom-gantt[_ngcontent-%COMP%]::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.tooltip.bottom-gantt[_ngcontent-%COMP%]::after{font-size:11.5px}}.tooltip.bottom-gantt[_ngcontent-%COMP%]:hover::before, .tooltip.bottom-gantt[_ngcontent-%COMP%]:not(hover)::before{left:83%;bottom:-.1em}.tooltip.bottom-gantt[_ngcontent-%COMP%]:hover::after, .tooltip.bottom-gantt[_ngcontent-%COMP%]:not(hover)::after{left:0;bottom:-3.1em}.tooltip.bottom-gantt[_ngcontent-%COMP%]:not(hover)::after, .tooltip.bottom-gantt[_ngcontent-%COMP%]:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.bottom-gantt[_ngcontent-%COMP%]:hover::after, .tooltip.bottom-gantt[_ngcontent-%COMP%]:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.bottom-menu[_ngcontent-%COMP%]{z-index:1000;position:relative}.tooltip.bottom-menu[_ngcontent-%COMP%]::before{content:\"\";position:absolute;left:82%;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-137%) translateY(100%) rotate(180deg)}.tooltip.bottom-menu[_ngcontent-%COMP%]::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.tooltip.bottom-menu[_ngcontent-%COMP%]:hover::before, .tooltip.bottom-menu[_ngcontent-%COMP%]:not(hover)::before{left:74%;bottom:-.1em}.tooltip.bottom-menu[_ngcontent-%COMP%]:hover::after, .tooltip.bottom-menu[_ngcontent-%COMP%]:not(hover)::after{left:-64%;bottom:-3.1em}.tooltip.bottom-menu[_ngcontent-%COMP%]:not(hover)::after, .tooltip.bottom-menu[_ngcontent-%COMP%]:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.bottom-menu[_ngcontent-%COMP%]:hover::after, .tooltip.bottom-menu[_ngcontent-%COMP%]:hover::before{opacity:1;transition:.1s ease-in-out}[_nghost-%COMP%] {display:flex;align-items:center;justify-content:center;margin:0}[_nghost-%COMP%]  .tooltip{display:flex;align-items:center}[_nghost-%COMP%]  .tooltip::after{transform:translateX(-20%)}[_nghost-%COMP%]  .tooltip::before{left:108%!important}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentButtonImageTooltipComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'gl-shared-component-button-image-tooltip',
+                template: "<div\n  *ngIf=\"show\"\n  [class.hidden]=\"!show\"\n  [id]=\"id\"\n  [attr.tooltip]=\"alt\"\n  class=\"tooltip top\">\n  <gl-shared-component-button-image-simple\n    [src]=\"src\"\n    [alt]=\"alt\"\n    [id]=\"id\"\n    [callback]=\"callback\"\n  ></gl-shared-component-button-image-simple>\n</div>\n",
+                styles: [".tooltip-menu{z-index:100;position:relative;display:flex}.tooltip-menu::before{content:\"\";position:absolute;left:80%;transform:translateX(-137%) translateY(100%) rotate(180deg);border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100}.tooltip-menu::after{content:attr(tooltip);position:absolute;left:80%;transform:translateX(-57%) translateY(124%);background:#fff;text-align:left;color:#64666c;font-weight:600;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em}.tooltip-menu:not(hover)::before{opacity:0;bottom:-.3em;transition:.1s ease-in-out}.tooltip-menu:not(hover)::after{opacity:0;bottom:0;transition:.1s ease-in-out}.tooltip-menu:hover::after,.tooltip-menu:hover::before{opacity:1;bottom:-.11em;transition:.1s ease-in-out}.tooltip.top{z-index:1000;position:relative}.tooltip.top::before{content:\"\";position:absolute;left:82%;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-200%) translateY(90%)}.tooltip.top::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;left:0}.tooltip.top:hover::before,.tooltip.top:not(hover)::before{top:-.5em;left:93%}.tooltip.top:hover::after,.tooltip.top:not(hover)::after{left:0;top:-3.1em}.tooltip.top:not(hover)::after,.tooltip.top:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.top:hover::after,.tooltip.top:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.top.status-table{z-index:1000;position:relative}.tooltip.top.status-table::before{content:\"\";position:absolute;left:82%;border-width:.6em .6em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-237%) translateY(-15%)}.tooltip.top.status-table::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;left:0;font-size:.9em}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.tooltip-menu{margin:0 0 0 .3em;width:1.5em}.tooltip-menu::before{transform:translateX(-150%) translateY(100%) rotate(180deg)}.tooltip-menu::after{font-size:11.5px;transform:translateX(-55%) translateY(124%)}.tooltip.top.status-table::after{left:.9em;font-size:2em}}.tooltip.top.status-table:not(hover)::after,.tooltip.top.status-table:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.top.status-table:hover::after,.tooltip.top.status-table:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.bottom{z-index:1000;position:relative}.tooltip.bottom::before{content:\"\";position:absolute;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;left:107%;transform:translateX(-137%) translateY(100%) rotate(180deg)}.tooltip.bottom::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.tooltip.bottom:hover::before,.tooltip.bottom:not(hover)::before{bottom:.1em}.tooltip.bottom:hover::after,.tooltip.bottom:not(hover)::after{left:0;bottom:-2.7em}.tooltip.bottom:not(hover)::after,.tooltip.bottom:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.bottom:hover::after,.tooltip.bottom:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.bottom-right{z-index:1000;position:relative}.tooltip.bottom-right::before{content:\"\";position:absolute;left:82%;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-137%) translateY(100%) rotate(180deg)}.tooltip.bottom-right::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.tooltip.bottom-right:hover::before,.tooltip.bottom-right:not(hover)::before{left:94%}.tooltip.bottom-right:hover::after,.tooltip.bottom-right:not(hover)::after{left:-200%;bottom:-2.7em}.tooltip.bottom-right:not(hover)::after,.tooltip.bottom-right:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.bottom-right:hover::after,.tooltip.bottom-right:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.bottom-gantt{z-index:1000;position:relative}.tooltip.bottom-gantt::before{content:\"\";position:absolute;left:82%;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-137%) translateY(100%) rotate(180deg)}.tooltip.bottom-gantt::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.tooltip.bottom-gantt::after{font-size:11.5px}}.tooltip.bottom-gantt:hover::before,.tooltip.bottom-gantt:not(hover)::before{left:83%;bottom:-.1em}.tooltip.bottom-gantt:hover::after,.tooltip.bottom-gantt:not(hover)::after{left:0;bottom:-3.1em}.tooltip.bottom-gantt:not(hover)::after,.tooltip.bottom-gantt:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.bottom-gantt:hover::after,.tooltip.bottom-gantt:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.bottom-menu{z-index:1000;position:relative}.tooltip.bottom-menu::before{content:\"\";position:absolute;left:82%;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-137%) translateY(100%) rotate(180deg)}.tooltip.bottom-menu::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.tooltip.bottom-menu:hover::before,.tooltip.bottom-menu:not(hover)::before{left:74%;bottom:-.1em}.tooltip.bottom-menu:hover::after,.tooltip.bottom-menu:not(hover)::after{left:-64%;bottom:-3.1em}.tooltip.bottom-menu:not(hover)::after,.tooltip.bottom-menu:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.bottom-menu:hover::after,.tooltip.bottom-menu:hover::before{opacity:1;transition:.1s ease-in-out}:host::ng-deep{display:flex;align-items:center;justify-content:center;margin:0}:host::ng-deep .tooltip{display:flex;align-items:center}:host::ng-deep .tooltip::after{transform:translateX(-20%)}:host::ng-deep .tooltip::before{left:108%!important}"]
+            }]
+    }], function () { return []; }, { show: [{
+            type: core.Input
+        }], id: [{
+            type: core.Input
+        }], alt: [{
+            type: core.Input
+        }], src: [{
+            type: core.Input
+        }], callback: [{
+            type: core.Input
+        }] }); })();
+        return GlSharedComponentButtonImageTooltipComponent;
+    }());
+
+    var GlSharedComponentButtonMenuSimpleComponent = /** @class */ (function () {
+        function GlSharedComponentButtonMenuSimpleComponent() {
+            this.disabled = false;
+        }
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonMenuSimpleComponent.prototype, "disabled", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonMenuSimpleComponent.prototype, "src", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonMenuSimpleComponent.prototype, "id", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonMenuSimpleComponent.prototype, "alt", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonMenuSimpleComponent.prototype, "callback", void 0);
+GlSharedComponentButtonMenuSimpleComponent.ɵfac = function GlSharedComponentButtonMenuSimpleComponent_Factory(t) { return new (t || GlSharedComponentButtonMenuSimpleComponent)(); };
+GlSharedComponentButtonMenuSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentButtonMenuSimpleComponent, selectors: [["gl-shared-component-button-menu-simple"]], inputs: { disabled: "disabled", src: "src", id: "id", alt: "alt", callback: "callback" }, decls: 1, vars: 3, consts: [[1, "menu-buttons", 3, "id", "src", "alt", "click"]], template: function GlSharedComponentButtonMenuSimpleComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelementStart(0, "img", 0);
+        ɵngcc0.ɵɵlistener("click", function GlSharedComponentButtonMenuSimpleComponent_Template_img_click_0_listener() { return ctx.callback; });
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵproperty("id", ctx.id)("src", ctx.src, ɵngcc0.ɵɵsanitizeUrl)("alt", ctx.alt);
+    } }, styles: [".menu-buttons[_ngcontent-%COMP%]{height:1.5em;width:1.5em;margin:0 0 0 .3em;cursor:pointer}.menu-buttons[_ngcontent-%COMP%]:hover{transform:scale(1.1);opacity:1;transition:.2s ease-in-out}.menu-buttons[_ngcontent-%COMP%]:not(hover){transform:scale(1);opacity:.5;transition:.2s ease-in-out}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){[_nghost-%COMP%]{display:block}}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentButtonMenuSimpleComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'gl-shared-component-button-menu-simple',
+                template: "<img\n  [id]=\"id\"\n  class=\"menu-buttons\"\n  [src]=\"src\"\n  [alt]=\"alt\"\n  (click)=\"callback\">\n",
+                styles: [".menu-buttons{height:1.5em;width:1.5em;margin:0 0 0 .3em;cursor:pointer}.menu-buttons:hover{transform:scale(1.1);opacity:1;transition:.2s ease-in-out}.menu-buttons:not(hover){transform:scale(1);opacity:.5;transition:.2s ease-in-out}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){:host{display:block}}"]
+            }]
+    }], function () { return []; }, { disabled: [{
+            type: core.Input
+        }], src: [{
+            type: core.Input
+        }], id: [{
+            type: core.Input
+        }], alt: [{
+            type: core.Input
+        }], callback: [{
+            type: core.Input
+        }] }); })();
+        return GlSharedComponentButtonMenuSimpleComponent;
+    }());
+
+    var GlSharedComponentButtonMenuTooltipComponent = /** @class */ (function () {
+        function GlSharedComponentButtonMenuTooltipComponent() {
+            this.disabled = false;
+        }
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonMenuTooltipComponent.prototype, "disabled", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonMenuTooltipComponent.prototype, "tooltip", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonMenuTooltipComponent.prototype, "src", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonMenuTooltipComponent.prototype, "id", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonMenuTooltipComponent.prototype, "alt", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentButtonMenuTooltipComponent.prototype, "callback", void 0);
+GlSharedComponentButtonMenuTooltipComponent.ɵfac = function GlSharedComponentButtonMenuTooltipComponent_Factory(t) { return new (t || GlSharedComponentButtonMenuTooltipComponent)(); };
+GlSharedComponentButtonMenuTooltipComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentButtonMenuTooltipComponent, selectors: [["gl-shared-component-button-menu-tooltip"]], inputs: { disabled: "disabled", tooltip: "tooltip", src: "src", id: "id", alt: "alt", callback: "callback" }, decls: 1, vars: 1, consts: [["class", "tooltip-menu", 4, "ngIf"], [1, "tooltip-menu"], [3, "src", "id", "alt", "click"]], template: function GlSharedComponentButtonMenuTooltipComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵtemplate(0, GlSharedComponentButtonMenuTooltipComponent_div_0_Template, 2, 4, "div", 0);
+    } if (rf & 2) {
+        ɵngcc0.ɵɵproperty("ngIf", !ctx.disabled);
+    } }, directives: [ɵngcc1.NgIf, GlSharedComponentButtonMenuSimpleComponent], styles: [".tooltip-menu[_ngcontent-%COMP%]{z-index:100;position:relative;display:flex}.tooltip-menu[_ngcontent-%COMP%]::before{content:\"\";position:absolute;left:80%;transform:translateX(-137%) translateY(100%) rotate(180deg);border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100}.tooltip-menu[_ngcontent-%COMP%]::after{content:attr(alt);position:absolute;left:50%;transform:translateX(-85%) translateY(124%);background:#fff;text-align:left;color:#64666c;font-weight:600;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em}.tooltip-menu[_ngcontent-%COMP%]:not(hover)::before{opacity:0;bottom:-.3em;transition:.1s ease-in-out}.tooltip-menu[_ngcontent-%COMP%]:not(hover)::after{opacity:0;bottom:0;transition:.1s ease-in-out}.tooltip-menu[_ngcontent-%COMP%]:hover::after, .tooltip-menu[_ngcontent-%COMP%]:hover::before{opacity:1;bottom:-.11em;transition:.1s ease-in-out}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){[_nghost-%COMP%] {display:block}}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentButtonMenuTooltipComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'gl-shared-component-button-menu-tooltip',
+                template: "<div [attr.alt]=\"alt\" class=\"tooltip-menu\" *ngIf=\"!disabled\">\n  <gl-shared-component-button-menu-simple\n    [src]=\"src\"\n    [id]=\"id\"\n    [alt]=\"alt\"\n    (click)=\"callback($event)\"\n  ></gl-shared-component-button-menu-simple>\n</div>\n",
+                styles: [".tooltip-menu{z-index:100;position:relative;display:flex}.tooltip-menu::before{content:\"\";position:absolute;left:80%;transform:translateX(-137%) translateY(100%) rotate(180deg);border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100}.tooltip-menu::after{content:attr(alt);position:absolute;left:50%;transform:translateX(-85%) translateY(124%);background:#fff;text-align:left;color:#64666c;font-weight:600;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em}.tooltip-menu:not(hover)::before{opacity:0;bottom:-.3em;transition:.1s ease-in-out}.tooltip-menu:not(hover)::after{opacity:0;bottom:0;transition:.1s ease-in-out}.tooltip-menu:hover::after,.tooltip-menu:hover::before{opacity:1;bottom:-.11em;transition:.1s ease-in-out}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){:host::ng-deep{display:block}}"]
+            }]
+    }], function () { return []; }, { disabled: [{
+            type: core.Input
+        }], tooltip: [{
+            type: core.Input
+        }], src: [{
+            type: core.Input
+        }], id: [{
+            type: core.Input
+        }], alt: [{
+            type: core.Input
+        }], callback: [{
+            type: core.Input
+        }] }); })();
+        return GlSharedComponentButtonMenuTooltipComponent;
+    }());
+
     var GlComponentModule = /** @class */ (function () {
         function GlComponentModule() {
         }
@@ -2000,7 +2328,12 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
             GlCoreModule,
             router.RouterModule
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(GlComponentModule, { declarations: [GlSharedComponentFooterContainerComponent,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(GlComponentModule, { declarations: [GlSharedComponentButtonImageSimpleComponent,
+        GlSharedComponentButtonImageTooltipComponent,
+        GlSharedComponentButtonMenuSimpleComponent,
+        GlSharedComponentButtonMenuTooltipComponent,
+        GlSharedComponentErrorMessageComponent,
+        GlSharedComponentFooterContainerComponent,
         GlSharedComponentFooterSimpleComponent,
         GlSharedComponentInputButtonSimpleComponent,
         GlSharedComponentInputButtonHyperlinkComponent,
@@ -2009,6 +2342,7 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         GlSharedComponentInputTextLabelComponent,
         GlSharedComponentInputTextAreaSimpleComponent,
         GlSharedComponentInputTextAreaLabelComponent,
+        GlSharedComponentLogoSquareComponent,
         GlSharedComponentModalAlertComponent,
         GlSharedComponentModalHeaderComponent,
         GlSharedComponentModalLoadingComponent,
@@ -2018,7 +2352,12 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         GlSharedComponentTitleLabelSimpleComponent,
         GlSharedComponentTitleLabelButtonSimpleComponent,
         GlSharedComponentTitleLabelButtonContainerComponent,
-        GlSharedComponentTitlePageComponent], imports: [ɵngcc1.CommonModule, GlCoreModule, ɵngcc2.RouterModule], exports: [GlSharedComponentFooterContainerComponent,
+        GlSharedComponentTitlePageComponent], imports: [ɵngcc1.CommonModule, GlCoreModule, ɵngcc2.RouterModule], exports: [GlSharedComponentButtonImageSimpleComponent,
+        GlSharedComponentButtonImageTooltipComponent,
+        GlSharedComponentButtonMenuSimpleComponent,
+        GlSharedComponentButtonMenuTooltipComponent,
+        GlSharedComponentErrorMessageComponent,
+        GlSharedComponentFooterContainerComponent,
         GlSharedComponentFooterSimpleComponent,
         GlSharedComponentInputButtonSimpleComponent,
         GlSharedComponentInputButtonHyperlinkComponent,
@@ -2027,12 +2366,13 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         GlSharedComponentInputTextAreaLabelComponent,
         GlSharedComponentInputTextLabelComponent,
         GlSharedComponentInputTextSimpleComponent,
-        GlSharedComponentModalAlertComponent,
-        GlSharedComponentModalHeaderComponent,
-        GlSharedComponentModalLoadingComponent,
+        GlSharedComponentLogoSquareComponent,
         GlSharedComponentMenuBackgroundComponent,
         GlSharedComponentMenuComponent,
         GlSharedComponentMenuItemComponent,
+        GlSharedComponentModalAlertComponent,
+        GlSharedComponentModalHeaderComponent,
+        GlSharedComponentModalLoadingComponent,
         GlSharedComponentTitlePageComponent,
         GlSharedComponentTitleLabelButtonSimpleComponent,
         GlSharedComponentTitleLabelButtonContainerComponent,
@@ -2041,6 +2381,11 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         type: core.NgModule,
         args: [{
                 declarations: [
+                    GlSharedComponentButtonImageSimpleComponent,
+                    GlSharedComponentButtonImageTooltipComponent,
+                    GlSharedComponentButtonMenuSimpleComponent,
+                    GlSharedComponentButtonMenuTooltipComponent,
+                    GlSharedComponentErrorMessageComponent,
                     GlSharedComponentFooterContainerComponent,
                     GlSharedComponentFooterSimpleComponent,
                     GlSharedComponentInputButtonSimpleComponent,
@@ -2050,6 +2395,7 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                     GlSharedComponentInputTextLabelComponent,
                     GlSharedComponentInputTextAreaSimpleComponent,
                     GlSharedComponentInputTextAreaLabelComponent,
+                    GlSharedComponentLogoSquareComponent,
                     GlSharedComponentModalAlertComponent,
                     GlSharedComponentModalHeaderComponent,
                     GlSharedComponentModalLoadingComponent,
@@ -2067,6 +2413,11 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                     router.RouterModule
                 ],
                 exports: [
+                    GlSharedComponentButtonImageSimpleComponent,
+                    GlSharedComponentButtonImageTooltipComponent,
+                    GlSharedComponentButtonMenuSimpleComponent,
+                    GlSharedComponentButtonMenuTooltipComponent,
+                    GlSharedComponentErrorMessageComponent,
                     GlSharedComponentFooterContainerComponent,
                     GlSharedComponentFooterSimpleComponent,
                     GlSharedComponentInputButtonSimpleComponent,
@@ -2076,12 +2427,13 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                     GlSharedComponentInputTextAreaLabelComponent,
                     GlSharedComponentInputTextLabelComponent,
                     GlSharedComponentInputTextSimpleComponent,
-                    GlSharedComponentModalAlertComponent,
-                    GlSharedComponentModalHeaderComponent,
-                    GlSharedComponentModalLoadingComponent,
+                    GlSharedComponentLogoSquareComponent,
                     GlSharedComponentMenuBackgroundComponent,
                     GlSharedComponentMenuComponent,
                     GlSharedComponentMenuItemComponent,
+                    GlSharedComponentModalAlertComponent,
+                    GlSharedComponentModalHeaderComponent,
+                    GlSharedComponentModalLoadingComponent,
                     GlSharedComponentTitlePageComponent,
                     GlSharedComponentTitleLabelButtonSimpleComponent,
                     GlSharedComponentTitleLabelButtonContainerComponent,
@@ -2143,10 +2495,194 @@ GlNgFrontendModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlNgFr
         return GlNgFrontendModule;
     }());
 
+    var GlSharedViewErrorMessageComponent = /** @class */ (function () {
+        function GlSharedViewErrorMessageComponent() {
+            this.logoHorizontalPosition = 'left';
+            this.logoVerticalPosition = 'top';
+            this.errorPosition = 'left';
+            this.errorButtonAction$ = new core.EventEmitter();
+            this.footerImageDescription = 'Image logo';
+        }
+        GlSharedViewErrorMessageComponent.prototype.ngAfterViewInit = function () {
+            var mainContainer = this.mainContainer.nativeElement;
+            var mainContainerParent = this.mainContainer.nativeElement.parentNode;
+            mainContainer.style.backgroundImage = "url(" + this.background + ")";
+            mainContainerParent.style.backgroundImage = "url(" + this.blurBackground + ")";
+            console.log(this.mainContainer);
+            console.log(mainContainer);
+            console.log(mainContainerParent);
+            console.log(this.background);
+            console.log(this.blurBackground);
+        };
+        GlSharedViewErrorMessageComponent.prototype.errorButtonAction = function () {
+            this.errorButtonAction$.emit();
+        };
+        __decorate([
+            core.ViewChild('mainContainer')
+        ], GlSharedViewErrorMessageComponent.prototype, "mainContainer", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "blurBackground", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "background", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "logoImageScr", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "logoImageAlt", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "logoHorizontalPosition", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "logoVerticalPosition", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "errorPosition", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "errorCode", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "errorMessage", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "errorButtonLabel", void 0);
+        __decorate([
+            core.Output()
+        ], GlSharedViewErrorMessageComponent.prototype, "errorButtonAction$", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "footerMainDescription", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "footerShowContainer", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "footerDescription", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "footerImageDescription", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "footerImageSrc", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedViewErrorMessageComponent.prototype, "footerLink", void 0);
+GlSharedViewErrorMessageComponent.ɵfac = function GlSharedViewErrorMessageComponent_Factory(t) { return new (t || GlSharedViewErrorMessageComponent)(); };
+GlSharedViewErrorMessageComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedViewErrorMessageComponent, selectors: [["gl-shared-view-error-message"]], viewQuery: function GlSharedViewErrorMessageComponent_Query(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵviewQuery(_c7, true);
+    } if (rf & 2) {
+        var _t;
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.mainContainer = _t.first);
+    } }, inputs: { logoHorizontalPosition: "logoHorizontalPosition", logoVerticalPosition: "logoVerticalPosition", errorPosition: "errorPosition", footerImageDescription: "footerImageDescription", blurBackground: "blurBackground", background: "background", logoImageScr: "logoImageScr", logoImageAlt: "logoImageAlt", errorCode: "errorCode", errorMessage: "errorMessage", errorButtonLabel: "errorButtonLabel", footerMainDescription: "footerMainDescription", footerShowContainer: "footerShowContainer", footerDescription: "footerDescription", footerImageSrc: "footerImageSrc", footerLink: "footerLink" }, outputs: { errorButtonAction$: "errorButtonAction$" }, decls: 6, vars: 10, consts: [[1, "main-container"], ["mainContainer", ""], [3, "horizontalPosition", "verticalPosition", "imageAlt", "imageScr"], [3, "position", "errorCode", "errorMessage", "buttonLabel", "buttonAction$"], [3, "description"], [3, "description", "imageDescription", "imageSrc", "link", 4, "ngIf"], [3, "description", "imageDescription", "imageSrc", "link"]], template: function GlSharedViewErrorMessageComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelementStart(0, "div", 0, 1);
+        ɵngcc0.ɵɵelement(2, "gl-shared-component-logo-square", 2);
+        ɵngcc0.ɵɵelementStart(3, "gl-shared-component-error-message", 3);
+        ɵngcc0.ɵɵlistener("buttonAction$", function GlSharedViewErrorMessageComponent_Template_gl_shared_component_error_message_buttonAction__3_listener() { return ctx.errorButtonAction(); });
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(4, "gl-shared-component-footer-container", 4);
+        ɵngcc0.ɵɵtemplate(5, GlSharedViewErrorMessageComponent_gl_shared_component_input_button_hyperlink_5_Template, 1, 4, "gl-shared-component-input-button-hyperlink", 5);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵproperty("horizontalPosition", ctx.logoHorizontalPosition)("verticalPosition", ctx.logoVerticalPosition)("imageAlt", ctx.logoImageAlt)("imageScr", ctx.logoImageScr);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("position", ctx.errorPosition)("errorCode", ctx.errorCode)("errorMessage", ctx.errorMessage)("buttonLabel", ctx.errorButtonLabel);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("description", ctx.footerMainDescription);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.footerShowContainer);
+    } }, directives: [GlSharedComponentLogoSquareComponent,
+        GlSharedComponentErrorMessageComponent,
+        GlSharedComponentFooterContainerComponent, ɵngcc1.NgIf, GlSharedComponentInputButtonHyperlinkComponent], styles: ["[_nghost-%COMP%] {display:flex;flex-grow:1;background-color:#1a1b1d}[_nghost-%COMP%]  .main-container{display:flex;flex-direction:column;justify-items:stretch;height:100vh;width:100vw;overflow:hidden;flex-grow:1;background-size:101%;background-position:top center;background-repeat:no-repeat;-webkit-animation-name:start;animation-name:start;-webkit-animation-duration:3s;animation-duration:3s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-play-state:running;animation-play-state:running}@-webkit-keyframes start{from{opacity:0}to{opacity:1}}@keyframes start{from{opacity:0}to{opacity:1}}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedViewErrorMessageComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'gl-shared-view-error-message',
+                template: "<div #mainContainer class=\"main-container\">\n  <gl-shared-component-logo-square\n    [horizontalPosition]=\"logoHorizontalPosition\"\n    [verticalPosition]=\"logoVerticalPosition\"\n    [imageAlt]=\"logoImageAlt\"\n    [imageScr]=\"logoImageScr\"\n  ></gl-shared-component-logo-square>\n  <gl-shared-component-error-message\n    [position]=\"errorPosition\"\n    [errorCode]=\"errorCode\"\n    [errorMessage]=\"errorMessage\"\n    [buttonLabel]=\"errorButtonLabel\"\n    (buttonAction$)=\"errorButtonAction()\"\n  ></gl-shared-component-error-message>\n  <gl-shared-component-footer-container [description]=\"footerMainDescription\">\n    <gl-shared-component-input-button-hyperlink\n      *ngIf=\"footerShowContainer\"\n      [description]=\"footerDescription\"\n      [imageDescription]=\"footerImageDescription\"\n      [imageSrc]=\"footerImageSrc\"\n      [link]=\"footerLink\"\n    ></gl-shared-component-input-button-hyperlink>\n  </gl-shared-component-footer-container>\n</div>\n",
+                styles: [":host::ng-deep{display:flex;flex-grow:1;background-color:#1a1b1d}:host::ng-deep .main-container{display:flex;flex-direction:column;justify-items:stretch;height:100vh;width:100vw;overflow:hidden;flex-grow:1;background-size:101%;background-position:top center;background-repeat:no-repeat;-webkit-animation-name:start;animation-name:start;-webkit-animation-duration:3s;animation-duration:3s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-play-state:running;animation-play-state:running}@-webkit-keyframes start{from{opacity:0}to{opacity:1}}@keyframes start{from{opacity:0}to{opacity:1}}"]
+            }]
+    }], function () { return []; }, { logoHorizontalPosition: [{
+            type: core.Input
+        }], logoVerticalPosition: [{
+            type: core.Input
+        }], errorPosition: [{
+            type: core.Input
+        }], errorButtonAction$: [{
+            type: core.Output
+        }], footerImageDescription: [{
+            type: core.Input
+        }], mainContainer: [{
+            type: core.ViewChild,
+            args: ['mainContainer']
+        }], blurBackground: [{
+            type: core.Input
+        }], background: [{
+            type: core.Input
+        }], logoImageScr: [{
+            type: core.Input
+        }], logoImageAlt: [{
+            type: core.Input
+        }], errorCode: [{
+            type: core.Input
+        }], errorMessage: [{
+            type: core.Input
+        }], errorButtonLabel: [{
+            type: core.Input
+        }], footerMainDescription: [{
+            type: core.Input
+        }], footerShowContainer: [{
+            type: core.Input
+        }], footerDescription: [{
+            type: core.Input
+        }], footerImageSrc: [{
+            type: core.Input
+        }], footerLink: [{
+            type: core.Input
+        }] }); })();
+        return GlSharedViewErrorMessageComponent;
+    }());
+
+    var GlSharedViewModule = /** @class */ (function () {
+        function GlSharedViewModule() {
+        }
+GlSharedViewModule.ɵmod = ɵngcc0.ɵɵdefineNgModule({ type: GlSharedViewModule });
+GlSharedViewModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlSharedViewModule_Factory(t) { return new (t || GlSharedViewModule)(); }, imports: [[
+            common.CommonModule,
+            GlComponentModule
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(GlSharedViewModule, { declarations: [GlSharedViewErrorMessageComponent], imports: [ɵngcc1.CommonModule, GlComponentModule], exports: [GlSharedViewErrorMessageComponent] }); })();
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedViewModule, [{
+        type: core.NgModule,
+        args: [{
+                declarations: [
+                    GlSharedViewErrorMessageComponent
+                ],
+                exports: [
+                    GlSharedViewErrorMessageComponent
+                ],
+                imports: [
+                    common.CommonModule,
+                    GlComponentModule
+                ]
+            }]
+    }], function () { return []; }, null); })();
+        return GlSharedViewModule;
+    }());
+
     exports.CoreDirectivesAutofocusDirective = CoreDirectivesAutofocusDirective;
     exports.GlComponentModule = GlComponentModule;
     exports.GlCoreModule = GlCoreModule;
     exports.GlNgFrontendModule = GlNgFrontendModule;
+    exports.GlSharedComponentButtonImageSimpleComponent = GlSharedComponentButtonImageSimpleComponent;
+    exports.GlSharedComponentButtonImageTooltipComponent = GlSharedComponentButtonImageTooltipComponent;
+    exports.GlSharedComponentButtonMenuSimpleComponent = GlSharedComponentButtonMenuSimpleComponent;
+    exports.GlSharedComponentButtonMenuTooltipComponent = GlSharedComponentButtonMenuTooltipComponent;
+    exports.GlSharedComponentErrorMessageComponent = GlSharedComponentErrorMessageComponent;
     exports.GlSharedComponentFooterContainerComponent = GlSharedComponentFooterContainerComponent;
     exports.GlSharedComponentFooterSimpleComponent = GlSharedComponentFooterSimpleComponent;
     exports.GlSharedComponentInputButtonHyperlinkComponent = GlSharedComponentInputButtonHyperlinkComponent;
@@ -2156,6 +2692,7 @@ GlNgFrontendModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlNgFr
     exports.GlSharedComponentInputTextAreaSimpleComponent = GlSharedComponentInputTextAreaSimpleComponent;
     exports.GlSharedComponentInputTextLabelComponent = GlSharedComponentInputTextLabelComponent;
     exports.GlSharedComponentInputTextSimpleComponent = GlSharedComponentInputTextSimpleComponent;
+    exports.GlSharedComponentLogoSquareComponent = GlSharedComponentLogoSquareComponent;
     exports.GlSharedComponentMenuBackgroundComponent = GlSharedComponentMenuBackgroundComponent;
     exports.GlSharedComponentMenuComponent = GlSharedComponentMenuComponent;
     exports.GlSharedComponentMenuItemComponent = GlSharedComponentMenuItemComponent;
@@ -2170,6 +2707,8 @@ GlNgFrontendModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlNgFr
     exports.GlSharedComponentTitleLabelSimpleComponent = GlSharedComponentTitleLabelSimpleComponent;
     exports.GlSharedComponentTitlePageComponent = GlSharedComponentTitlePageComponent;
     exports.GlSharedModule = GlSharedModule;
+    exports.GlSharedViewErrorMessageComponent = GlSharedViewErrorMessageComponent;
+    exports.GlSharedViewModule = GlSharedViewModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

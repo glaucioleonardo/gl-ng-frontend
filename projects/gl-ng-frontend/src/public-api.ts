@@ -11,6 +11,15 @@ export * from './lib/shared/gl-shared.module';
 // region Component
 export * from './lib/shared/component/gl-component.module';
 
+export * from './lib/shared/component/button/image/simple/gl-shared-component-button-image-simple.component';
+export * from './lib/shared/component/button/image/tooltip/gl-shared-component-button-image-tooltip.component';
+export * from './lib/shared/component/button/image/tooltip/gl-shared-component-button-image-tooltip.interface';
+export * from './lib/shared/component/button/menu/simple/gl-shared-component-button-menu-simple.component';
+export * from './lib/shared/component/button/menu/simple/gl-shared-component-button-menu-simple.interface';
+export * from './lib/shared/component/button/menu/tooltip/gl-shared-component-button-menu-tooltip.component';
+
+export * from './lib/shared/component/error-message/gl-shared-component-error-message.component';
+
 export * from './lib/shared/component/footer/simple/gl-shared-component-footer-simple.component';
 export * from './lib/shared/component/footer/container/gl-shared-component-footer-container.component';
 
@@ -21,6 +30,8 @@ export * from './lib/shared/component/input/text/label/gl-shared-component-input
 export * from './lib/shared/component/input/text-area/simple/gl-shared-component-input-text-area-simple.component';
 export * from './lib/shared/component/input/text-area/label/gl-shared-component-input-text-area-label.component';
 export * from './lib/shared/component/input/button/hyperlink/gl-shared-component-input-button-hyperlink.component';
+
+export * from './lib/shared/component/logo/square/gl-shared-component-logo-square.component';
 
 export * from './lib/shared/component/menu/background/gl-shared-component-menu-background.component';
 export * from './lib/shared/component/menu/item/gl-shared-component-menu-item.component';
@@ -40,7 +51,11 @@ export * from './lib/shared/component/title/page/gl-shared-component-title-page.
 export * from './lib/shared/component/title/label/button/simple/gl-shared-component-title-label-button-simple.component';
 export * from './lib/shared/component/title/label/button/container/gl-shared-component-title-label-button-container.component';
 // endregion
+// region Views
+export * from './lib/shared/view/gl-shared-view.module'
 
+export * from './lib/shared/view/error-message/gl-shared-view-error-message.component'
+// endregion
 // endregion
 
 // region Core
