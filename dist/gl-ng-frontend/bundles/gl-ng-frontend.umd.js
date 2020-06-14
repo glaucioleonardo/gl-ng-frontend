@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('@angular/core'),require('@angular/common'),require('@angular/router'),require('@angular/platform-browser'),require('@angular/common/http'),exports, require('@angular/core'), require('@angular/platform-browser'), require('@angular/common/http'), require('@angular/common'), require('@angular/router'), require('gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.service'), require('rxjs')) :
-    typeof define === 'function' && define.amd ? define('gl-ng-frontend', ['@angular/core','@angular/common','@angular/router','@angular/platform-browser','@angular/common/http','exports', '@angular/core', '@angular/platform-browser', '@angular/common/http', '@angular/common', '@angular/router', 'gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.service', 'rxjs'], factory) :
-    (global = global || self, factory(global.ng.core,global.ng.common,global.ng.router,global.ng.platformBrowser,global.ng.common.http,global['gl-ng-frontend'] = {}, global.ng.core, global.ng.platformBrowser, global.ng.common.http, global.ng.common, global.ng.router, global.coreServicesInput_service, global.rxjs));
-}(this, (function (ɵngcc0,ɵngcc1,ɵngcc2,ɵngcc3,ɵngcc4,exports, core, platformBrowser, http, common, router, coreServicesInput_service, rxjs) { 
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('@angular/core'),require('@angular/common'),require('@angular/router'),require('@angular/material/form-field'),require('@angular/material/input'),require('@angular/forms'),require('@angular/material/autocomplete'),require('@angular/material/core'),require('@angular/material/dialog'),require('@angular/platform-browser/animations'),require('@angular/platform-browser'),require('@angular/common/http'),exports, require('@angular/core'), require('@angular/forms'), require('@angular/platform-browser'), require('@angular/common/http'), require('@angular/common'), require('@angular/router'), require('@angular/material/autocomplete'), require('@angular/material/dialog'), require('@angular/material/form-field'), require('@angular/material/input'), require('@angular/platform-browser/animations'), require('gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.service'), require('rxjs'), require('rxjs/operators')) :
+    typeof define === 'function' && define.amd ? define('gl-ng-frontend', ['@angular/core','@angular/common','@angular/router','@angular/material/form-field','@angular/material/input','@angular/forms','@angular/material/autocomplete','@angular/material/core','@angular/material/dialog','@angular/platform-browser/animations','@angular/platform-browser','@angular/common/http','exports', '@angular/core', '@angular/forms', '@angular/platform-browser', '@angular/common/http', '@angular/common', '@angular/router', '@angular/material/autocomplete', '@angular/material/dialog', '@angular/material/form-field', '@angular/material/input', '@angular/platform-browser/animations', 'gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.service', 'rxjs', 'rxjs/operators'], factory) :
+    (global = global || self, factory(global.ng.core,global.ng.common,global.ng.router,global.ng.material.formField,global.ng.material.input,global.ng.forms,global.ng.material.autocomplete,global.ng.material.core,global.ng.material.dialog,global.ng.platformBrowser.animations,global.ng.platformBrowser,global.ng.common.http,global['gl-ng-frontend'] = {}, global.ng.core, global.ng.forms, global.ng.platformBrowser, global.ng.common.http, global.ng.common, global.ng.router, global.ng.material.autocomplete, global.ng.material.dialog, global.ng.material.formField, global.ng.material.input, global.ng.platformBrowser.animations, global.coreServicesInput_service, global.rxjs, global.rxjs.operators));
+}(this, (function (ɵngcc0,ɵngcc1,ɵngcc2,ɵngcc3,ɵngcc4,ɵngcc5,ɵngcc6,ɵngcc7,ɵngcc8,ɵngcc9,ɵngcc10,ɵngcc11,exports, core, forms, platformBrowser, http, common, router, autocomplete, dialog, formField, input, animations, coreServicesInput_service, rxjs, operators) { 
 var _c0 = ["input"];
 var _c1 = ["inputElement"];
 function GlSharedComponentTitleLabelSimpleComponent_img_2_Template(rf, ctx) { if (rf & 1) {
@@ -181,6 +181,16 @@ function GlSharedComponentButtonMenuTooltipComponent_div_0_Template(rf, ctx) { i
     ɵngcc0.ɵɵattribute("alt", ctx_r0.alt);
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("src", ctx_r0.src)("id", ctx_r0.id)("alt", ctx_r0.alt);
+} }
+function GlSharedComponentInputAutocompleteSimpleComponent_mat_option_9_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "mat-option", 8);
+    ɵngcc0.ɵɵtext(1);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    var option_r4 = ctx.$implicit;
+    ɵngcc0.ɵɵproperty("value", option_r4.text);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵtextInterpolate1(" ", option_r4.text, " ");
 } }
 var _c7 = ["mainContainer"];
 function GlSharedViewErrorMessageComponent_gl_shared_component_input_button_hyperlink_5_Template(rf, ctx) { if (rf & 1) {
@@ -652,13 +662,13 @@ GlSharedComponentInputTextSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ 
     } if (rf & 2) {
         ɵngcc0.ɵɵclassMapInterpolate2("item-content ", ctx.itemContentAlignment, " ", ctx.class, "");
         ɵngcc0.ɵɵproperty("id", ctx.id)("value", ctx.value)("autocomplete", "off")("placeholder", ctx.placeholder)("disabled", ctx.disabled)("maxLength", ctx.maxLength);
-    } }, styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);.required-fill[_ngcontent-%COMP%]{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill[_ngcontent-%COMP%]::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill[_ngcontent-%COMP%]::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]::placeholder{color:rgba(255,255,255,.3)!important}[_nghost-%COMP%] {display:flex;flex:1 0 auto;position:relative;flex-direction:column;align-items:stretch;margin:.5px}[_nghost-%COMP%]  .item-content{font-family:Montserrat,sans-serif;font-weight:400;padding:.8em;border:none;background-color:#333437;color:#fff;font-size:.45em;flex-grow:1}[_nghost-%COMP%]  .item-content::-moz-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content::-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content::placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content.left{text-align:left}[_nghost-%COMP%]  .item-content.center{text-align:center}[_nghost-%COMP%]  .item-content.right{text-align:right}[_nghost-%COMP%]  .item-content.light{background-color:rgba(0,0,0,.1)}[_nghost-%COMP%]  .item-content.light::-moz-placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  .item-content.light::-ms-input-placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  .item-content.light::placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  .item-content:-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content.light:-ms-input-placeholder{color:gray!important}@media screen and (-ms-high-contrast:none),(-ms-high-contrast:active){[_nghost-%COMP%]  .item-content:-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content::-moz-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content::-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content::placeholder{color:#64666c!important}}"] });
+    } }, styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);.required-fill[_ngcontent-%COMP%]{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill[_ngcontent-%COMP%]::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill[_ngcontent-%COMP%]::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]::placeholder{color:rgba(255,255,255,.3)!important}[_nghost-%COMP%] {display:flex;flex:1 0 auto;position:relative;flex-direction:column;align-items:stretch;margin:.5px}[_nghost-%COMP%]  .item-content{font-family:Montserrat,sans-serif;font-weight:400;padding:.8em;border:none;background-color:#333437;color:#fff;font-size:.45em;flex-grow:1}[_nghost-%COMP%]  .item-content:focus{outline:0!important}[_nghost-%COMP%]  .item-content::-moz-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content::-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content::placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content.left{text-align:left}[_nghost-%COMP%]  .item-content.center{text-align:center}[_nghost-%COMP%]  .item-content.right{text-align:right}[_nghost-%COMP%]  .item-content.light{background-color:rgba(0,0,0,.1)}[_nghost-%COMP%]  .item-content.light::-moz-placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  .item-content.light::-ms-input-placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  .item-content.light::placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  .item-content:-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content.light:-ms-input-placeholder{color:gray!important}@media screen and (-ms-high-contrast:none),(-ms-high-contrast:active){[_nghost-%COMP%]  .item-content:-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content::-moz-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content::-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-content::placeholder{color:#64666c!important}}"] });
 /*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentInputTextSimpleComponent, [{
         type: core.Component,
         args: [{
                 selector: 'gl-shared-component-input-text-simple',
                 template: "<!--suppress HtmlFormInputWithoutLabel -->\n<input\n  #inputElement\n  class=\"item-content {{ itemContentAlignment }} {{ class }}\"\n  type=\"text\"\n  [id]=\"id\"\n  [value]=\"value\"\n  [autocomplete]=\"'off'\"\n  required\n  [placeholder]=\"placeholder\"\n  (keyup)=\"onKeyUp($event)\"\n  [disabled]=\"disabled\"\n  [maxLength]=\"maxLength\">\n",
-                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);.required-fill{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::placeholder{color:rgba(255,255,255,.3)!important}:host::ng-deep{display:flex;flex:1 0 auto;position:relative;flex-direction:column;align-items:stretch;margin:.5px}:host::ng-deep .item-content{font-family:Montserrat,sans-serif;font-weight:400;padding:.8em;border:none;background-color:#333437;color:#fff;font-size:.45em;flex-grow:1}:host::ng-deep .item-content::-moz-placeholder{color:#64666c!important}:host::ng-deep .item-content::-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-content::placeholder{color:#64666c!important}:host::ng-deep .item-content.left{text-align:left}:host::ng-deep .item-content.center{text-align:center}:host::ng-deep .item-content.right{text-align:right}:host::ng-deep .item-content.light{background-color:rgba(0,0,0,.1)}:host::ng-deep .item-content.light::-moz-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .item-content.light::-ms-input-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .item-content.light::placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-content.light:-ms-input-placeholder{color:gray!important}@media screen and (-ms-high-contrast:none),(-ms-high-contrast:active){:host::ng-deep .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-content::-moz-placeholder{color:#64666c!important}:host::ng-deep .item-content::-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-content::placeholder{color:#64666c!important}}"]
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);.required-fill{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::placeholder{color:rgba(255,255,255,.3)!important}:host::ng-deep{display:flex;flex:1 0 auto;position:relative;flex-direction:column;align-items:stretch;margin:.5px}:host::ng-deep .item-content{font-family:Montserrat,sans-serif;font-weight:400;padding:.8em;border:none;background-color:#333437;color:#fff;font-size:.45em;flex-grow:1}:host::ng-deep .item-content:focus{outline:0!important}:host::ng-deep .item-content::-moz-placeholder{color:#64666c!important}:host::ng-deep .item-content::-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-content::placeholder{color:#64666c!important}:host::ng-deep .item-content.left{text-align:left}:host::ng-deep .item-content.center{text-align:center}:host::ng-deep .item-content.right{text-align:right}:host::ng-deep .item-content.light{background-color:rgba(0,0,0,.1)}:host::ng-deep .item-content.light::-moz-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .item-content.light::-ms-input-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .item-content.light::placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-content.light:-ms-input-placeholder{color:gray!important}@media screen and (-ms-high-contrast:none),(-ms-high-contrast:active){:host::ng-deep .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-content::-moz-placeholder{color:#64666c!important}:host::ng-deep .item-content::-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-content::placeholder{color:#64666c!important}}"]
             }]
     }], function () { return []; }, { disabled: [{
             type: core.Input
@@ -929,13 +939,13 @@ GlSharedComponentInputTextAreaSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponen
         ɵngcc0.ɵɵadvance(2);
         ɵngcc0.ɵɵclassMapInterpolate2("item-content ", ctx.itemContentAlignment, " ", ctx.class, "");
         ɵngcc0.ɵɵproperty("id", ctx.id)("placeholder", ctx.placeholder)("value", ctx.value)("disabled", ctx.disabled)("maxLength", ctx.maxLength);
-    } }, styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%]  .item-container .item-content::-webkit-scrollbar:horizontal{height:.5em}[_nghost-%COMP%]  .item-container .item-content::-webkit-scrollbar:vertical{width:.5em}[_nghost-%COMP%]  .item-container .item-content::-webkit-scrollbar-button{background-color:#333437;display:none!important}[_nghost-%COMP%]  .item-container .item-content::-webkit-scrollbar-track{background-color:green}[_nghost-%COMP%]  .item-container .item-content::-webkit-scrollbar-track-piece{background-color:#2c2c2f}[_nghost-%COMP%]  .item-container .item-content::-webkit-scrollbar-thumb{background-color:#64666c;border:1px solid #38393c}.required-fill[_ngcontent-%COMP%]{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill[_ngcontent-%COMP%]::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill[_ngcontent-%COMP%]::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]::placeholder{color:rgba(255,255,255,.3)!important}[_nghost-%COMP%] {display:flex;flex:1 0 auto}[_nghost-%COMP%]  .item-container{position:relative;display:flex;flex-direction:column;align-items:stretch;margin:.5px;flex:1 0 auto}[_nghost-%COMP%]  .item-container gl-shared-component-title-label-simple{flex-grow:0}[_nghost-%COMP%]  .item-container .item-content{scrollbar-face-color:#333437;scrollbar-shadow-color:#38393c;scrollbar-track-color:#2c2c2f;scrollbar-arrow-color:#64666c;font-family:Montserrat,sans-serif;font-weight:300;resize:none;padding:.8em;font-size:.45em;text-align:left;flex-grow:1;overflow-x:hidden;overflow-y:auto;background-color:#333437;border:none;color:#fff}[_nghost-%COMP%]  .item-container .item-content::-moz-placeholder{color:#64666c}[_nghost-%COMP%]  .item-container .item-content::-ms-input-placeholder{color:#64666c}[_nghost-%COMP%]  .item-container .item-content::placeholder{color:#64666c}[_nghost-%COMP%]  .item-container .item-content.light{background-color:rgba(0,0,0,.1)}[_nghost-%COMP%]  .item-container .item-content:-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-container .item-content.light:-ms-input-placeholder{color:rgba(255,255,255,.2)!important}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){[_nghost-%COMP%]  .item-container .scroll-wrapper{height:0%}[_nghost-%COMP%]  .item-container .scroll-wrapper .scroll-content .item-content{height:100%!important;margin-right:0}}"] });
+    } }, styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%]  .item-container .item-content::-webkit-scrollbar:horizontal{height:.5em!important}[_nghost-%COMP%]  .item-container .item-content::-webkit-scrollbar:vertical{width:.5em!important}[_nghost-%COMP%]  .item-container .item-content::-webkit-scrollbar-button{background-color:#333437!important;display:none!important}[_nghost-%COMP%]  .item-container .item-content::-webkit-scrollbar-track{background-color:green!important}[_nghost-%COMP%]  .item-container .item-content::-webkit-scrollbar-track-piece{background-color:#2c2c2f!important}[_nghost-%COMP%]  .item-container .item-content::-webkit-scrollbar-thumb{background-color:#64666c!important;border:1px solid #38393c!important}.required-fill[_ngcontent-%COMP%]{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill[_ngcontent-%COMP%]::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill[_ngcontent-%COMP%]::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight[_ngcontent-%COMP%]::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight[_ngcontent-%COMP%]::placeholder{color:rgba(255,255,255,.3)!important}[_nghost-%COMP%] {display:flex;flex:1 0 auto}[_nghost-%COMP%]  .item-container{position:relative;display:flex;flex-direction:column;align-items:stretch;margin:.5px;flex:1 0 auto}[_nghost-%COMP%]  .item-container gl-shared-component-title-label-simple{flex-grow:0}[_nghost-%COMP%]  .item-container .item-content{scrollbar-face-color:#333437!important;scrollbar-shadow-color:#38393c!important;scrollbar-track-color:#2c2c2f!important;scrollbar-arrow-color:#64666c!important;font-family:Montserrat,sans-serif;font-weight:300;resize:none;padding:.8em;font-size:.45em;text-align:left;flex-grow:1;overflow-x:hidden;overflow-y:auto;background-color:#333437;border:none;color:#fff}[_nghost-%COMP%]  .item-container .item-content:focus{outline:0!important}[_nghost-%COMP%]  .item-container .item-content::-moz-placeholder{color:#64666c}[_nghost-%COMP%]  .item-container .item-content::-ms-input-placeholder{color:#64666c}[_nghost-%COMP%]  .item-container .item-content::placeholder{color:#64666c}[_nghost-%COMP%]  .item-container .item-content.light{background-color:rgba(0,0,0,.1)}[_nghost-%COMP%]  .item-container .item-content:-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  .item-container .item-content.light:-ms-input-placeholder{color:rgba(255,255,255,.2)!important}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){[_nghost-%COMP%]  .item-container .scroll-wrapper{height:0%}[_nghost-%COMP%]  .item-container .scroll-wrapper .scroll-content .item-content{height:100%!important;margin-right:0}}"] });
 /*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentInputTextAreaSimpleComponent, [{
         type: core.Component,
         args: [{
                 selector: 'gl-shared-component-input-text-area-simple',
                 template: "<div class=\"item-container\">\n  <ng-content></ng-content>\n  <!--suppress HtmlFormInputWithoutLabel -->\n  <textarea\n    #textArea\n    class=\"item-content {{ itemContentAlignment }} {{ class }}\"\n    [id]=\"id\"\n    [placeholder]=\"placeholder\"\n    (keyup)=\"onKeyUp($event)\"\n    [value]=\"value\"\n    [disabled]=\"disabled\"\n    [maxLength]=\"maxLength\"\n  ></textarea>\n</div>\n",
-                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .item-container .item-content::-webkit-scrollbar:horizontal{height:.5em}:host::ng-deep .item-container .item-content::-webkit-scrollbar:vertical{width:.5em}:host::ng-deep .item-container .item-content::-webkit-scrollbar-button{background-color:#333437;display:none!important}:host::ng-deep .item-container .item-content::-webkit-scrollbar-track{background-color:green}:host::ng-deep .item-container .item-content::-webkit-scrollbar-track-piece{background-color:#2c2c2f}:host::ng-deep .item-container .item-content::-webkit-scrollbar-thumb{background-color:#64666c;border:1px solid #38393c}.required-fill{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::placeholder{color:rgba(255,255,255,.3)!important}:host::ng-deep{display:flex;flex:1 0 auto}:host::ng-deep .item-container{position:relative;display:flex;flex-direction:column;align-items:stretch;margin:.5px;flex:1 0 auto}:host::ng-deep .item-container gl-shared-component-title-label-simple{flex-grow:0}:host::ng-deep .item-container .item-content{scrollbar-face-color:#333437;scrollbar-shadow-color:#38393c;scrollbar-track-color:#2c2c2f;scrollbar-arrow-color:#64666c;font-family:Montserrat,sans-serif;font-weight:300;resize:none;padding:.8em;font-size:.45em;text-align:left;flex-grow:1;overflow-x:hidden;overflow-y:auto;background-color:#333437;border:none;color:#fff}:host::ng-deep .item-container .item-content::-moz-placeholder{color:#64666c}:host::ng-deep .item-container .item-content::-ms-input-placeholder{color:#64666c}:host::ng-deep .item-container .item-content::placeholder{color:#64666c}:host::ng-deep .item-container .item-content.light{background-color:rgba(0,0,0,.1)}:host::ng-deep .item-container .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-container .item-content.light:-ms-input-placeholder{color:rgba(255,255,255,.2)!important}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){:host::ng-deep .item-container .scroll-wrapper{height:0%}:host::ng-deep .item-container .scroll-wrapper .scroll-content .item-content{height:100%!important;margin-right:0}}"]
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .item-container .item-content::-webkit-scrollbar:horizontal{height:.5em!important}:host::ng-deep .item-container .item-content::-webkit-scrollbar:vertical{width:.5em!important}:host::ng-deep .item-container .item-content::-webkit-scrollbar-button{background-color:#333437!important;display:none!important}:host::ng-deep .item-container .item-content::-webkit-scrollbar-track{background-color:green!important}:host::ng-deep .item-container .item-content::-webkit-scrollbar-track-piece{background-color:#2c2c2f!important}:host::ng-deep .item-container .item-content::-webkit-scrollbar-thumb{background-color:#64666c!important;border:1px solid #38393c!important}.required-fill{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::placeholder{color:rgba(255,255,255,.3)!important}:host::ng-deep{display:flex;flex:1 0 auto}:host::ng-deep .item-container{position:relative;display:flex;flex-direction:column;align-items:stretch;margin:.5px;flex:1 0 auto}:host::ng-deep .item-container gl-shared-component-title-label-simple{flex-grow:0}:host::ng-deep .item-container .item-content{scrollbar-face-color:#333437!important;scrollbar-shadow-color:#38393c!important;scrollbar-track-color:#2c2c2f!important;scrollbar-arrow-color:#64666c!important;font-family:Montserrat,sans-serif;font-weight:300;resize:none;padding:.8em;font-size:.45em;text-align:left;flex-grow:1;overflow-x:hidden;overflow-y:auto;background-color:#333437;border:none;color:#fff}:host::ng-deep .item-container .item-content:focus{outline:0!important}:host::ng-deep .item-container .item-content::-moz-placeholder{color:#64666c}:host::ng-deep .item-container .item-content::-ms-input-placeholder{color:#64666c}:host::ng-deep .item-container .item-content::placeholder{color:#64666c}:host::ng-deep .item-container .item-content.light{background-color:rgba(0,0,0,.1)}:host::ng-deep .item-container .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-container .item-content.light:-ms-input-placeholder{color:rgba(255,255,255,.2)!important}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){:host::ng-deep .item-container .scroll-wrapper{height:0%}:host::ng-deep .item-container .scroll-wrapper .scroll-content .item-content{height:100%!important;margin-right:0}}"]
             }]
     }], function () { return []; }, { disabled: [{
             type: core.Input
@@ -2319,6 +2329,407 @@ GlSharedComponentButtonMenuTooltipComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent(
         return GlSharedComponentButtonMenuTooltipComponent;
     }());
 
+    var GlSharedComponentInputAutocompleteSimpleService = /** @class */ (function () {
+        function GlSharedComponentInputAutocompleteSimpleService() {
+            this.autocompleteList$ = new rxjs.Subject();
+            this.autocompleteReset$ = new rxjs.Subject();
+            this.autocompleteLoaded$ = new rxjs.Subject();
+            this.autocompleteUpdateValue$ = new rxjs.Subject();
+        }
+        GlSharedComponentInputAutocompleteSimpleService.prototype.ngOnDestroy = function () {
+            this.autocompleteList$.observers.map(function (x) { return x.complete(); });
+            this.autocompleteLoaded$.observers.map(function (x) { return x.complete(); });
+            this.autocompleteReset$.observers.map(function (x) { return x.complete(); });
+            this.autocompleteUpdateValue$.observers.map(function (x) { return x.complete(); });
+        };
+        GlSharedComponentInputAutocompleteSimpleService.ɵprov = core.ɵɵdefineInjectable({ factory: function GlSharedComponentInputAutocompleteSimpleService_Factory() { return new GlSharedComponentInputAutocompleteSimpleService(); }, token: GlSharedComponentInputAutocompleteSimpleService, providedIn: "root" });
+GlSharedComponentInputAutocompleteSimpleService.ɵfac = function GlSharedComponentInputAutocompleteSimpleService_Factory(t) { return new (t || GlSharedComponentInputAutocompleteSimpleService)(); };
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentInputAutocompleteSimpleService, [{
+        type: core.Injectable,
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return []; }, null); })();
+        return GlSharedComponentInputAutocompleteSimpleService;
+    }());
+
+    var GlSharedComponentInputAutocompleteSimpleComponent = /** @class */ (function () {
+        function GlSharedComponentInputAutocompleteSimpleComponent(_service) {
+            var _this = this;
+            this._service = _service;
+            this.currentValue = new core.EventEmitter();
+            this.listItems = [];
+            this.class = '';
+            this.maxLength = '255';
+            this._loaded = false;
+            this.imageSource = '../assets/img/icon/drop-down/arrow-down.svg';
+            this.autocompleteInput = new forms.FormControl();
+            _service.autocompleteList$.subscribe(function (update) {
+                if (_this.listName === update.listName) {
+                    _this.listItems = update.options;
+                    _this.setup();
+                }
+            });
+            _service.autocompleteReset$.subscribe(function (update) {
+                if (_this.id === update.comboboxId) {
+                    _this.input.nativeElement.value = '';
+                    _this.validate();
+                }
+            });
+            _service.autocompleteLoaded$.subscribe(function (loaded) {
+                _this._loaded = loaded;
+                _service.autocompleteLoaded$.observers.map(function (x) { return x.complete(); });
+            });
+            _service.autocompleteUpdateValue$.subscribe(function (update) {
+                if (_this.id === update.comboboxId) {
+                    _this.listItems = update.options;
+                    var value = update.options.filter(function (x) { return x.value === update.value; });
+                    var input = _this.input.nativeElement;
+                    if (value != null && value.length > 0) {
+                        input.value = value[0].text;
+                        _this.autocompleteInput.setValue(value[0].text);
+                        _this.value = value[0].value;
+                        _this.setup();
+                    }
+                    else {
+                        input.value = '';
+                        _this.autocompleteInput.setValue('');
+                        _this.value = '';
+                        _this.setup();
+                    }
+                }
+            });
+        }
+        GlSharedComponentInputAutocompleteSimpleComponent.prototype.ngOnInit = function () {
+            return __awaiter(this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    this.setup();
+                    return [2 /*return*/];
+                });
+            });
+        };
+        GlSharedComponentInputAutocompleteSimpleComponent.prototype.setup = function () {
+            var _this = this;
+            this.filteredOptions = this.autocompleteInput.valueChanges.pipe(
+            // startWith(''),
+            operators.startWith(this.value), operators.map(function (value) { return _this.filter(value); }));
+            // if (!this._loaded) { this.autocompleteInput.setValue(this.value); }
+            // this.autocompleteInput.setValue(this.value);
+            setTimeout(function () { _this.validate(); });
+        };
+        GlSharedComponentInputAutocompleteSimpleComponent.prototype.filter = function (value) {
+            if (value == null) {
+                value = '';
+            }
+            var filterValue = value.toLowerCase();
+            return this.listItems.filter(function (option) { var _a; return (_a = option.text) === null || _a === void 0 ? void 0 : _a.toLowerCase().includes(filterValue); });
+        };
+        GlSharedComponentInputAutocompleteSimpleComponent.prototype.validate = function () {
+            var input = this.input.nativeElement;
+            var value = input.value;
+            var filteredData = this.filter(value);
+            if (value != null && value.trim().length > 0 && filteredData.length > 0) {
+                input.value = filteredData[0].text;
+                this.autocompleteInput.setValue(filteredData[0].text);
+                this.currentValue.emit({ text: filteredData[0].text, value: filteredData[0].value });
+            }
+            else {
+                input.value = '';
+                this.autocompleteInput.setValue('');
+                this.currentValue.emit({ text: null, value: null });
+            }
+        };
+        GlSharedComponentInputAutocompleteSimpleComponent.prototype.reset = function (auto, event) {
+            if (auto.options != null) {
+                auto.options.map(function (option) { return option.deselect(); });
+            }
+            event.currentTarget.select();
+        };
+        GlSharedComponentInputAutocompleteSimpleComponent.prototype.ngOnDestroy = function () {
+            this._service.autocompleteList$.observers.map(function (x) { return x.complete(); });
+            this._service.autocompleteReset$.observers.map(function (x) { return x.complete(); });
+            this._service.autocompleteLoaded$.observers.map(function (x) { return x.complete(); });
+        };
+        GlSharedComponentInputAutocompleteSimpleComponent.prototype.ngOnChanges = function (changes) {
+            var _a, _b, _c, _d;
+            var prevList = (_a = changes.listItems) === null || _a === void 0 ? void 0 : _a.previousValue;
+            var currList = (_b = changes.listItems) === null || _b === void 0 ? void 0 : _b.currentValue;
+            var prevValue = (_c = changes.value) === null || _c === void 0 ? void 0 : _c.previousValue;
+            var currValue = (_d = changes.value) === null || _d === void 0 ? void 0 : _d.currentValue;
+            if (prevList != currList) {
+                this.setup();
+            }
+            if (prevValue != currValue) {
+                this.setup();
+            }
+            // if (prevList != currList || prevValue != currValue) { this.setup(); }
+        };
+        GlSharedComponentInputAutocompleteSimpleComponent.ctorParameters = function () { return [
+            { type: GlSharedComponentInputAutocompleteSimpleService }
+        ]; };
+        __decorate([
+            core.ViewChild('input')
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "input", void 0);
+        __decorate([
+            core.Output()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "currentValue", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "listItems", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "disabled", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "listName", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "id", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "placeholder", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "itemContentAlignment", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "class", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "value", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "maxLength", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "custom", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "baseUrl", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "valueField", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "textField", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "labelValue", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "labelAlignment", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "required", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "requiredField", void 0);
+GlSharedComponentInputAutocompleteSimpleComponent.ɵfac = function GlSharedComponentInputAutocompleteSimpleComponent_Factory(t) { return new (t || GlSharedComponentInputAutocompleteSimpleComponent)(ɵngcc0.ɵɵdirectiveInject(GlSharedComponentInputAutocompleteSimpleService)); };
+GlSharedComponentInputAutocompleteSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentInputAutocompleteSimpleComponent, selectors: [["gl-shared-component-input-autocomplete-simple"]], viewQuery: function GlSharedComponentInputAutocompleteSimpleComponent_Query(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵviewQuery(_c0, true);
+    } if (rf & 2) {
+        var _t;
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.input = _t.first);
+    } }, inputs: { listItems: "listItems", class: "class", maxLength: "maxLength", disabled: "disabled", listName: "listName", id: "id", placeholder: "placeholder", itemContentAlignment: "itemContentAlignment", value: "value", custom: "custom", baseUrl: "baseUrl", valueField: "valueField", textField: "textField", labelValue: "labelValue", labelAlignment: "labelAlignment", required: "required", requiredField: "requiredField" }, outputs: { currentValue: "currentValue" }, features: [ɵngcc0.ɵɵNgOnChangesFeature], ngContentSelectors: _c3, decls: 11, vars: 27, consts: [["floatLabel", "never", "appearance", "none"], ["type", "text", "aria-label", "Number", "matInput", "", 3, "readonly", "id", "placeholder", "formControl", "maxLength", "matAutocomplete", "focusin", "focusout"], ["input", ""], ["alt", "Show items", 3, "src"], ["arrowDown", ""], ["autoActiveFirstOption", "true", 3, "optionSelected"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function GlSharedComponentInputAutocompleteSimpleComponent_Template(rf, ctx) { if (rf & 1) {
+        var _r5 = ɵngcc0.ɵɵgetCurrentView();
+        ɵngcc0.ɵɵprojectionDef();
+        ɵngcc0.ɵɵprojection(0);
+        ɵngcc0.ɵɵelementStart(1, "mat-form-field", 0);
+        ɵngcc0.ɵɵelementStart(2, "div");
+        ɵngcc0.ɵɵelementStart(3, "input", 1, 2);
+        ɵngcc0.ɵɵlistener("focusin", function GlSharedComponentInputAutocompleteSimpleComponent_Template_input_focusin_3_listener($event) { ɵngcc0.ɵɵrestoreView(_r5); var _r2 = ɵngcc0.ɵɵreference(8); return ctx.reset(_r2, $event); })("focusout", function GlSharedComponentInputAutocompleteSimpleComponent_Template_input_focusout_3_listener() { return ctx.validate(); });
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelement(5, "img", 3, 4);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(7, "mat-autocomplete", 5, 6);
+        ɵngcc0.ɵɵlistener("optionSelected", function GlSharedComponentInputAutocompleteSimpleComponent_Template_mat_autocomplete_optionSelected_7_listener() { ɵngcc0.ɵɵrestoreView(_r5); var _r0 = ɵngcc0.ɵɵreference(4); return _r0.blur(); });
+        ɵngcc0.ɵɵtemplate(9, GlSharedComponentInputAutocompleteSimpleComponent_mat_option_9_Template, 2, 2, "mat-option", 7);
+        ɵngcc0.ɵɵpipe(10, "async");
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        var _r2 = ɵngcc0.ɵɵreference(8);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵclassMapInterpolate2("input-container custom-combobox ", ctx.class, " ", ctx.disabled ? "read-only" : "", "");
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵclassMapInterpolate2("combobox-container ", ctx.listItems.length > 0 ? "" : "no-data", " ", ctx.disabled ? "read-only" : "", "");
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵclassMapInterpolate3("item-content ", ctx.itemContentAlignment, " ", ctx.class, " ", ctx.listItems.length > 0 ? "" : "no-data", "");
+        ɵngcc0.ɵɵproperty("readonly", ctx.disabled)("id", ctx.id)("placeholder", ctx.placeholder)("formControl", ctx.autocompleteInput)("maxLength", ctx.maxLength)("matAutocomplete", _r2);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵclassMapInterpolate2("arrow-down ", ctx.class, " ", ctx.disabled ? "read-only" : "", "");
+        ɵngcc0.ɵɵproperty("src", ctx.imageSource, ɵngcc0.ɵɵsanitizeUrl);
+        ɵngcc0.ɵɵadvance(4);
+        ɵngcc0.ɵɵproperty("ngForOf", ɵngcc0.ɵɵpipeBind1(10, 25, ctx.filteredOptions));
+    } }, directives: [ɵngcc3.MatFormField, ɵngcc4.MatInput, ɵngcc5.DefaultValueAccessor, ɵngcc6.MatAutocompleteTrigger, ɵngcc5.NgControlStatus, ɵngcc5.FormControlDirective, ɵngcc6.MatAutocomplete, ɵngcc1.NgForOf, ɵngcc7.MatOption], pipes: [ɵngcc1.AsyncPipe], styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);  .light .mat-autocomplete-panel,   .mat-autocomplete-panel{scrollbar-face-color:#333437!important;scrollbar-shadow-color:#38393c!important;scrollbar-track-color:#2c2c2f!important;scrollbar-arrow-color:#64666c!important}  .mat-autocomplete-panel::-webkit-scrollbar:horizontal{height:.5em!important}  .mat-autocomplete-panel::-webkit-scrollbar:vertical{width:.5em!important}  .light .mat-autocomplete-panel::-webkit-scrollbar-button,   .mat-autocomplete-panel::-webkit-scrollbar-button{background-color:#333437!important;display:none!important}  .light .mat-autocomplete-panel::-webkit-scrollbar-track,   .mat-autocomplete-panel::-webkit-scrollbar-track{background-color:green!important}  .light .mat-autocomplete-panel::-webkit-scrollbar-track-piece,   .mat-autocomplete-panel::-webkit-scrollbar-track-piece{background-color:#2c2c2f!important}  .light .mat-autocomplete-panel::-webkit-scrollbar-thumb,   .mat-autocomplete-panel::-webkit-scrollbar-thumb{background-color:#64666c!important;border:1px solid #38393c!important}[_nghost-%COMP%] {display:flex;flex-direction:column;flex:1 0 auto;position:relative}[_nghost-%COMP%]  mat-form-field{display:flex;flex-grow:1;margin:0 .5px}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper{display:flex;flex-grow:1;flex-direction:column;padding:0}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex{display:flex;flex-grow:1;align-items:inherit}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix{padding:0;flex:1 1 0px;border:none;width:100%;display:flex}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container{display:flex;flex-grow:1;flex-direction:row;pointer-events:none}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element{font-family:Montserrat,sans-serif;font-weight:400;padding:.8em;border:none;background-color:#333437;color:#fff;font-size:.45em;flex-grow:1;margin:0}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element::-moz-placeholder{color:#64666c!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element:-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element::-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element::placeholder{color:#64666c!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.left{text-align:left}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.center{text-align:center}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.right{text-align:right}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light{background-color:rgba(0,0,0,.1)}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light::-moz-placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light:-ms-input-placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light::-ms-input-placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light::placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element .item-content:-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element .item-content.light:-ms-input-placeholder{color:gray!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down{background-color:#333437;width:.6em;padding:0 .5em;transition:.2s ease-in-out}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down:hover{background-color:#2c2c2f;transition:.2s ease-in-out}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.light{background-color:rgba(0,0,0,.1);transition:.2s ease-in-out}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.light::-moz-placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.light:-ms-input-placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.light::-ms-input-placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.light::placeholder{color:rgba(255,255,255,.2)!important}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.light:hover{background-color:rgba(0,0,0,.2);transition:.2s ease-in-out}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.read-only{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none}[_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container.no-data .arrow-down, [_nghost-%COMP%]  mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container.read-only .arrow-down{display:none}@media screen and (-ms-high-contrast:none),(-ms-high-contrast:active){[_nghost-%COMP%]  .mat-form-field-label-wrapper{max-width:88.5%;top:0;padding-top:0}[_nghost-%COMP%]  .combobox-container .mat-input-element{max-width:77%}[_nghost-%COMP%]  .combobox-container .mat-input-element:-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  .combobox-container .mat-input-element::-moz-placeholder{color:#64666c!important}[_nghost-%COMP%]  .combobox-container .mat-input-element::-ms-input-placeholder{color:#64666c!important}[_nghost-%COMP%]  .combobox-container .mat-input-element::placeholder{color:#64666c!important}[_nghost-%COMP%]  .combobox-container .arrow-down{height:100%}[_nghost-%COMP%]  .combobox-container.read-only .mat-input-element{max-width:100%}[_nghost-%COMP%]  .combobox-container.no-data .mat-input-element{max-width:100%}[_nghost-%COMP%]  .read-only .mat-form-field-label-wrapper{max-width:100%}[_nghost-%COMP%]  .read-only .combobox-container .item-content{width:93%}}  .mat-autocomplete-panel{background-color:#38393c;border-radius:0;box-shadow:none!important;transition:.2s ease-in-out}  .mat-autocomplete-panel mat-option{font-size:1em;border-radius:0;transition:.2s ease-in-out;line-height:4em;height:4em;padding:0 1.5em}  .mat-autocomplete-panel mat-option:nth-child(2n+1){background-color:#333437;transition:.2s ease-in-out}  .mat-autocomplete-panel mat-option.mat-active,   .mat-autocomplete-panel mat-option.mat-selected{background-color:rgba(210,64,119,.6)!important;transition:.2s ease-in-out}  .mat-autocomplete-panel mat-option:hover{background-color:rgba(210,64,119,.7)!important;transition:.2s ease-in-out}  .light .mat-autocomplete-panel{background-color:transparent;transition:.2s ease-in-out}  .light .mat-autocomplete-panel mat-option:nth-child(2n+1){background-color:rgba(0,0,0,.6);transition:.2s ease-in-out}  .light .mat-autocomplete-panel mat-option:nth-child(2n+2){background-color:rgba(0,0,0,.7);transition:.2s ease-in-out}  .light .mat-autocomplete-panel mat-option.mat-active{background-color:rgba(210,64,119,.6);transition:.2s ease-in-out}  .light .mat-autocomplete-panel mat-option:hover{background-color:rgba(210,64,119,.7)!important;transition:.2s ease-in-out}@media screen and (min-device-width:320px) and (max-device-width:1024px){  .mat-autocomplete-panel{font-size:2.8vw!important}}@media screen and (min-device-width:1024px){  .mat-autocomplete-panel{font-size:.6vw!important}}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentInputAutocompleteSimpleComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'gl-shared-component-input-autocomplete-simple',
+                template: "<ng-content></ng-content>\n<mat-form-field\n  class=\"input-container custom-combobox {{ class }} {{ disabled ? 'read-only' : '' }}\"\n  floatLabel=\"never\"\n  appearance=\"none\">\n  <div class=\"combobox-container {{ listItems.length > 0 ? '' : 'no-data' }} {{ disabled ? 'read-only' : '' }}\">\n    <input\n      #input\n      type=\"text\"\n      aria-label=\"Number\"\n      class=\"item-content {{ itemContentAlignment }} {{ class }} {{ listItems.length > 0 ? '' : 'no-data' }}\"\n      matInput\n      [readonly]=\"disabled\"\n      [id]=\"id\"\n      [placeholder]=\"placeholder\"\n      [formControl]=\"autocompleteInput\"\n      [maxLength]=\"maxLength\"\n      [matAutocomplete]=\"auto\"\n      (focusin)=\"reset(auto, $event)\"\n      (focusout)=\"validate()\">\n    <img\n      #arrowDown\n      alt=\"Show items\"\n      class=\"arrow-down {{ class }} {{ disabled ? 'read-only' : '' }}\"\n      [src]=\"imageSource\">\n  </div>\n  <mat-autocomplete autoActiveFirstOption=\"true\" #auto=\"matAutocomplete\" (optionSelected)=\"input.blur()\">\n    <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option.text\">\n      {{option.text}}\n    </mat-option>\n  </mat-autocomplete>\n</mat-form-field>\n\n",
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);::ng-deep .light .mat-autocomplete-panel,::ng-deep .mat-autocomplete-panel{scrollbar-face-color:#333437!important;scrollbar-shadow-color:#38393c!important;scrollbar-track-color:#2c2c2f!important;scrollbar-arrow-color:#64666c!important}::ng-deep .mat-autocomplete-panel::-webkit-scrollbar:horizontal{height:.5em!important}::ng-deep .mat-autocomplete-panel::-webkit-scrollbar:vertical{width:.5em!important}::ng-deep .light .mat-autocomplete-panel::-webkit-scrollbar-button,::ng-deep .mat-autocomplete-panel::-webkit-scrollbar-button{background-color:#333437!important;display:none!important}::ng-deep .light .mat-autocomplete-panel::-webkit-scrollbar-track,::ng-deep .mat-autocomplete-panel::-webkit-scrollbar-track{background-color:green!important}::ng-deep .light .mat-autocomplete-panel::-webkit-scrollbar-track-piece,::ng-deep .mat-autocomplete-panel::-webkit-scrollbar-track-piece{background-color:#2c2c2f!important}::ng-deep .light .mat-autocomplete-panel::-webkit-scrollbar-thumb,::ng-deep .mat-autocomplete-panel::-webkit-scrollbar-thumb{background-color:#64666c!important;border:1px solid #38393c!important}:host::ng-deep{display:flex;flex-direction:column;flex:1 0 auto;position:relative}:host::ng-deep mat-form-field{display:flex;flex-grow:1;margin:0 .5px}:host::ng-deep mat-form-field .mat-form-field-wrapper{display:flex;flex-grow:1;flex-direction:column;padding:0}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex{display:flex;flex-grow:1;align-items:inherit}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix{padding:0;flex:1 1 0px;border:none;width:100%;display:flex}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container{display:flex;flex-grow:1;flex-direction:row;pointer-events:none}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element{font-family:Montserrat,sans-serif;font-weight:400;padding:.8em;border:none;background-color:#333437;color:#fff;font-size:.45em;flex-grow:1;margin:0}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element::-moz-placeholder{color:#64666c!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element:-ms-input-placeholder{color:#64666c!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element::-ms-input-placeholder{color:#64666c!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element::placeholder{color:#64666c!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.left{text-align:left}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.center{text-align:center}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.right{text-align:right}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light{background-color:rgba(0,0,0,.1)}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light::-moz-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light:-ms-input-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light::-ms-input-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light::placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element .item-content.light:-ms-input-placeholder{color:gray!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down{background-color:#333437;width:.6em;padding:0 .5em;transition:.2s ease-in-out}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down:hover{background-color:#2c2c2f;transition:.2s ease-in-out}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.light{background-color:rgba(0,0,0,.1);transition:.2s ease-in-out}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.light::-moz-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.light:-ms-input-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.light::-ms-input-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.light::placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.light:hover{background-color:rgba(0,0,0,.2);transition:.2s ease-in-out}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .arrow-down.read-only{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container.no-data .arrow-down,:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container.read-only .arrow-down{display:none}@media screen and (-ms-high-contrast:none),(-ms-high-contrast:active){:host::ng-deep .mat-form-field-label-wrapper{max-width:88.5%;top:0;padding-top:0}:host::ng-deep .combobox-container .mat-input-element{max-width:77%}:host::ng-deep .combobox-container .mat-input-element:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .combobox-container .mat-input-element::-moz-placeholder{color:#64666c!important}:host::ng-deep .combobox-container .mat-input-element::-ms-input-placeholder{color:#64666c!important}:host::ng-deep .combobox-container .mat-input-element::placeholder{color:#64666c!important}:host::ng-deep .combobox-container .arrow-down{height:100%}:host::ng-deep .combobox-container.read-only .mat-input-element{max-width:100%}:host::ng-deep .combobox-container.no-data .mat-input-element{max-width:100%}:host::ng-deep .read-only .mat-form-field-label-wrapper{max-width:100%}:host::ng-deep .read-only .combobox-container .item-content{width:93%}}::ng-deep .mat-autocomplete-panel{background-color:#38393c;border-radius:0;box-shadow:none!important;transition:.2s ease-in-out}::ng-deep .mat-autocomplete-panel mat-option{font-size:1em;border-radius:0;transition:.2s ease-in-out;line-height:4em;height:4em;padding:0 1.5em}::ng-deep .mat-autocomplete-panel mat-option:nth-child(2n+1){background-color:#333437;transition:.2s ease-in-out}::ng-deep .mat-autocomplete-panel mat-option.mat-active,::ng-deep .mat-autocomplete-panel mat-option.mat-selected{background-color:rgba(210,64,119,.6)!important;transition:.2s ease-in-out}::ng-deep .mat-autocomplete-panel mat-option:hover{background-color:rgba(210,64,119,.7)!important;transition:.2s ease-in-out}::ng-deep .light .mat-autocomplete-panel{background-color:transparent;transition:.2s ease-in-out}::ng-deep .light .mat-autocomplete-panel mat-option:nth-child(2n+1){background-color:rgba(0,0,0,.6);transition:.2s ease-in-out}::ng-deep .light .mat-autocomplete-panel mat-option:nth-child(2n+2){background-color:rgba(0,0,0,.7);transition:.2s ease-in-out}::ng-deep .light .mat-autocomplete-panel mat-option.mat-active{background-color:rgba(210,64,119,.6);transition:.2s ease-in-out}::ng-deep .light .mat-autocomplete-panel mat-option:hover{background-color:rgba(210,64,119,.7)!important;transition:.2s ease-in-out}@media screen and (min-device-width:320px) and (max-device-width:1024px){::ng-deep .mat-autocomplete-panel{font-size:2.8vw!important}}@media screen and (min-device-width:1024px){::ng-deep .mat-autocomplete-panel{font-size:.6vw!important}}"]
+            }]
+    }], function () { return [{ type: GlSharedComponentInputAutocompleteSimpleService }]; }, { currentValue: [{
+            type: core.Output
+        }], listItems: [{
+            type: core.Input
+        }], class: [{
+            type: core.Input
+        }], maxLength: [{
+            type: core.Input
+        }], input: [{
+            type: core.ViewChild,
+            args: ['input']
+        }], disabled: [{
+            type: core.Input
+        }], listName: [{
+            type: core.Input
+        }], id: [{
+            type: core.Input
+        }], placeholder: [{
+            type: core.Input
+        }], itemContentAlignment: [{
+            type: core.Input
+        }], value: [{
+            type: core.Input
+        }], custom: [{
+            type: core.Input
+        }], baseUrl: [{
+            type: core.Input
+        }], valueField: [{
+            type: core.Input
+        }], textField: [{
+            type: core.Input
+        }], labelValue: [{
+            type: core.Input
+        }], labelAlignment: [{
+            type: core.Input
+        }], required: [{
+            type: core.Input
+        }], requiredField: [{
+            type: core.Input
+        }] }); })();
+        return GlSharedComponentInputAutocompleteSimpleComponent;
+    }());
+
+    var GlSharedComponentInputAutocompleteLabelComponent = /** @class */ (function () {
+        function GlSharedComponentInputAutocompleteLabelComponent() {
+            this.currentValue = new core.EventEmitter();
+            this.listItems = [];
+            this.disabled = false;
+            this.requiredField = 'Required field';
+        }
+        GlSharedComponentInputAutocompleteLabelComponent.prototype.onCurrentValue = function (value) { this.currentValue.emit(value); };
+        __decorate([
+            core.Output()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "currentValue", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "listItems", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "disabled", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "listName", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "id", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "labelValue", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "labelAlignment", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "placeholder", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "itemContentAlignment", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "class", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "value", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "required", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "custom", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "baseUrl", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "valueField", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "textField", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentInputAutocompleteLabelComponent.prototype, "requiredField", void 0);
+GlSharedComponentInputAutocompleteLabelComponent.ɵfac = function GlSharedComponentInputAutocompleteLabelComponent_Factory(t) { return new (t || GlSharedComponentInputAutocompleteLabelComponent)(); };
+GlSharedComponentInputAutocompleteLabelComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentInputAutocompleteLabelComponent, selectors: [["gl-shared-component-input-autocomplete-label"]], inputs: { listItems: "listItems", disabled: "disabled", requiredField: "requiredField", listName: "listName", id: "id", labelValue: "labelValue", labelAlignment: "labelAlignment", placeholder: "placeholder", itemContentAlignment: "itemContentAlignment", class: "class", value: "value", required: "required", custom: "custom", baseUrl: "baseUrl", valueField: "valueField", textField: "textField" }, outputs: { currentValue: "currentValue" }, decls: 2, vars: 20, consts: [[3, "value", "listName", "id", "itemContentAlignment", "placeholder", "listItems", "disabled", "custom", "baseUrl", "valueField", "textField", "currentValue"], [3, "id", "labelAlignment", "labelValue", "required", "requiredLabel"]], template: function GlSharedComponentInputAutocompleteLabelComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelementStart(0, "gl-shared-component-input-autocomplete-simple", 0);
+        ɵngcc0.ɵɵlistener("currentValue", function GlSharedComponentInputAutocompleteLabelComponent_Template_gl_shared_component_input_autocomplete_simple_currentValue_0_listener($event) { return ctx.onCurrentValue($event); });
+        ɵngcc0.ɵɵelement(1, "gl-shared-component-title-label-simple", 1);
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵclassMap(ctx.class);
+        ɵngcc0.ɵɵproperty("value", ctx.value)("listName", ctx.listName)("id", ctx.id)("itemContentAlignment", ctx.itemContentAlignment)("placeholder", ctx.placeholder)("listItems", ctx.listItems)("disabled", ctx.disabled)("custom", ctx.custom)("baseUrl", ctx.baseUrl)("valueField", ctx.valueField)("textField", ctx.textField);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵclassMap(ctx.class);
+        ɵngcc0.ɵɵproperty("id", ctx.id)("labelAlignment", ctx.labelAlignment)("labelValue", ctx.labelValue)("required", ctx.required)("requiredLabel", ctx.requiredField);
+    } }, directives: [GlSharedComponentInputAutocompleteSimpleComponent,
+        GlSharedComponentTitleLabelSimpleComponent], styles: ["[_nghost-%COMP%] {display:flex}[_nghost-%COMP%]  gl-shared-component-title-label-simple{flex-grow:0}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentInputAutocompleteLabelComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'gl-shared-component-input-autocomplete-label',
+                template: "<gl-shared-component-input-autocomplete-simple\n  [class]=\"class\"\n  [value]=\"value\"\n  [listName]=\"listName\"\n  (currentValue)=\"onCurrentValue($event)\"\n  [id]=\"id\"\n  [itemContentAlignment]=\"itemContentAlignment\"\n  [placeholder]=\"placeholder\"\n  [listItems]=\"listItems\"\n  [disabled]=\"disabled\"\n\n  [custom]=\"custom\"\n  [baseUrl]=\"baseUrl\"\n  [valueField]=\"valueField\"\n  [textField]=\"textField\">\n  <gl-shared-component-title-label-simple\n    [id]=\"id\"\n    [labelAlignment]=\"labelAlignment\"\n    [labelValue]=\"labelValue\"\n    [required]=\"required\"\n    [class]=\"class\"\n    [requiredLabel]=\"requiredField\"\n  ></gl-shared-component-title-label-simple>\n</gl-shared-component-input-autocomplete-simple>\n",
+                styles: [":host::ng-deep{display:flex}:host::ng-deep gl-shared-component-title-label-simple{flex-grow:0}"]
+            }]
+    }], function () { return []; }, { currentValue: [{
+            type: core.Output
+        }], listItems: [{
+            type: core.Input
+        }], disabled: [{
+            type: core.Input
+        }], requiredField: [{
+            type: core.Input
+        }], listName: [{
+            type: core.Input
+        }], id: [{
+            type: core.Input
+        }], labelValue: [{
+            type: core.Input
+        }], labelAlignment: [{
+            type: core.Input
+        }], placeholder: [{
+            type: core.Input
+        }], itemContentAlignment: [{
+            type: core.Input
+        }], class: [{
+            type: core.Input
+        }], value: [{
+            type: core.Input
+        }], required: [{
+            type: core.Input
+        }], custom: [{
+            type: core.Input
+        }], baseUrl: [{
+            type: core.Input
+        }], valueField: [{
+            type: core.Input
+        }], textField: [{
+            type: core.Input
+        }] }); })();
+        return GlSharedComponentInputAutocompleteLabelComponent;
+    }());
+
     var GlComponentModule = /** @class */ (function () {
         function GlComponentModule() {
         }
@@ -2326,7 +2737,14 @@ GlComponentModule.ɵmod = ɵngcc0.ɵɵdefineNgModule({ type: GlComponentModule }
 GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlComponentModule_Factory(t) { return new (t || GlComponentModule)(); }, imports: [[
             common.CommonModule,
             GlCoreModule,
-            router.RouterModule
+            router.RouterModule,
+            formField.MatFormFieldModule,
+            input.MatInputModule,
+            autocomplete.MatAutocompleteModule,
+            dialog.MatDialogModule,
+            animations.BrowserAnimationsModule,
+            forms.FormsModule,
+            forms.ReactiveFormsModule
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(GlComponentModule, { declarations: [GlSharedComponentButtonImageSimpleComponent,
         GlSharedComponentButtonImageTooltipComponent,
@@ -2335,6 +2753,8 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         GlSharedComponentErrorMessageComponent,
         GlSharedComponentFooterContainerComponent,
         GlSharedComponentFooterSimpleComponent,
+        GlSharedComponentInputAutocompleteLabelComponent,
+        GlSharedComponentInputAutocompleteSimpleComponent,
         GlSharedComponentInputButtonSimpleComponent,
         GlSharedComponentInputButtonHyperlinkComponent,
         GlSharedComponentInputOptionSimpleComponent,
@@ -2352,13 +2772,15 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         GlSharedComponentTitleLabelSimpleComponent,
         GlSharedComponentTitleLabelButtonSimpleComponent,
         GlSharedComponentTitleLabelButtonContainerComponent,
-        GlSharedComponentTitlePageComponent], imports: [ɵngcc1.CommonModule, GlCoreModule, ɵngcc2.RouterModule], exports: [GlSharedComponentButtonImageSimpleComponent,
+        GlSharedComponentTitlePageComponent], imports: [ɵngcc1.CommonModule, GlCoreModule, ɵngcc2.RouterModule, ɵngcc3.MatFormFieldModule, ɵngcc4.MatInputModule, ɵngcc6.MatAutocompleteModule, ɵngcc8.MatDialogModule, ɵngcc9.BrowserAnimationsModule, ɵngcc5.FormsModule, ɵngcc5.ReactiveFormsModule], exports: [GlSharedComponentButtonImageSimpleComponent,
         GlSharedComponentButtonImageTooltipComponent,
         GlSharedComponentButtonMenuSimpleComponent,
         GlSharedComponentButtonMenuTooltipComponent,
         GlSharedComponentErrorMessageComponent,
         GlSharedComponentFooterContainerComponent,
         GlSharedComponentFooterSimpleComponent,
+        GlSharedComponentInputAutocompleteLabelComponent,
+        GlSharedComponentInputAutocompleteSimpleComponent,
         GlSharedComponentInputButtonSimpleComponent,
         GlSharedComponentInputButtonHyperlinkComponent,
         GlSharedComponentInputOptionSimpleComponent,
@@ -2388,6 +2810,8 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                     GlSharedComponentErrorMessageComponent,
                     GlSharedComponentFooterContainerComponent,
                     GlSharedComponentFooterSimpleComponent,
+                    GlSharedComponentInputAutocompleteLabelComponent,
+                    GlSharedComponentInputAutocompleteSimpleComponent,
                     GlSharedComponentInputButtonSimpleComponent,
                     GlSharedComponentInputButtonHyperlinkComponent,
                     GlSharedComponentInputOptionSimpleComponent,
@@ -2410,7 +2834,14 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                 imports: [
                     common.CommonModule,
                     GlCoreModule,
-                    router.RouterModule
+                    router.RouterModule,
+                    formField.MatFormFieldModule,
+                    input.MatInputModule,
+                    autocomplete.MatAutocompleteModule,
+                    dialog.MatDialogModule,
+                    animations.BrowserAnimationsModule,
+                    forms.FormsModule,
+                    forms.ReactiveFormsModule
                 ],
                 exports: [
                     GlSharedComponentButtonImageSimpleComponent,
@@ -2420,6 +2851,8 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                     GlSharedComponentErrorMessageComponent,
                     GlSharedComponentFooterContainerComponent,
                     GlSharedComponentFooterSimpleComponent,
+                    GlSharedComponentInputAutocompleteLabelComponent,
+                    GlSharedComponentInputAutocompleteSimpleComponent,
                     GlSharedComponentInputButtonSimpleComponent,
                     GlSharedComponentInputButtonHyperlinkComponent,
                     GlSharedComponentInputOptionSimpleComponent,
@@ -2473,10 +2906,11 @@ GlNgFrontendModule.ɵmod = ɵngcc0.ɵɵdefineNgModule({ type: GlNgFrontendModule
 GlNgFrontendModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlNgFrontendModule_Factory(t) { return new (t || GlNgFrontendModule)(); }, providers: [], imports: [[
             platformBrowser.BrowserModule,
             http.HttpClientModule,
+            forms.ReactiveFormsModule,
             GlSharedModule,
-            GlCoreModule
+            GlCoreModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(GlNgFrontendModule, { imports: [ɵngcc3.BrowserModule, ɵngcc4.HttpClientModule, GlSharedModule,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(GlNgFrontendModule, { imports: [ɵngcc10.BrowserModule, ɵngcc11.HttpClientModule, ɵngcc5.ReactiveFormsModule, GlSharedModule,
         GlCoreModule] }); })();
 /*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlNgFrontendModule, [{
         type: core.NgModule,
@@ -2485,8 +2919,9 @@ GlNgFrontendModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlNgFr
                 imports: [
                     platformBrowser.BrowserModule,
                     http.HttpClientModule,
+                    forms.ReactiveFormsModule,
                     GlSharedModule,
-                    GlCoreModule
+                    GlCoreModule,
                 ],
                 exports: [],
                 providers: []
@@ -2685,6 +3120,9 @@ GlSharedViewModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlShar
     exports.GlSharedComponentErrorMessageComponent = GlSharedComponentErrorMessageComponent;
     exports.GlSharedComponentFooterContainerComponent = GlSharedComponentFooterContainerComponent;
     exports.GlSharedComponentFooterSimpleComponent = GlSharedComponentFooterSimpleComponent;
+    exports.GlSharedComponentInputAutocompleteLabelComponent = GlSharedComponentInputAutocompleteLabelComponent;
+    exports.GlSharedComponentInputAutocompleteSimpleComponent = GlSharedComponentInputAutocompleteSimpleComponent;
+    exports.GlSharedComponentInputAutocompleteSimpleService = GlSharedComponentInputAutocompleteSimpleService;
     exports.GlSharedComponentInputButtonHyperlinkComponent = GlSharedComponentInputButtonHyperlinkComponent;
     exports.GlSharedComponentInputButtonSimpleComponent = GlSharedComponentInputButtonSimpleComponent;
     exports.GlSharedComponentInputOptionSimpleComponent = GlSharedComponentInputOptionSimpleComponent;

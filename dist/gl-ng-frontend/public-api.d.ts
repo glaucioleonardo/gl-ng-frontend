@@ -10,9 +10,14 @@ export * from './lib/shared/component/button/menu/tooltip/gl-shared-component-bu
 export * from './lib/shared/component/error-message/gl-shared-component-error-message.component';
 export * from './lib/shared/component/footer/simple/gl-shared-component-footer-simple.component';
 export * from './lib/shared/component/footer/container/gl-shared-component-footer-container.component';
+export * from './lib/shared/component/input/autocomplete/label/gl-shared-component-input-autocomplete-label.component';
+export * from './lib/shared/component/input/autocomplete/simple/gl-shared-component-input-autocomplete-simple.component';
+export * from './lib/shared/component/input/autocomplete/simple/gl-shared-component-input-autocomplete-simple.service';
+export * from './lib/shared/component/input/autocomplete/simple/gl-shared-component-input-autocomplete-simple.interface';
 export * from './lib/shared/component/input/button/simple/gl-shared-component-input-button-simple.component';
 export * from './lib/shared/component/input/option/simple/gl-shared-component-input-option-simple.component';
 export * from './lib/shared/component/input/text/simple/gl-shared-component-input-text-simple.component';
+export * from './lib/shared/component/input/text/simple/gl-shared-component-input-text-simple.interface';
 export * from './lib/shared/component/input/text/label/gl-shared-component-input-text-label.component';
 export * from './lib/shared/component/input/text-area/simple/gl-shared-component-input-text-area-simple.component';
 export * from './lib/shared/component/input/text-area/label/gl-shared-component-input-text-area-label.component';

@@ -1,0 +1,33 @@
+<ng-content></ng-content>
+<mat-form-field
+  class="input-container custom-combobox {{ class }} {{ disabled ? 'read-only' : '' }}"
+  floatLabel="never"
+  appearance="none">
+  <div class="combobox-container {{ listItems.length > 0 ? '' : 'no-data' }} {{ disabled ? 'read-only' : '' }}">
+    <input
+      #input
+      type="text"
+      aria-label="Number"
+      class="item-content {{ itemContentAlignment }} {{ class }} {{ listItems.length > 0 ? '' : 'no-data' }}"
+      matInput
+      [readonly]="disabled"
+      [id]="id"
+      [placeholder]="placeholder"
+      [formControl]="autocompleteInput"
+      [maxLength]="maxLength"
+      [matAutocomplete]="auto"
+      (focusin)="reset(auto, $event)"
+      (focusout)="validate()">
+    <img
+      #arrowDown
+      alt="Show items"
+      class="arrow-down {{ class }} {{ disabled ? 'read-only' : '' }}"
+      [src]="imageSource">
+  </div>
+  <mat-autocomplete autoActiveFirstOption="true" #auto="matAutocomplete" (optionSelected)="input.blur()">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option.text">
+      {{option.text}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+

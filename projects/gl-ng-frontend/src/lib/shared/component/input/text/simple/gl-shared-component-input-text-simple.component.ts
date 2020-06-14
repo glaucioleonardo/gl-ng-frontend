@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { ICurrencyTypes } from 'gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.interface';
 import { InputMask } from 'gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.service';
+import { ISimpleTextResult } from './gl-shared-component-input-text-simple.interface';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class GlSharedComponentInputTextSimpleComponent implements AfterViewInit 
   @Input() maskSymbol: string;
   @Input() maxLength = 255;
 
-  @Output() currentValue = new EventEmitter();
+  @Output() currentValue: EventEmitter<ISimpleTextResult> = new EventEmitter();
   @Output() onKeyUp(args) {
     if (args.target.value.trim().length > 0) { args.target.classList.remove('required-fill'); }
     this.currentValue.emit({ value: args.target.value });

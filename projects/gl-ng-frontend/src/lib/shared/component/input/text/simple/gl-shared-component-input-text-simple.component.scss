@@ -21,6 +21,10 @@
     font-size: 0.45em;
     flex-grow: 1;
 
+    &:focus {
+      outline: none !important;
+    }
+
     &::placeholder {
       color: $dark-gray !important;
     }

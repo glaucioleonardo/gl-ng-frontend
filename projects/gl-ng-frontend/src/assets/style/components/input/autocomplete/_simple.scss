@@ -1,0 +1,130 @@
+@import "../../assets/style/colors/black";
+@import "../../assets/style/colors/gray";
+@import "../../assets/style/colors/white";
+@import "../../assets/style/fonts/montserrat";
+@import "../../assets/style/components/input/input-simple-text";
+
+:host::ng-deep {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  position: relative;
+
+  .input-container.combobox-jquery-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    //height: 2em;
+    margin: 0.5px;
+
+    .combobox-jquery {
+      @include font-family('bold');
+      border: 0;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      select {
+        border: none;
+        background-color: transparent;
+        margin: 1em 0 0 0;
+        flex-grow: 1;
+
+        color: $white;
+      }
+
+      &::ng-deep {
+        &.custom-combobox {
+          position: relative;
+          display: flex;
+          font-size: 0.4em;
+          flex: 1 0 auto;
+
+          .custom-combobox-input {
+            font-size: 1.17em;
+            flex: 1 0 auto;
+            @extend %item-content;
+
+            &::placeholder {
+              color: $dark-gray;
+            }
+          }
+
+          .custom-combobox-input:-ms-input-placeholder {
+            color: $dark-gray !important;
+          }
+
+          .custom-combobox-input.center {
+            text-align: center;
+          }
+
+          a.ui-button.ui-widget.ui-button-icon-only {
+            border: none;
+            width: 4.7em;
+            background-color: $dark-gray-2;
+            background: url(../assets/img/icon/drop-down/arrow-down.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 1.5em;
+
+            //.ui-button-icon {
+            //background: url(../../assets/img/icon/drop-down/arrow-down.svg);
+            //background: url(src/assets/img/icons/drop-down/arrow-down.svg);
+            //}
+          }
+        }
+      }
+    }
+
+    &.disabled {
+      .custom-combobox {
+        background-color: $black-translucid-1;
+        input {
+          user-select: none !important;
+          pointer-events: none !important;
+        }
+        a.ui-button.ui-widget.ui-button-icon-only {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .input-container.light {
+    .custom-combobox-input {
+      background-color: $black-translucid-1 !important;
+
+      &::placeholder {
+        color: $white-translucid-2 !important;
+      }
+
+
+    }
+    .custom-combobox-input:-ms-input-placeholder {
+      color: $white-translucid-2 !important;
+    }
+    a {
+      background-color: $black-translucid-1 !important;
+    }
+
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+  :host::ng-deep {
+    .input-container.combobox-jquery-container {
+      .combobox-jquery {
+
+        &::ng-deep {
+          &.custom-combobox {
+            height: 1em;
+            .custom-combobox-input {
+              width: 66%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -35,6 +35,10 @@
       color: $white;
       @extend %native-scrollbar;
 
+      &:focus {
+        outline: none !important;
+      }
+
       &::placeholder {
         color: $dark-gray;
       }

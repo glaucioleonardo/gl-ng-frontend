@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -10,8 +11,9 @@ import { GlCoreModule } from './core/gl-core.module';
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     GlSharedModule,
-    GlCoreModule
+    GlCoreModule,
   ],
   exports: [],
   providers: []

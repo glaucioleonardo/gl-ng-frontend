@@ -1,6 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { GlCoreModule } from '../../core/gl-core.module';
 
@@ -29,6 +36,8 @@ import { GlSharedComponentButtonImageSimpleComponent } from './button/image/simp
 import { GlSharedComponentButtonImageTooltipComponent } from './button/image/tooltip/gl-shared-component-button-image-tooltip.component';
 import { GlSharedComponentButtonMenuSimpleComponent } from './button/menu/simple/gl-shared-component-button-menu-simple.component';
 import { GlSharedComponentButtonMenuTooltipComponent } from './button/menu/tooltip/gl-shared-component-button-menu-tooltip.component';
+import { GlSharedComponentInputAutocompleteSimpleComponent } from './input/autocomplete/simple/gl-shared-component-input-autocomplete-simple.component';
+import { GlSharedComponentInputAutocompleteLabelComponent } from './input/autocomplete/label/gl-shared-component-input-autocomplete-label.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +48,8 @@ import { GlSharedComponentButtonMenuTooltipComponent } from './button/menu/toolt
     GlSharedComponentErrorMessageComponent,
     GlSharedComponentFooterContainerComponent,
     GlSharedComponentFooterSimpleComponent,
+    GlSharedComponentInputAutocompleteLabelComponent,
+    GlSharedComponentInputAutocompleteSimpleComponent,
     GlSharedComponentInputButtonSimpleComponent,
     GlSharedComponentInputButtonHyperlinkComponent,
     GlSharedComponentInputOptionSimpleComponent,
@@ -61,7 +72,14 @@ import { GlSharedComponentButtonMenuTooltipComponent } from './button/menu/toolt
   imports: [
     CommonModule,
     GlCoreModule,
-    RouterModule
+    RouterModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     GlSharedComponentButtonImageSimpleComponent,
@@ -71,6 +89,8 @@ import { GlSharedComponentButtonMenuTooltipComponent } from './button/menu/toolt
     GlSharedComponentErrorMessageComponent,
     GlSharedComponentFooterContainerComponent,
     GlSharedComponentFooterSimpleComponent,
+    GlSharedComponentInputAutocompleteLabelComponent,
+    GlSharedComponentInputAutocompleteSimpleComponent,
     GlSharedComponentInputButtonSimpleComponent,
     GlSharedComponentInputButtonHyperlinkComponent,
     GlSharedComponentInputOptionSimpleComponent,
