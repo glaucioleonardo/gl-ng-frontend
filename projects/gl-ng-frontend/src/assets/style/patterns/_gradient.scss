@@ -1,4 +1,4 @@
-@import "../../assets/style/colors/gradient";
+@import "../colors/gradient";
 
 @mixin pattern-gradient-border($border-size: 1px, $border: 'top') {
   @if($border == 'top') {
