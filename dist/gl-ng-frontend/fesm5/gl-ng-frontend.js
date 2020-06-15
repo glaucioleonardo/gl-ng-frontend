@@ -215,7 +215,17 @@ function GlSharedComponentInputAutocompleteSimpleComponent_mat_option_9_Template
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", option_r4.text, " ");
 } }
-var _c7 = ["mainContainer"];
+var _c7 = ["menuNavContainer"];
+function GlSharedComponentFilterComponent_span_19_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "span", 19);
+    ɵngcc0.ɵɵtext(1);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    var ctx_r3 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵtextInterpolate3("", ctx_r3.partialResultDescription, " ", ctx_r3.partialResult, " ", ctx_r3.partialResult > 1 ? ctx_r3.itemPluralDescription : ctx_r3.itemSingularDescription, " ");
+} }
+var _c8 = ["mainContainer"];
 function GlSharedViewErrorMessageComponent_gl_shared_component_input_button_hyperlink_5_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelement(0, "gl-shared-component-input-button-hyperlink", 6);
 } if (rf & 2) {
@@ -2541,6 +2551,301 @@ GlSharedComponentInputAutocompleteLabelComponent.ɵcmp = ɵngcc0.ɵɵdefineCompo
     return GlSharedComponentInputAutocompleteLabelComponent;
 }());
 
+var GlSharedComponentFilterService = /** @class */ (function () {
+    function GlSharedComponentFilterService() {
+        this.opened = false;
+        this.menuHidden$ = new Subject();
+    }
+    GlSharedComponentFilterService.prototype.initialize = function (container, background, menuNavContainer, router) {
+        this.container = container;
+        this.background = background;
+        this.menuNavContainer = menuNavContainer;
+        this.router = router;
+        // this.filter = filter;
+        // this._core = core;
+        this.menuHidden$.next(true);
+    };
+    GlSharedComponentFilterService.prototype.backgroundClick = function (event) {
+        if (this.opened) {
+            this.close(event);
+        }
+    };
+    GlSharedComponentFilterService.prototype.open = function (event) {
+        var _this = this;
+        event.preventDefault();
+        this.applyPartialResult;
+        this.container.classList.add('menu-active');
+        this.background.classList.add('visible-background');
+        setTimeout(function () {
+            if (_this.isIE) {
+                _this.menuNavContainer.scrollTop = 0;
+            }
+            else {
+                _this.menuNavContainer.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }, 100);
+        this.menuHidden$.next(false);
+        this.opened = true;
+        return true;
+    };
+    GlSharedComponentFilterService.prototype.close = function (event) {
+        event.preventDefault();
+        this.container.classList.remove('menu-active');
+        this.background.classList.remove('visible-background');
+        this.menuHidden$.next(true);
+        this.opened = false;
+        return false;
+    };
+    GlSharedComponentFilterService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentFilterService_Factory() { return new GlSharedComponentFilterService(); }, token: GlSharedComponentFilterService, providedIn: "root" });
+GlSharedComponentFilterService.ɵfac = function GlSharedComponentFilterService_Factory(t) { return new (t || GlSharedComponentFilterService)(); };
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentFilterService, [{
+        type: Injectable,
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return []; }, null); })();
+    return GlSharedComponentFilterService;
+}());
+
+var GlSharedComponentFilterComponent = /** @class */ (function () {
+    function GlSharedComponentFilterComponent(router, service) {
+        this.router = router;
+        this.service = service;
+        this.subtitle = 'Filter';
+        this.type = '';
+        this.closeButton = '../assets/img/icon/menu/close.svg';
+        this.partialResultDescription = 'Partial results with these filters:';
+        this.itemSingularDescription = 'item';
+        this.itemPluralDescription = 'items';
+        this.applyButtonDescription = 'Apply filter';
+        this.clearButtonDescription = 'Clear filter';
+        this.buttonClass = 'light-translucid';
+        this.isIE = false;
+        this.applyFilter$ = new EventEmitter();
+        this.clearFilter$ = new EventEmitter();
+        service.applyPartialResult = this.applyPartialResult;
+    }
+    GlSharedComponentFilterComponent.prototype.ngOnInit = function () {
+    };
+    GlSharedComponentFilterComponent.prototype.ngAfterViewInit = function () {
+        this.service.initialize(this.container.nativeElement, this.background.nativeElement, this.menuNavContainer.nativeElement, this.router);
+    };
+    GlSharedComponentFilterComponent.prototype.onApply = function () {
+        this.applyFilter$.emit();
+    };
+    GlSharedComponentFilterComponent.prototype.onClear = function () {
+        this.clearFilter$.emit();
+    };
+    GlSharedComponentFilterComponent.ctorParameters = function () { return [
+        { type: Router },
+        { type: GlSharedComponentFilterService }
+    ]; };
+    __decorate([
+        ViewChild('container', { static: true, read: ElementRef })
+    ], GlSharedComponentFilterComponent.prototype, "container", void 0);
+    __decorate([
+        ViewChild('background', { static: true, read: ElementRef })
+    ], GlSharedComponentFilterComponent.prototype, "background", void 0);
+    __decorate([
+        ViewChild('menuNavContainer')
+    ], GlSharedComponentFilterComponent.prototype, "menuNavContainer", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "title", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "subtitle", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "type", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "closeButton", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "partialResult", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "partialResultDescription", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "itemSingularDescription", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "itemPluralDescription", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "applyButtonDescription", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "clearButtonDescription", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "buttonClass", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "isIE", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterComponent.prototype, "applyPartialResult", void 0);
+    __decorate([
+        Output()
+    ], GlSharedComponentFilterComponent.prototype, "applyFilter$", void 0);
+    __decorate([
+        Output()
+    ], GlSharedComponentFilterComponent.prototype, "clearFilter$", void 0);
+GlSharedComponentFilterComponent.ɵfac = function GlSharedComponentFilterComponent_Factory(t) { return new (t || GlSharedComponentFilterComponent)(ɵngcc0.ɵɵdirectiveInject(ɵngcc2.Router), ɵngcc0.ɵɵdirectiveInject(GlSharedComponentFilterService)); };
+GlSharedComponentFilterComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentFilterComponent, selectors: [["gl-shared-component-filter"]], viewQuery: function GlSharedComponentFilterComponent_Query(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵstaticViewQuery(_c5, true, ElementRef);
+        ɵngcc0.ɵɵstaticViewQuery(_c6, true, ElementRef);
+        ɵngcc0.ɵɵviewQuery(_c7, true);
+    } if (rf & 2) {
+        var _t;
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.container = _t.first);
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.background = _t.first);
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.menuNavContainer = _t.first);
+    } }, inputs: { subtitle: "subtitle", type: "type", closeButton: "closeButton", partialResultDescription: "partialResultDescription", itemSingularDescription: "itemSingularDescription", itemPluralDescription: "itemPluralDescription", applyButtonDescription: "applyButtonDescription", clearButtonDescription: "clearButtonDescription", buttonClass: "buttonClass", isIE: "isIE", title: "title", partialResult: "partialResult", applyPartialResult: "applyPartialResult" }, outputs: { applyFilter$: "applyFilter$", clearFilter$: "clearFilter$" }, ngContentSelectors: _c3, decls: 23, vars: 13, consts: [[3, "click"], ["background", ""], ["container", ""], [1, "header-filter-container"], [1, "menu-header"], [1, "menu-top-icons-container"], ["id", "close-menu-button", "alt", "Close menu button", 1, "menu-icons", "close-menu", 3, "src", "click"], [1, "menu-header-title"], [1, "title"], [1, "subtitle"], [1, "menu-nav-container"], ["menuNavContainer", ""], [1, "menu-content"], [1, "input-container"], [1, "bottom-container"], ["class", "partial-result-description", 4, "ngIf"], [1, "buttons-container"], ["value", "apply", 3, "innerValue", "click"], ["value", "clear", 3, "innerValue", "click"], [1, "partial-result-description"]], template: function GlSharedComponentFilterComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef();
+        ɵngcc0.ɵɵelementStart(0, "gl-shared-component-menu-background", 0, 1);
+        ɵngcc0.ɵɵlistener("click", function GlSharedComponentFilterComponent_Template_gl_shared_component_menu_background_click_0_listener($event) { return ctx.service.backgroundClick($event); });
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(2, "div", null, 2);
+        ɵngcc0.ɵɵelementStart(4, "div", 3);
+        ɵngcc0.ɵɵelementStart(5, "div", 4);
+        ɵngcc0.ɵɵelementStart(6, "div", 5);
+        ɵngcc0.ɵɵelementStart(7, "img", 6);
+        ɵngcc0.ɵɵlistener("click", function GlSharedComponentFilterComponent_Template_img_click_7_listener($event) { return ctx.service.close($event); });
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(8, "div", 7);
+        ɵngcc0.ɵɵelementStart(9, "h1", 8);
+        ɵngcc0.ɵɵtext(10);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(11, "h2", 9);
+        ɵngcc0.ɵɵtext(12);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(13, "nav", 10, 11);
+        ɵngcc0.ɵɵelementStart(15, "div", 12);
+        ɵngcc0.ɵɵelementStart(16, "div", 13);
+        ɵngcc0.ɵɵprojection(17);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(18, "div", 14);
+        ɵngcc0.ɵɵtemplate(19, GlSharedComponentFilterComponent_span_19_Template, 2, 3, "span", 15);
+        ɵngcc0.ɵɵelementStart(20, "div", 16);
+        ɵngcc0.ɵɵelementStart(21, "gl-shared-component-input-button-simple", 17);
+        ɵngcc0.ɵɵlistener("click", function GlSharedComponentFilterComponent_Template_gl_shared_component_input_button_simple_click_21_listener() { return ctx.onApply(); });
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(22, "gl-shared-component-input-button-simple", 18);
+        ɵngcc0.ɵɵlistener("click", function GlSharedComponentFilterComponent_Template_gl_shared_component_input_button_simple_click_22_listener() { return ctx.onClear(); });
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵclassMapInterpolate1("filter-container ", ctx.type, "");
+        ɵngcc0.ɵɵadvance(5);
+        ɵngcc0.ɵɵproperty("src", ctx.closeButton, ɵngcc0.ɵɵsanitizeUrl);
+        ɵngcc0.ɵɵadvance(3);
+        ɵngcc0.ɵɵtextInterpolate(ctx.title);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵtextInterpolate(ctx.subtitle);
+        ɵngcc0.ɵɵadvance(7);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.partialResult != null);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵclassMap(ctx.buttonClass);
+        ɵngcc0.ɵɵproperty("innerValue", ctx.applyButtonDescription);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵclassMap(ctx.buttonClass);
+        ɵngcc0.ɵɵproperty("innerValue", ctx.clearButtonDescription);
+    } }, directives: [GlSharedComponentMenuBackgroundComponent, ɵngcc1.NgIf, GlSharedComponentInputButtonSimpleComponent], styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%]  .filter-container .menu-nav-container::-webkit-scrollbar:horizontal{height:.5em!important}[_nghost-%COMP%]  .filter-container .menu-nav-container::-webkit-scrollbar:vertical{width:.5em!important}[_nghost-%COMP%]  .filter-container .menu-nav-container::-webkit-scrollbar-button{background-color:#333437!important;display:none!important}[_nghost-%COMP%]  .filter-container .menu-nav-container::-webkit-scrollbar-track{background-color:green!important}[_nghost-%COMP%]  .filter-container .menu-nav-container::-webkit-scrollbar-track-piece{background-color:#2c2c2f!important}[_nghost-%COMP%]  .filter-container .menu-nav-container::-webkit-scrollbar-thumb{background-color:#64666c!important;border:1px solid #38393c!important}[_nghost-%COMP%]  .filter-container{border-top:.3em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;border-bottom:2em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;display:flex;flex-direction:column;background:0 0/cover #1a1b1d;position:fixed;top:0;bottom:0;overflow:hidden;width:85vw;right:-110%;max-width:17em;min-width:17em;z-index:10000;transition:right .5s ease-in-out;flex-grow:1;height:100vh}[_nghost-%COMP%]  .filter-container.translucid{background:rgba(255,255,255,.05);border-left:1px solid rgba(255,255,255,.05);border-top:.3em solid rgba(255,255,255,.1);border-image-source:none}[_nghost-%COMP%]  .filter-container .a{display:block;min-height:3em}[_nghost-%COMP%]  .filter-container .header-filter-container .menu-header{display:flex;flex-direction:column;margin:.5em 1em 1em .5em}[_nghost-%COMP%]  .filter-container .header-filter-container .menu-header .menu-top-icons-container{display:flex;margin:0 0 1.5em}[_nghost-%COMP%]  .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu, [_nghost-%COMP%]  .filter-container .header-filter-container .menu-header .menu-top-icons-container .settings-menu{cursor:pointer;height:1.5em;width:1.5em}[_nghost-%COMP%]  .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu:active, [_nghost-%COMP%]  .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu:hover, [_nghost-%COMP%]  .filter-container .header-filter-container .menu-header .menu-top-icons-container .settings-menu:active, [_nghost-%COMP%]  .filter-container .header-filter-container .menu-header .menu-top-icons-container .settings-menu:hover{opacity:1;-webkit-animation:.4s ease-in-out forwards increase-decrease;animation:.4s ease-in-out forwards increase-decrease}[_nghost-%COMP%]  .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu{margin:0 .2em 0 0}[_nghost-%COMP%]  .filter-container .header-filter-container .menu-header .menu-header-title .subtitle, [_nghost-%COMP%]  .filter-container .header-filter-container .menu-header .menu-header-title .title{text-transform:uppercase;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;color:#fff;margin:0}[_nghost-%COMP%]  .filter-container .header-filter-container .menu-header .menu-header-title .title{font-family:Montserrat,sans-serif;font-weight:700;font-size:.9em;display:none}[_nghost-%COMP%]  .filter-container .header-filter-container .menu-header .menu-header-title .subtitle{font-family:Montserrat,sans-serif;font-weight:100;font-size:1.5em}[_nghost-%COMP%]  .filter-container .bottom-container{display:flex;flex-direction:column;margin:1em 0 .4em}[_nghost-%COMP%]  .filter-container .bottom-container .partial-result-description{font-family:Montserrat,sans-serif;font-weight:700;color:#d24077;font-size:.5em;padding:0 0 0 .5em;text-align:center}[_nghost-%COMP%]  .filter-container .bottom-container .buttons-container{display:flex;padding:.6em 0 .3em .3em;font-size:.8em}[_nghost-%COMP%]  .filter-container .bottom-container .buttons-container .default-button:nth-child(1){margin:0 .5em 0 0}[_nghost-%COMP%]  .filter-container .bottom-container .buttons-container .default-button:nth-child(2){margin:0 0 0 .5em}[_nghost-%COMP%]  .filter-container .menu-nav-container{scrollbar-face-color:#333437!important;scrollbar-shadow-color:#38393c!important;scrollbar-track-color:#2c2c2f!important;scrollbar-arrow-color:#64666c!important;overflow:auto;max-height:100%;flex-grow:1;display:flex;overflow-x:hidden;border-top:0 solid transparent!important;position:relative;border-bottom:0 solid transparent!important}[_nghost-%COMP%]  .filter-container .menu-nav-container::before{width:100%;height:1px;left:0;top:1px;margin-top:-1px;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%)}[_nghost-%COMP%]  .filter-container .menu-nav-container::after{width:100%;height:1px;left:0;margin-bottom:-1px;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);bottom:-38%}[_nghost-%COMP%]  .filter-container .menu-nav-container .menu-content{display:flex;flex-direction:column;flex-grow:1;position:relative}[_nghost-%COMP%]  .filter-container .menu-nav-container .menu-content .menu-title{background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);margin:0 0 .14em;position:relative;display:flex;align-items:center;border-left:.2em solid #fff}[_nghost-%COMP%]  .filter-container .menu-nav-container .menu-content .menu-title .material-icons{color:rgba(255,255,255,.6);font-size:1.2em;padding:.3em;margin:0 .5em 0 .3em}[_nghost-%COMP%]  .filter-container .menu-nav-container .menu-content .menu-title .material-icons.expand{position:absolute;color:#fff;top:.5em;right:.3em}[_nghost-%COMP%]  .filter-container .menu-nav-container .menu-content .menu-title .menu-icons{padding:.2em .5em;height:1.5em;width:1.5em}[_nghost-%COMP%]  .filter-container .menu-nav-container .menu-content .menu-title a{text-decoration:none;font-size:.6em;font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;color:#fff;padding:1.5em .7em;flex-grow:1}[_nghost-%COMP%]  .filter-container .menu-nav-container .menu-content .input-container gl-shared-component-filter-container .type-container{background-color:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.03)}[_nghost-%COMP%]  .filter-container .menu-nav-container .menu-content .input-container .options-container{display:flex}[_nghost-%COMP%]  .filter-container .menu-nav-container .menu-content .input-container gl-shared-component-input-autocomplete-simple .input-container{height:1em;margin:.5em 0}[_nghost-%COMP%]  .show-admin-settings{visibility:visible!important}[_nghost-%COMP%]  .filter-container .menu-active{right:0}[_nghost-%COMP%]  .menu-active{right:0}[_nghost-%COMP%]  .menu-background{opacity:0;visibility:collapse;z-index:-1000;left:1000px}[_nghost-%COMP%]  .visible-background{width:100%;height:100%;background:rgba(0,0,0,.6);opacity:1;visibility:visible;position:fixed;top:0;left:0;z-index:999;transition:1s ease-in-out}[_nghost-%COMP%]  .hide-subtitle{opacity:0;visibility:collapse;margin:0;padding:0;transition:.25s ease-in-out}[_nghost-%COMP%]  .show-subtitle{opacity:1;visibility:visible;transition:.25s ease-in-out .4s}[_nghost-%COMP%]  .hide-subtitle-container{-webkit-animation:.4s ease-in-out forwards hide-subtitle;animation:.4s ease-in-out forwards hide-subtitle}[_nghost-%COMP%]  .show-subtitle-container{-webkit-animation:.4s ease-in-out forwards show-subtitle;animation:.4s ease-in-out forwards show-subtitle}[_nghost-%COMP%]  .collapsed-menu .expand{transform:rotate(0);transition:.4s ease-in-out}[_nghost-%COMP%]  .collapsed-menu .menu-icons{-webkit-animation:.4s ease-in-out forwards decrease-increase;animation:.4s ease-in-out forwards decrease-increase}[_nghost-%COMP%]  .expanded-menu .expand{transform:rotate(-180deg);transition:.4s ease-in-out}[_nghost-%COMP%]  .expanded-menu .menu-icons{-webkit-animation:.4s ease-in-out forwards increase-decrease;animation:.4s ease-in-out forwards increase-decrease}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){[_nghost-%COMP%]  .filter-container{border-top:0 solid transparent!important;padding-top:.2em;max-height:unset}[_nghost-%COMP%]  .filter-container::before{width:100%;height:.2em;left:0;top:.2em;margin-top:-.2em;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%)}[_nghost-%COMP%]  .filter-container .menu-nav-container{max-height:69vh}[_nghost-%COMP%]  .filter-container .menu-nav-container .input-container gl-shared-component-input-autocomplete-simple .custom-combobox{height:4em}[_nghost-%COMP%]  .filter-container .menu-nav-container .input-container gl-shared-component-input-autocomplete-simple .custom-combobox .mat-input-element{max-width:84%}[_nghost-%COMP%]  .filter-container .menu-nav-container .input-container gl-shared-component-input-autocomplete-simple .custom-combobox .mat-input-element.no-data{max-width:94%}}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentFilterComponent, [{
+        type: Component,
+        args: [{
+                selector: 'gl-shared-component-filter',
+                template: "<gl-shared-component-menu-background\n  #background\n  (click)=\"service.backgroundClick($event)\"\n></gl-shared-component-menu-background>\n<div #container class=\"filter-container {{ type }}\">\n  <div class=\"header-filter-container\">\n    <div class=\"menu-header\">\n      <div class=\"menu-top-icons-container\">\n        <img id=\"close-menu-button\" (click)=\"service.close($event)\" [src]=\"closeButton\" class=\"menu-icons close-menu\" alt=\"Close menu button\">\n      </div>\n      <div class=\"menu-header-title\">\n        <h1 class=\"title\">{{ title }}</h1>\n        <h2 class=\"subtitle\">{{ subtitle }}</h2>\n      </div>\n    </div>\n  </div>\n  <nav class=\"menu-nav-container\" #menuNavContainer>\n    <div class=\"menu-content\">\n      <div class=\"input-container\" >\n        <ng-content></ng-content>\n      </div>\n    </div>\n  </nav>\n  <div class=\"bottom-container\">\n    <span\n      *ngIf=\"partialResult != null\"\n      class=\"partial-result-description\">{{ partialResultDescription }} {{ partialResult }} {{ partialResult > 1 ? itemPluralDescription : itemSingularDescription }}\n    </span>\n    <div class=\"buttons-container\">\n      <gl-shared-component-input-button-simple\n        value=\"apply\"\n        [class]=\"buttonClass\"\n        [innerValue]=\"applyButtonDescription\"\n        (click)=\"onApply()\"\n      ></gl-shared-component-input-button-simple>\n      <gl-shared-component-input-button-simple\n        value=\"clear\"\n        [class]=\"buttonClass\"\n        [innerValue]=\"clearButtonDescription\"\n        (click)=\"onClear()\"\n      ></gl-shared-component-input-button-simple>\n    </div>\n  </div>\n</div>\n",
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar:horizontal{height:.5em!important}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar:vertical{width:.5em!important}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar-button{background-color:#333437!important;display:none!important}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar-track{background-color:green!important}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar-track-piece{background-color:#2c2c2f!important}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar-thumb{background-color:#64666c!important;border:1px solid #38393c!important}:host::ng-deep .filter-container{border-top:.3em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;border-bottom:2em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;display:flex;flex-direction:column;background:0 0/cover #1a1b1d;position:fixed;top:0;bottom:0;overflow:hidden;width:85vw;right:-110%;max-width:17em;min-width:17em;z-index:10000;transition:right .5s ease-in-out;flex-grow:1;height:100vh}:host::ng-deep .filter-container.translucid{background:rgba(255,255,255,.05);border-left:1px solid rgba(255,255,255,.05);border-top:.3em solid rgba(255,255,255,.1);border-image-source:none}:host::ng-deep .filter-container .a{display:block;min-height:3em}:host::ng-deep .filter-container .header-filter-container .menu-header{display:flex;flex-direction:column;margin:.5em 1em 1em .5em}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container{display:flex;margin:0 0 1.5em}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .settings-menu{cursor:pointer;height:1.5em;width:1.5em}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu:active,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu:hover,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .settings-menu:active,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .settings-menu:hover{opacity:1;-webkit-animation:.4s ease-in-out forwards increase-decrease;animation:.4s ease-in-out forwards increase-decrease}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu{margin:0 .2em 0 0}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-header-title .subtitle,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-header-title .title{text-transform:uppercase;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;color:#fff;margin:0}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-header-title .title{font-family:Montserrat,sans-serif;font-weight:700;font-size:.9em;display:none}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-header-title .subtitle{font-family:Montserrat,sans-serif;font-weight:100;font-size:1.5em}:host::ng-deep .filter-container .bottom-container{display:flex;flex-direction:column;margin:1em 0 .4em}:host::ng-deep .filter-container .bottom-container .partial-result-description{font-family:Montserrat,sans-serif;font-weight:700;color:#d24077;font-size:.5em;padding:0 0 0 .5em;text-align:center}:host::ng-deep .filter-container .bottom-container .buttons-container{display:flex;padding:.6em 0 .3em .3em;font-size:.8em}:host::ng-deep .filter-container .bottom-container .buttons-container .default-button:nth-child(1){margin:0 .5em 0 0}:host::ng-deep .filter-container .bottom-container .buttons-container .default-button:nth-child(2){margin:0 0 0 .5em}:host::ng-deep .filter-container .menu-nav-container{scrollbar-face-color:#333437!important;scrollbar-shadow-color:#38393c!important;scrollbar-track-color:#2c2c2f!important;scrollbar-arrow-color:#64666c!important;overflow:auto;max-height:100%;flex-grow:1;display:flex;overflow-x:hidden;border-top:0 solid transparent!important;position:relative;border-bottom:0 solid transparent!important}:host::ng-deep .filter-container .menu-nav-container::before{width:100%;height:1px;left:0;top:1px;margin-top:-1px;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%)}:host::ng-deep .filter-container .menu-nav-container::after{width:100%;height:1px;left:0;margin-bottom:-1px;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);bottom:-38%}:host::ng-deep .filter-container .menu-nav-container .menu-content{display:flex;flex-direction:column;flex-grow:1;position:relative}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title{background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);margin:0 0 .14em;position:relative;display:flex;align-items:center;border-left:.2em solid #fff}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title .material-icons{color:rgba(255,255,255,.6);font-size:1.2em;padding:.3em;margin:0 .5em 0 .3em}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title .material-icons.expand{position:absolute;color:#fff;top:.5em;right:.3em}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title .menu-icons{padding:.2em .5em;height:1.5em;width:1.5em}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title a{text-decoration:none;font-size:.6em;font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;color:#fff;padding:1.5em .7em;flex-grow:1}:host::ng-deep .filter-container .menu-nav-container .menu-content .input-container gl-shared-component-filter-container .type-container{background-color:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.03)}:host::ng-deep .filter-container .menu-nav-container .menu-content .input-container .options-container{display:flex}:host::ng-deep .filter-container .menu-nav-container .menu-content .input-container gl-shared-component-input-autocomplete-simple .input-container{height:1em;margin:.5em 0}:host::ng-deep .show-admin-settings{visibility:visible!important}:host::ng-deep .filter-container .menu-active{right:0}:host::ng-deep .menu-active{right:0}:host::ng-deep .menu-background{opacity:0;visibility:collapse;z-index:-1000;left:1000px}:host::ng-deep .visible-background{width:100%;height:100%;background:rgba(0,0,0,.6);opacity:1;visibility:visible;position:fixed;top:0;left:0;z-index:999;transition:1s ease-in-out}:host::ng-deep .hide-subtitle{opacity:0;visibility:collapse;margin:0;padding:0;transition:.25s ease-in-out}:host::ng-deep .show-subtitle{opacity:1;visibility:visible;transition:.25s ease-in-out .4s}:host::ng-deep .hide-subtitle-container{-webkit-animation:.4s ease-in-out forwards hide-subtitle;animation:.4s ease-in-out forwards hide-subtitle}:host::ng-deep .show-subtitle-container{-webkit-animation:.4s ease-in-out forwards show-subtitle;animation:.4s ease-in-out forwards show-subtitle}:host::ng-deep .collapsed-menu .expand{transform:rotate(0);transition:.4s ease-in-out}:host::ng-deep .collapsed-menu .menu-icons{-webkit-animation:.4s ease-in-out forwards decrease-increase;animation:.4s ease-in-out forwards decrease-increase}:host::ng-deep .expanded-menu .expand{transform:rotate(-180deg);transition:.4s ease-in-out}:host::ng-deep .expanded-menu .menu-icons{-webkit-animation:.4s ease-in-out forwards increase-decrease;animation:.4s ease-in-out forwards increase-decrease}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){:host::ng-deep .filter-container{border-top:0 solid transparent!important;padding-top:.2em;max-height:unset}:host::ng-deep .filter-container::before{width:100%;height:.2em;left:0;top:.2em;margin-top:-.2em;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%)}:host::ng-deep .filter-container .menu-nav-container{max-height:69vh}:host::ng-deep .filter-container .menu-nav-container .input-container gl-shared-component-input-autocomplete-simple .custom-combobox{height:4em}:host::ng-deep .filter-container .menu-nav-container .input-container gl-shared-component-input-autocomplete-simple .custom-combobox .mat-input-element{max-width:84%}:host::ng-deep .filter-container .menu-nav-container .input-container gl-shared-component-input-autocomplete-simple .custom-combobox .mat-input-element.no-data{max-width:94%}}"]
+            }]
+    }], function () { return [{ type: ɵngcc2.Router }, { type: GlSharedComponentFilterService }]; }, { subtitle: [{
+            type: Input
+        }], type: [{
+            type: Input
+        }], closeButton: [{
+            type: Input
+        }], partialResultDescription: [{
+            type: Input
+        }], itemSingularDescription: [{
+            type: Input
+        }], itemPluralDescription: [{
+            type: Input
+        }], applyButtonDescription: [{
+            type: Input
+        }], clearButtonDescription: [{
+            type: Input
+        }], buttonClass: [{
+            type: Input
+        }], isIE: [{
+            type: Input
+        }], applyFilter$: [{
+            type: Output
+        }], clearFilter$: [{
+            type: Output
+        }], container: [{
+            type: ViewChild,
+            args: ['container', { static: true, read: ElementRef }]
+        }], background: [{
+            type: ViewChild,
+            args: ['background', { static: true, read: ElementRef }]
+        }], menuNavContainer: [{
+            type: ViewChild,
+            args: ['menuNavContainer']
+        }], title: [{
+            type: Input
+        }], partialResult: [{
+            type: Input
+        }], applyPartialResult: [{
+            type: Input
+        }] }); })();
+    return GlSharedComponentFilterComponent;
+}());
+
+var GlSharedComponentFilterContainerComponent = /** @class */ (function () {
+    function GlSharedComponentFilterContainerComponent() {
+    }
+    __decorate([
+        Input()
+    ], GlSharedComponentFilterContainerComponent.prototype, "label", void 0);
+GlSharedComponentFilterContainerComponent.ɵfac = function GlSharedComponentFilterContainerComponent_Factory(t) { return new (t || GlSharedComponentFilterContainerComponent)(); };
+GlSharedComponentFilterContainerComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentFilterContainerComponent, selectors: [["gl-shared-component-filter-container"]], inputs: { label: "label" }, ngContentSelectors: _c3, decls: 4, vars: 1, consts: [[1, "type-container"], [1, "title"]], template: function GlSharedComponentFilterContainerComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef();
+        ɵngcc0.ɵɵelementStart(0, "div", 0);
+        ɵngcc0.ɵɵelementStart(1, "label", 1);
+        ɵngcc0.ɵɵtext(2);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵprojection(3);
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵtextInterpolate(ctx.label);
+    } }, styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%]  .type-container{display:flex;flex-direction:column;background-color:#2c2c2f;padding:.7em;border-bottom:1px solid #38393c}[_nghost-%COMP%]  .type-container .title{font-family:Montserrat,sans-serif;font-weight:400;color:#d24077;text-transform:uppercase;font-size:.4em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentFilterContainerComponent, [{
+        type: Component,
+        args: [{
+                selector: 'gl-shared-component-filter-container',
+                template: "<div class=\"type-container\">\n  <label class=\"title\">{{ label }}</label>\n  <ng-content></ng-content>\n</div>\n",
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .type-container{display:flex;flex-direction:column;background-color:#2c2c2f;padding:.7em;border-bottom:1px solid #38393c}:host::ng-deep .type-container .title{font-family:Montserrat,sans-serif;font-weight:400;color:#d24077;text-transform:uppercase;font-size:.4em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}"]
+            }]
+    }], function () { return []; }, { label: [{
+            type: Input
+        }] }); })();
+    return GlSharedComponentFilterContainerComponent;
+}());
+
 var GlComponentModule = /** @class */ (function () {
     function GlComponentModule() {
     }
@@ -2563,6 +2868,8 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         GlSharedComponentButtonMenuSimpleComponent,
         GlSharedComponentButtonMenuTooltipComponent,
         GlSharedComponentErrorMessageComponent,
+        GlSharedComponentFilterComponent,
+        GlSharedComponentFilterContainerComponent,
         GlSharedComponentFooterContainerComponent,
         GlSharedComponentFooterSimpleComponent,
         GlSharedComponentInputAutocompleteLabelComponent,
@@ -2599,6 +2906,8 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         GlSharedComponentButtonMenuSimpleComponent,
         GlSharedComponentButtonMenuTooltipComponent,
         GlSharedComponentErrorMessageComponent,
+        GlSharedComponentFilterComponent,
+        GlSharedComponentFilterContainerComponent,
         GlSharedComponentFooterContainerComponent,
         GlSharedComponentFooterSimpleComponent,
         GlSharedComponentInputAutocompleteLabelComponent,
@@ -2630,6 +2939,8 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                     GlSharedComponentButtonMenuSimpleComponent,
                     GlSharedComponentButtonMenuTooltipComponent,
                     GlSharedComponentErrorMessageComponent,
+                    GlSharedComponentFilterComponent,
+                    GlSharedComponentFilterContainerComponent,
                     GlSharedComponentFooterContainerComponent,
                     GlSharedComponentFooterSimpleComponent,
                     GlSharedComponentInputAutocompleteLabelComponent,
@@ -2672,6 +2983,8 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                     GlSharedComponentButtonMenuSimpleComponent,
                     GlSharedComponentButtonMenuTooltipComponent,
                     GlSharedComponentErrorMessageComponent,
+                    GlSharedComponentFilterComponent,
+                    GlSharedComponentFilterContainerComponent,
                     GlSharedComponentFooterContainerComponent,
                     GlSharedComponentFooterSimpleComponent,
                     GlSharedComponentInputAutocompleteLabelComponent,
@@ -2835,7 +3148,7 @@ var GlSharedViewErrorMessageComponent = /** @class */ (function () {
     ], GlSharedViewErrorMessageComponent.prototype, "footerLink", void 0);
 GlSharedViewErrorMessageComponent.ɵfac = function GlSharedViewErrorMessageComponent_Factory(t) { return new (t || GlSharedViewErrorMessageComponent)(); };
 GlSharedViewErrorMessageComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedViewErrorMessageComponent, selectors: [["gl-shared-view-error-message"]], viewQuery: function GlSharedViewErrorMessageComponent_Query(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵviewQuery(_c7, true);
+        ɵngcc0.ɵɵviewQuery(_c8, true);
     } if (rf & 2) {
         var _t;
         ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.mainContainer = _t.first);
@@ -2947,6 +3260,6 @@ GlSharedViewModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlShar
  * Generated bundle index. Do not edit.
  */
 
-export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule };
+export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule };
 
 //# sourceMappingURL=gl-ng-frontend.js.map

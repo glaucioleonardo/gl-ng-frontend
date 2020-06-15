@@ -7,6 +7,8 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
    1.1. [ Configuring assets ](#configuring-assets)<br>
    1.2. [ Configuring external links / urls from anchors ](#external-links-anchors)<br>
    1.3. [ Configuring side menu ](#configuraing-side-menu)
+2. Imports<br>
+   2.1. [ Importing @angular/material ](#importing-angular-material)
 
 <a name="configuring-assets"></a>
 ### Configuring assets ###
@@ -330,3 +332,15 @@ menu(event: Event) {
     this._menu[action](event);
 }
 ```
+
+## Imports ##
+### Importing @angular/material ###
+
+In order to use the angular material, it's necessary to import as developer dependency at least these packages:
+
+```
+npm install @angular/material --save-dev
+npm install @angular/cdk --save-dev
+```
+
+ 

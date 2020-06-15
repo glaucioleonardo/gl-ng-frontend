@@ -40,6 +40,8 @@ import { GlSharedComponentButtonMenuSimpleComponent } from './button/menu/simple
 import { GlSharedComponentButtonMenuTooltipComponent } from './button/menu/tooltip/gl-shared-component-button-menu-tooltip.component';
 import { GlSharedComponentInputAutocompleteSimpleComponent } from './input/autocomplete/simple/gl-shared-component-input-autocomplete-simple.component';
 import { GlSharedComponentInputAutocompleteLabelComponent } from './input/autocomplete/label/gl-shared-component-input-autocomplete-label.component';
+import { GlSharedComponentFilterComponent } from './filter/gl-shared-component-filter.component';
+import { GlSharedComponentFilterContainerComponent } from './filter/container/gl-shared-component-filter-container.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { GlSharedComponentInputAutocompleteLabelComponent } from './input/autoco
     GlSharedComponentButtonMenuSimpleComponent,
     GlSharedComponentButtonMenuTooltipComponent,
     GlSharedComponentErrorMessageComponent,
+    GlSharedComponentFilterComponent,
+    GlSharedComponentFilterContainerComponent,
     GlSharedComponentFooterContainerComponent,
     GlSharedComponentFooterSimpleComponent,
     GlSharedComponentInputAutocompleteLabelComponent,
@@ -90,6 +94,8 @@ import { GlSharedComponentInputAutocompleteLabelComponent } from './input/autoco
     GlSharedComponentButtonMenuSimpleComponent,
     GlSharedComponentButtonMenuTooltipComponent,
     GlSharedComponentErrorMessageComponent,
+    GlSharedComponentFilterComponent,
+    GlSharedComponentFilterContainerComponent,
     GlSharedComponentFooterContainerComponent,
     GlSharedComponentFooterSimpleComponent,
     GlSharedComponentInputAutocompleteLabelComponent,
