@@ -17,6 +17,7 @@ $default-transition: all 0.2s ease-in-out;
     display: flex;
     flex-grow: 1;
     margin: 0 0.5px 0 0.5px;
+    margin: 0;
 
     .mat-form-field-wrapper {
       display: flex;
@@ -69,6 +70,10 @@ $default-transition: all 0.2s ease-in-out;
                 }
               }
 
+              &.dark {
+                background-color: $dark-gray-3-2;
+              }
+
               .item-content:-ms-input-placeholder {
                 color: $dark-gray !important;
               }
@@ -100,6 +105,16 @@ $default-transition: all 0.2s ease-in-out;
 
                 &:hover {
                   background-color: $black-translucid-2;
+                  transition: all 0.2s ease-in-out;
+                }
+                transition: all 0.2s ease-in-out;
+              }
+
+              &.dark {
+                background-color: $dark-gray-3-2;
+
+                &:hover {
+                  background-color: $dark-gray-3;
                   transition: all 0.2s ease-in-out;
                 }
                 transition: all 0.2s ease-in-out;
@@ -146,13 +161,13 @@ $default-transition: all 0.2s ease-in-out;
 
       &.read-only {
         .mat-input-element {
-          max-width: 100%;
+          max-width: 100% !important;
         }
       }
 
       &.no-data {
         .mat-input-element {
-          max-width: 100%;
+          max-width: 100% !important;
         }
       }
     }
@@ -194,11 +209,11 @@ $default-transition: all 0.2s ease-in-out;
       }
 
       &.mat-active, &.mat-selected {
-        background-color: $pink-translucid-6 !important;
+        background-color: $pink;
         transition: all 0.2s ease-in-out;
       }
       &:hover {
-        background-color: $pink-translucid-7 !important;
+        background-color: $dark-pink !important;
         transition: all 0.2s ease-in-out;
       }
     }
@@ -222,11 +237,40 @@ $default-transition: all 0.2s ease-in-out;
         }
 
         &.mat-active {
-          background-color: $pink-translucid-6;
+          background-color: $pink;
           transition: $default-transition;
         }
         &:hover {
-          background-color: $pink-translucid-7 !important;
+          background-color: $dark-pink !important;
+          transition: $default-transition;
+        }
+      }
+    }
+  }
+
+  .dark {
+    .mat-autocomplete-panel {
+      background-color:transparent;
+      transition: $default-transition;
+      @extend %native-scrollbar;
+
+      mat-option {
+        &:nth-child(2n + 1) {
+          background-color: $dark-gray-2-3;
+          transition: $default-transition;
+        }
+
+        &:nth-child(2n + 2) {
+          background-color: $dark-gray-2;
+          transition: $default-transition;
+        }
+
+        &.mat-active {
+          background-color: $pink;
+          transition: $default-transition;
+        }
+        &:hover {
+          background-color: $dark-pink !important;
           transition: $default-transition;
         }
       }

@@ -8,7 +8,7 @@
 :host::ng-deep {
   .menu-container {
     @include pattern-gradient-border(0.3em, top);
-    @include pattern-gradient-border(2em, bottom);
+    @include pattern-gradient-border-ie(0.7em, bottom, true);
     background: $dark-gray-3;
     position: fixed;
     background-size: cover;
@@ -269,7 +269,7 @@
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)  {
     .menu-container {
-      border-top: solid 0.2em $pink;
+      @include pattern-gradient-border-ie(0.2em);
       max-height: unset;
 
       .menu-nav-container {

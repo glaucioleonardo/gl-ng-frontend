@@ -1,5 +1,6 @@
 <ng-content></ng-content>
 <mat-form-field
+  (focusout)="overlay.position().global().dispose()"
   class="input-container custom-combobox {{ class }} {{ disabled ? 'read-only' : '' }}"
   floatLabel="never"
   appearance="none">
@@ -8,7 +9,7 @@
       #input
       type="text"
       aria-label="Number"
-      class="item-content {{ itemContentAlignment }} {{ class }} {{ listItems.length > 0 ? '' : 'no-data' }}"
+      class="item-content {{ itemContentAlignment }} {{ class }} {{ listItems.length > 0 ? '' : 'no-data' }} {{ disabled ? 'read-only' : '' }}"
       matInput
       [readonly]="disabled"
       [id]="id"
@@ -20,11 +21,12 @@
       (focusout)="validate()">
     <img
       #arrowDown
+      (click)="this.autocompleteInput.reset()"
       alt="Show items"
       class="arrow-down {{ class }} {{ disabled ? 'read-only' : '' }}"
       [src]="imageSource">
   </div>
-  <mat-autocomplete autoActiveFirstOption="true" #auto="matAutocomplete" (optionSelected)="input.blur()">
+  <mat-autocomplete autoActiveFirstOption="true" #auto="matAutocomplete" (optionSelected)="input.blur()" [mat-dialog-close]="overlay.position().global().dispose()">
     <mat-option *ngFor="let option of filteredOptions | async" [value]="option.text">
       {{option.text}}
     </mat-option>

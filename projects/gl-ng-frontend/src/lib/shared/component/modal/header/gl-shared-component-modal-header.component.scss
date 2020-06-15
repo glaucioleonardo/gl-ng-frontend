@@ -40,7 +40,7 @@
 
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
     .modal-title-container {
-      border-bottom: solid 1px $pink;
+      @include pattern-gradient-border-ie(1px, bottom, true);
     }
   }
 }

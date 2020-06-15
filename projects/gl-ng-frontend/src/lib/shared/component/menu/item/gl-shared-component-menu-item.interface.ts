@@ -4,5 +4,5 @@ export interface IMenuItem {
   alt: string;
   content: string;
   absolute?: boolean;
-  class?: string;
+  class?: 'translucid' | 'dark' | '';
 }

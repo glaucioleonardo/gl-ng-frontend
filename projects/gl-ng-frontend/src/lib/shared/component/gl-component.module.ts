@@ -7,6 +7,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OverlayModule } from '@angular/cdk/overlay';
+
 
 
 import { GlCoreModule } from '../../core/gl-core.module';
@@ -79,7 +81,8 @@ import { GlSharedComponentInputAutocompleteLabelComponent } from './input/autoco
     MatDialogModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    OverlayModule
   ],
   exports: [
     GlSharedComponentButtonImageSimpleComponent,

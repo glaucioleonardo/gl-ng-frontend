@@ -23,6 +23,10 @@
       background-color: $black-translucid-3;
     }
 
+    &.dark {
+      background-color: $dark-gray-3-4;
+    }
+
     &.left {
       text-align: left;
     }
@@ -47,8 +51,6 @@
     width: 0.3em;
     height: 0.3em;
 
-    &.light {
-      opacity: 0.5;
-    }
+    opacity: 0.5;
   }
 }

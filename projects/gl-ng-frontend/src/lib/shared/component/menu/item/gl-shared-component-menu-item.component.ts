@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./gl-shared-component-menu-item.component.scss']
 })
 export class GlSharedComponentMenuItemComponent {
-  @Input() itemClass: string;
+  @Input() itemClass: 'translucid' | 'dark' | '' = 'dark';
   @Input() absolute: boolean;
   @Input() menuLogo: string = '../assets/img/logo/glaucio-logo-colored.svg';
   @Input() src = this.menuLogo;

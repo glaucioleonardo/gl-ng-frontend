@@ -1,3 +1,4 @@
+import { Overlay } from '@angular/cdk/overlay';
 import { Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
@@ -42,7 +43,7 @@ export class GlSharedComponentInputAutocompleteSimpleComponent implements OnInit
   autocompleteInput = new FormControl();
   filteredOptions: Observable<IComboBoxData[]>;
 
-  constructor(private _service: GlSharedComponentInputAutocompleteSimpleService) {
+  constructor(private _service: GlSharedComponentInputAutocompleteSimpleService, public overlay: Overlay) {
     _service.autocompleteList$.subscribe(update => {
       if (this.listName === update.listName) {
         this.listItems = update.options;
@@ -86,8 +87,8 @@ export class GlSharedComponentInputAutocompleteSimpleComponent implements OnInit
 
   private setup() {
     this.filteredOptions = this.autocompleteInput.valueChanges.pipe(
-      // startWith(''),
-      startWith(this.value),
+      startWith(''),
+      // startWith(this.value),
       map(value => this.filter(value))
     );
 
@@ -138,6 +139,9 @@ export class GlSharedComponentInputAutocompleteSimpleComponent implements OnInit
 
     if (prevList != currList) { this.setup(); }
     if (prevValue != currValue) { this.setup(); }
+
+    this.overlay.position().global().dispose()
+
     // if (prevList != currList || prevValue != currValue) { this.setup(); }
   }
 }
