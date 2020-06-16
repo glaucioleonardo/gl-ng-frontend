@@ -1,5 +1,5 @@
 import { __decorate, __awaiter } from 'tslib';
-import { ElementRef, Directive, NgModule, Input, Component, EventEmitter, ViewChild, Output, ɵɵdefineInjectable, Injectable } from '@angular/core';
+import { ElementRef, Directive, NgModule, Input, Component, EventEmitter, ViewChild, Output, ɵɵdefineInjectable, Injectable, ɵɵinject } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,6 +14,8 @@ import { Overlay, OverlayModule } from '@angular/cdk/overlay';
 import { InputMask } from 'gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.service';
 import { Subject } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
+import { AttachmentParser, AttachmentValidate, AttachmentIcon } from 'gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.service';
+import { StringConverter } from 'gl-w-frontend/lib/es5/scripts/core/services/string/core-services-string.service';
 
 let CoreDirectivesAutofocusDirective = class CoreDirectivesAutofocusDirective {
     constructor(elementRef) {
@@ -1456,8 +1458,6 @@ let GlSharedComponentFilterComponent = class GlSharedComponentFilterComponent {
         this.clearFilter$ = new EventEmitter();
         service.applyPartialResult = this.applyPartialResult;
     }
-    ngOnInit() {
-    }
     ngAfterViewInit() {
         this.service.initialize(this.container.nativeElement, this.background.nativeElement, this.menuNavContainer.nativeElement, this.router);
     }
@@ -1548,11 +1548,151 @@ GlSharedComponentFilterContainerComponent = __decorate([
     })
 ], GlSharedComponentFilterContainerComponent);
 
+let GlSharedComponentButtonAttachmentService = class GlSharedComponentButtonAttachmentService {
+    constructor(_alert) {
+        this._alert = _alert;
+    }
+    initialize(input, currentValue, attachments, duplicatedDescription, invalidSizeDescription, invalidFormatDescription, attachmentIconSrc) {
+        this._input = input;
+        this._currentValue = currentValue;
+        this._attachments = attachments;
+        // Todo Block specif files
+        const accept = input.attributes.accept.value;
+        console.log(accept == null);
+        console.log(accept == undefined);
+        console.log(accept == 'undefined');
+        console.log(accept == '');
+        console.log(accept);
+        console.log(accept == 'accept="null"');
+        console.log(accept == 'accept="undefined"');
+        this._accepts = accept == null || accept == 'undefined' || accept === '' ? ['*'] : AttachmentParser.parseAcceptFiles(input.attributes.accept.value);
+        this._input.oninput = () => { this.onChange(duplicatedDescription, invalidSizeDescription, invalidFormatDescription, attachmentIconSrc); };
+    }
+    addAttachment() {
+        this._input.click();
+    }
+    onChange(duplicatedDescription, invalidSizeDescription, invalidFormatDescription, attachmentIconSrc) {
+        const isValid = AttachmentValidate.file(this._input, this._accepts);
+        const sizeValid = AttachmentValidate.fileSize(this._input);
+        const duplicated = AttachmentValidate.duplicated(this._input.files[0].name, this._attachments);
+        if (duplicated) {
+            this.clearInput();
+            this._alert.show(duplicatedDescription).then(() => { });
+            return;
+        }
+        else if (!sizeValid) {
+            const maxSize = AttachmentValidate.maxSize(this._input);
+            const maxSizeStr = StringConverter.formatNumber(maxSize);
+            this.clearInput();
+            this._alert.show(`${invalidSizeDescription}: ${maxSizeStr}KB`).then(() => { });
+            return;
+        }
+        else if (!isValid) {
+            this.clearInput();
+            this._alert.show(invalidFormatDescription).then(() => { });
+        }
+        else {
+            const file = {
+                name: this._input.files[0].name,
+                file: this._input.files[0],
+                icon: AttachmentIcon.get(this._input.files[0].name, attachmentIconSrc),
+                new: true,
+                url: '',
+                remove: false,
+                id: this._attachments.length
+            };
+            this.clearInput();
+            this._currentValue.emit(file);
+        }
+    }
+    clearInput() {
+        this._input.value = null;
+    }
+};
+GlSharedComponentButtonAttachmentService.ctorParameters = () => [
+    { type: GlSharedComponentModalAlertService }
+];
+GlSharedComponentButtonAttachmentService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentButtonAttachmentService_Factory() { return new GlSharedComponentButtonAttachmentService(ɵɵinject(GlSharedComponentModalAlertService)); }, token: GlSharedComponentButtonAttachmentService, providedIn: "root" });
+GlSharedComponentButtonAttachmentService = __decorate([
+    Injectable({
+        providedIn: 'root'
+    })
+], GlSharedComponentButtonAttachmentService);
+
+let GlSharedComponentButtonAttachmentComponent = class GlSharedComponentButtonAttachmentComponent {
+    constructor(service) {
+        this.service = service;
+        /**
+         * @param maxFileSize Size in KB.
+         * @param attachmentIconSrc (Optional) In case the source is not informed, the default path will be the one in gl-w-frontend package.
+         */
+        this.maxFileSize = '46080';
+        this.title = 'Click to add an attachment';
+        this.icon = '../assets/img/icon/attachment/attachment.svg';
+        this.description = 'Add attachment';
+        this.attachments = [];
+        this.duplicatedDescription = 'File duplicated. Please, add another file!';
+        this.invalidSizeDescription = 'Invalid file size. The max allowed size is';
+        this.invalidFormatDescription = 'Invalid file format!';
+        this.currentValue$ = new EventEmitter();
+    }
+    ngAfterViewInit() {
+        this.service.initialize(this.fileInput.nativeElement, this.currentValue$, this.attachments, this.duplicatedDescription, this.invalidSizeDescription, this.invalidFormatDescription, this.attachmentIconSrc);
+    }
+};
+GlSharedComponentButtonAttachmentComponent.ctorParameters = () => [
+    { type: GlSharedComponentButtonAttachmentService }
+];
+__decorate([
+    ViewChild('fileInput', { read: ElementRef, static: true })
+], GlSharedComponentButtonAttachmentComponent.prototype, "fileInput", void 0);
+__decorate([
+    Input()
+], GlSharedComponentButtonAttachmentComponent.prototype, "maxFileSize", void 0);
+__decorate([
+    Input()
+], GlSharedComponentButtonAttachmentComponent.prototype, "accept", void 0);
+__decorate([
+    Input()
+], GlSharedComponentButtonAttachmentComponent.prototype, "title", void 0);
+__decorate([
+    Input()
+], GlSharedComponentButtonAttachmentComponent.prototype, "icon", void 0);
+__decorate([
+    Input()
+], GlSharedComponentButtonAttachmentComponent.prototype, "attachmentIconSrc", void 0);
+__decorate([
+    Input()
+], GlSharedComponentButtonAttachmentComponent.prototype, "description", void 0);
+__decorate([
+    Input()
+], GlSharedComponentButtonAttachmentComponent.prototype, "attachments", void 0);
+__decorate([
+    Input()
+], GlSharedComponentButtonAttachmentComponent.prototype, "duplicatedDescription", void 0);
+__decorate([
+    Input()
+], GlSharedComponentButtonAttachmentComponent.prototype, "invalidSizeDescription", void 0);
+__decorate([
+    Input()
+], GlSharedComponentButtonAttachmentComponent.prototype, "invalidFormatDescription", void 0);
+__decorate([
+    Output()
+], GlSharedComponentButtonAttachmentComponent.prototype, "currentValue$", void 0);
+GlSharedComponentButtonAttachmentComponent = __decorate([
+    Component({
+        selector: 'gl-shared-component-button-attachment',
+        template: "<div class=\"attachment-container\" (click)=\"service.addAttachment()\">\n  <input\n    #fileInput\n    id=\"file-input\"\n    name=\"file-input\"\n    type=\"file\"\n    class=\"file-input\"\n    [accept]=\"accept\"\n    [title]=\"title\"\n    [attr.data-maxsize]=\"maxFileSize\"/>\n  <img class=\"attachment-icon\" [src]=\"icon\" alt=\"Attachment Icon\">\n  <span class=\"attachment-file-button\">{{ description }}</span>\n</div>\n",
+        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .attachment-container{position:relative;display:flex;padding:.4em .3em;border-radius:.5em;align-items:center;margin:.2em 0;cursor:pointer}:host::ng-deep .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:.2s ease-in-out}:host::ng-deep .attachment-container:hover{background:rgba(63,64,68,.9);transition:.2s ease-in-out}:host::ng-deep .attachment-container .file-input{font-size:1em;display:none}:host::ng-deep .attachment-container .attachment-icon{padding:0;height:2em;width:2em;margin:.5em .8em .5em .2em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .attachment-container .file{font-size:.8em;color:#1e1e1e;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;width:75%;padding:1em 0}:host::ng-deep .attachment-container .attachment-file-button{color:#fff;font-family:Montserrat,sans-serif;font-weight:400;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}"]
+    })
+], GlSharedComponentButtonAttachmentComponent);
+
 let GlComponentModule = class GlComponentModule {
 };
 GlComponentModule = __decorate([
     NgModule({
         declarations: [
+            GlSharedComponentButtonAttachmentComponent,
             GlSharedComponentButtonImageSimpleComponent,
             GlSharedComponentButtonImageTooltipComponent,
             GlSharedComponentButtonMenuSimpleComponent,
@@ -1626,6 +1766,7 @@ GlComponentModule = __decorate([
             GlSharedComponentTitleLabelButtonSimpleComponent,
             GlSharedComponentTitleLabelButtonContainerComponent,
             GlSharedComponentTitleLabelSimpleComponent,
+            GlSharedComponentButtonAttachmentComponent,
         ]
     })
 ], GlComponentModule);
@@ -1772,5 +1913,5 @@ GlSharedViewModule = __decorate([
  * Generated bundle index. Do not edit.
  */
 
-export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule };
+export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentButtonAttachmentComponent, GlSharedComponentButtonAttachmentService, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule };
 //# sourceMappingURL=gl-ng-frontend.js.map

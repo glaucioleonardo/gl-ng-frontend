@@ -1,5 +1,5 @@
 import { __decorate, __awaiter, __generator } from 'tslib';
-import { ElementRef, Directive, NgModule, Input, Component, EventEmitter, ViewChild, Output, ɵɵdefineInjectable, Injectable } from '@angular/core';
+import { ElementRef, Directive, NgModule, Input, Component, EventEmitter, ViewChild, Output, ɵɵdefineInjectable, Injectable, ɵɵinject } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,6 +14,8 @@ import { Overlay, OverlayModule } from '@angular/cdk/overlay';
 import { InputMask } from 'gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.service';
 import { Subject } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
+import { AttachmentParser, AttachmentValidate, AttachmentIcon } from 'gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.service';
+import { StringConverter } from 'gl-w-frontend/lib/es5/scripts/core/services/string/core-services-string.service';
 
 import * as ɵngcc0 from '@angular/core';
 import * as ɵngcc1 from '@angular/common';
@@ -225,7 +227,8 @@ function GlSharedComponentFilterComponent_span_19_Template(rf, ctx) { if (rf & 1
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate3("", ctx_r3.partialResultDescription, " ", ctx_r3.partialResult, " ", ctx_r3.partialResult > 1 ? ctx_r3.itemPluralDescription : ctx_r3.itemSingularDescription, " ");
 } }
-var _c8 = ["mainContainer"];
+var _c8 = ["fileInput"];
+var _c9 = ["mainContainer"];
 function GlSharedViewErrorMessageComponent_gl_shared_component_input_button_hyperlink_5_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelement(0, "gl-shared-component-input-button-hyperlink", 6);
 } if (rf & 2) {
@@ -2623,8 +2626,6 @@ var GlSharedComponentFilterComponent = /** @class */ (function () {
         this.clearFilter$ = new EventEmitter();
         service.applyPartialResult = this.applyPartialResult;
     }
-    GlSharedComponentFilterComponent.prototype.ngOnInit = function () {
-    };
     GlSharedComponentFilterComponent.prototype.ngAfterViewInit = function () {
         this.service.initialize(this.container.nativeElement, this.background.nativeElement, this.menuNavContainer.nativeElement, this.router);
     };
@@ -2844,6 +2845,200 @@ GlSharedComponentFilterContainerComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ 
     return GlSharedComponentFilterContainerComponent;
 }());
 
+var GlSharedComponentButtonAttachmentService = /** @class */ (function () {
+    function GlSharedComponentButtonAttachmentService(_alert) {
+        this._alert = _alert;
+    }
+    GlSharedComponentButtonAttachmentService.prototype.initialize = function (input, currentValue, attachments, duplicatedDescription, invalidSizeDescription, invalidFormatDescription, attachmentIconSrc) {
+        var _this = this;
+        this._input = input;
+        this._currentValue = currentValue;
+        this._attachments = attachments;
+        // Todo Block specif files
+        var accept = input.attributes.accept.value;
+        console.log(accept == null);
+        console.log(accept == undefined);
+        console.log(accept == 'undefined');
+        console.log(accept == '');
+        console.log(accept);
+        console.log(accept == 'accept="null"');
+        console.log(accept == 'accept="undefined"');
+        this._accepts = accept == null || accept == 'undefined' || accept === '' ? ['*'] : AttachmentParser.parseAcceptFiles(input.attributes.accept.value);
+        this._input.oninput = function () { _this.onChange(duplicatedDescription, invalidSizeDescription, invalidFormatDescription, attachmentIconSrc); };
+    };
+    GlSharedComponentButtonAttachmentService.prototype.addAttachment = function () {
+        this._input.click();
+    };
+    GlSharedComponentButtonAttachmentService.prototype.onChange = function (duplicatedDescription, invalidSizeDescription, invalidFormatDescription, attachmentIconSrc) {
+        var isValid = AttachmentValidate.file(this._input, this._accepts);
+        var sizeValid = AttachmentValidate.fileSize(this._input);
+        var duplicated = AttachmentValidate.duplicated(this._input.files[0].name, this._attachments);
+        if (duplicated) {
+            this.clearInput();
+            this._alert.show(duplicatedDescription).then(function () { });
+            return;
+        }
+        else if (!sizeValid) {
+            var maxSize = AttachmentValidate.maxSize(this._input);
+            var maxSizeStr = StringConverter.formatNumber(maxSize);
+            this.clearInput();
+            this._alert.show(invalidSizeDescription + ": " + maxSizeStr + "KB").then(function () { });
+            return;
+        }
+        else if (!isValid) {
+            this.clearInput();
+            this._alert.show(invalidFormatDescription).then(function () { });
+        }
+        else {
+            var file = {
+                name: this._input.files[0].name,
+                file: this._input.files[0],
+                icon: AttachmentIcon.get(this._input.files[0].name, attachmentIconSrc),
+                new: true,
+                url: '',
+                remove: false,
+                id: this._attachments.length
+            };
+            this.clearInput();
+            this._currentValue.emit(file);
+        }
+    };
+    GlSharedComponentButtonAttachmentService.prototype.clearInput = function () {
+        this._input.value = null;
+    };
+    GlSharedComponentButtonAttachmentService.ctorParameters = function () { return [
+        { type: GlSharedComponentModalAlertService }
+    ]; };
+    GlSharedComponentButtonAttachmentService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentButtonAttachmentService_Factory() { return new GlSharedComponentButtonAttachmentService(ɵɵinject(GlSharedComponentModalAlertService)); }, token: GlSharedComponentButtonAttachmentService, providedIn: "root" });
+GlSharedComponentButtonAttachmentService.ɵfac = function GlSharedComponentButtonAttachmentService_Factory(t) { return new (t || GlSharedComponentButtonAttachmentService)(ɵngcc0.ɵɵinject(GlSharedComponentModalAlertService)); };
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentButtonAttachmentService, [{
+        type: Injectable,
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return [{ type: GlSharedComponentModalAlertService }]; }, null); })();
+    return GlSharedComponentButtonAttachmentService;
+}());
+
+var GlSharedComponentButtonAttachmentComponent = /** @class */ (function () {
+    function GlSharedComponentButtonAttachmentComponent(service) {
+        this.service = service;
+        /**
+         * @param maxFileSize Size in KB.
+         * @param attachmentIconSrc (Optional) In case the source is not informed, the default path will be the one in gl-w-frontend package.
+         */
+        this.maxFileSize = '46080';
+        this.title = 'Click to add an attachment';
+        this.icon = '../assets/img/icon/attachment/attachment.svg';
+        this.description = 'Add attachment';
+        this.attachments = [];
+        this.duplicatedDescription = 'File duplicated. Please, add another file!';
+        this.invalidSizeDescription = 'Invalid file size. The max allowed size is';
+        this.invalidFormatDescription = 'Invalid file format!';
+        this.currentValue$ = new EventEmitter();
+    }
+    GlSharedComponentButtonAttachmentComponent.prototype.ngAfterViewInit = function () {
+        this.service.initialize(this.fileInput.nativeElement, this.currentValue$, this.attachments, this.duplicatedDescription, this.invalidSizeDescription, this.invalidFormatDescription, this.attachmentIconSrc);
+    };
+    GlSharedComponentButtonAttachmentComponent.ctorParameters = function () { return [
+        { type: GlSharedComponentButtonAttachmentService }
+    ]; };
+    __decorate([
+        ViewChild('fileInput', { read: ElementRef, static: true })
+    ], GlSharedComponentButtonAttachmentComponent.prototype, "fileInput", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentButtonAttachmentComponent.prototype, "maxFileSize", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentButtonAttachmentComponent.prototype, "accept", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentButtonAttachmentComponent.prototype, "title", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentButtonAttachmentComponent.prototype, "icon", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentButtonAttachmentComponent.prototype, "attachmentIconSrc", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentButtonAttachmentComponent.prototype, "description", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentButtonAttachmentComponent.prototype, "attachments", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentButtonAttachmentComponent.prototype, "duplicatedDescription", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentButtonAttachmentComponent.prototype, "invalidSizeDescription", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentButtonAttachmentComponent.prototype, "invalidFormatDescription", void 0);
+    __decorate([
+        Output()
+    ], GlSharedComponentButtonAttachmentComponent.prototype, "currentValue$", void 0);
+GlSharedComponentButtonAttachmentComponent.ɵfac = function GlSharedComponentButtonAttachmentComponent_Factory(t) { return new (t || GlSharedComponentButtonAttachmentComponent)(ɵngcc0.ɵɵdirectiveInject(GlSharedComponentButtonAttachmentService)); };
+GlSharedComponentButtonAttachmentComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentButtonAttachmentComponent, selectors: [["gl-shared-component-button-attachment"]], viewQuery: function GlSharedComponentButtonAttachmentComponent_Query(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵstaticViewQuery(_c8, true, ElementRef);
+    } if (rf & 2) {
+        var _t;
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.fileInput = _t.first);
+    } }, inputs: { maxFileSize: "maxFileSize", title: "title", icon: "icon", description: "description", attachments: "attachments", duplicatedDescription: "duplicatedDescription", invalidSizeDescription: "invalidSizeDescription", invalidFormatDescription: "invalidFormatDescription", accept: "accept", attachmentIconSrc: "attachmentIconSrc" }, outputs: { currentValue$: "currentValue$" }, decls: 6, vars: 5, consts: [[1, "attachment-container", 3, "click"], ["id", "file-input", "name", "file-input", "type", "file", 1, "file-input", 3, "accept", "title"], ["fileInput", ""], ["alt", "Attachment Icon", 1, "attachment-icon", 3, "src"], [1, "attachment-file-button"]], template: function GlSharedComponentButtonAttachmentComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelementStart(0, "div", 0);
+        ɵngcc0.ɵɵlistener("click", function GlSharedComponentButtonAttachmentComponent_Template_div_click_0_listener() { return ctx.service.addAttachment(); });
+        ɵngcc0.ɵɵelement(1, "input", 1, 2);
+        ɵngcc0.ɵɵelement(3, "img", 3);
+        ɵngcc0.ɵɵelementStart(4, "span", 4);
+        ɵngcc0.ɵɵtext(5);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("accept", ctx.accept)("title", ctx.title);
+        ɵngcc0.ɵɵattribute("data-maxsize", ctx.maxFileSize);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵproperty("src", ctx.icon, ɵngcc0.ɵɵsanitizeUrl);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵtextInterpolate(ctx.description);
+    } }, styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%]  .attachment-container{position:relative;display:flex;padding:.4em .3em;border-radius:.5em;align-items:center;margin:.2em 0;cursor:pointer}[_nghost-%COMP%]  .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:.2s ease-in-out}[_nghost-%COMP%]  .attachment-container:hover{background:rgba(63,64,68,.9);transition:.2s ease-in-out}[_nghost-%COMP%]  .attachment-container .file-input{font-size:1em;display:none}[_nghost-%COMP%]  .attachment-container .attachment-icon{padding:0;height:2em;width:2em;margin:.5em .8em .5em .2em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}[_nghost-%COMP%]  .attachment-container .file{font-size:.8em;color:#1e1e1e;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;width:75%;padding:1em 0}[_nghost-%COMP%]  .attachment-container .attachment-file-button{color:#fff;font-family:Montserrat,sans-serif;font-weight:400;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentButtonAttachmentComponent, [{
+        type: Component,
+        args: [{
+                selector: 'gl-shared-component-button-attachment',
+                template: "<div class=\"attachment-container\" (click)=\"service.addAttachment()\">\n  <input\n    #fileInput\n    id=\"file-input\"\n    name=\"file-input\"\n    type=\"file\"\n    class=\"file-input\"\n    [accept]=\"accept\"\n    [title]=\"title\"\n    [attr.data-maxsize]=\"maxFileSize\"/>\n  <img class=\"attachment-icon\" [src]=\"icon\" alt=\"Attachment Icon\">\n  <span class=\"attachment-file-button\">{{ description }}</span>\n</div>\n",
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .attachment-container{position:relative;display:flex;padding:.4em .3em;border-radius:.5em;align-items:center;margin:.2em 0;cursor:pointer}:host::ng-deep .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:.2s ease-in-out}:host::ng-deep .attachment-container:hover{background:rgba(63,64,68,.9);transition:.2s ease-in-out}:host::ng-deep .attachment-container .file-input{font-size:1em;display:none}:host::ng-deep .attachment-container .attachment-icon{padding:0;height:2em;width:2em;margin:.5em .8em .5em .2em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .attachment-container .file{font-size:.8em;color:#1e1e1e;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;width:75%;padding:1em 0}:host::ng-deep .attachment-container .attachment-file-button{color:#fff;font-family:Montserrat,sans-serif;font-weight:400;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}"]
+            }]
+    }], function () { return [{ type: GlSharedComponentButtonAttachmentService }]; }, { maxFileSize: [{
+            type: Input
+        }], title: [{
+            type: Input
+        }], icon: [{
+            type: Input
+        }], description: [{
+            type: Input
+        }], attachments: [{
+            type: Input
+        }], duplicatedDescription: [{
+            type: Input
+        }], invalidSizeDescription: [{
+            type: Input
+        }], invalidFormatDescription: [{
+            type: Input
+        }], currentValue$: [{
+            type: Output
+        }], fileInput: [{
+            type: ViewChild,
+            args: ['fileInput', { read: ElementRef, static: true }]
+        }], accept: [{
+            type: Input
+        }], attachmentIconSrc: [{
+            type: Input
+        }] }); })();
+    return GlSharedComponentButtonAttachmentComponent;
+}());
+
 var GlComponentModule = /** @class */ (function () {
     function GlComponentModule() {
     }
@@ -2861,7 +3056,8 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
             ReactiveFormsModule,
             OverlayModule
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(GlComponentModule, { declarations: function () { return [GlSharedComponentButtonImageSimpleComponent,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(GlComponentModule, { declarations: function () { return [GlSharedComponentButtonAttachmentComponent,
+        GlSharedComponentButtonImageSimpleComponent,
         GlSharedComponentButtonImageTooltipComponent,
         GlSharedComponentButtonMenuSimpleComponent,
         GlSharedComponentButtonMenuTooltipComponent,
@@ -2927,11 +3123,13 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         GlSharedComponentTitlePageComponent,
         GlSharedComponentTitleLabelButtonSimpleComponent,
         GlSharedComponentTitleLabelButtonContainerComponent,
-        GlSharedComponentTitleLabelSimpleComponent]; } }); })();
+        GlSharedComponentTitleLabelSimpleComponent,
+        GlSharedComponentButtonAttachmentComponent]; } }); })();
 /*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlComponentModule, [{
         type: NgModule,
         args: [{
                 declarations: [
+                    GlSharedComponentButtonAttachmentComponent,
                     GlSharedComponentButtonImageSimpleComponent,
                     GlSharedComponentButtonImageTooltipComponent,
                     GlSharedComponentButtonMenuSimpleComponent,
@@ -3005,6 +3203,7 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                     GlSharedComponentTitleLabelButtonSimpleComponent,
                     GlSharedComponentTitleLabelButtonContainerComponent,
                     GlSharedComponentTitleLabelSimpleComponent,
+                    GlSharedComponentButtonAttachmentComponent,
                 ]
             }]
     }], function () { return []; }, null); })();
@@ -3146,7 +3345,7 @@ var GlSharedViewErrorMessageComponent = /** @class */ (function () {
     ], GlSharedViewErrorMessageComponent.prototype, "footerLink", void 0);
 GlSharedViewErrorMessageComponent.ɵfac = function GlSharedViewErrorMessageComponent_Factory(t) { return new (t || GlSharedViewErrorMessageComponent)(); };
 GlSharedViewErrorMessageComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedViewErrorMessageComponent, selectors: [["gl-shared-view-error-message"]], viewQuery: function GlSharedViewErrorMessageComponent_Query(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵviewQuery(_c8, true);
+        ɵngcc0.ɵɵviewQuery(_c9, true);
     } if (rf & 2) {
         var _t;
         ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.mainContainer = _t.first);
@@ -3258,6 +3457,6 @@ GlSharedViewModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlShar
  * Generated bundle index. Do not edit.
  */
 
-export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule };
+export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentButtonAttachmentComponent, GlSharedComponentButtonAttachmentService, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule };
 
 //# sourceMappingURL=gl-ng-frontend.js.map

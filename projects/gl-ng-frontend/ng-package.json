@@ -7,7 +7,10 @@
       "src/assets/style"
     ],
     "umdModuleIds": {
-      "gl-w-frontend": "gl-w-frontend"
+      "gl-w-frontend": "gl-w-frontend",
+      "gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.service": "gl-w-frontend/core-input",
+      "gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.service": "gl-w-frontend/core-attachment",
+      "gl-w-frontend/lib/es5/scripts/core/services/string/core-services-string.service": "gl-w-frontend/core-string"
     }
   }
 }

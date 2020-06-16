@@ -26,8 +26,8 @@
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
-    "gl-sp-frontend": "file:gl-sp-frontend-1.0.4.tgz",
-    "gl-w-frontend": "^1.4.25",
+    "gl-sp-frontend": "^1.0.5",
+    "gl-w-frontend": "^1.4.26",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

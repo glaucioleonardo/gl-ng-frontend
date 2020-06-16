@@ -11,6 +11,9 @@ export * from './lib/shared/gl-shared.module';
 // region Component
 export * from './lib/shared/component/gl-component.module';
 
+export * from './lib/shared/component/button/attachment/gl-shared-component-button-attachment.component';
+export * from './lib/shared/component/button/attachment/gl-shared-component-button-attachment.service';
+
 export * from './lib/shared/component/button/image/simple/gl-shared-component-button-image-simple.component';
 export * from './lib/shared/component/button/image/tooltip/gl-shared-component-button-image-tooltip.component';
 export * from './lib/shared/component/button/image/tooltip/gl-shared-component-button-image-tooltip.interface';

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { GlSharedComponentFilterService } from './gl-shared-component-filter.service';
 
@@ -7,7 +7,7 @@ import { GlSharedComponentFilterService } from './gl-shared-component-filter.ser
   templateUrl: './gl-shared-component-filter.component.html',
   styleUrls: ['./gl-shared-component-filter.component.scss']
 })
-export class GlSharedComponentFilterComponent implements OnInit, AfterViewInit {
+export class GlSharedComponentFilterComponent implements AfterViewInit {
   @ViewChild('container', { static: true, read: ElementRef }) container: ElementRef<HTMLDivElement>;
   @ViewChild('background', { static: true, read: ElementRef }) background: ElementRef<HTMLDivElement>;
   @ViewChild('menuNavContainer') menuNavContainer: ElementRef<HTMLDivElement>;
@@ -37,18 +37,12 @@ export class GlSharedComponentFilterComponent implements OnInit, AfterViewInit {
     service.applyPartialResult = this.applyPartialResult;
   }
 
-  ngOnInit(): void {
-
-  }
-
   ngAfterViewInit(): void {
     this.service.initialize(
       this.container.nativeElement,
       this.background.nativeElement,
       this.menuNavContainer.nativeElement,
-      this.router,
-      // this._filter,
-      // this._core
+      this.router
     );
   }
 

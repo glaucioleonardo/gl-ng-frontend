@@ -42,9 +42,11 @@ import { GlSharedComponentInputAutocompleteSimpleComponent } from './input/autoc
 import { GlSharedComponentInputAutocompleteLabelComponent } from './input/autocomplete/label/gl-shared-component-input-autocomplete-label.component';
 import { GlSharedComponentFilterComponent } from './filter/gl-shared-component-filter.component';
 import { GlSharedComponentFilterContainerComponent } from './filter/container/gl-shared-component-filter-container.component';
+import { GlSharedComponentButtonAttachmentComponent } from './button/attachment/gl-shared-component-button-attachment.component';
 
 @NgModule({
   declarations: [
+    GlSharedComponentButtonAttachmentComponent,
     GlSharedComponentButtonImageSimpleComponent,
     GlSharedComponentButtonImageTooltipComponent,
     GlSharedComponentButtonMenuSimpleComponent,
@@ -118,6 +120,7 @@ import { GlSharedComponentFilterContainerComponent } from './filter/container/gl
     GlSharedComponentTitleLabelButtonSimpleComponent,
     GlSharedComponentTitleLabelButtonContainerComponent,
     GlSharedComponentTitleLabelSimpleComponent,
+    GlSharedComponentButtonAttachmentComponent,
   ]
 })
 export class GlComponentModule { }
