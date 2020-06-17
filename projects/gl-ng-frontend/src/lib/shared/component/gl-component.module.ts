@@ -44,10 +44,12 @@ import { GlSharedComponentButtonAttachmentFileComponent } from './button/attachm
 import { GlSharedComponentButtonAttachmentLinkComponent } from './button/attachment/link/gl-shared-component-button-attachment-link.component';
 import { GlSharedComponentModalAttachmentLinkComponent } from './modal/attachment/link/gl-shared-component-modal-attachment-link.component';
 import { GlSharedComponentAttachmentItemComponent } from './attachment/item/gl-shared-component-attachment-item.component';
+import { GlSharedComponentAttachmentImagePreviewComponent } from './attachment/image/preview/gl-shared-component-attachment-image-preview.component';
 
 @NgModule({
   declarations: [
     GlSharedComponentAttachmentItemComponent,
+    GlSharedComponentAttachmentImagePreviewComponent,
     GlSharedComponentButtonAttachmentFileComponent,
     GlSharedComponentButtonAttachmentLinkComponent,
     GlSharedComponentButtonImageSimpleComponent,
@@ -96,6 +98,7 @@ import { GlSharedComponentAttachmentItemComponent } from './attachment/item/gl-s
   ],
   exports: [
     GlSharedComponentAttachmentItemComponent,
+    GlSharedComponentAttachmentImagePreviewComponent,
     GlSharedComponentButtonImageSimpleComponent,
     GlSharedComponentButtonAttachmentLinkComponent,
     GlSharedComponentButtonImageTooltipComponent,

@@ -11,6 +11,10 @@ export * from './lib/shared/gl-shared.module';
 // region Component
 export * from './lib/shared/component/gl-component.module';
 
+export * from './lib/shared/component/attachment/image/preview/gl-shared-component-attachment-image-preview.component';
+export * from './lib/shared/component/attachment/image/preview/gl-shared-component-attachment-image-preview.service';
+export * from './lib/shared/component/attachment/image/preview/gl-shared-component-attachment-image-preview.interface';
+
 export * from './lib/shared/component/attachment/item/gl-shared-component-attachment-item.component';
 
 export * from './lib/shared/component/button/attachment/file/gl-shared-component-button-attachment-file.component';

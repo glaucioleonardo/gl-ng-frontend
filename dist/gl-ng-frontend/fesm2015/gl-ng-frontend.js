@@ -14,7 +14,7 @@ import { Overlay, OverlayModule } from '@angular/cdk/overlay';
 import { InputMask } from 'gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.service';
 import { Subject } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
-import { AttachmentParser, AttachmentValidate, AttachmentIcon } from 'gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.service';
+import { AttachmentParser, AttachmentValidate, AttachmentIcon, AttachmentConvert } from 'gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.service';
 import { StringConverter } from 'gl-w-frontend/lib/es5/scripts/core/services/string/core-services-string.service';
 
 import * as ɵngcc0 from '@angular/core';
@@ -289,7 +289,31 @@ function GlSharedComponentAttachmentItemComponent_img_5_Template(rf, ctx) { if (
     ɵngcc0.ɵɵlistener("click", function GlSharedComponentAttachmentItemComponent_img_5_Template_img_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r5); const ctx_r4 = ɵngcc0.ɵɵnextContext(); return ctx_r4.removeItem(ctx_r4.id); });
     ɵngcc0.ɵɵelementEnd();
 } }
-const _c9 = ["mainContainer"];
+const _c9 = ["fileInputImage"];
+const _c10 = ["userImage"];
+function GlSharedComponentAttachmentImagePreviewComponent_gl_shared_component_title_label_button_container_1_gl_shared_component_button_image_tooltip_2_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelement(0, "gl-shared-component-button-image-tooltip", 9);
+} if (rf & 2) {
+    const b_r4 = ctx.$implicit;
+    const ctx_r3 = ɵngcc0.ɵɵnextContext(2);
+    ɵngcc0.ɵɵproperty("src", b_r4.src)("alt", b_r4.alt)("id", b_r4.id)("show", b_r4.show && !ctx_r3.disabled || b_r4.id === "expand-container-2")("callback", b_r4.callback);
+} }
+function GlSharedComponentAttachmentImagePreviewComponent_gl_shared_component_title_label_button_container_1_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "gl-shared-component-title-label-button-container", 7);
+    ɵngcc0.ɵɵprojection(1);
+    ɵngcc0.ɵɵtemplate(2, GlSharedComponentAttachmentImagePreviewComponent_gl_shared_component_title_label_button_container_1_gl_shared_component_button_image_tooltip_2_Template, 1, 5, "gl-shared-component-button-image-tooltip", 8);
+    ɵngcc0.ɵɵprojection(3, 1);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵclassMap(ctx_r0.type);
+    ɵngcc0.ɵɵproperty("requiredFieldDescription", ctx_r0.requiredFieldDescription)("required", ctx_r0.required);
+    ɵngcc0.ɵɵadvance(2);
+    ɵngcc0.ɵɵproperty("ngForOf", ctx_r0.service.buttons);
+} }
+const _c11 = [[["top"]], [["bottom"]]];
+const _c12 = ["top", "bottom"];
+const _c13 = ["mainContainer"];
 function GlSharedViewErrorMessageComponent_gl_shared_component_input_button_hyperlink_5_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelement(0, "gl-shared-component-input-button-hyperlink", 6);
 } if (rf & 2) {
@@ -2502,6 +2526,207 @@ __decorate([
     Output()
 ], GlSharedComponentAttachmentItemComponent.prototype, "editCurrentItem", void 0);
 
+let GlSharedComponentAttachmentImagePreviewService = class GlSharedComponentAttachmentImagePreviewService {
+    constructor(_alert) {
+        this._alert = _alert;
+        this.image = '../assets/img/icon/image/image-template.svg';
+        this.retrieveUpdate = new Subject();
+        this.labelIcons = '../assets/img/icon/label/';
+        this.buttons = [
+            {
+                src: `${this.labelIcons}image.svg`,
+                id: 'add-image-from-label',
+                alt: 'Add image',
+                show: true, callback: () => {
+                    this.addImage();
+                }
+            },
+            {
+                src: `${this.labelIcons}remove-image.svg`,
+                id: 'clear-image-from-label',
+                alt: 'Remove image',
+                show: false,
+                callback: () => {
+                    this.removeImage();
+                }
+            },
+        ];
+        this.retrieveUpdate.subscribe(value => {
+            if (value != null && value.trim().length > 0) {
+                this.setImage(value);
+                this.updateButtons(true);
+            }
+            else {
+                this.setImage('');
+                this.updateButtons(false);
+            }
+        });
+    }
+    initialize(input, userImage, currentValue, invalidSizeDescription, invalidFormatDescription, addImageButtonDescription, removeImageButtonDescription) {
+        this._input = input;
+        this._accepts = AttachmentParser.parseAcceptFiles(input.attributes.accept.value);
+        this._userImage = userImage;
+        this._currentValue = currentValue;
+        setTimeout(() => {
+            this.buttons[0].alt = addImageButtonDescription;
+            this.buttons[1].alt = removeImageButtonDescription;
+        }, 100);
+        this._input.oninput = () => { this.onChange(invalidSizeDescription, invalidFormatDescription); };
+        this.removeImage(true);
+    }
+    onChange(invalidSizeDescription, invalidFormatDescription) {
+        const isValid = AttachmentValidate.file(this._input, this._accepts);
+        const sizeValid = AttachmentValidate.fileSize(this._input);
+        if (!sizeValid) {
+            const maxSize = AttachmentValidate.maxSize(this._input);
+            const maxSizeStr = StringConverter.formatNumber(maxSize);
+            this._alert.show(`${invalidSizeDescription} ${maxSizeStr}KB`).then(() => { });
+            return;
+        }
+        if (isValid) {
+            AttachmentConvert.textFileToUrlImage(this._input.files[0]).then((image) => {
+                this.setImage(image);
+                this._currentValue.emit({ value: image });
+                this.updateButtons(true);
+                this.clearInput();
+            });
+        }
+        else {
+            this.clearInput();
+            this._alert.show(invalidFormatDescription).then(() => { });
+        }
+    }
+    clearInput() {
+        this._input.value = null;
+    }
+    updateButtons(hasValue) {
+        this.buttons[0].show = !hasValue;
+        this.buttons[1].show = hasValue;
+    }
+    setImage(image) {
+        this._userImage.style.backgroundImage = `url("${image}")`;
+        this._userImage.classList.remove('required-fill');
+    }
+    addImage() {
+        this._input.click();
+    }
+    removeImage(init) {
+        this.clearInput();
+        this.setImage(this.image);
+        if (!init) {
+            this._currentValue.emit({ value: null });
+            this.updateButtons(false);
+        }
+    }
+};
+GlSharedComponentAttachmentImagePreviewService.ɵfac = function GlSharedComponentAttachmentImagePreviewService_Factory(t) { return new (t || GlSharedComponentAttachmentImagePreviewService)(ɵngcc0.ɵɵinject(GlSharedComponentModalAlertService)); };
+GlSharedComponentAttachmentImagePreviewService.ctorParameters = () => [
+    { type: GlSharedComponentModalAlertService }
+];
+GlSharedComponentAttachmentImagePreviewService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentAttachmentImagePreviewService_Factory() { return new GlSharedComponentAttachmentImagePreviewService(ɵɵinject(GlSharedComponentModalAlertService)); }, token: GlSharedComponentAttachmentImagePreviewService, providedIn: "root" });
+
+let GlSharedComponentAttachmentImagePreviewComponent = class GlSharedComponentAttachmentImagePreviewComponent {
+    constructor(service) {
+        this.service = service;
+        this.disabled = false;
+        this.required = false;
+        this.type = '';
+        this.showLabel = true;
+        this.requiredFieldDescription = 'Required field';
+        this.addImageDescription = 'Click to add an image';
+        this.maxImageSize = '10240';
+        this.invalidSizeDescription = 'Invalid file size. The max allowed size is';
+        this.invalidFormatDescription = 'Invalid file format!';
+        this.addImageButtonDescription = 'Add image';
+        this.removeImageButtonDescription = 'Remove image';
+        this.currentValue$ = new EventEmitter();
+    }
+    ngAfterViewInit() {
+        this.service.initialize(this.fileInputImage.nativeElement, this.userImage.nativeElement, this.currentValue$, this.invalidSizeDescription, this.invalidFormatDescription, this.addImageButtonDescription, this.removeImageButtonDescription);
+        this.updateImage();
+    }
+    updateImage() {
+        if (this.currentImage != null && this.currentImage.length > 0) {
+            this.service.setImage(this.currentImage);
+        }
+    }
+};
+GlSharedComponentAttachmentImagePreviewComponent.ɵfac = function GlSharedComponentAttachmentImagePreviewComponent_Factory(t) { return new (t || GlSharedComponentAttachmentImagePreviewComponent)(ɵngcc0.ɵɵdirectiveInject(GlSharedComponentAttachmentImagePreviewService)); };
+GlSharedComponentAttachmentImagePreviewComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentAttachmentImagePreviewComponent, selectors: [["gl-shared-component-attachment-image-preview"]], viewQuery: function GlSharedComponentAttachmentImagePreviewComponent_Query(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵstaticViewQuery(_c9, true, ElementRef);
+        ɵngcc0.ɵɵstaticViewQuery(_c10, true, ElementRef);
+    } if (rf & 2) {
+        var _t;
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.fileInputImage = _t.first);
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.userImage = _t.first);
+    } }, inputs: { disabled: "disabled", required: "required", type: "type", showLabel: "showLabel", requiredFieldDescription: "requiredFieldDescription", addImageDescription: "addImageDescription", maxImageSize: "maxImageSize", invalidSizeDescription: "invalidSizeDescription", invalidFormatDescription: "invalidFormatDescription", addImageButtonDescription: "addImageButtonDescription", removeImageButtonDescription: "removeImageButtonDescription", currentImage: "currentImage" }, outputs: { currentValue$: "currentValue$" }, ngContentSelectors: _c12, decls: 8, vars: 6, consts: [["labelValue", "Image", "labelAlignment", "left", 3, "class", "requiredFieldDescription", "required", 4, "ngIf"], [1, "attachment-container-content"], ["id", "file-input-image", "name", "file-input-image", "type", "file", "accept", "image/tif, image/tiff, image/x-png, image/jpeg, image/jpg, image/bmp, image/gif, image/svg+xml", "maxlength", "1", 1, "input-image", 3, "title"], ["fileInputImage", ""], [1, "image-container"], ["id", "image"], ["userImage", ""], ["labelValue", "Image", "labelAlignment", "left", 3, "requiredFieldDescription", "required"], [3, "src", "alt", "id", "show", "callback", 4, "ngFor", "ngForOf"], [3, "src", "alt", "id", "show", "callback"]], template: function GlSharedComponentAttachmentImagePreviewComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c11);
+        ɵngcc0.ɵɵelementStart(0, "div");
+        ɵngcc0.ɵɵtemplate(1, GlSharedComponentAttachmentImagePreviewComponent_gl_shared_component_title_label_button_container_1_Template, 4, 5, "gl-shared-component-title-label-button-container", 0);
+        ɵngcc0.ɵɵelementStart(2, "div", 1);
+        ɵngcc0.ɵɵelement(3, "input", 2, 3);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(5, "div", 4);
+        ɵngcc0.ɵɵelement(6, "div", 5, 6);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵclassMapInterpolate1("item-container ", ctx.type, "");
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.showLabel);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵproperty("title", ctx.addImageDescription);
+        ɵngcc0.ɵɵattribute("data-maxsize", ctx.maxImageSize);
+    } }, directives: [ɵngcc1.NgIf, GlSharedComponentTitleLabelButtonContainerComponent, ɵngcc1.NgForOf, GlSharedComponentButtonImageTooltipComponent], styles: ["[_nghost-%COMP%] {display:flex;flex-grow:1}[_nghost-%COMP%]  .item-container{background-color:#333437;display:flex;flex-grow:1;flex-direction:column}[_nghost-%COMP%]  .item-container gl-shared-component-title-label-button-container{flex-grow:0;position:relative}[_nghost-%COMP%]  .item-container gl-shared-component-title-label-button-container .required-fill-dot{right:1.5em}[_nghost-%COMP%]  .item-container.light{background-color:transparent;border-right:.5px solid rgba(255,255,255,.1)}[_nghost-%COMP%]  .item-container.dark{background-color:#161617}[_nghost-%COMP%]  .item-container.dark label{background-color:#111112}[_nghost-%COMP%]  .item-container .attachment-container-content .input-image{display:none}[_nghost-%COMP%]  .item-container .image-container{flex-grow:1;display:flex;justify-content:center;align-content:center}[_nghost-%COMP%]  .item-container .image-container #image{content:\"\";background-size:auto 100%;background-repeat:no-repeat;min-width:100%;min-height:30vh;border:0;background-position-x:center;background-position-y:center;flex-grow:1}"] });
+GlSharedComponentAttachmentImagePreviewComponent.ctorParameters = () => [
+    { type: GlSharedComponentAttachmentImagePreviewService }
+];
+__decorate([
+    ViewChild('fileInputImage', { read: ElementRef, static: true })
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "fileInputImage", void 0);
+__decorate([
+    ViewChild('userImage', { read: ElementRef, static: true })
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "userImage", void 0);
+__decorate([
+    Input()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "disabled", void 0);
+__decorate([
+    Input()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "currentImage", void 0);
+__decorate([
+    Input()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "required", void 0);
+__decorate([
+    Input()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "type", void 0);
+__decorate([
+    Input()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "showLabel", void 0);
+__decorate([
+    Input()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "requiredFieldDescription", void 0);
+__decorate([
+    Input()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "addImageDescription", void 0);
+__decorate([
+    Input()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "maxImageSize", void 0);
+__decorate([
+    Input()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "invalidSizeDescription", void 0);
+__decorate([
+    Input()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "invalidFormatDescription", void 0);
+__decorate([
+    Input()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "addImageButtonDescription", void 0);
+__decorate([
+    Input()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "removeImageButtonDescription", void 0);
+__decorate([
+    Output()
+], GlSharedComponentAttachmentImagePreviewComponent.prototype, "currentValue$", void 0);
+
 let GlComponentModule = class GlComponentModule {
 };
 GlComponentModule.ɵmod = ɵngcc0.ɵɵdefineNgModule({ type: GlComponentModule });
@@ -2564,7 +2789,7 @@ let GlSharedViewErrorMessageComponent = class GlSharedViewErrorMessageComponent 
 };
 GlSharedViewErrorMessageComponent.ɵfac = function GlSharedViewErrorMessageComponent_Factory(t) { return new (t || GlSharedViewErrorMessageComponent)(); };
 GlSharedViewErrorMessageComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedViewErrorMessageComponent, selectors: [["gl-shared-view-error-message"]], viewQuery: function GlSharedViewErrorMessageComponent_Query(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵviewQuery(_c9, true);
+        ɵngcc0.ɵɵviewQuery(_c13, true);
     } if (rf & 2) {
         var _t;
         ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.mainContainer = _t.first);
@@ -3471,7 +3696,54 @@ GlSharedViewModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlShar
         }], addingSmooth: [{
             type: Input
         }] }); })();
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentAttachmentImagePreviewService, [{
+        type: Injectable,
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return [{ type: GlSharedComponentModalAlertService }]; }, null); })();
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentAttachmentImagePreviewComponent, [{
+        type: Component,
+        args: [{
+                selector: 'gl-shared-component-attachment-image-preview',
+                template: "<div class=\"item-container {{ type }}\">\n  <gl-shared-component-title-label-button-container\n    *ngIf=\"showLabel\"\n    labelValue=\"Image\"\n    labelAlignment=\"left\"\n    [class]=\"type\"\n    [requiredFieldDescription]=\"requiredFieldDescription\"\n    [required]=\"required\">\n    <ng-content select=\"top\"></ng-content>\n    <gl-shared-component-button-image-tooltip\n      *ngFor=\"let b of service.buttons\"\n      [src]=\"b.src\"\n      [alt]=\"b.alt\"\n      [id]=\"b.id\"\n      [show]=\"b.show && !disabled || b.id === 'expand-container-2'\"\n      [callback]=\"b.callback\"\n    ></gl-shared-component-button-image-tooltip>\n    <ng-content select=\"bottom\"></ng-content>\n  </gl-shared-component-title-label-button-container>\n\n  <div class=\"attachment-container-content\">\n    <input\n      #fileInputImage\n      id=\"file-input-image\"\n      name=\"file-input-image\"\n      type=\"file\"\n      class=\"input-image\"\n      accept=\"image/tif, image/tiff, image/x-png, image/jpeg, image/jpg, image/bmp, image/gif, image/svg+xml\"\n      maxlength=\"1\"\n      [attr.data-maxsize]=\"maxImageSize\"\n      [title]=\"addImageDescription\"\n    />\n  </div>\n  <div class=\"image-container\">\n    <div #userImage id=\"image\"></div>\n  </div>\n</div>\n",
+                styles: [":host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .item-container{background-color:#333437;display:flex;flex-grow:1;flex-direction:column}:host::ng-deep .item-container gl-shared-component-title-label-button-container{flex-grow:0;position:relative}:host::ng-deep .item-container gl-shared-component-title-label-button-container .required-fill-dot{right:1.5em}:host::ng-deep .item-container.light{background-color:transparent;border-right:.5px solid rgba(255,255,255,.1)}:host::ng-deep .item-container.dark{background-color:#161617}:host::ng-deep .item-container.dark label{background-color:#111112}:host::ng-deep .item-container .attachment-container-content .input-image{display:none}:host::ng-deep .item-container .image-container{flex-grow:1;display:flex;justify-content:center;align-content:center}:host::ng-deep .item-container .image-container #image{content:\"\";background-size:auto 100%;background-repeat:no-repeat;min-width:100%;min-height:30vh;border:0;background-position-x:center;background-position-y:center;flex-grow:1}"]
+            }]
+    }], function () { return [{ type: GlSharedComponentAttachmentImagePreviewService }]; }, { disabled: [{
+            type: Input
+        }], required: [{
+            type: Input
+        }], type: [{
+            type: Input
+        }], showLabel: [{
+            type: Input
+        }], requiredFieldDescription: [{
+            type: Input
+        }], addImageDescription: [{
+            type: Input
+        }], maxImageSize: [{
+            type: Input
+        }], invalidSizeDescription: [{
+            type: Input
+        }], invalidFormatDescription: [{
+            type: Input
+        }], addImageButtonDescription: [{
+            type: Input
+        }], removeImageButtonDescription: [{
+            type: Input
+        }], currentValue$: [{
+            type: Output
+        }], fileInputImage: [{
+            type: ViewChild,
+            args: ['fileInputImage', { read: ElementRef, static: true }]
+        }], userImage: [{
+            type: ViewChild,
+            args: ['userImage', { read: ElementRef, static: true }]
+        }], currentImage: [{
+            type: Input
+        }] }); })();
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(GlComponentModule, { declarations: function () { return [GlSharedComponentAttachmentItemComponent,
+        GlSharedComponentAttachmentImagePreviewComponent,
         GlSharedComponentButtonAttachmentFileComponent,
         GlSharedComponentButtonAttachmentLinkComponent,
         GlSharedComponentButtonImageSimpleComponent,
@@ -3514,6 +3786,7 @@ GlSharedViewModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlShar
         FormsModule,
         ReactiveFormsModule,
         OverlayModule]; }, exports: function () { return [GlSharedComponentAttachmentItemComponent,
+        GlSharedComponentAttachmentImagePreviewComponent,
         GlSharedComponentButtonImageSimpleComponent,
         GlSharedComponentButtonAttachmentLinkComponent,
         GlSharedComponentButtonImageTooltipComponent,
@@ -3551,6 +3824,7 @@ GlSharedViewModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlShar
         args: [{
                 declarations: [
                     GlSharedComponentAttachmentItemComponent,
+                    GlSharedComponentAttachmentImagePreviewComponent,
                     GlSharedComponentButtonAttachmentFileComponent,
                     GlSharedComponentButtonAttachmentLinkComponent,
                     GlSharedComponentButtonImageSimpleComponent,
@@ -3599,6 +3873,7 @@ GlSharedViewModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlShar
                 ],
                 exports: [
                     GlSharedComponentAttachmentItemComponent,
+                    GlSharedComponentAttachmentImagePreviewComponent,
                     GlSharedComponentButtonImageSimpleComponent,
                     GlSharedComponentButtonAttachmentLinkComponent,
                     GlSharedComponentButtonImageTooltipComponent,
@@ -3739,6 +4014,6 @@ GlSharedViewModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlShar
  * Generated bundle index. Do not edit.
  */
 
-export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentAttachmentItemComponent, GlSharedComponentButtonAttachmentFileComponent, GlSharedComponentButtonAttachmentFileService, GlSharedComponentButtonAttachmentLinkComponent, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalAttachmentLinkComponent, GlSharedComponentModalAttachmentLinkService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule };
+export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentAttachmentImagePreviewComponent, GlSharedComponentAttachmentImagePreviewService, GlSharedComponentAttachmentItemComponent, GlSharedComponentButtonAttachmentFileComponent, GlSharedComponentButtonAttachmentFileService, GlSharedComponentButtonAttachmentLinkComponent, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalAttachmentLinkComponent, GlSharedComponentModalAttachmentLinkService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule };
 
 //# sourceMappingURL=gl-ng-frontend.js.map
