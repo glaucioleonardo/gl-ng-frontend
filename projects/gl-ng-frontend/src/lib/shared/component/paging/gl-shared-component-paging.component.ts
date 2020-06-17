@@ -56,9 +56,10 @@ export class GlSharedComponentPagingComponent implements AfterViewInit {
     this.onPageChange$.emit({ event, type });
   }
   setNumberOfItems(items: number) {
+    this.itemsPerPage.map(x => x.class = x.pageSize == items ? 'active' : '')
     this.setNumberOfItems$.emit(items);
   }
   setPage(page: number) {
-    this.setNumberOfItems$.emit(page);
+    this.setPage$.emit(page);
   }
 }
