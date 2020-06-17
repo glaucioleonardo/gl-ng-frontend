@@ -20,6 +20,7 @@ export * from './lib/shared/component/filter/gl-shared-component-filter.service'
 export * from './lib/shared/component/filter/container/gl-shared-component-filter-container.component';
 export * from './lib/shared/component/footer/simple/gl-shared-component-footer-simple.component';
 export * from './lib/shared/component/footer/container/gl-shared-component-footer-container.component';
+export * from './lib/shared/component/header/default/gl-shared-component-header-default.component';
 export * from './lib/shared/component/input/autocomplete/label/gl-shared-component-input-autocomplete-label.component';
 export * from './lib/shared/component/input/autocomplete/simple/gl-shared-component-input-autocomplete-simple.component';
 export * from './lib/shared/component/input/autocomplete/simple/gl-shared-component-input-autocomplete-simple.service';

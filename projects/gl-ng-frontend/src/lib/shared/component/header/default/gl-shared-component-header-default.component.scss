@@ -1,0 +1,66 @@
+@import "../../assets/style/colors/gray";
+@import "../../assets/style/colors/gradient";
+@import "../../assets/style/patterns/gradient";
+
+:host::ng-deep {
+  max-width: 100vw;
+
+  .header-container {
+    max-width: 100vw;
+    position: relative;
+    background-color: $dark-gray-3;
+
+    &.light, &.inverted {
+      background: $light-gradient-translucid;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+
+      &.dark, &.light {
+        @include pattern-gradient-border(0.2em);
+      }
+
+      &.inverted {
+        @include pattern-gradient-border(0.5px, bottom);
+      }
+
+      .default-logo {
+        margin: 0 0.5em 0 0;
+      }
+
+      .menu-bar {
+        height: 2.3em;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: flex-end;
+
+        .menu-buttons-container {
+          display: flex;
+          align-items: center;
+          margin: 0 0.5em 0 0.5em;
+        }
+      }
+    }
+
+    &.only-buttons {
+      background-color: transparent;
+    }
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+    .header-container {
+      .header-content {
+        &.dark, &.light {
+          @include pattern-gradient-border-ie(0.2em);
+        }
+
+        &.inverted {
+          @include pattern-gradient-border-ie(1px, bottom);
+        }
+      }
+    }
+  }
+}

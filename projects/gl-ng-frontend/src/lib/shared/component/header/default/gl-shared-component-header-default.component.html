@@ -1,0 +1,28 @@
+<section class="header-container {{ type }}" [attr.type]="type" (window:keydown)="onKeyDown($event)">
+  <div class="header-content {{ type }}" >
+    <div class="default-logo" *ngIf="type != 'only-buttons'">
+      <ng-content select="[slot=default-logo]"></ng-content>
+    </div>
+    <gl-shared-component-title-page
+      *ngIf="type != 'only-buttons' && !systemLogo"
+      [title]="title"
+      [subtitle]="subtitle"
+    ></gl-shared-component-title-page>
+    <ng-content class="system-logo" select="[slot=system-logo]"></ng-content>
+
+    <div class="menu-bar">
+      <div class="menu-buttons-container">
+        <ng-content></ng-content>
+        <gl-shared-component-button-menu-tooltip
+          *ngFor="let menuButton of menuButtons;"
+          [disabled]="(readonly && !menuButton.canReadonly) || (!readonly && menuButton.canReadonly && menuButton.readonly)"
+          [tooltip]="menuButton.alt"
+          [src]="menuButton.src"
+          [id]="menuButton.id"
+          [alt]="menuButton.alt"
+          [callback]="menuButton.callback">
+        </gl-shared-component-button-menu-tooltip>
+      </div>
+    </div>
+  </div>
+</section>

@@ -46,6 +46,7 @@ import { GlSharedComponentModalAttachmentLinkComponent } from './modal/attachmen
 import { GlSharedComponentAttachmentItemComponent } from './attachment/item/gl-shared-component-attachment-item.component';
 import { GlSharedComponentAttachmentImagePreviewComponent } from './attachment/image/preview/gl-shared-component-attachment-image-preview.component';
 import { GlSharedComponentPagingComponent } from './paging/gl-shared-component-paging.component';
+import { GlSharedComponentHeaderDefaultComponent } from './header/default/gl-shared-component-header-default.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { GlSharedComponentPagingComponent } from './paging/gl-shared-component-p
     GlSharedComponentFilterContainerComponent,
     GlSharedComponentFooterContainerComponent,
     GlSharedComponentFooterSimpleComponent,
+    GlSharedComponentHeaderDefaultComponent,
     GlSharedComponentInputAutocompleteLabelComponent,
     GlSharedComponentInputAutocompleteSimpleComponent,
     GlSharedComponentInputButtonSimpleComponent,
@@ -111,6 +113,7 @@ import { GlSharedComponentPagingComponent } from './paging/gl-shared-component-p
     GlSharedComponentFilterContainerComponent,
     GlSharedComponentFooterContainerComponent,
     GlSharedComponentFooterSimpleComponent,
+    GlSharedComponentHeaderDefaultComponent,
     GlSharedComponentInputAutocompleteLabelComponent,
     GlSharedComponentInputAutocompleteSimpleComponent,
     GlSharedComponentInputButtonSimpleComponent,
