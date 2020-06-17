@@ -46,12 +46,13 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "copy-assets": "copyfiles -a -u3 projects/gl-ng-frontend/src/assets/** dist/gl-ng-frontend",
-    "production": "ng build --prod && ngcc && npm run copy-assets",
+    "production": "ng build --prod && npm run copy-assets",
+    "production-ngcc": "ng build --prod && ngcc && npm run copy-assets",
     "postinstall": "ngcc",
     "glsp": "cd D:\\_local-development\\gl-sp-frontend && npm run production && cd D:\\_local-development\\gl-ng-frontend && npm pack D:\\_local-development\\gl-sp-frontend && npm i --prefer-offline ./gl-sp-frontend-1.0.4.tgz && shx rm -rf ./gl-sp-frontend-1.0.4.tgz",
     "glw": "cd D:\\_local-development\\gl-w-frontend && npm run production && cd D:\\_local-development\\gl-ng-frontend && npm pack D:\\_local-development\\gl-w-frontend && npm i --prefer-offline ./gl-w-frontend-1.4.25.tgz && shx rm -rf ./gl-w-frontend-1.4.25.tgz"
   },
-  "private": false,
+  "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.9",
     "@angular/cdk": "^9.2.4",

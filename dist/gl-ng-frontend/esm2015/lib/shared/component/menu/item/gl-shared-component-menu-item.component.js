@@ -1,34 +1,6 @@
 import { __decorate } from "tslib";
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import * as ɵngcc0 from '@angular/core';
-import * as ɵngcc1 from '@angular/router';
-import * as ɵngcc2 from '@angular/common';
-
-function GlSharedComponentMenuItemComponent_a_2_Template(rf, ctx) { if (rf & 1) {
-    const _r3 = ɵngcc0.ɵɵgetCurrentView();
-    ɵngcc0.ɵɵelementStart(0, "a", 4);
-    ɵngcc0.ɵɵlistener("click", function GlSharedComponentMenuItemComponent_a_2_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r3); const ctx_r2 = ɵngcc0.ɵɵnextContext(); return ctx_r2.openAbsoluteLink($event, ctx_r2.href); });
-    ɵngcc0.ɵɵtext(1);
-    ɵngcc0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r0 = ɵngcc0.ɵɵnextContext();
-    ɵngcc0.ɵɵproperty("href", "externalRedirect", ɵngcc0.ɵɵsanitizeUrl);
-    ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵtextInterpolate(ctx_r0.content);
-} }
-function GlSharedComponentMenuItemComponent_a_3_Template(rf, ctx) { if (rf & 1) {
-    const _r5 = ɵngcc0.ɵɵgetCurrentView();
-    ɵngcc0.ɵɵelementStart(0, "a", 5);
-    ɵngcc0.ɵɵlistener("click", function GlSharedComponentMenuItemComponent_a_3_Template_a_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r5); const ctx_r4 = ɵngcc0.ɵɵnextContext(); return ctx_r4.onClick.emit(null); });
-    ɵngcc0.ɵɵtext(1);
-    ɵngcc0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r1 = ɵngcc0.ɵɵnextContext();
-    ɵngcc0.ɵɵproperty("routerLink", ctx_r1.href);
-    ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵtextInterpolate(ctx_r1.content);
-} }
 let GlSharedComponentMenuItemComponent = class GlSharedComponentMenuItemComponent {
     constructor(_router) {
         this._router = _router;
@@ -46,22 +18,6 @@ let GlSharedComponentMenuItemComponent = class GlSharedComponentMenuItemComponen
         event.preventDefault();
     }
 };
-GlSharedComponentMenuItemComponent.ɵfac = function GlSharedComponentMenuItemComponent_Factory(t) { return new (t || GlSharedComponentMenuItemComponent)(ɵngcc0.ɵɵdirectiveInject(ɵngcc1.Router)); };
-GlSharedComponentMenuItemComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentMenuItemComponent, selectors: [["gl-shared-component-menu-item"]], inputs: { itemClass: "itemClass", menuLogo: "menuLogo", src: "src", absolute: "absolute", href: "href", alt: "alt", content: "content" }, outputs: { onClick: "onClick" }, decls: 4, vars: 7, consts: [["id", "{this.props.id}"], [1, "menu-icons", 3, "src", "alt"], [3, "href", "click", 4, "ngIf"], [3, "routerLink", "click", 4, "ngIf"], [3, "href", "click"], [3, "routerLink", "click"]], template: function GlSharedComponentMenuItemComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵelementStart(0, "li", 0);
-        ɵngcc0.ɵɵelement(1, "img", 1);
-        ɵngcc0.ɵɵtemplate(2, GlSharedComponentMenuItemComponent_a_2_Template, 2, 2, "a", 2);
-        ɵngcc0.ɵɵtemplate(3, GlSharedComponentMenuItemComponent_a_3_Template, 2, 2, "a", 3);
-        ɵngcc0.ɵɵelementEnd();
-    } if (rf & 2) {
-        ɵngcc0.ɵɵclassMapInterpolate1("menu-title ", ctx.itemClass, "");
-        ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("src", ctx.src, ɵngcc0.ɵɵsanitizeUrl)("alt", ctx.alt);
-        ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngIf", ctx.absolute);
-        ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngIf", !ctx.absolute);
-    } }, directives: [ɵngcc2.NgIf, ɵngcc1.RouterLinkWithHref], styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%]  .menu-title{background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);margin:0 0 .14em;position:relative;display:flex;align-items:center;border-left:.2em solid #d24077}[_nghost-%COMP%]  .menu-title .material-icons{color:rgba(255,255,255,.6);font-size:1.2em;padding:.3em;margin:0 .5em 0 .3em}[_nghost-%COMP%]  .menu-title .material-icons.expand{position:absolute;color:#fff;top:.5em;right:.3em}[_nghost-%COMP%]  .menu-title .menu-icons{padding:.2em .5em;height:1.5em;width:1.5em}[_nghost-%COMP%]  .menu-title a{text-decoration:none;font-size:.6em;font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;color:rgba(255,255,255,.4);padding:1.5em .7em;flex-grow:1}[_nghost-%COMP%]  .menu-title.dark{margin:0;border-bottom:1px solid #38393c;border-left:none}[_nghost-%COMP%]  .menu-title.dark:not(hover){background:#2c2c2f;transition:.3s ease-in-out}[_nghost-%COMP%]  .menu-title.dark:hover{background:#4b4d52;transition:.3s ease-in-out}[_nghost-%COMP%]  .menu-title.translucid{margin:0;border-bottom:.5px solid rgba(255,255,255,.1);border-left:none}[_nghost-%COMP%]  .menu-title.translucid:not(hover){background:rgba(255,255,255,.05);transition:.3s ease-in-out}[_nghost-%COMP%]  .menu-title.translucid:hover{background:rgba(255,255,255,.1);transition:.3s ease-in-out}"] });
 GlSharedComponentMenuItemComponent.ctorParameters = () => [
     { type: Router }
 ];
@@ -89,29 +45,12 @@ __decorate([
 __decorate([
     Output()
 ], GlSharedComponentMenuItemComponent.prototype, "onClick", void 0);
-/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentMenuItemComponent, [{
-        type: Component,
-        args: [{
-                selector: 'gl-shared-component-menu-item',
-                template: "<li id={this.props.id} class=\"menu-title {{ itemClass }}\">\n  <img [src]=\"src\" class=\"menu-icons\" [alt]=\"alt\"/>\n  <a\n    *ngIf=\"absolute\"\n    [href]=\"'externalRedirect'\"\n    (click)=\"openAbsoluteLink($event, href)\"\n  >{{ content }}</a>\n  <a *ngIf=\"!absolute\"\n     [routerLink]=\"href\"\n     (click)=\"onClick.emit(null)\"\n  >{{ content }}</a>\n</li>\n",
-                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .menu-title{background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);margin:0 0 .14em;position:relative;display:flex;align-items:center;border-left:.2em solid #d24077}:host::ng-deep .menu-title .material-icons{color:rgba(255,255,255,.6);font-size:1.2em;padding:.3em;margin:0 .5em 0 .3em}:host::ng-deep .menu-title .material-icons.expand{position:absolute;color:#fff;top:.5em;right:.3em}:host::ng-deep .menu-title .menu-icons{padding:.2em .5em;height:1.5em;width:1.5em}:host::ng-deep .menu-title a{text-decoration:none;font-size:.6em;font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;color:rgba(255,255,255,.4);padding:1.5em .7em;flex-grow:1}:host::ng-deep .menu-title.dark{margin:0;border-bottom:1px solid #38393c;border-left:none}:host::ng-deep .menu-title.dark:not(hover){background:#2c2c2f;transition:.3s ease-in-out}:host::ng-deep .menu-title.dark:hover{background:#4b4d52;transition:.3s ease-in-out}:host::ng-deep .menu-title.translucid{margin:0;border-bottom:.5px solid rgba(255,255,255,.1);border-left:none}:host::ng-deep .menu-title.translucid:not(hover){background:rgba(255,255,255,.05);transition:.3s ease-in-out}:host::ng-deep .menu-title.translucid:hover{background:rgba(255,255,255,.1);transition:.3s ease-in-out}"]
-            }]
-    }], function () { return [{ type: ɵngcc1.Router }]; }, { itemClass: [{
-            type: Input
-        }], menuLogo: [{
-            type: Input
-        }], src: [{
-            type: Input
-        }], onClick: [{
-            type: Output
-        }], absolute: [{
-            type: Input
-        }], href: [{
-            type: Input
-        }], alt: [{
-            type: Input
-        }], content: [{
-            type: Input
-        }] }); })();
+GlSharedComponentMenuItemComponent = __decorate([
+    Component({
+        selector: 'gl-shared-component-menu-item',
+        template: "<li id={this.props.id} class=\"menu-title {{ itemClass }}\">\n  <img [src]=\"src\" class=\"menu-icons\" [alt]=\"alt\"/>\n  <a\n    *ngIf=\"absolute\"\n    [href]=\"'externalRedirect'\"\n    (click)=\"openAbsoluteLink($event, href)\"\n  >{{ content }}</a>\n  <a *ngIf=\"!absolute\"\n     [routerLink]=\"href\"\n     (click)=\"onClick.emit(null)\"\n  >{{ content }}</a>\n</li>\n",
+        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .menu-title{background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);margin:0 0 .14em;position:relative;display:flex;align-items:center;border-left:.2em solid #d24077}:host::ng-deep .menu-title .material-icons{color:rgba(255,255,255,.6);font-size:1.2em;padding:.3em;margin:0 .5em 0 .3em}:host::ng-deep .menu-title .material-icons.expand{position:absolute;color:#fff;top:.5em;right:.3em}:host::ng-deep .menu-title .menu-icons{padding:.2em .5em;height:1.5em;width:1.5em}:host::ng-deep .menu-title a{text-decoration:none;font-size:.6em;font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;color:rgba(255,255,255,.4);padding:1.5em .7em;flex-grow:1}:host::ng-deep .menu-title.dark{margin:0;border-bottom:1px solid #38393c;border-left:none}:host::ng-deep .menu-title.dark:not(hover){background:#2c2c2f;transition:.3s ease-in-out}:host::ng-deep .menu-title.dark:hover{background:#4b4d52;transition:.3s ease-in-out}:host::ng-deep .menu-title.translucid{margin:0;border-bottom:.5px solid rgba(255,255,255,.1);border-left:none}:host::ng-deep .menu-title.translucid:not(hover){background:rgba(255,255,255,.05);transition:.3s ease-in-out}:host::ng-deep .menu-title.translucid:hover{background:rgba(255,255,255,.1);transition:.3s ease-in-out}"]
+    })
+], GlSharedComponentMenuItemComponent);
 export { GlSharedComponentMenuItemComponent };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1tZW51LWl0ZW0uY29tcG9uZW50LmpzIiwic291cmNlcyI6WyJuZzovZ2wtbmctZnJvbnRlbmQvbGliL3NoYXJlZC9jb21wb25lbnQvbWVudS9pdGVtL2dsLXNoYXJlZC1jb21wb25lbnQtbWVudS1pdGVtLmNvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxZQUFZLEVBQUUsS0FBSyxFQUFFLE1BQU0sRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUN2RSxPQUFPLEVBQUUsTUFBTSxFQUFFLE1BQU0saUJBQWlCLENBQUMsekNBQXpDLE9BQU8sRUFBRSxNQUFNLEVBQUUsTUFBTSxpQkFBaUIsQ0FBQztBQU96QyxJQUFhLGtDQUFrQztBQUEvQyxNQUFhLGtDQUFrQztJQVU3QyxZQUFvQixPQUFlLFlBQWY7O0dBQU8sR0FBUCxPQUFPLENBQVEsU0FUMUIsY0FBUyxHQUErQixNQUFNLENBQUMsU0FFL0MsYUFBUSxHQUFXO21DQUE2QyxDQUFDO0VBQ2pFLFFBQUcsR0FBRyxJQUFJLENBQUMsUUFBUSxDQUFDLFNBSW5CO1VBQU8sR0FBc0IsSUFBSSxZQUFZLEVBQUUsQ0FBQyxLQUVuQixDQUFDLEtBRXhDLGdCQUFnQixDQUFDLEtBQUssRUFBRSxJQUFJLFlBQzFCLElBQUksQ0FBQyxPQUFPLENBQUMsUUFBUSxDQUFDLENBQUMsbUJBQW1CLEVBQUUsRUFBRSxXQUFXLEVBQUUsSUFBSSxFQUFFLENBQUMsRUFBRSxjQUNsRSxrQkFBa0IsRUFBRSxJQUFJLFdBQ3pCLENBQUMsQ0FBQyxJQUFJLENBQUMsR0FBRyxFQUFFLGVBQ1gsT0FBTyxDQUFDLEdBQUcsQ0FBQztpQkFBa0IsSUFBSTtDQUFFLENBQUMsQ0FBQyxTQUN4QyxDQUFDLENBQUMsQ0FBQyxTQUVIO0VBQUssQ0FBQztDQUFjLEVBQUUsQ0FBQyxLQUN6QixDQUFDLEVBQ0YsQ0FBQTsyQ0FYOEIsTUFBTSxNQVQxQixpQkFBUjtJQUFLLEVBQUU7Ozs7Ozs7Ozs7Ozs7OztBQURWLElBQWEsa0NBQWtDLEdBQS9DLE1BQWEsa0NBQWtDO0FBQy9DLElBU0UsWUFBb0IsT0FBZTtBQUFJLFFBQW5CLFlBQU8sR0FBUCxPQUFPLENBQVE7QUFBQyxRQVQzQixjQUFTLEdBQStCLE1BQU0sQ0FBQztBQUMxRCxRQUNXLGFBQVEsR0FBVyw2Q0FBNkMsQ0FBQztBQUM1RSxRQUFXLFFBQUcsR0FBRyxJQUFJLENBQUMsUUFBUSxDQUFDO0FBQy9CLFFBR1ksWUFBTyxHQUFzQixJQUFJLFlBQVksRUFBRSxDQUFDO0FBQzVELElBQ3lDLENBQUM7QUFDMUMsSUFDRSxnQkFBZ0IsQ0FBQyxLQUFLLEVBQUUsSUFBSTtBQUM5QixRQUFJLElBQUksQ0FBQyxPQUFPLENBQUMsUUFBUSxDQUFDLENBQUMsbUJBQW1CLEVBQUUsRUFBRSxXQUFXLEVBQUUsSUFBSSxFQUFFLENBQUMsRUFBRTtBQUN4RSxZQUFNLGtCQUFrQixFQUFFLElBQUk7QUFDOUIsU0FBSyxDQUFDLENBQUMsSUFBSSxDQUFDLEdBQUcsRUFBRTtBQUNqQixZQUFNLE9BQU8sQ0FBQyxHQUFHLENBQUMsa0JBQWtCLElBQUksRUFBRSxDQUFDLENBQUM7QUFDNUMsUUFBSSxDQUFDLENBQUMsQ0FBQztBQUNQLFFBQ0ksS0FBSyxDQUFDLGNBQWMsRUFBRSxDQUFDO0FBQzNCLElBQUUsQ0FBQztBQUNILENBQUM7Ozs7Ozs7Ozs7Ozs7Ozs7NjlDQUFBO0FBQ0Q7QUFBNEQsWUFaN0IsTUFBTTtBQUFHOztBQVRoQixJQUFyQixLQUFLLEVBQUU7cUVBQWdELHJFQUEvQyxxRUFBK0M7QUFDL0MsQUFBQTtJQUFSLEtBQUssRUFBRSxYQUFjLElBQXJCLEtBQUssRUFBRTtvRUFBbUIscEVBQWxCLG9FQUFrQjtBQUNsQixBQUFBO0lBQVIsS0FBSyxFQUFFLFhBQWMsSUFBckIsS0FBSyxFQUFFO29FQUFrRSxwRUFBakUsb0VBQWlFO0FBQ2pFLEFBQUE7SUFBUixLQUFLLEVBQUUsWEFBYyxJQUFyQixLQUFLLEVBQUU7K0RBQXFCLC9EQUFwQiwrREFBb0I7QUFDcEIsQUFBQTtJQUFSLEtBQUssRUFBRSxYQUNILElBREosS0FBSyxFQUFFO2dFQUFNLGhFQUFMLGdFQUFLO0FBQ0wsQUFBQTtJQUFSLEtBQUssRUFBRSxYQUNGLElBREwsS0FBSyxFQUFFOytEQUFLLC9EQUFKLCtEQUFJO0FBQ0osQUFBQTtJQUFSLEtBQUssRUFBRSxYQUNOLElBREQsS0FBSyxFQUFFO21FQUFTLG5FQUFSLG1FQUFRO0FBQ1AsQUFBQTtJQUFULE1BQU0sRUFBRSxaQUFjLElBQXRCLE1BQU0sRUFBRTttRUFBaUQsbkVBQWhELG1FQUFnRDtBQVIvQyxrQ0FBa0Msb0JBTDlDLFNBQVMsQ0FBQyxVQUNULFFBQVEsRUFBRSxwRkFJQyxrQ0FBa0Msb0JBTDlDLFNBQVMsQ0FBQyxVQUNULFFBQVEsRUFBRTtzQkFBK0IsQUFBQTtPQUN6QyxBQUFBOzsrVEFBNkQsQUFBQTtrekNBRTlELENBQUMsSUFDVyxrQ0FBa0MsQ0FxQjlDLFdBckJZLGtDQUFrQyxyRkFEOUMsQ0FBQyxJQUNXLGtDQUFrQyxDQXFCOUM7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkFDRDs7QUE5QkEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgRXZlbnRFbWl0dGVyLCBJbnB1dCwgT3V0cHV0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBSb3V0ZXIgfSBmcm9tICdAYW5ndWxhci9yb3V0ZXInO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdnbC1zaGFyZWQtY29tcG9uZW50LW1lbnUtaXRlbScsXG4gIHRlbXBsYXRlVXJsOiAnLi9nbC1zaGFyZWQtY29tcG9uZW50LW1lbnUtaXRlbS5jb21wb25lbnQuaHRtbCcsXG4gIHN0eWxlVXJsczogWycuL2dsLXNoYXJlZC1jb21wb25lbnQtbWVudS1pdGVtLmNvbXBvbmVudC5zY3NzJ11cbn0pXG5leHBvcnQgY2xhc3MgR2xTaGFyZWRDb21wb25lbnRNZW51SXRlbUNvbXBvbmVudCB7XG4gIEBJbnB1dCgpIGl0ZW1DbGFzczogJ3RyYW5zbHVjaWQnIHwgJ2RhcmsnIHwgJycgPSAnZGFyayc7XG4gIEBJbnB1dCgpIGFic29sdXRlOiBib29sZWFuO1xuICBASW5wdXQoKSBtZW51TG9nbzogc3RyaW5nID0gJy4uL2Fzc2V0cy9pbWcvbG9nby9nbGF1Y2lvLWxvZ28tY29sb3JlZC5zdmcnO1xuICBASW5wdXQoKSBzcmMgPSB0aGlzLm1lbnVMb2dvO1xuICBASW5wdXQoKSBocmVmO1xuICBASW5wdXQoKSBhbHQ7XG4gIEBJbnB1dCgpIGNvbnRlbnQ7XG4gIEBPdXRwdXQoKSBvbkNsaWNrOiBFdmVudEVtaXR0ZXI8YW55PiA9IG5ldyBFdmVudEVtaXR0ZXIoKTtcblxuICBjb25zdHJ1Y3Rvcihwcml2YXRlIF9yb3V0ZXI6IFJvdXRlcikgeyB9XG5cbiAgb3BlbkFic29sdXRlTGluayhldmVudCwgaHJlZikge1xuICAgIHRoaXMuX3JvdXRlci5uYXZpZ2F0ZShbJy9leHRlcm5hbFJlZGlyZWN0JywgeyBleHRlcm5hbFVybDogaHJlZiB9XSwge1xuICAgICAgc2tpcExvY2F0aW9uQ2hhbmdlOiB0cnVlLFxuICAgIH0pLnRoZW4oKCkgPT4ge1xuICAgICAgY29uc29sZS5sb2coYFJlZGlyZWN0ZWQgdG86ICR7aHJlZn1gKTtcbiAgICB9KTtcblxuICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7XG4gIH1cbn1cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1tZW51LWl0ZW0uY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Im5nOi8vZ2wtbmctZnJvbnRlbmQvIiwic291cmNlcyI6WyJsaWIvc2hhcmVkL2NvbXBvbmVudC9tZW51L2l0ZW0vZ2wtc2hhcmVkLWNvbXBvbmVudC1tZW51LWl0ZW0uY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLFlBQVksRUFBRSxLQUFLLEVBQUUsTUFBTSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQ3ZFLE9BQU8sRUFBRSxNQUFNLEVBQUUsTUFBTSxpQkFBaUIsQ0FBQztBQU96QyxJQUFhLGtDQUFrQyxHQUEvQyxNQUFhLGtDQUFrQztJQVU3QyxZQUFvQixPQUFlO1FBQWYsWUFBTyxHQUFQLE9BQU8sQ0FBUTtRQVQxQixjQUFTLEdBQStCLE1BQU0sQ0FBQztRQUUvQyxhQUFRLEdBQVcsNkNBQTZDLENBQUM7UUFDakUsUUFBRyxHQUFHLElBQUksQ0FBQyxRQUFRLENBQUM7UUFJbkIsWUFBTyxHQUFzQixJQUFJLFlBQVksRUFBRSxDQUFDO0lBRW5CLENBQUM7SUFFeEMsZ0JBQWdCLENBQUMsS0FBSyxFQUFFLElBQUk7UUFDMUIsSUFBSSxDQUFDLE9BQU8sQ0FBQyxRQUFRLENBQUMsQ0FBQyxtQkFBbUIsRUFBRSxFQUFFLFdBQVcsRUFBRSxJQUFJLEVBQUUsQ0FBQyxFQUFFO1lBQ2xFLGtCQUFrQixFQUFFLElBQUk7U0FDekIsQ0FBQyxDQUFDLElBQUksQ0FBQyxHQUFHLEVBQUU7WUFDWCxPQUFPLENBQUMsR0FBRyxDQUFDLGtCQUFrQixJQUFJLEVBQUUsQ0FBQyxDQUFDO1FBQ3hDLENBQUMsQ0FBQyxDQUFDO1FBRUgsS0FBSyxDQUFDLGNBQWMsRUFBRSxDQUFDO0lBQ3pCLENBQUM7Q0FDRixDQUFBOztZQVg4QixNQUFNOztBQVQxQjtJQUFSLEtBQUssRUFBRTtxRUFBZ0Q7QUFDL0M7SUFBUixLQUFLLEVBQUU7b0VBQW1CO0FBQ2xCO0lBQVIsS0FBSyxFQUFFO29FQUFrRTtBQUNqRTtJQUFSLEtBQUssRUFBRTsrREFBcUI7QUFDcEI7SUFBUixLQUFLLEVBQUU7Z0VBQU07QUFDTDtJQUFSLEtBQUssRUFBRTsrREFBSztBQUNKO0lBQVIsS0FBSyxFQUFFO21FQUFTO0FBQ1A7SUFBVCxNQUFNLEVBQUU7bUVBQWlEO0FBUi9DLGtDQUFrQztJQUw5QyxTQUFTLENBQUM7UUFDVCxRQUFRLEVBQUUsK0JBQStCO1FBQ3pDLG9ZQUE2RDs7S0FFOUQsQ0FBQztHQUNXLGtDQUFrQyxDQXFCOUM7U0FyQlksa0NBQWtDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50LCBFdmVudEVtaXR0ZXIsIElucHV0LCBPdXRwdXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IFJvdXRlciB9IGZyb20gJ0Bhbmd1bGFyL3JvdXRlcic7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2dsLXNoYXJlZC1jb21wb25lbnQtbWVudS1pdGVtJyxcbiAgdGVtcGxhdGVVcmw6ICcuL2dsLXNoYXJlZC1jb21wb25lbnQtbWVudS1pdGVtLmNvbXBvbmVudC5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJy4vZ2wtc2hhcmVkLWNvbXBvbmVudC1tZW51LWl0ZW0uY29tcG9uZW50LnNjc3MnXVxufSlcbmV4cG9ydCBjbGFzcyBHbFNoYXJlZENvbXBvbmVudE1lbnVJdGVtQ29tcG9uZW50IHtcbiAgQElucHV0KCkgaXRlbUNsYXNzOiAndHJhbnNsdWNpZCcgfCAnZGFyaycgfCAnJyA9ICdkYXJrJztcbiAgQElucHV0KCkgYWJzb2x1dGU6IGJvb2xlYW47XG4gIEBJbnB1dCgpIG1lbnVMb2dvOiBzdHJpbmcgPSAnLi4vYXNzZXRzL2ltZy9sb2dvL2dsYXVjaW8tbG9nby1jb2xvcmVkLnN2Zyc7XG4gIEBJbnB1dCgpIHNyYyA9IHRoaXMubWVudUxvZ287XG4gIEBJbnB1dCgpIGhyZWY7XG4gIEBJbnB1dCgpIGFsdDtcbiAgQElucHV0KCkgY29udGVudDtcbiAgQE91dHB1dCgpIG9uQ2xpY2s6IEV2ZW50RW1pdHRlcjxhbnk+ID0gbmV3IEV2ZW50RW1pdHRlcigpO1xuXG4gIGNvbnN0cnVjdG9yKHByaXZhdGUgX3JvdXRlcjogUm91dGVyKSB7IH1cblxuICBvcGVuQWJzb2x1dGVMaW5rKGV2ZW50LCBocmVmKSB7XG4gICAgdGhpcy5fcm91dGVyLm5hdmlnYXRlKFsnL2V4dGVybmFsUmVkaXJlY3QnLCB7IGV4dGVybmFsVXJsOiBocmVmIH1dLCB7XG4gICAgICBza2lwTG9jYXRpb25DaGFuZ2U6IHRydWUsXG4gICAgfSkudGhlbigoKSA9PiB7XG4gICAgICBjb25zb2xlLmxvZyhgUmVkaXJlY3RlZCB0bzogJHtocmVmfWApO1xuICAgIH0pO1xuXG4gICAgZXZlbnQucHJldmVudERlZmF1bHQoKTtcbiAgfVxufVxuIl19

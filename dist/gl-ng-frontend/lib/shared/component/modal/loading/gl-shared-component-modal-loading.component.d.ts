@@ -1,6 +1,5 @@
 import { AfterViewChecked, ElementRef } from '@angular/core';
 import { GlSharedComponentModalLoadingService } from './gl-shared-component-modal-loading.service';
-import * as ɵngcc0 from '@angular/core';
 export declare class GlSharedComponentModalLoadingComponent implements AfterViewChecked {
     service: GlSharedComponentModalLoadingService;
     mainLoading: ElementRef<HTMLDivElement>;
@@ -8,8 +7,4 @@ export declare class GlSharedComponentModalLoadingComponent implements AfterView
     loaded: boolean;
     constructor(service: GlSharedComponentModalLoadingService);
     ngAfterViewChecked(): void;
-    static ɵfac: ɵngcc0.ɵɵFactoryDef<GlSharedComponentModalLoadingComponent, never>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDefWithMeta<GlSharedComponentModalLoadingComponent, "gl-shared-component-modal-loading", never, { "defaultMessage": "defaultMessage"; }, {}, never, ["*"]>;
 }
-
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1tb2RhbC1sb2FkaW5nLmNvbXBvbmVudC5kLnRzIiwic291cmNlcyI6WyJnbC1zaGFyZWQtY29tcG9uZW50LW1vZGFsLWxvYWRpbmcuY29tcG9uZW50LmQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTs7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7O0FBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBBZnRlclZpZXdDaGVja2VkLCBFbGVtZW50UmVmIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcbmltcG9ydCB7IEdsU2hhcmVkQ29tcG9uZW50TW9kYWxMb2FkaW5nU2VydmljZSB9IGZyb20gJy4vZ2wtc2hhcmVkLWNvbXBvbmVudC1tb2RhbC1sb2FkaW5nLnNlcnZpY2UnO1xyXG5leHBvcnQgZGVjbGFyZSBjbGFzcyBHbFNoYXJlZENvbXBvbmVudE1vZGFsTG9hZGluZ0NvbXBvbmVudCBpbXBsZW1lbnRzIEFmdGVyVmlld0NoZWNrZWQge1xyXG4gICAgc2VydmljZTogR2xTaGFyZWRDb21wb25lbnRNb2RhbExvYWRpbmdTZXJ2aWNlO1xyXG4gICAgbWFpbkxvYWRpbmc6IEVsZW1lbnRSZWY8SFRNTERpdkVsZW1lbnQ+O1xyXG4gICAgZGVmYXVsdE1lc3NhZ2U6IHN0cmluZztcclxuICAgIGxvYWRlZDogYm9vbGVhbjtcclxuICAgIGNvbnN0cnVjdG9yKHNlcnZpY2U6IEdsU2hhcmVkQ29tcG9uZW50TW9kYWxMb2FkaW5nU2VydmljZSk7XHJcbiAgICBuZ0FmdGVyVmlld0NoZWNrZWQoKTogdm9pZDtcclxufVxyXG4iXX0=

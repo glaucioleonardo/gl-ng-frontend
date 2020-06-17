@@ -1,14 +1,84 @@
 # gl-ng-frontend
+### What is this repository for? ###
+This package (**g**laucio**l**eonardo-a**n****g**ular-**frontend**) is a common code and components designed for Angular 2+ to be used among web front-end development.<br>
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+This library has been generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+
+The full documentation is still under progress, however the components working perfectly (... or not!) 
 
 ## Table of contents ##
 1. Configurations:<br>
    1.1. [ Configuring assets ](#configuring-assets)<br>
    1.2. [ Configuring external links / urls from anchors ](#external-links-anchors)<br>
-   1.3. [ Configuring side menu ](#configuraing-side-menu)
+   1.3. [ Configuring side menu ](#configuraing-side-menu)<br>
+
 2. Imports<br>
-   2.1. [ Importing @angular/material ](#importing-angular-material)
+   2.1. [ Importing @angular/material ](#importing-angular-material)<br>
+
+3. Components<br>
+    3.1. [Attachment](#compoenent-attachment)<br>
+      3.1.1. [Image](#compoenent-attachment-image)<br>
+      3.1.2. [Image](#compoenent-attachment-item)<br>
+    
+    3.2. Button (documentation under progress)<br>
+      3.2.1. Attachment<br>
+      3.2.2. Image<br>
+      3.2.3. Menu<br>
+    
+    3.3. Error message (documentation under progress)<br>
+    
+    3.4. Filter (documentation under progress)<br>
+      3.4.1. Container<br>
+    
+    3.5. Footer (documentation under progress)<br>
+      3.5.1. Container<br>
+      3.5.2. Simple<br>
+
+    3.6. Header (documentation under progress)<br>
+      3.6.1. Default<br>
+
+    3.7. Input (documentation under progress)<br>
+      3.7.1. Autocomplete<br>
+        3.7.1.1. Label<br>
+        3.7.1.2. Simple<br>
+      3.7.2. Button<br>
+        3.7.2.1. Hyperlink<br>
+        3.7.2.2. Simple<br>
+      3.7.3. Option / Radio<br>
+        3.7.3.1. Simple<br>
+      3.7.4. Text<br>
+        3.7.4.1. Label<br>
+        3.7.4.2. Simple<br>
+      3.7.5. Text area<br>
+        3.7.4.1. Label<br>
+        3.7.4.2. Simple<br>
+    
+    3.8. Logo / Image (documentation under progress)<br>
+      3.8.1. Square<br>
+
+    3.9. Menu (documentation under progress)<br>
+      3.9.1. Main<br>
+      3.9.2. Background<br>
+      3.9.3. Item<br>
+
+    3.10. Modal (documentation under progress)<br>
+      3.10.1. Alert<br>
+      3.10.2. Attachment Link<br>
+      3.10.3. Header (component)<br>
+      3.10.4. Loading<br>
+
+    3.11. Paging (documentation under progress)<br>
+
+    3.12. Title (documentation under progress)<br>
+      3.12.1. Label<br>
+        3.12.1.1. Button<br>
+          3.12.1.1.1. Container<br>
+          3.12.1.1.2. Simple<br>
+        3.12.1.2. Simple<br>
+      3.12.2. Page<br>
+
+4. Views<br>
+    4.1. Error message (documentation under progress)
 
 <a name="configuring-assets"></a>
 ### Configuring assets ###
@@ -344,3 +414,161 @@ npm install @angular/cdk --save-dev
 ```
 
  
+
+<a name="compoenent"></a>
+## Components ##
+
+<a name="compoenent-attachment"></a>
+### Attachment ###
+
+<a name="compoenent-attachment-image"></a>
+#### Image ####
+
+<details>
+
+Params:<br>
+`gl-shared-component-attachment-image-preview.component.ts`
+```
+@Input() disabled = false;
+@Input() currentImage;
+@Input() required = false;
+@Input() type: 'light' | 'dark' | '' = '';
+@Input() showLabel: boolean = true;
+@Input() requiredFieldDescription: string = 'Required field';
+@Input() addImageDescription: string = 'Click to add an image';
+@Input() maxImageSize: string = '10240'; // in KB
+@Input() invalidSizeDescription: string = 'Invalid file size. The max allowed size is';
+@Input() invalidFormatDescription: string = 'Invalid file format!';
+@Input() addImageButtonDescription: string = 'Add image';
+@Input() removeImageButtonDescription: string = 'Remove image';
+
+@Output() currentValue$ = new EventEmitter();
+```
+
+Define the component in HTML template<br>
+`views-main-form.component.html`
+```
+
+<gl-shared-component-attachment-image-preview
+    type="light"
+    [required]="true"
+    [showLabel]="false"
+    requiredFieldDescription="Campo obrigatório"
+    addImageDescription="Adicionar imagem"
+    maxImageSize="10240"
+    invalidSizeDescription="Tamanho do arquivo inválido. Tamanho máximo permitido"
+    invalidFormatDescription="Este formato de arquivo é inválido"
+    addImageButtonDescription="Adicionar imagem"
+    removeImageButtonDescription="Remover imagem"
+></gl-shared-component-attachment-image-preview>
+```
+
+How to set an image (base64 string):<br>
+`views-main-form.service.ts`
+```
+import { GlSharedComponentAttachmentImagePreviewService } from 'gl-ng-frontend';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ViewsMainFormService {
+
+    consttructor(private _image: GlSharedComponentAttachmentImagePreviewService) { }
+    
+    setImageExample() {
+        const imageData: string = 'base64...'
+        this._image.retrieveUpdate.next(imageData);
+    }
+}
+```
+</details>
+
+<a name="compoenent-attachment-item"></a>
+#### Item ####
+
+<details>
+
+Params:<br>
+`gl-shared-component-attachment-item.component.ts`
+```
+@Input() disabled = false;
+@Input() attachmentUrl: string;
+@Input() fileName: string;
+@Input() fileIcon: string;
+@Input() id: number;
+@Input() type: string;
+@Input() addingSmooth: boolean;
+
+@Output('onClick') onItemClick: EventEmitter<void> = new EventEmitter();
+@Output() removeCurrentItem: EventEmitter<{ id: number }> = new EventEmitter();
+@Output() editCurrentItem: EventEmitter<{ id: number }> = new EventEmitter();
+
+constructor(public service: ViewsMainFormService) { }
+```
+
+Define the component in HTML template (using the *ngFor directive)<br>
+`views-main-form.component.html`
+```
+<div class="attachment-main-container">
+  <div #attachmentLinksContainer class="attachment-link-container">
+    <gl-shared-component-attachment-item
+      *ngFor="let attachmentFile of service.attachmentFiles"
+      [disabled]="disabled"
+      [fileIcon]="attachmentFile.icon"
+      [id]="attachmentFile.id"
+      [attachmentUrl]="attachmentFile.url"
+      (onClick)="onAttachmentClick(attachmentFile.id)"
+      [fileName]="attachmentFile.name"
+      (removeCurrentItem)="removeAttachmentFile($event)"
+    ></gl-shared-component-attachment-item>
+  </div>
+</div>
+```
+
+How to set an image (base64 string):<br>
+`views-main-form.service.ts`
+```
+import { GlSharedComponentAttachmentImagePreviewService } from 'gl-ng-frontend';
+
+interface IAttachmentData {
+  id: number;
+  new: boolean;
+  remove: boolean;
+  name: string;
+  file?: File;
+  url?: string;
+  icon?: string;
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ViewsMainFormService {
+
+    attachmentFiles: : IAttachmentData[];
+
+    consttructor(private _server: ...) { }
+
+    async setAttachmentItemExmaple() {
+        const attachmentList: IAttachmentData[] = await this.server.retrieveData();
+        
+        for (const attachment of attachmentList) {
+          const host = attachment.__metadata.uri.split('/s/')[0]; // server implementation depending on your specific usage
+          const serverRelativeUrl = attachment.ServerRelativeUrl; // server implementation depending on your specific usage
+          const url = encodeURI(host + serverRelativeUrl); // server implementation depending on your specific usage
+    
+          const file: IAttachmentData = {
+            id: attachmentList.length,
+            new: false,
+            remove: false,
+            name: attachment.FileName,
+            url,
+            icon: AttachmentIcon.get(attachment.FileName)
+          };
+    
+          this.attachmentFiles.push(file);
+        }
+    }
+}
+```
+</details>

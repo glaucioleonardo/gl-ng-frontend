@@ -1,10 +1,5 @@
 import { GlSharedComponentModalAttachmentLinkService } from '../../../modal/attachment/link/gl-shared-component-modal-attachment-link.service';
-import * as ɵngcc0 from '@angular/core';
 export declare class GlSharedComponentButtonAttachmentLinkComponent {
     service: GlSharedComponentModalAttachmentLinkService;
     constructor(service: GlSharedComponentModalAttachmentLinkService);
-    static ɵfac: ɵngcc0.ɵɵFactoryDef<GlSharedComponentButtonAttachmentLinkComponent, never>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDefWithMeta<GlSharedComponentButtonAttachmentLinkComponent, "gl-shared-component-button-attachment-link", never, {}, {}, never, never>;
 }
-
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1idXR0b24tYXR0YWNobWVudC1saW5rLmNvbXBvbmVudC5kLnRzIiwic291cmNlcyI6WyJnbC1zaGFyZWQtY29tcG9uZW50LWJ1dHRvbi1hdHRhY2htZW50LWxpbmsuY29tcG9uZW50LmQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0FBQ0E7QUFDQTtBQUNBOzs7QUFDQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEdsU2hhcmVkQ29tcG9uZW50TW9kYWxBdHRhY2htZW50TGlua1NlcnZpY2UgfSBmcm9tICcuLi8uLi8uLi9tb2RhbC9hdHRhY2htZW50L2xpbmsvZ2wtc2hhcmVkLWNvbXBvbmVudC1tb2RhbC1hdHRhY2htZW50LWxpbmsuc2VydmljZSc7XHJcbmV4cG9ydCBkZWNsYXJlIGNsYXNzIEdsU2hhcmVkQ29tcG9uZW50QnV0dG9uQXR0YWNobWVudExpbmtDb21wb25lbnQge1xyXG4gICAgc2VydmljZTogR2xTaGFyZWRDb21wb25lbnRNb2RhbEF0dGFjaG1lbnRMaW5rU2VydmljZTtcclxuICAgIGNvbnN0cnVjdG9yKHNlcnZpY2U6IEdsU2hhcmVkQ29tcG9uZW50TW9kYWxBdHRhY2htZW50TGlua1NlcnZpY2UpO1xyXG59XHJcbiJdfQ==
