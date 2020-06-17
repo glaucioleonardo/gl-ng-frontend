@@ -9,8 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OverlayModule } from '@angular/cdk/overlay';
 
-
-
 import { GlCoreModule } from '../../core/gl-core.module';
 
 import { GlSharedComponentInputButtonSimpleComponent } from './input/button/simple/gl-shared-component-input-button-simple.component';
@@ -45,9 +43,11 @@ import { GlSharedComponentFilterContainerComponent } from './filter/container/gl
 import { GlSharedComponentButtonAttachmentFileComponent } from './button/attachment/file/gl-shared-component-button-attachment-file.component';
 import { GlSharedComponentButtonAttachmentLinkComponent } from './button/attachment/link/gl-shared-component-button-attachment-link.component';
 import { GlSharedComponentModalAttachmentLinkComponent } from './modal/attachment/link/gl-shared-component-modal-attachment-link.component';
+import { GlSharedComponentAttachmentItemComponent } from './attachment/item/gl-shared-component-attachment-item.component';
 
 @NgModule({
   declarations: [
+    GlSharedComponentAttachmentItemComponent,
     GlSharedComponentButtonAttachmentFileComponent,
     GlSharedComponentButtonAttachmentLinkComponent,
     GlSharedComponentButtonImageSimpleComponent,
@@ -95,6 +95,7 @@ import { GlSharedComponentModalAttachmentLinkComponent } from './modal/attachmen
     OverlayModule
   ],
   exports: [
+    GlSharedComponentAttachmentItemComponent,
     GlSharedComponentButtonImageSimpleComponent,
     GlSharedComponentButtonAttachmentLinkComponent,
     GlSharedComponentButtonImageTooltipComponent,

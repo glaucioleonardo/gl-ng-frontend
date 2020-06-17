@@ -2112,12 +2112,66 @@
         return GlSharedComponentModalAttachmentLinkComponent;
     }());
 
+    var GlSharedComponentAttachmentItemComponent = /** @class */ (function () {
+        function GlSharedComponentAttachmentItemComponent() {
+            this.disabled = false;
+            this.onItemClick = new core.EventEmitter();
+            this.removeCurrentItem = new core.EventEmitter();
+            this.editCurrentItem = new core.EventEmitter();
+        }
+        GlSharedComponentAttachmentItemComponent.prototype.removeItem = function (id) { this.removeCurrentItem.emit({ id: id }); };
+        GlSharedComponentAttachmentItemComponent.prototype.editItem = function (id) { this.editCurrentItem.emit({ id: id }); };
+        GlSharedComponentAttachmentItemComponent.prototype.onButtonClick = function (e) {
+            e.preventDefault();
+            this.onItemClick.emit();
+        };
+        __decorate([
+            core.Input()
+        ], GlSharedComponentAttachmentItemComponent.prototype, "disabled", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentAttachmentItemComponent.prototype, "attachmentUrl", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentAttachmentItemComponent.prototype, "fileName", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentAttachmentItemComponent.prototype, "fileIcon", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentAttachmentItemComponent.prototype, "id", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentAttachmentItemComponent.prototype, "type", void 0);
+        __decorate([
+            core.Input()
+        ], GlSharedComponentAttachmentItemComponent.prototype, "addingSmooth", void 0);
+        __decorate([
+            core.Output('onClick')
+        ], GlSharedComponentAttachmentItemComponent.prototype, "onItemClick", void 0);
+        __decorate([
+            core.Output()
+        ], GlSharedComponentAttachmentItemComponent.prototype, "removeCurrentItem", void 0);
+        __decorate([
+            core.Output()
+        ], GlSharedComponentAttachmentItemComponent.prototype, "editCurrentItem", void 0);
+        GlSharedComponentAttachmentItemComponent = __decorate([
+            core.Component({
+                selector: 'gl-shared-component-attachment-item',
+                template: "<div class=\"attachment-container {{ addingSmooth ? 'adding-row-animated' : '' }}\">\n  <img\n    class=\"attachment-icon\"\n    [src]=\"fileIcon\"\n    alt=\"\u00CDcone anexo\">\n  <a\n    (click)=\"onButtonClick($event)\"\n    [id]=\"id\"\n    [href]=\"attachmentUrl\"\n    class=\"file\"\n  >{{ fileName }}</a>\n  <img\n    *ngIf=\"!disabled && type === 'link'\"\n    (click)=\"editItem(id)\"\n    class=\"edit-item\"\n    src=\"../assets/img/icon/menu/attachment/edit.svg\"\n    alt=\"Editar anexo\"/>\n  <img\n    *ngIf=\"!disabled\"\n    (click)=\"removeItem(id)\"\n    class=\"remove-item\"\n    src=\"../assets/img/icon/menu/attachment/delete.svg\"\n    alt=\"Apagar anexo\"/>\n</div>\n",
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .attachment-container{display:flex;padding:.4em .3em;border-radius:.5em;align-items:center;margin:.2em 0;cursor:pointer}:host::ng-deep .attachment-container:not(hover){background-color:rgba(255,255,255,.3);transition:.2s ease-in-out}:host::ng-deep .attachment-container:not(hover) .file{color:#333437}:host::ng-deep .attachment-container:hover{background:#fff;transition:.2s ease-in-out}:host::ng-deep .attachment-container:hover .file{color:#333437}:host::ng-deep .attachment-container .attachment-icon{padding:0;height:2.15em;width:2.15em;margin:0 .6em 0 .1em}:host::ng-deep .attachment-container .edit-item,:host::ng-deep .attachment-container .remove-item{padding:0;height:2.15em;width:2.15em;margin:0 0 0 .1em}:host::ng-deep .attachment-container .edit-item:not(hover),:host::ng-deep .attachment-container .remove-item:not(hover){opacity:.5;transition:.2s ease-in-out}:host::ng-deep .attachment-container .edit-item:hover,:host::ng-deep .attachment-container .remove-item:hover{opacity:1;transition:.2s ease-in-out}:host::ng-deep .attachment-container .edit-item{margin:0 .2em 0 0}:host::ng-deep .attachment-container .file{font-family:Montserrat,sans-serif;font-weight:400;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;width:80%;padding:1em 0}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){:host::ng-deep .attachment-container .file{width:75%}}"]
+            })
+        ], GlSharedComponentAttachmentItemComponent);
+        return GlSharedComponentAttachmentItemComponent;
+    }());
+
     var GlComponentModule = /** @class */ (function () {
         function GlComponentModule() {
         }
         GlComponentModule = __decorate([
             core.NgModule({
                 declarations: [
+                    GlSharedComponentAttachmentItemComponent,
                     GlSharedComponentButtonAttachmentFileComponent,
                     GlSharedComponentButtonAttachmentLinkComponent,
                     GlSharedComponentButtonImageSimpleComponent,
@@ -2165,6 +2219,7 @@
                     overlay.OverlayModule
                 ],
                 exports: [
+                    GlSharedComponentAttachmentItemComponent,
                     GlSharedComponentButtonImageSimpleComponent,
                     GlSharedComponentButtonAttachmentLinkComponent,
                     GlSharedComponentButtonImageTooltipComponent,
@@ -2348,6 +2403,7 @@
     exports.GlComponentModule = GlComponentModule;
     exports.GlCoreModule = GlCoreModule;
     exports.GlNgFrontendModule = GlNgFrontendModule;
+    exports.GlSharedComponentAttachmentItemComponent = GlSharedComponentAttachmentItemComponent;
     exports.GlSharedComponentButtonAttachmentFileComponent = GlSharedComponentButtonAttachmentFileComponent;
     exports.GlSharedComponentButtonAttachmentFileService = GlSharedComponentButtonAttachmentFileService;
     exports.GlSharedComponentButtonAttachmentLinkComponent = GlSharedComponentButtonAttachmentLinkComponent;

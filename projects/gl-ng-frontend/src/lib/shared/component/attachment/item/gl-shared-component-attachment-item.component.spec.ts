@@ -1,0 +1,25 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { GlSharedComponentAttachmentItemComponent } from './gl-shared-component-attachment-item.component';
+
+describe('GlSharedComponentAttachmentItemComponent', () => {
+  let component: GlSharedComponentAttachmentItemComponent;
+  let fixture: ComponentFixture<GlSharedComponentAttachmentItemComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ GlSharedComponentAttachmentItemComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(GlSharedComponentAttachmentItemComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
