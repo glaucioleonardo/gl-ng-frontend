@@ -11,8 +11,9 @@ export * from './lib/shared/gl-shared.module';
 // region Component
 export * from './lib/shared/component/gl-component.module';
 
-export * from './lib/shared/component/button/attachment/gl-shared-component-button-attachment.component';
-export * from './lib/shared/component/button/attachment/gl-shared-component-button-attachment.service';
+export * from './lib/shared/component/button/attachment/file/gl-shared-component-button-attachment-file.component';
+export * from './lib/shared/component/button/attachment/file/gl-shared-component-button-attachment-file.service';
+export * from './lib/shared/component/button/attachment/link/gl-shared-component-button-attachment-link.component';
 
 export * from './lib/shared/component/button/image/simple/gl-shared-component-button-image-simple.component';
 export * from './lib/shared/component/button/image/tooltip/gl-shared-component-button-image-tooltip.component';
@@ -55,6 +56,9 @@ export * from './lib/shared/component/menu/gl-shared-component-menu.component';
 export * from './lib/shared/component/menu/gl-shared-component-menu.interface';
 export * from './lib/shared/component/menu/gl-shared-component-menu.service';
 
+export * from './lib/shared/component/modal/attachment/link/gl-shared-component-modal-attachment-link.component';
+export * from './lib/shared/component/modal/attachment/link/gl-shared-component-modal-attachment-link.interface';
+export * from './lib/shared/component/modal/attachment/link/gl-shared-component-modal-attachment-link.service';
 export * from './lib/shared/component/modal/alert/gl-shared-component-modal-alert.component';
 export * from './lib/shared/component/modal/alert/gl-shared-component-modal-alert.service';
 export * from './lib/shared/component/modal/header/gl-shared-component-modal-header.component';

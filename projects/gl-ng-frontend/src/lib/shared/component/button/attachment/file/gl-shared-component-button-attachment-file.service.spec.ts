@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GlSharedComponentButtonAttachmentService } from './gl-shared-component-button-attachment.service';
+import { GlSharedComponentButtonAttachmentFileService } from './gl-shared-component-button-attachment-file.service';
 
 describe('GlSharedComponentButtonAttachmentService', () => {
-  let service: GlSharedComponentButtonAttachmentService;
+  let service: GlSharedComponentButtonAttachmentFileService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GlSharedComponentButtonAttachmentService);
+    service = TestBed.inject(GlSharedComponentButtonAttachmentFileService);
   });
 
   it('should be created', () => {

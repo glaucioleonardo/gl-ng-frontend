@@ -228,6 +228,55 @@ function GlSharedComponentFilterComponent_span_19_Template(rf, ctx) { if (rf & 1
     ɵngcc0.ɵɵtextInterpolate3("", ctx_r3.partialResultDescription, " ", ctx_r3.partialResult, " ", ctx_r3.partialResult > 1 ? ctx_r3.itemPluralDescription : ctx_r3.itemSingularDescription, " ");
 } }
 var _c8 = ["fileInput"];
+function GlSharedComponentModalAttachmentLinkComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    var _r2 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "div", 1);
+    ɵngcc0.ɵɵlistener("keyup", function GlSharedComponentModalAttachmentLinkComponent_div_0_Template_div_keyup_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r2); var ctx_r1 = ɵngcc0.ɵɵnextContext(); return ctx_r1.service.onModalKeyUp($event); });
+    ɵngcc0.ɵɵelementStart(1, "div", 2);
+    ɵngcc0.ɵɵelement(2, "gl-shared-component-modal-header", 3);
+    ɵngcc0.ɵɵelementStart(3, "div", 4);
+    ɵngcc0.ɵɵelementStart(4, "div", 5);
+    ɵngcc0.ɵɵelementStart(5, "label", 6);
+    ɵngcc0.ɵɵtext(6);
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementStart(7, "input", 7);
+    ɵngcc0.ɵɵlistener("keyup", function GlSharedComponentModalAttachmentLinkComponent_div_0_Template_input_keyup_7_listener($event) { ɵngcc0.ɵɵrestoreView(_r2); var ctx_r3 = ɵngcc0.ɵɵnextContext(); return ctx_r3.service.onName($event); });
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementStart(8, "div", 8);
+    ɵngcc0.ɵɵelementStart(9, "label", 9);
+    ɵngcc0.ɵɵtext(10, "Link");
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementStart(11, "input", 10);
+    ɵngcc0.ɵɵlistener("keyup", function GlSharedComponentModalAttachmentLinkComponent_div_0_Template_input_keyup_11_listener($event) { ɵngcc0.ɵɵrestoreView(_r2); var ctx_r4 = ɵngcc0.ɵɵnextContext(); return ctx_r4.service.onUrl($event); });
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementStart(12, "div", 11);
+    ɵngcc0.ɵɵelementStart(13, "gl-shared-component-input-button-simple", 12);
+    ɵngcc0.ɵɵlistener("click", function GlSharedComponentModalAttachmentLinkComponent_div_0_Template_gl_shared_component_input_button_simple_click_13_listener() { ɵngcc0.ɵɵrestoreView(_r2); var ctx_r5 = ɵngcc0.ɵɵnextContext(); return ctx_r5.service.onCancel(); });
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementStart(14, "gl-shared-component-input-button-simple", 13);
+    ɵngcc0.ɵɵlistener("click", function GlSharedComponentModalAttachmentLinkComponent_div_0_Template_gl_shared_component_input_button_simple_click_14_listener() { ɵngcc0.ɵɵrestoreView(_r2); var ctx_r6 = ɵngcc0.ɵɵnextContext(); return ctx_r6.service.onConfirm(); });
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelement(15, "div", 14);
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    var ctx_r0 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵclassMapInterpolate1("modal-link-container ", ctx_r0.service.modalClass, "");
+    ɵngcc0.ɵɵadvance(2);
+    ɵngcc0.ɵɵproperty("title", ctx_r0.title)("subtitle", ctx_r0.subtitle)("modalLogo", ctx_r0.modalLogo);
+    ɵngcc0.ɵɵadvance(4);
+    ɵngcc0.ɵɵtextInterpolate(ctx_r0.fileNameLabel);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("placeholder", ctx_r0.fileNamePlaceholder);
+    ɵngcc0.ɵɵadvance(4);
+    ɵngcc0.ɵɵproperty("placeholder", ctx_r0.linkPlaceholder);
+    ɵngcc0.ɵɵadvance(2);
+    ɵngcc0.ɵɵproperty("innerValue", ctx_r0.cancelInnerValue);
+} }
 var _c9 = ["mainContainer"];
 function GlSharedViewErrorMessageComponent_gl_shared_component_input_button_hyperlink_5_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelement(0, "gl-shared-component-input-button-hyperlink", 6);
@@ -2845,31 +2894,24 @@ GlSharedComponentFilterContainerComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ 
     return GlSharedComponentFilterContainerComponent;
 }());
 
-var GlSharedComponentButtonAttachmentService = /** @class */ (function () {
-    function GlSharedComponentButtonAttachmentService(_alert) {
+var GlSharedComponentButtonAttachmentFileService = /** @class */ (function () {
+    function GlSharedComponentButtonAttachmentFileService(_alert) {
         this._alert = _alert;
     }
-    GlSharedComponentButtonAttachmentService.prototype.initialize = function (input, currentValue, attachments, duplicatedDescription, invalidSizeDescription, invalidFormatDescription, attachmentIconSrc) {
+    GlSharedComponentButtonAttachmentFileService.prototype.initialize = function (input, currentValue, attachments, duplicatedDescription, invalidSizeDescription, invalidFormatDescription, attachmentIconSrc) {
         var _this = this;
         this._input = input;
         this._currentValue = currentValue;
         this._attachments = attachments;
         // Todo Block specif files
         var accept = input.attributes.accept.value;
-        console.log(accept == null);
-        console.log(accept == undefined);
-        console.log(accept == 'undefined');
-        console.log(accept == '');
-        console.log(accept);
-        console.log(accept == 'accept="null"');
-        console.log(accept == 'accept="undefined"');
         this._accepts = accept == null || accept == 'undefined' || accept === '' ? ['*'] : AttachmentParser.parseAcceptFiles(input.attributes.accept.value);
         this._input.oninput = function () { _this.onChange(duplicatedDescription, invalidSizeDescription, invalidFormatDescription, attachmentIconSrc); };
     };
-    GlSharedComponentButtonAttachmentService.prototype.addAttachment = function () {
+    GlSharedComponentButtonAttachmentFileService.prototype.addAttachment = function () {
         this._input.click();
     };
-    GlSharedComponentButtonAttachmentService.prototype.onChange = function (duplicatedDescription, invalidSizeDescription, invalidFormatDescription, attachmentIconSrc) {
+    GlSharedComponentButtonAttachmentFileService.prototype.onChange = function (duplicatedDescription, invalidSizeDescription, invalidFormatDescription, attachmentIconSrc) {
         var isValid = AttachmentValidate.file(this._input, this._accepts);
         var sizeValid = AttachmentValidate.fileSize(this._input);
         var duplicated = AttachmentValidate.duplicated(this._input.files[0].name, this._attachments);
@@ -2903,25 +2945,25 @@ var GlSharedComponentButtonAttachmentService = /** @class */ (function () {
             this._currentValue.emit(file);
         }
     };
-    GlSharedComponentButtonAttachmentService.prototype.clearInput = function () {
+    GlSharedComponentButtonAttachmentFileService.prototype.clearInput = function () {
         this._input.value = null;
     };
-    GlSharedComponentButtonAttachmentService.ctorParameters = function () { return [
+    GlSharedComponentButtonAttachmentFileService.ctorParameters = function () { return [
         { type: GlSharedComponentModalAlertService }
     ]; };
-    GlSharedComponentButtonAttachmentService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentButtonAttachmentService_Factory() { return new GlSharedComponentButtonAttachmentService(ɵɵinject(GlSharedComponentModalAlertService)); }, token: GlSharedComponentButtonAttachmentService, providedIn: "root" });
-GlSharedComponentButtonAttachmentService.ɵfac = function GlSharedComponentButtonAttachmentService_Factory(t) { return new (t || GlSharedComponentButtonAttachmentService)(ɵngcc0.ɵɵinject(GlSharedComponentModalAlertService)); };
-/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentButtonAttachmentService, [{
+    GlSharedComponentButtonAttachmentFileService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentButtonAttachmentFileService_Factory() { return new GlSharedComponentButtonAttachmentFileService(ɵɵinject(GlSharedComponentModalAlertService)); }, token: GlSharedComponentButtonAttachmentFileService, providedIn: "root" });
+GlSharedComponentButtonAttachmentFileService.ɵfac = function GlSharedComponentButtonAttachmentFileService_Factory(t) { return new (t || GlSharedComponentButtonAttachmentFileService)(ɵngcc0.ɵɵinject(GlSharedComponentModalAlertService)); };
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentButtonAttachmentFileService, [{
         type: Injectable,
         args: [{
                 providedIn: 'root'
             }]
     }], function () { return [{ type: GlSharedComponentModalAlertService }]; }, null); })();
-    return GlSharedComponentButtonAttachmentService;
+    return GlSharedComponentButtonAttachmentFileService;
 }());
 
-var GlSharedComponentButtonAttachmentComponent = /** @class */ (function () {
-    function GlSharedComponentButtonAttachmentComponent(service) {
+var GlSharedComponentButtonAttachmentFileComponent = /** @class */ (function () {
+    function GlSharedComponentButtonAttachmentFileComponent(service) {
         this.service = service;
         /**
          * @param maxFileSize Size in KB.
@@ -2937,57 +2979,57 @@ var GlSharedComponentButtonAttachmentComponent = /** @class */ (function () {
         this.invalidFormatDescription = 'Invalid file format!';
         this.currentValue$ = new EventEmitter();
     }
-    GlSharedComponentButtonAttachmentComponent.prototype.ngAfterViewInit = function () {
+    GlSharedComponentButtonAttachmentFileComponent.prototype.ngAfterViewInit = function () {
         this.service.initialize(this.fileInput.nativeElement, this.currentValue$, this.attachments, this.duplicatedDescription, this.invalidSizeDescription, this.invalidFormatDescription, this.attachmentIconSrc);
     };
-    GlSharedComponentButtonAttachmentComponent.ctorParameters = function () { return [
-        { type: GlSharedComponentButtonAttachmentService }
+    GlSharedComponentButtonAttachmentFileComponent.ctorParameters = function () { return [
+        { type: GlSharedComponentButtonAttachmentFileService }
     ]; };
     __decorate([
         ViewChild('fileInput', { read: ElementRef, static: true })
-    ], GlSharedComponentButtonAttachmentComponent.prototype, "fileInput", void 0);
+    ], GlSharedComponentButtonAttachmentFileComponent.prototype, "fileInput", void 0);
     __decorate([
         Input()
-    ], GlSharedComponentButtonAttachmentComponent.prototype, "maxFileSize", void 0);
+    ], GlSharedComponentButtonAttachmentFileComponent.prototype, "maxFileSize", void 0);
     __decorate([
         Input()
-    ], GlSharedComponentButtonAttachmentComponent.prototype, "accept", void 0);
+    ], GlSharedComponentButtonAttachmentFileComponent.prototype, "accept", void 0);
     __decorate([
         Input()
-    ], GlSharedComponentButtonAttachmentComponent.prototype, "title", void 0);
+    ], GlSharedComponentButtonAttachmentFileComponent.prototype, "title", void 0);
     __decorate([
         Input()
-    ], GlSharedComponentButtonAttachmentComponent.prototype, "icon", void 0);
+    ], GlSharedComponentButtonAttachmentFileComponent.prototype, "icon", void 0);
     __decorate([
         Input()
-    ], GlSharedComponentButtonAttachmentComponent.prototype, "attachmentIconSrc", void 0);
+    ], GlSharedComponentButtonAttachmentFileComponent.prototype, "attachmentIconSrc", void 0);
     __decorate([
         Input()
-    ], GlSharedComponentButtonAttachmentComponent.prototype, "description", void 0);
+    ], GlSharedComponentButtonAttachmentFileComponent.prototype, "description", void 0);
     __decorate([
         Input()
-    ], GlSharedComponentButtonAttachmentComponent.prototype, "attachments", void 0);
+    ], GlSharedComponentButtonAttachmentFileComponent.prototype, "attachments", void 0);
     __decorate([
         Input()
-    ], GlSharedComponentButtonAttachmentComponent.prototype, "duplicatedDescription", void 0);
+    ], GlSharedComponentButtonAttachmentFileComponent.prototype, "duplicatedDescription", void 0);
     __decorate([
         Input()
-    ], GlSharedComponentButtonAttachmentComponent.prototype, "invalidSizeDescription", void 0);
+    ], GlSharedComponentButtonAttachmentFileComponent.prototype, "invalidSizeDescription", void 0);
     __decorate([
         Input()
-    ], GlSharedComponentButtonAttachmentComponent.prototype, "invalidFormatDescription", void 0);
+    ], GlSharedComponentButtonAttachmentFileComponent.prototype, "invalidFormatDescription", void 0);
     __decorate([
         Output()
-    ], GlSharedComponentButtonAttachmentComponent.prototype, "currentValue$", void 0);
-GlSharedComponentButtonAttachmentComponent.ɵfac = function GlSharedComponentButtonAttachmentComponent_Factory(t) { return new (t || GlSharedComponentButtonAttachmentComponent)(ɵngcc0.ɵɵdirectiveInject(GlSharedComponentButtonAttachmentService)); };
-GlSharedComponentButtonAttachmentComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentButtonAttachmentComponent, selectors: [["gl-shared-component-button-attachment"]], viewQuery: function GlSharedComponentButtonAttachmentComponent_Query(rf, ctx) { if (rf & 1) {
+    ], GlSharedComponentButtonAttachmentFileComponent.prototype, "currentValue$", void 0);
+GlSharedComponentButtonAttachmentFileComponent.ɵfac = function GlSharedComponentButtonAttachmentFileComponent_Factory(t) { return new (t || GlSharedComponentButtonAttachmentFileComponent)(ɵngcc0.ɵɵdirectiveInject(GlSharedComponentButtonAttachmentFileService)); };
+GlSharedComponentButtonAttachmentFileComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentButtonAttachmentFileComponent, selectors: [["gl-shared-component-button-attachment-file"]], viewQuery: function GlSharedComponentButtonAttachmentFileComponent_Query(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵstaticViewQuery(_c8, true, ElementRef);
     } if (rf & 2) {
         var _t;
         ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.fileInput = _t.first);
-    } }, inputs: { maxFileSize: "maxFileSize", title: "title", icon: "icon", description: "description", attachments: "attachments", duplicatedDescription: "duplicatedDescription", invalidSizeDescription: "invalidSizeDescription", invalidFormatDescription: "invalidFormatDescription", accept: "accept", attachmentIconSrc: "attachmentIconSrc" }, outputs: { currentValue$: "currentValue$" }, decls: 6, vars: 5, consts: [[1, "attachment-container", 3, "click"], ["id", "file-input", "name", "file-input", "type", "file", 1, "file-input", 3, "accept", "title"], ["fileInput", ""], ["alt", "Attachment Icon", 1, "attachment-icon", 3, "src"], [1, "attachment-file-button"]], template: function GlSharedComponentButtonAttachmentComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { maxFileSize: "maxFileSize", title: "title", icon: "icon", description: "description", attachments: "attachments", duplicatedDescription: "duplicatedDescription", invalidSizeDescription: "invalidSizeDescription", invalidFormatDescription: "invalidFormatDescription", accept: "accept", attachmentIconSrc: "attachmentIconSrc" }, outputs: { currentValue$: "currentValue$" }, decls: 6, vars: 5, consts: [[1, "attachment-container", 3, "click"], ["id", "file-input", "name", "file-input", "type", "file", 1, "file-input", 3, "accept", "title"], ["fileInput", ""], ["alt", "Attachment Icon", 1, "attachment-icon", 3, "src"], [1, "attachment-file-button"]], template: function GlSharedComponentButtonAttachmentFileComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵelementStart(0, "div", 0);
-        ɵngcc0.ɵɵlistener("click", function GlSharedComponentButtonAttachmentComponent_Template_div_click_0_listener() { return ctx.service.addAttachment(); });
+        ɵngcc0.ɵɵlistener("click", function GlSharedComponentButtonAttachmentFileComponent_Template_div_click_0_listener() { return ctx.service.addAttachment(); });
         ɵngcc0.ɵɵelement(1, "input", 1, 2);
         ɵngcc0.ɵɵelement(3, "img", 3);
         ɵngcc0.ɵɵelementStart(4, "span", 4);
@@ -3003,14 +3045,14 @@ GlSharedComponentButtonAttachmentComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({
         ɵngcc0.ɵɵadvance(2);
         ɵngcc0.ɵɵtextInterpolate(ctx.description);
     } }, styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%]  .attachment-container{position:relative;display:flex;padding:.4em .3em;border-radius:.5em;align-items:center;margin:.2em 0;cursor:pointer}[_nghost-%COMP%]  .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:.2s ease-in-out}[_nghost-%COMP%]  .attachment-container:hover{background:rgba(63,64,68,.9);transition:.2s ease-in-out}[_nghost-%COMP%]  .attachment-container .file-input{font-size:1em;display:none}[_nghost-%COMP%]  .attachment-container .attachment-icon{padding:0;height:2em;width:2em;margin:.5em .8em .5em .2em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}[_nghost-%COMP%]  .attachment-container .file{font-size:.8em;color:#1e1e1e;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;width:75%;padding:1em 0}[_nghost-%COMP%]  .attachment-container .attachment-file-button{color:#fff;font-family:Montserrat,sans-serif;font-weight:400;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}"] });
-/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentButtonAttachmentComponent, [{
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentButtonAttachmentFileComponent, [{
         type: Component,
         args: [{
-                selector: 'gl-shared-component-button-attachment',
+                selector: 'gl-shared-component-button-attachment-file',
                 template: "<div class=\"attachment-container\" (click)=\"service.addAttachment()\">\n  <input\n    #fileInput\n    id=\"file-input\"\n    name=\"file-input\"\n    type=\"file\"\n    class=\"file-input\"\n    [accept]=\"accept\"\n    [title]=\"title\"\n    [attr.data-maxsize]=\"maxFileSize\"/>\n  <img class=\"attachment-icon\" [src]=\"icon\" alt=\"Attachment Icon\">\n  <span class=\"attachment-file-button\">{{ description }}</span>\n</div>\n",
                 styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .attachment-container{position:relative;display:flex;padding:.4em .3em;border-radius:.5em;align-items:center;margin:.2em 0;cursor:pointer}:host::ng-deep .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:.2s ease-in-out}:host::ng-deep .attachment-container:hover{background:rgba(63,64,68,.9);transition:.2s ease-in-out}:host::ng-deep .attachment-container .file-input{font-size:1em;display:none}:host::ng-deep .attachment-container .attachment-icon{padding:0;height:2em;width:2em;margin:.5em .8em .5em .2em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .attachment-container .file{font-size:.8em;color:#1e1e1e;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;width:75%;padding:1em 0}:host::ng-deep .attachment-container .attachment-file-button{color:#fff;font-family:Montserrat,sans-serif;font-weight:400;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}"]
             }]
-    }], function () { return [{ type: GlSharedComponentButtonAttachmentService }]; }, { maxFileSize: [{
+    }], function () { return [{ type: GlSharedComponentButtonAttachmentFileService }]; }, { maxFileSize: [{
             type: Input
         }], title: [{
             type: Input
@@ -3036,7 +3078,205 @@ GlSharedComponentButtonAttachmentComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({
         }], attachmentIconSrc: [{
             type: Input
         }] }); })();
-    return GlSharedComponentButtonAttachmentComponent;
+    return GlSharedComponentButtonAttachmentFileComponent;
+}());
+
+var GlSharedComponentModalAttachmentLinkService = /** @class */ (function () {
+    function GlSharedComponentModalAttachmentLinkService(_alert) {
+        this._alert = _alert;
+        this.linkIcon = '../assets/img/icon/attachment/link.svg';
+        this.showModal = false;
+        this.currentValue = new Subject();
+    }
+    GlSharedComponentModalAttachmentLinkService.prototype.setup = function (name, url) {
+        this.name = name;
+        this.url = url;
+    };
+    GlSharedComponentModalAttachmentLinkService.prototype.onCancel = function () {
+        this.modal(false);
+    };
+    GlSharedComponentModalAttachmentLinkService.prototype.onConfirm = function () {
+        if (this.validData()) {
+            var values = {
+                name: this._name,
+                url: this._url,
+                icon: this.linkIcon,
+                editing: this.editing,
+                editId: this.editId
+            };
+            this.currentValue.next(values);
+            this.modal(false);
+        }
+    };
+    GlSharedComponentModalAttachmentLinkService.prototype.onName = function (e) {
+        this._name = e.currentTarget.value;
+    };
+    GlSharedComponentModalAttachmentLinkService.prototype.onUrl = function (e) {
+        this._url = e.currentTarget.value;
+    };
+    GlSharedComponentModalAttachmentLinkService.prototype.validData = function () {
+        var urlRegex = /^(http|https):\/\/(([a-zA-Z0-9$\-_.+!*'(),;:&=]|%[0-9a-fA-F]{2})+@)?(((25[0-5]|2[0-4][0-9]|[0-1][0-9][0-9]|[1-9][0-9]|[0-9])(\.(25[0-5]|2[0-4][0-9]|[0-1][0-9][0-9]|[1-9][0-9]|[0-9])){3})|localhost|([a-zA-Z0-9\-\u00C0-\u017F]+\.)+([a-zA-Z]{2,}))(:[0-9]+)?(\/(([a-zA-Z0-9$\-_.+!*'(),;:@&=]|%[0-9a-fA-F]{2})*(\/([a-zA-Z0-9$\-_.+!*'(),;:@&=]|%[0-9a-fA-F]{2})*)*)?(\?([a-zA-Z0-9$\-_.+!*'(),;:@&=\/?]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9$\-_.+!*'(),;:@&=\/?]|%[0-9a-fA-F]{2})*)?)?$/;
+        var tempUrl = this._url != null && !this._url.includes('http://') ? "http://" + this._url : this._url;
+        var validUrl = new RegExp(urlRegex).test(tempUrl);
+        if (this._name == null || this._name.trim().length === 0) {
+            this._alert.show('Por favor, informe o nome do arquivo!');
+            return false;
+        }
+        else if (this._url == null || this._url.trim().length === 0) {
+            this._alert.show('Por favor, informe o url do arquivo!');
+            return false;
+        }
+        else if (!validUrl) {
+            this._alert.show('Por favor, informe um url válido!');
+        }
+        else {
+            this._url = tempUrl;
+            return true;
+        }
+    };
+    GlSharedComponentModalAttachmentLinkService.prototype.modal = function (show) {
+        var _this = this;
+        this.editing = false;
+        this.editId = null;
+        if (show) {
+            this.modalClass = 'hide-modal';
+            this.showModal = true;
+            this.modalClass = 'show-modal';
+        }
+        else {
+            this.modalClass = 'hide-modal';
+            setTimeout(function () {
+                _this.showModal = false;
+            }, 300);
+        }
+    };
+    GlSharedComponentModalAttachmentLinkService.prototype.edit = function (name, url, editId) {
+        var _this = this;
+        this.modal(true);
+        this.editing = true;
+        this.editId = editId;
+        setTimeout(function () {
+            _this.name = document.querySelector('#attachment-link-name');
+            _this.url = document.querySelector('#attachment-link-value');
+            _this._name = name;
+            _this.name.value = name;
+            _this._url = url;
+            _this.url.value = url;
+        }, 100);
+    };
+    GlSharedComponentModalAttachmentLinkService.prototype.onModalKeyUp = function (e) {
+        if (e.key === 'Enter') {
+            this.onConfirm();
+        }
+        else if (e.key === 'Escape') {
+            this.onCancel();
+        }
+    };
+    GlSharedComponentModalAttachmentLinkService.ctorParameters = function () { return [
+        { type: GlSharedComponentModalAlertService }
+    ]; };
+    GlSharedComponentModalAttachmentLinkService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentModalAttachmentLinkService_Factory() { return new GlSharedComponentModalAttachmentLinkService(ɵɵinject(GlSharedComponentModalAlertService)); }, token: GlSharedComponentModalAttachmentLinkService, providedIn: "root" });
+GlSharedComponentModalAttachmentLinkService.ɵfac = function GlSharedComponentModalAttachmentLinkService_Factory(t) { return new (t || GlSharedComponentModalAttachmentLinkService)(ɵngcc0.ɵɵinject(GlSharedComponentModalAlertService)); };
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentModalAttachmentLinkService, [{
+        type: Injectable,
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return [{ type: GlSharedComponentModalAlertService }]; }, null); })();
+    return GlSharedComponentModalAttachmentLinkService;
+}());
+
+var GlSharedComponentButtonAttachmentLinkComponent = /** @class */ (function () {
+    function GlSharedComponentButtonAttachmentLinkComponent(service) {
+        this.service = service;
+    }
+    GlSharedComponentButtonAttachmentLinkComponent.ctorParameters = function () { return [
+        { type: GlSharedComponentModalAttachmentLinkService }
+    ]; };
+GlSharedComponentButtonAttachmentLinkComponent.ɵfac = function GlSharedComponentButtonAttachmentLinkComponent_Factory(t) { return new (t || GlSharedComponentButtonAttachmentLinkComponent)(ɵngcc0.ɵɵdirectiveInject(GlSharedComponentModalAttachmentLinkService)); };
+GlSharedComponentButtonAttachmentLinkComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentButtonAttachmentLinkComponent, selectors: [["gl-shared-component-button-attachment-link"]], decls: 4, vars: 0, consts: [[1, "attachment-container", "dark", "link-container", 3, "click"], ["src", "../assets/img/icon/menu/attachment/link-white.svg", "alt", "Attachment Icon", 1, "attachment-icon"], ["id", "add-attachment-link", 1, "attachment-file-button"]], template: function GlSharedComponentButtonAttachmentLinkComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelementStart(0, "div", 0);
+        ɵngcc0.ɵɵlistener("click", function GlSharedComponentButtonAttachmentLinkComponent_Template_div_click_0_listener() { return ctx.service.modal(true); });
+        ɵngcc0.ɵɵelement(1, "img", 1);
+        ɵngcc0.ɵɵelementStart(2, "span", 2);
+        ɵngcc0.ɵɵtext(3, "Adicionar link");
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+    } }, styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%]  .attachment-container{position:relative;display:flex;padding:.4em .3em;border-radius:.5em;align-items:center;margin:.2em 0;cursor:pointer}[_nghost-%COMP%]  .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:.2s ease-in-out}[_nghost-%COMP%]  .attachment-container:hover{background:rgba(63,64,68,.9);transition:.2s ease-in-out}[_nghost-%COMP%]  .attachment-container .attachment-icon{padding:0;height:2em;width:2em;margin:.8em .8em .8em .2em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}[_nghost-%COMP%]  .attachment-container .attachment-file-button{color:#fff;font-family:Montserrat,sans-serif;font-weight:400;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentButtonAttachmentLinkComponent, [{
+        type: Component,
+        args: [{
+                selector: 'gl-shared-component-button-attachment-link',
+                template: "<div\n  class=\"attachment-container dark link-container\"\n  (click)=\"service.modal(true)\">\n  <img\n    class=\"attachment-icon\"\n    src=\"../assets/img/icon/menu/attachment/link-white.svg\"\n    alt=\"Attachment Icon\">\n  <span\n    id=\"add-attachment-link\"\n    class=\"attachment-file-button\">Adicionar link</span>\n</div>\n",
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .attachment-container{position:relative;display:flex;padding:.4em .3em;border-radius:.5em;align-items:center;margin:.2em 0;cursor:pointer}:host::ng-deep .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:.2s ease-in-out}:host::ng-deep .attachment-container:hover{background:rgba(63,64,68,.9);transition:.2s ease-in-out}:host::ng-deep .attachment-container .attachment-icon{padding:0;height:2em;width:2em;margin:.8em .8em .8em .2em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .attachment-container .attachment-file-button{color:#fff;font-family:Montserrat,sans-serif;font-weight:400;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}"]
+            }]
+    }], function () { return [{ type: GlSharedComponentModalAttachmentLinkService }]; }, null); })();
+    return GlSharedComponentButtonAttachmentLinkComponent;
+}());
+
+var GlSharedComponentModalAttachmentLinkComponent = /** @class */ (function () {
+    function GlSharedComponentModalAttachmentLinkComponent(service) {
+        this.service = service;
+        this.subtitle = ': link';
+        this.fileNameLabel = 'File name';
+        this.fileNamePlaceholder = 'Type the file name';
+        this.linkPlaceholder = 'Type the file link';
+        this.cancelInnerValue = 'Cancel';
+    }
+    GlSharedComponentModalAttachmentLinkComponent.ctorParameters = function () { return [
+        { type: GlSharedComponentModalAttachmentLinkService }
+    ]; };
+    __decorate([
+        Input()
+    ], GlSharedComponentModalAttachmentLinkComponent.prototype, "title", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentModalAttachmentLinkComponent.prototype, "subtitle", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentModalAttachmentLinkComponent.prototype, "modalLogo", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentModalAttachmentLinkComponent.prototype, "fileNameLabel", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentModalAttachmentLinkComponent.prototype, "fileNamePlaceholder", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentModalAttachmentLinkComponent.prototype, "linkPlaceholder", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentModalAttachmentLinkComponent.prototype, "cancelInnerValue", void 0);
+GlSharedComponentModalAttachmentLinkComponent.ɵfac = function GlSharedComponentModalAttachmentLinkComponent_Factory(t) { return new (t || GlSharedComponentModalAttachmentLinkComponent)(ɵngcc0.ɵɵdirectiveInject(GlSharedComponentModalAttachmentLinkService)); };
+GlSharedComponentModalAttachmentLinkComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentModalAttachmentLinkComponent, selectors: [["gl-shared-component-modal-attachment-link"]], inputs: { subtitle: "subtitle", fileNameLabel: "fileNameLabel", fileNamePlaceholder: "fileNamePlaceholder", linkPlaceholder: "linkPlaceholder", cancelInnerValue: "cancelInnerValue", title: "title", modalLogo: "modalLogo" }, decls: 1, vars: 1, consts: [["id", "modal-attachment-link", 3, "class", "keyup", 4, "ngIf"], ["id", "modal-attachment-link", 3, "keyup"], [1, "modal-main-content"], [3, "title", "subtitle", "modalLogo"], [1, "modal-input-container"], [1, "name-container"], ["for", "attachment-link-name"], ["id", "attachment-link-name", "type", "text", 3, "placeholder", "keyup"], [1, "value-container"], ["for", "attachment-link-value"], ["id", "attachment-link-value", "type", "text", 3, "placeholder", "keyup"], [1, "button-container"], ["value", "cancel", 1, "cancel", 3, "innerValue", "click"], ["innerValue", "OK", "value", "ok", 1, "ok", 3, "click"], [1, "modal-footer"]], template: function GlSharedComponentModalAttachmentLinkComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵtemplate(0, GlSharedComponentModalAttachmentLinkComponent_div_0_Template, 16, 10, "div", 0);
+    } if (rf & 2) {
+        ɵngcc0.ɵɵproperty("ngIf", ctx.service.showModal);
+    } }, directives: [ɵngcc1.NgIf, GlSharedComponentModalHeaderComponent,
+        GlSharedComponentInputButtonSimpleComponent], styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%]  .modal-link-container{position:fixed;min-width:100vw;min-height:100vh;z-index:99999;top:0;left:0;display:flex;justify-items:center;align-items:center;height:0;-webkit-animation:.5s ease-in-out forwards show-modal;animation:.5s ease-in-out forwards show-modal;background:rgba(0,0,0,.8)}@-webkit-keyframes show-modal{from{opacity:0}to{opacity:1}}[_nghost-%COMP%]  .modal-link-container>.modal-main-content{opacity:1!important;transition:.5s ease-in-out .5s}[_nghost-%COMP%]  .modal-link-container .modal-main-content{opacity:0;background:#020202;margin:0 auto;word-wrap:break-word;display:flex;flex-direction:column;justify-content:stretch;width:30vw;max-width:36em;min-height:10em;height:1em;align-items:stretch}[_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container{display:flex;flex-direction:column;align-items:stretch;justify-content:center;flex-grow:1;padding:.5em}[_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container .name-container, [_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container .value-container{position:relative;display:flex;align-content:center;justify-content:center;align-items:stretch}[_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container .name-container label, [_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container .value-container label{font-family:Montserrat,sans-serif;font-weight:400;color:gray;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:.5em;text-transform:none;position:absolute;left:.8em;font-size:.4em}[_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container .name-container input, [_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container .value-container input{font-family:Montserrat,sans-serif;font-weight:700;color:#fff;background-color:transparent;border:none;flex-grow:1;margin:0;font-size:.5em;text-align:left;padding:1em;height:2.2em;border-bottom:1px solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5}[_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container .name-container{margin-bottom:.1em}[_nghost-%COMP%]  .modal-link-container .modal-main-content .button-container{display:flex;justify-content:center;align-items:stretch}[_nghost-%COMP%]  .modal-link-container .modal-main-content .button-container gl-shared-component-input-button-simple{margin:0 .1em;max-width:calc(100% / 3)}[_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-footer{height:.5em;background-color:#0e0e0f;border-top:1px solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;margin:.2em 0 0;width:100%}[_nghost-%COMP%]  .hide-modal{-webkit-animation:.3s ease-in-out forwards hide-modal;animation:.3s ease-in-out forwards hide-modal}@-webkit-keyframes hide-modal{from{opacity:1}to{opacity:0}}@keyframes hide-modal{from{opacity:1}to{opacity:0}}[_nghost-%COMP%]  .show-modal{-webkit-animation:.3s ease-in-out forwards show-modal;animation:.3s ease-in-out forwards show-modal}@keyframes show-modal{from{opacity:0}to{opacity:1}}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){[_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container .name-container, [_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container .value-container{position:relative;border-bottom:0 solid transparent!important}[_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container .name-container::after, [_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container .value-container::after{width:100%;height:1px;left:0;bottom:1px;margin-bottom:-1px;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%)}[_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-input-container input{border:none!important}[_nghost-%COMP%]  .modal-link-container .modal-main-content gl-shared-component-input-button-simple .default-button{max-width:calc(30vw / 3)!important;min-width:calc(30vw / 3)!important}[_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-footer{position:relative;border-top:0 solid transparent!important}[_nghost-%COMP%]  .modal-link-container .modal-main-content .modal-footer::before{width:100%;height:1px;left:0;top:1px;margin-top:-1px;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%)}}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentModalAttachmentLinkComponent, [{
+        type: Component,
+        args: [{
+                selector: 'gl-shared-component-modal-attachment-link',
+                template: "<div\n  *ngIf=\"service.showModal\"\n  (keyup)=\"service.onModalKeyUp($event)\"\n  id=\"modal-attachment-link\"\n  class=\"modal-link-container {{ service.modalClass }}\">\n  <div class=\"modal-main-content\">\n    <gl-shared-component-modal-header\n      [title]=\"title\"\n      [subtitle]=\"subtitle\"\n      [modalLogo]=\"modalLogo\"\n    ></gl-shared-component-modal-header>\n    <div class=\"modal-input-container\">\n      <div class=\"name-container\">\n        <label for=\"attachment-link-name\">{{ fileNameLabel }}</label>\n        <input\n          (keyup)=\"service.onName($event)\"\n          id=\"attachment-link-name\"\n          type=\"text\"\n          [placeholder]=\"fileNamePlaceholder\">\n      </div>\n      <div class=\"value-container\">\n        <label for=\"attachment-link-value\">Link</label>\n        <input\n          (keyup)=\"service.onUrl($event)\"\n          id=\"attachment-link-value\"\n          type=\"text\"\n          [placeholder]=\"linkPlaceholder\">\n      </div>\n    </div>\n    <div class=\"button-container\">\n      <gl-shared-component-input-button-simple\n        (click)=\"service.onCancel()\"\n        class=\"cancel\"\n        [innerValue]=\"cancelInnerValue\"\n        value=\"cancel\"\n      ></gl-shared-component-input-button-simple>\n      <gl-shared-component-input-button-simple\n        (click)=\"service.onConfirm()\"\n        class=\"ok\"\n        innerValue=\"OK\"\n        value=\"ok\"\n      ></gl-shared-component-input-button-simple>\n    </div>\n    <div class=\"modal-footer\"></div>\n  </div>\n</div>\n",
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .modal-link-container{position:fixed;min-width:100vw;min-height:100vh;z-index:99999;top:0;left:0;display:flex;justify-items:center;align-items:center;height:0;-webkit-animation:.5s ease-in-out forwards show-modal;animation:.5s ease-in-out forwards show-modal;background:rgba(0,0,0,.8)}@-webkit-keyframes show-modal{from{opacity:0}to{opacity:1}}:host::ng-deep .modal-link-container>.modal-main-content{opacity:1!important;transition:.5s ease-in-out .5s}:host::ng-deep .modal-link-container .modal-main-content{opacity:0;background:#020202;margin:0 auto;word-wrap:break-word;display:flex;flex-direction:column;justify-content:stretch;width:30vw;max-width:36em;min-height:10em;height:1em;align-items:stretch}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container{display:flex;flex-direction:column;align-items:stretch;justify-content:center;flex-grow:1;padding:.5em}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container,:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .value-container{position:relative;display:flex;align-content:center;justify-content:center;align-items:stretch}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container label,:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .value-container label{font-family:Montserrat,sans-serif;font-weight:400;color:gray;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:.5em;text-transform:none;position:absolute;left:.8em;font-size:.4em}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container input,:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .value-container input{font-family:Montserrat,sans-serif;font-weight:700;color:#fff;background-color:transparent;border:none;flex-grow:1;margin:0;font-size:.5em;text-align:left;padding:1em;height:2.2em;border-bottom:1px solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container{margin-bottom:.1em}:host::ng-deep .modal-link-container .modal-main-content .button-container{display:flex;justify-content:center;align-items:stretch}:host::ng-deep .modal-link-container .modal-main-content .button-container gl-shared-component-input-button-simple{margin:0 .1em;max-width:calc(100% / 3)}:host::ng-deep .modal-link-container .modal-main-content .modal-footer{height:.5em;background-color:#0e0e0f;border-top:1px solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;margin:.2em 0 0;width:100%}:host::ng-deep .hide-modal{-webkit-animation:.3s ease-in-out forwards hide-modal;animation:.3s ease-in-out forwards hide-modal}@-webkit-keyframes hide-modal{from{opacity:1}to{opacity:0}}@keyframes hide-modal{from{opacity:1}to{opacity:0}}:host::ng-deep .show-modal{-webkit-animation:.3s ease-in-out forwards show-modal;animation:.3s ease-in-out forwards show-modal}@keyframes show-modal{from{opacity:0}to{opacity:1}}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container,:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .value-container{position:relative;border-bottom:0 solid transparent!important}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container::after,:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .value-container::after{width:100%;height:1px;left:0;bottom:1px;margin-bottom:-1px;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%)}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container input{border:none!important}:host::ng-deep .modal-link-container .modal-main-content gl-shared-component-input-button-simple .default-button{max-width:calc(30vw / 3)!important;min-width:calc(30vw / 3)!important}:host::ng-deep .modal-link-container .modal-main-content .modal-footer{position:relative;border-top:0 solid transparent!important}:host::ng-deep .modal-link-container .modal-main-content .modal-footer::before{width:100%;height:1px;left:0;top:1px;margin-top:-1px;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%)}}"]
+            }]
+    }], function () { return [{ type: GlSharedComponentModalAttachmentLinkService }]; }, { subtitle: [{
+            type: Input
+        }], fileNameLabel: [{
+            type: Input
+        }], fileNamePlaceholder: [{
+            type: Input
+        }], linkPlaceholder: [{
+            type: Input
+        }], cancelInnerValue: [{
+            type: Input
+        }], title: [{
+            type: Input
+        }], modalLogo: [{
+            type: Input
+        }] }); })();
+    return GlSharedComponentModalAttachmentLinkComponent;
 }());
 
 var GlComponentModule = /** @class */ (function () {
@@ -3056,7 +3296,8 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
             ReactiveFormsModule,
             OverlayModule
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(GlComponentModule, { declarations: function () { return [GlSharedComponentButtonAttachmentComponent,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(GlComponentModule, { declarations: function () { return [GlSharedComponentButtonAttachmentFileComponent,
+        GlSharedComponentButtonAttachmentLinkComponent,
         GlSharedComponentButtonImageSimpleComponent,
         GlSharedComponentButtonImageTooltipComponent,
         GlSharedComponentButtonMenuSimpleComponent,
@@ -3077,6 +3318,7 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         GlSharedComponentInputTextAreaLabelComponent,
         GlSharedComponentLogoSquareComponent,
         GlSharedComponentModalAlertComponent,
+        GlSharedComponentModalAttachmentLinkComponent,
         GlSharedComponentModalHeaderComponent,
         GlSharedComponentModalLoadingComponent,
         GlSharedComponentMenuBackgroundComponent,
@@ -3096,6 +3338,7 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         FormsModule,
         ReactiveFormsModule,
         OverlayModule]; }, exports: function () { return [GlSharedComponentButtonImageSimpleComponent,
+        GlSharedComponentButtonAttachmentLinkComponent,
         GlSharedComponentButtonImageTooltipComponent,
         GlSharedComponentButtonMenuSimpleComponent,
         GlSharedComponentButtonMenuTooltipComponent,
@@ -3118,18 +3361,20 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         GlSharedComponentMenuComponent,
         GlSharedComponentMenuItemComponent,
         GlSharedComponentModalAlertComponent,
+        GlSharedComponentModalAttachmentLinkComponent,
         GlSharedComponentModalHeaderComponent,
         GlSharedComponentModalLoadingComponent,
         GlSharedComponentTitlePageComponent,
         GlSharedComponentTitleLabelButtonSimpleComponent,
         GlSharedComponentTitleLabelButtonContainerComponent,
         GlSharedComponentTitleLabelSimpleComponent,
-        GlSharedComponentButtonAttachmentComponent]; } }); })();
+        GlSharedComponentButtonAttachmentFileComponent]; } }); })();
 /*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlComponentModule, [{
         type: NgModule,
         args: [{
                 declarations: [
-                    GlSharedComponentButtonAttachmentComponent,
+                    GlSharedComponentButtonAttachmentFileComponent,
+                    GlSharedComponentButtonAttachmentLinkComponent,
                     GlSharedComponentButtonImageSimpleComponent,
                     GlSharedComponentButtonImageTooltipComponent,
                     GlSharedComponentButtonMenuSimpleComponent,
@@ -3150,6 +3395,7 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                     GlSharedComponentInputTextAreaLabelComponent,
                     GlSharedComponentLogoSquareComponent,
                     GlSharedComponentModalAlertComponent,
+                    GlSharedComponentModalAttachmentLinkComponent,
                     GlSharedComponentModalHeaderComponent,
                     GlSharedComponentModalLoadingComponent,
                     GlSharedComponentMenuBackgroundComponent,
@@ -3175,6 +3421,7 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                 ],
                 exports: [
                     GlSharedComponentButtonImageSimpleComponent,
+                    GlSharedComponentButtonAttachmentLinkComponent,
                     GlSharedComponentButtonImageTooltipComponent,
                     GlSharedComponentButtonMenuSimpleComponent,
                     GlSharedComponentButtonMenuTooltipComponent,
@@ -3197,13 +3444,14 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                     GlSharedComponentMenuComponent,
                     GlSharedComponentMenuItemComponent,
                     GlSharedComponentModalAlertComponent,
+                    GlSharedComponentModalAttachmentLinkComponent,
                     GlSharedComponentModalHeaderComponent,
                     GlSharedComponentModalLoadingComponent,
                     GlSharedComponentTitlePageComponent,
                     GlSharedComponentTitleLabelButtonSimpleComponent,
                     GlSharedComponentTitleLabelButtonContainerComponent,
                     GlSharedComponentTitleLabelSimpleComponent,
-                    GlSharedComponentButtonAttachmentComponent,
+                    GlSharedComponentButtonAttachmentFileComponent,
                 ]
             }]
     }], function () { return []; }, null); })();
@@ -3457,6 +3705,6 @@ GlSharedViewModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlShar
  * Generated bundle index. Do not edit.
  */
 
-export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentButtonAttachmentComponent, GlSharedComponentButtonAttachmentService, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule };
+export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentButtonAttachmentFileComponent, GlSharedComponentButtonAttachmentFileService, GlSharedComponentButtonAttachmentLinkComponent, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalAttachmentLinkComponent, GlSharedComponentModalAttachmentLinkService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule };
 
 //# sourceMappingURL=gl-ng-frontend.js.map

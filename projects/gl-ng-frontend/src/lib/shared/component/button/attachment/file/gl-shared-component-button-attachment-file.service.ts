@@ -2,12 +2,12 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { IAttachmentData } from 'gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.interface';
 import { AttachmentIcon, AttachmentParser, AttachmentValidate } from 'gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.service';
 import { StringConverter } from 'gl-w-frontend/lib/es5/scripts/core/services/string/core-services-string.service';
-import { GlSharedComponentModalAlertService } from '../../modal/alert/gl-shared-component-modal-alert.service';
+import { GlSharedComponentModalAlertService } from '../../../modal/alert/gl-shared-component-modal-alert.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GlSharedComponentButtonAttachmentService {
+export class GlSharedComponentButtonAttachmentFileService {
   private _input: HTMLInputElement;
   private _accepts: string[];
   private _currentValue: EventEmitter<IAttachmentData>;

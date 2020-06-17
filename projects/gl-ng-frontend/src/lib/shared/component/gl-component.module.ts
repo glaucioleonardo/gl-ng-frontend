@@ -42,11 +42,14 @@ import { GlSharedComponentInputAutocompleteSimpleComponent } from './input/autoc
 import { GlSharedComponentInputAutocompleteLabelComponent } from './input/autocomplete/label/gl-shared-component-input-autocomplete-label.component';
 import { GlSharedComponentFilterComponent } from './filter/gl-shared-component-filter.component';
 import { GlSharedComponentFilterContainerComponent } from './filter/container/gl-shared-component-filter-container.component';
-import { GlSharedComponentButtonAttachmentComponent } from './button/attachment/gl-shared-component-button-attachment.component';
+import { GlSharedComponentButtonAttachmentFileComponent } from './button/attachment/file/gl-shared-component-button-attachment-file.component';
+import { GlSharedComponentButtonAttachmentLinkComponent } from './button/attachment/link/gl-shared-component-button-attachment-link.component';
+import { GlSharedComponentModalAttachmentLinkComponent } from './modal/attachment/link/gl-shared-component-modal-attachment-link.component';
 
 @NgModule({
   declarations: [
-    GlSharedComponentButtonAttachmentComponent,
+    GlSharedComponentButtonAttachmentFileComponent,
+    GlSharedComponentButtonAttachmentLinkComponent,
     GlSharedComponentButtonImageSimpleComponent,
     GlSharedComponentButtonImageTooltipComponent,
     GlSharedComponentButtonMenuSimpleComponent,
@@ -67,6 +70,7 @@ import { GlSharedComponentButtonAttachmentComponent } from './button/attachment/
     GlSharedComponentInputTextAreaLabelComponent,
     GlSharedComponentLogoSquareComponent,
     GlSharedComponentModalAlertComponent,
+    GlSharedComponentModalAttachmentLinkComponent,
     GlSharedComponentModalHeaderComponent,
     GlSharedComponentModalLoadingComponent,
     GlSharedComponentMenuBackgroundComponent,
@@ -92,6 +96,7 @@ import { GlSharedComponentButtonAttachmentComponent } from './button/attachment/
   ],
   exports: [
     GlSharedComponentButtonImageSimpleComponent,
+    GlSharedComponentButtonAttachmentLinkComponent,
     GlSharedComponentButtonImageTooltipComponent,
     GlSharedComponentButtonMenuSimpleComponent,
     GlSharedComponentButtonMenuTooltipComponent,
@@ -114,13 +119,14 @@ import { GlSharedComponentButtonAttachmentComponent } from './button/attachment/
     GlSharedComponentMenuComponent,
     GlSharedComponentMenuItemComponent,
     GlSharedComponentModalAlertComponent,
+    GlSharedComponentModalAttachmentLinkComponent,
     GlSharedComponentModalHeaderComponent,
     GlSharedComponentModalLoadingComponent,
     GlSharedComponentTitlePageComponent,
     GlSharedComponentTitleLabelButtonSimpleComponent,
     GlSharedComponentTitleLabelButtonContainerComponent,
     GlSharedComponentTitleLabelSimpleComponent,
-    GlSharedComponentButtonAttachmentComponent,
+    GlSharedComponentButtonAttachmentFileComponent,
   ]
 })
 export class GlComponentModule { }

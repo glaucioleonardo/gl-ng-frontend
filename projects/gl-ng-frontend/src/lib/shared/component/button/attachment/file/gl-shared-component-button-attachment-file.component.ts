@@ -1,13 +1,13 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { IAttachmentData } from 'gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.interface';
-import { GlSharedComponentButtonAttachmentService } from './gl-shared-component-button-attachment.service';
+import { GlSharedComponentButtonAttachmentFileService } from './gl-shared-component-button-attachment-file.service';
 
 @Component({
-  selector: 'gl-shared-component-button-attachment',
-  templateUrl: './gl-shared-component-button-attachment.component.html',
-  styleUrls: ['./gl-shared-component-button-attachment.component.scss']
+  selector: 'gl-shared-component-button-attachment-file',
+  templateUrl: './gl-shared-component-button-attachment-file.component.html',
+  styleUrls: ['./gl-shared-component-button-attachment-file.component.scss']
 })
-export class GlSharedComponentButtonAttachmentComponent implements AfterViewInit {
+export class GlSharedComponentButtonAttachmentFileComponent implements AfterViewInit {
   @ViewChild('fileInput', { read: ElementRef, static: true }) fileInput: ElementRef<HTMLInputElement>;
 
   /**
@@ -27,7 +27,7 @@ export class GlSharedComponentButtonAttachmentComponent implements AfterViewInit
 
   @Output() currentValue$: EventEmitter<IAttachmentData> = new EventEmitter();
 
-  constructor(public service: GlSharedComponentButtonAttachmentService) { }
+  constructor(public service: GlSharedComponentButtonAttachmentFileService) { }
 
   ngAfterViewInit(): void {
     this.service.initialize(
