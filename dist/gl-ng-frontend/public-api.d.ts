@@ -47,6 +47,8 @@ export * from './lib/shared/component/modal/alert/gl-shared-component-modal-aler
 export * from './lib/shared/component/modal/header/gl-shared-component-modal-header.component';
 export * from './lib/shared/component/modal/loading/gl-shared-component-modal-loading.component';
 export * from './lib/shared/component/modal/loading/gl-shared-component-modal-loading.service';
+export * from './lib/shared/component/paging/gl-shared-component-paging.component';
+export * from './lib/shared/component/paging/gl-shared-component-paging.interface';
 export * from './lib/shared/component/title/label/simple/gl-shared-component-title-label-simple.component';
 export * from './lib/shared/component/title/page/gl-shared-component-title-page.component';
 export * from './lib/shared/component/title/label/button/simple/gl-shared-component-title-label-button-simple.component';

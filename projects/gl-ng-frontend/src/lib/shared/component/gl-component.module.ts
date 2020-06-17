@@ -45,6 +45,7 @@ import { GlSharedComponentButtonAttachmentLinkComponent } from './button/attachm
 import { GlSharedComponentModalAttachmentLinkComponent } from './modal/attachment/link/gl-shared-component-modal-attachment-link.component';
 import { GlSharedComponentAttachmentItemComponent } from './attachment/item/gl-shared-component-attachment-item.component';
 import { GlSharedComponentAttachmentImagePreviewComponent } from './attachment/image/preview/gl-shared-component-attachment-image-preview.component';
+import { GlSharedComponentPagingComponent } from './paging/gl-shared-component-paging.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { GlSharedComponentAttachmentImagePreviewComponent } from './attachment/i
     GlSharedComponentMenuBackgroundComponent,
     GlSharedComponentMenuComponent,
     GlSharedComponentMenuItemComponent,
+    GlSharedComponentPagingComponent,
     GlSharedComponentTitleLabelSimpleComponent,
     GlSharedComponentTitleLabelButtonSimpleComponent,
     GlSharedComponentTitleLabelButtonContainerComponent,
@@ -126,6 +128,7 @@ import { GlSharedComponentAttachmentImagePreviewComponent } from './attachment/i
     GlSharedComponentModalAttachmentLinkComponent,
     GlSharedComponentModalHeaderComponent,
     GlSharedComponentModalLoadingComponent,
+    GlSharedComponentPagingComponent,
     GlSharedComponentTitlePageComponent,
     GlSharedComponentTitleLabelButtonSimpleComponent,
     GlSharedComponentTitleLabelButtonContainerComponent,

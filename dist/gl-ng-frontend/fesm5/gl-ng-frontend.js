@@ -313,6 +313,75 @@ function GlSharedComponentAttachmentImagePreviewComponent_gl_shared_component_ti
 } }
 var _c11 = [[["top"]], [["bottom"]]];
 var _c12 = ["top", "bottom"];
+function GlSharedComponentPagingComponent_a_2_Template(rf, ctx) { if (rf & 1) {
+    var _r7 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "a", 11);
+    ɵngcc0.ɵɵlistener("click", function GlSharedComponentPagingComponent_a_2_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r7); var ctx_r6 = ɵngcc0.ɵɵnextContext(); return ctx_r6.onPageChange($event, "first"); });
+    ɵngcc0.ɵɵelement(1, "img", 12);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    var ctx_r0 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵproperty("title", ctx_r0.firstPageTitle);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("src", ctx_r0.firstIcon, ɵngcc0.ɵɵsanitizeUrl)("alt", ctx_r0.firstPageTitle);
+} }
+function GlSharedComponentPagingComponent_a_3_Template(rf, ctx) { if (rf & 1) {
+    var _r9 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "a", 13);
+    ɵngcc0.ɵɵlistener("click", function GlSharedComponentPagingComponent_a_3_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r9); var ctx_r8 = ɵngcc0.ɵɵnextContext(); return ctx_r8.onPageChange($event, "previous"); });
+    ɵngcc0.ɵɵelement(1, "img", 12);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    var ctx_r1 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵproperty("title", ctx_r1.previousPageTitle);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("src", ctx_r1.previousIcon, ɵngcc0.ɵɵsanitizeUrl)("alt", ctx_r1.previousPageTitle);
+} }
+function GlSharedComponentPagingComponent_gl_shared_component_input_button_simple_7_Template(rf, ctx) { if (rf & 1) {
+    var _r12 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "gl-shared-component-input-button-simple", 14);
+    ɵngcc0.ɵɵlistener("click", function GlSharedComponentPagingComponent_gl_shared_component_input_button_simple_7_Template_gl_shared_component_input_button_simple_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r12); var button_r10 = ctx.$implicit; var ctx_r11 = ɵngcc0.ɵɵnextContext(); return ctx_r11.setPage(button_r10.page); });
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    var button_r10 = ctx.$implicit;
+    var ctx_r2 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵclassMap(button_r10.active ? "active" : "");
+    ɵngcc0.ɵɵproperty("value", button_r10.page.toString())("innerValue", button_r10.page.toString())("title", ctx_r2.pageDescription + " " + button_r10.page.toString());
+} }
+function GlSharedComponentPagingComponent_a_8_Template(rf, ctx) { if (rf & 1) {
+    var _r14 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "a", 15);
+    ɵngcc0.ɵɵlistener("click", function GlSharedComponentPagingComponent_a_8_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r14); var ctx_r13 = ɵngcc0.ɵɵnextContext(); return ctx_r13.onPageChange($event, "next"); });
+    ɵngcc0.ɵɵelement(1, "img", 12);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    var ctx_r3 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵproperty("title", ctx_r3.nextPageTitle);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("src", ctx_r3.nextIcon, ɵngcc0.ɵɵsanitizeUrl)("alt", ctx_r3.nextPageTitle);
+} }
+function GlSharedComponentPagingComponent_a_9_Template(rf, ctx) { if (rf & 1) {
+    var _r16 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "a", 16);
+    ɵngcc0.ɵɵlistener("click", function GlSharedComponentPagingComponent_a_9_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r16); var ctx_r15 = ɵngcc0.ɵɵnextContext(); return ctx_r15.onPageChange($event, "last"); });
+    ɵngcc0.ɵɵelement(1, "img", 12);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    var ctx_r4 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵproperty("title", ctx_r4.lastPageTitle);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("src", ctx_r4.lastIcon, ɵngcc0.ɵɵsanitizeUrl)("alt", ctx_r4.lastPageTitle);
+} }
+function GlSharedComponentPagingComponent_gl_shared_component_input_button_simple_13_Template(rf, ctx) { if (rf & 1) {
+    var _r19 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "gl-shared-component-input-button-simple", 17);
+    ɵngcc0.ɵɵlistener("click", function GlSharedComponentPagingComponent_gl_shared_component_input_button_simple_13_Template_gl_shared_component_input_button_simple_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r19); var item_r17 = ctx.$implicit; var ctx_r18 = ɵngcc0.ɵɵnextContext(); return ctx_r18.setNumberOfItems(item_r17.pageSize); });
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    var item_r17 = ctx.$implicit;
+    ɵngcc0.ɵɵclassMap(item_r17.class);
+    ɵngcc0.ɵɵproperty("title", item_r17.title)("innerValue", item_r17.innerValue)("value", item_r17.value);
+} }
 var _c13 = ["mainContainer"];
 function GlSharedViewErrorMessageComponent_gl_shared_component_input_button_hyperlink_5_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelement(0, "gl-shared-component-input-button-hyperlink", 6);
@@ -3666,6 +3735,204 @@ GlSharedComponentAttachmentImagePreviewComponent.ɵcmp = ɵngcc0.ɵɵdefineCompo
     return GlSharedComponentAttachmentImagePreviewComponent;
 }());
 
+var GlSharedComponentPagingComponent = /** @class */ (function () {
+    function GlSharedComponentPagingComponent() {
+        this.type = 'dark';
+        this.firstPageTitle = 'First page';
+        this.previousPageTitle = 'Previous page';
+        this.nextPageTitle = 'Next page';
+        this.lastPageTitle = 'Last page';
+        this.pageDescription = 'Page';
+        this.itemsPerPageDescriptions = 'Items per page';
+        this.pageSizeValue1 = 5;
+        this.pageSizeValue2 = 10;
+        this.pageSizeValue3 = 15;
+        this.pageSizeValue4 = 20;
+        this.pageSizeValue5 = 25;
+        this.pageButtons = [];
+        this.onPageChange$ = new EventEmitter();
+        this.setNumberOfItems$ = new EventEmitter();
+        this.setPage$ = new EventEmitter();
+        this.itemsPerPage = [];
+        this.firstIcon = '../assets/img/icon/paging/first.svg';
+        this.previousIcon = '../assets/img/icon/paging/previous.svg';
+        this.nextIcon = '../assets/img/icon/paging/next.svg';
+        this.lastIcon = '../assets/img/icon/paging/last.svg';
+    }
+    GlSharedComponentPagingComponent.prototype.ngAfterViewInit = function () {
+        for (var i = 1; i <= 5; i++) {
+            var pageSize = +this["pageSizeValue" + i];
+            this.itemsPerPage.push({
+                title: pageSize + " " + this.itemsPerPageDescriptions.toLowerCase(),
+                innerValue: pageSize === null || pageSize === void 0 ? void 0 : pageSize.toString(),
+                value: pageSize === null || pageSize === void 0 ? void 0 : pageSize.toString(),
+                class: this.pageSize == pageSize ? 'active' : '',
+                pageSize: pageSize
+            });
+        }
+        console.log(this.itemsPerPage);
+    };
+    GlSharedComponentPagingComponent.prototype.onPageChange = function (event, type) {
+        this.onPageChange$.emit({ event: event, type: type });
+    };
+    GlSharedComponentPagingComponent.prototype.setNumberOfItems = function (items) {
+        this.setNumberOfItems$.emit(items);
+    };
+    GlSharedComponentPagingComponent.prototype.setPage = function (page) {
+        this.setNumberOfItems$.emit(page);
+    };
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "pageInfo", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "hasNext", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "hasPrevious", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "type", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "firstPageTitle", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "previousPageTitle", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "nextPageTitle", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "lastPageTitle", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "pageDescription", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "pageSize", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "itemsPerPageDescriptions", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "pageSizeValue1", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "pageSizeValue2", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "pageSizeValue3", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "pageSizeValue4", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "pageSizeValue5", void 0);
+    __decorate([
+        Input()
+    ], GlSharedComponentPagingComponent.prototype, "pageButtons", void 0);
+    __decorate([
+        Output()
+    ], GlSharedComponentPagingComponent.prototype, "onPageChange$", void 0);
+    __decorate([
+        Output()
+    ], GlSharedComponentPagingComponent.prototype, "setNumberOfItems$", void 0);
+    __decorate([
+        Output()
+    ], GlSharedComponentPagingComponent.prototype, "setPage$", void 0);
+GlSharedComponentPagingComponent.ɵfac = function GlSharedComponentPagingComponent_Factory(t) { return new (t || GlSharedComponentPagingComponent)(); };
+GlSharedComponentPagingComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentPagingComponent, selectors: [["gl-shared-component-paging"]], inputs: { type: "type", firstPageTitle: "firstPageTitle", previousPageTitle: "previousPageTitle", nextPageTitle: "nextPageTitle", lastPageTitle: "lastPageTitle", pageDescription: "pageDescription", itemsPerPageDescriptions: "itemsPerPageDescriptions", pageSizeValue1: "pageSizeValue1", pageSizeValue2: "pageSizeValue2", pageSizeValue3: "pageSizeValue3", pageSizeValue4: "pageSizeValue4", pageSizeValue5: "pageSizeValue5", pageButtons: "pageButtons", pageInfo: "pageInfo", hasNext: "hasNext", hasPrevious: "hasPrevious", pageSize: "pageSize" }, outputs: { onPageChange$: "onPageChange$", setNumberOfItems$: "setNumberOfItems$", setPage$: "setPage$" }, decls: 14, vars: 11, consts: [[1, "pagination-buttons-container"], ["id", "first-page", "class", "anchor-button", 3, "title", "click", 4, "ngIf"], ["id", "prev-page", "class", "anchor-button", 3, "title", "click", 4, "ngIf"], ["id", "page-info"], [1, "page-buttons-container"], [3, "value", "innerValue", "class", "title", "click", 4, "ngFor", "ngForOf"], ["href", "#", "id", "next-page", "class", "anchor-button", 3, "title", "click", 4, "ngIf"], ["href", "#", "id", "last-page", "class", "anchor-button", 3, "title", "click", 4, "ngIf"], [1, "number-items-page"], [1, "label-page-items"], [3, "title", "innerValue", "value", "class", "click", 4, "ngFor", "ngForOf"], ["id", "first-page", 1, "anchor-button", 3, "title", "click"], [3, "src", "alt"], ["id", "prev-page", 1, "anchor-button", 3, "title", "click"], [3, "value", "innerValue", "title", "click"], ["href", "#", "id", "next-page", 1, "anchor-button", 3, "title", "click"], ["href", "#", "id", "last-page", 1, "anchor-button", 3, "title", "click"], [3, "title", "innerValue", "value", "click"]], template: function GlSharedComponentPagingComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelementStart(0, "div");
+        ɵngcc0.ɵɵelementStart(1, "div", 0);
+        ɵngcc0.ɵɵtemplate(2, GlSharedComponentPagingComponent_a_2_Template, 2, 3, "a", 1);
+        ɵngcc0.ɵɵtemplate(3, GlSharedComponentPagingComponent_a_3_Template, 2, 3, "a", 2);
+        ɵngcc0.ɵɵelementStart(4, "span", 3);
+        ɵngcc0.ɵɵtext(5);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(6, "div", 4);
+        ɵngcc0.ɵɵtemplate(7, GlSharedComponentPagingComponent_gl_shared_component_input_button_simple_7_Template, 1, 5, "gl-shared-component-input-button-simple", 5);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵtemplate(8, GlSharedComponentPagingComponent_a_8_Template, 2, 3, "a", 6);
+        ɵngcc0.ɵɵtemplate(9, GlSharedComponentPagingComponent_a_9_Template, 2, 3, "a", 7);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(10, "div", 8);
+        ɵngcc0.ɵɵelementStart(11, "span", 9);
+        ɵngcc0.ɵɵtext(12);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵtemplate(13, GlSharedComponentPagingComponent_gl_shared_component_input_button_simple_13_Template, 1, 5, "gl-shared-component-input-button-simple", 10);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵclassMapInterpolate1("pagination-container ", ctx.type, "");
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.hasPrevious);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.hasPrevious);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵtextInterpolate(ctx.pageInfo);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵproperty("ngForOf", ctx.pageButtons);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.hasNext);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.hasNext);
+        ɵngcc0.ɵɵadvance(3);
+        ɵngcc0.ɵɵtextInterpolate(ctx.itemsPerPageDescriptions);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngForOf", ctx.itemsPerPage);
+    } }, directives: [ɵngcc1.NgIf, ɵngcc1.NgForOf, GlSharedComponentInputButtonSimpleComponent], styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%] {max-width:100vw}[_nghost-%COMP%]  .pagination-container{max-width:100vw;position:relative;background-color:#1a1b1d;font-size:.5em;display:flex;align-items:center;justify-content:center;height:2.5em}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container{flex-grow:1;justify-content:center;display:flex;align-items:center}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container #page-info{color:#fff;margin:auto 1.2em;font-size:.8em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:none}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container .page-buttons-container{display:flex;padding:0 1em;width:30%}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple{height:1.5em;width:1.5em;margin:0 .2em;display:flex}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button{font-family:Montserrat,sans-serif;font-weight:300;border-radius:.2em;font-size:.8em}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button:not(hover){background-color:rgba(255,255,255,.1);transition:.5s ease-in-out}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button:hover{background-color:rgba(255,255,255,.3);transition:.2s ease-in-out}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button.active{font-family:Montserrat,sans-serif;font-weight:700;background-color:#fff;color:#64666c;transition:.5s ease-in-out}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container .anchor-button{width:1.5em;height:1.5em;padding:.5em 0}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container .anchor-button#first-page{margin:0 .5em 0 0}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container .anchor-button#last-page{margin:0 0 0 .5em}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container .anchor-button img{height:1.5em;width:1.5em}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container .anchor-button:not(hover){opacity:.2;transition:.2s ease-in-out}[_nghost-%COMP%]  .pagination-container .pagination-buttons-container .anchor-button:hover{opacity:1;transition:.2s ease-in-out}[_nghost-%COMP%]  .pagination-container .number-items-page{position:absolute;right:.4em;top:.5em;display:flex;align-items:center;height:1.5em}[_nghost-%COMP%]  .pagination-container .number-items-page .label-page-items{font-family:Montserrat,sans-serif;font-weight:300;padding:.8em 1em .3em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:.8em;color:#fff;opacity:1;text-transform:uppercase;margin:0 .5em 0 0}[_nghost-%COMP%]  .pagination-container .number-items-page gl-shared-component-input-button-simple{height:1.5em;width:1.5em;margin:0 .2em;flex:1 1 .2em;display:flex;justify-content:center}[_nghost-%COMP%]  .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button{font-family:Montserrat,sans-serif;font-weight:300;min-height:1.5em;min-width:1.5em;flex:1 1 .2em;border-radius:.2em;font-size:.6em}[_nghost-%COMP%]  .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button:not(hover){background-color:rgba(255,255,255,.1);transition:.5s ease-in-out}[_nghost-%COMP%]  .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button:hover{background-color:rgba(255,255,255,.3);transition:.2s ease-in-out}[_nghost-%COMP%]  .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button.active{font-family:Montserrat,sans-serif;font-weight:900;font-size:.7em;background-color:#fff;color:#4b4d52;transition:.5s ease-in-out}[_nghost-%COMP%]  .pagination-container.translucid{background-color:rgba(0,0,0,.2)}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){[_nghost-%COMP%]  .pagination-container .number-items-page{width:20em;height:1.8em;top:.4em}}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentPagingComponent, [{
+        type: Component,
+        args: [{
+                selector: 'gl-shared-component-paging',
+                template: "<div class=\"pagination-container {{ type }}\">\n  <div class=\"pagination-buttons-container\">\n    <a id=\"first-page\" class=\"anchor-button\"\n       *ngIf=\"hasPrevious\" (click)=\"onPageChange($event, 'first')\"\n       [title]=\"firstPageTitle\">\n      <img [src]=\"firstIcon\" [alt]=\"firstPageTitle\">\n    </a>\n    <a id=\"prev-page\" class=\"anchor-button\"\n       *ngIf=\"hasPrevious\" (click)=\"onPageChange($event, 'previous')\"\n       [title]=\"previousPageTitle\">\n      <img [src]=\"previousIcon\" [alt]=\"previousPageTitle\">\n    </a>\n    <span id=\"page-info\">{{ pageInfo }}</span>\n    <div class=\"page-buttons-container\">\n      <gl-shared-component-input-button-simple\n        *ngFor=\"let button of pageButtons\"\n        [value]=\"button.page.toString()\"\n        [innerValue]=\"button.page.toString()\"\n        (click)=\"setPage(button.page)\"\n        [class]=\"button.active ? 'active' : ''\"\n        [title]=\"pageDescription + ' ' + button.page.toString()\"\n      ></gl-shared-component-input-button-simple>\n    </div>\n    <a href=\"#\" id=\"next-page\" class=\"anchor-button\"\n       *ngIf=\"hasNext\" (click)=\"onPageChange($event, 'next')\"\n       [title]=\"nextPageTitle\">\n      <img [src]=\"nextIcon\" [alt]=\"nextPageTitle\">\n    </a>\n    <a href=\"#\" id=\"last-page\" class=\"anchor-button\"\n       *ngIf=\"hasNext\" (click)=\"onPageChange($event, 'last')\"\n       [title]=\"lastPageTitle\">\n      <img [src]=\"lastIcon\" [alt]=\"lastPageTitle\">\n    </a>\n  </div>\n\n  <div class=\"number-items-page\" >\n    <span class=\"label-page-items\">{{ itemsPerPageDescriptions }}</span>\n    <gl-shared-component-input-button-simple\n      *ngFor=\"let item of itemsPerPage\"\n        [title]=\"item.title\"\n        [innerValue]=\"item.innerValue\"\n        [value]=\"item.value\"\n        [class]=\"item.class\"\n        (click)=\"setNumberOfItems(item.pageSize)\"\n    ></gl-shared-component-input-button-simple>\n  </div>\n</div>\n",
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{max-width:100vw}:host::ng-deep .pagination-container{max-width:100vw;position:relative;background-color:#1a1b1d;font-size:.5em;display:flex;align-items:center;justify-content:center;height:2.5em}:host::ng-deep .pagination-container .pagination-buttons-container{flex-grow:1;justify-content:center;display:flex;align-items:center}:host::ng-deep .pagination-container .pagination-buttons-container #page-info{color:#fff;margin:auto 1.2em;font-size:.8em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:none}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container{display:flex;padding:0 1em;width:30%}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple{height:1.5em;width:1.5em;margin:0 .2em;display:flex}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button{font-family:Montserrat,sans-serif;font-weight:300;border-radius:.2em;font-size:.8em}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button:not(hover){background-color:rgba(255,255,255,.1);transition:.5s ease-in-out}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button:hover{background-color:rgba(255,255,255,.3);transition:.2s ease-in-out}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button.active{font-family:Montserrat,sans-serif;font-weight:700;background-color:#fff;color:#64666c;transition:.5s ease-in-out}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button{width:1.5em;height:1.5em;padding:.5em 0}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button#first-page{margin:0 .5em 0 0}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button#last-page{margin:0 0 0 .5em}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button img{height:1.5em;width:1.5em}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button:not(hover){opacity:.2;transition:.2s ease-in-out}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button:hover{opacity:1;transition:.2s ease-in-out}:host::ng-deep .pagination-container .number-items-page{position:absolute;right:.4em;top:.5em;display:flex;align-items:center;height:1.5em}:host::ng-deep .pagination-container .number-items-page .label-page-items{font-family:Montserrat,sans-serif;font-weight:300;padding:.8em 1em .3em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:.8em;color:#fff;opacity:1;text-transform:uppercase;margin:0 .5em 0 0}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple{height:1.5em;width:1.5em;margin:0 .2em;flex:1 1 .2em;display:flex;justify-content:center}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button{font-family:Montserrat,sans-serif;font-weight:300;min-height:1.5em;min-width:1.5em;flex:1 1 .2em;border-radius:.2em;font-size:.6em}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button:not(hover){background-color:rgba(255,255,255,.1);transition:.5s ease-in-out}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button:hover{background-color:rgba(255,255,255,.3);transition:.2s ease-in-out}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button.active{font-family:Montserrat,sans-serif;font-weight:900;font-size:.7em;background-color:#fff;color:#4b4d52;transition:.5s ease-in-out}:host::ng-deep .pagination-container.translucid{background-color:rgba(0,0,0,.2)}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){:host::ng-deep .pagination-container .number-items-page{width:20em;height:1.8em;top:.4em}}"]
+            }]
+    }], function () { return []; }, { type: [{
+            type: Input
+        }], firstPageTitle: [{
+            type: Input
+        }], previousPageTitle: [{
+            type: Input
+        }], nextPageTitle: [{
+            type: Input
+        }], lastPageTitle: [{
+            type: Input
+        }], pageDescription: [{
+            type: Input
+        }], itemsPerPageDescriptions: [{
+            type: Input
+        }], pageSizeValue1: [{
+            type: Input
+        }], pageSizeValue2: [{
+            type: Input
+        }], pageSizeValue3: [{
+            type: Input
+        }], pageSizeValue4: [{
+            type: Input
+        }], pageSizeValue5: [{
+            type: Input
+        }], pageButtons: [{
+            type: Input
+        }], onPageChange$: [{
+            type: Output
+        }], setNumberOfItems$: [{
+            type: Output
+        }], setPage$: [{
+            type: Output
+        }], pageInfo: [{
+            type: Input
+        }], hasNext: [{
+            type: Input
+        }], hasPrevious: [{
+            type: Input
+        }], pageSize: [{
+            type: Input
+        }] }); })();
+    return GlSharedComponentPagingComponent;
+}());
+
 var GlComponentModule = /** @class */ (function () {
     function GlComponentModule() {
     }
@@ -3713,6 +3980,7 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         GlSharedComponentMenuBackgroundComponent,
         GlSharedComponentMenuComponent,
         GlSharedComponentMenuItemComponent,
+        GlSharedComponentPagingComponent,
         GlSharedComponentTitleLabelSimpleComponent,
         GlSharedComponentTitleLabelButtonSimpleComponent,
         GlSharedComponentTitleLabelButtonContainerComponent,
@@ -3755,6 +4023,7 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
         GlSharedComponentModalAttachmentLinkComponent,
         GlSharedComponentModalHeaderComponent,
         GlSharedComponentModalLoadingComponent,
+        GlSharedComponentPagingComponent,
         GlSharedComponentTitlePageComponent,
         GlSharedComponentTitleLabelButtonSimpleComponent,
         GlSharedComponentTitleLabelButtonContainerComponent,
@@ -3794,6 +4063,7 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                     GlSharedComponentMenuBackgroundComponent,
                     GlSharedComponentMenuComponent,
                     GlSharedComponentMenuItemComponent,
+                    GlSharedComponentPagingComponent,
                     GlSharedComponentTitleLabelSimpleComponent,
                     GlSharedComponentTitleLabelButtonSimpleComponent,
                     GlSharedComponentTitleLabelButtonContainerComponent,
@@ -3842,6 +4112,7 @@ GlComponentModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlCompo
                     GlSharedComponentModalAttachmentLinkComponent,
                     GlSharedComponentModalHeaderComponent,
                     GlSharedComponentModalLoadingComponent,
+                    GlSharedComponentPagingComponent,
                     GlSharedComponentTitlePageComponent,
                     GlSharedComponentTitleLabelButtonSimpleComponent,
                     GlSharedComponentTitleLabelButtonContainerComponent,
@@ -4100,6 +4371,6 @@ GlSharedViewModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function GlShar
  * Generated bundle index. Do not edit.
  */
 
-export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentAttachmentImagePreviewComponent, GlSharedComponentAttachmentImagePreviewService, GlSharedComponentAttachmentItemComponent, GlSharedComponentButtonAttachmentFileComponent, GlSharedComponentButtonAttachmentFileService, GlSharedComponentButtonAttachmentLinkComponent, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalAttachmentLinkComponent, GlSharedComponentModalAttachmentLinkService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule };
+export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentAttachmentImagePreviewComponent, GlSharedComponentAttachmentImagePreviewService, GlSharedComponentAttachmentItemComponent, GlSharedComponentButtonAttachmentFileComponent, GlSharedComponentButtonAttachmentFileService, GlSharedComponentButtonAttachmentLinkComponent, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalAttachmentLinkComponent, GlSharedComponentModalAttachmentLinkService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentPagingComponent, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule };
 
 //# sourceMappingURL=gl-ng-frontend.js.map
