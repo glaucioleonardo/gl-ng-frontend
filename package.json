@@ -45,6 +45,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "publish": "cd dist\\gl-ng-frontend && npm publish && cd.. && cd..",
     "copy-assets": "copyfiles -a -u3 projects/gl-ng-frontend/src/assets/** dist/gl-ng-frontend",
     "production": "ng build --prod && npm run copy-assets",
     "production-ngcc": "ng build --prod && ngcc && npm run copy-assets",
