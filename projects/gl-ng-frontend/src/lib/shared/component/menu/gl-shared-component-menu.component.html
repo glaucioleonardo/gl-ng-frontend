@@ -5,7 +5,7 @@
 <div #container class="menu-container {{ className }} {{ menuPosition === 'left' ? 'left' : 'right' }}">
   <nav class="menu-nav-container">
     <ul class="menu-content">
-      <li>
+      <li class="menu-header-container">
         <div class="menu-header">
           <div class="menu-top-icons-container">
             <img id="close-menu-button"
@@ -27,16 +27,33 @@
           </div>
         </div>
       </li>
-      <gl-shared-component-menu-item
-        *ngFor="let menuItem of menuItems"
-        [absolute]="menuItem.absolute"
-        [alt]="menuItem.alt"
-        [src]="menuItem.src"
-        [routerLink]="menuItem.href"
-        [href]="menuItem.href"
-        [content]="menuItem.content"
-        [itemClass]="menuItem.class"
-      ></gl-shared-component-menu-item>
+      <li class="menu-content-container {{ title?.length > 0 ? 'has-title' : '' }}">
+        <gl-shared-component-menu-item
+          *ngFor="let menuItem of menuItems"
+          [absolute]="menuItem.absolute"
+          [alt]="menuItem.alt"
+          [src]="menuItem.src"
+          [routerLink]="menuItem.href"
+          [href]="menuItem.href"
+          [content]="menuItem.content"
+          [itemClass]="menuItem.class"
+          [target]="menuItem.target"
+        ></gl-shared-component-menu-item>
+        <gl-shared-component-menu-item
+          *ngFor="let menuItem of menuItemsComplex"
+          [absolute]="menuItem.absolute"
+          [alt]="menuItem.alt"
+          [src]="menuItem.src"
+          [routerLink]="menuItem.href"
+          [href]="menuItem.href"
+          [content]="menuItem.content"
+          [itemClass]="menuItem.class"
+          [hasSubitem]="menuItem.hasSubitem"
+          [active]="menuItem.active"
+          [target]="menuItem.target"
+          [subItems]="menuItem.subItems"
+        ></gl-shared-component-menu-item>
+      </li>
       <li class="logo-main-container">
         <div class="logo-container">
           <img class="main-logo" [src]="menuLogo" alt="Menu Logo"/>

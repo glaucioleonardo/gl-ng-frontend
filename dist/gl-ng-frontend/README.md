@@ -1,4 +1,8 @@
 # gl-ng-frontend
+[![version](https://img.shields.io/npm/v/gl-ng-frontend)](https://www.npmjs.com/package/gl-ng-frontend) 
+[![downloads](https://img.shields.io/npm/types/gl-ng-frontend)](https://www.npmjs.com/package/gl-ng-frontend) 
+[![downloads](https://img.shields.io/npm/dw/gl-ng-frontend)](https://www.npmjs.com/package/gl-ng-frontend)
+
 ### What is this repository for? ###
 This package (**g**laucio**l**eonardo-a**n****g**ular-**frontend**) is a common code and components designed for Angular 2+ to be used among web front-end development.<br>
 

@@ -1,12 +1,39 @@
-<li id={this.props.id} class="menu-title {{ itemClass }}">
+<li class="menu-title {{ itemClass }}" *ngIf="!hasSubitem">
   <img [src]="src" class="menu-icons" [alt]="alt"/>
   <a
+    class="menu-item"
     *ngIf="absolute"
     [href]="'externalRedirect'"
-    (click)="openAbsoluteLink($event, href)"
+    (click)="openAbsoluteLink($event, href, target)"
   >{{ content }}</a>
   <a *ngIf="!absolute"
+     class="menu-item"
      [routerLink]="href"
      (click)="onClick.emit(null)"
   >{{ content }}</a>
 </li>
+
+<li class="menu-title {{ itemClass }} {{ active ? 'active' : '' }}" *ngIf="hasSubitem">
+  <img [src]="src" class="menu-icons" [alt]="alt"/>
+  <div
+    class="menu-item"
+    (click)="toggleActive()"
+  >{{ content }}</div>
+  <img src="../assets/img/icon/drop-down/arrow-down.svg" class="menu-arrow" [alt]="alt"/>
+</li>
+<ol *ngIf="hasSubitem && active" [@fadeInOut] class="subitem-container {{ active ? 'active' : '' }}">
+  <li class="menu-title adding-row-animated {{ item.class }}" *ngFor="let item of subItems">
+    <img [src]="item.src" class="menu-icons" [alt]="item.alt"/>
+    <a
+      class="menu-item"
+      *ngIf="item.absolute"
+      [href]="'externalRedirect'"
+      (click)="openAbsoluteLink($event, item.href, item.target)"
+    >{{ item.content }}</a>
+    <a *ngIf="!item.absolute"
+       class="menu-item"
+       [routerLink]="item.href"
+       (click)="onClick.emit(null)"
+    >{{ item.content }}</a>
+  </li>
+</ol>

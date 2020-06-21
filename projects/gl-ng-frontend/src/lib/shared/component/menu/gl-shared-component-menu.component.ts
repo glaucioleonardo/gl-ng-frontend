@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { GlSharedComponentMenuService } from './gl-shared-component-menu.service';
-import { IMenuItem } from './item/gl-shared-component-menu-item.interface';
+import { IMenuItem, IMenuItemComplex } from './item/gl-shared-component-menu-item.interface';
 import { TMenuPosition } from './gl-shared-component-menu.interface';
 
 @Component({
@@ -17,6 +17,7 @@ export class GlSharedComponentMenuComponent implements OnInit {
   @Input() subtitle: string;
   @Input() systemVersion: string;
   @Input() menuItems: IMenuItem[];
+  @Input() menuItemsComplex: IMenuItemComplex[];
   @Input() showSettings: boolean;
   @Input() className: string;
   @Input() settingsUrl: string;

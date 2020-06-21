@@ -5,6 +5,8 @@
 @import "../../assets/style/fonts/montserrat";
 @import "../../assets/style/patterns/gradient";
 
+$max-width: 17em;
+
 :host::ng-deep {
   .menu-container {
     @include pattern-gradient-border(0.3em, top);
@@ -16,8 +18,8 @@
     bottom: 0;
     overflow: hidden;
     width: 85vw;
-    max-width: 17em;
-    min-width: 17em;
+    max-width: $max-width;
+    min-width: $max-width;
     z-index: 10000;
 
     flex-grow: 1;
@@ -39,7 +41,7 @@
     }
 
     .menu-nav-container {
-      overflow: auto;
+      overflow: hidden;
       //noinspection CssUnknownProperty
       scrollbar-width: none;
       max-height: 100%;
@@ -52,109 +54,109 @@
         flex-grow: 1;
         position: relative;
 
-        .menu-header {
-          display: flex;
-          flex-direction: column;
-          margin: 0.5em 1em 1em 0.5em;
+        .menu-header-container {
+          max-width: $max-width;
 
-          .menu-top-icons-container {
+          .menu-header {
             display: flex;
-            margin: 0 0 1.5em 0;
+            flex-direction: column;
+            margin: 0.5em 1em 1em 0.5em;
 
-            .close-menu, .settings-menu {
-              cursor: pointer;
-              height: 1.5em;
-              width: 1.5em;
+            .menu-top-icons-container {
+              display: flex;
+              margin: 0 0 1.5em 0;
 
-              &:active, &:hover {
-                opacity: 1;
-                animation: increase-decrease 0.4s ease-in-out;
-                animation-fill-mode: forwards;
+              .close-menu, .settings-menu {
+                cursor: pointer;
+                height: 1.5em;
+                width: 1.5em;
+
+                &:active, &:hover {
+                  opacity: 1;
+                  animation: increase-decrease 0.4s ease-in-out;
+                  animation-fill-mode: forwards;
+                }
+              }
+
+              .close-menu {
+                margin: 0 0.2em 0 0;
               }
             }
+            .menu-header-title {
+              .title, .subtitle {
+                text-transform: uppercase;
+                user-select: none;
+                color: $white;
+                margin: 0;
 
-            .close-menu {
-              margin: 0 0.2em 0 0;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+              }
+
+              .title {
+                @include font-family('bold');
+                font-size: 0.9em;
+              }
+
+              .subtitle {
+                @include font-family('thin');
+                font-size: 1.5em;
+              }
             }
           }
-          .menu-header-title {
-            .title, .subtitle {
-              text-transform: uppercase;
-              user-select: none;
-              color: $white;
-              margin: 0;
-            }
-
-            .title {
-              @include font-family('bold');
-              font-size: 0.9em;
-              display: none;
-            }
-
-            .subtitle {
-              @include font-family('thin');
-              font-size: 1.5em;
-            }
+          .admin-settings {
+            visibility: collapse;
           }
-        }
-
-        .admin-settings {
-          visibility: collapse;
-        }
-
-        .menu-item-container {
-          display: flex;
-          flex-direction: column;
-          font-size: 0.8em;
-          background-color: rgba($color: $white, $alpha: 0.3);
-
-          .menu-item {
-            min-height: 3em;
-            font-size: 0.8em;
+          .menu-item-container {
             display: flex;
-            align-items: center;
-            padding: 0.2em;
+            flex-direction: column;
+            font-size: 0.8em;
+            background-color: rgba($color: $white, $alpha: 0.3);
 
-            &:nth-child(n + 2) {
-              border-top: 1px solid;
-              border-image-source : linear-gradient(90deg, transparent 15%, $white-translucid-1 15.01%,  rgba($color: $white, $alpha: 0.05) 98%, transparent 98%);
-              border-image-slice: 1;
+            .menu-item {
+              min-height: 3em;
+              font-size: 0.8em;
+              display: flex;
+              align-items: center;
+              padding: 0.2em;
+
+              &:nth-child(n + 2) {
+                border-top: 1px solid;
+                border-image-source : linear-gradient(90deg, transparent 15%, $white-translucid-1 15.01%,  rgba($color: $white, $alpha: 0.05) 98%, transparent 98%);
+                border-image-slice: 1;
+              }
+
+              &:hover {
+                background-color: rgba($color: $dark-gray-1, $alpha: 0.3);
+              }
+
+              transition: all 0.2s ease-in-out;
             }
 
-            &:hover {
-              background-color: rgba($color: $dark-gray-1, $alpha: 0.3);
+            .menu-icons {
+              margin: 0 0 0 0.7em;
+              height: 1.8em;
+              width: 1.8em;
+              opacity: 0.5;
             }
 
-            transition: all 0.2s ease-in-out;
-          }
-
-          .menu-icons {
-            margin: 0 0 0 0.7em;
-            height: 1.8em;
-            width: 1.8em;
-            opacity: 0.5;
-          }
-
-          a {
-            color: $white-translucid-6;
-            padding: 0.8em;
-            flex-grow: 1;
-            text-decoration: none;
+            a {
+              color: $white-translucid-6;
+              padding: 0.8em;
+              flex-grow: 1;
+              text-decoration: none;
+            }
           }
         }
+        .menu-content-container {
+          max-height: calc(100vh - (12.15em));
+          max-width: $max-width;
+          overflow-y: auto;
+          overflow-x: hidden !important;
 
-        .menu-social-network {
-          display: flex;
-          justify-content: center;
-          margin: 3em 0 0 0;
-          flex-grow: 1;
-          height: 100%;
-          align-items: flex-end;
-
-          .menu-icons {
-            height: 2em;
-            width: 2em;
-            margin: 0.2em;
+          &.has-title {
+            max-height: calc(100vh - (13em));
           }
         }
       }
