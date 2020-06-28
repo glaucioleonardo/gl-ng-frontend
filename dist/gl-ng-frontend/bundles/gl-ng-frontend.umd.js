@@ -2012,17 +2012,27 @@
             this.modal(false);
         };
         GlSharedComponentModalAttachmentLinkService.prototype.onConfirm = function () {
-            if (this.validData()) {
-                var values = {
-                    name: this._name,
-                    url: this._url,
-                    icon: this.linkIcon,
-                    editing: this.editing,
-                    editId: this.editId
-                };
-                this.currentValue.next(values);
-                this.modal(false);
-            }
+            return __awaiter(this, void 0, void 0, function () {
+                var values;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, this.validData()];
+                        case 1:
+                            if (_a.sent()) {
+                                values = {
+                                    name: this._name,
+                                    url: this._url,
+                                    icon: this.linkIcon,
+                                    editing: this.editing,
+                                    editId: this.editId
+                                };
+                                this.currentValue.next(values);
+                                this.modal(false);
+                            }
+                            return [2 /*return*/];
+                    }
+                });
+            });
         };
         GlSharedComponentModalAttachmentLinkService.prototype.onName = function (e) {
             this._name = e.currentTarget.value;
@@ -2031,24 +2041,38 @@
             this._url = e.currentTarget.value;
         };
         GlSharedComponentModalAttachmentLinkService.prototype.validData = function () {
-            var urlRegex = /^(http|https):\/\/(([a-zA-Z0-9$\-_.+!*'(),;:&=]|%[0-9a-fA-F]{2})+@)?(((25[0-5]|2[0-4][0-9]|[0-1][0-9][0-9]|[1-9][0-9]|[0-9])(\.(25[0-5]|2[0-4][0-9]|[0-1][0-9][0-9]|[1-9][0-9]|[0-9])){3})|localhost|([a-zA-Z0-9\-\u00C0-\u017F]+\.)+([a-zA-Z]{2,}))(:[0-9]+)?(\/(([a-zA-Z0-9$\-_.+!*'(),;:@&=]|%[0-9a-fA-F]{2})*(\/([a-zA-Z0-9$\-_.+!*'(),;:@&=]|%[0-9a-fA-F]{2})*)*)?(\?([a-zA-Z0-9$\-_.+!*'(),;:@&=\/?]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9$\-_.+!*'(),;:@&=\/?]|%[0-9a-fA-F]{2})*)?)?$/;
-            var tempUrl = this._url != null && !this._url.includes('http://') ? "http://" + this._url : this._url;
-            var validUrl = new RegExp(urlRegex).test(tempUrl);
-            if (this._name == null || this._name.trim().length === 0) {
-                this._alert.show('Por favor, informe o nome do arquivo!');
-                return false;
-            }
-            else if (this._url == null || this._url.trim().length === 0) {
-                this._alert.show('Por favor, informe o url do arquivo!');
-                return false;
-            }
-            else if (!validUrl) {
-                this._alert.show('Por favor, informe um url válido!');
-            }
-            else {
-                this._url = tempUrl;
-                return true;
-            }
+            return __awaiter(this, void 0, void 0, function () {
+                var urlRegex, tempUrl, validUrl;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+                            tempUrl = this._url != null && !this._url.includes('http://') && !this._url.includes('https://') ? "http://" + this._url : this._url;
+                            validUrl = new RegExp(urlRegex).test(this._url);
+                            if (!(this._name == null || this._name.trim().length === 0)) return [3 /*break*/, 2];
+                            return [4 /*yield*/, this._alert.show('Por favor, informe o nome do arquivo!')];
+                        case 1:
+                            _a.sent();
+                            return [2 /*return*/, false];
+                        case 2:
+                            if (!(this._url == null || this._url.trim().length === 0)) return [3 /*break*/, 4];
+                            return [4 /*yield*/, this._alert.show('Por favor, informe o url do arquivo!')];
+                        case 3:
+                            _a.sent();
+                            return [2 /*return*/, false];
+                        case 4:
+                            if (!!validUrl) return [3 /*break*/, 6];
+                            return [4 /*yield*/, this._alert.show('Por favor, informe um url válido!')];
+                        case 5:
+                            _a.sent();
+                            return [3 /*break*/, 7];
+                        case 6:
+                            this._url = tempUrl;
+                            return [2 /*return*/, true];
+                        case 7: return [2 /*return*/];
+                    }
+                });
+            });
         };
         GlSharedComponentModalAttachmentLinkService.prototype.modal = function (show) {
             var _this = this;
@@ -2082,7 +2106,7 @@
         };
         GlSharedComponentModalAttachmentLinkService.prototype.onModalKeyUp = function (e) {
             if (e.key === 'Enter') {
-                this.onConfirm();
+                return this.onConfirm();
             }
             else if (e.key === 'Escape') {
                 this.onCancel();

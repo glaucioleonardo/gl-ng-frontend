@@ -1743,17 +1743,19 @@ let GlSharedComponentModalAttachmentLinkService = class GlSharedComponentModalAt
         this.modal(false);
     }
     onConfirm() {
-        if (this.validData()) {
-            const values = {
-                name: this._name,
-                url: this._url,
-                icon: this.linkIcon,
-                editing: this.editing,
-                editId: this.editId
-            };
-            this.currentValue.next(values);
-            this.modal(false);
-        }
+        return __awaiter(this, void 0, void 0, function* () {
+            if (yield this.validData()) {
+                const values = {
+                    name: this._name,
+                    url: this._url,
+                    icon: this.linkIcon,
+                    editing: this.editing,
+                    editId: this.editId
+                };
+                this.currentValue.next(values);
+                this.modal(false);
+            }
+        });
     }
     onName(e) {
         this._name = e.currentTarget.value;
@@ -1762,24 +1764,26 @@ let GlSharedComponentModalAttachmentLinkService = class GlSharedComponentModalAt
         this._url = e.currentTarget.value;
     }
     validData() {
-        const urlRegex = /^(http|https):\/\/(([a-zA-Z0-9$\-_.+!*'(),;:&=]|%[0-9a-fA-F]{2})+@)?(((25[0-5]|2[0-4][0-9]|[0-1][0-9][0-9]|[1-9][0-9]|[0-9])(\.(25[0-5]|2[0-4][0-9]|[0-1][0-9][0-9]|[1-9][0-9]|[0-9])){3})|localhost|([a-zA-Z0-9\-\u00C0-\u017F]+\.)+([a-zA-Z]{2,}))(:[0-9]+)?(\/(([a-zA-Z0-9$\-_.+!*'(),;:@&=]|%[0-9a-fA-F]{2})*(\/([a-zA-Z0-9$\-_.+!*'(),;:@&=]|%[0-9a-fA-F]{2})*)*)?(\?([a-zA-Z0-9$\-_.+!*'(),;:@&=\/?]|%[0-9a-fA-F]{2})*)?(#([a-zA-Z0-9$\-_.+!*'(),;:@&=\/?]|%[0-9a-fA-F]{2})*)?)?$/;
-        const tempUrl = this._url != null && !this._url.includes('http://') ? `http://${this._url}` : this._url;
-        const validUrl = new RegExp(urlRegex).test(tempUrl);
-        if (this._name == null || this._name.trim().length === 0) {
-            this._alert.show('Por favor, informe o nome do arquivo!');
-            return false;
-        }
-        else if (this._url == null || this._url.trim().length === 0) {
-            this._alert.show('Por favor, informe o url do arquivo!');
-            return false;
-        }
-        else if (!validUrl) {
-            this._alert.show('Por favor, informe um url válido!');
-        }
-        else {
-            this._url = tempUrl;
-            return true;
-        }
+        return __awaiter(this, void 0, void 0, function* () {
+            const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+            const tempUrl = this._url != null && !this._url.includes('http://') && !this._url.includes('https://') ? `http://${this._url}` : this._url;
+            const validUrl = new RegExp(urlRegex).test(this._url);
+            if (this._name == null || this._name.trim().length === 0) {
+                yield this._alert.show('Por favor, informe o nome do arquivo!');
+                return false;
+            }
+            else if (this._url == null || this._url.trim().length === 0) {
+                yield this._alert.show('Por favor, informe o url do arquivo!');
+                return false;
+            }
+            else if (!validUrl) {
+                yield this._alert.show('Por favor, informe um url válido!');
+            }
+            else {
+                this._url = tempUrl;
+                return true;
+            }
+        });
     }
     modal(show) {
         this.editing = false;
@@ -1811,7 +1815,7 @@ let GlSharedComponentModalAttachmentLinkService = class GlSharedComponentModalAt
     }
     onModalKeyUp(e) {
         if (e.key === 'Enter') {
-            this.onConfirm();
+            return this.onConfirm();
         }
         else if (e.key === 'Escape') {
             this.onCancel();

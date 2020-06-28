@@ -16,11 +16,11 @@ export declare class GlSharedComponentModalAttachmentLinkService {
     constructor(_alert: GlSharedComponentModalAlertService);
     setup(name: HTMLInputElement, url: HTMLInputElement): void;
     onCancel(): void;
-    onConfirm(): void;
+    onConfirm(): Promise<void>;
     onName(e: Event): void;
     onUrl(e: Event): void;
-    validData(): boolean;
+    validData(): Promise<boolean>;
     modal(show: any): void;
     edit(name: string, url: string, editId: number): void;
-    onModalKeyUp(e: KeyboardEvent): void;
+    onModalKeyUp(e: KeyboardEvent): Promise<void>;
 }
