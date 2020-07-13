@@ -13,130 +13,143 @@ $default-transition: all 0.2s ease-in-out;
   flex: 1 0 auto;
   position: relative;
 
-  mat-form-field {
+  .input-container {
     display: flex;
-    flex-grow: 1;
-    margin: 0 0.5px 0 0.5px;
-    margin: 0;
 
-    .mat-form-field-wrapper {
+    mat-form-field {
       display: flex;
       flex-grow: 1;
-      flex-direction: column;
-      padding: 0;
+      margin: 0;
 
-      .mat-form-field-flex {
+      .mat-form-field-wrapper {
         display: flex;
         flex-grow: 1;
-        align-items: inherit;
+        flex-direction: column;
+        padding: 0;
 
-        .mat-form-field-infix {
-          padding: 0;
-          //noinspection CssRedundantUnit
-          flex: 1 1 0px;
-          border: none;
-          width: 100%;
+        .mat-form-field-flex {
           display: flex;
+          flex-grow: 1;
+          align-items: inherit;
 
-          .combobox-container {
+          .mat-form-field-infix {
+            padding: 0;
+            //noinspection CssRedundantUnit
+            flex: 1 1 0px;
+            border: none;
+            width: 100%;
             display: flex;
-            flex-grow: 1;
-            flex-direction: row;
-            pointer-events: none;
 
-            .mat-input-element {
-              @include font-family(regular);
-              padding: 0.8em;
-              border: none;
-              background-color: $dark-gray-2;
-              color: $white;
-              font-size: 0.45em;
+            .combobox-container {
+              display: flex;
               flex-grow: 1;
-              margin: 0;
+              flex-direction: row;
+              pointer-events: none;
 
-              &::placeholder {
-                color: $dark-gray !important;
-              }
-
-              &.left { text-align: left; }
-              &.center { text-align: center; }
-              &.right { text-align: right; }
-
-              &.light {
-                background-color: $black-translucid-1;
-
-                &::placeholder {
-                  color: $white-translucid-2 !important;
-                }
-              }
-
-              &.dark {
-                background-color: $dark-gray-3-2;
-              }
-
-              .item-content:-ms-input-placeholder {
-                color: $dark-gray !important;
-              }
-
-              .item-content {
-                &.light:-ms-input-placeholder {
-                  color: $gray !important;
-                }
-              }
-            }
-
-            .arrow-down {
-              background-color: $dark-gray-2;
-              width: 0.6em;
-              padding: 0 0.5em;
-              transition: all 0.2s ease-in-out;
-
-              &:hover {
-                background-color: $dark-gray-2-3;
-                transition: all 0.2s ease-in-out;
-              }
-
-              &.light {
-                background-color: $black-translucid-1;
+              .mat-input-element {
+                @include font-family(regular);
+                position: relative;
+                padding: 0.8em;
+                border: none;
+                background-color: $dark-gray-2;
+                color: $white;
+                font-size: 0.45em;
+                flex-grow: 1;
+                margin: 0;
 
                 &::placeholder {
-                  color: $white-translucid-2 !important;
+                  color: $dark-gray !important;
                 }
 
-                &:hover {
-                  background-color: $black-translucid-2;
-                  transition: all 0.2s ease-in-out;
+                &.left { text-align: left; }
+                &.center { text-align: center; }
+                &.right { text-align: right; }
+
+                &.light {
+                  background-color: $black-translucid-1;
+
+                  &::placeholder {
+                    color: $white-translucid-2 !important;
+                  }
                 }
-                transition: all 0.2s ease-in-out;
-              }
 
-              &.dark {
-                background-color: $dark-gray-3-2;
-
-                &:hover {
-                  background-color: $dark-gray-3;
-                  transition: all 0.2s ease-in-out;
+                &.dark {
+                  background-color: $dark-gray-3-2;
                 }
-                transition: all 0.2s ease-in-out;
+
+                .item-content:-ms-input-placeholder {
+                  color: $dark-gray !important;
+                }
+
+                .item-content {
+                  &.light:-ms-input-placeholder {
+                    color: $gray !important;
+                  }
+                }
               }
 
-              &.read-only {
-                //display: none;
-                user-select: none;
-                pointer-events: none;
-              }
-            }
-
-            &.no-data, &.read-only {
-              .arrow-down {
-                display: none;
+              .clear-items {
+                width: 0.5em;
+                height: 0.5em;
+                position: absolute;
+                right: 1.5em;
+                top: 0.4em;
               }
             }
           }
         }
       }
     }
+
+    .arrow-down {
+      background-color: $dark-gray-2;
+      width: 0.6em;
+      height: 100%;
+      padding: 0 0.5em;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: $dark-gray-2-3;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &.light {
+        background-color: $black-translucid-1;
+
+        &::placeholder {
+          color: $white-translucid-2 !important;
+        }
+
+        &:hover {
+          background-color: $black-translucid-2;
+          transition: all 0.2s ease-in-out;
+        }
+        transition: all 0.2s ease-in-out;
+      }
+
+      &.dark {
+        background-color: $dark-gray-3-2;
+
+        &:hover {
+          background-color: $dark-gray-3;
+          transition: all 0.2s ease-in-out;
+        }
+        transition: all 0.2s ease-in-out;
+      }
+
+      &.read-only {
+        //display: none;
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+    &.no-data, &.read-only {
+      .arrow-down {
+        display: none;
+      }
+    }
   }
+
 
   @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .mat-form-field-label-wrapper {

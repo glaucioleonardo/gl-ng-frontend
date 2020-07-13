@@ -40,6 +40,7 @@ export class GlSharedComponentInputAutocompleteSimpleComponent implements OnInit
 
   private _loaded: boolean = false;
   readonly imageSource = '../assets/img/icon/drop-down/arrow-down.svg'
+  readonly clearSource = '../assets/img/icon/drop-down/clear.svg'
   autocompleteInput = new FormControl();
   filteredOptions: Observable<IComboBoxData[]>;
 
@@ -122,6 +123,20 @@ export class GlSharedComponentInputAutocompleteSimpleComponent implements OnInit
   reset(auto: MatAutocomplete, event: Event) {
     if (auto.options != null) { auto.options.map(option => option.deselect()); }
     (<HTMLInputElement>event.currentTarget).select();
+  }
+
+  clearItems(input: HTMLInputElement) {
+    input.value = null;
+    this.autocompleteInput.setValue(null);
+    this.currentValue.emit({ text: null, value: null });
+    setTimeout(() => {
+      input.click();
+    }, 100);
+  }
+
+  arrowClick() {
+    this.autocompleteInput.reset();
+    this.autocompleteInput.setValue('');
   }
 
   ngOnDestroy(): void {

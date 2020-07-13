@@ -29,6 +29,7 @@ export declare class GlSharedComponentInputAutocompleteSimpleComponent implement
     requiredField: string;
     private _loaded;
     readonly imageSource = "../assets/img/icon/drop-down/arrow-down.svg";
+    readonly clearSource = "../assets/img/icon/drop-down/clear.svg";
     autocompleteInput: FormControl;
     filteredOptions: Observable<IComboBoxData[]>;
     constructor(_service: GlSharedComponentInputAutocompleteSimpleService, overlay: Overlay);
@@ -37,6 +38,8 @@ export declare class GlSharedComponentInputAutocompleteSimpleComponent implement
     private filter;
     validate(): void;
     reset(auto: MatAutocomplete, event: Event): void;
+    clearItems(input: HTMLInputElement): void;
+    arrowClick(): void;
     ngOnDestroy(): void;
     ngOnChanges(changes: SimpleChanges): void;
 }
