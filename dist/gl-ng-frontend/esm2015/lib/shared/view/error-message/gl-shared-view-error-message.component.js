@@ -1,6 +1,5 @@
-import { __decorate } from "tslib";
 import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-let GlSharedViewErrorMessageComponent = class GlSharedViewErrorMessageComponent {
+export class GlSharedViewErrorMessageComponent {
     constructor() {
         this.logoHorizontalPosition = 'left';
         this.logoVerticalPosition = 'top';
@@ -17,67 +16,33 @@ let GlSharedViewErrorMessageComponent = class GlSharedViewErrorMessageComponent 
     errorButtonAction() {
         this.errorButtonAction$.emit();
     }
+}
+GlSharedViewErrorMessageComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-view-error-message',
+                template: "<div #mainContainer class=\"main-container\">\n  <gl-shared-component-logo-square\n    [horizontalPosition]=\"logoHorizontalPosition\"\n    [verticalPosition]=\"logoVerticalPosition\"\n    [imageAlt]=\"logoImageAlt\"\n    [imageScr]=\"logoImageScr\"\n  ></gl-shared-component-logo-square>\n  <gl-shared-component-error-message\n    [position]=\"errorPosition\"\n    [errorCode]=\"errorCode\"\n    [errorMessage]=\"errorMessage\"\n    [buttonLabel]=\"errorButtonLabel\"\n    (buttonAction$)=\"errorButtonAction()\"\n  ></gl-shared-component-error-message>\n  <gl-shared-component-footer-container [description]=\"footerMainDescription\">\n    <gl-shared-component-input-button-hyperlink\n      *ngIf=\"footerShowContainer\"\n      [description]=\"footerDescription\"\n      [imageDescription]=\"footerImageDescription\"\n      [imageSrc]=\"footerImageSrc\"\n      [link]=\"footerLink\"\n    ></gl-shared-component-input-button-hyperlink>\n  </gl-shared-component-footer-container>\n</div>\n",
+                styles: [":host::ng-deep{background-color:#1a1b1d;display:flex;flex-grow:1}:host::ng-deep .main-container{-webkit-animation-duration:3s;-webkit-animation-fill-mode:forwards;-webkit-animation-name:start;-webkit-animation-play-state:running;animation-duration:3s;animation-fill-mode:forwards;animation-name:start;animation-play-state:running;background-position:top;background-repeat:no-repeat;background-size:101%;display:flex;flex-direction:column;flex-grow:1;height:100vh;justify-items:stretch;overflow:hidden;width:100vw}@-webkit-keyframes start{0%{opacity:0}to{opacity:1}}@keyframes start{0%{opacity:0}to{opacity:1}}"]
+            },] }
+];
+GlSharedViewErrorMessageComponent.ctorParameters = () => [];
+GlSharedViewErrorMessageComponent.propDecorators = {
+    mainContainer: [{ type: ViewChild, args: ['mainContainer',] }],
+    blurBackground: [{ type: Input }],
+    background: [{ type: Input }],
+    logoImageScr: [{ type: Input }],
+    logoImageAlt: [{ type: Input }],
+    logoHorizontalPosition: [{ type: Input }],
+    logoVerticalPosition: [{ type: Input }],
+    errorPosition: [{ type: Input }],
+    errorCode: [{ type: Input }],
+    errorMessage: [{ type: Input }],
+    errorButtonLabel: [{ type: Input }],
+    errorButtonAction$: [{ type: Output }],
+    footerMainDescription: [{ type: Input }],
+    footerShowContainer: [{ type: Input }],
+    footerDescription: [{ type: Input }],
+    footerImageDescription: [{ type: Input }],
+    footerImageSrc: [{ type: Input }],
+    footerLink: [{ type: Input }]
 };
-__decorate([
-    ViewChild('mainContainer')
-], GlSharedViewErrorMessageComponent.prototype, "mainContainer", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "blurBackground", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "background", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "logoImageScr", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "logoImageAlt", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "logoHorizontalPosition", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "logoVerticalPosition", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "errorPosition", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "errorCode", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "errorMessage", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "errorButtonLabel", void 0);
-__decorate([
-    Output()
-], GlSharedViewErrorMessageComponent.prototype, "errorButtonAction$", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "footerMainDescription", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "footerShowContainer", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "footerDescription", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "footerImageDescription", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "footerImageSrc", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "footerLink", void 0);
-GlSharedViewErrorMessageComponent = __decorate([
-    Component({
-        selector: 'gl-shared-view-error-message',
-        template: "<div #mainContainer class=\"main-container\">\n  <gl-shared-component-logo-square\n    [horizontalPosition]=\"logoHorizontalPosition\"\n    [verticalPosition]=\"logoVerticalPosition\"\n    [imageAlt]=\"logoImageAlt\"\n    [imageScr]=\"logoImageScr\"\n  ></gl-shared-component-logo-square>\n  <gl-shared-component-error-message\n    [position]=\"errorPosition\"\n    [errorCode]=\"errorCode\"\n    [errorMessage]=\"errorMessage\"\n    [buttonLabel]=\"errorButtonLabel\"\n    (buttonAction$)=\"errorButtonAction()\"\n  ></gl-shared-component-error-message>\n  <gl-shared-component-footer-container [description]=\"footerMainDescription\">\n    <gl-shared-component-input-button-hyperlink\n      *ngIf=\"footerShowContainer\"\n      [description]=\"footerDescription\"\n      [imageDescription]=\"footerImageDescription\"\n      [imageSrc]=\"footerImageSrc\"\n      [link]=\"footerLink\"\n    ></gl-shared-component-input-button-hyperlink>\n  </gl-shared-component-footer-container>\n</div>\n",
-        styles: [":host::ng-deep{display:flex;flex-grow:1;background-color:#1a1b1d}:host::ng-deep .main-container{display:flex;flex-direction:column;justify-items:stretch;height:100vh;width:100vw;overflow:hidden;flex-grow:1;background-size:101%;background-position:top center;background-repeat:no-repeat;-webkit-animation-name:start;animation-name:start;-webkit-animation-duration:3s;animation-duration:3s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-play-state:running;animation-play-state:running}@-webkit-keyframes start{from{opacity:0}to{opacity:1}}@keyframes start{from{opacity:0}to{opacity:1}}"]
-    })
-], GlSharedViewErrorMessageComponent);
-export { GlSharedViewErrorMessageComponent };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLXZpZXctZXJyb3ItbWVzc2FnZS5jb21wb25lbnQuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9nbC1uZy1mcm9udGVuZC8iLCJzb3VyY2VzIjpbImxpYi9zaGFyZWQvdmlldy9lcnJvci1tZXNzYWdlL2dsLXNoYXJlZC12aWV3LWVycm9yLW1lc3NhZ2UuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQWlCLFNBQVMsRUFBYyxZQUFZLEVBQUUsS0FBSyxFQUFFLE1BQU0sRUFBRSxTQUFTLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFPN0csSUFBYSxpQ0FBaUMsR0FBOUMsTUFBYSxpQ0FBaUM7SUF3QjVDO1FBaEJTLDJCQUFzQixHQUFxQixNQUFNLENBQUM7UUFDbEQseUJBQW9CLEdBQXFCLEtBQUssQ0FBQztRQUUvQyxrQkFBYSxHQUFxQixNQUFNLENBQUM7UUFJeEMsdUJBQWtCLEdBQXVCLElBQUksWUFBWSxFQUFFLENBQUM7UUFLN0QsMkJBQXNCLEdBQVcsWUFBWSxDQUFDO0lBSXZDLENBQUM7SUFFakIsZUFBZTtRQUNiLE1BQU0sYUFBYSxHQUFtQixJQUFJLENBQUMsYUFBYSxDQUFDLGFBQWEsQ0FBQztRQUN2RSxNQUFNLG1CQUFtQixHQUFtQixJQUFJLENBQUMsYUFBYSxDQUFDLGFBQWEsQ0FBQyxVQUE0QixDQUFDO1FBRTFHLGFBQWEsQ0FBQyxLQUFLLENBQUMsZUFBZSxHQUFHLE9BQU8sSUFBSSxDQUFDLFVBQVUsR0FBRyxDQUFDO1FBQ2hFLG1CQUFtQixDQUFDLEtBQUssQ0FBQyxlQUFlLEdBQUcsT0FBTyxJQUFJLENBQUMsY0FBYyxHQUFHLENBQUM7SUFDNUUsQ0FBQztJQUVELGlCQUFpQjtRQUNmLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUNqQyxDQUFDO0NBQ0YsQ0FBQTtBQXBDNkI7SUFBM0IsU0FBUyxDQUFDLGVBQWUsQ0FBQzt3RUFBMkM7QUFFN0Q7SUFBUixLQUFLLEVBQUU7eUVBQXdCO0FBQ3ZCO0lBQVIsS0FBSyxFQUFFO3FFQUFvQjtBQUVuQjtJQUFSLEtBQUssRUFBRTt1RUFBc0I7QUFDckI7SUFBUixLQUFLLEVBQUU7dUVBQXNCO0FBQ3JCO0lBQVIsS0FBSyxFQUFFO2lGQUFtRDtBQUNsRDtJQUFSLEtBQUssRUFBRTsrRUFBZ0Q7QUFFL0M7SUFBUixLQUFLLEVBQUU7d0VBQTBDO0FBQ3pDO0lBQVIsS0FBSyxFQUFFO29FQUE0QjtBQUMzQjtJQUFSLEtBQUssRUFBRTt1RUFBc0I7QUFDckI7SUFBUixLQUFLLEVBQUU7MkVBQTBCO0FBQ3hCO0lBQVQsTUFBTSxFQUFFOzZFQUE2RDtBQUU3RDtJQUFSLEtBQUssRUFBRTtnRkFBK0I7QUFDOUI7SUFBUixLQUFLLEVBQUU7OEVBQThCO0FBQzdCO0lBQVIsS0FBSyxFQUFFOzRFQUEyQjtBQUMxQjtJQUFSLEtBQUssRUFBRTtpRkFBK0M7QUFDOUM7SUFBUixLQUFLLEVBQUU7eUVBQXdCO0FBQ3ZCO0lBQVIsS0FBSyxFQUFFO3FFQUFvQjtBQXRCakIsaUNBQWlDO0lBTDdDLFNBQVMsQ0FBQztRQUNULFFBQVEsRUFBRSw4QkFBOEI7UUFDeEMseStCQUE0RDs7S0FFN0QsQ0FBQztHQUNXLGlDQUFpQyxDQXFDN0M7U0FyQ1ksaUNBQWlDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQWZ0ZXJWaWV3SW5pdCwgQ29tcG9uZW50LCBFbGVtZW50UmVmLCBFdmVudEVtaXR0ZXIsIElucHV0LCBPdXRwdXQsIFZpZXdDaGlsZCB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdnbC1zaGFyZWQtdmlldy1lcnJvci1tZXNzYWdlJyxcbiAgdGVtcGxhdGVVcmw6ICcuL2dsLXNoYXJlZC12aWV3LWVycm9yLW1lc3NhZ2UuY29tcG9uZW50Lmh0bWwnLFxuICBzdHlsZVVybHM6IFsnLi9nbC1zaGFyZWQtdmlldy1lcnJvci1tZXNzYWdlLmNvbXBvbmVudC5zY3NzJ11cbn0pXG5leHBvcnQgY2xhc3MgR2xTaGFyZWRWaWV3RXJyb3JNZXNzYWdlQ29tcG9uZW50IGltcGxlbWVudHMgQWZ0ZXJWaWV3SW5pdCB7XG4gIEBWaWV3Q2hpbGQoJ21haW5Db250YWluZXInKSBtYWluQ29udGFpbmVyOiBFbGVtZW50UmVmPEhUTUxEaXZFbGVtZW50PjtcblxuICBASW5wdXQoKSBibHVyQmFja2dyb3VuZDogc3RyaW5nO1xuICBASW5wdXQoKSBiYWNrZ3JvdW5kOiBzdHJpbmc7XG5cbiAgQElucHV0KCkgbG9nb0ltYWdlU2NyOiBzdHJpbmc7XG4gIEBJbnB1dCgpIGxvZ29JbWFnZUFsdDogc3RyaW5nO1xuICBASW5wdXQoKSBsb2dvSG9yaXpvbnRhbFBvc2l0aW9uOiAnbGVmdCcgfCAncmlnaHQnID0gJ2xlZnQnO1xuICBASW5wdXQoKSBsb2dvVmVydGljYWxQb3NpdGlvbjogJ3RvcCcgfCAnYm90dG9tJyA9ICd0b3AnO1xuXG4gIEBJbnB1dCgpIGVycm9yUG9zaXRpb246ICdsZWZ0JyB8ICdyaWdodCcgPSAnbGVmdCc7XG4gIEBJbnB1dCgpIGVycm9yQ29kZTogc3RyaW5nIHwgbnVtYmVyO1xuICBASW5wdXQoKSBlcnJvck1lc3NhZ2U6IHN0cmluZztcbiAgQElucHV0KCkgZXJyb3JCdXR0b25MYWJlbDogc3RyaW5nO1xuICBAT3V0cHV0KCkgZXJyb3JCdXR0b25BY3Rpb24kOiBFdmVudEVtaXR0ZXI8dm9pZD4gPSBuZXcgRXZlbnRFbWl0dGVyKCk7XG5cbiAgQElucHV0KCkgZm9vdGVyTWFpbkRlc2NyaXB0aW9uOiBzdHJpbmc7XG4gIEBJbnB1dCgpIGZvb3RlclNob3dDb250YWluZXI6IGJvb2xlYW47XG4gIEBJbnB1dCgpIGZvb3RlckRlc2NyaXB0aW9uOiBzdHJpbmc7XG4gIEBJbnB1dCgpIGZvb3RlckltYWdlRGVzY3JpcHRpb246IHN0cmluZyA9ICdJbWFnZSBsb2dvJztcbiAgQElucHV0KCkgZm9vdGVySW1hZ2VTcmM6IHN0cmluZztcbiAgQElucHV0KCkgZm9vdGVyTGluazogc3RyaW5nO1xuXG4gIGNvbnN0cnVjdG9yKCkgeyB9XG5cbiAgbmdBZnRlclZpZXdJbml0KCk6IHZvaWQge1xuICAgIGNvbnN0IG1haW5Db250YWluZXI6IEhUTUxEaXZFbGVtZW50ID0gdGhpcy5tYWluQ29udGFpbmVyLm5hdGl2ZUVsZW1lbnQ7XG4gICAgY29uc3QgbWFpbkNvbnRhaW5lclBhcmVudDogSFRNTERpdkVsZW1lbnQgPSB0aGlzLm1haW5Db250YWluZXIubmF0aXZlRWxlbWVudC5wYXJlbnROb2RlIGFzIEhUTUxEaXZFbGVtZW50O1xuXG4gICAgbWFpbkNvbnRhaW5lci5zdHlsZS5iYWNrZ3JvdW5kSW1hZ2UgPSBgdXJsKCR7dGhpcy5iYWNrZ3JvdW5kfSlgO1xuICAgIG1haW5Db250YWluZXJQYXJlbnQuc3R5bGUuYmFja2dyb3VuZEltYWdlID0gYHVybCgke3RoaXMuYmx1ckJhY2tncm91bmR9KWA7XG4gIH1cblxuICBlcnJvckJ1dHRvbkFjdGlvbigpOiB2b2lkIHtcbiAgICB0aGlzLmVycm9yQnV0dG9uQWN0aW9uJC5lbWl0KCk7XG4gIH1cbn1cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLXZpZXctZXJyb3ItbWVzc2FnZS5jb21wb25lbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi9wcm9qZWN0cy9nbC1uZy1mcm9udGVuZC9zcmMvbGliL3NoYXJlZC92aWV3L2Vycm9yLW1lc3NhZ2UvZ2wtc2hhcmVkLXZpZXctZXJyb3ItbWVzc2FnZS5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFpQixTQUFTLEVBQWMsWUFBWSxFQUFFLEtBQUssRUFBRSxNQUFNLEVBQUUsU0FBUyxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBTzdHLE1BQU0sT0FBTyxpQ0FBaUM7SUF3QjVDO1FBaEJTLDJCQUFzQixHQUFxQixNQUFNLENBQUM7UUFDbEQseUJBQW9CLEdBQXFCLEtBQUssQ0FBQztRQUUvQyxrQkFBYSxHQUFxQixNQUFNLENBQUM7UUFJeEMsdUJBQWtCLEdBQXVCLElBQUksWUFBWSxFQUFFLENBQUM7UUFLN0QsMkJBQXNCLEdBQVcsWUFBWSxDQUFDO0lBSXZDLENBQUM7SUFFakIsZUFBZTtRQUNiLE1BQU0sYUFBYSxHQUFtQixJQUFJLENBQUMsYUFBYSxDQUFDLGFBQWEsQ0FBQztRQUN2RSxNQUFNLG1CQUFtQixHQUFtQixJQUFJLENBQUMsYUFBYSxDQUFDLGFBQWEsQ0FBQyxVQUE0QixDQUFDO1FBRTFHLGFBQWEsQ0FBQyxLQUFLLENBQUMsZUFBZSxHQUFHLE9BQU8sSUFBSSxDQUFDLFVBQVUsR0FBRyxDQUFDO1FBQ2hFLG1CQUFtQixDQUFDLEtBQUssQ0FBQyxlQUFlLEdBQUcsT0FBTyxJQUFJLENBQUMsY0FBYyxHQUFHLENBQUM7SUFDNUUsQ0FBQztJQUVELGlCQUFpQjtRQUNmLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUNqQyxDQUFDOzs7WUF6Q0YsU0FBUyxTQUFDO2dCQUNULFFBQVEsRUFBRSw4QkFBOEI7Z0JBQ3hDLHkrQkFBNEQ7O2FBRTdEOzs7OzRCQUVFLFNBQVMsU0FBQyxlQUFlOzZCQUV6QixLQUFLO3lCQUNMLEtBQUs7MkJBRUwsS0FBSzsyQkFDTCxLQUFLO3FDQUNMLEtBQUs7bUNBQ0wsS0FBSzs0QkFFTCxLQUFLO3dCQUNMLEtBQUs7MkJBQ0wsS0FBSzsrQkFDTCxLQUFLO2lDQUNMLE1BQU07b0NBRU4sS0FBSztrQ0FDTCxLQUFLO2dDQUNMLEtBQUs7cUNBQ0wsS0FBSzs2QkFDTCxLQUFLO3lCQUNMLEtBQUsiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBBZnRlclZpZXdJbml0LCBDb21wb25lbnQsIEVsZW1lbnRSZWYsIEV2ZW50RW1pdHRlciwgSW5wdXQsIE91dHB1dCwgVmlld0NoaWxkIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2dsLXNoYXJlZC12aWV3LWVycm9yLW1lc3NhZ2UnLFxuICB0ZW1wbGF0ZVVybDogJy4vZ2wtc2hhcmVkLXZpZXctZXJyb3ItbWVzc2FnZS5jb21wb25lbnQuaHRtbCcsXG4gIHN0eWxlVXJsczogWycuL2dsLXNoYXJlZC12aWV3LWVycm9yLW1lc3NhZ2UuY29tcG9uZW50LnNjc3MnXVxufSlcbmV4cG9ydCBjbGFzcyBHbFNoYXJlZFZpZXdFcnJvck1lc3NhZ2VDb21wb25lbnQgaW1wbGVtZW50cyBBZnRlclZpZXdJbml0IHtcbiAgQFZpZXdDaGlsZCgnbWFpbkNvbnRhaW5lcicpIG1haW5Db250YWluZXI6IEVsZW1lbnRSZWY8SFRNTERpdkVsZW1lbnQ+O1xuXG4gIEBJbnB1dCgpIGJsdXJCYWNrZ3JvdW5kOiBzdHJpbmc7XG4gIEBJbnB1dCgpIGJhY2tncm91bmQ6IHN0cmluZztcblxuICBASW5wdXQoKSBsb2dvSW1hZ2VTY3I6IHN0cmluZztcbiAgQElucHV0KCkgbG9nb0ltYWdlQWx0OiBzdHJpbmc7XG4gIEBJbnB1dCgpIGxvZ29Ib3Jpem9udGFsUG9zaXRpb246ICdsZWZ0JyB8ICdyaWdodCcgPSAnbGVmdCc7XG4gIEBJbnB1dCgpIGxvZ29WZXJ0aWNhbFBvc2l0aW9uOiAndG9wJyB8ICdib3R0b20nID0gJ3RvcCc7XG5cbiAgQElucHV0KCkgZXJyb3JQb3NpdGlvbjogJ2xlZnQnIHwgJ3JpZ2h0JyA9ICdsZWZ0JztcbiAgQElucHV0KCkgZXJyb3JDb2RlOiBzdHJpbmcgfCBudW1iZXI7XG4gIEBJbnB1dCgpIGVycm9yTWVzc2FnZTogc3RyaW5nO1xuICBASW5wdXQoKSBlcnJvckJ1dHRvbkxhYmVsOiBzdHJpbmc7XG4gIEBPdXRwdXQoKSBlcnJvckJ1dHRvbkFjdGlvbiQ6IEV2ZW50RW1pdHRlcjx2b2lkPiA9IG5ldyBFdmVudEVtaXR0ZXIoKTtcblxuICBASW5wdXQoKSBmb290ZXJNYWluRGVzY3JpcHRpb246IHN0cmluZztcbiAgQElucHV0KCkgZm9vdGVyU2hvd0NvbnRhaW5lcjogYm9vbGVhbjtcbiAgQElucHV0KCkgZm9vdGVyRGVzY3JpcHRpb246IHN0cmluZztcbiAgQElucHV0KCkgZm9vdGVySW1hZ2VEZXNjcmlwdGlvbjogc3RyaW5nID0gJ0ltYWdlIGxvZ28nO1xuICBASW5wdXQoKSBmb290ZXJJbWFnZVNyYzogc3RyaW5nO1xuICBASW5wdXQoKSBmb290ZXJMaW5rOiBzdHJpbmc7XG5cbiAgY29uc3RydWN0b3IoKSB7IH1cblxuICBuZ0FmdGVyVmlld0luaXQoKTogdm9pZCB7XG4gICAgY29uc3QgbWFpbkNvbnRhaW5lcjogSFRNTERpdkVsZW1lbnQgPSB0aGlzLm1haW5Db250YWluZXIubmF0aXZlRWxlbWVudDtcbiAgICBjb25zdCBtYWluQ29udGFpbmVyUGFyZW50OiBIVE1MRGl2RWxlbWVudCA9IHRoaXMubWFpbkNvbnRhaW5lci5uYXRpdmVFbGVtZW50LnBhcmVudE5vZGUgYXMgSFRNTERpdkVsZW1lbnQ7XG5cbiAgICBtYWluQ29udGFpbmVyLnN0eWxlLmJhY2tncm91bmRJbWFnZSA9IGB1cmwoJHt0aGlzLmJhY2tncm91bmR9KWA7XG4gICAgbWFpbkNvbnRhaW5lclBhcmVudC5zdHlsZS5iYWNrZ3JvdW5kSW1hZ2UgPSBgdXJsKCR7dGhpcy5ibHVyQmFja2dyb3VuZH0pYDtcbiAgfVxuXG4gIGVycm9yQnV0dG9uQWN0aW9uKCk6IHZvaWQge1xuICAgIHRoaXMuZXJyb3JCdXR0b25BY3Rpb24kLmVtaXQoKTtcbiAgfVxufVxuIl19

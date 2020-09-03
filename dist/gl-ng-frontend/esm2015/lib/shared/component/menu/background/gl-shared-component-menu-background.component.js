@@ -1,14 +1,13 @@
-import { __decorate } from "tslib";
 import { Component } from '@angular/core';
-let GlSharedComponentMenuBackgroundComponent = class GlSharedComponentMenuBackgroundComponent {
+export class GlSharedComponentMenuBackgroundComponent {
     constructor() { }
-};
-GlSharedComponentMenuBackgroundComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-menu-background',
-        template: "<div class=\"menu-background\"></div>\n",
-        styles: [":host::ng-deep .menu-background{background-color:rgba(0,0,0,.3);position:fixed;width:100vw;height:100vh}"]
-    })
-], GlSharedComponentMenuBackgroundComponent);
-export { GlSharedComponentMenuBackgroundComponent };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1tZW51LWJhY2tncm91bmQuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Im5nOi8vZ2wtbmctZnJvbnRlbmQvIiwic291cmNlcyI6WyJsaWIvc2hhcmVkL2NvbXBvbmVudC9tZW51L2JhY2tncm91bmQvZ2wtc2hhcmVkLWNvbXBvbmVudC1tZW51LWJhY2tncm91bmQuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBTzFDLElBQWEsd0NBQXdDLEdBQXJELE1BQWEsd0NBQXdDO0lBRW5ELGdCQUFnQixDQUFDO0NBQ2xCLENBQUE7QUFIWSx3Q0FBd0M7SUFMcEQsU0FBUyxDQUFDO1FBQ1QsUUFBUSxFQUFFLHFDQUFxQztRQUMvQyxtREFBbUU7O0tBRXBFLENBQUM7R0FDVyx3Q0FBd0MsQ0FHcEQ7U0FIWSx3Q0FBd0MiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnZ2wtc2hhcmVkLWNvbXBvbmVudC1tZW51LWJhY2tncm91bmQnLFxuICB0ZW1wbGF0ZVVybDogJy4vZ2wtc2hhcmVkLWNvbXBvbmVudC1tZW51LWJhY2tncm91bmQuY29tcG9uZW50Lmh0bWwnLFxuICBzdHlsZVVybHM6IFsnLi9nbC1zaGFyZWQtY29tcG9uZW50LW1lbnUtYmFja2dyb3VuZC5jb21wb25lbnQuc2NzcyddXG59KVxuZXhwb3J0IGNsYXNzIEdsU2hhcmVkQ29tcG9uZW50TWVudUJhY2tncm91bmRDb21wb25lbnQge1xuXG4gIGNvbnN0cnVjdG9yKCkgeyB9XG59XG4iXX0=
+}
+GlSharedComponentMenuBackgroundComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-menu-background',
+                template: "<div class=\"menu-background\"></div>\n",
+                styles: [":host::ng-deep .menu-background{background-color:rgba(0,0,0,.3);height:100vh;position:fixed;width:100vw}"]
+            },] }
+];
+GlSharedComponentMenuBackgroundComponent.ctorParameters = () => [];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1tZW51LWJhY2tncm91bmQuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvZ2wtbmctZnJvbnRlbmQvc3JjL2xpYi9zaGFyZWQvY29tcG9uZW50L21lbnUvYmFja2dyb3VuZC9nbC1zaGFyZWQtY29tcG9uZW50LW1lbnUtYmFja2dyb3VuZC5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQU8xQyxNQUFNLE9BQU8sd0NBQXdDO0lBRW5ELGdCQUFnQixDQUFDOzs7WUFQbEIsU0FBUyxTQUFDO2dCQUNULFFBQVEsRUFBRSxxQ0FBcUM7Z0JBQy9DLG1EQUFtRTs7YUFFcEUiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnZ2wtc2hhcmVkLWNvbXBvbmVudC1tZW51LWJhY2tncm91bmQnLFxuICB0ZW1wbGF0ZVVybDogJy4vZ2wtc2hhcmVkLWNvbXBvbmVudC1tZW51LWJhY2tncm91bmQuY29tcG9uZW50Lmh0bWwnLFxuICBzdHlsZVVybHM6IFsnLi9nbC1zaGFyZWQtY29tcG9uZW50LW1lbnUtYmFja2dyb3VuZC5jb21wb25lbnQuc2NzcyddXG59KVxuZXhwb3J0IGNsYXNzIEdsU2hhcmVkQ29tcG9uZW50TWVudUJhY2tncm91bmRDb21wb25lbnQge1xuXG4gIGNvbnN0cnVjdG9yKCkgeyB9XG59XG4iXX0=

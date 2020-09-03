@@ -1,11 +1,11 @@
 {
   "name": "gl-ng-frontend",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "assets": "assets",
   "main": "bundles/gl-ng-frontend.umd.js",
   "types": "lib/gl-ng-frontend.d.ts",
-  "module": "fesm5/gl-ng-frontend.js",
+  "module": "fesm2015/gl-ng-frontend.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/glaucioleonardo/gl-ng-frontend.git"
@@ -39,19 +39,17 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/cdk": "^9.2.4",
-    "@angular/material": "^9.2.4",
-    "@angular/common": "^9.1.9",
-    "@angular/core": "^9.1.9",
-    "@angular/material-moment-adapter": "^9.2.4"
+    "@angular/cdk": "^10.2.0",
+    "@angular/material": "^10.2.0",
+    "@angular/common": "~10.1.0",
+    "@angular/core": "~10.1.0",
+    "@angular/material-moment-adapter": "^10.2.0"
   },
   "dependencies": {
-    "tslib": "^1.10.0"
+    "tslib": "^2.0.0"
   },
   "es2015": "fesm2015/gl-ng-frontend.js",
-  "esm5": "esm5/gl-ng-frontend.js",
   "esm2015": "esm2015/gl-ng-frontend.js",
-  "fesm5": "fesm5/gl-ng-frontend.js",
   "fesm2015": "fesm2015/gl-ng-frontend.js",
   "typings": "gl-ng-frontend.d.ts",
   "metadata": "gl-ng-frontend.metadata.json",

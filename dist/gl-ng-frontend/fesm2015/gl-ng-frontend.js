@@ -1,5 +1,4 @@
-import { __decorate, __awaiter } from 'tslib';
-import { ElementRef, Directive, NgModule, Input, Component, EventEmitter, Output, ViewChild, ɵɵdefineInjectable, Injectable, ɵɵinject } from '@angular/core';
+import { Directive, ElementRef, NgModule, Component, Input, EventEmitter, Output, ViewChild, ɵɵdefineInjectable, Injectable, ɵɵinject } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,63 +16,61 @@ import { MAT_DATE_LOCALE, DateAdapter, MAT_DATE_FORMATS } from '@angular/materia
 import { DateGet, InputMask, AttachmentParser, AttachmentValidate, StringConverter, AttachmentIcon, AttachmentConvert } from 'gl-w-frontend';
 import { Subject } from 'rxjs';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { __awaiter } from 'tslib';
 import { startWith, map } from 'rxjs/operators';
 
-let CoreDirectivesAutofocusDirective = class CoreDirectivesAutofocusDirective {
+class CoreDirectivesAutofocusDirective {
     constructor(elementRef) {
         this.elementRef = elementRef;
     }
     ngOnInit() {
         this.elementRef.nativeElement.focus();
     }
-};
+}
+CoreDirectivesAutofocusDirective.decorators = [
+    { type: Directive, args: [{
+                selector: '[glAutoFocus]'
+            },] }
+];
 CoreDirectivesAutofocusDirective.ctorParameters = () => [
     { type: ElementRef }
 ];
-CoreDirectivesAutofocusDirective = __decorate([
-    Directive({
-        selector: '[glAutoFocus]'
-    })
-], CoreDirectivesAutofocusDirective);
 
-let GlCoreModule = class GlCoreModule {
-};
-GlCoreModule = __decorate([
-    NgModule({
-        declarations: [
-            CoreDirectivesAutofocusDirective
-        ],
-        exports: [
-            CoreDirectivesAutofocusDirective
-        ],
-        imports: [
-            CommonModule
-        ]
-    })
-], GlCoreModule);
+class GlCoreModule {
+}
+GlCoreModule.decorators = [
+    { type: NgModule, args: [{
+                declarations: [
+                    CoreDirectivesAutofocusDirective
+                ],
+                exports: [
+                    CoreDirectivesAutofocusDirective
+                ],
+                imports: [
+                    CommonModule
+                ]
+            },] }
+];
 
-let GlSharedComponentInputButtonSimpleComponent = class GlSharedComponentInputButtonSimpleComponent {
+class GlSharedComponentInputButtonSimpleComponent {
     constructor() { }
+}
+GlSharedComponentInputButtonSimpleComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-button-simple',
+                template: "<button\n  type=\"button\"\n  class=\"default-button {{ class }}\"\n  [value]=\"value\"\n>{{ innerValue }}</button>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep{display:flex;flex:1 1 0px;height:2em}:host::ng-deep .default-button{background-color:#d24077;border:none;color:#fff;flex:1 1 0px;font-family:Montserrat,sans-serif;font-size:.5em;font-weight:700;text-transform:uppercase}:host::ng-deep .default-button.light-translucid{background-color:hsla(0,0%,100%,.1);font-family:Montserrat,sans-serif;font-weight:300}:host::ng-deep .default-button:focus,:host::ng-deep .default-button:hover{opacity:1;transition:all .3s ease-in-out}:host::ng-deep .light-translucid.default-button:focus,:host::ng-deep .light-translucid.default-button:hover{background-color:hsla(0,0%,100%,.9);color:#4b4d52;font-family:Montserrat,sans-serif;font-weight:300}:host::ng-deep .default-button:not(hover){opacity:.7;transition:all .3s ease-in-out}"]
+            },] }
+];
+GlSharedComponentInputButtonSimpleComponent.ctorParameters = () => [];
+GlSharedComponentInputButtonSimpleComponent.propDecorators = {
+    value: [{ type: Input }],
+    class: [{ type: Input }],
+    innerValue: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentInputButtonSimpleComponent.prototype, "value", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputButtonSimpleComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputButtonSimpleComponent.prototype, "innerValue", void 0);
-GlSharedComponentInputButtonSimpleComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-input-button-simple',
-        template: "<button\n  type=\"button\"\n  class=\"default-button {{ class }}\"\n  [value]=\"value\"\n>{{ innerValue }}</button>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{display:flex;flex:1 1 0px;height:2em}:host::ng-deep .default-button{font-family:Montserrat,sans-serif;font-weight:700;border:none;font-size:.5em;text-transform:uppercase;flex:1 1 0px;background-color:#d24077;color:#fff}:host::ng-deep .default-button.light-translucid{font-family:Montserrat,sans-serif;font-weight:300;background-color:rgba(255,255,255,.1)}:host::ng-deep .default-button:focus,:host::ng-deep .default-button:hover{opacity:1;transition:.3s ease-in-out}:host::ng-deep .light-translucid.default-button:focus,:host::ng-deep .light-translucid.default-button:hover{font-family:Montserrat,sans-serif;font-weight:300;background-color:rgba(255,255,255,.9);color:#4b4d52}:host::ng-deep .default-button:not(hover){opacity:.7;transition:.3s ease-in-out}"]
-    })
-], GlSharedComponentInputButtonSimpleComponent);
 
 const ɵ0 = MAT_MOMENT_DATE_FORMATS;
-let GlSharedComponentInputDatepickerSimpleComponent = class GlSharedComponentInputDatepickerSimpleComponent {
+class GlSharedComponentInputDatepickerSimpleComponent {
     constructor() {
         this.disabled = false;
         this.itemContentAlignment = 'center';
@@ -95,52 +92,37 @@ let GlSharedComponentInputDatepickerSimpleComponent = class GlSharedComponentInp
             dateString: DateGet.customDate(date, this.dateFormat)
         });
     }
+}
+GlSharedComponentInputDatepickerSimpleComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-datepicker-simple',
+                template: "<ng-content></ng-content>\n<mat-form-field appearance=\"none\" floatLabel=\"never\">\n<!--  <mat-label>Input disabled</mat-label>-->\n  <input\n    class=\"item-content {{ itemContentAlignment }} {{ class }}\"\n    [id]=\"id\"\n    [placeholder]=\"placeholder\"\n    [value]=\"value\"\n    [matDatepicker]=\"dp3\"\n    [attr.maxlength]=\"maxLength\"\n    (dateChange)=\"changed($event)\"\n    matInput\n    disabled>\n  <mat-datepicker-toggle *ngIf=\"!disabled\" matSuffix (click)=\"clear()\">\n    <img\n      matDatepickerToggleIcon\n      class=\"datepicker-button\"\n      alt=\"Date picker icon\"\n      src=\"assets/img/icon/datepicker/clear.svg\">\n  </mat-datepicker-toggle>\n  <mat-datepicker-toggle *ngIf=\"!disabled\" matSuffix [for]=\"dp3\">\n    <img\n      matDatepickerToggleIcon\n      class=\"datepicker-button\"\n      alt=\"Date picker icon\"\n      src=\"assets/img/icon/datepicker/date.svg\">\n  </mat-datepicker-toggle>\n  <mat-datepicker #dp3 disabled=\"false\"></mat-datepicker>\n</mat-form-field>\n",
+                providers: [
+                    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
+                    {
+                        provide: DateAdapter,
+                        useClass: MomentDateAdapter,
+                        deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+                    },
+                    { provide: MAT_DATE_FORMATS, useValue: ɵ0 },
+                ],
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep{background-color:#333437;display:flex;flex-direction:column;flex-grow:1;position:relative}:host::ng-deep mat-form-field{display:flex;flex-grow:1;line-height:1}:host::ng-deep mat-form-field .mat-form-field-wrapper{display:flex;flex-grow:1;padding:0}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex{align-items:center;border-radius:0;height:1.275em;padding:.2em .3em .2em .45em}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix{border:none;display:flex;padding:0;width:auto}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix{display:flex;flex-direction:row}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix .mat-datepicker-toggle{margin:0 0 0 .1em}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix .mat-datepicker-toggle .mat-focus-indicator{height:.8em;width:.8em}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix .mat-datepicker-toggle .mat-focus-indicator .mat-button-wrapper{align-items:center;display:flex;height:.8em;width:.8em}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix .mat-datepicker-toggle .mat-focus-indicator .mat-button-wrapper .datepicker-button,:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix .mat-datepicker-toggle .mat-focus-indicator .mat-button-wrapper svg{height:.8em;width:.8em}:host::ng-deep mat-form-field .item-content{border:none;color:#fff;flex-grow:1;font-family:Montserrat,sans-serif;font-size:.45em;font-weight:400}:host::ng-deep mat-form-field .item-content:focus{outline:none!important}:host::ng-deep mat-form-field .item-content::-moz-placeholder{color:#64666c!important}:host::ng-deep mat-form-field .item-content::-ms-input-placeholder{color:#64666c!important}:host::ng-deep mat-form-field .item-content::placeholder{color:#64666c!important}:host::ng-deep mat-form-field .item-content.left{text-align:left}:host::ng-deep mat-form-field .item-content.center{text-align:center}:host::ng-deep mat-form-field .item-content.right{text-align:right}:host::ng-deep mat-form-field .item-content.light{background-color:rgba(0,0,0,.1)}:host::ng-deep mat-form-field .item-content.light::-moz-placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep mat-form-field .item-content.light:-ms-input-placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep mat-form-field .item-content.light::-ms-input-placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep mat-form-field .item-content.light::placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep mat-form-field .item-content.dark{background-color:#161617}:host::ng-deep mat-form-field .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep mat-form-field .item-content.light:-ms-input-placeholder{color:grey!important}"]
+            },] }
+];
+GlSharedComponentInputDatepickerSimpleComponent.ctorParameters = () => [];
+GlSharedComponentInputDatepickerSimpleComponent.propDecorators = {
+    disabled: [{ type: Input }],
+    id: [{ type: Input }],
+    placeholder: [{ type: Input }],
+    itemContentAlignment: [{ type: Input }],
+    class: [{ type: Input }],
+    value: [{ type: Input }],
+    dateFormat: [{ type: Input }],
+    maxLength: [{ type: Input }],
+    currentValue: [{ type: Output }]
 };
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerSimpleComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerSimpleComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerSimpleComponent.prototype, "placeholder", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerSimpleComponent.prototype, "itemContentAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerSimpleComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerSimpleComponent.prototype, "value", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerSimpleComponent.prototype, "dateFormat", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerSimpleComponent.prototype, "maxLength", void 0);
-__decorate([
-    Output()
-], GlSharedComponentInputDatepickerSimpleComponent.prototype, "currentValue", void 0);
-GlSharedComponentInputDatepickerSimpleComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-input-datepicker-simple',
-        template: "<ng-content></ng-content>\n<mat-form-field appearance=\"none\" floatLabel=\"never\">\n<!--  <mat-label>Input disabled</mat-label>-->\n  <input\n    class=\"item-content {{ itemContentAlignment }} {{ class }}\"\n    [id]=\"id\"\n    [placeholder]=\"placeholder\"\n    [value]=\"value\"\n    [matDatepicker]=\"dp3\"\n    [attr.maxlength]=\"maxLength\"\n    (dateChange)=\"changed($event)\"\n    matInput\n    disabled>\n  <mat-datepicker-toggle *ngIf=\"!disabled\" matSuffix (click)=\"clear()\">\n    <img\n      matDatepickerToggleIcon\n      class=\"datepicker-button\"\n      alt=\"Date picker icon\"\n      src=\"assets/img/icon/datepicker/clear.svg\">\n  </mat-datepicker-toggle>\n  <mat-datepicker-toggle *ngIf=\"!disabled\" matSuffix [for]=\"dp3\">\n    <img\n      matDatepickerToggleIcon\n      class=\"datepicker-button\"\n      alt=\"Date picker icon\"\n      src=\"assets/img/icon/datepicker/date.svg\">\n  </mat-datepicker-toggle>\n  <mat-datepicker #dp3 disabled=\"false\"></mat-datepicker>\n</mat-form-field>\n",
-        providers: [
-            { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
-            {
-                provide: DateAdapter,
-                useClass: MomentDateAdapter,
-                deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
-            },
-            { provide: MAT_DATE_FORMATS, useValue: ɵ0 },
-        ],
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{background-color:#333437;display:flex;flex-direction:column;flex-grow:1;position:relative}:host::ng-deep mat-form-field{display:flex;flex-grow:1;line-height:1}:host::ng-deep mat-form-field .mat-form-field-wrapper{display:flex;flex-grow:1;padding:0}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex{height:1.275em;padding:.2em .3em .2em .45em;border-radius:0;align-items:center}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix{border:none;width:auto;padding:0;display:flex}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix{flex-direction:row;display:flex}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix .mat-datepicker-toggle{margin:0 0 0 .1em}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix .mat-datepicker-toggle .mat-focus-indicator{width:.8em;height:.8em}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix .mat-datepicker-toggle .mat-focus-indicator .mat-button-wrapper{width:.8em;height:.8em;display:flex;align-items:center}:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix .mat-datepicker-toggle .mat-focus-indicator .mat-button-wrapper .datepicker-button,:host::ng-deep mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix .mat-datepicker-toggle .mat-focus-indicator .mat-button-wrapper svg{width:.8em;height:.8em}:host::ng-deep mat-form-field .item-content{font-family:Montserrat,sans-serif;font-weight:400;border:none;color:#fff;font-size:.45em;flex-grow:1}:host::ng-deep mat-form-field .item-content:focus{outline:0!important}:host::ng-deep mat-form-field .item-content::-moz-placeholder{color:#64666c!important}:host::ng-deep mat-form-field .item-content::-ms-input-placeholder{color:#64666c!important}:host::ng-deep mat-form-field .item-content::placeholder{color:#64666c!important}:host::ng-deep mat-form-field .item-content.left{text-align:left}:host::ng-deep mat-form-field .item-content.center{text-align:center}:host::ng-deep mat-form-field .item-content.right{text-align:right}:host::ng-deep mat-form-field .item-content.light{background-color:rgba(0,0,0,.1)}:host::ng-deep mat-form-field .item-content.light::-moz-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep mat-form-field .item-content.light::-ms-input-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep mat-form-field .item-content.light::placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep mat-form-field .item-content.dark{background-color:#161617}:host::ng-deep mat-form-field .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep mat-form-field .item-content.light:-ms-input-placeholder{color:gray!important}"]
-    })
-], GlSharedComponentInputDatepickerSimpleComponent);
 
-let GlSharedComponentInputOptionSimpleComponent = class GlSharedComponentInputOptionSimpleComponent {
+class GlSharedComponentInputOptionSimpleComponent {
     constructor() {
         this.itemSelected = new EventEmitter();
     }
@@ -149,37 +131,26 @@ let GlSharedComponentInputOptionSimpleComponent = class GlSharedComponentInputOp
         input.checked = true;
         this.itemSelected.emit(input.value);
     }
+}
+GlSharedComponentInputOptionSimpleComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-option-simple',
+                template: "<div class=\"input-container\">\n  <!--suppress HtmlFormInputWithoutLabel -->\n  <input\n    #input\n    [checked]=\"checked\"\n    class=\"input-radio\"\n    type=\"radio\"\n    [value]=\"value\"\n    [id]=\"id\"\n    [name]=\"name\"\n    (click)=\"onCheck()\"\n  >\n  <span (click)=\"onCheck()\" class=\"check-mark\"></span>\n  <label class=\"label\" [for]=\"id\">{{ label }}</label>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep{display:block;flex-grow:1}:host::ng-deep .input-container{align-items:center;display:flex;flex-grow:1;padding:.2em .2em 0;position:relative}:host::ng-deep .input-container:not(hover) .check-mark{background-color:#1a1b1d;transition:all .3s ease-in-out}:host::ng-deep .input-container:hover .check-mark{background-color:#333437;transition:all .3s ease-in-out}:host::ng-deep .input-container .input-radio{cursor:pointer;height:2.2em;left:.75em;opacity:0;position:absolute;top:.9em;width:2.2em}:host::ng-deep .input-container .input-radio:checked~.check-mark{background-color:#1a1b1d}:host::ng-deep .input-container .input-radio:checked~.check-mark:after{background-color:#d24077;border-radius:50%;height:.5em;left:.24em;opacity:1;top:.25em;transition:opacity .5s ease-in-out,background-color .5s ease-in-out;visibility:visible;width:.5em}:host::ng-deep .input-container .check-mark{background-color:#d24077;border-radius:50%;cursor:pointer;height:1em;left:0;margin:0 .2em 0 0;position:relative;top:0;width:1em}:host::ng-deep .input-container .check-mark:after{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;content:\"\";opacity:0;pointer-events:none;position:absolute;transition:opacity .5s ease-in-out,background-color .5s ease-in-out;user-select:none;visibility:collapse}:host::ng-deep .input-container .check-mark:after:hover{transform:scale(1.1);transition:all .2s ease-in-out}:host::ng-deep .input-container .label{color:#64666c;font-family:Montserrat,sans-serif;font-size:.6em;font-weight:400}"]
+            },] }
+];
+GlSharedComponentInputOptionSimpleComponent.ctorParameters = () => [];
+GlSharedComponentInputOptionSimpleComponent.propDecorators = {
+    input: [{ type: ViewChild, args: ['input',] }],
+    value: [{ type: Input }],
+    id: [{ type: Input }],
+    label: [{ type: Input }],
+    name: [{ type: Input }],
+    checked: [{ type: Input }],
+    itemSelected: [{ type: Output }]
 };
-__decorate([
-    ViewChild('input')
-], GlSharedComponentInputOptionSimpleComponent.prototype, "input", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputOptionSimpleComponent.prototype, "value", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputOptionSimpleComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputOptionSimpleComponent.prototype, "label", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputOptionSimpleComponent.prototype, "name", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputOptionSimpleComponent.prototype, "checked", void 0);
-__decorate([
-    Output()
-], GlSharedComponentInputOptionSimpleComponent.prototype, "itemSelected", void 0);
-GlSharedComponentInputOptionSimpleComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-input-option-simple',
-        template: "<div class=\"input-container\">\n  <!--suppress HtmlFormInputWithoutLabel -->\n  <input\n    #input\n    [checked]=\"checked\"\n    class=\"input-radio\"\n    type=\"radio\"\n    [value]=\"value\"\n    [id]=\"id\"\n    [name]=\"name\"\n    (click)=\"onCheck()\"\n  >\n  <span (click)=\"onCheck()\" class=\"check-mark\"></span>\n  <label class=\"label\" [for]=\"id\">{{ label }}</label>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{display:block;flex-grow:1}:host::ng-deep .input-container{position:relative;padding:.2em .2em 0;display:flex;flex-grow:1;align-items:center}:host::ng-deep .input-container:not(hover) .check-mark{background-color:#1a1b1d;transition:.3s ease-in-out}:host::ng-deep .input-container:hover .check-mark{background-color:#333437;transition:.3s ease-in-out}:host::ng-deep .input-container .input-radio{position:absolute;opacity:0;cursor:pointer;height:2.2em;width:2.2em;left:.75em;top:.9em}:host::ng-deep .input-container .input-radio:checked~.check-mark{background-color:#1a1b1d}:host::ng-deep .input-container .input-radio:checked~.check-mark:after{visibility:visible;opacity:1;top:.25em;left:.24em;width:.5em;height:.5em;border-radius:50%;background-color:#d24077;transition:opacity .5s ease-in-out,background-color .5s ease-in-out}:host::ng-deep .input-container .check-mark{position:relative;cursor:pointer;top:0;left:0;height:1em;width:1em;background-color:#d24077;border-radius:50%;margin:0 .2em 0 0}:host::ng-deep .input-container .check-mark:after{content:\"\";-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none;position:absolute;opacity:0;visibility:collapse;transition:opacity .5s ease-in-out,background-color .5s ease-in-out}:host::ng-deep .input-container .check-mark:after:hover{transform:scale(1.1);transition:.2s ease-in-out}:host::ng-deep .input-container .label{font-family:Montserrat,sans-serif;font-weight:400;color:#64666c;font-size:.6em}"]
-    })
-], GlSharedComponentInputOptionSimpleComponent);
 
-let GlSharedComponentInputTextSimpleComponent = class GlSharedComponentInputTextSimpleComponent {
+class GlSharedComponentInputTextSimpleComponent {
     constructor() {
         this.disabled = false;
         this.autocomplete = false;
@@ -200,88 +171,56 @@ let GlSharedComponentInputTextSimpleComponent = class GlSharedComponentInputText
             }
         }, 0);
     }
+}
+GlSharedComponentInputTextSimpleComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-text-simple',
+                template: "<!--suppress HtmlFormInputWithoutLabel -->\n<input\n  #inputElement\n  class=\"item-content {{ itemContentAlignment }} {{ class }}\"\n  type=\"text\"\n  [id]=\"id\"\n  [value]=\"value\"\n  [autocomplete]=\"'off'\"\n  required\n  [placeholder]=\"placeholder\"\n  (keyup)=\"onKeyUp($event)\"\n  [disabled]=\"disabled\"\n  [maxLength]=\"maxLength\">\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");.required-fill{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:all .2s ease-in-out}.required-fill::-moz-placeholder{color:hsla(0,0%,100%,.3)!important}.required-fill:-ms-input-placeholder{color:hsla(0,0%,100%,.3)!important}.required-fill::-ms-input-placeholder{color:hsla(0,0%,100%,.3)!important}.required-fill::placeholder{color:hsla(0,0%,100%,.3)!important}.error-highlight{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:all .2s ease-in-out}.error-highlight::-moz-placeholder{color:hsla(0,0%,100%,.3)!important}.error-highlight:-ms-input-placeholder{color:hsla(0,0%,100%,.3)!important}.error-highlight::-ms-input-placeholder{color:hsla(0,0%,100%,.3)!important}.error-highlight::placeholder{color:hsla(0,0%,100%,.3)!important}:host::ng-deep{align-items:stretch;display:flex;flex:1 0 auto;flex-direction:column;position:relative}:host::ng-deep .item-content{background-color:#333437;border:none;color:#fff;flex-grow:1;font-family:Montserrat,sans-serif;font-size:.45em;font-weight:400;padding:.8em}:host::ng-deep .item-content:focus{outline:none!important}:host::ng-deep .item-content::-moz-placeholder{color:#64666c!important}:host::ng-deep .item-content::-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-content::placeholder{color:#64666c!important}:host::ng-deep .item-content.left{text-align:left}:host::ng-deep .item-content.center{text-align:center}:host::ng-deep .item-content.right{text-align:right}:host::ng-deep .item-content.light{background-color:rgba(0,0,0,.1)}:host::ng-deep .item-content.light::-moz-placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep .item-content.light:-ms-input-placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep .item-content.light::-ms-input-placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep .item-content.light::placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep .item-content.dark{background-color:#161617}:host::ng-deep .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-content.light:-ms-input-placeholder{color:grey!important}"]
+            },] }
+];
+GlSharedComponentInputTextSimpleComponent.ctorParameters = () => [];
+GlSharedComponentInputTextSimpleComponent.propDecorators = {
+    inputElement: [{ type: ViewChild, args: ['inputElement', { read: ElementRef, static: true },] }],
+    disabled: [{ type: Input }],
+    autocomplete: [{ type: Input }],
+    id: [{ type: Input }],
+    placeholder: [{ type: Input }],
+    itemContentAlignment: [{ type: Input }],
+    class: [{ type: Input }],
+    value: [{ type: Input }],
+    mask: [{ type: Input }],
+    maskSymbol: [{ type: Input }],
+    maxLength: [{ type: Input }],
+    currentValue: [{ type: Output }],
+    onKeyUp: [{ type: Output }]
 };
-__decorate([
-    ViewChild('inputElement', { read: ElementRef, static: true })
-], GlSharedComponentInputTextSimpleComponent.prototype, "inputElement", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextSimpleComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextSimpleComponent.prototype, "autocomplete", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextSimpleComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextSimpleComponent.prototype, "placeholder", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextSimpleComponent.prototype, "itemContentAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextSimpleComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextSimpleComponent.prototype, "value", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextSimpleComponent.prototype, "mask", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextSimpleComponent.prototype, "maskSymbol", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextSimpleComponent.prototype, "maxLength", void 0);
-__decorate([
-    Output()
-], GlSharedComponentInputTextSimpleComponent.prototype, "currentValue", void 0);
-__decorate([
-    Output()
-], GlSharedComponentInputTextSimpleComponent.prototype, "onKeyUp", null);
-GlSharedComponentInputTextSimpleComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-input-text-simple',
-        template: "<!--suppress HtmlFormInputWithoutLabel -->\n<input\n  #inputElement\n  class=\"item-content {{ itemContentAlignment }} {{ class }}\"\n  type=\"text\"\n  [id]=\"id\"\n  [value]=\"value\"\n  [autocomplete]=\"'off'\"\n  required\n  [placeholder]=\"placeholder\"\n  (keyup)=\"onKeyUp($event)\"\n  [disabled]=\"disabled\"\n  [maxLength]=\"maxLength\">\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);.required-fill{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::placeholder{color:rgba(255,255,255,.3)!important}:host::ng-deep{display:flex;flex:1 0 auto;position:relative;flex-direction:column;align-items:stretch}:host::ng-deep .item-content{font-family:Montserrat,sans-serif;font-weight:400;padding:.8em;border:none;background-color:#333437;color:#fff;font-size:.45em;flex-grow:1}:host::ng-deep .item-content:focus{outline:0!important}:host::ng-deep .item-content::-moz-placeholder{color:#64666c!important}:host::ng-deep .item-content::-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-content::placeholder{color:#64666c!important}:host::ng-deep .item-content.left{text-align:left}:host::ng-deep .item-content.center{text-align:center}:host::ng-deep .item-content.right{text-align:right}:host::ng-deep .item-content.light{background-color:rgba(0,0,0,.1)}:host::ng-deep .item-content.light::-moz-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .item-content.light::-ms-input-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .item-content.light::placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .item-content.dark{background-color:#161617}:host::ng-deep .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-content.light:-ms-input-placeholder{color:gray!important}"]
-    })
-], GlSharedComponentInputTextSimpleComponent);
 
-let GlSharedComponentTitleLabelSimpleComponent = class GlSharedComponentTitleLabelSimpleComponent {
+class GlSharedComponentTitleLabelSimpleComponent {
     constructor() {
         this.class = '';
         this.required = false;
         this.requiredLabel = 'Required field';
     }
+}
+GlSharedComponentTitleLabelSimpleComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-title-label-simple',
+                template: "<label\n  class=\"header-data {{ labelAlignment }} {{ class }}\"\n  [attr.for]=\"id\">{{ labelValue }}\n</label>\n<img\n  *ngIf=\"required\"\n  src=\"../assets/img/icon/label/dot.svg\"\n  class=\"required-fill-dot {{ class }}\"\n  [title]=\"requiredLabel\"\n  alt=\"Required fill icon\">\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .header-data{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;background-color:#2c2c2f;color:#fff;flex-grow:1;font-family:Montserrat,sans-serif;font-size:.45em;font-weight:400;padding:1em;position:relative;text-align:center;user-select:none}:host::ng-deep .header-data.light{background-color:rgba(0,0,0,.3)}:host::ng-deep .header-data.dark{background-color:#111112}:host::ng-deep .header-data.left{text-align:left}:host::ng-deep .header-data.center{text-align:center}:host::ng-deep .header-data.right{text-align:right}:host::ng-deep .header-data.report{background-color:rgba(210,64,119,.8);font-size:.7em;padding:.5em}:host::ng-deep .required-fill-dot{height:.3em;position:absolute;right:.2em;top:.5em;width:.3em}"]
+            },] }
+];
+GlSharedComponentTitleLabelSimpleComponent.ctorParameters = () => [];
+GlSharedComponentTitleLabelSimpleComponent.propDecorators = {
+    labelValue: [{ type: Input }],
+    id: [{ type: Input }],
+    labelAlignment: [{ type: Input }],
+    class: [{ type: Input }],
+    required: [{ type: Input }],
+    requiredLabel: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelSimpleComponent.prototype, "labelValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelSimpleComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelSimpleComponent.prototype, "labelAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelSimpleComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelSimpleComponent.prototype, "required", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelSimpleComponent.prototype, "requiredLabel", void 0);
-GlSharedComponentTitleLabelSimpleComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-title-label-simple',
-        template: "<label\n  class=\"header-data {{ labelAlignment }} {{ class }}\"\n  [attr.for]=\"id\">{{ labelValue }}\n</label>\n<img\n  *ngIf=\"required\"\n  src=\"../assets/img/icon/label/dot.svg\"\n  class=\"required-fill-dot {{ class }}\"\n  [title]=\"requiredLabel\"\n  alt=\"Required fill icon\">\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .header-data{position:relative;flex-grow:1;font-family:Montserrat,sans-serif;font-weight:400;background-color:#2c2c2f;color:#fff;font-size:.45em;padding:1em;text-align:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .header-data.light{background-color:rgba(0,0,0,.3)}:host::ng-deep .header-data.dark{background-color:#111112}:host::ng-deep .header-data.left{text-align:left}:host::ng-deep .header-data.center{text-align:center}:host::ng-deep .header-data.right{text-align:right}:host::ng-deep .header-data.report{background-color:rgba(210,64,119,.8);font-size:.7em;padding:.5em}:host::ng-deep .required-fill-dot{position:absolute;top:.5em;right:.2em;width:.3em;height:.3em}"]
-    })
-], GlSharedComponentTitleLabelSimpleComponent);
 
-let GlSharedComponentInputTextLabelComponent = class GlSharedComponentInputTextLabelComponent {
+class GlSharedComponentInputTextLabelComponent {
     constructor() {
         this.disabled = false;
         this.autocomplete = false;
@@ -291,61 +230,34 @@ let GlSharedComponentInputTextLabelComponent = class GlSharedComponentInputTextL
         this.currentValue = new EventEmitter();
     }
     onKeyUp(values) { this.currentValue.emit(values); }
+}
+GlSharedComponentInputTextLabelComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-text-label',
+                template: "<div class=\"item-container\">\n  <gl-shared-component-title-label-simple\n    [id]=\"id\"\n    [labelValue]=\"labelValue\"\n    [labelAlignment]=\"labelAlignment\"\n    [required]=\"required\"\n    [class]=\"class\"\n    [requiredLabel]=\"requiredLabel\"\n  ></gl-shared-component-title-label-simple>\n  <gl-shared-component-input-text-simple\n    [class]=\"class\"\n    [value]=\"value\"\n    [id]=\"id\"\n    [itemContentAlignment]=\"itemContentAlignment\"\n    [placeholder]=\"placeholder\"\n    (currentValue)=\"onKeyUp($event)\"\n    [disabled]=\"disabled\"\n    [autocomplete]=\"autocomplete\"\n\n    [mask]=\"mask\"\n    [maskSymbol]=\"maskSymbol\"\n    [maxLength]=\"maxLength\"\n  ></gl-shared-component-input-text-simple>\n</div>\n",
+                styles: [":host::ng-deep{display:flex;flex:1 0 auto}:host::ng-deep .item-container{align-items:stretch;display:flex;flex:1 0 auto;flex-direction:column;position:relative}:host::ng-deep .item-container ::ng-deep gl-shared-component-input-text-simple{margin:0}"]
+            },] }
+];
+GlSharedComponentInputTextLabelComponent.ctorParameters = () => [];
+GlSharedComponentInputTextLabelComponent.propDecorators = {
+    disabled: [{ type: Input }],
+    autocomplete: [{ type: Input }],
+    id: [{ type: Input }],
+    labelAlignment: [{ type: Input }],
+    labelValue: [{ type: Input }],
+    placeholder: [{ type: Input }],
+    itemContentAlignment: [{ type: Input }],
+    class: [{ type: Input }],
+    value: [{ type: Input }],
+    mask: [{ type: Input }],
+    maskSymbol: [{ type: Input }],
+    maxLength: [{ type: Input }],
+    required: [{ type: Input }],
+    requiredLabel: [{ type: Input }],
+    currentValue: [{ type: Output }]
 };
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "autocomplete", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "labelAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "labelValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "placeholder", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "itemContentAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "value", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "mask", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "maskSymbol", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "maxLength", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "required", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "requiredLabel", void 0);
-__decorate([
-    Output()
-], GlSharedComponentInputTextLabelComponent.prototype, "currentValue", void 0);
-GlSharedComponentInputTextLabelComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-input-text-label',
-        template: "<div class=\"item-container\">\n  <gl-shared-component-title-label-simple\n    [id]=\"id\"\n    [labelValue]=\"labelValue\"\n    [labelAlignment]=\"labelAlignment\"\n    [required]=\"required\"\n    [class]=\"class\"\n    [requiredLabel]=\"requiredLabel\"\n  ></gl-shared-component-title-label-simple>\n  <gl-shared-component-input-text-simple\n    [class]=\"class\"\n    [value]=\"value\"\n    [id]=\"id\"\n    [itemContentAlignment]=\"itemContentAlignment\"\n    [placeholder]=\"placeholder\"\n    (currentValue)=\"onKeyUp($event)\"\n    [disabled]=\"disabled\"\n    [autocomplete]=\"autocomplete\"\n\n    [mask]=\"mask\"\n    [maskSymbol]=\"maskSymbol\"\n    [maxLength]=\"maxLength\"\n  ></gl-shared-component-input-text-simple>\n</div>\n",
-        styles: [":host::ng-deep{display:flex;flex:1 0 auto}:host::ng-deep .item-container{position:relative;display:flex;flex-direction:column;align-items:stretch;flex:1 0 auto}:host::ng-deep .item-container ::ng-deep gl-shared-component-input-text-simple{margin:0}"]
-    })
-], GlSharedComponentInputTextLabelComponent);
 
-let GlSharedComponentInputTextAreaSimpleComponent = class GlSharedComponentInputTextAreaSimpleComponent {
+class GlSharedComponentInputTextAreaSimpleComponent {
     constructor() {
         this.disabled = false;
         this.value = '';
@@ -358,49 +270,30 @@ let GlSharedComponentInputTextAreaSimpleComponent = class GlSharedComponentInput
         }
         this.currentValue.emit({ value });
     }
+}
+GlSharedComponentInputTextAreaSimpleComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-text-area-simple',
+                template: "<div class=\"item-container\">\n  <ng-content></ng-content>\n  <!--suppress HtmlFormInputWithoutLabel -->\n  <textarea\n    #textArea\n    class=\"item-content {{ itemContentAlignment }} {{ class }}\"\n    [id]=\"id\"\n    [placeholder]=\"placeholder\"\n    (keyup)=\"onKeyUp($event)\"\n    [value]=\"value\"\n    [disabled]=\"disabled\"\n    [maxLength]=\"maxLength\"\n  ></textarea>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .item-container .item-content{scrollbar-arrow-color:#64666c!important;scrollbar-face-color:#333437!important;scrollbar-shadow-color:#38393c!important;scrollbar-track-color:#2c2c2f!important}:host::ng-deep .item-container .item-content::-webkit-scrollbar:horizontal{height:.5em}:host::ng-deep .item-container .item-content::-webkit-scrollbar{width:.5em}:host::ng-deep .item-container .item-content::-webkit-scrollbar-button{background-color:#333437;display:none!important}:host::ng-deep .item-container .item-content::-webkit-scrollbar-track-piece{background-color:#2c2c2f}:host::ng-deep .item-container .item-content::-webkit-scrollbar-thumb{background-color:#64666c;border:1px solid #38393c}.required-fill{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:all .2s ease-in-out}.required-fill::-moz-placeholder{color:hsla(0,0%,100%,.3)!important}.required-fill:-ms-input-placeholder{color:hsla(0,0%,100%,.3)!important}.required-fill::-ms-input-placeholder{color:hsla(0,0%,100%,.3)!important}.required-fill::placeholder{color:hsla(0,0%,100%,.3)!important}.error-highlight{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:all .2s ease-in-out}.error-highlight::-moz-placeholder{color:hsla(0,0%,100%,.3)!important}.error-highlight:-ms-input-placeholder{color:hsla(0,0%,100%,.3)!important}.error-highlight::-ms-input-placeholder{color:hsla(0,0%,100%,.3)!important}.error-highlight::placeholder{color:hsla(0,0%,100%,.3)!important}:host::ng-deep{display:flex;flex:1 0 auto}:host::ng-deep .item-container{align-items:stretch;display:flex;flex:1 0 auto;flex-direction:column;position:relative}:host::ng-deep .item-container gl-shared-component-title-label-simple{flex-grow:0}:host::ng-deep .item-container .item-content{background-color:#333437;border:none;color:#fff;flex-grow:1;font-family:Montserrat,sans-serif;font-size:.45em;font-weight:300;overflow-x:hidden;overflow-y:auto;padding:.8em;resize:none;text-align:left}:host::ng-deep .item-container .item-content:focus{outline:none!important}:host::ng-deep .item-container .item-content::-moz-placeholder{color:#64666c}:host::ng-deep .item-container .item-content:-ms-input-placeholder{color:#64666c}:host::ng-deep .item-container .item-content::-ms-input-placeholder{color:#64666c}:host::ng-deep .item-container .item-content::placeholder{color:#64666c}:host::ng-deep .item-container .item-content.light{background-color:rgba(0,0,0,.1)}:host::ng-deep .item-container .item-content.dark{background-color:#161617}:host::ng-deep .item-container .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-container .item-content.light:-ms-input-placeholder{color:hsla(0,0%,100%,.2)!important}"]
+            },] }
+];
+GlSharedComponentInputTextAreaSimpleComponent.ctorParameters = () => [];
+GlSharedComponentInputTextAreaSimpleComponent.propDecorators = {
+    textArea: [{ type: ViewChild, args: ['textArea', { read: ElementRef, static: true },] }],
+    disabled: [{ type: Input }],
+    id: [{ type: Input }],
+    labelAlignment: [{ type: Input }],
+    labelValue: [{ type: Input }],
+    placeholder: [{ type: Input }],
+    itemContentAlignment: [{ type: Input }],
+    class: [{ type: Input }],
+    value: [{ type: Input }],
+    maxLength: [{ type: Input }],
+    currentValue: [{ type: Output }]
 };
-__decorate([
-    ViewChild('textArea', { read: ElementRef, static: true })
-], GlSharedComponentInputTextAreaSimpleComponent.prototype, "textArea", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaSimpleComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaSimpleComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaSimpleComponent.prototype, "labelAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaSimpleComponent.prototype, "labelValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaSimpleComponent.prototype, "placeholder", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaSimpleComponent.prototype, "itemContentAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaSimpleComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaSimpleComponent.prototype, "value", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaSimpleComponent.prototype, "maxLength", void 0);
-__decorate([
-    Output()
-], GlSharedComponentInputTextAreaSimpleComponent.prototype, "currentValue", void 0);
-GlSharedComponentInputTextAreaSimpleComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-input-text-area-simple',
-        template: "<div class=\"item-container\">\n  <ng-content></ng-content>\n  <!--suppress HtmlFormInputWithoutLabel -->\n  <textarea\n    #textArea\n    class=\"item-content {{ itemContentAlignment }} {{ class }}\"\n    [id]=\"id\"\n    [placeholder]=\"placeholder\"\n    (keyup)=\"onKeyUp($event)\"\n    [value]=\"value\"\n    [disabled]=\"disabled\"\n    [maxLength]=\"maxLength\"\n  ></textarea>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .item-container .item-content::-webkit-scrollbar:horizontal{height:.5em}:host::ng-deep .item-container .item-content::-webkit-scrollbar{width:.5em}:host::ng-deep .item-container .item-content::-webkit-scrollbar-button{background-color:#333437;display:none!important}:host::ng-deep .item-container .item-content::-webkit-scrollbar-track-piece{background-color:#2c2c2f}:host::ng-deep .item-container .item-content::-webkit-scrollbar-thumb{background-color:#64666c;border:1px solid #38393c}.required-fill{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::placeholder{color:rgba(255,255,255,.3)!important}:host::ng-deep{display:flex;flex:1 0 auto}:host::ng-deep .item-container{position:relative;display:flex;flex-direction:column;align-items:stretch;flex:1 0 auto}:host::ng-deep .item-container gl-shared-component-title-label-simple{flex-grow:0}:host::ng-deep .item-container .item-content{scrollbar-face-color:#333437!important;scrollbar-shadow-color:#38393c!important;scrollbar-track-color:#2c2c2f!important;scrollbar-arrow-color:#64666c!important;font-family:Montserrat,sans-serif;font-weight:300;resize:none;padding:.8em;font-size:.45em;text-align:left;flex-grow:1;overflow-x:hidden;overflow-y:auto;background-color:#333437;border:none;color:#fff}:host::ng-deep .item-container .item-content:focus{outline:0!important}:host::ng-deep .item-container .item-content::-moz-placeholder{color:#64666c}:host::ng-deep .item-container .item-content::-ms-input-placeholder{color:#64666c}:host::ng-deep .item-container .item-content::placeholder{color:#64666c}:host::ng-deep .item-container .item-content.light{background-color:rgba(0,0,0,.1)}:host::ng-deep .item-container .item-content.dark{background-color:#161617}:host::ng-deep .item-container .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .item-container .item-content.light:-ms-input-placeholder{color:rgba(255,255,255,.2)!important}"]
-    })
-], GlSharedComponentInputTextAreaSimpleComponent);
 
-let GlSharedComponentInputTextAreaLabelComponent = class GlSharedComponentInputTextAreaLabelComponent {
+class GlSharedComponentInputTextAreaLabelComponent {
     constructor() {
         this.disabled = false;
         this.value = '';
@@ -410,52 +303,31 @@ let GlSharedComponentInputTextAreaLabelComponent = class GlSharedComponentInputT
     onKeyUp(values) {
         this.currentValue.emit(values);
     }
+}
+GlSharedComponentInputTextAreaLabelComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-text-area-label',
+                template: "<gl-shared-component-input-text-area-simple\n  [class]=\"class\"\n  [id]=\"id\"\n  [placeholder]=\"placeholder\"\n  [itemContentAlignment]=\"itemContentAlignment\"\n  (currentValue)=\"onKeyUp($event)\"\n  [value]=\"value\"\n  [disabled]=\"disabled\"\n  [maxLength]=\"maxLength\">\n  <gl-shared-component-title-label-simple\n    [class]=\"class\"\n    [labelAlignment]=\"labelAlignment\"\n    [id]=\"id\"\n    [labelValue]=\"labelValue\"\n    [required]=\"required\"\n    [requiredLabel]=\"requiredLabel\"\n  ></gl-shared-component-title-label-simple>\n</gl-shared-component-input-text-area-simple>\n",
+                styles: [":host::ng-deep{display:flex;flex-grow:1}"]
+            },] }
+];
+GlSharedComponentInputTextAreaLabelComponent.ctorParameters = () => [];
+GlSharedComponentInputTextAreaLabelComponent.propDecorators = {
+    disabled: [{ type: Input }],
+    id: [{ type: Input }],
+    labelAlignment: [{ type: Input }],
+    labelValue: [{ type: Input }],
+    placeholder: [{ type: Input }],
+    itemContentAlignment: [{ type: Input }],
+    class: [{ type: Input }],
+    value: [{ type: Input }],
+    maxLength: [{ type: Input }],
+    required: [{ type: Input }],
+    requiredLabel: [{ type: Input }],
+    currentValue: [{ type: Output }]
 };
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaLabelComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaLabelComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaLabelComponent.prototype, "labelAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaLabelComponent.prototype, "labelValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaLabelComponent.prototype, "placeholder", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaLabelComponent.prototype, "itemContentAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaLabelComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaLabelComponent.prototype, "value", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaLabelComponent.prototype, "maxLength", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaLabelComponent.prototype, "required", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextAreaLabelComponent.prototype, "requiredLabel", void 0);
-__decorate([
-    Output()
-], GlSharedComponentInputTextAreaLabelComponent.prototype, "currentValue", void 0);
-GlSharedComponentInputTextAreaLabelComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-input-text-area-label',
-        template: "<gl-shared-component-input-text-area-simple\n  [class]=\"class\"\n  [id]=\"id\"\n  [placeholder]=\"placeholder\"\n  [itemContentAlignment]=\"itemContentAlignment\"\n  (currentValue)=\"onKeyUp($event)\"\n  [value]=\"value\"\n  [disabled]=\"disabled\"\n  [maxLength]=\"maxLength\">\n  <gl-shared-component-title-label-simple\n    [class]=\"class\"\n    [labelAlignment]=\"labelAlignment\"\n    [id]=\"id\"\n    [labelValue]=\"labelValue\"\n    [required]=\"required\"\n    [requiredLabel]=\"requiredLabel\"\n  ></gl-shared-component-title-label-simple>\n</gl-shared-component-input-text-area-simple>\n",
-        styles: [":host::ng-deep{display:flex;flex-grow:1}"]
-    })
-], GlSharedComponentInputTextAreaLabelComponent);
 
-let GlSharedComponentModalAlertService = class GlSharedComponentModalAlertService {
+class GlSharedComponentModalAlertService {
     constructor() {
         this.isOK = true;
         this.currentValue = new Subject();
@@ -521,15 +393,16 @@ let GlSharedComponentModalAlertService = class GlSharedComponentModalAlertServic
             }
         }
     }
-};
+}
 GlSharedComponentModalAlertService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentModalAlertService_Factory() { return new GlSharedComponentModalAlertService(); }, token: GlSharedComponentModalAlertService, providedIn: "root" });
-GlSharedComponentModalAlertService = __decorate([
-    Injectable({
-        providedIn: 'root'
-    })
-], GlSharedComponentModalAlertService);
+GlSharedComponentModalAlertService.decorators = [
+    { type: Injectable, args: [{
+                providedIn: 'root'
+            },] }
+];
+GlSharedComponentModalAlertService.ctorParameters = () => [];
 
-let GlSharedComponentModalAlertComponent = class GlSharedComponentModalAlertComponent {
+class GlSharedComponentModalAlertComponent {
     constructor(service) {
         this.service = service;
         this.innerValueNo = 'No';
@@ -539,66 +412,47 @@ let GlSharedComponentModalAlertComponent = class GlSharedComponentModalAlertComp
         this.yesValue = 'yes';
         this.okValue = 'ok';
     }
-};
+}
+GlSharedComponentModalAlertComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-modal-alert',
+                template: "<div\n  *ngIf=\"service.showModal\"\n  glAutoFocus\n  (keydown)=\"service.onModalKeyUp($event)\"\n  id=\"modal\"\n  class=\"modal-container {{ service.modalClass }}\"\n  tabindex=\"-1\">\n  <div class=\"modal-main-content\">\n    <gl-shared-component-modal-header\n      [title]=\"title\"\n      [subtitle]=\"subtitle\"\n      [modalLogo]=\"modalLogo\"\n    ></gl-shared-component-modal-header>\n    <div class=\"modal-message-container\">\n      <span class=\"modal-message\">{{ service.message }}</span>\n    </div>\n    <div class=\"button-container\">\n      <gl-shared-component-input-button-simple\n        *ngIf=\"!service.isOK\"\n        class=\"no\"\n        (click)=\"service.onNo()\"\n        [innerValue]=\"innerValueNo\"\n        [value]=\"noValue\"\n      ></gl-shared-component-input-button-simple>\n      <gl-shared-component-input-button-simple\n        *ngIf=\"!service.isOK\"\n        class=\"yes\"\n        (click)=\"service.onYes()\"\n        [innerValue]=\"innerValueYes\"\n        [value]=\"yesValue\"\n      ></gl-shared-component-input-button-simple>\n      <gl-shared-component-input-button-simple\n        *ngIf=\"service.isOK\"\n        class=\"ok\"\n        (click)=\"service.onOk()\"\n        [innerValue]=\"innerValueOK\"\n        [value]=\"okValue\"\n      ></gl-shared-component-input-button-simple>\n    </div>\n    <div class=\"modal-footer\"></div>\n  </div>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .modal-container{-webkit-animation:show-modal .5s ease-in-out;-webkit-animation-fill-mode:forwards;align-items:center;animation:show-modal .5s ease-in-out;animation-fill-mode:forwards;background:rgba(0,0,0,.8);display:flex;height:0;justify-items:center;left:0;min-height:100vh;min-width:100vw;position:fixed;top:0;z-index:100000}@-webkit-keyframes show-modal{0%{opacity:0}to{opacity:1}}@keyframes show-modal{0%{opacity:0}to{opacity:1}}:host::ng-deep .modal-container>.modal-main-content{opacity:1!important;transition:all .5s ease-in-out;transition-delay:.5s}:host::ng-deep .modal-container .modal-main-content{align-items:stretch;background:rgba(2,2,2,.5);display:flex;flex-direction:column;height:-webkit-max-content;height:-moz-max-content;height:max-content;height:1em;justify-content:stretch;margin:0 auto;max-width:36em;min-height:10em;opacity:0;width:90vw;word-wrap:break-word}:host::ng-deep .modal-container .modal-main-content .modal-message-container{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;align-items:center;display:flex;flex-grow:1;height:-webkit-max-content;height:-moz-max-content;height:max-content;justify-content:center;margin:1em;user-select:none}:host::ng-deep .modal-container .modal-main-content .modal-message-container .modal-message{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#fff;display:block;font-family:Montserrat,sans-serif;font-size:.6em;font-weight:700;text-align:center;text-transform:unset;user-select:none;white-space:pre-wrap;width:100%}:host::ng-deep .modal-container .modal-main-content .button-container{align-items:stretch;display:flex;height:2em;justify-content:center}:host::ng-deep .modal-container .modal-main-content .button-container gl-shared-component-input-button-simple{margin:0 .2em;max-width:33.33333%}:host::ng-deep .modal-container .modal-main-content .modal-footer{background-color:#0e0e0f;border-image-slice:.5;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));border-top:1px solid;height:.5em;margin:.2em 0 0;width:100%}:host::ng-deep .hide-modal{-webkit-animation:hide-modal .3s ease-in-out;-webkit-animation-fill-mode:forwards;animation:hide-modal .3s ease-in-out;animation-fill-mode:forwards}@-webkit-keyframes hide-modal{0%{opacity:1}to{opacity:0}}@keyframes hide-modal{0%{opacity:1}to{opacity:0}}@media screen and (min-device-width:1024px) and (orientation:landscape){:host::ng-deep .modal-container .modal-main-content{width:30vw}:host::ng-deep .modal-container .modal-main-content gl-shared-component-input-button-simple{margin:0 .2em;max-width:10vw}}"]
+            },] }
+];
 GlSharedComponentModalAlertComponent.ctorParameters = () => [
     { type: GlSharedComponentModalAlertService }
 ];
-__decorate([
-    Input()
-], GlSharedComponentModalAlertComponent.prototype, "title", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAlertComponent.prototype, "subtitle", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAlertComponent.prototype, "modalLogo", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAlertComponent.prototype, "innerValueNo", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAlertComponent.prototype, "innerValueYes", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAlertComponent.prototype, "innerValueOK", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAlertComponent.prototype, "noValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAlertComponent.prototype, "yesValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAlertComponent.prototype, "okValue", void 0);
-GlSharedComponentModalAlertComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-modal-alert',
-        template: "<div\n  *ngIf=\"service.showModal\"\n  glAutoFocus\n  (keydown)=\"service.onModalKeyUp($event)\"\n  id=\"modal\"\n  class=\"modal-container {{ service.modalClass }}\"\n  tabindex=\"-1\">\n  <div class=\"modal-main-content\">\n    <gl-shared-component-modal-header\n      [title]=\"title\"\n      [subtitle]=\"subtitle\"\n      [modalLogo]=\"modalLogo\"\n    ></gl-shared-component-modal-header>\n    <div class=\"modal-message-container\">\n      <span class=\"modal-message\">{{ service.message }}</span>\n    </div>\n    <div class=\"button-container\">\n      <gl-shared-component-input-button-simple\n        *ngIf=\"!service.isOK\"\n        class=\"no\"\n        (click)=\"service.onNo()\"\n        [innerValue]=\"innerValueNo\"\n        [value]=\"noValue\"\n      ></gl-shared-component-input-button-simple>\n      <gl-shared-component-input-button-simple\n        *ngIf=\"!service.isOK\"\n        class=\"yes\"\n        (click)=\"service.onYes()\"\n        [innerValue]=\"innerValueYes\"\n        [value]=\"yesValue\"\n      ></gl-shared-component-input-button-simple>\n      <gl-shared-component-input-button-simple\n        *ngIf=\"service.isOK\"\n        class=\"ok\"\n        (click)=\"service.onOk()\"\n        [innerValue]=\"innerValueOK\"\n        [value]=\"okValue\"\n      ></gl-shared-component-input-button-simple>\n    </div>\n    <div class=\"modal-footer\"></div>\n  </div>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .modal-container{position:fixed;min-width:100vw;min-height:100vh;z-index:100000;top:0;left:0;display:flex;justify-items:center;align-items:center;height:0;-webkit-animation:.5s ease-in-out forwards show-modal;animation:.5s ease-in-out forwards show-modal;background:rgba(0,0,0,.8)}@-webkit-keyframes show-modal{from{opacity:0}to{opacity:1}}@keyframes show-modal{from{opacity:0}to{opacity:1}}:host::ng-deep .modal-container>.modal-main-content{opacity:1!important;transition:.5s ease-in-out .5s}:host::ng-deep .modal-container .modal-main-content{opacity:0;background:rgba(2,2,2,.5);margin:0 auto;word-wrap:break-word;display:flex;flex-direction:column;justify-content:stretch;width:90vw;max-width:36em;min-height:10em;height:1em;align-items:stretch}:host::ng-deep .modal-container .modal-main-content .modal-message-container{display:flex;align-items:center;justify-content:center;flex-grow:1;height:-webkit-max-content;height:-moz-max-content;height:max-content;margin:1em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .modal-container .modal-main-content .modal-message-container .modal-message{font-family:Montserrat,sans-serif;font-weight:700;text-transform:unset;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:block;text-align:center;width:100%;font-size:.6em;color:#fff;white-space:pre-wrap}:host::ng-deep .modal-container .modal-main-content .button-container{display:flex;justify-content:center;align-items:stretch;height:2em}:host::ng-deep .modal-container .modal-main-content .button-container gl-shared-component-input-button-simple{margin:0 .2em;max-width:calc(100% / 3)}:host::ng-deep .modal-container .modal-main-content .modal-footer{height:.5em;background-color:#0e0e0f;border-top:1px solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;margin:.2em 0 0;width:100%}:host::ng-deep .hide-modal{-webkit-animation:.3s ease-in-out forwards hide-modal;animation:.3s ease-in-out forwards hide-modal}@-webkit-keyframes hide-modal{from{opacity:1}to{opacity:0}}@keyframes hide-modal{from{opacity:1}to{opacity:0}}@media screen and (min-device-width:1024px) and (orientation:landscape){:host::ng-deep .modal-container .modal-main-content{width:30vw}:host::ng-deep .modal-container .modal-main-content gl-shared-component-input-button-simple{margin:0 .2em;max-width:calc(30vw / 3)}}"]
-    })
-], GlSharedComponentModalAlertComponent);
-
-let GlSharedComponentModalHeaderComponent = class GlSharedComponentModalHeaderComponent {
-    constructor() { }
+GlSharedComponentModalAlertComponent.propDecorators = {
+    title: [{ type: Input }],
+    subtitle: [{ type: Input }],
+    modalLogo: [{ type: Input }],
+    innerValueNo: [{ type: Input }],
+    innerValueYes: [{ type: Input }],
+    innerValueOK: [{ type: Input }],
+    noValue: [{ type: Input }],
+    yesValue: [{ type: Input }],
+    okValue: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentModalHeaderComponent.prototype, "title", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalHeaderComponent.prototype, "subtitle", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalHeaderComponent.prototype, "modalLogo", void 0);
-GlSharedComponentModalHeaderComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-modal-header',
-        template: "<div class=\"modal-title-container\">\n  <div class=\"modal-title-text-container\">\n    <h2 class=\"modal-title\">{{ title }}</h2>\n    <h2 class=\"modal-title\">{{ subtitle }}</h2>\n  </div>\n  <img class=\"modal-logo\" [src]=\"modalLogo\" alt=\"Header Logo\">\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .modal-title-container{background-color:#1a1b1d;border-bottom:1px solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;display:flex;justify-content:flex-start;align-items:center;padding:.5em 0;text-align:left;width:100%;font-size:.65em}:host::ng-deep .modal-title-container .modal-logo{margin:0 .5em;height:1.5em;width:1.5em}:host::ng-deep .modal-title-container .modal-title-text-container{display:flex;align-items:center;margin:0 1em;flex-grow:1}:host::ng-deep .modal-title-container .modal-title-text-container .modal-title{font-family:Montserrat,sans-serif;font-weight:400;color:#64666c;text-transform:uppercase;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .modal-title-container .modal-title-text-container .modal-title:nth-child(1){margin:0 .3em 0 0}"]
-    })
-], GlSharedComponentModalHeaderComponent);
 
-let GlSharedComponentModalLoadingService = class GlSharedComponentModalLoadingService {
+class GlSharedComponentModalHeaderComponent {
+    constructor() { }
+}
+GlSharedComponentModalHeaderComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-modal-header',
+                template: "<div class=\"modal-title-container\">\n  <div class=\"modal-title-text-container\">\n    <h2 class=\"modal-title\">{{ title }}</h2>\n    <h2 class=\"modal-title\">{{ subtitle }}</h2>\n  </div>\n  <img class=\"modal-logo\" [src]=\"modalLogo\" alt=\"Header Logo\">\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .modal-title-container{align-items:center;background-color:#1a1b1d;border-bottom:1px solid;border-image-slice:.5;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));display:flex;font-size:.65em;justify-content:flex-start;padding:.5em 0;text-align:left;width:100%}:host::ng-deep .modal-title-container .modal-logo{height:1.5em;margin:0 .5em;width:1.5em}:host::ng-deep .modal-title-container .modal-title-text-container{align-items:center;display:flex;flex-grow:1;margin:0 1em}:host::ng-deep .modal-title-container .modal-title-text-container .modal-title{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#64666c;font-family:Montserrat,sans-serif;font-weight:400;text-transform:uppercase;user-select:none}:host::ng-deep .modal-title-container .modal-title-text-container .modal-title:first-child{margin:0 .3em 0 0}"]
+            },] }
+];
+GlSharedComponentModalHeaderComponent.ctorParameters = () => [];
+GlSharedComponentModalHeaderComponent.propDecorators = {
+    title: [{ type: Input }],
+    subtitle: [{ type: Input }],
+    modalLogo: [{ type: Input }]
+};
+
+class GlSharedComponentModalLoadingService {
     constructor() {
         this._defaultMessage = 'Loading... please wait...';
         this.defaultMessage = 'Loading... please wait...';
@@ -660,15 +514,16 @@ let GlSharedComponentModalLoadingService = class GlSharedComponentModalLoadingSe
             }, 10);
         });
     }
-};
+}
 GlSharedComponentModalLoadingService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentModalLoadingService_Factory() { return new GlSharedComponentModalLoadingService(); }, token: GlSharedComponentModalLoadingService, providedIn: "root" });
-GlSharedComponentModalLoadingService = __decorate([
-    Injectable({
-        providedIn: 'root'
-    })
-], GlSharedComponentModalLoadingService);
+GlSharedComponentModalLoadingService.decorators = [
+    { type: Injectable, args: [{
+                providedIn: 'root'
+            },] }
+];
+GlSharedComponentModalLoadingService.ctorParameters = () => [];
 
-let GlSharedComponentModalLoadingComponent = class GlSharedComponentModalLoadingComponent {
+class GlSharedComponentModalLoadingComponent {
     constructor(service) {
         this.service = service;
         this.loaded = false;
@@ -681,117 +536,97 @@ let GlSharedComponentModalLoadingComponent = class GlSharedComponentModalLoading
             this.loaded = true;
         }
     }
-};
+}
+GlSharedComponentModalLoadingComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-modal-loading',
+                template: "<div #mainLoading class=\"main-loading\" *ngIf=\"service._showLoading\">\n  <div class=\"loading-container\">\n    <div class=\"lds-facebook\"><div></div><div></div><div></div></div>\n  </div>\n  <div class=\"status-container\">\n    <div class=\"user-content\">\n      <ng-content></ng-content>\n    </div>\n    <h2 class=\"subtitle loading-status\">{{ service._loadingStatus }}</h2>\n  </div>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .main-loading{background:rgba(0,0,0,.85);display:flex;flex-direction:column;height:100vh;justify-content:center;left:0;position:fixed;top:0;width:100vw;z-index:999999999}:host::ng-deep .main-loading .status-container{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;align-items:center;display:flex;flex-direction:column;opacity:.5;text-align:center;user-select:none}:host::ng-deep .main-loading .status-container .user-content{flex-grow:1}:host::ng-deep .main-loading .status-container .loading-status{background:unset;color:#fff;font-family:Montserrat,sans-serif;font-size:.5em;font-weight:300;margin:1em 0 0;white-space:pre-line;width:100%}.loading-container{align-items:center;display:flex;justify-content:center}.hide-loading{opacity:0;transition:all 1s ease-in-out,visibility 1s ease-in-out;visibility:collapse}.lds-facebook{display:inline-block;height:64px;position:relative;width:64px}.lds-facebook div{-webkit-animation:lds-facebook 1.2s cubic-bezier(0,.5,.5,1) infinite;animation:lds-facebook 1.2s cubic-bezier(0,.5,.5,1) infinite;background:#fff;display:inline-block;left:6px;position:absolute;width:13px}.lds-facebook div:first-child{-webkit-animation-delay:-.24s;animation-delay:-.24s;left:6px}.lds-facebook div:nth-child(2){-webkit-animation-delay:-.12s;animation-delay:-.12s;left:26px}.lds-facebook div:nth-child(3){-webkit-animation-delay:0s;animation-delay:0s;left:45px}@-webkit-keyframes lds-facebook{0%{height:51px;top:6px}50%,to{height:26px;top:19px}}@keyframes lds-facebook{0%{height:51px;top:6px}50%,to{height:26px;top:19px}}"]
+            },] }
+];
 GlSharedComponentModalLoadingComponent.ctorParameters = () => [
     { type: GlSharedComponentModalLoadingService }
 ];
-__decorate([
-    ViewChild('mainLoading', { read: ElementRef, static: true })
-], GlSharedComponentModalLoadingComponent.prototype, "mainLoading", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalLoadingComponent.prototype, "defaultMessage", void 0);
-GlSharedComponentModalLoadingComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-modal-loading',
-        template: "<div #mainLoading class=\"main-loading\" *ngIf=\"service._showLoading\">\n  <div class=\"loading-container\">\n    <div class=\"lds-facebook\"><div></div><div></div><div></div></div>\n  </div>\n  <div class=\"status-container\">\n    <div class=\"user-content\">\n      <ng-content></ng-content>\n    </div>\n    <h2 class=\"subtitle loading-status\">{{ service._loadingStatus }}</h2>\n  </div>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .main-loading{position:fixed;width:100vw;height:100vh;z-index:999999999;top:0;left:0;background:rgba(0,0,0,.85);display:flex;justify-content:center;flex-direction:column}:host::ng-deep .main-loading .status-container{display:flex;flex-direction:column;text-align:center;align-items:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;opacity:.5}:host::ng-deep .main-loading .status-container .user-content{flex-grow:1}:host::ng-deep .main-loading .status-container .loading-status{font-family:Montserrat,sans-serif;font-weight:300;color:#fff;font-size:.5em;width:100%;margin:1em 0 0;background:unset;white-space:pre-line}.loading-container{display:flex;justify-content:center;align-items:center}.hide-loading{opacity:0;visibility:collapse;transition:1s ease-in-out,visibility 1s ease-in-out}.lds-facebook{display:inline-block;position:relative;width:64px;height:64px}.lds-facebook div{display:inline-block;position:absolute;left:6px;width:13px;background:#fff;-webkit-animation:1.2s cubic-bezier(0,.5,.5,1) infinite lds-facebook;animation:1.2s cubic-bezier(0,.5,.5,1) infinite lds-facebook}.lds-facebook div:nth-child(1){left:6px;-webkit-animation-delay:-.24s;animation-delay:-.24s}.lds-facebook div:nth-child(2){left:26px;-webkit-animation-delay:-.12s;animation-delay:-.12s}.lds-facebook div:nth-child(3){left:45px;-webkit-animation-delay:0s;animation-delay:0s}@-webkit-keyframes lds-facebook{0%{top:6px;height:51px}100%,50%{top:19px;height:26px}}@keyframes lds-facebook{0%{top:6px;height:51px}100%,50%{top:19px;height:26px}}"]
-    })
-], GlSharedComponentModalLoadingComponent);
-
-let GlSharedComponentTitlePageComponent = class GlSharedComponentTitlePageComponent {
-    constructor() { }
+GlSharedComponentModalLoadingComponent.propDecorators = {
+    mainLoading: [{ type: ViewChild, args: ['mainLoading', { read: ElementRef, static: true },] }],
+    defaultMessage: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentTitlePageComponent.prototype, "title", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitlePageComponent.prototype, "subtitle", void 0);
-GlSharedComponentTitlePageComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-title-page',
-        template: "<div class=\"page-title\">\n  <div class=\"title-container\">\n    <h1 class=\"title\">{{ title }}</h1>\n    <h2 class=\"subtitle\">{{ subtitle }}</h2>\n  </div>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);.page-title{margin:0 .5em;flex-grow:1;align-self:flex-start}.page-title .title-container{display:flex}.page-title .title-container .title{font-family:Montserrat,sans-serif;font-weight:700}.page-title .title-container .subtitle,.page-title .title-container .title{text-transform:uppercase;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;color:#fff;font-size:1.5em}.page-title .title-container .subtitle{font-family:Montserrat,sans-serif;font-weight:100;margin:0 0 0 .3em}"]
-    })
-], GlSharedComponentTitlePageComponent);
 
-let GlSharedComponentTitleLabelButtonSimpleComponent = class GlSharedComponentTitleLabelButtonSimpleComponent {
+class GlSharedComponentTitlePageComponent {
+    constructor() { }
+}
+GlSharedComponentTitlePageComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-title-page',
+                template: "<div class=\"page-title\">\n  <div class=\"title-container\">\n    <h1 class=\"title\">{{ title }}</h1>\n    <h2 class=\"subtitle\">{{ subtitle }}</h2>\n  </div>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");.page-title{align-self:flex-start;flex-grow:1;margin:0 .5em}.page-title .title-container{display:flex}.page-title .title-container .title{font-family:Montserrat,sans-serif;font-weight:700}.page-title .title-container .subtitle,.page-title .title-container .title{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#fff;font-size:1.5em;text-transform:uppercase;user-select:none}.page-title .title-container .subtitle{font-family:Montserrat,sans-serif;font-weight:100;margin:0 0 0 .3em}"]
+            },] }
+];
+GlSharedComponentTitlePageComponent.ctorParameters = () => [];
+GlSharedComponentTitlePageComponent.propDecorators = {
+    title: [{ type: Input }],
+    subtitle: [{ type: Input }]
+};
+
+class GlSharedComponentTitleLabelButtonSimpleComponent {
     constructor() {
         this.required = false;
         this.requiredFieldDescription = 'Required field';
     }
+}
+GlSharedComponentTitleLabelButtonSimpleComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-title-label-button-simple',
+                template: "<div class=\"label-button-container {{ class }}\">\n  <div\n    [attr.alt]=\"alt\"\n    class=\"tooltip top\">\n    <img\n      class=\"label-button\"\n      [id]=\"id\"\n      [src]=\"src\"\n      [alt]=\"alt\">\n  </div>\n  <img\n    *ngIf=\"required\"\n    src=\"../assets/img/icon/label/dot.svg\"\n    class=\"required-fill-dot\"\n    [title]=\"requiredFieldDescription\"\n    alt=\"Required fill icon\">\n</div>\n",
+                styles: [".required-fill{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:all .2s ease-in-out}.required-fill::-moz-placeholder{color:hsla(0,0%,100%,.3)!important}.required-fill:-ms-input-placeholder{color:hsla(0,0%,100%,.3)!important}.required-fill::-ms-input-placeholder{color:hsla(0,0%,100%,.3)!important}.required-fill::placeholder{color:hsla(0,0%,100%,.3)!important}.error-highlight{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:all .2s ease-in-out}.error-highlight::-moz-placeholder{color:hsla(0,0%,100%,.3)!important}.error-highlight:-ms-input-placeholder{color:hsla(0,0%,100%,.3)!important}.error-highlight::-ms-input-placeholder{color:hsla(0,0%,100%,.3)!important}.error-highlight::placeholder{color:hsla(0,0%,100%,.3)!important}.label-button-container{display:flex;position:absolute;right:.2em;top:.19em}.label-button-container .label-button{cursor:pointer;height:1em;margin:0 .1em;width:1em}.label-button-container .label-button:hover{opacity:1;transform:scale(1.1);transition:all .2s ease-in-out}.label-button-container .label-button:not(hover){opacity:.5;transform:scale(1);transition:all .2s ease-in-out}"]
+            },] }
+];
+GlSharedComponentTitleLabelButtonSimpleComponent.ctorParameters = () => [];
+GlSharedComponentTitleLabelButtonSimpleComponent.propDecorators = {
+    id: [{ type: Input }],
+    alt: [{ type: Input }],
+    src: [{ type: Input }],
+    required: [{ type: Input }],
+    class: [{ type: Input }],
+    requiredFieldDescription: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelButtonSimpleComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelButtonSimpleComponent.prototype, "alt", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelButtonSimpleComponent.prototype, "src", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelButtonSimpleComponent.prototype, "required", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelButtonSimpleComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelButtonSimpleComponent.prototype, "requiredFieldDescription", void 0);
-GlSharedComponentTitleLabelButtonSimpleComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-title-label-button-simple',
-        template: "<div class=\"label-button-container {{ class }}\">\n  <div\n    [attr.alt]=\"alt\"\n    class=\"tooltip top\">\n    <img\n      class=\"label-button\"\n      [id]=\"id\"\n      [src]=\"src\"\n      [alt]=\"alt\">\n  </div>\n  <img\n    *ngIf=\"required\"\n    src=\"../assets/img/icon/label/dot.svg\"\n    class=\"required-fill-dot\"\n    [title]=\"requiredFieldDescription\"\n    alt=\"Required fill icon\">\n</div>\n",
-        styles: [".required-fill{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.required-fill::-moz-placeholder{color:rgba(255,255,255,.3)!important}.required-fill:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.required-fill::placeholder{color:rgba(255,255,255,.3)!important}.error-highlight{background-color:rgba(210,64,119,.3)!important;border-color:#e64949!important;color:#fff!important;transition:.2s ease-in-out}.error-highlight::-moz-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight:-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::-ms-input-placeholder{color:rgba(255,255,255,.3)!important}.error-highlight::placeholder{color:rgba(255,255,255,.3)!important}.label-button-container{display:flex;position:absolute;top:.19em;right:.2em}.label-button-container .label-button{cursor:pointer;height:1em;width:1em;margin:0 .1em}.label-button-container .label-button:hover{transform:scale(1.1);opacity:1;transition:.2s ease-in-out}.label-button-container .label-button:not(hover){transform:scale(1);opacity:.5;transition:.2s ease-in-out}"]
-    })
-], GlSharedComponentTitleLabelButtonSimpleComponent);
 
-let GlSharedComponentTitleLabelButtonContainerComponent = class GlSharedComponentTitleLabelButtonContainerComponent {
+class GlSharedComponentTitleLabelButtonContainerComponent {
     constructor() {
         this.required = false;
         this.requiredFieldDescription = 'Required field';
     }
+}
+GlSharedComponentTitleLabelButtonContainerComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-title-label-button-container',
+                template: "<div class=\"label-with-button-container {{ class }}\">\n  <gl-shared-component-title-label-simple\n    [labelValue]=\"labelValue\"\n    [id]=\"id\"\n    [labelAlignment]=\"labelAlignment\"\n    [required]=\"required\"\n    [class]=\"class\"\n    [requiredLabel]=\"requiredFieldDescription\"\n  ></gl-shared-component-title-label-simple>\n  <div class=\"label-button-container\">\n    <ng-content></ng-content>\n  </div>\n</div>\n",
+                styles: [":host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .label-with-button-container{background-color:#2c2c2f;display:flex;flex-grow:1}:host::ng-deep .label-with-button-container .label-button-container{display:flex;flex-grow:0;margin:0 .2em 0 0}:host::ng-deep .label-with-button-container .label-button-container .button{margin:0 0 0 .2em}:host::ng-deep .label-with-button-container.light{background-color:rgba(0,0,0,.3)}:host::ng-deep .label-with-button-container.dark{background-color:#111112}"]
+            },] }
+];
+GlSharedComponentTitleLabelButtonContainerComponent.ctorParameters = () => [];
+GlSharedComponentTitleLabelButtonContainerComponent.propDecorators = {
+    labelValue: [{ type: Input }],
+    id: [{ type: Input }],
+    labelAlignment: [{ type: Input }],
+    required: [{ type: Input }],
+    class: [{ type: Input }],
+    requiredFieldDescription: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelButtonContainerComponent.prototype, "labelValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelButtonContainerComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelButtonContainerComponent.prototype, "labelAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelButtonContainerComponent.prototype, "required", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelButtonContainerComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentTitleLabelButtonContainerComponent.prototype, "requiredFieldDescription", void 0);
-GlSharedComponentTitleLabelButtonContainerComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-title-label-button-container',
-        template: "<div class=\"label-with-button-container {{ class }}\">\n  <gl-shared-component-title-label-simple\n    [labelValue]=\"labelValue\"\n    [id]=\"id\"\n    [labelAlignment]=\"labelAlignment\"\n    [required]=\"required\"\n    [class]=\"class\"\n    [requiredLabel]=\"requiredFieldDescription\"\n  ></gl-shared-component-title-label-simple>\n  <div class=\"label-button-container\">\n    <ng-content></ng-content>\n  </div>\n</div>\n",
-        styles: [":host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .label-with-button-container{display:flex;flex-grow:1;background-color:#2c2c2f}:host::ng-deep .label-with-button-container .label-button-container{display:flex;flex-grow:0;margin:0 .2em 0 0}:host::ng-deep .label-with-button-container .label-button-container .button{margin:0 0 0 .2em}:host::ng-deep .label-with-button-container.light{background-color:rgba(0,0,0,.3)}:host::ng-deep .label-with-button-container.dark{background-color:#111112}"]
-    })
-], GlSharedComponentTitleLabelButtonContainerComponent);
 
-let GlSharedComponentMenuBackgroundComponent = class GlSharedComponentMenuBackgroundComponent {
+class GlSharedComponentMenuBackgroundComponent {
     constructor() { }
-};
-GlSharedComponentMenuBackgroundComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-menu-background',
-        template: "<div class=\"menu-background\"></div>\n",
-        styles: [":host::ng-deep .menu-background{background-color:rgba(0,0,0,.3);position:fixed;width:100vw;height:100vh}"]
-    })
-], GlSharedComponentMenuBackgroundComponent);
+}
+GlSharedComponentMenuBackgroundComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-menu-background',
+                template: "<div class=\"menu-background\"></div>\n",
+                styles: [":host::ng-deep .menu-background{background-color:rgba(0,0,0,.3);height:100vh;position:fixed;width:100vw}"]
+            },] }
+];
+GlSharedComponentMenuBackgroundComponent.ctorParameters = () => [];
 
-let GlSharedComponentMenuService = class GlSharedComponentMenuService {
+class GlSharedComponentMenuService {
     constructor() {
         this.menuHidden = new Subject();
         this.opened = false;
@@ -829,15 +664,16 @@ let GlSharedComponentMenuService = class GlSharedComponentMenuService {
             this.close(event);
         }
     }
-};
+}
 GlSharedComponentMenuService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentMenuService_Factory() { return new GlSharedComponentMenuService(); }, token: GlSharedComponentMenuService, providedIn: "root" });
-GlSharedComponentMenuService = __decorate([
-    Injectable({
-        providedIn: 'root'
-    })
-], GlSharedComponentMenuService);
+GlSharedComponentMenuService.decorators = [
+    { type: Injectable, args: [{
+                providedIn: 'root'
+            },] }
+];
+GlSharedComponentMenuService.ctorParameters = () => [];
 
-let GlSharedComponentMenuComponent = class GlSharedComponentMenuComponent {
+class GlSharedComponentMenuComponent {
     constructor(service, router) {
         this.service = service;
         this.router = router;
@@ -851,65 +687,37 @@ let GlSharedComponentMenuComponent = class GlSharedComponentMenuComponent {
     ngOnInit() {
         this.service.initialize(this.container.nativeElement, this.background.nativeElement, this.router);
     }
-};
+}
+GlSharedComponentMenuComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-menu',
+                template: "<gl-shared-component-menu-background\n  #background\n  (click)=\"service.backgroundClick($event)\"\n></gl-shared-component-menu-background>\n<div #container class=\"menu-container {{ className }} {{ menuPosition === 'left' ? 'left' : 'right' }}\">\n  <nav class=\"menu-nav-container\">\n    <ul class=\"menu-content\">\n      <li class=\"menu-header-container\">\n        <div class=\"menu-header\">\n          <div class=\"menu-top-icons-container\">\n            <img id=\"close-menu-button\"\n               (click)=\"service.close($event)\"\n               [src]=\"closeButton\"\n               class=\"menu-icons close-menu\"\n               alt=\"Close menu button\">\n            <img\n              *ngIf=\"showSettings\"\n              id=\"settings-menu-button\"\n              (click)=\"service.goToSettings(settingsUrl, settingsTarget)\"\n              [src]=\"settingsButton\"\n              class=\"menu-icons settings-menu\"\n              alt=\"Settings menu button\">\n          </div>\n          <div class=\"menu-header-title\">\n            <h1 class=\"title\">{{ title }}</h1>\n            <h2 class=\"subtitle\">{{ subtitle }}</h2>\n          </div>\n        </div>\n      </li>\n      <li class=\"menu-content-container {{ title?.length > 0 ? 'has-title' : '' }}\">\n        <gl-shared-component-menu-item\n          *ngFor=\"let menuItem of menuItems\"\n          [absolute]=\"menuItem.absolute\"\n          [alt]=\"menuItem.alt\"\n          [src]=\"menuItem.src\"\n          [routerLink]=\"menuItem.href\"\n          [href]=\"menuItem.href\"\n          [content]=\"menuItem.content\"\n          [itemClass]=\"menuItem.class\"\n          [target]=\"menuItem.target\"\n        ></gl-shared-component-menu-item>\n        <gl-shared-component-menu-item\n          *ngFor=\"let menuItem of menuItemsComplex\"\n          [absolute]=\"menuItem.absolute\"\n          [alt]=\"menuItem.alt\"\n          [src]=\"menuItem.src\"\n          [routerLink]=\"menuItem.href\"\n          [href]=\"menuItem.href\"\n          [content]=\"menuItem.content\"\n          [itemClass]=\"menuItem.class\"\n          [hasSubitem]=\"menuItem.hasSubitem\"\n          [active]=\"menuItem.active\"\n          [target]=\"menuItem.target\"\n          [subItems]=\"menuItem.subItems\"\n        ></gl-shared-component-menu-item>\n      </li>\n      <li class=\"logo-main-container\">\n        <div class=\"logo-container\">\n          <img class=\"main-logo\" [src]=\"menuLogo\" alt=\"Menu Logo\"/>\n          <span class=\"main-logo-title\">{{ menuBottomTitle }}</span>\n          <span class=\"main-logo-title\">{{ menuBottomVersion == null ? 'Version: ' + systemVersion : menuBottomVersion }}</span>\n        </div>\n      </li>\n    </ul>\n  </nav>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .menu-container{background:#1a1b1d;background-size:cover;border-bottom:0 solid transparent!important;border-image-slice:.5;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));border-top:.3em solid;bottom:0;display:flex;flex-grow:1;height:100vh;max-width:17em;min-width:17em;overflow:hidden;position:relative;position:fixed;top:0;width:85vw;z-index:10000}:host::ng-deep .menu-container:after{background:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));bottom:.7em;content:\"\";height:.7em;left:0;margin-bottom:-.7em;position:absolute;width:100%}:host::ng-deep .menu-container.left{left:-110%;transition:left .5s ease-in-out}:host::ng-deep .menu-container.right{right:-110%;transition:right .5s ease-in-out}:host::ng-deep .menu-container .a{display:block;min-height:3em}:host::ng-deep .menu-container .menu-nav-container{display:flex;flex-grow:1;max-height:100%;overflow:hidden;scrollbar-width:none}:host::ng-deep .menu-container .menu-nav-container .menu-content{display:flex;flex-direction:column;flex-grow:1;position:relative}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container{max-width:17em}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header{display:flex;flex-direction:column;margin:.5em 1em 1em .5em}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container{display:flex;margin:0 0 1.5em}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .close-menu,:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .settings-menu{cursor:pointer;height:1.5em;width:1.5em}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .close-menu:active,:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .close-menu:hover,:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .settings-menu:active,:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .settings-menu:hover{-webkit-animation:increase-decrease .4s ease-in-out;-webkit-animation-fill-mode:forwards;animation:increase-decrease .4s ease-in-out;animation-fill-mode:forwards;opacity:1}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .close-menu{margin:0 .2em 0 0}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-header-title .subtitle,:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-header-title .title{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#fff;margin:0;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase;user-select:none;white-space:nowrap}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-header-title .title{font-family:Montserrat,sans-serif;font-size:.9em;font-weight:700}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-header-title .subtitle{font-family:Montserrat,sans-serif;font-size:1.5em;font-weight:100}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .admin-settings{visibility:collapse}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-item-container{background-color:hsla(0,0%,100%,.3);display:flex;flex-direction:column;font-size:.8em}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-item-container .menu-item{align-items:center;display:flex;font-size:.8em;min-height:3em;padding:.2em;transition:all .2s ease-in-out}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-item-container .menu-item:nth-child(n+2){border-image-slice:1;border-image-source:linear-gradient(90deg,transparent 15%,hsla(0,0%,100%,.1) 15.01%,hsla(0,0%,100%,.05) 98%,transparent 0);border-top:1px solid}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-item-container .menu-item:hover{background-color:rgba(75,77,82,.3)}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-item-container .menu-icons{height:1.8em;margin:0 0 0 .7em;opacity:.5;width:1.8em}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-item-container a{color:hsla(0,0%,100%,.6);flex-grow:1;padding:.8em;text-decoration:none}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-content-container{max-height:calc(100vh - 12.15em);max-width:17em;overflow-x:hidden!important;overflow-y:auto}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-content-container.has-title{max-height:calc(100vh - 13em)}:host::ng-deep .menu-container .menu-nav-container .logo-container{align-items:center;bottom:5vh;display:flex;flex-direction:column;position:absolute;width:100%}:host::ng-deep .menu-container .menu-nav-container .logo-container .main-logo{height:2em;width:2em}:host::ng-deep .menu-container .menu-nav-container .logo-container .main-logo-title{color:#fff;font-size:.4em;margin:1em 0 0}:host::ng-deep .show-admin-settings{visibility:visible!important}:host::ng-deep .menu-container.menu-active.left{left:0}:host::ng-deep .menu-container.menu-active.right{right:0}:host::ng-deep .menu-background{opacity:0;z-index:-100}:host::ng-deep .visible-background{background:rgba(0,0,0,.6);height:100%;opacity:1;position:fixed;top:0;transition:opacity 1s ease-in-out;width:100%;z-index:999}:host::ng-deep .hide-subtitle{margin:0;opacity:0;padding:0;transition:all .25s ease-in-out;visibility:collapse}:host::ng-deep .show-subtitle{opacity:1;transition:all .25s ease-in-out;transition-delay:.4s;visibility:visible}:host::ng-deep .hide-subtitle-container{-webkit-animation:hide-subtitle .4s ease-in-out;-webkit-animation-fill-mode:forwards;animation:hide-subtitle .4s ease-in-out;animation-fill-mode:forwards}:host::ng-deep .show-subtitle-container{-webkit-animation:show-subtitle .4s ease-in-out;-webkit-animation-fill-mode:forwards;animation:show-subtitle .4s ease-in-out;animation-fill-mode:forwards}:host::ng-deep .collapsed-menu .expand{transform:rotate(0deg);transition:all .4s ease-in-out}:host::ng-deep .collapsed-menu .menu-icons{-webkit-animation:decrease-increase .4s ease-in-out;-webkit-animation-fill-mode:forwards;animation:decrease-increase .4s ease-in-out;animation-fill-mode:forwards}:host::ng-deep .expanded-menu .expand{transform:rotate(-180deg);transition:all .4s ease-in-out}:host::ng-deep .expanded-menu .menu-icons{-webkit-animation:increase-decrease .4s ease-in-out;-webkit-animation-fill-mode:forwards;animation:increase-decrease .4s ease-in-out;animation-fill-mode:forwards}:host::ng-deep .menu-container.dark{border-image-source:none;border-left:1px solid #38393c;border-top:.3em solid rgba(210,64,119,.7)}:host::ng-deep .menu-container.translucid{background:hsla(0,0%,100%,.05);border-image-source:none;border-left:1px solid hsla(0,0%,100%,.05);border-top:.3em solid hsla(0,0%,100%,.1)}"]
+            },] }
+];
 GlSharedComponentMenuComponent.ctorParameters = () => [
     { type: GlSharedComponentMenuService },
     { type: Router }
 ];
-__decorate([
-    ViewChild('container', { static: true, read: ElementRef })
-], GlSharedComponentMenuComponent.prototype, "container", void 0);
-__decorate([
-    ViewChild('background', { static: true, read: ElementRef })
-], GlSharedComponentMenuComponent.prototype, "background", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "title", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "subtitle", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "systemVersion", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "menuItems", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "menuItemsComplex", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "showSettings", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "className", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "settingsUrl", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "settingsTarget", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "menuLogo", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "menuBottomTitle", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "menuBottomVersion", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuComponent.prototype, "menuPosition", void 0);
-GlSharedComponentMenuComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-menu',
-        template: "<gl-shared-component-menu-background\n  #background\n  (click)=\"service.backgroundClick($event)\"\n></gl-shared-component-menu-background>\n<div #container class=\"menu-container {{ className }} {{ menuPosition === 'left' ? 'left' : 'right' }}\">\n  <nav class=\"menu-nav-container\">\n    <ul class=\"menu-content\">\n      <li class=\"menu-header-container\">\n        <div class=\"menu-header\">\n          <div class=\"menu-top-icons-container\">\n            <img id=\"close-menu-button\"\n               (click)=\"service.close($event)\"\n               [src]=\"closeButton\"\n               class=\"menu-icons close-menu\"\n               alt=\"Close menu button\">\n            <img\n              *ngIf=\"showSettings\"\n              id=\"settings-menu-button\"\n              (click)=\"service.goToSettings(settingsUrl, settingsTarget)\"\n              [src]=\"settingsButton\"\n              class=\"menu-icons settings-menu\"\n              alt=\"Settings menu button\">\n          </div>\n          <div class=\"menu-header-title\">\n            <h1 class=\"title\">{{ title }}</h1>\n            <h2 class=\"subtitle\">{{ subtitle }}</h2>\n          </div>\n        </div>\n      </li>\n      <li class=\"menu-content-container {{ title?.length > 0 ? 'has-title' : '' }}\">\n        <gl-shared-component-menu-item\n          *ngFor=\"let menuItem of menuItems\"\n          [absolute]=\"menuItem.absolute\"\n          [alt]=\"menuItem.alt\"\n          [src]=\"menuItem.src\"\n          [routerLink]=\"menuItem.href\"\n          [href]=\"menuItem.href\"\n          [content]=\"menuItem.content\"\n          [itemClass]=\"menuItem.class\"\n          [target]=\"menuItem.target\"\n        ></gl-shared-component-menu-item>\n        <gl-shared-component-menu-item\n          *ngFor=\"let menuItem of menuItemsComplex\"\n          [absolute]=\"menuItem.absolute\"\n          [alt]=\"menuItem.alt\"\n          [src]=\"menuItem.src\"\n          [routerLink]=\"menuItem.href\"\n          [href]=\"menuItem.href\"\n          [content]=\"menuItem.content\"\n          [itemClass]=\"menuItem.class\"\n          [hasSubitem]=\"menuItem.hasSubitem\"\n          [active]=\"menuItem.active\"\n          [target]=\"menuItem.target\"\n          [subItems]=\"menuItem.subItems\"\n        ></gl-shared-component-menu-item>\n      </li>\n      <li class=\"logo-main-container\">\n        <div class=\"logo-container\">\n          <img class=\"main-logo\" [src]=\"menuLogo\" alt=\"Menu Logo\"/>\n          <span class=\"main-logo-title\">{{ menuBottomTitle }}</span>\n          <span class=\"main-logo-title\">{{ menuBottomVersion == null ? 'Version: ' + systemVersion : menuBottomVersion }}</span>\n        </div>\n      </li>\n    </ul>\n  </nav>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .menu-container{border-top:.3em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;border-bottom:0 solid transparent!important;background:0 0/cover #1a1b1d;position:fixed;top:0;bottom:0;overflow:hidden;width:85vw;max-width:17em;min-width:17em;z-index:10000;flex-grow:1;display:flex;height:100vh}:host::ng-deep .menu-container::after{width:100%;height:.7em;left:0;bottom:.7em;margin-bottom:-.7em;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%)}:host::ng-deep .menu-container.left{left:-110%;transition:left .5s ease-in-out}:host::ng-deep .menu-container.right{right:-110%;transition:right .5s ease-in-out}:host::ng-deep .menu-container .a{display:block;min-height:3em}:host::ng-deep .menu-container .menu-nav-container{overflow:hidden;scrollbar-width:none;max-height:100%;flex-grow:1;display:flex}:host::ng-deep .menu-container .menu-nav-container .menu-content{display:flex;flex-direction:column;flex-grow:1;position:relative}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container{max-width:17em}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header{display:flex;flex-direction:column;margin:.5em 1em 1em .5em}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container{display:flex;margin:0 0 1.5em}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .close-menu,:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .settings-menu{cursor:pointer;height:1.5em;width:1.5em}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .close-menu:active,:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .close-menu:hover,:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .settings-menu:active,:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .settings-menu:hover{opacity:1;-webkit-animation:.4s ease-in-out forwards increase-decrease;animation:.4s ease-in-out forwards increase-decrease}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-top-icons-container .close-menu{margin:0 .2em 0 0}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-header-title .subtitle,:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-header-title .title{text-transform:uppercase;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;color:#fff;margin:0;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-header-title .title{font-family:Montserrat,sans-serif;font-weight:700;font-size:.9em}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-header .menu-header-title .subtitle{font-family:Montserrat,sans-serif;font-weight:100;font-size:1.5em}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .admin-settings{visibility:collapse}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-item-container{display:flex;flex-direction:column;font-size:.8em;background-color:rgba(255,255,255,.3)}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-item-container .menu-item{min-height:3em;font-size:.8em;display:flex;align-items:center;padding:.2em;transition:.2s ease-in-out}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-item-container .menu-item:nth-child(n+2){border-top:1px solid;border-image-source:linear-gradient(90deg,transparent 15%,rgba(255,255,255,.1) 15.01%,rgba(255,255,255,.05) 98%,transparent 98%);border-image-slice:1}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-item-container .menu-item:hover{background-color:rgba(75,77,82,.3)}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-item-container .menu-icons{margin:0 0 0 .7em;height:1.8em;width:1.8em;opacity:.5}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-header-container .menu-item-container a{color:rgba(255,255,255,.6);padding:.8em;flex-grow:1;text-decoration:none}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-content-container{max-height:calc(100vh - (12.15em));max-width:17em;overflow-y:auto;overflow-x:hidden!important}:host::ng-deep .menu-container .menu-nav-container .menu-content .menu-content-container.has-title{max-height:calc(100vh - (13em))}:host::ng-deep .menu-container .menu-nav-container .logo-container{display:flex;flex-direction:column;align-items:center;bottom:5vh;position:absolute;width:100%}:host::ng-deep .menu-container .menu-nav-container .logo-container .main-logo{height:2em;width:2em}:host::ng-deep .menu-container .menu-nav-container .logo-container .main-logo-title{color:#fff;font-size:.4em;margin:1em 0 0}:host::ng-deep .show-admin-settings{visibility:visible!important}:host::ng-deep .menu-container.menu-active.left{left:0}:host::ng-deep .menu-container.menu-active.right{right:0}:host::ng-deep .menu-background{opacity:0;z-index:-100}:host::ng-deep .visible-background{width:100%;height:100%;background:rgba(0,0,0,.6);opacity:1;position:fixed;top:0;z-index:999;transition:opacity 1s ease-in-out}:host::ng-deep .hide-subtitle{opacity:0;visibility:collapse;margin:0;padding:0;transition:.25s ease-in-out}:host::ng-deep .show-subtitle{opacity:1;visibility:visible;transition:.25s ease-in-out .4s}:host::ng-deep .hide-subtitle-container{-webkit-animation:.4s ease-in-out forwards hide-subtitle;animation:.4s ease-in-out forwards hide-subtitle}:host::ng-deep .show-subtitle-container{-webkit-animation:.4s ease-in-out forwards show-subtitle;animation:.4s ease-in-out forwards show-subtitle}:host::ng-deep .collapsed-menu .expand{transform:rotate(0);transition:.4s ease-in-out}:host::ng-deep .collapsed-menu .menu-icons{-webkit-animation:.4s ease-in-out forwards decrease-increase;animation:.4s ease-in-out forwards decrease-increase}:host::ng-deep .expanded-menu .expand{transform:rotate(-180deg);transition:.4s ease-in-out}:host::ng-deep .expanded-menu .menu-icons{-webkit-animation:.4s ease-in-out forwards increase-decrease;animation:.4s ease-in-out forwards increase-decrease}:host::ng-deep .menu-container.dark{border-left:1px solid #38393c;border-top:.3em solid rgba(210,64,119,.7);border-image-source:none}:host::ng-deep .menu-container.translucid{background:rgba(255,255,255,.05);border-left:1px solid rgba(255,255,255,.05);border-top:.3em solid rgba(255,255,255,.1);border-image-source:none}"]
-    })
-], GlSharedComponentMenuComponent);
+GlSharedComponentMenuComponent.propDecorators = {
+    container: [{ type: ViewChild, args: ['container', { static: true, read: ElementRef },] }],
+    background: [{ type: ViewChild, args: ['background', { static: true, read: ElementRef },] }],
+    title: [{ type: Input }],
+    subtitle: [{ type: Input }],
+    systemVersion: [{ type: Input }],
+    menuItems: [{ type: Input }],
+    menuItemsComplex: [{ type: Input }],
+    showSettings: [{ type: Input }],
+    className: [{ type: Input }],
+    settingsUrl: [{ type: Input }],
+    settingsTarget: [{ type: Input }],
+    menuLogo: [{ type: Input }],
+    menuBottomTitle: [{ type: Input }],
+    menuBottomVersion: [{ type: Input }],
+    menuPosition: [{ type: Input }]
+};
 
-let GlSharedComponentMenuItemComponent = class GlSharedComponentMenuItemComponent {
+class GlSharedComponentMenuItemComponent {
     constructor(_router) {
         this._router = _router;
         this.itemClass = 'dark';
@@ -929,150 +737,117 @@ let GlSharedComponentMenuItemComponent = class GlSharedComponentMenuItemComponen
     toggleActive() {
         this.active = !this.active;
     }
-};
+}
+GlSharedComponentMenuItemComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-menu-item',
+                template: "<li class=\"menu-title {{ itemClass }}\" *ngIf=\"!hasSubitem\">\n  <img [src]=\"src\" class=\"menu-icons\" [alt]=\"alt\"/>\n  <a\n    class=\"menu-item\"\n    *ngIf=\"absolute\"\n    [href]=\"'externalRedirect'\"\n    (click)=\"openAbsoluteLink($event, href, target)\"\n  >{{ content }}</a>\n  <a *ngIf=\"!absolute\"\n     class=\"menu-item\"\n     [routerLink]=\"href\"\n     (click)=\"onClick.emit(null)\"\n  >{{ content }}</a>\n</li>\n\n<li class=\"menu-title {{ itemClass }} {{ active ? 'active' : '' }}\" *ngIf=\"hasSubitem\">\n  <img [src]=\"src\" class=\"menu-icons\" [alt]=\"alt\"/>\n  <div\n    class=\"menu-item\"\n    (click)=\"toggleActive()\"\n  >{{ content }}</div>\n  <img src=\"../assets/img/icon/side-menu/arrow-down.svg\" class=\"menu-arrow\" [alt]=\"alt\"/>\n</li>\n<ol *ngIf=\"hasSubitem && active\" [@fadeInOut] class=\"subitem-container {{ active ? 'active' : '' }}\">\n  <li class=\"menu-title adding-row-animated {{ item.class }}\" *ngFor=\"let item of subItems\">\n    <img [src]=\"item.src\" class=\"menu-icons\" [alt]=\"item.alt\"/>\n    <a\n      class=\"menu-item\"\n      *ngIf=\"item.absolute\"\n      [href]=\"'externalRedirect'\"\n      (click)=\"openAbsoluteLink($event, item.href, item.target)\"\n    >{{ item.content }}</a>\n    <a *ngIf=\"!item.absolute\"\n       class=\"menu-item\"\n       [routerLink]=\"item.href\"\n       (click)=\"onClick.emit(null)\"\n    >{{ item.content }}</a>\n  </li>\n</ol>\n",
+                animations: [
+                    trigger('fadeInOut', [
+                        state('', style({
+                            opacity: 0,
+                            height: 0,
+                            transform: 'scaleY(0)'
+                        })),
+                        transition(':enter', [
+                            style({
+                                opacity: 0,
+                                height: 0,
+                                transform: 'scaleY(0)'
+                            }),
+                            animate("0.3s ease-in", style({
+                                opacity: 1,
+                                height: '*',
+                                transform: 'scaleY(1)'
+                            }))
+                        ]),
+                        transition(':leave', [
+                            animate(250, style({
+                                opacity: 0,
+                                height: 0,
+                                transform: 'scaleY(0)'
+                            }))
+                        ])
+                    ])
+                ],
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");.adding-row-animated{-webkit-animation:adding-row .5s ease-in-out;-webkit-animation-fill-mode:forwards;-webkit-animation-play-state:running;animation:adding-row .5s ease-in-out;animation-fill-mode:forwards;animation-play-state:running}@-webkit-keyframes adding-row{0%{opacity:0}to{opacity:1}}@keyframes adding-row{0%{opacity:0}to{opacity:1}}.delete-row-animated{max-height:0!important;opacity:0!important;transition:all .2s ease-out}.delete-row-animated-frame{-webkit-animation-duration:.2s;-webkit-animation-fill-mode:forwards!important;-webkit-animation-name:hide;-webkit-animation-play-state:initial;animation-duration:.2s;animation-fill-mode:forwards!important;animation-name:hide;animation-play-state:initial}@-webkit-keyframes hide{0%{opacity:1}to{opacity:0}}@keyframes hide{0%{opacity:1}to{opacity:0}}:host::ng-deep{outline:none!important}:host::ng-deep .menu-title{align-items:center;background:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));border-left:.2em solid #d24077;display:flex;margin:0 0 1px;position:relative}:host::ng-deep .menu-title .material-icons{color:hsla(0,0%,100%,.6);font-size:1.2em;margin:0 .5em 0 .3em;padding:.3em}:host::ng-deep .menu-title .menu-icons{height:1.5em;padding:.2em .5em;width:1.5em}:host::ng-deep .menu-title .menu-arrow{height:1em;opacity:.5;padding:.2em .5em;transform:rotate(0deg);transition:all .25s ease-in-out;width:1em}:host::ng-deep .menu-title .menu-item{color:hsla(0,0%,100%,.4);cursor:pointer;flex-grow:1;font-family:Montserrat,sans-serif;font-size:.6em;font-weight:300;max-width:79%;overflow:hidden;padding:1.5em .7em;text-decoration:none;text-overflow:ellipsis;text-transform:uppercase;white-space:nowrap}:host::ng-deep .menu-title.active .menu-arrow{transform:rotate(180deg);transition:all .25s ease-in-out}:host::ng-deep .menu-title:not(hover) .menu-icons{transform:scale(1);transition:all .2s ease-in-out}:host::ng-deep .menu-title:hover .menu-icons{transform:scale(1.2);transition:all .2s ease-in-out}:host::ng-deep .menu-title.dark{border-bottom:1px solid #38393c;border-left:.2em solid transparent;margin:0}:host::ng-deep .menu-title.dark:not(hover){background:#2c2c2f;transition:all .3s ease-in-out}:host::ng-deep .menu-title.dark:hover{background:#4b4d52;transition:all .3s ease-in-out}:host::ng-deep .menu-title.translucid{border-bottom:.5px solid hsla(0,0%,100%,.1);border-left:.2em solid transparent;margin:0}:host::ng-deep .menu-title.translucid:not(hover){background:hsla(0,0%,100%,.05);transition:all .3s ease-in-out}:host::ng-deep .menu-title.translucid:hover{background:hsla(0,0%,100%,.1);transition:all .3s ease-in-out}:host::ng-deep .menu-item,:host::ng-deep .menu-title,:host::ng-deep .subitem-container{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;outline:none!important;user-select:none}:host::ng-deep .subitem-container .menu-title{transform:scaleY(0);transition:all .3s ease-in-out}:host::ng-deep .subitem-container.active .menu-title{transform:scaleY(1);transition:all .3s ease-in-out;transition-delay:.1s}"]
+            },] }
+];
 GlSharedComponentMenuItemComponent.ctorParameters = () => [
     { type: Router }
 ];
-__decorate([
-    Input()
-], GlSharedComponentMenuItemComponent.prototype, "itemClass", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuItemComponent.prototype, "absolute", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuItemComponent.prototype, "menuLogo", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuItemComponent.prototype, "src", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuItemComponent.prototype, "href", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuItemComponent.prototype, "alt", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuItemComponent.prototype, "content", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuItemComponent.prototype, "target", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuItemComponent.prototype, "hasSubitem", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuItemComponent.prototype, "active", void 0);
-__decorate([
-    Input()
-], GlSharedComponentMenuItemComponent.prototype, "subItems", void 0);
-__decorate([
-    Output()
-], GlSharedComponentMenuItemComponent.prototype, "onClick", void 0);
-GlSharedComponentMenuItemComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-menu-item',
-        template: "<li class=\"menu-title {{ itemClass }}\" *ngIf=\"!hasSubitem\">\n  <img [src]=\"src\" class=\"menu-icons\" [alt]=\"alt\"/>\n  <a\n    class=\"menu-item\"\n    *ngIf=\"absolute\"\n    [href]=\"'externalRedirect'\"\n    (click)=\"openAbsoluteLink($event, href, target)\"\n  >{{ content }}</a>\n  <a *ngIf=\"!absolute\"\n     class=\"menu-item\"\n     [routerLink]=\"href\"\n     (click)=\"onClick.emit(null)\"\n  >{{ content }}</a>\n</li>\n\n<li class=\"menu-title {{ itemClass }} {{ active ? 'active' : '' }}\" *ngIf=\"hasSubitem\">\n  <img [src]=\"src\" class=\"menu-icons\" [alt]=\"alt\"/>\n  <div\n    class=\"menu-item\"\n    (click)=\"toggleActive()\"\n  >{{ content }}</div>\n  <img src=\"../assets/img/icon/side-menu/arrow-down.svg\" class=\"menu-arrow\" [alt]=\"alt\"/>\n</li>\n<ol *ngIf=\"hasSubitem && active\" [@fadeInOut] class=\"subitem-container {{ active ? 'active' : '' }}\">\n  <li class=\"menu-title adding-row-animated {{ item.class }}\" *ngFor=\"let item of subItems\">\n    <img [src]=\"item.src\" class=\"menu-icons\" [alt]=\"item.alt\"/>\n    <a\n      class=\"menu-item\"\n      *ngIf=\"item.absolute\"\n      [href]=\"'externalRedirect'\"\n      (click)=\"openAbsoluteLink($event, item.href, item.target)\"\n    >{{ item.content }}</a>\n    <a *ngIf=\"!item.absolute\"\n       class=\"menu-item\"\n       [routerLink]=\"item.href\"\n       (click)=\"onClick.emit(null)\"\n    >{{ item.content }}</a>\n  </li>\n</ol>\n",
-        animations: [
-            trigger('fadeInOut', [
-                state('', style({
-                    opacity: 0,
-                    height: 0,
-                    transform: 'scaleY(0)'
-                })),
-                transition(':enter', [
-                    style({
-                        opacity: 0,
-                        height: 0,
-                        transform: 'scaleY(0)'
-                    }),
-                    animate("0.3s ease-in", style({
-                        opacity: 1,
-                        height: '*',
-                        transform: 'scaleY(1)'
-                    }))
-                ]),
-                transition(':leave', [
-                    animate(250, style({
-                        opacity: 0,
-                        height: 0,
-                        transform: 'scaleY(0)'
-                    }))
-                ])
-            ])
-        ],
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);.adding-row-animated{-webkit-animation:.5s ease-in-out forwards adding-row;animation:.5s ease-in-out forwards adding-row}@-webkit-keyframes adding-row{from{opacity:0}to{opacity:1}}@keyframes adding-row{from{opacity:0}to{opacity:1}}.delete-row-animated{opacity:0!important;max-height:0!important;transition:.2s ease-out}.delete-row-animated-frame{-webkit-animation-name:hide;animation-name:hide;-webkit-animation-duration:.2s;animation-duration:.2s;-webkit-animation-fill-mode:forwards!important;animation-fill-mode:forwards!important;-webkit-animation-play-state:initial;animation-play-state:initial}@-webkit-keyframes hide{from{opacity:1}to{opacity:0}}@keyframes hide{from{opacity:1}to{opacity:0}}:host::ng-deep{outline:0!important}:host::ng-deep .menu-title{background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);margin:0 0 1px;position:relative;display:flex;align-items:center;border-left:.2em solid #d24077}:host::ng-deep .menu-title .material-icons{color:rgba(255,255,255,.6);font-size:1.2em;padding:.3em;margin:0 .5em 0 .3em}:host::ng-deep .menu-title .menu-icons{padding:.2em .5em;height:1.5em;width:1.5em}:host::ng-deep .menu-title .menu-arrow{padding:.2em .5em;height:1em;width:1em;opacity:.5;transform:rotate(0);transition:.25s ease-in-out}:host::ng-deep .menu-title .menu-item{text-decoration:none;font-size:.6em;font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;color:rgba(255,255,255,.4);padding:1.5em .7em;flex-grow:1;cursor:pointer;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;max-width:79%}:host::ng-deep .menu-title.active .menu-arrow{transform:rotate(180deg);transition:.25s ease-in-out}:host::ng-deep .menu-title:not(hover) .menu-icons{transform:scale(1);transition:.2s ease-in-out}:host::ng-deep .menu-title:hover .menu-icons{transform:scale(1.2);transition:.2s ease-in-out}:host::ng-deep .menu-title.dark{margin:0;border-bottom:1px solid #38393c;border-left:.2em solid transparent}:host::ng-deep .menu-title.dark:not(hover){background:#2c2c2f;transition:.3s ease-in-out}:host::ng-deep .menu-title.dark:hover{background:#4b4d52;transition:.3s ease-in-out}:host::ng-deep .menu-title.translucid{margin:0;border-bottom:.5px solid rgba(255,255,255,.1);border-left:.2em solid transparent}:host::ng-deep .menu-title.translucid:not(hover){background:rgba(255,255,255,.05);transition:.3s ease-in-out}:host::ng-deep .menu-title.translucid:hover{background:rgba(255,255,255,.1);transition:.3s ease-in-out}:host::ng-deep .menu-item,:host::ng-deep .menu-title,:host::ng-deep .subitem-container{outline:0!important;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .subitem-container .menu-title{transform:scaleY(0);transition:.3s ease-in-out}:host::ng-deep .subitem-container.active .menu-title{transform:scaleY(1);transition:.3s ease-in-out .1s}"]
-    })
-], GlSharedComponentMenuItemComponent);
+GlSharedComponentMenuItemComponent.propDecorators = {
+    itemClass: [{ type: Input }],
+    absolute: [{ type: Input }],
+    menuLogo: [{ type: Input }],
+    src: [{ type: Input }],
+    href: [{ type: Input }],
+    alt: [{ type: Input }],
+    content: [{ type: Input }],
+    target: [{ type: Input }],
+    hasSubitem: [{ type: Input }],
+    active: [{ type: Input }],
+    subItems: [{ type: Input }],
+    onClick: [{ type: Output }]
+};
 
-let GlSharedComponentFooterSimpleComponent = class GlSharedComponentFooterSimpleComponent {
+class GlSharedComponentFooterSimpleComponent {
     constructor() {
         this.imageDescription = 'Image logo';
     }
+}
+GlSharedComponentFooterSimpleComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-footer-simple',
+                template: "<section class=\"footer-container\">\n  <span class=\"description\">{{ description }}</span>\n  <img\n    *ngIf=\"imageLogo != null\"\n    class=\"image-logo\"\n    [alt]=\"imageDescription\"\n    [src]=\"imageLogo\">\n</section>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep{bottom:0;flex-grow:1;max-width:100vw;min-width:100vw;position:fixed;z-index:100}:host::ng-deep .footer-container{background-color:#1a1b1d;border-image-slice:.5;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));border-top:.1em solid;display:flex;height:1.3em;justify-content:center;position:relative;z-index:99}:host::ng-deep .footer-container .description{color:#fff;font-family:Montserrat,sans-serif;font-size:.5em;font-weight:300;letter-spacing:.14em;padding:1em;text-transform:uppercase}:host::ng-deep .footer-container .image-logo{height:1em;margin:0 0 0 .3em}"]
+            },] }
+];
+GlSharedComponentFooterSimpleComponent.ctorParameters = () => [];
+GlSharedComponentFooterSimpleComponent.propDecorators = {
+    description: [{ type: Input }],
+    imageLogo: [{ type: Input }],
+    imageDescription: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentFooterSimpleComponent.prototype, "description", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFooterSimpleComponent.prototype, "imageLogo", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFooterSimpleComponent.prototype, "imageDescription", void 0);
-GlSharedComponentFooterSimpleComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-footer-simple',
-        template: "<section class=\"footer-container\">\n  <span class=\"description\">{{ description }}</span>\n  <img\n    *ngIf=\"imageLogo != null\"\n    class=\"image-logo\"\n    [alt]=\"imageDescription\"\n    [src]=\"imageLogo\">\n</section>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{z-index:100;max-width:100vw;min-width:100vw;position:fixed;bottom:0;flex-grow:1}:host::ng-deep .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}:host::ng-deep .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}:host::ng-deep .footer-container .image-logo{height:1em;margin:0 0 0 .3em}"]
-    })
-], GlSharedComponentFooterSimpleComponent);
 
-let GlSharedComponentInputButtonHyperlinkComponent = class GlSharedComponentInputButtonHyperlinkComponent {
+class GlSharedComponentInputButtonHyperlinkComponent {
     constructor() { }
+}
+GlSharedComponentInputButtonHyperlinkComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-button-hyperlink',
+                template: "<div class=\"hyperlink-container\">\n  <img\n    class=\"logo\"\n    [src]=\"imageSrc\"\n    [alt]=\"imageDescription\">\n  <a\n    class=\"message\"\n    [href]=\"link\"\n    target=\"_blank\">{{ description }}</a>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .hyperlink-container{align-items:center;bottom:.3em;display:flex;flex-direction:row;position:absolute;right:.3em}:host::ng-deep .hyperlink-container .logo{height:.7em;margin:0 .2em 0 0;width:.7em}:host::ng-deep .hyperlink-container .message{color:#ff9800;font-family:Montserrat,sans-serif;font-size:.5em;font-weight:400;margin:0 0 0 .2em}"]
+            },] }
+];
+GlSharedComponentInputButtonHyperlinkComponent.ctorParameters = () => [];
+GlSharedComponentInputButtonHyperlinkComponent.propDecorators = {
+    imageSrc: [{ type: Input }],
+    imageDescription: [{ type: Input }],
+    description: [{ type: Input }],
+    link: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentInputButtonHyperlinkComponent.prototype, "imageSrc", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputButtonHyperlinkComponent.prototype, "imageDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputButtonHyperlinkComponent.prototype, "description", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputButtonHyperlinkComponent.prototype, "link", void 0);
-GlSharedComponentInputButtonHyperlinkComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-input-button-hyperlink',
-        template: "<div class=\"hyperlink-container\">\n  <img\n    class=\"logo\"\n    [src]=\"imageSrc\"\n    [alt]=\"imageDescription\">\n  <a\n    class=\"message\"\n    [href]=\"link\"\n    target=\"_blank\">{{ description }}</a>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .hyperlink-container{display:flex;flex-direction:row;align-items:center;position:absolute;right:.3em;bottom:.3em}:host::ng-deep .hyperlink-container .logo{width:.7em;height:.7em;margin:0 .2em 0 0}:host::ng-deep .hyperlink-container .message{margin:0 0 0 .2em;font-family:Montserrat,sans-serif;font-weight:400;font-size:.5em;color:#ff9800}"]
-    })
-], GlSharedComponentInputButtonHyperlinkComponent);
 
-let GlSharedComponentFooterContainerComponent = class GlSharedComponentFooterContainerComponent {
+class GlSharedComponentFooterContainerComponent {
     constructor() {
         this.imageDescription = 'Image logo';
     }
+}
+GlSharedComponentFooterContainerComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-footer-container',
+                template: "<section class=\"footer-container\">\n  <span class=\"description\">{{ description }}</span>\n  <img\n    *ngIf=\"imageLogo != null\"\n    class=\"image-logo\"\n    [alt]=\"imageDescription\"\n    [src]=\"imageLogo\">\n  <div class=\"user-container\">\n    <ng-content></ng-content>\n  </div>\n</section>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep{bottom:0;flex-grow:1;max-width:100vw;min-width:100vw;position:fixed;z-index:100}:host::ng-deep .footer-container{background-color:#1a1b1d;border-image-slice:.5;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));border-top:.1em solid;display:flex;height:1.3em;justify-content:center;position:relative;z-index:99}:host::ng-deep .footer-container .description{color:#fff;font-family:Montserrat,sans-serif;font-size:.5em;font-weight:300;letter-spacing:.14em;padding:1em;text-transform:uppercase}:host::ng-deep .footer-container .image-logo{height:1em;margin:0 0 0 .3em}:host::ng-deep .footer-container .user-container{align-self:flex-end;margin:0 .3em 0 0}:host::ng-deep .footer-container .user-container .user-container{align-items:center;display:flex;justify-content:center}"]
+            },] }
+];
+GlSharedComponentFooterContainerComponent.ctorParameters = () => [];
+GlSharedComponentFooterContainerComponent.propDecorators = {
+    description: [{ type: Input }],
+    imageLogo: [{ type: Input }],
+    imageDescription: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentFooterContainerComponent.prototype, "description", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFooterContainerComponent.prototype, "imageLogo", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFooterContainerComponent.prototype, "imageDescription", void 0);
-GlSharedComponentFooterContainerComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-footer-container',
-        template: "<section class=\"footer-container\">\n  <span class=\"description\">{{ description }}</span>\n  <img\n    *ngIf=\"imageLogo != null\"\n    class=\"image-logo\"\n    [alt]=\"imageDescription\"\n    [src]=\"imageLogo\">\n  <div class=\"user-container\">\n    <ng-content></ng-content>\n  </div>\n</section>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{z-index:100;max-width:100vw;min-width:100vw;position:fixed;bottom:0;flex-grow:1}:host::ng-deep .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}:host::ng-deep .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}:host::ng-deep .footer-container .image-logo{height:1em;margin:0 0 0 .3em}:host::ng-deep .footer-container .user-container{align-self:flex-end;margin:0 .3em 0 0}:host::ng-deep .footer-container .user-container .user-container{display:flex;align-items:center;justify-content:center}"]
-    })
-], GlSharedComponentFooterContainerComponent);
 
-let GlSharedComponentErrorMessageComponent = class GlSharedComponentErrorMessageComponent {
+class GlSharedComponentErrorMessageComponent {
     constructor() {
         this.position = 'left';
         this.buttonAction$ = new EventEmitter();
@@ -1080,167 +855,127 @@ let GlSharedComponentErrorMessageComponent = class GlSharedComponentErrorMessage
     buttonAction() {
         this.buttonAction$.emit();
     }
+}
+GlSharedComponentErrorMessageComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-error-message',
+                template: "<div class=\"content-container {{ position === 'right' ? 'right' : 'left' }}\">\n  <h1 class=\"main-title\">{{ errorCode }}</h1>\n  <h2 class=\"message\">{{ errorMessage }}</h2>\n  <gl-shared-component-input-button-simple\n    class=\"home-button\"\n    [innerValue]=\"buttonLabel\"\n    (click)=\"buttonAction()\"\n  ></gl-shared-component-input-button-simple>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .content-container{align-content:center;align-items:center;display:flex;flex-direction:column;justify-content:center;position:absolute;text-align:center;top:25%}:host::ng-deep .content-container.right{right:10vw}:host::ng-deep .content-container.left{left:10vw}:host::ng-deep .content-container .main-title{font-size:11em;font-weight:800}:host::ng-deep .content-container .main-title,:host::ng-deep .content-container .message{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:hsla(0,0%,100%,.3);font-family:Montserrat,sans-serif;user-select:none}:host::ng-deep .content-container .message{font-size:1.5em;font-weight:100}:host::ng-deep .content-container gl-shared-component-input-button-simple{align-items:center;display:block;flex-direction:column;margin:3em 0}:host::ng-deep .content-container gl-shared-component-input-button-simple .default-button{background-color:rgba(0,0,0,.4);border-radius:10em;display:block;font-family:Montserrat,sans-serif;font-weight:300;padding:1.5em 4em}"]
+            },] }
+];
+GlSharedComponentErrorMessageComponent.ctorParameters = () => [];
+GlSharedComponentErrorMessageComponent.propDecorators = {
+    position: [{ type: Input }],
+    errorCode: [{ type: Input }],
+    errorMessage: [{ type: Input }],
+    buttonLabel: [{ type: Input }],
+    buttonAction$: [{ type: Output }]
 };
-__decorate([
-    Input()
-], GlSharedComponentErrorMessageComponent.prototype, "position", void 0);
-__decorate([
-    Input()
-], GlSharedComponentErrorMessageComponent.prototype, "errorCode", void 0);
-__decorate([
-    Input()
-], GlSharedComponentErrorMessageComponent.prototype, "errorMessage", void 0);
-__decorate([
-    Input()
-], GlSharedComponentErrorMessageComponent.prototype, "buttonLabel", void 0);
-__decorate([
-    Output()
-], GlSharedComponentErrorMessageComponent.prototype, "buttonAction$", void 0);
-GlSharedComponentErrorMessageComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-error-message',
-        template: "<div class=\"content-container {{ position === 'right' ? 'right' : 'left' }}\">\n  <h1 class=\"main-title\">{{ errorCode }}</h1>\n  <h2 class=\"message\">{{ errorMessage }}</h2>\n  <gl-shared-component-input-button-simple\n    class=\"home-button\"\n    [innerValue]=\"buttonLabel\"\n    (click)=\"buttonAction()\"\n  ></gl-shared-component-input-button-simple>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .content-container{display:flex;flex-direction:column;position:absolute;top:25%;justify-content:center;align-content:center;text-align:center;align-items:center}:host::ng-deep .content-container.right{right:10vw}:host::ng-deep .content-container.left{left:10vw}:host::ng-deep .content-container .main-title{font-family:Montserrat,sans-serif;font-weight:800;color:rgba(255,255,255,.3);font-size:11em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .content-container .message{font-family:Montserrat,sans-serif;font-weight:100;color:rgba(255,255,255,.3);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:1.5em}:host::ng-deep .content-container gl-shared-component-input-button-simple{display:block;align-items:center;flex-direction:column;margin:3em 0}:host::ng-deep .content-container gl-shared-component-input-button-simple .default-button{border-radius:10em;display:block;padding:1.5em 4em;background-color:rgba(0,0,0,.4);font-family:Montserrat,sans-serif;font-weight:300}"]
-    })
-], GlSharedComponentErrorMessageComponent);
 
-let GlSharedComponentLogoSquareComponent = class GlSharedComponentLogoSquareComponent {
+class GlSharedComponentLogoSquareComponent {
     constructor() {
         this.horizontalPosition = 'left';
         this.verticalPosition = 'top';
     }
+}
+GlSharedComponentLogoSquareComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-logo-square',
+                template: "<img\n  class=\"logo {{ horizontalPosition == 'right' ? 'right' : 'left' }} {{ verticalPosition == 'bottom' ? 'bottom' : 'top' }}\"\n  [src]=\"imageScr\"\n  [alt]=\"imageAlt\">\n",
+                styles: [":host::ng-deep .logo{height:3em;opacity:.1;position:absolute;width:3em}:host::ng-deep .logo.top{top:1em}:host::ng-deep .logo.right{right:1em}:host::ng-deep .logo.bottom{bottom:1em}:host::ng-deep .logo.left{left:1em}"]
+            },] }
+];
+GlSharedComponentLogoSquareComponent.ctorParameters = () => [];
+GlSharedComponentLogoSquareComponent.propDecorators = {
+    imageScr: [{ type: Input }],
+    imageAlt: [{ type: Input }],
+    horizontalPosition: [{ type: Input }],
+    verticalPosition: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentLogoSquareComponent.prototype, "imageScr", void 0);
-__decorate([
-    Input()
-], GlSharedComponentLogoSquareComponent.prototype, "imageAlt", void 0);
-__decorate([
-    Input()
-], GlSharedComponentLogoSquareComponent.prototype, "horizontalPosition", void 0);
-__decorate([
-    Input()
-], GlSharedComponentLogoSquareComponent.prototype, "verticalPosition", void 0);
-GlSharedComponentLogoSquareComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-logo-square',
-        template: "<img\n  class=\"logo {{ horizontalPosition == 'right' ? 'right' : 'left' }} {{ verticalPosition == 'bottom' ? 'bottom' : 'top' }}\"\n  [src]=\"imageScr\"\n  [alt]=\"imageAlt\">\n",
-        styles: [":host::ng-deep .logo{width:3em;height:3em;position:absolute;opacity:.1}:host::ng-deep .logo.top{top:1em}:host::ng-deep .logo.right{right:1em}:host::ng-deep .logo.bottom{bottom:1em}:host::ng-deep .logo.left{left:1em}"]
-    })
-], GlSharedComponentLogoSquareComponent);
 
-let GlSharedComponentButtonImageSimpleComponent = class GlSharedComponentButtonImageSimpleComponent {
+class GlSharedComponentButtonImageSimpleComponent {
     constructor() { }
+}
+GlSharedComponentButtonImageSimpleComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-button-image-simple',
+                template: "<img\n  class=\"button\"\n  [id]=\"id\"\n  [src]=\"src\"\n  [alt]=\"alt\"\n  (click)=\"callback($event)\">\n",
+                styles: [":host::ng-deep{align-items:center;display:flex}:host::ng-deep .button{height:1em;width:1em}:host::ng-deep .button:not(hover){opacity:.5;transform:scale(1);transition:all .2s ease-in-out}:host::ng-deep .button:hover{opacity:1;transform:scale(1.1);transition:all .2s ease-in-out}"]
+            },] }
+];
+GlSharedComponentButtonImageSimpleComponent.ctorParameters = () => [];
+GlSharedComponentButtonImageSimpleComponent.propDecorators = {
+    id: [{ type: Input }],
+    alt: [{ type: Input }],
+    src: [{ type: Input }],
+    callback: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentButtonImageSimpleComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonImageSimpleComponent.prototype, "alt", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonImageSimpleComponent.prototype, "src", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonImageSimpleComponent.prototype, "callback", void 0);
-GlSharedComponentButtonImageSimpleComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-button-image-simple',
-        template: "<img\n  class=\"button\"\n  [id]=\"id\"\n  [src]=\"src\"\n  [alt]=\"alt\"\n  (click)=\"callback($event)\">\n",
-        styles: [":host::ng-deep{display:flex;align-items:center}:host::ng-deep .button{width:1em;height:1em}:host::ng-deep .button:not(hover){opacity:.5;transform:scale(1);transition:.2s ease-in-out}:host::ng-deep .button:hover{opacity:1;transform:scale(1.1);transition:.2s ease-in-out}"]
-    })
-], GlSharedComponentButtonImageSimpleComponent);
 
-let GlSharedComponentButtonImageTooltipComponent = class GlSharedComponentButtonImageTooltipComponent {
+class GlSharedComponentButtonImageTooltipComponent {
     constructor() {
         this.show = true;
     }
+}
+GlSharedComponentButtonImageTooltipComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-button-image-tooltip',
+                template: "<div\n  *ngIf=\"show\"\n  [class.hidden]=\"!show\"\n  [id]=\"id\"\n  [attr.tooltip]=\"alt\"\n  class=\"tooltip top\">\n  <gl-shared-component-button-image-simple\n    [src]=\"src\"\n    [alt]=\"alt\"\n    [id]=\"id\"\n    [callback]=\"callback\"\n  ></gl-shared-component-button-image-simple>\n</div>\n",
+                styles: [".tooltip-menu{display:flex;position:relative;z-index:100}.tooltip-menu:before{border-color:#fff transparent transparent;border-style:solid;border-width:.2em .2em 0;content:\"\";left:80%;position:absolute;transform:translateX(-137%) translateY(100%) rotate(180deg);z-index:100}.tooltip-menu:after{background:#fff;border:none;color:#64666c;content:attr(tooltip);font-size:.4em;font-weight:600;left:80%;line-height:1.5em;max-width:50em;padding:.5em 1em;pointer-events:none;position:absolute;text-align:left;transform:translateX(-57%) translateY(124%);white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}.tooltip-menu:not(hover):before{bottom:-.3em;opacity:0;transition:all .1s ease-in-out}.tooltip-menu:not(hover):after{bottom:0;opacity:0;transition:all .1s ease-in-out}.tooltip-menu:hover:after,.tooltip-menu:hover:before{bottom:-.11em;opacity:1;transition:all .1s ease-in-out}@media (-ms-high-contrast:active),(-ms-high-contrast:none){.tooltip-menu{margin:0 0 0 .3em;width:1.5em}.tooltip-menu:before{transform:translateX(-150%) translateY(100%) rotate(180deg)}.tooltip-menu:after{font-size:11.5px;transform:translateX(-55%) translateY(124%)}}.tooltip.top{position:relative;z-index:1000}.tooltip.top:before{border-color:#fff transparent transparent;border-style:solid;border-width:.2em .2em 0;content:\"\";left:82%;position:absolute;transform:translateX(-200%) translateY(90%);z-index:100}.tooltip.top:after{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;background:#fff;border:none;color:#64666c;content:attr(tooltip);font-size:.4em;font-weight:300;height:1.5em;left:0;line-height:1.5em;max-width:50em;padding:.5em 1em;pointer-events:none;position:absolute;text-align:center;user-select:none;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}.tooltip.top:hover:before,.tooltip.top:not(hover):before{left:93%;top:-.5em}.tooltip.top:hover:after,.tooltip.top:not(hover):after{left:0;top:-3.1em}.tooltip.top:not(hover):after,.tooltip.top:not(hover):before{opacity:0;transition:all .1s ease-in-out}.tooltip.top:hover:after,.tooltip.top:hover:before{opacity:1;transition:all .1s ease-in-out}.tooltip.top.status-table{position:relative;z-index:1000}.tooltip.top.status-table:before{border-color:#fff transparent transparent;border-style:solid;border-width:.6em .6em 0;content:\"\";left:82%;position:absolute;transform:translateX(-237%) translateY(-15%);z-index:100}.tooltip.top.status-table:after{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;background:#fff;border:none;color:#64666c;content:attr(tooltip);font-size:.4em;font-size:.9em;font-weight:300;height:1.5em;left:0;line-height:1.5em;max-width:50em;padding:.5em 1em;pointer-events:none;position:absolute;text-align:center;user-select:none;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}@media (-ms-high-contrast:active),(-ms-high-contrast:none){.tooltip.top.status-table:after{font-size:2em;left:.9em}}.tooltip.top.status-table:not(hover):after,.tooltip.top.status-table:not(hover):before{opacity:0;transition:all .1s ease-in-out}.tooltip.top.status-table:hover:after,.tooltip.top.status-table:hover:before{opacity:1;transition:all .1s ease-in-out}.tooltip.bottom{position:relative;z-index:1000}.tooltip.bottom:before{border-color:#fff transparent transparent;border-style:solid;border-width:.2em .2em 0;content:\"\";left:82%;left:107%;position:absolute;transform:translateX(-137%) translateY(100%) rotate(180deg);z-index:100}.tooltip.bottom:after{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;background:#fff;border:none;color:#64666c;content:attr(tooltip);font-size:.4em;font-weight:300;height:1.5em;line-height:1.5em;max-width:50em;padding:.5em 1em;pointer-events:none;position:absolute;text-align:center;user-select:none;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}.tooltip.bottom:hover:before,.tooltip.bottom:not(hover):before{bottom:.1em}.tooltip.bottom:hover:after,.tooltip.bottom:not(hover):after{bottom:-2.7em;left:0}.tooltip.bottom:not(hover):after,.tooltip.bottom:not(hover):before{opacity:0;transition:all .1s ease-in-out}.tooltip.bottom:hover:after,.tooltip.bottom:hover:before{opacity:1;transition:all .1s ease-in-out}.tooltip.bottom-right{position:relative;z-index:1000}.tooltip.bottom-right:before{border-color:#fff transparent transparent;border-style:solid;border-width:.2em .2em 0;content:\"\";left:82%;position:absolute;transform:translateX(-137%) translateY(100%) rotate(180deg);z-index:100}.tooltip.bottom-right:after{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;background:#fff;border:none;color:#64666c;content:attr(tooltip);font-size:.4em;font-weight:300;height:1.5em;line-height:1.5em;max-width:50em;padding:.5em 1em;pointer-events:none;position:absolute;text-align:center;user-select:none;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}.tooltip.bottom-right:hover:before,.tooltip.bottom-right:not(hover):before{left:94%}.tooltip.bottom-right:hover:after,.tooltip.bottom-right:not(hover):after{bottom:-2.7em;left:-200%}.tooltip.bottom-right:not(hover):after,.tooltip.bottom-right:not(hover):before{opacity:0;transition:all .1s ease-in-out}.tooltip.bottom-right:hover:after,.tooltip.bottom-right:hover:before{opacity:1;transition:all .1s ease-in-out}.tooltip.bottom-gantt{position:relative;z-index:1000}.tooltip.bottom-gantt:before{border-color:#fff transparent transparent;border-style:solid;border-width:.2em .2em 0;content:\"\";left:82%;position:absolute;transform:translateX(-137%) translateY(100%) rotate(180deg);z-index:100}.tooltip.bottom-gantt:after{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;background:#fff;border:none;color:#64666c;content:attr(tooltip);font-size:.4em;font-weight:300;height:1.5em;line-height:1.5em;max-width:50em;padding:.5em 1em;pointer-events:none;position:absolute;text-align:center;user-select:none;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}@media (-ms-high-contrast:active),(-ms-high-contrast:none){.tooltip.bottom-gantt:after{font-size:11.5px}}.tooltip.bottom-gantt:hover:before,.tooltip.bottom-gantt:not(hover):before{bottom:-.1em;left:83%}.tooltip.bottom-gantt:hover:after,.tooltip.bottom-gantt:not(hover):after{bottom:-3.1em;left:0}.tooltip.bottom-gantt:not(hover):after,.tooltip.bottom-gantt:not(hover):before{opacity:0;transition:all .1s ease-in-out}.tooltip.bottom-gantt:hover:after,.tooltip.bottom-gantt:hover:before{opacity:1;transition:all .1s ease-in-out}.tooltip.bottom-menu{position:relative;z-index:1000}.tooltip.bottom-menu:before{border-color:#fff transparent transparent;border-style:solid;border-width:.2em .2em 0;content:\"\";left:82%;position:absolute;transform:translateX(-137%) translateY(100%) rotate(180deg);z-index:100}.tooltip.bottom-menu:after{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;background:#fff;border:none;color:#64666c;content:attr(tooltip);font-size:.4em;font-weight:300;height:1.5em;line-height:1.5em;max-width:50em;padding:.5em 1em;pointer-events:none;position:absolute;text-align:center;user-select:none;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}.tooltip.bottom-menu:hover:before,.tooltip.bottom-menu:not(hover):before{bottom:-.1em;left:74%}.tooltip.bottom-menu:hover:after,.tooltip.bottom-menu:not(hover):after{bottom:-3.1em;left:-64%}.tooltip.bottom-menu:not(hover):after,.tooltip.bottom-menu:not(hover):before{opacity:0;transition:all .1s ease-in-out}.tooltip.bottom-menu:hover:after,.tooltip.bottom-menu:hover:before{opacity:1;transition:all .1s ease-in-out}:host::ng-deep{justify-content:center;margin:0}:host::ng-deep,:host::ng-deep .tooltip{align-items:center;display:flex}:host::ng-deep .tooltip:after{transform:translateX(-20%)}:host::ng-deep .tooltip:before{left:108%!important}"]
+            },] }
+];
+GlSharedComponentButtonImageTooltipComponent.ctorParameters = () => [];
+GlSharedComponentButtonImageTooltipComponent.propDecorators = {
+    id: [{ type: Input }],
+    alt: [{ type: Input }],
+    src: [{ type: Input }],
+    show: [{ type: Input }],
+    callback: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentButtonImageTooltipComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonImageTooltipComponent.prototype, "alt", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonImageTooltipComponent.prototype, "src", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonImageTooltipComponent.prototype, "show", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonImageTooltipComponent.prototype, "callback", void 0);
-GlSharedComponentButtonImageTooltipComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-button-image-tooltip',
-        template: "<div\n  *ngIf=\"show\"\n  [class.hidden]=\"!show\"\n  [id]=\"id\"\n  [attr.tooltip]=\"alt\"\n  class=\"tooltip top\">\n  <gl-shared-component-button-image-simple\n    [src]=\"src\"\n    [alt]=\"alt\"\n    [id]=\"id\"\n    [callback]=\"callback\"\n  ></gl-shared-component-button-image-simple>\n</div>\n",
-        styles: [".tooltip-menu{z-index:100;position:relative;display:flex}.tooltip-menu::before{content:\"\";position:absolute;left:80%;transform:translateX(-137%) translateY(100%) rotate(180deg);border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100}.tooltip-menu::after{content:attr(tooltip);position:absolute;left:80%;transform:translateX(-57%) translateY(124%);background:#fff;text-align:left;color:#64666c;font-weight:600;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em}.tooltip-menu:not(hover)::before{opacity:0;bottom:-.3em;transition:.1s ease-in-out}.tooltip-menu:not(hover)::after{opacity:0;bottom:0;transition:.1s ease-in-out}.tooltip-menu:hover::after,.tooltip-menu:hover::before{opacity:1;bottom:-.11em;transition:.1s ease-in-out}.tooltip.top{z-index:1000;position:relative}.tooltip.top::before{content:\"\";position:absolute;left:82%;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-200%) translateY(90%)}.tooltip.top::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;left:0}.tooltip.top:hover::before,.tooltip.top:not(hover)::before{top:-.5em;left:93%}.tooltip.top:hover::after,.tooltip.top:not(hover)::after{left:0;top:-3.1em}.tooltip.top:not(hover)::after,.tooltip.top:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.top:hover::after,.tooltip.top:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.top.status-table{z-index:1000;position:relative}.tooltip.top.status-table::before{content:\"\";position:absolute;left:82%;border-width:.6em .6em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-237%) translateY(-15%)}.tooltip.top.status-table::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;left:0;font-size:.9em}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.tooltip-menu{margin:0 0 0 .3em;width:1.5em}.tooltip-menu::before{transform:translateX(-150%) translateY(100%) rotate(180deg)}.tooltip-menu::after{font-size:11.5px;transform:translateX(-55%) translateY(124%)}.tooltip.top.status-table::after{left:.9em;font-size:2em}}.tooltip.top.status-table:not(hover)::after,.tooltip.top.status-table:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.top.status-table:hover::after,.tooltip.top.status-table:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.bottom{z-index:1000;position:relative}.tooltip.bottom::before{content:\"\";position:absolute;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;left:107%;transform:translateX(-137%) translateY(100%) rotate(180deg)}.tooltip.bottom::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.tooltip.bottom:hover::before,.tooltip.bottom:not(hover)::before{bottom:.1em}.tooltip.bottom:hover::after,.tooltip.bottom:not(hover)::after{left:0;bottom:-2.7em}.tooltip.bottom:not(hover)::after,.tooltip.bottom:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.bottom:hover::after,.tooltip.bottom:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.bottom-right{z-index:1000;position:relative}.tooltip.bottom-right::before{content:\"\";position:absolute;left:82%;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-137%) translateY(100%) rotate(180deg)}.tooltip.bottom-right::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.tooltip.bottom-right:hover::before,.tooltip.bottom-right:not(hover)::before{left:94%}.tooltip.bottom-right:hover::after,.tooltip.bottom-right:not(hover)::after{left:-200%;bottom:-2.7em}.tooltip.bottom-right:not(hover)::after,.tooltip.bottom-right:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.bottom-right:hover::after,.tooltip.bottom-right:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.bottom-gantt{z-index:1000;position:relative}.tooltip.bottom-gantt::before{content:\"\";position:absolute;left:82%;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-137%) translateY(100%) rotate(180deg)}.tooltip.bottom-gantt::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.tooltip.bottom-gantt::after{font-size:11.5px}}.tooltip.bottom-gantt:hover::before,.tooltip.bottom-gantt:not(hover)::before{left:83%;bottom:-.1em}.tooltip.bottom-gantt:hover::after,.tooltip.bottom-gantt:not(hover)::after{left:0;bottom:-3.1em}.tooltip.bottom-gantt:not(hover)::after,.tooltip.bottom-gantt:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.bottom-gantt:hover::after,.tooltip.bottom-gantt:hover::before{opacity:1;transition:.1s ease-in-out}.tooltip.bottom-menu{z-index:1000;position:relative}.tooltip.bottom-menu::before{content:\"\";position:absolute;left:82%;border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100;transform:translateX(-137%) translateY(100%) rotate(180deg)}.tooltip.bottom-menu::after{content:attr(tooltip);position:absolute;background:#fff;text-align:center;color:#64666c;font-weight:300;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em;height:1.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.tooltip.bottom-menu:hover::before,.tooltip.bottom-menu:not(hover)::before{left:74%;bottom:-.1em}.tooltip.bottom-menu:hover::after,.tooltip.bottom-menu:not(hover)::after{left:-64%;bottom:-3.1em}.tooltip.bottom-menu:not(hover)::after,.tooltip.bottom-menu:not(hover)::before{opacity:0;transition:.1s ease-in-out}.tooltip.bottom-menu:hover::after,.tooltip.bottom-menu:hover::before{opacity:1;transition:.1s ease-in-out}:host::ng-deep{display:flex;align-items:center;justify-content:center;margin:0}:host::ng-deep .tooltip{display:flex;align-items:center}:host::ng-deep .tooltip::after{transform:translateX(-20%)}:host::ng-deep .tooltip::before{left:108%!important}"]
-    })
-], GlSharedComponentButtonImageTooltipComponent);
 
-let GlSharedComponentButtonMenuSimpleComponent = class GlSharedComponentButtonMenuSimpleComponent {
+class GlSharedComponentButtonMenuSimpleComponent {
     constructor() {
         this.disabled = false;
     }
+}
+GlSharedComponentButtonMenuSimpleComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-button-menu-simple',
+                template: "<img\n  [id]=\"id\"\n  class=\"menu-buttons\"\n  [src]=\"src\"\n  [alt]=\"alt\"\n  (click)=\"callback\">\n",
+                styles: [":host{height:1.45em}:host .menu-buttons{cursor:pointer;height:1.5em;margin:0 0 0 .1em;width:1.5em}:host .menu-buttons:hover{opacity:1;transform:scale(1.01);transition:all .1s ease-in-out}:host .menu-buttons:not(hover){opacity:.9;transform:scale(1);transition:all .2s ease-in-out}"]
+            },] }
+];
+GlSharedComponentButtonMenuSimpleComponent.ctorParameters = () => [];
+GlSharedComponentButtonMenuSimpleComponent.propDecorators = {
+    disabled: [{ type: Input }],
+    src: [{ type: Input }],
+    id: [{ type: Input }],
+    alt: [{ type: Input }],
+    callback: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentButtonMenuSimpleComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonMenuSimpleComponent.prototype, "src", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonMenuSimpleComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonMenuSimpleComponent.prototype, "alt", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonMenuSimpleComponent.prototype, "callback", void 0);
-GlSharedComponentButtonMenuSimpleComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-button-menu-simple',
-        template: "<img\n  [id]=\"id\"\n  class=\"menu-buttons\"\n  [src]=\"src\"\n  [alt]=\"alt\"\n  (click)=\"callback\">\n",
-        styles: [":host{height:1.45em}:host .menu-buttons{height:1.5em;width:1.5em;margin:0 0 0 .1em;cursor:pointer}:host .menu-buttons:hover{transform:scale(1.01);opacity:1;transition:.1s ease-in-out}:host .menu-buttons:not(hover){transform:scale(1);opacity:.9;transition:.2s ease-in-out}"]
-    })
-], GlSharedComponentButtonMenuSimpleComponent);
 
-let GlSharedComponentButtonMenuTooltipComponent = class GlSharedComponentButtonMenuTooltipComponent {
+class GlSharedComponentButtonMenuTooltipComponent {
     constructor() {
         this.disabled = false;
     }
+}
+GlSharedComponentButtonMenuTooltipComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-button-menu-tooltip',
+                template: "<div [attr.alt]=\"alt\" class=\"tooltip-menu\" *ngIf=\"!disabled\">\n  <gl-shared-component-button-menu-simple\n    [src]=\"src\"\n    [id]=\"id\"\n    [alt]=\"alt\"\n    (click)=\"callback($event)\"\n  ></gl-shared-component-button-menu-simple>\n</div>\n",
+                styles: [".tooltip-menu{display:flex;position:relative;z-index:100}.tooltip-menu:before{border-color:#fff transparent transparent;border-style:solid;border-width:.2em .2em 0;content:\"\";left:80%;position:absolute;transform:translateX(-137%) translateY(100%) rotate(180deg);z-index:100}.tooltip-menu:after{background:#fff;border:none;color:#64666c;content:attr(alt);font-size:.4em;font-weight:600;left:50%;line-height:1.5em;max-width:50em;padding:.5em 1em;pointer-events:none;position:absolute;text-align:left;transform:translateX(-85%) translateY(124%);white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}.tooltip-menu:not(hover):before{bottom:-.3em;opacity:0;transition:all .1s ease-in-out}.tooltip-menu:not(hover):after{bottom:0;opacity:0;transition:all .1s ease-in-out}.tooltip-menu:hover:after,.tooltip-menu:hover:before{bottom:-.11em;opacity:1;transition:all .1s ease-in-out}@media (-ms-high-contrast:none),screen and (-ms-high-contrast:active){:host::ng-deep{display:block}}"]
+            },] }
+];
+GlSharedComponentButtonMenuTooltipComponent.ctorParameters = () => [];
+GlSharedComponentButtonMenuTooltipComponent.propDecorators = {
+    disabled: [{ type: Input }],
+    tooltip: [{ type: Input }],
+    src: [{ type: Input }],
+    id: [{ type: Input }],
+    alt: [{ type: Input }],
+    callback: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentButtonMenuTooltipComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonMenuTooltipComponent.prototype, "tooltip", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonMenuTooltipComponent.prototype, "src", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonMenuTooltipComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonMenuTooltipComponent.prototype, "alt", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonMenuTooltipComponent.prototype, "callback", void 0);
-GlSharedComponentButtonMenuTooltipComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-button-menu-tooltip',
-        template: "<div [attr.alt]=\"alt\" class=\"tooltip-menu\" *ngIf=\"!disabled\">\n  <gl-shared-component-button-menu-simple\n    [src]=\"src\"\n    [id]=\"id\"\n    [alt]=\"alt\"\n    (click)=\"callback($event)\"\n  ></gl-shared-component-button-menu-simple>\n</div>\n",
-        styles: [".tooltip-menu{z-index:100;position:relative;display:flex}.tooltip-menu::before{content:\"\";position:absolute;left:80%;transform:translateX(-137%) translateY(100%) rotate(180deg);border-width:.2em .2em 0;border-style:solid;border-color:#fff transparent transparent;z-index:100}.tooltip-menu::after{content:attr(alt);position:absolute;left:50%;transform:translateX(-85%) translateY(124%);background:#fff;text-align:left;color:#64666c;font-weight:600;padding:.5em 1em;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:50em;border:none;pointer-events:none;white-space:nowrap;line-height:1.5em;font-size:.4em}.tooltip-menu:not(hover)::before{opacity:0;bottom:-.3em;transition:.1s ease-in-out}.tooltip-menu:not(hover)::after{opacity:0;bottom:0;transition:.1s ease-in-out}.tooltip-menu:hover::after,.tooltip-menu:hover::before{opacity:1;bottom:-.11em;transition:.1s ease-in-out}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){:host::ng-deep{display:block}}"]
-    })
-], GlSharedComponentButtonMenuTooltipComponent);
 
-let GlSharedComponentInputAutocompleteSimpleService = class GlSharedComponentInputAutocompleteSimpleService {
+class GlSharedComponentInputAutocompleteSimpleService {
     constructor() {
         this.autocompleteList$ = new Subject();
         this.autocompleteReset$ = new Subject();
@@ -1253,15 +988,16 @@ let GlSharedComponentInputAutocompleteSimpleService = class GlSharedComponentInp
         this.autocompleteReset$.observers.map(x => x.complete());
         this.autocompleteUpdateValue$.observers.map(x => x.complete());
     }
-};
+}
 GlSharedComponentInputAutocompleteSimpleService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentInputAutocompleteSimpleService_Factory() { return new GlSharedComponentInputAutocompleteSimpleService(); }, token: GlSharedComponentInputAutocompleteSimpleService, providedIn: "root" });
-GlSharedComponentInputAutocompleteSimpleService = __decorate([
-    Injectable({
-        providedIn: 'root'
-    })
-], GlSharedComponentInputAutocompleteSimpleService);
+GlSharedComponentInputAutocompleteSimpleService.decorators = [
+    { type: Injectable, args: [{
+                providedIn: 'root'
+            },] }
+];
+GlSharedComponentInputAutocompleteSimpleService.ctorParameters = () => [];
 
-let GlSharedComponentInputAutocompleteSimpleComponent = class GlSharedComponentInputAutocompleteSimpleComponent {
+class GlSharedComponentInputAutocompleteSimpleComponent {
     constructor(_service, overlay) {
         this._service = _service;
         this.overlay = overlay;
@@ -1382,77 +1118,41 @@ let GlSharedComponentInputAutocompleteSimpleComponent = class GlSharedComponentI
         this.overlay.position().global().dispose();
         // if (prevList != currList || prevValue != currValue) { this.setup(); }
     }
-};
+}
+GlSharedComponentInputAutocompleteSimpleComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-autocomplete-simple',
+                template: "<ng-content></ng-content>\n<div class=\"input-container custom-combobox {{ class }} {{ disabled ? 'read-only' : '' }} {{ listItems.length > 0 ? '' : 'no-data' }}\">\n  <mat-form-field\n    (focusout)=\"overlay.position().global().dispose()\"\n    floatLabel=\"never\"\n    appearance=\"none\">\n    <div class=\"combobox-container {{ listItems.length > 0 ? '' : 'no-data' }} {{ disabled ? 'read-only' : '' }}\">\n      <input\n        #input\n        type=\"text\"\n        aria-label=\"Number\"\n        class=\"item-content {{ itemContentAlignment }} {{ class }} {{ listItems.length > 0 ? '' : 'no-data' }} {{ disabled ? 'read-only' : '' }}\"\n        matInput\n        [readonly]=\"disabled\"\n        [id]=\"id\"\n        [placeholder]=\"placeholder\"\n        [formControl]=\"autocompleteInput\"\n        [maxLength]=\"maxLength\"\n        [matAutocomplete]=\"auto\"\n        (focusin)=\"reset(auto, $event)\"\n        (focusout)=\"validate()\">\n      <!--    <img-->\n      <!--      *ngIf=\"!disabled\"-->\n      <!--      (click)=\"clearItems(input)\"-->\n      <!--      alt=\"Clear items\"-->\n      <!--      class=\"clear-items\"-->\n      <!--      [src]=\"clearSource\">-->\n\n      <!--    <img-->\n      <!--      #arrowDown-->\n      <!--      (click)=\"clearItems(input)\"-->\n      <!--      alt=\"Show items\"-->\n      <!--      class=\"arrow-down {{ class }} {{ disabled ? 'read-only' : '' }}\"-->\n      <!--      [src]=\"imageSource\">-->\n    </div>\n    <mat-autocomplete autoActiveFirstOption=\"true\" #auto=\"matAutocomplete\" (optionSelected)=\"input.blur()\" [mat-dialog-close]=\"overlay.position().global().dispose()\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option.text\">\n        {{option.text}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n  <img\n    #arrowDown\n    (click)=\"clearItems(input)\"\n    alt=\"Show items\"\n    class=\"arrow-down {{ class }} {{ disabled ? 'read-only' : '' }}\"\n    [src]=\"imageSource\">\n</div>\n\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");::ng-deep .dark .mat-autocomplete-panel,::ng-deep .light .mat-autocomplete-panel,::ng-deep .mat-autocomplete-panel{scrollbar-arrow-color:#64666c!important;scrollbar-face-color:#333437!important;scrollbar-shadow-color:#38393c!important;scrollbar-track-color:#2c2c2f!important}::ng-deep .mat-autocomplete-panel::-webkit-scrollbar:horizontal{height:.5em}::ng-deep .dark .mat-autocomplete-panel::-webkit-scrollbar,::ng-deep .light .mat-autocomplete-panel::-webkit-scrollbar,::ng-deep .mat-autocomplete-panel::-webkit-scrollbar{width:.5em}::ng-deep .dark .mat-autocomplete-panel::-webkit-scrollbar-button,::ng-deep .light .mat-autocomplete-panel::-webkit-scrollbar-button,::ng-deep .mat-autocomplete-panel::-webkit-scrollbar-button{background-color:#333437;display:none!important}::ng-deep .dark .mat-autocomplete-panel::-webkit-scrollbar-track-piece,::ng-deep .light .mat-autocomplete-panel::-webkit-scrollbar-track-piece,::ng-deep .mat-autocomplete-panel::-webkit-scrollbar-track-piece{background-color:#2c2c2f}::ng-deep .dark .mat-autocomplete-panel::-webkit-scrollbar-thumb,::ng-deep .light .mat-autocomplete-panel::-webkit-scrollbar-thumb,::ng-deep .mat-autocomplete-panel::-webkit-scrollbar-thumb{background-color:#64666c;border:1px solid #38393c}:host::ng-deep{display:flex;flex:1 0 auto;flex-direction:column;position:relative}:host::ng-deep .input-container{align-items:center;background-color:#333437;display:flex;flex-grow:1}:host::ng-deep .input-container mat-form-field{display:flex;flex-grow:1;margin:0}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper{display:flex;flex-direction:column;flex-grow:1;padding:0}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex{align-items:inherit;display:flex;flex-grow:1}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix{border:none;display:flex;flex:1 1 0px;padding:0;width:100%}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container{display:flex;flex-direction:row;flex-grow:1;pointer-events:none}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element{background-color:#333437;border:none;color:#fff;flex-grow:1;font-family:Montserrat,sans-serif;font-size:.45em;font-weight:400;margin:0;padding:.8em;position:relative}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element::-moz-placeholder{color:#64666c!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element::-ms-input-placeholder{color:#64666c!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element::placeholder{color:#64666c!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.left{text-align:left}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.center{text-align:center}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.right{text-align:right}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light{background-color:rgba(0,0,0,.1)}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light::-moz-placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light:-ms-input-placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light::-ms-input-placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light::placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.dark{background-color:#161617}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element .item-content.light:-ms-input-placeholder{color:grey!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .clear-items{height:.5em;position:absolute;right:1.5em;top:.4em;width:.5em}:host::ng-deep .input-container .arrow-down{background-color:#333437;height:.8em;padding:0 .3em;transition:all .2s ease-in-out;width:.8em}:host::ng-deep .input-container .arrow-down:hover{background-color:#2c2c2f;transition:all .2s ease-in-out}:host::ng-deep .input-container .arrow-down.light{background-color:rgba(0,0,0,.1);transition:all .2s ease-in-out}:host::ng-deep .input-container .arrow-down.light::-moz-placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep .input-container .arrow-down.light:-ms-input-placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep .input-container .arrow-down.light::-ms-input-placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep .input-container .arrow-down.light::placeholder{color:hsla(0,0%,100%,.2)!important}:host::ng-deep .input-container .arrow-down.light:hover{background-color:rgba(0,0,0,.2);transition:all .2s ease-in-out}:host::ng-deep .input-container .arrow-down.dark{background-color:#161617;transition:all .2s ease-in-out}:host::ng-deep .input-container .arrow-down.dark:hover{background-color:#1a1b1d;transition:all .2s ease-in-out}:host::ng-deep .input-container .arrow-down.read-only{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;pointer-events:none;user-select:none}:host::ng-deep .input-container.no-data .arrow-down,:host::ng-deep .input-container.read-only .arrow-down{display:none}::ng-deep .mat-autocomplete-panel{background-color:#38393c;border-radius:0;box-shadow:none!important;transition:all .2s ease-in-out}::ng-deep .mat-autocomplete-panel mat-option{border-radius:0;font-size:1em;height:4em;line-height:4em;padding:0 1.5em;transition:all .2s ease-in-out}::ng-deep .mat-autocomplete-panel mat-option:nth-child(odd){background-color:#333437;transition:all .2s ease-in-out}::ng-deep .mat-autocomplete-panel mat-option.mat-active,::ng-deep .mat-autocomplete-panel mat-option.mat-selected{background-color:#d24077;transition:all .2s ease-in-out}::ng-deep .mat-autocomplete-panel mat-option:hover{background-color:#b01e45!important;transition:all .2s ease-in-out}::ng-deep .light .mat-autocomplete-panel{background-color:transparent;transition:all .2s ease-in-out}::ng-deep .light .mat-autocomplete-panel mat-option:nth-child(odd){background-color:rgba(0,0,0,.6);transition:all .2s ease-in-out}::ng-deep .light .mat-autocomplete-panel mat-option:nth-child(2n+2){background-color:rgba(0,0,0,.7);transition:all .2s ease-in-out}::ng-deep .light .mat-autocomplete-panel mat-option.mat-active{background-color:#d24077;transition:all .2s ease-in-out}::ng-deep .light .mat-autocomplete-panel mat-option:hover{background-color:#b01e45!important;transition:all .2s ease-in-out}::ng-deep .dark .mat-autocomplete-panel{background-color:transparent;transition:all .2s ease-in-out}::ng-deep .dark .mat-autocomplete-panel mat-option:nth-child(odd){background-color:#2c2c2f;transition:all .2s ease-in-out}::ng-deep .dark .mat-autocomplete-panel mat-option:nth-child(2n+2){background-color:#333437;transition:all .2s ease-in-out}::ng-deep .dark .mat-autocomplete-panel mat-option.mat-active{background-color:#d24077;transition:all .2s ease-in-out}::ng-deep .dark .mat-autocomplete-panel mat-option:hover{background-color:#b01e45!important;transition:all .2s ease-in-out}@media screen and (min-device-width:320px) and (max-device-width:1024px){::ng-deep .mat-autocomplete-panel{font-size:2.8vw!important}}@media screen and (min-device-width:1024px){::ng-deep .mat-autocomplete-panel{font-size:.6vw!important}}"]
+            },] }
+];
 GlSharedComponentInputAutocompleteSimpleComponent.ctorParameters = () => [
     { type: GlSharedComponentInputAutocompleteSimpleService },
     { type: Overlay }
 ];
-__decorate([
-    ViewChild('input')
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "input", void 0);
-__decorate([
-    Output()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "currentValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "listItems", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "listName", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "placeholder", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "itemContentAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "value", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "maxLength", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "custom", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "baseUrl", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "valueField", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "textField", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "labelValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "labelAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "required", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteSimpleComponent.prototype, "requiredField", void 0);
-GlSharedComponentInputAutocompleteSimpleComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-input-autocomplete-simple',
-        template: "<ng-content></ng-content>\n<div class=\"input-container custom-combobox {{ class }} {{ disabled ? 'read-only' : '' }} {{ listItems.length > 0 ? '' : 'no-data' }}\">\n  <mat-form-field\n    (focusout)=\"overlay.position().global().dispose()\"\n    floatLabel=\"never\"\n    appearance=\"none\">\n    <div class=\"combobox-container {{ listItems.length > 0 ? '' : 'no-data' }} {{ disabled ? 'read-only' : '' }}\">\n      <input\n        #input\n        type=\"text\"\n        aria-label=\"Number\"\n        class=\"item-content {{ itemContentAlignment }} {{ class }} {{ listItems.length > 0 ? '' : 'no-data' }} {{ disabled ? 'read-only' : '' }}\"\n        matInput\n        [readonly]=\"disabled\"\n        [id]=\"id\"\n        [placeholder]=\"placeholder\"\n        [formControl]=\"autocompleteInput\"\n        [maxLength]=\"maxLength\"\n        [matAutocomplete]=\"auto\"\n        (focusin)=\"reset(auto, $event)\"\n        (focusout)=\"validate()\">\n      <!--    <img-->\n      <!--      *ngIf=\"!disabled\"-->\n      <!--      (click)=\"clearItems(input)\"-->\n      <!--      alt=\"Clear items\"-->\n      <!--      class=\"clear-items\"-->\n      <!--      [src]=\"clearSource\">-->\n\n      <!--    <img-->\n      <!--      #arrowDown-->\n      <!--      (click)=\"clearItems(input)\"-->\n      <!--      alt=\"Show items\"-->\n      <!--      class=\"arrow-down {{ class }} {{ disabled ? 'read-only' : '' }}\"-->\n      <!--      [src]=\"imageSource\">-->\n    </div>\n    <mat-autocomplete autoActiveFirstOption=\"true\" #auto=\"matAutocomplete\" (optionSelected)=\"input.blur()\" [mat-dialog-close]=\"overlay.position().global().dispose()\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option.text\">\n        {{option.text}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n  <img\n    #arrowDown\n    (click)=\"clearItems(input)\"\n    alt=\"Show items\"\n    class=\"arrow-down {{ class }} {{ disabled ? 'read-only' : '' }}\"\n    [src]=\"imageSource\">\n</div>\n\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);::ng-deep .dark .mat-autocomplete-panel,::ng-deep .light .mat-autocomplete-panel,::ng-deep .mat-autocomplete-panel{scrollbar-face-color:#333437!important;scrollbar-shadow-color:#38393c!important;scrollbar-track-color:#2c2c2f!important;scrollbar-arrow-color:#64666c!important}::ng-deep .mat-autocomplete-panel::-webkit-scrollbar:horizontal{height:.5em}::ng-deep .dark .mat-autocomplete-panel::-webkit-scrollbar,::ng-deep .light .mat-autocomplete-panel::-webkit-scrollbar,::ng-deep .mat-autocomplete-panel::-webkit-scrollbar{width:.5em}::ng-deep .dark .mat-autocomplete-panel::-webkit-scrollbar-button,::ng-deep .light .mat-autocomplete-panel::-webkit-scrollbar-button,::ng-deep .mat-autocomplete-panel::-webkit-scrollbar-button{background-color:#333437;display:none!important}::ng-deep .dark .mat-autocomplete-panel::-webkit-scrollbar-track-piece,::ng-deep .light .mat-autocomplete-panel::-webkit-scrollbar-track-piece,::ng-deep .mat-autocomplete-panel::-webkit-scrollbar-track-piece{background-color:#2c2c2f}::ng-deep .dark .mat-autocomplete-panel::-webkit-scrollbar-thumb,::ng-deep .light .mat-autocomplete-panel::-webkit-scrollbar-thumb,::ng-deep .mat-autocomplete-panel::-webkit-scrollbar-thumb{background-color:#64666c;border:1px solid #38393c}:host::ng-deep{display:flex;flex-direction:column;flex:1 0 auto;position:relative}:host::ng-deep .input-container{display:flex;flex-grow:1;align-items:center;background-color:#333437}:host::ng-deep .input-container mat-form-field{display:flex;flex-grow:1;margin:0}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper{display:flex;flex-grow:1;flex-direction:column;padding:0}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex{display:flex;flex-grow:1;align-items:inherit}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix{padding:0;flex:1 1 0px;border:none;width:100%;display:flex}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container{display:flex;flex-grow:1;flex-direction:row;pointer-events:none}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element{font-family:Montserrat,sans-serif;font-weight:400;position:relative;padding:.8em;border:none;background-color:#333437;color:#fff;font-size:.45em;flex-grow:1;margin:0}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element::-moz-placeholder{color:#64666c!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element::-ms-input-placeholder{color:#64666c!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element::placeholder{color:#64666c!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.left{text-align:left}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.center{text-align:center}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.right{text-align:right}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light{background-color:rgba(0,0,0,.1)}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light::-moz-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light:-ms-input-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light::-ms-input-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.light::placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element.dark{background-color:#161617}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element .item-content:-ms-input-placeholder{color:#64666c!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .mat-input-element .item-content.light:-ms-input-placeholder{color:gray!important}:host::ng-deep .input-container mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .combobox-container .clear-items{width:.5em;height:.5em;position:absolute;right:1.5em;top:.4em}:host::ng-deep .input-container .arrow-down{background-color:#333437;width:.8em;height:.8em;padding:0 .3em;transition:.2s ease-in-out}:host::ng-deep .input-container .arrow-down:hover{background-color:#2c2c2f;transition:.2s ease-in-out}:host::ng-deep .input-container .arrow-down.light{background-color:rgba(0,0,0,.1);transition:.2s ease-in-out}:host::ng-deep .input-container .arrow-down.light::-moz-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .input-container .arrow-down.light:-ms-input-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .input-container .arrow-down.light::-ms-input-placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .input-container .arrow-down.light::placeholder{color:rgba(255,255,255,.2)!important}:host::ng-deep .input-container .arrow-down.light:hover{background-color:rgba(0,0,0,.2);transition:.2s ease-in-out}:host::ng-deep .input-container .arrow-down.dark{background-color:#161617;transition:.2s ease-in-out}:host::ng-deep .input-container .arrow-down.dark:hover{background-color:#1a1b1d;transition:.2s ease-in-out}:host::ng-deep .input-container .arrow-down.read-only{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none}:host::ng-deep .input-container.no-data .arrow-down,:host::ng-deep .input-container.read-only .arrow-down{display:none}::ng-deep .mat-autocomplete-panel{background-color:#38393c;border-radius:0;box-shadow:none!important;transition:.2s ease-in-out}::ng-deep .mat-autocomplete-panel mat-option{font-size:1em;border-radius:0;transition:.2s ease-in-out;line-height:4em;height:4em;padding:0 1.5em}::ng-deep .mat-autocomplete-panel mat-option:nth-child(2n+1){background-color:#333437;transition:.2s ease-in-out}::ng-deep .mat-autocomplete-panel mat-option.mat-active,::ng-deep .mat-autocomplete-panel mat-option.mat-selected{background-color:#d24077;transition:.2s ease-in-out}::ng-deep .mat-autocomplete-panel mat-option:hover{background-color:#b01e45!important;transition:.2s ease-in-out}::ng-deep .light .mat-autocomplete-panel{background-color:transparent;transition:.2s ease-in-out}::ng-deep .light .mat-autocomplete-panel mat-option:nth-child(2n+1){background-color:rgba(0,0,0,.6);transition:.2s ease-in-out}::ng-deep .light .mat-autocomplete-panel mat-option:nth-child(2n+2){background-color:rgba(0,0,0,.7);transition:.2s ease-in-out}::ng-deep .light .mat-autocomplete-panel mat-option.mat-active{background-color:#d24077;transition:.2s ease-in-out}::ng-deep .light .mat-autocomplete-panel mat-option:hover{background-color:#b01e45!important;transition:.2s ease-in-out}::ng-deep .dark .mat-autocomplete-panel{background-color:transparent;transition:.2s ease-in-out}::ng-deep .dark .mat-autocomplete-panel mat-option:nth-child(2n+1){background-color:#2c2c2f;transition:.2s ease-in-out}::ng-deep .dark .mat-autocomplete-panel mat-option:nth-child(2n+2){background-color:#333437;transition:.2s ease-in-out}::ng-deep .dark .mat-autocomplete-panel mat-option.mat-active{background-color:#d24077;transition:.2s ease-in-out}::ng-deep .dark .mat-autocomplete-panel mat-option:hover{background-color:#b01e45!important;transition:.2s ease-in-out}@media screen and (min-device-width:320px) and (max-device-width:1024px){::ng-deep .mat-autocomplete-panel{font-size:2.8vw!important}}@media screen and (min-device-width:1024px){::ng-deep .mat-autocomplete-panel{font-size:.6vw!important}}"]
-    })
-], GlSharedComponentInputAutocompleteSimpleComponent);
+GlSharedComponentInputAutocompleteSimpleComponent.propDecorators = {
+    input: [{ type: ViewChild, args: ['input',] }],
+    currentValue: [{ type: Output }],
+    listItems: [{ type: Input }],
+    disabled: [{ type: Input }],
+    listName: [{ type: Input }],
+    id: [{ type: Input }],
+    placeholder: [{ type: Input }],
+    itemContentAlignment: [{ type: Input }],
+    class: [{ type: Input }],
+    value: [{ type: Input }],
+    maxLength: [{ type: Input }],
+    custom: [{ type: Input }],
+    baseUrl: [{ type: Input }],
+    valueField: [{ type: Input }],
+    textField: [{ type: Input }],
+    labelValue: [{ type: Input }],
+    labelAlignment: [{ type: Input }],
+    required: [{ type: Input }],
+    requiredField: [{ type: Input }]
+};
 
-let GlSharedComponentInputAutocompleteLabelComponent = class GlSharedComponentInputAutocompleteLabelComponent {
+class GlSharedComponentInputAutocompleteLabelComponent {
     constructor() {
         this.currentValue = new EventEmitter();
         this.listItems = [];
@@ -1460,67 +1160,36 @@ let GlSharedComponentInputAutocompleteLabelComponent = class GlSharedComponentIn
         this.requiredField = 'Required field';
     }
     onCurrentValue(value) { this.currentValue.emit(value); }
+}
+GlSharedComponentInputAutocompleteLabelComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-autocomplete-label',
+                template: "<gl-shared-component-input-autocomplete-simple\n  [class]=\"class\"\n  [value]=\"value\"\n  [listName]=\"listName\"\n  (currentValue)=\"onCurrentValue($event)\"\n  [id]=\"id\"\n  [itemContentAlignment]=\"itemContentAlignment\"\n  [placeholder]=\"placeholder\"\n  [listItems]=\"listItems\"\n  [disabled]=\"disabled\"\n\n  [custom]=\"custom\"\n  [baseUrl]=\"baseUrl\"\n  [valueField]=\"valueField\"\n  [textField]=\"textField\"\n  ><gl-shared-component-title-label-simple\n    [id]=\"id\"\n    [labelAlignment]=\"labelAlignment\"\n    [labelValue]=\"labelValue\"\n    [required]=\"required\"\n    [class]=\"class\"\n    [requiredLabel]=\"requiredField\"\n  ></gl-shared-component-title-label-simple>\n</gl-shared-component-input-autocomplete-simple>\n",
+                styles: [":host::ng-deep{display:flex}:host::ng-deep gl-shared-component-title-label-simple{flex-grow:0}"]
+            },] }
+];
+GlSharedComponentInputAutocompleteLabelComponent.ctorParameters = () => [];
+GlSharedComponentInputAutocompleteLabelComponent.propDecorators = {
+    currentValue: [{ type: Output }],
+    listItems: [{ type: Input }],
+    disabled: [{ type: Input }],
+    listName: [{ type: Input }],
+    id: [{ type: Input }],
+    labelValue: [{ type: Input }],
+    labelAlignment: [{ type: Input }],
+    placeholder: [{ type: Input }],
+    itemContentAlignment: [{ type: Input }],
+    class: [{ type: Input }],
+    value: [{ type: Input }],
+    required: [{ type: Input }],
+    custom: [{ type: Input }],
+    baseUrl: [{ type: Input }],
+    valueField: [{ type: Input }],
+    textField: [{ type: Input }],
+    requiredField: [{ type: Input }]
 };
-__decorate([
-    Output()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "currentValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "listItems", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "listName", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "labelValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "labelAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "placeholder", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "itemContentAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "value", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "required", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "custom", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "baseUrl", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "valueField", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "textField", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputAutocompleteLabelComponent.prototype, "requiredField", void 0);
-GlSharedComponentInputAutocompleteLabelComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-input-autocomplete-label',
-        template: "<gl-shared-component-input-autocomplete-simple\n  [class]=\"class\"\n  [value]=\"value\"\n  [listName]=\"listName\"\n  (currentValue)=\"onCurrentValue($event)\"\n  [id]=\"id\"\n  [itemContentAlignment]=\"itemContentAlignment\"\n  [placeholder]=\"placeholder\"\n  [listItems]=\"listItems\"\n  [disabled]=\"disabled\"\n\n  [custom]=\"custom\"\n  [baseUrl]=\"baseUrl\"\n  [valueField]=\"valueField\"\n  [textField]=\"textField\"\n  ><gl-shared-component-title-label-simple\n    [id]=\"id\"\n    [labelAlignment]=\"labelAlignment\"\n    [labelValue]=\"labelValue\"\n    [required]=\"required\"\n    [class]=\"class\"\n    [requiredLabel]=\"requiredField\"\n  ></gl-shared-component-title-label-simple>\n</gl-shared-component-input-autocomplete-simple>\n",
-        styles: [":host::ng-deep{display:flex}:host::ng-deep gl-shared-component-title-label-simple{flex-grow:0}"]
-    })
-], GlSharedComponentInputAutocompleteLabelComponent);
 
-let GlSharedComponentFilterService = class GlSharedComponentFilterService {
+class GlSharedComponentFilterService {
     constructor() {
         this.opened = false;
         this.menuHidden$ = new Subject();
@@ -1562,15 +1231,16 @@ let GlSharedComponentFilterService = class GlSharedComponentFilterService {
         this.opened = false;
         return false;
     }
-};
+}
 GlSharedComponentFilterService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentFilterService_Factory() { return new GlSharedComponentFilterService(); }, token: GlSharedComponentFilterService, providedIn: "root" });
-GlSharedComponentFilterService = __decorate([
-    Injectable({
-        providedIn: 'root'
-    })
-], GlSharedComponentFilterService);
+GlSharedComponentFilterService.decorators = [
+    { type: Injectable, args: [{
+                providedIn: 'root'
+            },] }
+];
+GlSharedComponentFilterService.ctorParameters = () => [];
 
-let GlSharedComponentFilterComponent = class GlSharedComponentFilterComponent {
+class GlSharedComponentFilterComponent {
     constructor(router, service) {
         this.router = router;
         this.service = service;
@@ -1597,88 +1267,55 @@ let GlSharedComponentFilterComponent = class GlSharedComponentFilterComponent {
     onClear() {
         this.clearFilter$.emit();
     }
-};
+}
+GlSharedComponentFilterComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-filter',
+                template: "<gl-shared-component-menu-background\n  #background\n  (click)=\"service.backgroundClick($event)\"\n></gl-shared-component-menu-background>\n<div #container class=\"filter-container {{ type }}\">\n  <div class=\"header-filter-container\">\n    <div class=\"menu-header\">\n      <div class=\"menu-top-icons-container\">\n        <img id=\"close-menu-button\" (click)=\"service.close($event)\" [src]=\"closeButton\" class=\"menu-icons close-menu\" alt=\"Close menu button\">\n      </div>\n      <div class=\"menu-header-title\">\n        <h1 class=\"title\">{{ title }}</h1>\n        <h2 class=\"subtitle\">{{ subtitle }}</h2>\n      </div>\n    </div>\n  </div>\n  <nav class=\"menu-nav-container\" #menuNavContainer>\n    <div class=\"menu-content\">\n      <div class=\"input-container\" >\n        <ng-content></ng-content>\n      </div>\n    </div>\n  </nav>\n  <div class=\"bottom-container\">\n    <span\n      *ngIf=\"partialResult != null\"\n      class=\"partial-result-description\">{{ partialResultDescription }} {{ partialResult }} {{ partialResult > 1 ? itemPluralDescription : itemSingularDescription }}\n    </span>\n    <div class=\"buttons-container\">\n      <gl-shared-component-input-button-simple\n        value=\"apply\"\n        [class]=\"buttonClass\"\n        [innerValue]=\"applyButtonDescription\"\n        (click)=\"onApply()\"\n      ></gl-shared-component-input-button-simple>\n      <gl-shared-component-input-button-simple\n        value=\"clear\"\n        [class]=\"buttonClass\"\n        [innerValue]=\"clearButtonDescription\"\n        (click)=\"onClear()\"\n      ></gl-shared-component-input-button-simple>\n    </div>\n  </div>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .filter-container .menu-nav-container{scrollbar-arrow-color:#64666c!important;scrollbar-face-color:#333437!important;scrollbar-shadow-color:#38393c!important;scrollbar-track-color:#2c2c2f!important}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar:horizontal{height:.5em}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar{width:.5em}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar-button{background-color:#333437;display:none!important}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar-track-piece{background-color:#2c2c2f}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar-thumb{background-color:#64666c;border:1px solid #38393c}:host::ng-deep .filter-container{background:#1a1b1d;background-size:cover;border-bottom:2em solid;border-image-slice:.5;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));border-top:.3em solid;bottom:0;display:flex;flex-direction:column;flex-grow:1;height:100vh;max-width:17em;min-width:17em;overflow:hidden;position:fixed;right:-110%;top:0;transition:right .5s ease-in-out;width:85vw;z-index:10000}:host::ng-deep .filter-container.translucid{background:hsla(0,0%,100%,.05);border-image-source:none;border-left:1px solid hsla(0,0%,100%,.05);border-top:.3em solid hsla(0,0%,100%,.1)}:host::ng-deep .filter-container .a{display:block;min-height:3em}:host::ng-deep .filter-container .header-filter-container .menu-header{display:flex;flex-direction:column;margin:.5em 1em 1em .5em}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container{display:flex;margin:0 0 1.5em}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .settings-menu{cursor:pointer;height:1.5em;width:1.5em}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu:active,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu:hover,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .settings-menu:active,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .settings-menu:hover{-webkit-animation:increase-decrease .4s ease-in-out;-webkit-animation-fill-mode:forwards;animation:increase-decrease .4s ease-in-out;animation-fill-mode:forwards;opacity:1}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu{margin:0 .2em 0 0}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-header-title .subtitle,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-header-title .title{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#fff;margin:0;text-transform:uppercase;user-select:none}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-header-title .title{display:none;font-family:Montserrat,sans-serif;font-size:.9em;font-weight:700}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-header-title .subtitle{font-family:Montserrat,sans-serif;font-size:1.5em;font-weight:100}:host::ng-deep .filter-container .bottom-container{display:flex;flex-direction:column;margin:1em 0 .4em}:host::ng-deep .filter-container .bottom-container .partial-result-description{color:#d24077;font-family:Montserrat,sans-serif;font-size:.5em;font-weight:700;padding:0 0 0 .5em;text-align:center}:host::ng-deep .filter-container .bottom-container .buttons-container{display:flex;font-size:.8em;padding:.6em 0 .3em .3em}:host::ng-deep .filter-container .bottom-container .buttons-container .default-button:first-child{margin:0 .5em 0 0}:host::ng-deep .filter-container .bottom-container .buttons-container .default-button:nth-child(2){margin:0 0 0 .5em}:host::ng-deep .filter-container .menu-nav-container{border-bottom:0 solid transparent!important;border-top:0 solid transparent!important;display:flex;flex-grow:1;max-height:100%;overflow:auto;overflow-x:hidden;position:relative}:host::ng-deep .filter-container .menu-nav-container:before{margin-top:-1px;top:1px}:host::ng-deep .filter-container .menu-nav-container:after,:host::ng-deep .filter-container .menu-nav-container:before{background:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));content:\"\";height:1px;left:0;position:absolute;width:100%}:host::ng-deep .filter-container .menu-nav-container:after{bottom:1px;bottom:-10.5%;margin-bottom:-1px}:host::ng-deep .filter-container .menu-nav-container .menu-content{display:flex;flex-direction:column;flex-grow:1;position:relative}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title{align-items:center;background:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));border-left:.2em solid #fff;display:flex;margin:0 0 .14em;position:relative}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title .material-icons{color:hsla(0,0%,100%,.6);font-size:1.2em;margin:0 .5em 0 .3em;padding:.3em}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title .material-icons.expand{color:#fff;position:absolute;right:.3em;top:.5em}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title .menu-icons{height:1.5em;padding:.2em .5em;width:1.5em}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title a{color:#fff;flex-grow:1;font-family:Montserrat,sans-serif;font-size:.6em;font-weight:300;padding:1.5em .7em;text-decoration:none;text-transform:uppercase}:host::ng-deep .filter-container .menu-nav-container .menu-content .input-container gl-shared-component-filter-container .type-container{background-color:hsla(0,0%,100%,.03);border-bottom:1px solid hsla(0,0%,100%,.03)}:host::ng-deep .filter-container .menu-nav-container .menu-content .input-container .options-container{display:flex}:host::ng-deep .filter-container .menu-nav-container .menu-content .input-container gl-shared-component-input-autocomplete-simple .input-container{height:1.5em;margin:.2em 0 0}:host::ng-deep .show-admin-settings{visibility:visible!important}:host::ng-deep .filter-container .menu-active,:host::ng-deep .menu-active{right:0}:host::ng-deep .menu-background{left:1000px;opacity:0;visibility:collapse;z-index:-1000}:host::ng-deep .visible-background{background:rgba(0,0,0,.6);height:100%;left:0;opacity:1;position:fixed;top:0;transition:all 1s ease-in-out;visibility:visible;width:100%;z-index:999}:host::ng-deep .hide-subtitle{margin:0;opacity:0;padding:0;transition:all .25s ease-in-out;visibility:collapse}:host::ng-deep .show-subtitle{opacity:1;transition:all .25s ease-in-out;transition-delay:.4s;visibility:visible}:host::ng-deep .hide-subtitle-container{-webkit-animation:hide-subtitle .4s ease-in-out;-webkit-animation-fill-mode:forwards;animation:hide-subtitle .4s ease-in-out;animation-fill-mode:forwards}:host::ng-deep .show-subtitle-container{-webkit-animation:show-subtitle .4s ease-in-out;-webkit-animation-fill-mode:forwards;animation:show-subtitle .4s ease-in-out;animation-fill-mode:forwards}:host::ng-deep .collapsed-menu .expand{transform:rotate(0deg);transition:all .4s ease-in-out}:host::ng-deep .collapsed-menu .menu-icons{-webkit-animation:decrease-increase .4s ease-in-out;-webkit-animation-fill-mode:forwards;animation:decrease-increase .4s ease-in-out;animation-fill-mode:forwards}:host::ng-deep .expanded-menu .expand{transform:rotate(-180deg);transition:all .4s ease-in-out}:host::ng-deep .expanded-menu .menu-icons{-webkit-animation:increase-decrease .4s ease-in-out;-webkit-animation-fill-mode:forwards;animation:increase-decrease .4s ease-in-out;animation-fill-mode:forwards}"]
+            },] }
+];
 GlSharedComponentFilterComponent.ctorParameters = () => [
     { type: Router },
     { type: GlSharedComponentFilterService }
 ];
-__decorate([
-    ViewChild('container', { static: true, read: ElementRef })
-], GlSharedComponentFilterComponent.prototype, "container", void 0);
-__decorate([
-    ViewChild('background', { static: true, read: ElementRef })
-], GlSharedComponentFilterComponent.prototype, "background", void 0);
-__decorate([
-    ViewChild('menuNavContainer')
-], GlSharedComponentFilterComponent.prototype, "menuNavContainer", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "title", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "subtitle", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "type", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "closeButton", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "partialResult", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "partialResultDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "itemSingularDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "itemPluralDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "applyButtonDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "clearButtonDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "buttonClass", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "isIE", void 0);
-__decorate([
-    Input()
-], GlSharedComponentFilterComponent.prototype, "applyPartialResult", void 0);
-__decorate([
-    Output()
-], GlSharedComponentFilterComponent.prototype, "applyFilter$", void 0);
-__decorate([
-    Output()
-], GlSharedComponentFilterComponent.prototype, "clearFilter$", void 0);
-GlSharedComponentFilterComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-filter',
-        template: "<gl-shared-component-menu-background\n  #background\n  (click)=\"service.backgroundClick($event)\"\n></gl-shared-component-menu-background>\n<div #container class=\"filter-container {{ type }}\">\n  <div class=\"header-filter-container\">\n    <div class=\"menu-header\">\n      <div class=\"menu-top-icons-container\">\n        <img id=\"close-menu-button\" (click)=\"service.close($event)\" [src]=\"closeButton\" class=\"menu-icons close-menu\" alt=\"Close menu button\">\n      </div>\n      <div class=\"menu-header-title\">\n        <h1 class=\"title\">{{ title }}</h1>\n        <h2 class=\"subtitle\">{{ subtitle }}</h2>\n      </div>\n    </div>\n  </div>\n  <nav class=\"menu-nav-container\" #menuNavContainer>\n    <div class=\"menu-content\">\n      <div class=\"input-container\" >\n        <ng-content></ng-content>\n      </div>\n    </div>\n  </nav>\n  <div class=\"bottom-container\">\n    <span\n      *ngIf=\"partialResult != null\"\n      class=\"partial-result-description\">{{ partialResultDescription }} {{ partialResult }} {{ partialResult > 1 ? itemPluralDescription : itemSingularDescription }}\n    </span>\n    <div class=\"buttons-container\">\n      <gl-shared-component-input-button-simple\n        value=\"apply\"\n        [class]=\"buttonClass\"\n        [innerValue]=\"applyButtonDescription\"\n        (click)=\"onApply()\"\n      ></gl-shared-component-input-button-simple>\n      <gl-shared-component-input-button-simple\n        value=\"clear\"\n        [class]=\"buttonClass\"\n        [innerValue]=\"clearButtonDescription\"\n        (click)=\"onClear()\"\n      ></gl-shared-component-input-button-simple>\n    </div>\n  </div>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar:horizontal{height:.5em}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar{width:.5em}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar-button{background-color:#333437;display:none!important}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar-track-piece{background-color:#2c2c2f}:host::ng-deep .filter-container .menu-nav-container::-webkit-scrollbar-thumb{background-color:#64666c;border:1px solid #38393c}:host::ng-deep .filter-container{border-top:.3em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;border-bottom:2em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;display:flex;flex-direction:column;background:0 0/cover #1a1b1d;position:fixed;top:0;bottom:0;overflow:hidden;width:85vw;right:-110%;max-width:17em;min-width:17em;z-index:10000;transition:right .5s ease-in-out;flex-grow:1;height:100vh}:host::ng-deep .filter-container.translucid{background:rgba(255,255,255,.05);border-left:1px solid rgba(255,255,255,.05);border-top:.3em solid rgba(255,255,255,.1);border-image-source:none}:host::ng-deep .filter-container .a{display:block;min-height:3em}:host::ng-deep .filter-container .header-filter-container .menu-header{display:flex;flex-direction:column;margin:.5em 1em 1em .5em}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container{display:flex;margin:0 0 1.5em}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .settings-menu{cursor:pointer;height:1.5em;width:1.5em}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu:active,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu:hover,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .settings-menu:active,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .settings-menu:hover{opacity:1;-webkit-animation:.4s ease-in-out forwards increase-decrease;animation:.4s ease-in-out forwards increase-decrease}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-top-icons-container .close-menu{margin:0 .2em 0 0}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-header-title .subtitle,:host::ng-deep .filter-container .header-filter-container .menu-header .menu-header-title .title{text-transform:uppercase;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;color:#fff;margin:0}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-header-title .title{font-family:Montserrat,sans-serif;font-weight:700;font-size:.9em;display:none}:host::ng-deep .filter-container .header-filter-container .menu-header .menu-header-title .subtitle{font-family:Montserrat,sans-serif;font-weight:100;font-size:1.5em}:host::ng-deep .filter-container .bottom-container{display:flex;flex-direction:column;margin:1em 0 .4em}:host::ng-deep .filter-container .bottom-container .partial-result-description{font-family:Montserrat,sans-serif;font-weight:700;color:#d24077;font-size:.5em;padding:0 0 0 .5em;text-align:center}:host::ng-deep .filter-container .bottom-container .buttons-container{display:flex;padding:.6em 0 .3em .3em;font-size:.8em}:host::ng-deep .filter-container .bottom-container .buttons-container .default-button:nth-child(1){margin:0 .5em 0 0}:host::ng-deep .filter-container .bottom-container .buttons-container .default-button:nth-child(2){margin:0 0 0 .5em}:host::ng-deep .filter-container .menu-nav-container{scrollbar-face-color:#333437!important;scrollbar-shadow-color:#38393c!important;scrollbar-track-color:#2c2c2f!important;scrollbar-arrow-color:#64666c!important;overflow:auto;max-height:100%;flex-grow:1;display:flex;overflow-x:hidden;border-top:0 solid transparent!important;position:relative;border-bottom:0 solid transparent!important}:host::ng-deep .filter-container .menu-nav-container::before{width:100%;height:1px;left:0;top:1px;margin-top:-1px;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%)}:host::ng-deep .filter-container .menu-nav-container::after{width:100%;height:1px;left:0;margin-bottom:-1px;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);bottom:-10.5%}:host::ng-deep .filter-container .menu-nav-container .menu-content{display:flex;flex-direction:column;flex-grow:1;position:relative}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title{background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);margin:0 0 .14em;position:relative;display:flex;align-items:center;border-left:.2em solid #fff}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title .material-icons{color:rgba(255,255,255,.6);font-size:1.2em;padding:.3em;margin:0 .5em 0 .3em}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title .material-icons.expand{position:absolute;color:#fff;top:.5em;right:.3em}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title .menu-icons{padding:.2em .5em;height:1.5em;width:1.5em}:host::ng-deep .filter-container .menu-nav-container .menu-content .menu-title a{text-decoration:none;font-size:.6em;font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;color:#fff;padding:1.5em .7em;flex-grow:1}:host::ng-deep .filter-container .menu-nav-container .menu-content .input-container gl-shared-component-filter-container .type-container{background-color:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.03)}:host::ng-deep .filter-container .menu-nav-container .menu-content .input-container .options-container{display:flex}:host::ng-deep .filter-container .menu-nav-container .menu-content .input-container gl-shared-component-input-autocomplete-simple .input-container{margin:.2em 0 0;height:1.5em}:host::ng-deep .show-admin-settings{visibility:visible!important}:host::ng-deep .filter-container .menu-active{right:0}:host::ng-deep .menu-active{right:0}:host::ng-deep .menu-background{opacity:0;visibility:collapse;z-index:-1000;left:1000px}:host::ng-deep .visible-background{width:100%;height:100%;background:rgba(0,0,0,.6);opacity:1;visibility:visible;position:fixed;top:0;left:0;z-index:999;transition:1s ease-in-out}:host::ng-deep .hide-subtitle{opacity:0;visibility:collapse;margin:0;padding:0;transition:.25s ease-in-out}:host::ng-deep .show-subtitle{opacity:1;visibility:visible;transition:.25s ease-in-out .4s}:host::ng-deep .hide-subtitle-container{-webkit-animation:.4s ease-in-out forwards hide-subtitle;animation:.4s ease-in-out forwards hide-subtitle}:host::ng-deep .show-subtitle-container{-webkit-animation:.4s ease-in-out forwards show-subtitle;animation:.4s ease-in-out forwards show-subtitle}:host::ng-deep .collapsed-menu .expand{transform:rotate(0);transition:.4s ease-in-out}:host::ng-deep .collapsed-menu .menu-icons{-webkit-animation:.4s ease-in-out forwards decrease-increase;animation:.4s ease-in-out forwards decrease-increase}:host::ng-deep .expanded-menu .expand{transform:rotate(-180deg);transition:.4s ease-in-out}:host::ng-deep .expanded-menu .menu-icons{-webkit-animation:.4s ease-in-out forwards increase-decrease;animation:.4s ease-in-out forwards increase-decrease}"]
-    })
-], GlSharedComponentFilterComponent);
-
-let GlSharedComponentFilterContainerComponent = class GlSharedComponentFilterContainerComponent {
-    constructor() { }
+GlSharedComponentFilterComponent.propDecorators = {
+    container: [{ type: ViewChild, args: ['container', { static: true, read: ElementRef },] }],
+    background: [{ type: ViewChild, args: ['background', { static: true, read: ElementRef },] }],
+    menuNavContainer: [{ type: ViewChild, args: ['menuNavContainer',] }],
+    title: [{ type: Input }],
+    subtitle: [{ type: Input }],
+    type: [{ type: Input }],
+    closeButton: [{ type: Input }],
+    partialResult: [{ type: Input }],
+    partialResultDescription: [{ type: Input }],
+    itemSingularDescription: [{ type: Input }],
+    itemPluralDescription: [{ type: Input }],
+    applyButtonDescription: [{ type: Input }],
+    clearButtonDescription: [{ type: Input }],
+    buttonClass: [{ type: Input }],
+    isIE: [{ type: Input }],
+    applyPartialResult: [{ type: Input }],
+    applyFilter$: [{ type: Output }],
+    clearFilter$: [{ type: Output }]
 };
-__decorate([
-    Input()
-], GlSharedComponentFilterContainerComponent.prototype, "label", void 0);
-GlSharedComponentFilterContainerComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-filter-container',
-        template: "<div class=\"type-container\">\n  <label class=\"title\">{{ label }}</label>\n  <ng-content></ng-content>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .type-container{display:flex;flex-direction:column;background-color:#2c2c2f;padding:.7em .7em .2em;border-bottom:1px solid #38393c}:host::ng-deep .type-container .title{font-family:Montserrat,sans-serif;font-weight:400;color:#d24077;text-transform:uppercase;font-size:.4em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}"]
-    })
-], GlSharedComponentFilterContainerComponent);
 
-let GlSharedComponentButtonAttachmentFileService = class GlSharedComponentButtonAttachmentFileService {
+class GlSharedComponentFilterContainerComponent {
+    constructor() { }
+}
+GlSharedComponentFilterContainerComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-filter-container',
+                template: "<div class=\"type-container\">\n  <label class=\"title\">{{ label }}</label>\n  <ng-content></ng-content>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .type-container{background-color:#2c2c2f;border-bottom:1px solid #38393c;display:flex;flex-direction:column;padding:.7em .7em .2em}:host::ng-deep .type-container .title{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#d24077;font-family:Montserrat,sans-serif;font-size:.4em;font-weight:700;font-weight:400;text-transform:uppercase;user-select:none}"]
+            },] }
+];
+GlSharedComponentFilterContainerComponent.ctorParameters = () => [];
+GlSharedComponentFilterContainerComponent.propDecorators = {
+    label: [{ type: Input }]
+};
+
+class GlSharedComponentButtonAttachmentFileService {
     constructor(_alert) {
         this._alert = _alert;
     }
@@ -1731,18 +1368,18 @@ let GlSharedComponentButtonAttachmentFileService = class GlSharedComponentButton
     clearInput() {
         this._input.value = null;
     }
-};
+}
+GlSharedComponentButtonAttachmentFileService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentButtonAttachmentFileService_Factory() { return new GlSharedComponentButtonAttachmentFileService(ɵɵinject(GlSharedComponentModalAlertService)); }, token: GlSharedComponentButtonAttachmentFileService, providedIn: "root" });
+GlSharedComponentButtonAttachmentFileService.decorators = [
+    { type: Injectable, args: [{
+                providedIn: 'root'
+            },] }
+];
 GlSharedComponentButtonAttachmentFileService.ctorParameters = () => [
     { type: GlSharedComponentModalAlertService }
 ];
-GlSharedComponentButtonAttachmentFileService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentButtonAttachmentFileService_Factory() { return new GlSharedComponentButtonAttachmentFileService(ɵɵinject(GlSharedComponentModalAlertService)); }, token: GlSharedComponentButtonAttachmentFileService, providedIn: "root" });
-GlSharedComponentButtonAttachmentFileService = __decorate([
-    Injectable({
-        providedIn: 'root'
-    })
-], GlSharedComponentButtonAttachmentFileService);
 
-let GlSharedComponentButtonAttachmentFileComponent = class GlSharedComponentButtonAttachmentFileComponent {
+class GlSharedComponentButtonAttachmentFileComponent {
     constructor(service) {
         this.service = service;
         /**
@@ -1762,55 +1399,33 @@ let GlSharedComponentButtonAttachmentFileComponent = class GlSharedComponentButt
     ngAfterViewInit() {
         this.service.initialize(this.fileInput.nativeElement, this.currentValue$, this.attachments, this.duplicatedDescription, this.invalidSizeDescription, this.invalidFormatDescription, this.attachmentIconSrc);
     }
-};
+}
+GlSharedComponentButtonAttachmentFileComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-button-attachment-file',
+                template: "<div class=\"attachment-container\" (click)=\"service.addAttachment()\">\n  <input\n    #fileInput\n    id=\"file-input\"\n    name=\"file-input\"\n    type=\"file\"\n    class=\"file-input\"\n    [accept]=\"accept\"\n    [title]=\"title\"\n    [attr.data-maxsize]=\"maxFileSize\"/>\n  <img class=\"attachment-icon\" [src]=\"icon\" alt=\"Attachment Icon\">\n  <span class=\"attachment-file-button\">{{ description }}</span>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .attachment-container{align-items:center;border-radius:.5em;cursor:pointer;display:flex;margin:.2em 0;padding:.4em .3em;position:relative}:host::ng-deep .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:all .2s ease-in-out}:host::ng-deep .attachment-container:hover{background:rgba(63,64,68,.9);transition:all .2s ease-in-out}:host::ng-deep .attachment-container .file-input{display:none;font-size:1em}:host::ng-deep .attachment-container .attachment-icon{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;height:2em;margin:.5em .8em .5em .2em;padding:0;user-select:none;width:2em}:host::ng-deep .attachment-container .file{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#1e1e1e;font-size:.8em;overflow:hidden;padding:1em 0;text-overflow:ellipsis;user-select:none;white-space:nowrap;width:75%}:host::ng-deep .attachment-container .attachment-file-button{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#fff;font-family:Montserrat,sans-serif;font-weight:400;user-select:none}"]
+            },] }
+];
 GlSharedComponentButtonAttachmentFileComponent.ctorParameters = () => [
     { type: GlSharedComponentButtonAttachmentFileService }
 ];
-__decorate([
-    ViewChild('fileInput', { read: ElementRef, static: true })
-], GlSharedComponentButtonAttachmentFileComponent.prototype, "fileInput", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonAttachmentFileComponent.prototype, "maxFileSize", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonAttachmentFileComponent.prototype, "accept", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonAttachmentFileComponent.prototype, "title", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonAttachmentFileComponent.prototype, "icon", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonAttachmentFileComponent.prototype, "attachmentIconSrc", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonAttachmentFileComponent.prototype, "description", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonAttachmentFileComponent.prototype, "attachments", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonAttachmentFileComponent.prototype, "duplicatedDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonAttachmentFileComponent.prototype, "invalidSizeDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentButtonAttachmentFileComponent.prototype, "invalidFormatDescription", void 0);
-__decorate([
-    Output()
-], GlSharedComponentButtonAttachmentFileComponent.prototype, "currentValue$", void 0);
-GlSharedComponentButtonAttachmentFileComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-button-attachment-file',
-        template: "<div class=\"attachment-container\" (click)=\"service.addAttachment()\">\n  <input\n    #fileInput\n    id=\"file-input\"\n    name=\"file-input\"\n    type=\"file\"\n    class=\"file-input\"\n    [accept]=\"accept\"\n    [title]=\"title\"\n    [attr.data-maxsize]=\"maxFileSize\"/>\n  <img class=\"attachment-icon\" [src]=\"icon\" alt=\"Attachment Icon\">\n  <span class=\"attachment-file-button\">{{ description }}</span>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .attachment-container{position:relative;display:flex;padding:.4em .3em;border-radius:.5em;align-items:center;margin:.2em 0;cursor:pointer}:host::ng-deep .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:.2s ease-in-out}:host::ng-deep .attachment-container:hover{background:rgba(63,64,68,.9);transition:.2s ease-in-out}:host::ng-deep .attachment-container .file-input{font-size:1em;display:none}:host::ng-deep .attachment-container .attachment-icon{padding:0;height:2em;width:2em;margin:.5em .8em .5em .2em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .attachment-container .file{font-size:.8em;color:#1e1e1e;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;width:75%;padding:1em 0}:host::ng-deep .attachment-container .attachment-file-button{color:#fff;font-family:Montserrat,sans-serif;font-weight:400;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}"]
-    })
-], GlSharedComponentButtonAttachmentFileComponent);
+GlSharedComponentButtonAttachmentFileComponent.propDecorators = {
+    fileInput: [{ type: ViewChild, args: ['fileInput', { read: ElementRef, static: true },] }],
+    maxFileSize: [{ type: Input }],
+    accept: [{ type: Input }],
+    title: [{ type: Input }],
+    icon: [{ type: Input }],
+    attachmentIconSrc: [{ type: Input }],
+    description: [{ type: Input }],
+    attachments: [{ type: Input }],
+    duplicatedDescription: [{ type: Input }],
+    invalidSizeDescription: [{ type: Input }],
+    invalidFormatDescription: [{ type: Input }],
+    currentValue$: [{ type: Output }]
+};
 
-let GlSharedComponentModalAttachmentLinkService = class GlSharedComponentModalAttachmentLinkService {
+class GlSharedComponentModalAttachmentLinkService {
     constructor(_alert) {
         this._alert = _alert;
         this.linkIcon = '../assets/img/icon/attachment/link.svg';
@@ -1903,34 +1518,34 @@ let GlSharedComponentModalAttachmentLinkService = class GlSharedComponentModalAt
             this.onCancel();
         }
     }
-};
+}
+GlSharedComponentModalAttachmentLinkService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentModalAttachmentLinkService_Factory() { return new GlSharedComponentModalAttachmentLinkService(ɵɵinject(GlSharedComponentModalAlertService)); }, token: GlSharedComponentModalAttachmentLinkService, providedIn: "root" });
+GlSharedComponentModalAttachmentLinkService.decorators = [
+    { type: Injectable, args: [{
+                providedIn: 'root'
+            },] }
+];
 GlSharedComponentModalAttachmentLinkService.ctorParameters = () => [
     { type: GlSharedComponentModalAlertService }
 ];
-GlSharedComponentModalAttachmentLinkService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentModalAttachmentLinkService_Factory() { return new GlSharedComponentModalAttachmentLinkService(ɵɵinject(GlSharedComponentModalAlertService)); }, token: GlSharedComponentModalAttachmentLinkService, providedIn: "root" });
-GlSharedComponentModalAttachmentLinkService = __decorate([
-    Injectable({
-        providedIn: 'root'
-    })
-], GlSharedComponentModalAttachmentLinkService);
 
-let GlSharedComponentButtonAttachmentLinkComponent = class GlSharedComponentButtonAttachmentLinkComponent {
+class GlSharedComponentButtonAttachmentLinkComponent {
     constructor(service) {
         this.service = service;
     }
-};
+}
+GlSharedComponentButtonAttachmentLinkComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-button-attachment-link',
+                template: "<div\n  class=\"attachment-container dark link-container\"\n  (click)=\"service.modal(true)\">\n  <img\n    class=\"attachment-icon\"\n    src=\"../assets/img/icon/menu/attachment/link-white.svg\"\n    alt=\"Attachment Icon\">\n  <span\n    id=\"add-attachment-link\"\n    class=\"attachment-file-button\">Adicionar link</span>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .attachment-container{align-items:center;border-radius:.5em;cursor:pointer;display:flex;margin:.2em 0;padding:.4em .3em;position:relative}:host::ng-deep .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:all .2s ease-in-out}:host::ng-deep .attachment-container:hover{background:rgba(63,64,68,.9);transition:all .2s ease-in-out}:host::ng-deep .attachment-container .attachment-icon{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;height:2em;margin:.8em .8em .8em .2em;padding:0;user-select:none;width:2em}:host::ng-deep .attachment-container .attachment-file-button{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#fff;font-family:Montserrat,sans-serif;font-weight:400;user-select:none}"]
+            },] }
+];
 GlSharedComponentButtonAttachmentLinkComponent.ctorParameters = () => [
     { type: GlSharedComponentModalAttachmentLinkService }
 ];
-GlSharedComponentButtonAttachmentLinkComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-button-attachment-link',
-        template: "<div\n  class=\"attachment-container dark link-container\"\n  (click)=\"service.modal(true)\">\n  <img\n    class=\"attachment-icon\"\n    src=\"../assets/img/icon/menu/attachment/link-white.svg\"\n    alt=\"Attachment Icon\">\n  <span\n    id=\"add-attachment-link\"\n    class=\"attachment-file-button\">Adicionar link</span>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .attachment-container{position:relative;display:flex;padding:.4em .3em;border-radius:.5em;align-items:center;margin:.2em 0;cursor:pointer}:host::ng-deep .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:.2s ease-in-out}:host::ng-deep .attachment-container:hover{background:rgba(63,64,68,.9);transition:.2s ease-in-out}:host::ng-deep .attachment-container .attachment-icon{padding:0;height:2em;width:2em;margin:.8em .8em .8em .2em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}:host::ng-deep .attachment-container .attachment-file-button{color:#fff;font-family:Montserrat,sans-serif;font-weight:400;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}"]
-    })
-], GlSharedComponentButtonAttachmentLinkComponent);
 
-let GlSharedComponentModalAttachmentLinkComponent = class GlSharedComponentModalAttachmentLinkComponent {
+class GlSharedComponentModalAttachmentLinkComponent {
     constructor(service) {
         this.service = service;
         this.subtitle = ': link';
@@ -1939,40 +1554,28 @@ let GlSharedComponentModalAttachmentLinkComponent = class GlSharedComponentModal
         this.linkPlaceholder = 'Type the file link';
         this.cancelInnerValue = 'Cancel';
     }
-};
+}
+GlSharedComponentModalAttachmentLinkComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-modal-attachment-link',
+                template: "<div\n  *ngIf=\"service.showModal\"\n  (keyup)=\"service.onModalKeyUp($event)\"\n  id=\"modal-attachment-link\"\n  class=\"modal-link-container {{ service.modalClass }}\">\n  <div class=\"modal-main-content\">\n    <gl-shared-component-modal-header\n      [title]=\"title\"\n      [subtitle]=\"subtitle\"\n      [modalLogo]=\"modalLogo\"\n    ></gl-shared-component-modal-header>\n    <div class=\"modal-input-container\">\n      <div class=\"name-container\">\n        <label for=\"attachment-link-name\">{{ fileNameLabel }}</label>\n        <input\n          (keyup)=\"service.onName($event)\"\n          id=\"attachment-link-name\"\n          type=\"text\"\n          [placeholder]=\"fileNamePlaceholder\">\n      </div>\n      <div class=\"value-container\">\n        <label for=\"attachment-link-value\">Link</label>\n        <input\n          (keyup)=\"service.onUrl($event)\"\n          id=\"attachment-link-value\"\n          type=\"text\"\n          [placeholder]=\"linkPlaceholder\">\n      </div>\n    </div>\n    <div class=\"button-container\">\n      <gl-shared-component-input-button-simple\n        (click)=\"service.onCancel()\"\n        class=\"cancel\"\n        [innerValue]=\"cancelInnerValue\"\n        value=\"cancel\"\n      ></gl-shared-component-input-button-simple>\n      <gl-shared-component-input-button-simple\n        (click)=\"service.onConfirm()\"\n        class=\"ok\"\n        innerValue=\"OK\"\n        value=\"ok\"\n      ></gl-shared-component-input-button-simple>\n    </div>\n    <div class=\"modal-footer\"></div>\n  </div>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .modal-link-container{-webkit-animation:show-modal .5s ease-in-out;-webkit-animation-fill-mode:forwards;align-items:center;animation:show-modal .5s ease-in-out;animation-fill-mode:forwards;background:rgba(0,0,0,.8);display:flex;height:0;justify-items:center;left:0;min-height:100vh;min-width:100vw;position:fixed;top:0;z-index:99999}@-webkit-keyframes show-modal{0%{opacity:0}to{opacity:1}}:host::ng-deep .modal-link-container>.modal-main-content{opacity:1!important;transition:all .5s ease-in-out;transition-delay:.5s}:host::ng-deep .modal-link-container .modal-main-content{align-items:stretch;background:#020202;display:flex;flex-direction:column;height:-webkit-max-content;height:-moz-max-content;height:max-content;height:1em;justify-content:stretch;margin:0 auto;max-width:36em;min-height:10em;opacity:0;width:30vw;word-wrap:break-word}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container{align-items:stretch;display:flex;flex-direction:column;flex-grow:1;justify-content:center;padding:.5em}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container,:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .value-container{align-content:center;align-items:stretch;display:flex;justify-content:center;position:relative}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container label,:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .value-container label{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:grey;font-family:Montserrat,sans-serif;font-size:.4em;font-weight:400;left:.8em;padding:.5em;position:absolute;text-transform:none;user-select:none}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container input,:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .value-container input{background-color:transparent;border:none;border-bottom:1px solid;border-image-slice:.5;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));color:#fff;flex-grow:1;font-family:Montserrat,sans-serif;font-size:.5em;font-weight:700;height:2.2em;margin:0;padding:1em;text-align:left}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container{margin-bottom:.1em}:host::ng-deep .modal-link-container .modal-main-content .button-container{align-items:stretch;display:flex;justify-content:center}:host::ng-deep .modal-link-container .modal-main-content .button-container gl-shared-component-input-button-simple{margin:0 .1em;max-width:33.33333%}:host::ng-deep .modal-link-container .modal-main-content .modal-footer{background-color:#0e0e0f;border-image-slice:.5;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));border-top:1px solid;height:.5em;margin:.2em 0 0;width:100%}:host::ng-deep .hide-modal{-webkit-animation:hide-modal .3s ease-in-out;-webkit-animation-fill-mode:forwards;animation:hide-modal .3s ease-in-out;animation-fill-mode:forwards}@-webkit-keyframes hide-modal{0%{opacity:1}to{opacity:0}}@keyframes hide-modal{0%{opacity:1}to{opacity:0}}:host::ng-deep .show-modal{-webkit-animation:show-modal .3s ease-in-out;-webkit-animation-fill-mode:forwards;animation:show-modal .3s ease-in-out;animation-fill-mode:forwards}@keyframes show-modal{0%{opacity:0}to{opacity:1}}"]
+            },] }
+];
 GlSharedComponentModalAttachmentLinkComponent.ctorParameters = () => [
     { type: GlSharedComponentModalAttachmentLinkService }
 ];
-__decorate([
-    Input()
-], GlSharedComponentModalAttachmentLinkComponent.prototype, "title", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAttachmentLinkComponent.prototype, "subtitle", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAttachmentLinkComponent.prototype, "modalLogo", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAttachmentLinkComponent.prototype, "fileNameLabel", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAttachmentLinkComponent.prototype, "fileNamePlaceholder", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAttachmentLinkComponent.prototype, "linkPlaceholder", void 0);
-__decorate([
-    Input()
-], GlSharedComponentModalAttachmentLinkComponent.prototype, "cancelInnerValue", void 0);
-GlSharedComponentModalAttachmentLinkComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-modal-attachment-link',
-        template: "<div\n  *ngIf=\"service.showModal\"\n  (keyup)=\"service.onModalKeyUp($event)\"\n  id=\"modal-attachment-link\"\n  class=\"modal-link-container {{ service.modalClass }}\">\n  <div class=\"modal-main-content\">\n    <gl-shared-component-modal-header\n      [title]=\"title\"\n      [subtitle]=\"subtitle\"\n      [modalLogo]=\"modalLogo\"\n    ></gl-shared-component-modal-header>\n    <div class=\"modal-input-container\">\n      <div class=\"name-container\">\n        <label for=\"attachment-link-name\">{{ fileNameLabel }}</label>\n        <input\n          (keyup)=\"service.onName($event)\"\n          id=\"attachment-link-name\"\n          type=\"text\"\n          [placeholder]=\"fileNamePlaceholder\">\n      </div>\n      <div class=\"value-container\">\n        <label for=\"attachment-link-value\">Link</label>\n        <input\n          (keyup)=\"service.onUrl($event)\"\n          id=\"attachment-link-value\"\n          type=\"text\"\n          [placeholder]=\"linkPlaceholder\">\n      </div>\n    </div>\n    <div class=\"button-container\">\n      <gl-shared-component-input-button-simple\n        (click)=\"service.onCancel()\"\n        class=\"cancel\"\n        [innerValue]=\"cancelInnerValue\"\n        value=\"cancel\"\n      ></gl-shared-component-input-button-simple>\n      <gl-shared-component-input-button-simple\n        (click)=\"service.onConfirm()\"\n        class=\"ok\"\n        innerValue=\"OK\"\n        value=\"ok\"\n      ></gl-shared-component-input-button-simple>\n    </div>\n    <div class=\"modal-footer\"></div>\n  </div>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .modal-link-container{position:fixed;min-width:100vw;min-height:100vh;z-index:99999;top:0;left:0;display:flex;justify-items:center;align-items:center;height:0;-webkit-animation:.5s ease-in-out forwards show-modal;animation:.5s ease-in-out forwards show-modal;background:rgba(0,0,0,.8)}@-webkit-keyframes show-modal{from{opacity:0}to{opacity:1}}:host::ng-deep .modal-link-container>.modal-main-content{opacity:1!important;transition:.5s ease-in-out .5s}:host::ng-deep .modal-link-container .modal-main-content{opacity:0;background:#020202;margin:0 auto;word-wrap:break-word;display:flex;flex-direction:column;justify-content:stretch;width:30vw;max-width:36em;min-height:10em;height:1em;align-items:stretch}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container{display:flex;flex-direction:column;align-items:stretch;justify-content:center;flex-grow:1;padding:.5em}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container,:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .value-container{position:relative;display:flex;align-content:center;justify-content:center;align-items:stretch}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container label,:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .value-container label{font-family:Montserrat,sans-serif;font-weight:400;color:gray;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:.5em;text-transform:none;position:absolute;left:.8em;font-size:.4em}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container input,:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .value-container input{font-family:Montserrat,sans-serif;font-weight:700;color:#fff;background-color:transparent;border:none;flex-grow:1;margin:0;font-size:.5em;text-align:left;padding:1em;height:2.2em;border-bottom:1px solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5}:host::ng-deep .modal-link-container .modal-main-content .modal-input-container .name-container{margin-bottom:.1em}:host::ng-deep .modal-link-container .modal-main-content .button-container{display:flex;justify-content:center;align-items:stretch}:host::ng-deep .modal-link-container .modal-main-content .button-container gl-shared-component-input-button-simple{margin:0 .1em;max-width:calc(100% / 3)}:host::ng-deep .modal-link-container .modal-main-content .modal-footer{height:.5em;background-color:#0e0e0f;border-top:1px solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;margin:.2em 0 0;width:100%}:host::ng-deep .hide-modal{-webkit-animation:.3s ease-in-out forwards hide-modal;animation:.3s ease-in-out forwards hide-modal}@-webkit-keyframes hide-modal{from{opacity:1}to{opacity:0}}@keyframes hide-modal{from{opacity:1}to{opacity:0}}:host::ng-deep .show-modal{-webkit-animation:.3s ease-in-out forwards show-modal;animation:.3s ease-in-out forwards show-modal}@keyframes show-modal{from{opacity:0}to{opacity:1}}"]
-    })
-], GlSharedComponentModalAttachmentLinkComponent);
+GlSharedComponentModalAttachmentLinkComponent.propDecorators = {
+    title: [{ type: Input }],
+    subtitle: [{ type: Input }],
+    modalLogo: [{ type: Input }],
+    fileNameLabel: [{ type: Input }],
+    fileNamePlaceholder: [{ type: Input }],
+    linkPlaceholder: [{ type: Input }],
+    cancelInnerValue: [{ type: Input }]
+};
 
-let GlSharedComponentAttachmentItemComponent = class GlSharedComponentAttachmentItemComponent {
+class GlSharedComponentAttachmentItemComponent {
     constructor() {
         this.disabled = false;
         this.onItemClick = new EventEmitter();
@@ -1985,46 +1588,29 @@ let GlSharedComponentAttachmentItemComponent = class GlSharedComponentAttachment
         e.preventDefault();
         this.onItemClick.emit();
     }
+}
+GlSharedComponentAttachmentItemComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-attachment-item',
+                template: "<div class=\"attachment-container {{ addingSmooth ? 'adding-row-animated' : '' }}\">\n  <img\n    class=\"attachment-icon\"\n    [src]=\"fileIcon\"\n    alt=\"\u00CDcone anexo\">\n  <a\n    (click)=\"onButtonClick($event)\"\n    [id]=\"id\"\n    [href]=\"attachmentUrl\"\n    class=\"file\"\n  >{{ fileName }}</a>\n  <img\n    *ngIf=\"!disabled && type === 'link'\"\n    (click)=\"editItem(id)\"\n    class=\"edit-item\"\n    src=\"../assets/img/icon/menu/attachment/edit.svg\"\n    alt=\"Editar anexo\"/>\n  <img\n    *ngIf=\"!disabled\"\n    (click)=\"removeItem(id)\"\n    class=\"remove-item\"\n    src=\"../assets/img/icon/menu/attachment/delete.svg\"\n    alt=\"Apagar anexo\"/>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .attachment-container{align-items:center;border-radius:.5em;cursor:pointer;display:flex;margin:.2em 0;padding:.4em .3em}:host::ng-deep .attachment-container:not(hover){background-color:hsla(0,0%,100%,.3);transition:all .2s ease-in-out}:host::ng-deep .attachment-container:not(hover) .file{color:#333437}:host::ng-deep .attachment-container:hover{background:#fff;transition:all .2s ease-in-out}:host::ng-deep .attachment-container:hover .file{color:#fff;color:#333437}:host::ng-deep .attachment-container .attachment-icon{height:2.15em;margin:0 .6em 0 .1em;padding:0;width:2.15em}:host::ng-deep .attachment-container .edit-item,:host::ng-deep .attachment-container .remove-item{height:2.15em;margin:0 0 0 .1em;padding:0;width:2.15em}:host::ng-deep .attachment-container .edit-item:not(hover),:host::ng-deep .attachment-container .remove-item:not(hover){opacity:.5;transition:all .2s ease-in-out}:host::ng-deep .attachment-container .edit-item:hover,:host::ng-deep .attachment-container .remove-item:hover{opacity:1;transition:all .2s ease-in-out}:host::ng-deep .attachment-container .edit-item{margin:0 .2em 0 0}:host::ng-deep .attachment-container .file{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;font-family:Montserrat,sans-serif;font-weight:400;overflow:hidden;padding:1em 0;text-overflow:ellipsis;user-select:none;white-space:nowrap;width:80%}"]
+            },] }
+];
+GlSharedComponentAttachmentItemComponent.ctorParameters = () => [];
+GlSharedComponentAttachmentItemComponent.propDecorators = {
+    disabled: [{ type: Input }],
+    attachmentUrl: [{ type: Input }],
+    fileName: [{ type: Input }],
+    fileIcon: [{ type: Input }],
+    id: [{ type: Input }],
+    type: [{ type: Input }],
+    addingSmooth: [{ type: Input }],
+    onItemClick: [{ type: Output, args: ['onClick',] }],
+    removeCurrentItem: [{ type: Output }],
+    editCurrentItem: [{ type: Output }]
 };
-__decorate([
-    Input()
-], GlSharedComponentAttachmentItemComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentItemComponent.prototype, "attachmentUrl", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentItemComponent.prototype, "fileName", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentItemComponent.prototype, "fileIcon", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentItemComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentItemComponent.prototype, "type", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentItemComponent.prototype, "addingSmooth", void 0);
-__decorate([
-    Output('onClick')
-], GlSharedComponentAttachmentItemComponent.prototype, "onItemClick", void 0);
-__decorate([
-    Output()
-], GlSharedComponentAttachmentItemComponent.prototype, "removeCurrentItem", void 0);
-__decorate([
-    Output()
-], GlSharedComponentAttachmentItemComponent.prototype, "editCurrentItem", void 0);
-GlSharedComponentAttachmentItemComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-attachment-item',
-        template: "<div class=\"attachment-container {{ addingSmooth ? 'adding-row-animated' : '' }}\">\n  <img\n    class=\"attachment-icon\"\n    [src]=\"fileIcon\"\n    alt=\"\u00CDcone anexo\">\n  <a\n    (click)=\"onButtonClick($event)\"\n    [id]=\"id\"\n    [href]=\"attachmentUrl\"\n    class=\"file\"\n  >{{ fileName }}</a>\n  <img\n    *ngIf=\"!disabled && type === 'link'\"\n    (click)=\"editItem(id)\"\n    class=\"edit-item\"\n    src=\"../assets/img/icon/menu/attachment/edit.svg\"\n    alt=\"Editar anexo\"/>\n  <img\n    *ngIf=\"!disabled\"\n    (click)=\"removeItem(id)\"\n    class=\"remove-item\"\n    src=\"../assets/img/icon/menu/attachment/delete.svg\"\n    alt=\"Apagar anexo\"/>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep .attachment-container{display:flex;padding:.4em .3em;border-radius:.5em;align-items:center;margin:.2em 0;cursor:pointer}:host::ng-deep .attachment-container:not(hover){background-color:rgba(255,255,255,.3);transition:.2s ease-in-out}:host::ng-deep .attachment-container:not(hover) .file{color:#333437}:host::ng-deep .attachment-container:hover{background:#fff;transition:.2s ease-in-out}:host::ng-deep .attachment-container:hover .file{color:#333437}:host::ng-deep .attachment-container .attachment-icon{padding:0;height:2.15em;width:2.15em;margin:0 .6em 0 .1em}:host::ng-deep .attachment-container .edit-item,:host::ng-deep .attachment-container .remove-item{padding:0;height:2.15em;width:2.15em;margin:0 0 0 .1em}:host::ng-deep .attachment-container .edit-item:not(hover),:host::ng-deep .attachment-container .remove-item:not(hover){opacity:.5;transition:.2s ease-in-out}:host::ng-deep .attachment-container .edit-item:hover,:host::ng-deep .attachment-container .remove-item:hover{opacity:1;transition:.2s ease-in-out}:host::ng-deep .attachment-container .edit-item{margin:0 .2em 0 0}:host::ng-deep .attachment-container .file{font-family:Montserrat,sans-serif;font-weight:400;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;width:80%;padding:1em 0}"]
-    })
-], GlSharedComponentAttachmentItemComponent);
 
-let GlSharedComponentAttachmentImagePreviewService = class GlSharedComponentAttachmentImagePreviewService {
+class GlSharedComponentAttachmentImagePreviewService {
     constructor(_alert) {
         this._alert = _alert;
         this.image = '../assets/img/icon/image/image-template.svg';
@@ -2116,18 +1702,18 @@ let GlSharedComponentAttachmentImagePreviewService = class GlSharedComponentAtta
             this.updateButtons(false);
         }
     }
-};
+}
+GlSharedComponentAttachmentImagePreviewService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentAttachmentImagePreviewService_Factory() { return new GlSharedComponentAttachmentImagePreviewService(ɵɵinject(GlSharedComponentModalAlertService)); }, token: GlSharedComponentAttachmentImagePreviewService, providedIn: "root" });
+GlSharedComponentAttachmentImagePreviewService.decorators = [
+    { type: Injectable, args: [{
+                providedIn: 'root'
+            },] }
+];
 GlSharedComponentAttachmentImagePreviewService.ctorParameters = () => [
     { type: GlSharedComponentModalAlertService }
 ];
-GlSharedComponentAttachmentImagePreviewService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentAttachmentImagePreviewService_Factory() { return new GlSharedComponentAttachmentImagePreviewService(ɵɵinject(GlSharedComponentModalAlertService)); }, token: GlSharedComponentAttachmentImagePreviewService, providedIn: "root" });
-GlSharedComponentAttachmentImagePreviewService = __decorate([
-    Injectable({
-        providedIn: 'root'
-    })
-], GlSharedComponentAttachmentImagePreviewService);
 
-let GlSharedComponentAttachmentImagePreviewComponent = class GlSharedComponentAttachmentImagePreviewComponent {
+class GlSharedComponentAttachmentImagePreviewComponent {
     constructor(service) {
         this.service = service;
         this.disabled = false;
@@ -2152,64 +1738,36 @@ let GlSharedComponentAttachmentImagePreviewComponent = class GlSharedComponentAt
             this.service.setImage(this.currentImage);
         }
     }
-};
+}
+GlSharedComponentAttachmentImagePreviewComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-attachment-image-preview',
+                template: "<div class=\"item-container {{ type }}\">\n  <gl-shared-component-title-label-button-container\n    *ngIf=\"showLabel\"\n    labelValue=\"Image\"\n    labelAlignment=\"left\"\n    [class]=\"type\"\n    [requiredFieldDescription]=\"requiredFieldDescription\"\n    [required]=\"required\">\n    <ng-content select=\"top\"></ng-content>\n    <gl-shared-component-button-image-tooltip\n      *ngFor=\"let b of service.buttons\"\n      [src]=\"b.src\"\n      [alt]=\"b.alt\"\n      [id]=\"b.id\"\n      [show]=\"b.show && !disabled || b.id === 'expand-container-2'\"\n      [callback]=\"b.callback\"\n    ></gl-shared-component-button-image-tooltip>\n    <ng-content select=\"bottom\"></ng-content>\n  </gl-shared-component-title-label-button-container>\n\n  <div class=\"attachment-container-content\">\n    <input\n      #fileInputImage\n      id=\"file-input-image\"\n      name=\"file-input-image\"\n      type=\"file\"\n      class=\"input-image\"\n      accept=\"image/tif, image/tiff, image/x-png, image/jpeg, image/jpg, image/bmp, image/gif, image/svg+xml\"\n      maxlength=\"1\"\n      [attr.data-maxsize]=\"maxImageSize\"\n      [title]=\"addImageDescription\"\n    />\n  </div>\n  <div class=\"image-container\">\n    <div #userImage id=\"image\"></div>\n  </div>\n</div>\n",
+                styles: [":host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .item-container{background-color:#333437;display:flex;flex-direction:column;flex-grow:1}:host::ng-deep .item-container gl-shared-component-title-label-button-container{flex-grow:0;position:relative}:host::ng-deep .item-container gl-shared-component-title-label-button-container .required-fill-dot{right:1.5em}:host::ng-deep .item-container.light{background-color:transparent;border-right:.5px solid hsla(0,0%,100%,.1)}:host::ng-deep .item-container.dark{background-color:#161617}:host::ng-deep .item-container.dark label{background-color:#111112}:host::ng-deep .item-container .attachment-container-content .input-image{display:none}:host::ng-deep .item-container .image-container{align-content:center;display:flex;flex-grow:1;justify-content:center}:host::ng-deep .item-container .image-container #image{background-position-x:center;background-position-y:center;background-repeat:no-repeat;background-size:auto 100%;border:0;content:\"\";flex-grow:1;min-height:30vh;min-width:100%}"]
+            },] }
+];
 GlSharedComponentAttachmentImagePreviewComponent.ctorParameters = () => [
     { type: GlSharedComponentAttachmentImagePreviewService }
 ];
-__decorate([
-    ViewChild('fileInputImage', { read: ElementRef, static: true })
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "fileInputImage", void 0);
-__decorate([
-    ViewChild('userImage', { read: ElementRef, static: true })
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "userImage", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "currentImage", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "required", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "type", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "showLabel", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "requiredFieldDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "addImageDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "maxImageSize", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "invalidSizeDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "invalidFormatDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "addImageButtonDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "removeImageButtonDescription", void 0);
-__decorate([
-    Output()
-], GlSharedComponentAttachmentImagePreviewComponent.prototype, "currentValue$", void 0);
-GlSharedComponentAttachmentImagePreviewComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-attachment-image-preview',
-        template: "<div class=\"item-container {{ type }}\">\n  <gl-shared-component-title-label-button-container\n    *ngIf=\"showLabel\"\n    labelValue=\"Image\"\n    labelAlignment=\"left\"\n    [class]=\"type\"\n    [requiredFieldDescription]=\"requiredFieldDescription\"\n    [required]=\"required\">\n    <ng-content select=\"top\"></ng-content>\n    <gl-shared-component-button-image-tooltip\n      *ngFor=\"let b of service.buttons\"\n      [src]=\"b.src\"\n      [alt]=\"b.alt\"\n      [id]=\"b.id\"\n      [show]=\"b.show && !disabled || b.id === 'expand-container-2'\"\n      [callback]=\"b.callback\"\n    ></gl-shared-component-button-image-tooltip>\n    <ng-content select=\"bottom\"></ng-content>\n  </gl-shared-component-title-label-button-container>\n\n  <div class=\"attachment-container-content\">\n    <input\n      #fileInputImage\n      id=\"file-input-image\"\n      name=\"file-input-image\"\n      type=\"file\"\n      class=\"input-image\"\n      accept=\"image/tif, image/tiff, image/x-png, image/jpeg, image/jpg, image/bmp, image/gif, image/svg+xml\"\n      maxlength=\"1\"\n      [attr.data-maxsize]=\"maxImageSize\"\n      [title]=\"addImageDescription\"\n    />\n  </div>\n  <div class=\"image-container\">\n    <div #userImage id=\"image\"></div>\n  </div>\n</div>\n",
-        styles: [":host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .item-container{background-color:#333437;display:flex;flex-grow:1;flex-direction:column}:host::ng-deep .item-container gl-shared-component-title-label-button-container{flex-grow:0;position:relative}:host::ng-deep .item-container gl-shared-component-title-label-button-container .required-fill-dot{right:1.5em}:host::ng-deep .item-container.light{background-color:transparent;border-right:.5px solid rgba(255,255,255,.1)}:host::ng-deep .item-container.dark{background-color:#161617}:host::ng-deep .item-container.dark label{background-color:#111112}:host::ng-deep .item-container .attachment-container-content .input-image{display:none}:host::ng-deep .item-container .image-container{flex-grow:1;display:flex;justify-content:center;align-content:center}:host::ng-deep .item-container .image-container #image{content:\"\";background-size:auto 100%;background-repeat:no-repeat;min-width:100%;min-height:30vh;border:0;background-position-x:center;background-position-y:center;flex-grow:1}"]
-    })
-], GlSharedComponentAttachmentImagePreviewComponent);
+GlSharedComponentAttachmentImagePreviewComponent.propDecorators = {
+    fileInputImage: [{ type: ViewChild, args: ['fileInputImage', { read: ElementRef, static: true },] }],
+    userImage: [{ type: ViewChild, args: ['userImage', { read: ElementRef, static: true },] }],
+    disabled: [{ type: Input }],
+    currentImage: [{ type: Input }],
+    required: [{ type: Input }],
+    type: [{ type: Input }],
+    showLabel: [{ type: Input }],
+    requiredFieldDescription: [{ type: Input }],
+    addImageDescription: [{ type: Input }],
+    maxImageSize: [{ type: Input }],
+    invalidSizeDescription: [{ type: Input }],
+    invalidFormatDescription: [{ type: Input }],
+    addImageButtonDescription: [{ type: Input }],
+    removeImageButtonDescription: [{ type: Input }],
+    currentValue$: [{ type: Output }]
+};
 
-let GlSharedComponentPagingComponent = class GlSharedComponentPagingComponent {
+class GlSharedComponentPagingComponent {
     constructor() {
         this.type = 'dark';
         this.firstPageTitle = 'First page';
@@ -2255,76 +1813,39 @@ let GlSharedComponentPagingComponent = class GlSharedComponentPagingComponent {
     setPage(page) {
         this.setPage$.emit(page);
     }
+}
+GlSharedComponentPagingComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-paging',
+                template: "<div class=\"pagination-container {{ type }}\">\n  <div class=\"pagination-buttons-container\">\n    <a id=\"first-page\" class=\"anchor-button\"\n       *ngIf=\"hasPrevious\" (click)=\"onPageChange($event, 'first')\"\n       [title]=\"firstPageTitle\">\n      <img [src]=\"firstIcon\" [alt]=\"firstPageTitle\">\n    </a>\n    <a id=\"prev-page\" class=\"anchor-button\"\n       *ngIf=\"hasPrevious\" (click)=\"onPageChange($event, 'previous')\"\n       [title]=\"previousPageTitle\">\n      <img [src]=\"previousIcon\" [alt]=\"previousPageTitle\">\n    </a>\n    <span id=\"page-info\">{{ pageInfo }}</span>\n    <div class=\"page-buttons-container\">\n      <gl-shared-component-input-button-simple\n        *ngFor=\"let button of pageButtons\"\n        [value]=\"button.page.toString()\"\n        [innerValue]=\"button.page.toString()\"\n        (click)=\"setPage(button.page)\"\n        [class]=\"button.active ? 'active' : ''\"\n        [title]=\"pageDescription + ' ' + button.page.toString()\"\n      ></gl-shared-component-input-button-simple>\n    </div>\n    <a href=\"#\" id=\"next-page\" class=\"anchor-button\"\n       *ngIf=\"hasNext\" (click)=\"onPageChange($event, 'next')\"\n       [title]=\"nextPageTitle\">\n      <img [src]=\"nextIcon\" [alt]=\"nextPageTitle\">\n    </a>\n    <a href=\"#\" id=\"last-page\" class=\"anchor-button\"\n       *ngIf=\"hasNext\" (click)=\"onPageChange($event, 'last')\"\n       [title]=\"lastPageTitle\">\n      <img [src]=\"lastIcon\" [alt]=\"lastPageTitle\">\n    </a>\n  </div>\n\n  <div class=\"number-items-page\" >\n    <span class=\"label-page-items\">{{ itemsPerPageDescriptions }}</span>\n    <gl-shared-component-input-button-simple\n      *ngFor=\"let item of itemsPerPage\"\n        [title]=\"item.title\"\n        [innerValue]=\"item.innerValue\"\n        [value]=\"item.value\"\n        [class]=\"item.class\"\n        (click)=\"setNumberOfItems(item.pageSize)\"\n    ></gl-shared-component-input-button-simple>\n  </div>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep{max-width:100vw}:host::ng-deep .pagination-container{align-items:center;background-color:#1a1b1d;display:flex;font-size:.5em;height:2.5em;justify-content:center;max-width:100vw;position:relative}:host::ng-deep .pagination-container .pagination-buttons-container{align-items:center;display:flex;flex-grow:1;justify-content:center}:host::ng-deep .pagination-container .pagination-buttons-container #page-info{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#fff;display:none;font-size:.8em;margin:auto 1.2em;user-select:none}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container{display:flex;padding:0 1em;width:30%}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple{display:flex;height:1.5em;margin:0 .2em;width:1.5em}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button{border-radius:.2em;font-family:Montserrat,sans-serif;font-size:.8em;font-weight:300}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button:not(hover){background-color:hsla(0,0%,100%,.1);transition:all .5s ease-in-out}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button:hover{background-color:hsla(0,0%,100%,.3);transition:all .2s ease-in-out}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button.active{background-color:#fff;color:#64666c;font-family:Montserrat,sans-serif;font-weight:700;transition:all .5s ease-in-out}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button{height:1.5em;padding:.5em 0;width:1.5em}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button#first-page{margin:0 .5em 0 0}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button#last-page{margin:0 0 0 .5em}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button img{height:1.5em;width:1.5em}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button:not(hover){opacity:.2;transition:all .2s ease-in-out}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button:hover{opacity:1;transition:all .2s ease-in-out}:host::ng-deep .pagination-container .number-items-page{align-items:center;display:flex;height:1.5em;position:absolute;right:.4em;top:.5em;width:20em}:host::ng-deep .pagination-container .number-items-page .label-page-items{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#fff;font-family:Montserrat,sans-serif;font-size:.8em;font-weight:300;margin:0 .5em 0 0;opacity:1;padding:.8em 1em .3em;text-transform:uppercase;user-select:none}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple{display:flex;flex:1 1 0.2em;height:1.5em;justify-content:center;margin:0 .2em;width:1.5em}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button{border-radius:.2em;flex:1 1 0.2em;font-family:Montserrat,sans-serif;font-size:.6em;font-weight:300;min-height:1.5em;min-width:1.5em}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button:not(hover){background-color:hsla(0,0%,100%,.1);transition:all .5s ease-in-out}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button:hover{background-color:hsla(0,0%,100%,.3);transition:all .2s ease-in-out}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button.active{background-color:#fff;color:#4b4d52;font-family:Montserrat,sans-serif;font-size:.7em;font-weight:900;transition:all .5s ease-in-out}:host::ng-deep .pagination-container.translucid{background-color:rgba(0,0,0,.2)}"]
+            },] }
+];
+GlSharedComponentPagingComponent.ctorParameters = () => [];
+GlSharedComponentPagingComponent.propDecorators = {
+    pageInfo: [{ type: Input }],
+    hasNext: [{ type: Input }],
+    hasPrevious: [{ type: Input }],
+    type: [{ type: Input }],
+    firstPageTitle: [{ type: Input }],
+    previousPageTitle: [{ type: Input }],
+    nextPageTitle: [{ type: Input }],
+    lastPageTitle: [{ type: Input }],
+    pageDescription: [{ type: Input }],
+    pageSize: [{ type: Input }],
+    itemsPerPageDescriptions: [{ type: Input }],
+    pageSizeValue1: [{ type: Input }],
+    pageSizeValue2: [{ type: Input }],
+    pageSizeValue3: [{ type: Input }],
+    pageSizeValue4: [{ type: Input }],
+    pageSizeValue5: [{ type: Input }],
+    pageButtons: [{ type: Input }],
+    onPageChange$: [{ type: Output }],
+    setNumberOfItems$: [{ type: Output }],
+    setPage$: [{ type: Output }]
 };
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "pageInfo", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "hasNext", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "hasPrevious", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "type", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "firstPageTitle", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "previousPageTitle", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "nextPageTitle", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "lastPageTitle", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "pageDescription", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "pageSize", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "itemsPerPageDescriptions", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "pageSizeValue1", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "pageSizeValue2", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "pageSizeValue3", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "pageSizeValue4", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "pageSizeValue5", void 0);
-__decorate([
-    Input()
-], GlSharedComponentPagingComponent.prototype, "pageButtons", void 0);
-__decorate([
-    Output()
-], GlSharedComponentPagingComponent.prototype, "onPageChange$", void 0);
-__decorate([
-    Output()
-], GlSharedComponentPagingComponent.prototype, "setNumberOfItems$", void 0);
-__decorate([
-    Output()
-], GlSharedComponentPagingComponent.prototype, "setPage$", void 0);
-GlSharedComponentPagingComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-paging',
-        template: "<div class=\"pagination-container {{ type }}\">\n  <div class=\"pagination-buttons-container\">\n    <a id=\"first-page\" class=\"anchor-button\"\n       *ngIf=\"hasPrevious\" (click)=\"onPageChange($event, 'first')\"\n       [title]=\"firstPageTitle\">\n      <img [src]=\"firstIcon\" [alt]=\"firstPageTitle\">\n    </a>\n    <a id=\"prev-page\" class=\"anchor-button\"\n       *ngIf=\"hasPrevious\" (click)=\"onPageChange($event, 'previous')\"\n       [title]=\"previousPageTitle\">\n      <img [src]=\"previousIcon\" [alt]=\"previousPageTitle\">\n    </a>\n    <span id=\"page-info\">{{ pageInfo }}</span>\n    <div class=\"page-buttons-container\">\n      <gl-shared-component-input-button-simple\n        *ngFor=\"let button of pageButtons\"\n        [value]=\"button.page.toString()\"\n        [innerValue]=\"button.page.toString()\"\n        (click)=\"setPage(button.page)\"\n        [class]=\"button.active ? 'active' : ''\"\n        [title]=\"pageDescription + ' ' + button.page.toString()\"\n      ></gl-shared-component-input-button-simple>\n    </div>\n    <a href=\"#\" id=\"next-page\" class=\"anchor-button\"\n       *ngIf=\"hasNext\" (click)=\"onPageChange($event, 'next')\"\n       [title]=\"nextPageTitle\">\n      <img [src]=\"nextIcon\" [alt]=\"nextPageTitle\">\n    </a>\n    <a href=\"#\" id=\"last-page\" class=\"anchor-button\"\n       *ngIf=\"hasNext\" (click)=\"onPageChange($event, 'last')\"\n       [title]=\"lastPageTitle\">\n      <img [src]=\"lastIcon\" [alt]=\"lastPageTitle\">\n    </a>\n  </div>\n\n  <div class=\"number-items-page\" >\n    <span class=\"label-page-items\">{{ itemsPerPageDescriptions }}</span>\n    <gl-shared-component-input-button-simple\n      *ngFor=\"let item of itemsPerPage\"\n        [title]=\"item.title\"\n        [innerValue]=\"item.innerValue\"\n        [value]=\"item.value\"\n        [class]=\"item.class\"\n        (click)=\"setNumberOfItems(item.pageSize)\"\n    ></gl-shared-component-input-button-simple>\n  </div>\n</div>\n",
-        styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{max-width:100vw}:host::ng-deep .pagination-container{max-width:100vw;position:relative;background-color:#1a1b1d;font-size:.5em;display:flex;align-items:center;justify-content:center;height:2.5em}:host::ng-deep .pagination-container .pagination-buttons-container{flex-grow:1;justify-content:center;display:flex;align-items:center}:host::ng-deep .pagination-container .pagination-buttons-container #page-info{color:#fff;margin:auto 1.2em;font-size:.8em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:none}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container{display:flex;padding:0 1em;width:30%}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple{height:1.5em;width:1.5em;margin:0 .2em;display:flex}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button{font-family:Montserrat,sans-serif;font-weight:300;border-radius:.2em;font-size:.8em}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button:not(hover){background-color:rgba(255,255,255,.1);transition:.5s ease-in-out}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button:hover{background-color:rgba(255,255,255,.3);transition:.2s ease-in-out}:host::ng-deep .pagination-container .pagination-buttons-container .page-buttons-container gl-shared-component-input-button-simple .default-button.active{font-family:Montserrat,sans-serif;font-weight:700;background-color:#fff;color:#64666c;transition:.5s ease-in-out}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button{width:1.5em;height:1.5em;padding:.5em 0}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button#first-page{margin:0 .5em 0 0}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button#last-page{margin:0 0 0 .5em}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button img{height:1.5em;width:1.5em}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button:not(hover){opacity:.2;transition:.2s ease-in-out}:host::ng-deep .pagination-container .pagination-buttons-container .anchor-button:hover{opacity:1;transition:.2s ease-in-out}:host::ng-deep .pagination-container .number-items-page{position:absolute;right:.4em;top:.5em;display:flex;align-items:center;height:1.5em;width:20em}:host::ng-deep .pagination-container .number-items-page .label-page-items{font-family:Montserrat,sans-serif;font-weight:300;padding:.8em 1em .3em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:.8em;color:#fff;opacity:1;text-transform:uppercase;margin:0 .5em 0 0}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple{height:1.5em;width:1.5em;margin:0 .2em;flex:1 1 .2em;display:flex;justify-content:center}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button{font-family:Montserrat,sans-serif;font-weight:300;min-height:1.5em;min-width:1.5em;flex:1 1 .2em;border-radius:.2em;font-size:.6em}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button:not(hover){background-color:rgba(255,255,255,.1);transition:.5s ease-in-out}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button:hover{background-color:rgba(255,255,255,.3);transition:.2s ease-in-out}:host::ng-deep .pagination-container .number-items-page gl-shared-component-input-button-simple .default-button.active{font-family:Montserrat,sans-serif;font-weight:900;font-size:.7em;background-color:#fff;color:#4b4d52;transition:.5s ease-in-out}:host::ng-deep .pagination-container.translucid{background-color:rgba(0,0,0,.2)}"]
-    })
-], GlSharedComponentPagingComponent);
 
-let GlSharedComponentHeaderDefaultComponent = class GlSharedComponentHeaderDefaultComponent {
+class GlSharedComponentHeaderDefaultComponent {
     constructor() {
         this.systemLogo = false;
         this.keyDown = new EventEmitter();
@@ -2332,46 +1853,29 @@ let GlSharedComponentHeaderDefaultComponent = class GlSharedComponentHeaderDefau
     onKeyDown(event) {
         this.keyDown.emit(event);
     }
+}
+GlSharedComponentHeaderDefaultComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-header-default',
+                template: "<section class=\"header-container {{ type }}\" [attr.type]=\"type\" (window:keydown)=\"onKeyDown($event)\">\n  <div class=\"header-content {{ type }}\" >\n    <div class=\"default-logo\" *ngIf=\"type != 'only-buttons'\">\n      <ng-content select=\"[slot=default-logo]\"></ng-content>\n    </div>\n    <gl-shared-component-title-page\n      *ngIf=\"type != 'only-buttons' && !systemLogo\"\n      [title]=\"title\"\n      [subtitle]=\"subtitle\"\n    ></gl-shared-component-title-page>\n    <ng-content class=\"system-logo\" select=\"[slot=system-logo]\"></ng-content>\n\n    <div class=\"menu-bar\">\n      <div class=\"menu-buttons-container\">\n        <ng-content></ng-content>\n        <gl-shared-component-button-menu-tooltip\n          *ngFor=\"let menuButton of menuButtons;\"\n          [disabled]=\"(readonly && !menuButton.canReadonly) || (!readonly && menuButton.canReadonly && menuButton.readonly)\"\n          [tooltip]=\"menuButton.alt\"\n          [src]=\"menuButton.src\"\n          [id]=\"menuButton.id\"\n          [alt]=\"menuButton.alt\"\n          [callback]=\"menuButton.callback\">\n        </gl-shared-component-button-menu-tooltip>\n      </div>\n    </div>\n  </div>\n</section>\n",
+                styles: [":host::ng-deep{max-width:100vw}:host::ng-deep .header-container{background-color:#1a1b1d;max-width:100vw;position:relative}:host::ng-deep .header-container.inverted,:host::ng-deep .header-container.light{background:linear-gradient(90deg,rgba(0,0,0,.2),rgba(0,0,0,.3))}:host::ng-deep .header-container .header-content{align-items:center;display:flex}:host::ng-deep .header-container .header-content.dark,:host::ng-deep .header-container .header-content.light{border-image-slice:.5;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8));border-top:.2em solid}:host::ng-deep .header-container .header-content.inverted{border-bottom:.5px solid;border-image-slice:.5;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8),rgba(97,61,149,.8))}:host::ng-deep .header-container .header-content .default-logo{margin:0 .5em 0 0}:host::ng-deep .header-container .header-content .menu-bar{align-items:center;display:flex;flex-grow:1;height:2.3em;justify-content:flex-end}:host::ng-deep .header-container .header-content .menu-bar .menu-buttons-container{align-items:center;display:flex;margin:0 .5em}:host::ng-deep .header-container.only-buttons{background-color:transparent}"]
+            },] }
+];
+GlSharedComponentHeaderDefaultComponent.ctorParameters = () => [];
+GlSharedComponentHeaderDefaultComponent.propDecorators = {
+    systemLogo: [{ type: Input }],
+    labelModel: [{ type: Input }],
+    labelId: [{ type: Input }],
+    labelArea: [{ type: Input }],
+    type: [{ type: Input }],
+    title: [{ type: Input }],
+    subtitle: [{ type: Input }],
+    menuButtons: [{ type: Input }],
+    keyDown: [{ type: Output }],
+    readonly: [{ type: Input }]
 };
-__decorate([
-    Input()
-], GlSharedComponentHeaderDefaultComponent.prototype, "systemLogo", void 0);
-__decorate([
-    Input()
-], GlSharedComponentHeaderDefaultComponent.prototype, "labelModel", void 0);
-__decorate([
-    Input()
-], GlSharedComponentHeaderDefaultComponent.prototype, "labelId", void 0);
-__decorate([
-    Input()
-], GlSharedComponentHeaderDefaultComponent.prototype, "labelArea", void 0);
-__decorate([
-    Input()
-], GlSharedComponentHeaderDefaultComponent.prototype, "type", void 0);
-__decorate([
-    Input()
-], GlSharedComponentHeaderDefaultComponent.prototype, "title", void 0);
-__decorate([
-    Input()
-], GlSharedComponentHeaderDefaultComponent.prototype, "subtitle", void 0);
-__decorate([
-    Input()
-], GlSharedComponentHeaderDefaultComponent.prototype, "menuButtons", void 0);
-__decorate([
-    Output()
-], GlSharedComponentHeaderDefaultComponent.prototype, "keyDown", void 0);
-__decorate([
-    Input()
-], GlSharedComponentHeaderDefaultComponent.prototype, "readonly", void 0);
-GlSharedComponentHeaderDefaultComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-header-default',
-        template: "<section class=\"header-container {{ type }}\" [attr.type]=\"type\" (window:keydown)=\"onKeyDown($event)\">\n  <div class=\"header-content {{ type }}\" >\n    <div class=\"default-logo\" *ngIf=\"type != 'only-buttons'\">\n      <ng-content select=\"[slot=default-logo]\"></ng-content>\n    </div>\n    <gl-shared-component-title-page\n      *ngIf=\"type != 'only-buttons' && !systemLogo\"\n      [title]=\"title\"\n      [subtitle]=\"subtitle\"\n    ></gl-shared-component-title-page>\n    <ng-content class=\"system-logo\" select=\"[slot=system-logo]\"></ng-content>\n\n    <div class=\"menu-bar\">\n      <div class=\"menu-buttons-container\">\n        <ng-content></ng-content>\n        <gl-shared-component-button-menu-tooltip\n          *ngFor=\"let menuButton of menuButtons;\"\n          [disabled]=\"(readonly && !menuButton.canReadonly) || (!readonly && menuButton.canReadonly && menuButton.readonly)\"\n          [tooltip]=\"menuButton.alt\"\n          [src]=\"menuButton.src\"\n          [id]=\"menuButton.id\"\n          [alt]=\"menuButton.alt\"\n          [callback]=\"menuButton.callback\">\n        </gl-shared-component-button-menu-tooltip>\n      </div>\n    </div>\n  </div>\n</section>\n",
-        styles: [":host::ng-deep{max-width:100vw}:host::ng-deep .header-container{max-width:100vw;position:relative;background-color:#1a1b1d}:host::ng-deep .header-container.inverted,:host::ng-deep .header-container.light{background:linear-gradient(90deg,rgba(0,0,0,.2) 0,rgba(0,0,0,.3) 100%)}:host::ng-deep .header-container .header-content{display:flex;align-items:center}:host::ng-deep .header-container .header-content.dark,:host::ng-deep .header-container .header-content.light{border-top:.2em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5}:host::ng-deep .header-container .header-content.inverted{border-bottom:.5px solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5}:host::ng-deep .header-container .header-content .default-logo{margin:0 .5em 0 0}:host::ng-deep .header-container .header-content .menu-bar{height:2.3em;display:flex;align-items:center;flex-grow:1;justify-content:flex-end}:host::ng-deep .header-container .header-content .menu-bar .menu-buttons-container{display:flex;align-items:center;margin:0 .5em}:host::ng-deep .header-container.only-buttons{background-color:transparent}"]
-    })
-], GlSharedComponentHeaderDefaultComponent);
 
-let GlSharedComponentInputDatepickerLabelComponent = class GlSharedComponentInputDatepickerLabelComponent {
+class GlSharedComponentInputDatepickerLabelComponent {
     constructor() {
         this.disabled = false;
         this.itemContentAlignment = 'center';
@@ -2386,197 +1890,176 @@ let GlSharedComponentInputDatepickerLabelComponent = class GlSharedComponentInpu
     onCurrentValue(event) {
         this.currentValue.emit(event);
     }
+}
+GlSharedComponentInputDatepickerLabelComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-datepicker-label',
+                template: "<gl-shared-component-input-datepicker-simple\n  [class]=\"class\"\n  [value]=\"value\"\n  (currentValue)=\"onCurrentValue($event)\"\n  [id]=\"id\"\n  [itemContentAlignment]=\"itemContentAlignment\"\n  [placeholder]=\"placeholder\"\n  [disabled]=\"disabled\"\n  [dateFormat]=\"dateFormat\"\n  [maxLength]=\"maxLength\"\n><gl-shared-component-title-label-simple\n    [id]=\"id\"\n    [labelAlignment]=\"labelAlignment\"\n    [labelValue]=\"labelValue\"\n    [required]=\"required\"\n    [class]=\"class\"\n    [requiredLabel]=\"requiredField\"\n  ></gl-shared-component-title-label-simple>\n</gl-shared-component-input-datepicker-simple>\n",
+                styles: [":host::ng-deep{display:flex}:host::ng-deep gl-shared-component-title-label-simple{flex-grow:0}"]
+            },] }
+];
+GlSharedComponentInputDatepickerLabelComponent.ctorParameters = () => [];
+GlSharedComponentInputDatepickerLabelComponent.propDecorators = {
+    disabled: [{ type: Input }],
+    id: [{ type: Input }],
+    placeholder: [{ type: Input }],
+    itemContentAlignment: [{ type: Input }],
+    class: [{ type: Input }],
+    value: [{ type: Input }],
+    dateFormat: [{ type: Input }],
+    maxLength: [{ type: Input }],
+    labelValue: [{ type: Input }],
+    labelAlignment: [{ type: Input }],
+    required: [{ type: Input }],
+    requiredField: [{ type: Input }],
+    currentValue: [{ type: Output }]
 };
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "placeholder", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "itemContentAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "value", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "dateFormat", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "maxLength", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "labelValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "labelAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "required", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "requiredField", void 0);
-__decorate([
-    Output()
-], GlSharedComponentInputDatepickerLabelComponent.prototype, "currentValue", void 0);
-GlSharedComponentInputDatepickerLabelComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-input-datepicker-label',
-        template: "<gl-shared-component-input-datepicker-simple\n  [class]=\"class\"\n  [value]=\"value\"\n  (currentValue)=\"onCurrentValue($event)\"\n  [id]=\"id\"\n  [itemContentAlignment]=\"itemContentAlignment\"\n  [placeholder]=\"placeholder\"\n  [disabled]=\"disabled\"\n  [dateFormat]=\"dateFormat\"\n  [maxLength]=\"maxLength\"\n><gl-shared-component-title-label-simple\n    [id]=\"id\"\n    [labelAlignment]=\"labelAlignment\"\n    [labelValue]=\"labelValue\"\n    [required]=\"required\"\n    [class]=\"class\"\n    [requiredLabel]=\"requiredField\"\n  ></gl-shared-component-title-label-simple>\n</gl-shared-component-input-datepicker-simple>\n",
-        styles: [":host::ng-deep{display:flex}:host::ng-deep gl-shared-component-title-label-simple{flex-grow:0}"]
-    })
-], GlSharedComponentInputDatepickerLabelComponent);
 
-let GlComponentModule = class GlComponentModule {
-};
-GlComponentModule = __decorate([
-    NgModule({
-        declarations: [
-            GlSharedComponentAttachmentItemComponent,
-            GlSharedComponentAttachmentImagePreviewComponent,
-            GlSharedComponentButtonAttachmentFileComponent,
-            GlSharedComponentButtonAttachmentLinkComponent,
-            GlSharedComponentButtonImageSimpleComponent,
-            GlSharedComponentButtonImageTooltipComponent,
-            GlSharedComponentButtonMenuSimpleComponent,
-            GlSharedComponentButtonMenuTooltipComponent,
-            GlSharedComponentErrorMessageComponent,
-            GlSharedComponentFilterComponent,
-            GlSharedComponentFilterContainerComponent,
-            GlSharedComponentFooterContainerComponent,
-            GlSharedComponentFooterSimpleComponent,
-            GlSharedComponentHeaderDefaultComponent,
-            GlSharedComponentInputAutocompleteLabelComponent,
-            GlSharedComponentInputAutocompleteSimpleComponent,
-            GlSharedComponentInputButtonSimpleComponent,
-            GlSharedComponentInputButtonHyperlinkComponent,
-            GlSharedComponentInputOptionSimpleComponent,
-            GlSharedComponentInputTextSimpleComponent,
-            GlSharedComponentInputTextLabelComponent,
-            GlSharedComponentInputTextAreaSimpleComponent,
-            GlSharedComponentInputTextAreaLabelComponent,
-            GlSharedComponentLogoSquareComponent,
-            GlSharedComponentModalAlertComponent,
-            GlSharedComponentModalAttachmentLinkComponent,
-            GlSharedComponentModalHeaderComponent,
-            GlSharedComponentModalLoadingComponent,
-            GlSharedComponentMenuBackgroundComponent,
-            GlSharedComponentMenuComponent,
-            GlSharedComponentMenuItemComponent,
-            GlSharedComponentPagingComponent,
-            GlSharedComponentTitleLabelSimpleComponent,
-            GlSharedComponentTitleLabelButtonSimpleComponent,
-            GlSharedComponentTitleLabelButtonContainerComponent,
-            GlSharedComponentTitlePageComponent,
-            GlSharedComponentInputDatepickerSimpleComponent,
-            GlSharedComponentInputDatepickerLabelComponent,
-            GlSharedComponentInputDatepickerLabelComponent
-        ],
-        imports: [
-            CommonModule,
-            GlCoreModule,
-            RouterModule,
-            MatFormFieldModule,
-            MatInputModule,
-            MatAutocompleteModule,
-            MatDialogModule,
-            BrowserAnimationsModule,
-            FormsModule,
-            ReactiveFormsModule,
-            OverlayModule,
-            MatDatepickerModule
-        ],
-        exports: [
-            GlSharedComponentAttachmentItemComponent,
-            GlSharedComponentAttachmentImagePreviewComponent,
-            GlSharedComponentButtonImageSimpleComponent,
-            GlSharedComponentButtonAttachmentLinkComponent,
-            GlSharedComponentButtonImageTooltipComponent,
-            GlSharedComponentButtonMenuSimpleComponent,
-            GlSharedComponentButtonMenuTooltipComponent,
-            GlSharedComponentErrorMessageComponent,
-            GlSharedComponentFilterComponent,
-            GlSharedComponentFilterContainerComponent,
-            GlSharedComponentFooterContainerComponent,
-            GlSharedComponentFooterSimpleComponent,
-            GlSharedComponentHeaderDefaultComponent,
-            GlSharedComponentInputAutocompleteLabelComponent,
-            GlSharedComponentInputAutocompleteSimpleComponent,
-            GlSharedComponentInputButtonSimpleComponent,
-            GlSharedComponentInputButtonHyperlinkComponent,
-            GlSharedComponentInputOptionSimpleComponent,
-            GlSharedComponentInputTextAreaSimpleComponent,
-            GlSharedComponentInputTextAreaLabelComponent,
-            GlSharedComponentInputTextLabelComponent,
-            GlSharedComponentInputTextSimpleComponent,
-            GlSharedComponentLogoSquareComponent,
-            GlSharedComponentMenuBackgroundComponent,
-            GlSharedComponentMenuComponent,
-            GlSharedComponentMenuItemComponent,
-            GlSharedComponentModalAlertComponent,
-            GlSharedComponentModalAttachmentLinkComponent,
-            GlSharedComponentModalHeaderComponent,
-            GlSharedComponentModalLoadingComponent,
-            GlSharedComponentPagingComponent,
-            GlSharedComponentTitlePageComponent,
-            GlSharedComponentTitleLabelButtonSimpleComponent,
-            GlSharedComponentTitleLabelButtonContainerComponent,
-            GlSharedComponentTitleLabelSimpleComponent,
-            GlSharedComponentButtonAttachmentFileComponent,
-            GlSharedComponentInputDatepickerSimpleComponent,
-            GlSharedComponentInputDatepickerLabelComponent
-        ]
-    })
-], GlComponentModule);
+class GlComponentModule {
+}
+GlComponentModule.decorators = [
+    { type: NgModule, args: [{
+                declarations: [
+                    GlSharedComponentAttachmentItemComponent,
+                    GlSharedComponentAttachmentImagePreviewComponent,
+                    GlSharedComponentButtonAttachmentFileComponent,
+                    GlSharedComponentButtonAttachmentLinkComponent,
+                    GlSharedComponentButtonImageSimpleComponent,
+                    GlSharedComponentButtonImageTooltipComponent,
+                    GlSharedComponentButtonMenuSimpleComponent,
+                    GlSharedComponentButtonMenuTooltipComponent,
+                    GlSharedComponentErrorMessageComponent,
+                    GlSharedComponentFilterComponent,
+                    GlSharedComponentFilterContainerComponent,
+                    GlSharedComponentFooterContainerComponent,
+                    GlSharedComponentFooterSimpleComponent,
+                    GlSharedComponentHeaderDefaultComponent,
+                    GlSharedComponentInputAutocompleteLabelComponent,
+                    GlSharedComponentInputAutocompleteSimpleComponent,
+                    GlSharedComponentInputButtonSimpleComponent,
+                    GlSharedComponentInputButtonHyperlinkComponent,
+                    GlSharedComponentInputOptionSimpleComponent,
+                    GlSharedComponentInputTextSimpleComponent,
+                    GlSharedComponentInputTextLabelComponent,
+                    GlSharedComponentInputTextAreaSimpleComponent,
+                    GlSharedComponentInputTextAreaLabelComponent,
+                    GlSharedComponentLogoSquareComponent,
+                    GlSharedComponentModalAlertComponent,
+                    GlSharedComponentModalAttachmentLinkComponent,
+                    GlSharedComponentModalHeaderComponent,
+                    GlSharedComponentModalLoadingComponent,
+                    GlSharedComponentMenuBackgroundComponent,
+                    GlSharedComponentMenuComponent,
+                    GlSharedComponentMenuItemComponent,
+                    GlSharedComponentPagingComponent,
+                    GlSharedComponentTitleLabelSimpleComponent,
+                    GlSharedComponentTitleLabelButtonSimpleComponent,
+                    GlSharedComponentTitleLabelButtonContainerComponent,
+                    GlSharedComponentTitlePageComponent,
+                    GlSharedComponentInputDatepickerSimpleComponent,
+                    GlSharedComponentInputDatepickerLabelComponent,
+                    GlSharedComponentInputDatepickerLabelComponent
+                ],
+                imports: [
+                    CommonModule,
+                    GlCoreModule,
+                    RouterModule,
+                    MatFormFieldModule,
+                    MatInputModule,
+                    MatAutocompleteModule,
+                    MatDialogModule,
+                    BrowserAnimationsModule,
+                    FormsModule,
+                    ReactiveFormsModule,
+                    OverlayModule,
+                    MatDatepickerModule
+                ],
+                exports: [
+                    GlSharedComponentAttachmentItemComponent,
+                    GlSharedComponentAttachmentImagePreviewComponent,
+                    GlSharedComponentButtonImageSimpleComponent,
+                    GlSharedComponentButtonAttachmentLinkComponent,
+                    GlSharedComponentButtonImageTooltipComponent,
+                    GlSharedComponentButtonMenuSimpleComponent,
+                    GlSharedComponentButtonMenuTooltipComponent,
+                    GlSharedComponentErrorMessageComponent,
+                    GlSharedComponentFilterComponent,
+                    GlSharedComponentFilterContainerComponent,
+                    GlSharedComponentFooterContainerComponent,
+                    GlSharedComponentFooterSimpleComponent,
+                    GlSharedComponentHeaderDefaultComponent,
+                    GlSharedComponentInputAutocompleteLabelComponent,
+                    GlSharedComponentInputAutocompleteSimpleComponent,
+                    GlSharedComponentInputButtonSimpleComponent,
+                    GlSharedComponentInputButtonHyperlinkComponent,
+                    GlSharedComponentInputOptionSimpleComponent,
+                    GlSharedComponentInputTextAreaSimpleComponent,
+                    GlSharedComponentInputTextAreaLabelComponent,
+                    GlSharedComponentInputTextLabelComponent,
+                    GlSharedComponentInputTextSimpleComponent,
+                    GlSharedComponentLogoSquareComponent,
+                    GlSharedComponentMenuBackgroundComponent,
+                    GlSharedComponentMenuComponent,
+                    GlSharedComponentMenuItemComponent,
+                    GlSharedComponentModalAlertComponent,
+                    GlSharedComponentModalAttachmentLinkComponent,
+                    GlSharedComponentModalHeaderComponent,
+                    GlSharedComponentModalLoadingComponent,
+                    GlSharedComponentPagingComponent,
+                    GlSharedComponentTitlePageComponent,
+                    GlSharedComponentTitleLabelButtonSimpleComponent,
+                    GlSharedComponentTitleLabelButtonContainerComponent,
+                    GlSharedComponentTitleLabelSimpleComponent,
+                    GlSharedComponentButtonAttachmentFileComponent,
+                    GlSharedComponentInputDatepickerSimpleComponent,
+                    GlSharedComponentInputDatepickerLabelComponent
+                ]
+            },] }
+];
 
-let GlSharedModule = class GlSharedModule {
-};
-GlSharedModule = __decorate([
-    NgModule({
-        declarations: [],
-        imports: [
-            CommonModule,
-            GlComponentModule
-        ]
-    })
-], GlSharedModule);
+class GlSharedModule {
+}
+GlSharedModule.decorators = [
+    { type: NgModule, args: [{
+                declarations: [],
+                imports: [
+                    CommonModule,
+                    GlComponentModule
+                ]
+            },] }
+];
 
-let GlNgFrontendModule = class GlNgFrontendModule {
+class GlNgFrontendModule {
     constructor() { }
-};
-GlNgFrontendModule = __decorate([
-    NgModule({
-        declarations: [],
-        imports: [
-            BrowserModule,
-            HttpClientModule,
-            ReactiveFormsModule,
-            GlSharedModule,
-            GlCoreModule,
-        ],
-        exports: [],
-        providers: []
-    })
-], GlNgFrontendModule);
+}
+GlNgFrontendModule.decorators = [
+    { type: NgModule, args: [{
+                declarations: [],
+                imports: [
+                    BrowserModule,
+                    HttpClientModule,
+                    ReactiveFormsModule,
+                    GlSharedModule,
+                    GlCoreModule,
+                ],
+                exports: [],
+                providers: []
+            },] }
+];
+GlNgFrontendModule.ctorParameters = () => [];
 
-let GlSharedComponentInputDatepickerSimpleService = class GlSharedComponentInputDatepickerSimpleService {
+class GlSharedComponentInputDatepickerSimpleService {
     constructor() { }
-};
+}
 GlSharedComponentInputDatepickerSimpleService.ɵprov = ɵɵdefineInjectable({ factory: function GlSharedComponentInputDatepickerSimpleService_Factory() { return new GlSharedComponentInputDatepickerSimpleService(); }, token: GlSharedComponentInputDatepickerSimpleService, providedIn: "root" });
-GlSharedComponentInputDatepickerSimpleService = __decorate([
-    Injectable({
-        providedIn: 'root'
-    })
-], GlSharedComponentInputDatepickerSimpleService);
+GlSharedComponentInputDatepickerSimpleService.decorators = [
+    { type: Injectable, args: [{
+                providedIn: 'root'
+            },] }
+];
+GlSharedComponentInputDatepickerSimpleService.ctorParameters = () => [];
 
-let GlSharedViewErrorMessageComponent = class GlSharedViewErrorMessageComponent {
+class GlSharedViewErrorMessageComponent {
     constructor() {
         this.logoHorizontalPosition = 'left';
         this.logoVerticalPosition = 'top';
@@ -2593,85 +2076,52 @@ let GlSharedViewErrorMessageComponent = class GlSharedViewErrorMessageComponent 
     errorButtonAction() {
         this.errorButtonAction$.emit();
     }
+}
+GlSharedViewErrorMessageComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-view-error-message',
+                template: "<div #mainContainer class=\"main-container\">\n  <gl-shared-component-logo-square\n    [horizontalPosition]=\"logoHorizontalPosition\"\n    [verticalPosition]=\"logoVerticalPosition\"\n    [imageAlt]=\"logoImageAlt\"\n    [imageScr]=\"logoImageScr\"\n  ></gl-shared-component-logo-square>\n  <gl-shared-component-error-message\n    [position]=\"errorPosition\"\n    [errorCode]=\"errorCode\"\n    [errorMessage]=\"errorMessage\"\n    [buttonLabel]=\"errorButtonLabel\"\n    (buttonAction$)=\"errorButtonAction()\"\n  ></gl-shared-component-error-message>\n  <gl-shared-component-footer-container [description]=\"footerMainDescription\">\n    <gl-shared-component-input-button-hyperlink\n      *ngIf=\"footerShowContainer\"\n      [description]=\"footerDescription\"\n      [imageDescription]=\"footerImageDescription\"\n      [imageSrc]=\"footerImageSrc\"\n      [link]=\"footerLink\"\n    ></gl-shared-component-input-button-hyperlink>\n  </gl-shared-component-footer-container>\n</div>\n",
+                styles: [":host::ng-deep{background-color:#1a1b1d;display:flex;flex-grow:1}:host::ng-deep .main-container{-webkit-animation-duration:3s;-webkit-animation-fill-mode:forwards;-webkit-animation-name:start;-webkit-animation-play-state:running;animation-duration:3s;animation-fill-mode:forwards;animation-name:start;animation-play-state:running;background-position:top;background-repeat:no-repeat;background-size:101%;display:flex;flex-direction:column;flex-grow:1;height:100vh;justify-items:stretch;overflow:hidden;width:100vw}@-webkit-keyframes start{0%{opacity:0}to{opacity:1}}@keyframes start{0%{opacity:0}to{opacity:1}}"]
+            },] }
+];
+GlSharedViewErrorMessageComponent.ctorParameters = () => [];
+GlSharedViewErrorMessageComponent.propDecorators = {
+    mainContainer: [{ type: ViewChild, args: ['mainContainer',] }],
+    blurBackground: [{ type: Input }],
+    background: [{ type: Input }],
+    logoImageScr: [{ type: Input }],
+    logoImageAlt: [{ type: Input }],
+    logoHorizontalPosition: [{ type: Input }],
+    logoVerticalPosition: [{ type: Input }],
+    errorPosition: [{ type: Input }],
+    errorCode: [{ type: Input }],
+    errorMessage: [{ type: Input }],
+    errorButtonLabel: [{ type: Input }],
+    errorButtonAction$: [{ type: Output }],
+    footerMainDescription: [{ type: Input }],
+    footerShowContainer: [{ type: Input }],
+    footerDescription: [{ type: Input }],
+    footerImageDescription: [{ type: Input }],
+    footerImageSrc: [{ type: Input }],
+    footerLink: [{ type: Input }]
 };
-__decorate([
-    ViewChild('mainContainer')
-], GlSharedViewErrorMessageComponent.prototype, "mainContainer", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "blurBackground", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "background", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "logoImageScr", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "logoImageAlt", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "logoHorizontalPosition", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "logoVerticalPosition", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "errorPosition", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "errorCode", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "errorMessage", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "errorButtonLabel", void 0);
-__decorate([
-    Output()
-], GlSharedViewErrorMessageComponent.prototype, "errorButtonAction$", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "footerMainDescription", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "footerShowContainer", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "footerDescription", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "footerImageDescription", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "footerImageSrc", void 0);
-__decorate([
-    Input()
-], GlSharedViewErrorMessageComponent.prototype, "footerLink", void 0);
-GlSharedViewErrorMessageComponent = __decorate([
-    Component({
-        selector: 'gl-shared-view-error-message',
-        template: "<div #mainContainer class=\"main-container\">\n  <gl-shared-component-logo-square\n    [horizontalPosition]=\"logoHorizontalPosition\"\n    [verticalPosition]=\"logoVerticalPosition\"\n    [imageAlt]=\"logoImageAlt\"\n    [imageScr]=\"logoImageScr\"\n  ></gl-shared-component-logo-square>\n  <gl-shared-component-error-message\n    [position]=\"errorPosition\"\n    [errorCode]=\"errorCode\"\n    [errorMessage]=\"errorMessage\"\n    [buttonLabel]=\"errorButtonLabel\"\n    (buttonAction$)=\"errorButtonAction()\"\n  ></gl-shared-component-error-message>\n  <gl-shared-component-footer-container [description]=\"footerMainDescription\">\n    <gl-shared-component-input-button-hyperlink\n      *ngIf=\"footerShowContainer\"\n      [description]=\"footerDescription\"\n      [imageDescription]=\"footerImageDescription\"\n      [imageSrc]=\"footerImageSrc\"\n      [link]=\"footerLink\"\n    ></gl-shared-component-input-button-hyperlink>\n  </gl-shared-component-footer-container>\n</div>\n",
-        styles: [":host::ng-deep{display:flex;flex-grow:1;background-color:#1a1b1d}:host::ng-deep .main-container{display:flex;flex-direction:column;justify-items:stretch;height:100vh;width:100vw;overflow:hidden;flex-grow:1;background-size:101%;background-position:top center;background-repeat:no-repeat;-webkit-animation-name:start;animation-name:start;-webkit-animation-duration:3s;animation-duration:3s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-play-state:running;animation-play-state:running}@-webkit-keyframes start{from{opacity:0}to{opacity:1}}@keyframes start{from{opacity:0}to{opacity:1}}"]
-    })
-], GlSharedViewErrorMessageComponent);
 
-let GlSharedViewModule = class GlSharedViewModule {
-};
-GlSharedViewModule = __decorate([
-    NgModule({
-        declarations: [
-            GlSharedViewErrorMessageComponent
-        ],
-        exports: [
-            GlSharedViewErrorMessageComponent
-        ],
-        imports: [
-            CommonModule,
-            GlComponentModule
-        ]
-    })
-], GlSharedViewModule);
+class GlSharedViewModule {
+}
+GlSharedViewModule.decorators = [
+    { type: NgModule, args: [{
+                declarations: [
+                    GlSharedViewErrorMessageComponent
+                ],
+                exports: [
+                    GlSharedViewErrorMessageComponent
+                ],
+                imports: [
+                    CommonModule,
+                    GlComponentModule
+                ]
+            },] }
+];
 
 /*
  * Public API Surface of gl-ng-frontend

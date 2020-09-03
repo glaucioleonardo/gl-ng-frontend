@@ -1,26 +1,25 @@
-import { __decorate } from "tslib";
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { GlSharedModule } from './shared/gl-shared.module';
 import { GlCoreModule } from './core/gl-core.module';
-let GlNgFrontendModule = class GlNgFrontendModule {
+export class GlNgFrontendModule {
     constructor() { }
-};
-GlNgFrontendModule = __decorate([
-    NgModule({
-        declarations: [],
-        imports: [
-            BrowserModule,
-            HttpClientModule,
-            ReactiveFormsModule,
-            GlSharedModule,
-            GlCoreModule,
-        ],
-        exports: [],
-        providers: []
-    })
-], GlNgFrontendModule);
-export { GlNgFrontendModule };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtbmctZnJvbnRlbmQubW9kdWxlLmpzIiwic291cmNlUm9vdCI6Im5nOi8vZ2wtbmctZnJvbnRlbmQvIiwic291cmNlcyI6WyJsaWIvZ2wtbmctZnJvbnRlbmQubW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQ3pDLE9BQU8sRUFBRSxtQkFBbUIsRUFBRSxNQUFNLGdCQUFnQixDQUFDO0FBQ3JELE9BQU8sRUFBRSxhQUFhLEVBQUUsTUFBTSwyQkFBMkIsQ0FBQztBQUMxRCxPQUFPLEVBQUUsZ0JBQWdCLEVBQUUsTUFBTSxzQkFBc0IsQ0FBQztBQUV4RCxPQUFPLEVBQUUsY0FBYyxFQUFFLE1BQU0sMkJBQTJCLENBQUM7QUFDM0QsT0FBTyxFQUFFLFlBQVksRUFBRSxNQUFNLHVCQUF1QixDQUFDO0FBY3JELElBQWEsa0JBQWtCLEdBQS9CLE1BQWEsa0JBQWtCO0lBQzdCLGdCQUFnQixDQUFDO0NBQ2xCLENBQUE7QUFGWSxrQkFBa0I7SUFaOUIsUUFBUSxDQUFDO1FBQ1IsWUFBWSxFQUFFLEVBQUU7UUFDaEIsT0FBTyxFQUFFO1lBQ1AsYUFBYTtZQUNiLGdCQUFnQjtZQUNoQixtQkFBbUI7WUFDbkIsY0FBYztZQUNkLFlBQVk7U0FDYjtRQUNELE9BQU8sRUFBRSxFQUFFO1FBQ1gsU0FBUyxFQUFFLEVBQUU7S0FDZCxDQUFDO0dBQ1csa0JBQWtCLENBRTlCO1NBRlksa0JBQWtCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IFJlYWN0aXZlRm9ybXNNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9mb3Jtcyc7XG5pbXBvcnQgeyBCcm93c2VyTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvcGxhdGZvcm0tYnJvd3Nlcic7XG5pbXBvcnQgeyBIdHRwQ2xpZW50TW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvY29tbW9uL2h0dHAnO1xuXG5pbXBvcnQgeyBHbFNoYXJlZE1vZHVsZSB9IGZyb20gJy4vc2hhcmVkL2dsLXNoYXJlZC5tb2R1bGUnO1xuaW1wb3J0IHsgR2xDb3JlTW9kdWxlIH0gZnJvbSAnLi9jb3JlL2dsLWNvcmUubW9kdWxlJztcblxuQE5nTW9kdWxlKHtcbiAgZGVjbGFyYXRpb25zOiBbXSxcbiAgaW1wb3J0czogW1xuICAgIEJyb3dzZXJNb2R1bGUsXG4gICAgSHR0cENsaWVudE1vZHVsZSxcbiAgICBSZWFjdGl2ZUZvcm1zTW9kdWxlLFxuICAgIEdsU2hhcmVkTW9kdWxlLFxuICAgIEdsQ29yZU1vZHVsZSxcbiAgXSxcbiAgZXhwb3J0czogW10sXG4gIHByb3ZpZGVyczogW11cbn0pXG5leHBvcnQgY2xhc3MgR2xOZ0Zyb250ZW5kTW9kdWxlIHtcbiAgY29uc3RydWN0b3IoKSB7IH1cbn1cbiJdfQ==
+}
+GlNgFrontendModule.decorators = [
+    { type: NgModule, args: [{
+                declarations: [],
+                imports: [
+                    BrowserModule,
+                    HttpClientModule,
+                    ReactiveFormsModule,
+                    GlSharedModule,
+                    GlCoreModule,
+                ],
+                exports: [],
+                providers: []
+            },] }
+];
+GlNgFrontendModule.ctorParameters = () => [];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtbmctZnJvbnRlbmQubW9kdWxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvZ2wtbmctZnJvbnRlbmQvc3JjL2xpYi9nbC1uZy1mcm9udGVuZC5tb2R1bGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUN6QyxPQUFPLEVBQUUsbUJBQW1CLEVBQUUsTUFBTSxnQkFBZ0IsQ0FBQztBQUNyRCxPQUFPLEVBQUUsYUFBYSxFQUFFLE1BQU0sMkJBQTJCLENBQUM7QUFDMUQsT0FBTyxFQUFFLGdCQUFnQixFQUFFLE1BQU0sc0JBQXNCLENBQUM7QUFFeEQsT0FBTyxFQUFFLGNBQWMsRUFBRSxNQUFNLDJCQUEyQixDQUFDO0FBQzNELE9BQU8sRUFBRSxZQUFZLEVBQUUsTUFBTSx1QkFBdUIsQ0FBQztBQWNyRCxNQUFNLE9BQU8sa0JBQWtCO0lBQzdCLGdCQUFnQixDQUFDOzs7WUFibEIsUUFBUSxTQUFDO2dCQUNSLFlBQVksRUFBRSxFQUFFO2dCQUNoQixPQUFPLEVBQUU7b0JBQ1AsYUFBYTtvQkFDYixnQkFBZ0I7b0JBQ2hCLG1CQUFtQjtvQkFDbkIsY0FBYztvQkFDZCxZQUFZO2lCQUNiO2dCQUNELE9BQU8sRUFBRSxFQUFFO2dCQUNYLFNBQVMsRUFBRSxFQUFFO2FBQ2QiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZ01vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgUmVhY3RpdmVGb3Jtc01vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2Zvcm1zJztcbmltcG9ydCB7IEJyb3dzZXJNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9wbGF0Zm9ybS1icm93c2VyJztcbmltcG9ydCB7IEh0dHBDbGllbnRNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb21tb24vaHR0cCc7XG5cbmltcG9ydCB7IEdsU2hhcmVkTW9kdWxlIH0gZnJvbSAnLi9zaGFyZWQvZ2wtc2hhcmVkLm1vZHVsZSc7XG5pbXBvcnQgeyBHbENvcmVNb2R1bGUgfSBmcm9tICcuL2NvcmUvZ2wtY29yZS5tb2R1bGUnO1xuXG5ATmdNb2R1bGUoe1xuICBkZWNsYXJhdGlvbnM6IFtdLFxuICBpbXBvcnRzOiBbXG4gICAgQnJvd3Nlck1vZHVsZSxcbiAgICBIdHRwQ2xpZW50TW9kdWxlLFxuICAgIFJlYWN0aXZlRm9ybXNNb2R1bGUsXG4gICAgR2xTaGFyZWRNb2R1bGUsXG4gICAgR2xDb3JlTW9kdWxlLFxuICBdLFxuICBleHBvcnRzOiBbXSxcbiAgcHJvdmlkZXJzOiBbXVxufSlcbmV4cG9ydCBjbGFzcyBHbE5nRnJvbnRlbmRNb2R1bGUge1xuICBjb25zdHJ1Y3RvcigpIHsgfVxufVxuIl19

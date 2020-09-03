@@ -1,6 +1,5 @@
-import { __decorate } from "tslib";
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-let GlSharedComponentInputTextLabelComponent = class GlSharedComponentInputTextLabelComponent {
+export class GlSharedComponentInputTextLabelComponent {
     constructor() {
         this.disabled = false;
         this.autocomplete = false;
@@ -10,58 +9,30 @@ let GlSharedComponentInputTextLabelComponent = class GlSharedComponentInputTextL
         this.currentValue = new EventEmitter();
     }
     onKeyUp(values) { this.currentValue.emit(values); }
+}
+GlSharedComponentInputTextLabelComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-text-label',
+                template: "<div class=\"item-container\">\n  <gl-shared-component-title-label-simple\n    [id]=\"id\"\n    [labelValue]=\"labelValue\"\n    [labelAlignment]=\"labelAlignment\"\n    [required]=\"required\"\n    [class]=\"class\"\n    [requiredLabel]=\"requiredLabel\"\n  ></gl-shared-component-title-label-simple>\n  <gl-shared-component-input-text-simple\n    [class]=\"class\"\n    [value]=\"value\"\n    [id]=\"id\"\n    [itemContentAlignment]=\"itemContentAlignment\"\n    [placeholder]=\"placeholder\"\n    (currentValue)=\"onKeyUp($event)\"\n    [disabled]=\"disabled\"\n    [autocomplete]=\"autocomplete\"\n\n    [mask]=\"mask\"\n    [maskSymbol]=\"maskSymbol\"\n    [maxLength]=\"maxLength\"\n  ></gl-shared-component-input-text-simple>\n</div>\n",
+                styles: [":host::ng-deep{display:flex;flex:1 0 auto}:host::ng-deep .item-container{align-items:stretch;display:flex;flex:1 0 auto;flex-direction:column;position:relative}:host::ng-deep .item-container ::ng-deep gl-shared-component-input-text-simple{margin:0}"]
+            },] }
+];
+GlSharedComponentInputTextLabelComponent.ctorParameters = () => [];
+GlSharedComponentInputTextLabelComponent.propDecorators = {
+    disabled: [{ type: Input }],
+    autocomplete: [{ type: Input }],
+    id: [{ type: Input }],
+    labelAlignment: [{ type: Input }],
+    labelValue: [{ type: Input }],
+    placeholder: [{ type: Input }],
+    itemContentAlignment: [{ type: Input }],
+    class: [{ type: Input }],
+    value: [{ type: Input }],
+    mask: [{ type: Input }],
+    maskSymbol: [{ type: Input }],
+    maxLength: [{ type: Input }],
+    required: [{ type: Input }],
+    requiredLabel: [{ type: Input }],
+    currentValue: [{ type: Output }]
 };
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "disabled", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "autocomplete", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "id", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "labelAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "labelValue", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "placeholder", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "itemContentAlignment", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "class", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "value", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "mask", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "maskSymbol", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "maxLength", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "required", void 0);
-__decorate([
-    Input()
-], GlSharedComponentInputTextLabelComponent.prototype, "requiredLabel", void 0);
-__decorate([
-    Output()
-], GlSharedComponentInputTextLabelComponent.prototype, "currentValue", void 0);
-GlSharedComponentInputTextLabelComponent = __decorate([
-    Component({
-        selector: 'gl-shared-component-input-text-label',
-        template: "<div class=\"item-container\">\n  <gl-shared-component-title-label-simple\n    [id]=\"id\"\n    [labelValue]=\"labelValue\"\n    [labelAlignment]=\"labelAlignment\"\n    [required]=\"required\"\n    [class]=\"class\"\n    [requiredLabel]=\"requiredLabel\"\n  ></gl-shared-component-title-label-simple>\n  <gl-shared-component-input-text-simple\n    [class]=\"class\"\n    [value]=\"value\"\n    [id]=\"id\"\n    [itemContentAlignment]=\"itemContentAlignment\"\n    [placeholder]=\"placeholder\"\n    (currentValue)=\"onKeyUp($event)\"\n    [disabled]=\"disabled\"\n    [autocomplete]=\"autocomplete\"\n\n    [mask]=\"mask\"\n    [maskSymbol]=\"maskSymbol\"\n    [maxLength]=\"maxLength\"\n  ></gl-shared-component-input-text-simple>\n</div>\n",
-        styles: [":host::ng-deep{display:flex;flex:1 0 auto}:host::ng-deep .item-container{position:relative;display:flex;flex-direction:column;align-items:stretch;flex:1 0 auto}:host::ng-deep .item-container ::ng-deep gl-shared-component-input-text-simple{margin:0}"]
-    })
-], GlSharedComponentInputTextLabelComponent);
-export { GlSharedComponentInputTextLabelComponent };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1pbnB1dC10ZXh0LWxhYmVsLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2dsLW5nLWZyb250ZW5kLyIsInNvdXJjZXMiOlsibGliL3NoYXJlZC9jb21wb25lbnQvaW5wdXQvdGV4dC9sYWJlbC9nbC1zaGFyZWQtY29tcG9uZW50LWlucHV0LXRleHQtbGFiZWwuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLFlBQVksRUFBRSxLQUFLLEVBQUUsTUFBTSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBUXZFLElBQWEsd0NBQXdDLEdBQXJELE1BQWEsd0NBQXdDO0lBb0JuRDtRQW5CUyxhQUFRLEdBQUcsS0FBSyxDQUFDO1FBQ2pCLGlCQUFZLEdBQUcsS0FBSyxDQUFDO1FBT3JCLFVBQUssR0FBVyxJQUFJLENBQUM7UUFJckIsY0FBUyxHQUFHLEdBQUcsQ0FBQztRQUdoQixrQkFBYSxHQUFHLGdCQUFnQixDQUFDO1FBRWhDLGlCQUFZLEdBQUcsSUFBSSxZQUFZLEVBQUUsQ0FBQztJQUU1QixDQUFDO0lBRWpCLE9BQU8sQ0FBQyxNQUFNLElBQUksSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDO0NBQ3BELENBQUE7QUF0QlU7SUFBUixLQUFLLEVBQUU7MEVBQWtCO0FBQ2pCO0lBQVIsS0FBSyxFQUFFOzhFQUFzQjtBQUNyQjtJQUFSLEtBQUssRUFBRTtvRUFBWTtBQUNYO0lBQVIsS0FBSyxFQUFFO2dGQUF3QjtBQUN2QjtJQUFSLEtBQUssRUFBRTs0RUFBb0I7QUFDbkI7SUFBUixLQUFLLEVBQUU7NkVBQXFCO0FBQ3BCO0lBQVIsS0FBSyxFQUFFO3NGQUE4QjtBQUM3QjtJQUFSLEtBQUssRUFBRTt1RUFBZTtBQUNkO0lBQVIsS0FBSyxFQUFFO3VFQUFzQjtBQUVyQjtJQUFSLEtBQUssRUFBRTtzRUFBK0I7QUFDOUI7SUFBUixLQUFLLEVBQUU7NEVBQW9CO0FBQ25CO0lBQVIsS0FBSyxFQUFFOzJFQUFpQjtBQUNoQjtJQUFSLEtBQUssRUFBRTswRUFBbUI7QUFFbEI7SUFBUixLQUFLLEVBQUU7K0VBQWtDO0FBRWhDO0lBQVQsTUFBTSxFQUFFOzhFQUFtQztBQWxCakMsd0NBQXdDO0lBTHBELFNBQVMsQ0FBQztRQUNULFFBQVEsRUFBRSxzQ0FBc0M7UUFDaEQsa3ZCQUFvRTs7S0FFckUsQ0FBQztHQUNXLHdDQUF3QyxDQXVCcEQ7U0F2Qlksd0NBQXdDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50LCBFdmVudEVtaXR0ZXIsIElucHV0LCBPdXRwdXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IElDdXJyZW5jeVR5cGVzIH0gZnJvbSBcImdsLXctZnJvbnRlbmRcIjtcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnZ2wtc2hhcmVkLWNvbXBvbmVudC1pbnB1dC10ZXh0LWxhYmVsJyxcbiAgdGVtcGxhdGVVcmw6ICcuL2dsLXNoYXJlZC1jb21wb25lbnQtaW5wdXQtdGV4dC1sYWJlbC5jb21wb25lbnQuaHRtbCcsXG4gIHN0eWxlVXJsczogWycuL2dsLXNoYXJlZC1jb21wb25lbnQtaW5wdXQtdGV4dC1sYWJlbC5jb21wb25lbnQuc2NzcyddXG59KVxuZXhwb3J0IGNsYXNzIEdsU2hhcmVkQ29tcG9uZW50SW5wdXRUZXh0TGFiZWxDb21wb25lbnQge1xuICBASW5wdXQoKSBkaXNhYmxlZCA9IGZhbHNlO1xuICBASW5wdXQoKSBhdXRvY29tcGxldGUgPSBmYWxzZTtcbiAgQElucHV0KCkgaWQ6IHN0cmluZztcbiAgQElucHV0KCkgbGFiZWxBbGlnbm1lbnQ6IHN0cmluZztcbiAgQElucHV0KCkgbGFiZWxWYWx1ZTogc3RyaW5nO1xuICBASW5wdXQoKSBwbGFjZWhvbGRlcjogc3RyaW5nO1xuICBASW5wdXQoKSBpdGVtQ29udGVudEFsaWdubWVudDogc3RyaW5nO1xuICBASW5wdXQoKSBjbGFzczogc3RyaW5nO1xuICBASW5wdXQoKSB2YWx1ZTogc3RyaW5nID0gbnVsbDtcblxuICBASW5wdXQoKSBtYXNrOiBzdHJpbmcgfCBJQ3VycmVuY3lUeXBlcztcbiAgQElucHV0KCkgbWFza1N5bWJvbDogc3RyaW5nO1xuICBASW5wdXQoKSBtYXhMZW5ndGggPSAyNTU7XG4gIEBJbnB1dCgpIHJlcXVpcmVkOiBib29sZWFuO1xuXG4gIEBJbnB1dCgpIHJlcXVpcmVkTGFiZWwgPSAnUmVxdWlyZWQgZmllbGQnO1xuXG4gIEBPdXRwdXQoKSBjdXJyZW50VmFsdWUgPSBuZXcgRXZlbnRFbWl0dGVyKCk7XG5cbiAgY29uc3RydWN0b3IoKSB7IH1cblxuICBvbktleVVwKHZhbHVlcykgeyB0aGlzLmN1cnJlbnRWYWx1ZS5lbWl0KHZhbHVlcyk7IH1cbn1cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1pbnB1dC10ZXh0LWxhYmVsLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL2dsLW5nLWZyb250ZW5kL3NyYy9saWIvc2hhcmVkL2NvbXBvbmVudC9pbnB1dC90ZXh0L2xhYmVsL2dsLXNoYXJlZC1jb21wb25lbnQtaW5wdXQtdGV4dC1sYWJlbC5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxZQUFZLEVBQUUsS0FBSyxFQUFFLE1BQU0sRUFBRSxNQUFNLGVBQWUsQ0FBQztBQVF2RSxNQUFNLE9BQU8sd0NBQXdDO0lBb0JuRDtRQW5CUyxhQUFRLEdBQUcsS0FBSyxDQUFDO1FBQ2pCLGlCQUFZLEdBQUcsS0FBSyxDQUFDO1FBT3JCLFVBQUssR0FBVyxJQUFJLENBQUM7UUFJckIsY0FBUyxHQUFHLEdBQUcsQ0FBQztRQUdoQixrQkFBYSxHQUFHLGdCQUFnQixDQUFDO1FBRWhDLGlCQUFZLEdBQUcsSUFBSSxZQUFZLEVBQUUsQ0FBQztJQUU1QixDQUFDO0lBRWpCLE9BQU8sQ0FBQyxNQUFNLElBQUksSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDOzs7WUEzQnBELFNBQVMsU0FBQztnQkFDVCxRQUFRLEVBQUUsc0NBQXNDO2dCQUNoRCxrdkJBQW9FOzthQUVyRTs7Ozt1QkFFRSxLQUFLOzJCQUNMLEtBQUs7aUJBQ0wsS0FBSzs2QkFDTCxLQUFLO3lCQUNMLEtBQUs7MEJBQ0wsS0FBSzttQ0FDTCxLQUFLO29CQUNMLEtBQUs7b0JBQ0wsS0FBSzttQkFFTCxLQUFLO3lCQUNMLEtBQUs7d0JBQ0wsS0FBSzt1QkFDTCxLQUFLOzRCQUVMLEtBQUs7MkJBRUwsTUFBTSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgRXZlbnRFbWl0dGVyLCBJbnB1dCwgT3V0cHV0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBJQ3VycmVuY3lUeXBlcyB9IGZyb20gXCJnbC13LWZyb250ZW5kXCI7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2dsLXNoYXJlZC1jb21wb25lbnQtaW5wdXQtdGV4dC1sYWJlbCcsXG4gIHRlbXBsYXRlVXJsOiAnLi9nbC1zaGFyZWQtY29tcG9uZW50LWlucHV0LXRleHQtbGFiZWwuY29tcG9uZW50Lmh0bWwnLFxuICBzdHlsZVVybHM6IFsnLi9nbC1zaGFyZWQtY29tcG9uZW50LWlucHV0LXRleHQtbGFiZWwuY29tcG9uZW50LnNjc3MnXVxufSlcbmV4cG9ydCBjbGFzcyBHbFNoYXJlZENvbXBvbmVudElucHV0VGV4dExhYmVsQ29tcG9uZW50IHtcbiAgQElucHV0KCkgZGlzYWJsZWQgPSBmYWxzZTtcbiAgQElucHV0KCkgYXV0b2NvbXBsZXRlID0gZmFsc2U7XG4gIEBJbnB1dCgpIGlkOiBzdHJpbmc7XG4gIEBJbnB1dCgpIGxhYmVsQWxpZ25tZW50OiBzdHJpbmc7XG4gIEBJbnB1dCgpIGxhYmVsVmFsdWU6IHN0cmluZztcbiAgQElucHV0KCkgcGxhY2Vob2xkZXI6IHN0cmluZztcbiAgQElucHV0KCkgaXRlbUNvbnRlbnRBbGlnbm1lbnQ6IHN0cmluZztcbiAgQElucHV0KCkgY2xhc3M6IHN0cmluZztcbiAgQElucHV0KCkgdmFsdWU6IHN0cmluZyA9IG51bGw7XG5cbiAgQElucHV0KCkgbWFzazogc3RyaW5nIHwgSUN1cnJlbmN5VHlwZXM7XG4gIEBJbnB1dCgpIG1hc2tTeW1ib2w6IHN0cmluZztcbiAgQElucHV0KCkgbWF4TGVuZ3RoID0gMjU1O1xuICBASW5wdXQoKSByZXF1aXJlZDogYm9vbGVhbjtcblxuICBASW5wdXQoKSByZXF1aXJlZExhYmVsID0gJ1JlcXVpcmVkIGZpZWxkJztcblxuICBAT3V0cHV0KCkgY3VycmVudFZhbHVlID0gbmV3IEV2ZW50RW1pdHRlcigpO1xuXG4gIGNvbnN0cnVjdG9yKCkgeyB9XG5cbiAgb25LZXlVcCh2YWx1ZXMpIHsgdGhpcy5jdXJyZW50VmFsdWUuZW1pdCh2YWx1ZXMpOyB9XG59XG4iXX0=
