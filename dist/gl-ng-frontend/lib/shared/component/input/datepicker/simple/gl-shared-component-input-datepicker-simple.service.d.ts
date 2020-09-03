@@ -1,7 +1,3 @@
-import * as ɵngcc0 from '@angular/core';
 export declare class GlSharedComponentInputDatepickerSimpleService {
     constructor();
-    static ɵfac: ɵngcc0.ɵɵFactoryDef<GlSharedComponentInputDatepickerSimpleService, never>;
 }
-
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1pbnB1dC1kYXRlcGlja2VyLXNpbXBsZS5zZXJ2aWNlLmQudHMiLCJzb3VyY2VzIjpbImdsLXNoYXJlZC1jb21wb25lbnQtaW5wdXQtZGF0ZXBpY2tlci1zaW1wbGUuc2VydmljZS5kLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQTtBQUNBOztBQUNBIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlY2xhcmUgY2xhc3MgR2xTaGFyZWRDb21wb25lbnRJbnB1dERhdGVwaWNrZXJTaW1wbGVTZXJ2aWNlIHtcclxuICAgIGNvbnN0cnVjdG9yKCk7XHJcbn1cclxuIl19
