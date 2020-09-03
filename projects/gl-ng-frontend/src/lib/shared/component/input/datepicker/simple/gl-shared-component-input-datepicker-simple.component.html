@@ -1,0 +1,29 @@
+<ng-content></ng-content>
+<mat-form-field appearance="none" floatLabel="never">
+<!--  <mat-label>Input disabled</mat-label>-->
+  <input
+    class="item-content {{ itemContentAlignment }} {{ class }}"
+    [id]="id"
+    [placeholder]="placeholder"
+    [value]="value"
+    [matDatepicker]="dp3"
+    [attr.maxlength]="maxLength"
+    (dateChange)="changed($event)"
+    matInput
+    disabled>
+  <mat-datepicker-toggle *ngIf="!disabled" matSuffix (click)="clear()">
+    <img
+      matDatepickerToggleIcon
+      class="datepicker-button"
+      alt="Date picker icon"
+      src="assets/img/icon/datepicker/clear.svg">
+  </mat-datepicker-toggle>
+  <mat-datepicker-toggle *ngIf="!disabled" matSuffix [for]="dp3">
+    <img
+      matDatepickerToggleIcon
+      class="datepicker-button"
+      alt="Date picker icon"
+      src="assets/img/icon/datepicker/date.svg">
+  </mat-datepicker-toggle>
+  <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+</mat-form-field>

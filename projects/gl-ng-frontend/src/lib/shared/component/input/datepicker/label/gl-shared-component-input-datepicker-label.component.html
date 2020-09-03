@@ -1,0 +1,19 @@
+<gl-shared-component-input-datepicker-simple
+  [class]="class"
+  [value]="value"
+  (currentValue)="onCurrentValue($event)"
+  [id]="id"
+  [itemContentAlignment]="itemContentAlignment"
+  [placeholder]="placeholder"
+  [disabled]="disabled"
+  [dateFormat]="dateFormat"
+  [maxLength]="maxLength"
+><gl-shared-component-title-label-simple
+    [id]="id"
+    [labelAlignment]="labelAlignment"
+    [labelValue]="labelValue"
+    [required]="required"
+    [class]="class"
+    [requiredLabel]="requiredField"
+  ></gl-shared-component-title-label-simple>
+</gl-shared-component-input-datepicker-simple>
