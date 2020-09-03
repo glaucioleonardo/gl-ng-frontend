@@ -49,18 +49,4 @@
       background-color: transparent;
     }
   }
-
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
-    .header-container {
-      .header-content {
-        &.dark, &.light {
-          @include pattern-gradient-border-ie(0.2em);
-        }
-
-        &.inverted {
-          @include pattern-gradient-border-ie(1px, bottom);
-        }
-      }
-    }
-  }
 }

@@ -273,31 +273,4 @@
       animation-fill-mode: forwards;
     }
   }
-
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)  {
-    .filter-container {
-      @include pattern-gradient-border-ie(0.2em);
-      max-height: unset;
-
-      .menu-nav-container {
-        max-height: 69vh;
-
-        .input-container {
-          gl-shared-component-input-autocomplete-simple {
-            .custom-combobox {
-              height: 4em;
-
-              .mat-input-element {
-                max-width: 94.6%;
-
-                &.no-data {
-                  max-width: 94%;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }

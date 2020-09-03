@@ -1,8 +1,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { IAttachmentData } from 'gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.interface';
-import { AttachmentIcon, AttachmentParser, AttachmentValidate } from 'gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.service';
-import { StringConverter } from 'gl-w-frontend/lib/es5/scripts/core/services/string/core-services-string.service';
 import { GlSharedComponentModalAlertService } from '../../../modal/alert/gl-shared-component-modal-alert.service';
+import { AttachmentIcon, AttachmentParser, AttachmentValidate, StringConverter } from "gl-w-frontend";
+import { IAttachmentData } from "gl-sp-frontend";
 
 @Injectable({
   providedIn: 'root'

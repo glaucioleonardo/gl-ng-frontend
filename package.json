@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-frontend",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "assets": "assets",
   "main": "lib/public-api.ts",
@@ -50,8 +50,8 @@
     "production": "ng build --prod && npm run copy-assets",
     "production-ngcc": "ng build --prod && ngcc && npm run copy-assets",
     "postinstall": "ngcc",
-    "glsp": "cd D:\\_local-development\\gl-sp-frontend && npm run production && cd D:\\_local-development\\gl-ng-frontend && npm pack D:\\_local-development\\gl-sp-frontend && npm i --prefer-offline ./gl-sp-frontend-1.0.4.tgz && shx rm -rf ./gl-sp-frontend-1.0.4.tgz",
-    "glw": "cd D:\\_local-development\\gl-w-frontend && npm run production && cd D:\\_local-development\\gl-ng-frontend && npm pack D:\\_local-development\\gl-w-frontend && npm i --prefer-offline ./gl-w-frontend-1.4.25.tgz && shx rm -rf ./gl-w-frontend-1.4.25.tgz"
+    "glsp": "cd D:\\_local-development\\_glaucio\\packages\\gl-sp-frontend && npm run production && cd D:\\_local-development\\_glaucio\\packages\\gl-ng-frontend && npm pack D:\\_local-development\\_glaucio\\packages\\gl-sp-frontend && npm i --prefer-offline ./gl-sp-frontend-2.0.0.tgz && shx rm -rf ./gl-sp-frontend-2.0.0.tgz",
+    "glw": "cd D:\\_local-development\\_glaucio\\packages\\gl-w-frontend && npm run production && cd D:\\_local-development\\_glaucio\\packages\\gl-ng-frontend && npm pack D:\\_local-development\\_glaucio\\packages\\gl-w-frontend && npm i --prefer-offline ./gl-w-frontend-2.0.0.tgz"
   },
   "private": true,
   "dependencies": {
@@ -62,11 +62,12 @@
     "@angular/core": "~9.1.9",
     "@angular/forms": "~9.1.9",
     "@angular/material": "^9.2.4",
+    "@angular/material-moment-adapter": "^9.2.4",
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
-    "gl-sp-frontend": "^1.0.5",
-    "gl-w-frontend": "^1.4.26",
+    "gl-sp-frontend": "^2.0.0",
+    "gl-w-frontend": "^2.0.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { ICurrencyTypes } from 'gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.interface';
-import { InputMask } from 'gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.service';
 import { ISimpleTextResult } from './gl-shared-component-input-text-simple.interface';
+import { ICurrencyTypes, InputMask } from "gl-w-frontend";
 
 
 @Component({

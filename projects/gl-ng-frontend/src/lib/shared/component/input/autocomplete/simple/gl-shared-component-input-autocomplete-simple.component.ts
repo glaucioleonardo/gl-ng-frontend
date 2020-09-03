@@ -3,9 +3,9 @@ import { Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnIni
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { GlSharedComponentInputAutocompleteSimpleService } from './gl-shared-component-input-autocomplete-simple.service';
 import { MatAutocomplete } from '@angular/material/autocomplete';
-import { IComboBoxData } from 'gl-w-frontend/lib/es5/scripts/core/services/combobox/core-services-combobox.interface';
+import { GlSharedComponentInputAutocompleteSimpleService } from './gl-shared-component-input-autocomplete-simple.service';
+import { IComboBoxData } from "gl-w-frontend";
 
 @Component({
   selector: 'gl-shared-component-input-autocomplete-simple',
@@ -34,7 +34,7 @@ export class GlSharedComponentInputAutocompleteSimpleComponent implements OnInit
   @Input() textField: string;
 
   @Input() labelValue: string;
-  @Input() labelAlignment: string;
+  @Input() labelAlignment: 'left' | 'center' | 'right';
   @Input() required: boolean;
   @Input() requiredField: string;
 

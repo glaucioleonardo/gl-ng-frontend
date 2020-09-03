@@ -37,10 +37,4 @@
       }
     }
   }
-
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
-    .modal-title-container {
-      @include pattern-gradient-border-ie(1px, bottom, true);
-    }
-  }
 }

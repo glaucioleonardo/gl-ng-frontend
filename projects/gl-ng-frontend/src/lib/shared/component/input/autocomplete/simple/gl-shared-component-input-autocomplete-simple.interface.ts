@@ -1,4 +1,4 @@
-import { IComboBoxData } from 'gl-w-frontend/lib/es5/scripts/core/services/combobox/core-services-combobox.interface';
+import { IComboBoxData } from "gl-w-frontend";
 
 export interface IUpdateOptionList {
   options: IComboBoxData[];

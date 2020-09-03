@@ -64,13 +64,3 @@
     }
   }
 }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
-  :host::ng-deep {
-    .attachment-container {
-      .file {
-        width: 75%;
-      }
-    }
-  }
-}

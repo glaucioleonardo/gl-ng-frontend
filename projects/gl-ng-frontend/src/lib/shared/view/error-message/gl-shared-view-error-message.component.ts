@@ -37,12 +37,6 @@ export class GlSharedViewErrorMessageComponent implements AfterViewInit {
 
     mainContainer.style.backgroundImage = `url(${this.background})`;
     mainContainerParent.style.backgroundImage = `url(${this.blurBackground})`;
-
-    console.log(this.mainContainer);
-    console.log(mainContainer);
-    console.log(mainContainerParent);
-    console.log(this.background);
-    console.log(this.blurBackground);
   }
 
   errorButtonAction(): void {

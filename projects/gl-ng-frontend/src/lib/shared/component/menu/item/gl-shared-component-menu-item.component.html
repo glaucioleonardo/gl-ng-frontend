@@ -19,7 +19,7 @@
     class="menu-item"
     (click)="toggleActive()"
   >{{ content }}</div>
-  <img src="../assets/img/icon/drop-down/arrow-down.svg" class="menu-arrow" [alt]="alt"/>
+  <img src="../assets/img/icon/side-menu/arrow-down.svg" class="menu-arrow" [alt]="alt"/>
 </li>
 <ol *ngIf="hasSubitem && active" [@fadeInOut] class="subitem-container {{ active ? 'active' : '' }}">
   <li class="menu-title adding-row-animated {{ item.class }}" *ngFor="let item of subItems">

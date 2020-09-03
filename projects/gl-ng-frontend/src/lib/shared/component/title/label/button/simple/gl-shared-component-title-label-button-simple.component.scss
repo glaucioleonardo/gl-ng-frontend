@@ -25,9 +25,3 @@
     }
   }
 }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
-  :host::ng-deep {
-    height: 0.5em;
-  }
-}

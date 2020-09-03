@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ICurrencyTypes } from 'gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.interface';
+import { ICurrencyTypes } from "gl-w-frontend";
 
 @Component({
   selector: 'gl-shared-component-input-text-label',

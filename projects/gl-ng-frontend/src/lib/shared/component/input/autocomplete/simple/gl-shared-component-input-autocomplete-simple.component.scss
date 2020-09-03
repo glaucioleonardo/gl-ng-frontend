@@ -15,6 +15,9 @@ $default-transition: all 0.2s ease-in-out;
 
   .input-container {
     display: flex;
+    flex-grow: 1;
+    align-items: center;
+    background-color: $dark-gray-2;
 
     mat-form-field {
       display: flex;
@@ -103,9 +106,9 @@ $default-transition: all 0.2s ease-in-out;
 
     .arrow-down {
       background-color: $dark-gray-2;
-      width: 0.6em;
-      height: 100%;
-      padding: 0 0.5em;
+      width: 0.8em;
+      height: 0.8em;
+      padding: 0 0.3em;
       transition: all 0.2s ease-in-out;
 
       &:hover {
@@ -146,55 +149,6 @@ $default-transition: all 0.2s ease-in-out;
     &.no-data, &.read-only {
       .arrow-down {
         display: none;
-      }
-    }
-  }
-
-
-  @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .mat-form-field-label-wrapper {
-      max-width: 88.5%;
-      top: 0;
-      padding-top: 0;
-    }
-
-    .combobox-container {
-      .mat-input-element {
-        max-width: 77%;
-        &:-ms-input-placeholder {
-          color: $dark-gray !important;
-        }
-        &::placeholder {
-          color: $dark-gray !important;
-        }
-      }
-      .arrow-down {
-        height: 100%;
-      }
-
-      &.read-only {
-        .mat-input-element {
-          max-width: 100% !important;
-        }
-      }
-
-      &.no-data {
-        .mat-input-element {
-          max-width: 100% !important;
-        }
-      }
-    }
-
-    .read-only {
-      .mat-form-field-label-wrapper {
-
-        max-width: 100%;
-      }
-
-      .combobox-container {
-        .item-content {
-          width: 93%;
-        }
       }
     }
   }

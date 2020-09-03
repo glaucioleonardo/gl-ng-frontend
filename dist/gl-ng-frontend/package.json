@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-frontend",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "assets": "assets",
   "main": "bundles/gl-ng-frontend.umd.js",
@@ -42,7 +42,8 @@
     "@angular/cdk": "^9.2.4",
     "@angular/material": "^9.2.4",
     "@angular/common": "^9.1.9",
-    "@angular/core": "^9.1.9"
+    "@angular/core": "^9.1.9",
+    "@angular/material-moment-adapter": "^9.2.4"
   },
   "dependencies": {
     "tslib": "^1.10.0"
@@ -54,5 +55,18 @@
   "fesm2015": "fesm2015/gl-ng-frontend.js",
   "typings": "gl-ng-frontend.d.ts",
   "metadata": "gl-ng-frontend.metadata.json",
-  "sideEffects": false
+  "sideEffects": false,
+  "__processed_by_ivy_ngcc__": {
+    "es2015": "9.1.9",
+    "esm2015": "9.1.9",
+    "esm5": "9.1.9",
+    "fesm2015": "9.1.9",
+    "fesm5": "9.1.9",
+    "main": "9.1.9",
+    "module": "9.1.9",
+    "typings": "9.1.9"
+  },
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
+  }
 }

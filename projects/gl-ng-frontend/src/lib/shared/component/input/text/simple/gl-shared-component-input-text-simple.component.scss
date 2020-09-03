@@ -55,15 +55,4 @@
       color: $gray !important;
     }
   }
-
-  @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .item-content {
-      &:-ms-input-placeholder {
-        color: $dark-gray !important;
-      }
-      &::placeholder {
-        color: $dark-gray !important;
-      }
-    }
-  }
 }

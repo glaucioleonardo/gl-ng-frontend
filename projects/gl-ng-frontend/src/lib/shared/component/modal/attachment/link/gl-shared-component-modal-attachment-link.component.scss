@@ -132,32 +132,4 @@
       to {opacity: 1;}
     }
   }
-
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
-    .modal-link-container {
-      .modal-main-content {
-
-        .modal-input-container {
-
-          .name-container, .value-container {
-            @include pattern-gradient-border-ie(1px, bottom, true);
-          }
-          input {
-            border: none !important;
-          }
-        }
-
-        gl-shared-component-input-button-simple {
-          .default-button {
-            max-width: calc(30vw / 3) !important;
-            min-width: calc(30vw / 3) !important;
-          }
-        }
-
-        .modal-footer {
-          @include pattern-gradient-border-ie(1px, top, true);
-        }
-      }
-    }
-  }
 }

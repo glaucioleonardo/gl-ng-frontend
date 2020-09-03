@@ -47,6 +47,11 @@ export * from './lib/shared/component/input/autocomplete/simple/gl-shared-compon
 export * from './lib/shared/component/input/button/simple/gl-shared-component-input-button-simple.component';
 export * from './lib/shared/component/input/option/simple/gl-shared-component-input-option-simple.component';
 
+export * from './lib/shared/component/input/datepicker/simple/gl-shared-component-input-datepicker-simple.component';
+export * from './lib/shared/component/input/datepicker/simple/gl-shared-component-input-datepicker-simple.service';
+export * from './lib/shared/component/input/datepicker/simple/gl-shared-component-input-datepicker-simple.interface';
+export * from './lib/shared/component/input/datepicker/label/gl-shared-component-input-datepicker-label.component';
+
 export * from './lib/shared/component/input/text/simple/gl-shared-component-input-text-simple.component';
 export * from './lib/shared/component/input/text/simple/gl-shared-component-input-text-simple.interface';
 export * from './lib/shared/component/input/text/label/gl-shared-component-input-text-label.component';
@@ -82,9 +87,9 @@ export * from './lib/shared/component/title/label/button/simple/gl-shared-compon
 export * from './lib/shared/component/title/label/button/container/gl-shared-component-title-label-button-container.component';
 // endregion
 // region Views
-export * from './lib/shared/view/gl-shared-view.module'
+export * from './lib/shared/view/gl-shared-view.module';
 
-export * from './lib/shared/view/error-message/gl-shared-view-error-message.component'
+export * from './lib/shared/view/error-message/gl-shared-view-error-message.component';
 // endregion
 // endregion
 

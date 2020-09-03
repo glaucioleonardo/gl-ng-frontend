@@ -1,11 +1,8 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import {
-  AttachmentConvert,
-  AttachmentParser,
-  AttachmentValidate
-} from 'gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.service';
-import { StringConverter } from 'gl-w-frontend/lib/es5/scripts/core/services/string/core-services-string.service';
 import { Subject } from 'rxjs';
+
+import { AttachmentConvert, AttachmentParser, AttachmentValidate, StringConverter } from "gl-w-frontend";
+
 import { IImageButtonTooltip } from '../../../button/image/tooltip/gl-shared-component-button-image-tooltip.interface';
 import { GlSharedComponentModalAlertService } from '../../../modal/alert/gl-shared-component-modal-alert.service';
 import { IImageString } from './gl-shared-component-attachment-image-preview.interface';

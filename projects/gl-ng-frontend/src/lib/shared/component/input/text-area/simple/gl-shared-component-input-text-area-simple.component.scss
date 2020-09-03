@@ -58,21 +58,3 @@
     }
   }
 }
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  :host::ng-deep {
-    .item-container {
-      .scroll-wrapper {
-        //noinspection CssRedundantUnit
-        height: 0%;
-        .scroll-content {
-          .item-content {
-            height: 100% !important;
-            //noinspection CssRedundantUnit
-            margin-right: 0px;
-          }
-        }
-      }
-    }
-  }
-}

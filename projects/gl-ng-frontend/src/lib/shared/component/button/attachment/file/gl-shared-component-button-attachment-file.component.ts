@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { IAttachmentData } from 'gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.interface';
 import { GlSharedComponentButtonAttachmentFileService } from './gl-shared-component-button-attachment-file.service';
+import { IAttachmentData } from "gl-sp-frontend";
 
 @Component({
   selector: 'gl-shared-component-button-attachment-file',

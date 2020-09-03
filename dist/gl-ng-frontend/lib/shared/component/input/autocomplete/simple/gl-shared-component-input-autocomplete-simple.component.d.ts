@@ -2,9 +2,10 @@ import { Overlay } from '@angular/cdk/overlay';
 import { ElementRef, EventEmitter, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { GlSharedComponentInputAutocompleteSimpleService } from './gl-shared-component-input-autocomplete-simple.service';
 import { MatAutocomplete } from '@angular/material/autocomplete';
-import { IComboBoxData } from 'gl-w-frontend/lib/es5/scripts/core/services/combobox/core-services-combobox.interface';
+import { GlSharedComponentInputAutocompleteSimpleService } from './gl-shared-component-input-autocomplete-simple.service';
+import { IComboBoxData } from "gl-w-frontend";
+import * as ɵngcc0 from '@angular/core';
 export declare class GlSharedComponentInputAutocompleteSimpleComponent implements OnInit, OnDestroy, OnChanges {
     private _service;
     overlay: Overlay;
@@ -24,7 +25,7 @@ export declare class GlSharedComponentInputAutocompleteSimpleComponent implement
     valueField: string;
     textField: string;
     labelValue: string;
-    labelAlignment: string;
+    labelAlignment: 'left' | 'center' | 'right';
     required: boolean;
     requiredField: string;
     private _loaded;
@@ -42,4 +43,8 @@ export declare class GlSharedComponentInputAutocompleteSimpleComponent implement
     arrowClick(): void;
     ngOnDestroy(): void;
     ngOnChanges(changes: SimpleChanges): void;
+    static ɵfac: ɵngcc0.ɵɵFactoryDef<GlSharedComponentInputAutocompleteSimpleComponent, never>;
+    static ɵcmp: ɵngcc0.ɵɵComponentDefWithMeta<GlSharedComponentInputAutocompleteSimpleComponent, "gl-shared-component-input-autocomplete-simple", never, { "listItems": "listItems"; "class": "class"; "maxLength": "maxLength"; "value": "value"; "disabled": "disabled"; "listName": "listName"; "id": "id"; "placeholder": "placeholder"; "itemContentAlignment": "itemContentAlignment"; "custom": "custom"; "baseUrl": "baseUrl"; "valueField": "valueField"; "textField": "textField"; "labelValue": "labelValue"; "labelAlignment": "labelAlignment"; "required": "required"; "requiredField": "requiredField"; }, { "currentValue": "currentValue"; }, never, ["*"]>;
 }
+
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1pbnB1dC1hdXRvY29tcGxldGUtc2ltcGxlLmNvbXBvbmVudC5kLnRzIiwic291cmNlcyI6WyJnbC1zaGFyZWQtY29tcG9uZW50LWlucHV0LWF1dG9jb21wbGV0ZS1zaW1wbGUuY29tcG9uZW50LmQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7OztBQUNBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgT3ZlcmxheSB9IGZyb20gJ0Bhbmd1bGFyL2Nkay9vdmVybGF5JztcclxuaW1wb3J0IHsgRWxlbWVudFJlZiwgRXZlbnRFbWl0dGVyLCBPbkNoYW5nZXMsIE9uRGVzdHJveSwgT25Jbml0LCBTaW1wbGVDaGFuZ2VzIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcbmltcG9ydCB7IEZvcm1Db250cm9sIH0gZnJvbSAnQGFuZ3VsYXIvZm9ybXMnO1xyXG5pbXBvcnQgeyBPYnNlcnZhYmxlIH0gZnJvbSAncnhqcyc7XHJcbmltcG9ydCB7IE1hdEF1dG9jb21wbGV0ZSB9IGZyb20gJ0Bhbmd1bGFyL21hdGVyaWFsL2F1dG9jb21wbGV0ZSc7XHJcbmltcG9ydCB7IEdsU2hhcmVkQ29tcG9uZW50SW5wdXRBdXRvY29tcGxldGVTaW1wbGVTZXJ2aWNlIH0gZnJvbSAnLi9nbC1zaGFyZWQtY29tcG9uZW50LWlucHV0LWF1dG9jb21wbGV0ZS1zaW1wbGUuc2VydmljZSc7XHJcbmltcG9ydCB7IElDb21ib0JveERhdGEgfSBmcm9tIFwiZ2wtdy1mcm9udGVuZFwiO1xyXG5leHBvcnQgZGVjbGFyZSBjbGFzcyBHbFNoYXJlZENvbXBvbmVudElucHV0QXV0b2NvbXBsZXRlU2ltcGxlQ29tcG9uZW50IGltcGxlbWVudHMgT25Jbml0LCBPbkRlc3Ryb3ksIE9uQ2hhbmdlcyB7XHJcbiAgICBwcml2YXRlIF9zZXJ2aWNlO1xyXG4gICAgb3ZlcmxheTogT3ZlcmxheTtcclxuICAgIGlucHV0OiBFbGVtZW50UmVmPEhUTUxJbnB1dEVsZW1lbnQ+O1xyXG4gICAgY3VycmVudFZhbHVlOiBFdmVudEVtaXR0ZXI8SUNvbWJvQm94RGF0YT47XHJcbiAgICBsaXN0SXRlbXM6IElDb21ib0JveERhdGFbXTtcclxuICAgIGRpc2FibGVkOiBib29sZWFuO1xyXG4gICAgbGlzdE5hbWU6IHN0cmluZztcclxuICAgIGlkOiBzdHJpbmc7XHJcbiAgICBwbGFjZWhvbGRlcjogc3RyaW5nO1xyXG4gICAgaXRlbUNvbnRlbnRBbGlnbm1lbnQ6ICdsZWZ0JyB8ICdjZW50ZXInIHwgJ3JpZ2h0JyB8ICcnO1xyXG4gICAgY2xhc3M6IHN0cmluZztcclxuICAgIHZhbHVlOiBzdHJpbmc7XHJcbiAgICBtYXhMZW5ndGg6IHN0cmluZztcclxuICAgIGN1c3RvbTogYm9vbGVhbjtcclxuICAgIGJhc2VVcmw6IHN0cmluZztcclxuICAgIHZhbHVlRmllbGQ6IHN0cmluZztcclxuICAgIHRleHRGaWVsZDogc3RyaW5nO1xyXG4gICAgbGFiZWxWYWx1ZTogc3RyaW5nO1xyXG4gICAgbGFiZWxBbGlnbm1lbnQ6ICdsZWZ0JyB8ICdjZW50ZXInIHwgJ3JpZ2h0JztcclxuICAgIHJlcXVpcmVkOiBib29sZWFuO1xyXG4gICAgcmVxdWlyZWRGaWVsZDogc3RyaW5nO1xyXG4gICAgcHJpdmF0ZSBfbG9hZGVkO1xyXG4gICAgcmVhZG9ubHkgaW1hZ2VTb3VyY2UgPSBcIi4uL2Fzc2V0cy9pbWcvaWNvbi9kcm9wLWRvd24vYXJyb3ctZG93bi5zdmdcIjtcclxuICAgIHJlYWRvbmx5IGNsZWFyU291cmNlID0gXCIuLi9hc3NldHMvaW1nL2ljb24vZHJvcC1kb3duL2NsZWFyLnN2Z1wiO1xyXG4gICAgYXV0b2NvbXBsZXRlSW5wdXQ6IEZvcm1Db250cm9sO1xyXG4gICAgZmlsdGVyZWRPcHRpb25zOiBPYnNlcnZhYmxlPElDb21ib0JveERhdGFbXT47XHJcbiAgICBjb25zdHJ1Y3Rvcihfc2VydmljZTogR2xTaGFyZWRDb21wb25lbnRJbnB1dEF1dG9jb21wbGV0ZVNpbXBsZVNlcnZpY2UsIG92ZXJsYXk6IE92ZXJsYXkpO1xyXG4gICAgbmdPbkluaXQoKTogUHJvbWlzZTx2b2lkPjtcclxuICAgIHByaXZhdGUgc2V0dXA7XHJcbiAgICBwcml2YXRlIGZpbHRlcjtcclxuICAgIHZhbGlkYXRlKCk6IHZvaWQ7XHJcbiAgICByZXNldChhdXRvOiBNYXRBdXRvY29tcGxldGUsIGV2ZW50OiBFdmVudCk6IHZvaWQ7XHJcbiAgICBjbGVhckl0ZW1zKGlucHV0OiBIVE1MSW5wdXRFbGVtZW50KTogdm9pZDtcclxuICAgIGFycm93Q2xpY2soKTogdm9pZDtcclxuICAgIG5nT25EZXN0cm95KCk6IHZvaWQ7XHJcbiAgICBuZ09uQ2hhbmdlcyhjaGFuZ2VzOiBTaW1wbGVDaGFuZ2VzKTogdm9pZDtcclxufVxyXG4iXX0=

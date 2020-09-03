@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IComboBoxData } from 'gl-w-frontend/lib/es5/scripts/core/services/combobox/core-services-combobox.interface';
+import { IComboBoxData } from "gl-w-frontend";
 
 @Component({
   selector: 'gl-shared-component-input-autocomplete-label',

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { RouterModule } from '@angular/router';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -12,6 +13,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { GlCoreModule } from '../../core/gl-core.module';
 
 import { GlSharedComponentInputButtonSimpleComponent } from './input/button/simple/gl-shared-component-input-button-simple.component';
+import { GlSharedComponentInputDatepickerSimpleComponent } from './input/datepicker/simple/gl-shared-component-input-datepicker-simple.component';
 import { GlSharedComponentInputOptionSimpleComponent } from './input/option/simple/gl-shared-component-input-option-simple.component';
 import { GlSharedComponentInputTextSimpleComponent } from './input/text/simple/gl-shared-component-input-text-simple.component';
 import { GlSharedComponentTitleLabelSimpleComponent } from './title/label/simple/gl-shared-component-title-label-simple.component';
@@ -47,6 +49,7 @@ import { GlSharedComponentAttachmentItemComponent } from './attachment/item/gl-s
 import { GlSharedComponentAttachmentImagePreviewComponent } from './attachment/image/preview/gl-shared-component-attachment-image-preview.component';
 import { GlSharedComponentPagingComponent } from './paging/gl-shared-component-paging.component';
 import { GlSharedComponentHeaderDefaultComponent } from './header/default/gl-shared-component-header-default.component';
+import { GlSharedComponentInputDatepickerLabelComponent } from './input/datepicker/label/gl-shared-component-input-datepicker-label.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +89,9 @@ import { GlSharedComponentHeaderDefaultComponent } from './header/default/gl-sha
     GlSharedComponentTitleLabelButtonSimpleComponent,
     GlSharedComponentTitleLabelButtonContainerComponent,
     GlSharedComponentTitlePageComponent,
+    GlSharedComponentInputDatepickerSimpleComponent,
+    GlSharedComponentInputDatepickerLabelComponent,
+    GlSharedComponentInputDatepickerLabelComponent
   ],
   imports: [
     CommonModule,
@@ -98,7 +104,8 @@ import { GlSharedComponentHeaderDefaultComponent } from './header/default/gl-sha
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    OverlayModule
+    OverlayModule,
+    MatDatepickerModule
   ],
   exports: [
     GlSharedComponentAttachmentItemComponent,
@@ -137,6 +144,8 @@ import { GlSharedComponentHeaderDefaultComponent } from './header/default/gl-sha
     GlSharedComponentTitleLabelButtonContainerComponent,
     GlSharedComponentTitleLabelSimpleComponent,
     GlSharedComponentButtonAttachmentFileComponent,
+    GlSharedComponentInputDatepickerSimpleComponent,
+    GlSharedComponentInputDatepickerLabelComponent
   ]
 })
 export class GlComponentModule { }

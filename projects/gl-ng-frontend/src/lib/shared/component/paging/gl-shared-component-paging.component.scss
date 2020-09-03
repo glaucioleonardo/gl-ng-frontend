@@ -158,14 +158,4 @@
       background-color: $black-translucid-2;
     }
   }
-
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)  {
-    .pagination-container {
-      .number-items-page {
-        width: 20em;
-        height: 1.8em;
-        top: 0.4em;
-      }
-    }
-  }
 }

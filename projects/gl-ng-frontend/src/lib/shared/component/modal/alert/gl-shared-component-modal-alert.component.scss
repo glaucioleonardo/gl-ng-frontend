@@ -106,25 +106,6 @@
       to {opacity: 0;}
     }
   }
-
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
-    .modal-container {
-      .modal-main-content {
-
-        gl-shared-component-input-button-simple {
-          .default-button {
-            //margin: 0 0.2em;
-            max-width: calc(30vw / 3) !important;
-            min-width: calc(30vw / 3) !important;
-          }
-        }
-
-        .modal-footer {
-          @include pattern-gradient-border-ie(1px, top, true);
-        }
-      }
-    }
-  }
 }
 
 @media screen and (min-device-width: 1024px) and (orientation: landscape) {

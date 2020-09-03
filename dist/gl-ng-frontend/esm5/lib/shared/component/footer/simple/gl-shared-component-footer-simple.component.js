@@ -1,5 +1,14 @@
 import { __decorate } from "tslib";
 import { Component, Input } from '@angular/core';
+import * as ɵngcc0 from '@angular/core';
+import * as ɵngcc1 from '@angular/common';
+
+function GlSharedComponentFooterSimpleComponent_img_3_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelement(0, "img", 3);
+} if (rf & 2) {
+    var ctx_r0 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵproperty("alt", ctx_r0.imageDescription)("src", ctx_r0.imageLogo, ɵngcc0.ɵɵsanitizeUrl);
+} }
 var GlSharedComponentFooterSimpleComponent = /** @class */ (function () {
     function GlSharedComponentFooterSimpleComponent() {
         this.imageDescription = 'Image logo';
@@ -13,14 +22,35 @@ var GlSharedComponentFooterSimpleComponent = /** @class */ (function () {
     __decorate([
         Input()
     ], GlSharedComponentFooterSimpleComponent.prototype, "imageDescription", void 0);
-    GlSharedComponentFooterSimpleComponent = __decorate([
-        Component({
-            selector: 'gl-shared-component-footer-simple',
-            template: "<section class=\"footer-container\">\n  <span class=\"description\">{{ description }}</span>\n  <img\n    *ngIf=\"imageLogo != null\"\n    class=\"image-logo\"\n    [alt]=\"imageDescription\"\n    [src]=\"imageLogo\">\n</section>\n",
-            styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{z-index:100;max-width:100vw;min-width:100vw;position:fixed;bottom:0;flex-grow:1}:host::ng-deep .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}:host::ng-deep .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}:host::ng-deep .footer-container .image-logo{height:1em;margin:0 0 0 .3em}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){:host::ng-deep .footer-container{border-top:0 solid transparent!important;padding-top:.1em}:host::ng-deep .footer-container::before{width:100%;height:.1em;left:0;top:.1em;margin-top:-.1em;content:\"\";position:absolute;background:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%)}}"]
-        })
-    ], GlSharedComponentFooterSimpleComponent);
+GlSharedComponentFooterSimpleComponent.ɵfac = function GlSharedComponentFooterSimpleComponent_Factory(t) { return new (t || GlSharedComponentFooterSimpleComponent)(); };
+GlSharedComponentFooterSimpleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: GlSharedComponentFooterSimpleComponent, selectors: [["gl-shared-component-footer-simple"]], inputs: { imageDescription: "imageDescription", description: "description", imageLogo: "imageLogo" }, decls: 4, vars: 2, consts: [[1, "footer-container"], [1, "description"], ["class", "image-logo", 3, "alt", "src", 4, "ngIf"], [1, "image-logo", 3, "alt", "src"]], template: function GlSharedComponentFooterSimpleComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelementStart(0, "section", 0);
+        ɵngcc0.ɵɵelementStart(1, "span", 1);
+        ɵngcc0.ɵɵtext(2);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵtemplate(3, GlSharedComponentFooterSimpleComponent_img_3_Template, 1, 2, "img", 2);
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵtextInterpolate(ctx.description);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.imageLogo != null);
+    } }, directives: [ɵngcc1.NgIf], styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);[_nghost-%COMP%] {z-index:100;max-width:100vw;min-width:100vw;position:fixed;bottom:0;flex-grow:1}[_nghost-%COMP%]  .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}[_nghost-%COMP%]  .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}[_nghost-%COMP%]  .footer-container .image-logo{height:1em;margin:0 0 0 .3em}"] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(GlSharedComponentFooterSimpleComponent, [{
+        type: Component,
+        args: [{
+                selector: 'gl-shared-component-footer-simple',
+                template: "<section class=\"footer-container\">\n  <span class=\"description\">{{ description }}</span>\n  <img\n    *ngIf=\"imageLogo != null\"\n    class=\"image-logo\"\n    [alt]=\"imageDescription\"\n    [src]=\"imageLogo\">\n</section>\n",
+                styles: ["@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900);:host::ng-deep{z-index:100;max-width:100vw;min-width:100vw;position:fixed;bottom:0;flex-grow:1}:host::ng-deep .footer-container{position:relative;display:flex;justify-content:center;background-color:#1a1b1d;border-top:.1em solid;border-image-source:linear-gradient(90deg,rgba(210,64,119,.8) 0,rgba(97,61,149,.8) 100%);border-image-slice:.5;height:1.3em;z-index:99}:host::ng-deep .footer-container .description{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;padding:1em;color:#fff;font-size:.5em;letter-spacing:.14em}:host::ng-deep .footer-container .image-logo{height:1em;margin:0 0 0 .3em}"]
+            }]
+    }], function () { return []; }, { imageDescription: [{
+            type: Input
+        }], description: [{
+            type: Input
+        }], imageLogo: [{
+            type: Input
+        }] }); })();
     return GlSharedComponentFooterSimpleComponent;
 }());
 export { GlSharedComponentFooterSimpleComponent };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1mb290ZXItc2ltcGxlLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2dsLW5nLWZyb250ZW5kLyIsInNvdXJjZXMiOlsibGliL3NoYXJlZC9jb21wb25lbnQvZm9vdGVyL3NpbXBsZS9nbC1zaGFyZWQtY29tcG9uZW50LWZvb3Rlci1zaW1wbGUuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLEtBQUssRUFBRSxNQUFNLGVBQWUsQ0FBQztBQU9qRDtJQUtFO1FBRlMscUJBQWdCLEdBQVcsWUFBWSxDQUFDO0lBRWpDLENBQUM7SUFKUjtRQUFSLEtBQUssRUFBRTsrRUFBcUI7SUFDcEI7UUFBUixLQUFLLEVBQUU7NkVBQW1CO0lBQ2xCO1FBQVIsS0FBSyxFQUFFO29GQUF5QztJQUh0QyxzQ0FBc0M7UUFMbEQsU0FBUyxDQUFDO1lBQ1QsUUFBUSxFQUFFLG1DQUFtQztZQUM3QyxtUEFBaUU7O1NBRWxFLENBQUM7T0FDVyxzQ0FBc0MsQ0FNbEQ7SUFBRCw2Q0FBQztDQUFBLEFBTkQsSUFNQztTQU5ZLHNDQUFzQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgSW5wdXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnZ2wtc2hhcmVkLWNvbXBvbmVudC1mb290ZXItc2ltcGxlJyxcbiAgdGVtcGxhdGVVcmw6ICcuL2dsLXNoYXJlZC1jb21wb25lbnQtZm9vdGVyLXNpbXBsZS5jb21wb25lbnQuaHRtbCcsXG4gIHN0eWxlVXJsczogWycuL2dsLXNoYXJlZC1jb21wb25lbnQtZm9vdGVyLXNpbXBsZS5jb21wb25lbnQuc2NzcyddXG59KVxuZXhwb3J0IGNsYXNzIEdsU2hhcmVkQ29tcG9uZW50Rm9vdGVyU2ltcGxlQ29tcG9uZW50IHtcbiAgQElucHV0KCkgZGVzY3JpcHRpb246IHN0cmluZztcbiAgQElucHV0KCkgaW1hZ2VMb2dvOiBzdHJpbmc7XG4gIEBJbnB1dCgpIGltYWdlRGVzY3JpcHRpb246IHN0cmluZyA9ICdJbWFnZSBsb2dvJztcblxuICBjb25zdHJ1Y3RvcigpIHsgfVxufVxuIl19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2wtc2hhcmVkLWNvbXBvbmVudC1mb290ZXItc2ltcGxlLmNvbXBvbmVudC5qcyIsInNvdXJjZXMiOlsibmc6L2dsLW5nLWZyb250ZW5kL2xpYi9zaGFyZWQvY29tcG9uZW50L2Zvb3Rlci9zaW1wbGUvZ2wtc2hhcmVkLWNvbXBvbmVudC1mb290ZXItc2ltcGxlLmNvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxLQUFLLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFPakQ7cUNBS0U7O3FEQUZTLHFCQUFnQixHQUFXO0NBQVksQ0FBQyxLQUVqQyxDQUFDLEtBSlIscUJBQVI7SUFBSyxFQUFFOzs2QkFBcUIsTUFDcEIscUJBQVIsS0FBSyxFQUFFOztBQUZWO0FBQ29CLElBSWxCO0FBRThCLFFBSnJCLHFCQUFnQixHQUFXLFlBQVksQ0FBQztBQUNuRCxJQUNrQixDQUFDO0FBQ25CLElBTFc7QUFBYSxRQUFyQixLQUFLLEVBQUU7QUFBQywrRUFBb0I7O0FBQ1AsUUFBckIsS0FBSyxFQUFFOzZFQUFtQiw3RUFBbEIsNkVBQWtCO0lBQ2xCLEpBQVYsSUFBVTtRQUFSLEtBQUssRUFBRSxmQUFjLFFBQXJCLEtBQUssRUFBRTtvRkFBeUMscEZBQXhDLG9GQUF3QztJQUh0QyxzQ0FBc0Msd0JBTGxELFNBQVMsQ0FBQyxjQUNULFFBQVEsRUFBRSxtQ0FBbUMsY0FDN0MsakpBR1csc0NBQXNDLHdCQUxsRCxTQUFTLENBQUMsY0FDVCxRQUFRLEVBQUUsbUNBQW1DLGNBQzdDOzhOQUFpRSxBQUFBOzs7Ozs7Ozs7OztxQ0FFbEUsQ0FBQyxRQUNXLFRBRFosQ0FBQyxRQUNXOzBCQUFzQyxDQU1sRCxNQUFELDZDQUFDLEdBQUEsQUFORCxJQU1DLFVBTlksc0NBQXNDLDNHQUFBLENBTWxEOzs7Ozs7Ozs7Ozs7OztvQkFDRDtBQUFDLElBREQsNkNBQUM7QUFDQSxDQURBLEFBTkQsSUFNQzs7QUFiQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgSW5wdXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnZ2wtc2hhcmVkLWNvbXBvbmVudC1mb290ZXItc2ltcGxlJyxcbiAgdGVtcGxhdGVVcmw6ICcuL2dsLXNoYXJlZC1jb21wb25lbnQtZm9vdGVyLXNpbXBsZS5jb21wb25lbnQuaHRtbCcsXG4gIHN0eWxlVXJsczogWycuL2dsLXNoYXJlZC1jb21wb25lbnQtZm9vdGVyLXNpbXBsZS5jb21wb25lbnQuc2NzcyddXG59KVxuZXhwb3J0IGNsYXNzIEdsU2hhcmVkQ29tcG9uZW50Rm9vdGVyU2ltcGxlQ29tcG9uZW50IHtcbiAgQElucHV0KCkgZGVzY3JpcHRpb246IHN0cmluZztcbiAgQElucHV0KCkgaW1hZ2VMb2dvOiBzdHJpbmc7XG4gIEBJbnB1dCgpIGltYWdlRGVzY3JpcHRpb246IHN0cmluZyA9ICdJbWFnZSBsb2dvJztcblxuICBjb25zdHJ1Y3RvcigpIHsgfVxufVxuIl19

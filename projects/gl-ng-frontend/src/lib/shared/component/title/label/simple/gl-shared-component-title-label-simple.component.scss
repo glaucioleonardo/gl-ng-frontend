@@ -11,11 +11,11 @@
   .header-data {
     position: relative;
     flex-grow: 1;
-    @include font-family(bold);
+    @include font-family(regular);
     background-color: $dark-gray-2-3;
     color: $white;
-    font-size: 0.4em;
-    padding: 1.25em 1em;
+    font-size: 0.45em;
+    padding: 1em 1em;
     text-align: center;
     user-select: none;
 
@@ -50,7 +50,5 @@
     right: 0.2em;
     width: 0.3em;
     height: 0.3em;
-
-    opacity: 0.5;
   }
 }

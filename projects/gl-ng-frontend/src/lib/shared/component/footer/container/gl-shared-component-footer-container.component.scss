@@ -46,10 +46,4 @@
       }
     }
   }
-
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
-    .footer-container {
-      @include pattern-gradient-border-ie(0.1em);
-    }
-  }
 }

@@ -27,6 +27,10 @@ export * from './lib/shared/component/input/autocomplete/simple/gl-shared-compon
 export * from './lib/shared/component/input/autocomplete/simple/gl-shared-component-input-autocomplete-simple.interface';
 export * from './lib/shared/component/input/button/simple/gl-shared-component-input-button-simple.component';
 export * from './lib/shared/component/input/option/simple/gl-shared-component-input-option-simple.component';
+export * from './lib/shared/component/input/datepicker/simple/gl-shared-component-input-datepicker-simple.component';
+export * from './lib/shared/component/input/datepicker/simple/gl-shared-component-input-datepicker-simple.service';
+export * from './lib/shared/component/input/datepicker/simple/gl-shared-component-input-datepicker-simple.interface';
+export * from './lib/shared/component/input/datepicker/label/gl-shared-component-input-datepicker-label.component';
 export * from './lib/shared/component/input/text/simple/gl-shared-component-input-text-simple.component';
 export * from './lib/shared/component/input/text/simple/gl-shared-component-input-text-simple.interface';
 export * from './lib/shared/component/input/text/label/gl-shared-component-input-text-label.component';
