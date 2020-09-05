@@ -160,7 +160,7 @@ $default-transition: all 0.2s ease-in-out;
     border-radius: 0;
     box-shadow: none !important;
     @extend %native-scrollbar;
-    &::-webkit-scrollbar { width: 1em; }
+    &::-webkit-scrollbar { width: 1em !important; }
     transition: all 0.2s ease-in-out;
 
     mat-option {
