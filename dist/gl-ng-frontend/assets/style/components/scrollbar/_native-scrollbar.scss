@@ -1,12 +1,6 @@
 @import "../../colors/gray";
 
 %native-scrollbar {
-
-  scrollbar-face-color: $dark-gray-2 !important;
-  scrollbar-shadow-color: $dark-gray-1-8 !important;;
-  scrollbar-track-color: $dark-gray-2-3 !important;;
-  scrollbar-arrow-color: $dark-gray !important;;
-
   &::-webkit-scrollbar:horizontal {
     height: 0.5em;
   }
