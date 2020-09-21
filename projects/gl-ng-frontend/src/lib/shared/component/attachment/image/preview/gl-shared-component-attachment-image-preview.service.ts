@@ -1,11 +1,11 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
-import { AttachmentConvert, AttachmentParser, AttachmentValidate, StringConverter } from "gl-w-frontend";
+import { AttachmentConvert, AttachmentParser, AttachmentValidate, ImageResize, StringConverter } from "gl-w-frontend";
 
 import { IImageButtonTooltip } from '../../../button/image/tooltip/gl-shared-component-button-image-tooltip.interface';
 import { GlSharedComponentModalAlertService } from '../../../modal/alert/gl-shared-component-modal-alert.service';
-import { IImageString } from './gl-shared-component-attachment-image-preview.interface';
+import { IImageString, IImageUpdate } from './gl-shared-component-attachment-image-preview.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ import { IImageString } from './gl-shared-component-attachment-image-preview.int
 export class GlSharedComponentAttachmentImagePreviewService {
   private readonly image = '../assets/img/icon/image/image-template.svg';
 
-  retrieveUpdate: Subject<string> = new Subject();
+  retrieveUpdate: Subject<IImageUpdate> = new Subject();
   labelIcons = '../assets/img/icon/label/';
 
   buttons: IImageButtonTooltip[] = [
@@ -42,12 +42,12 @@ export class GlSharedComponentAttachmentImagePreviewService {
   private _currentValue: EventEmitter<IImageString>;
 
   constructor(private _alert: GlSharedComponentModalAlertService) {
-    this.retrieveUpdate.subscribe(value => {
-      if (value != null && value.trim().length > 0) {
-        this.setImage(value);
+    this.retrieveUpdate.subscribe((data) => {
+      if (data.image != null && data.image.trim().length > 0) {
+        this.setImage(data);
         this.updateButtons(true);
       } else {
-        this.setImage('');
+        this.setImage({ image: '' });
         this.updateButtons(false);
       }
     });
@@ -82,7 +82,7 @@ export class GlSharedComponentAttachmentImagePreviewService {
 
     if (isValid) {
       AttachmentConvert.textFileToUrlImage(this._input.files[0]).then((image: string) => {
-        this.setImage(image);
+        this.setImage({ image });
         this._currentValue.emit({ value: image });
         this.updateButtons(true);
         this.clearInput();
@@ -102,8 +102,10 @@ export class GlSharedComponentAttachmentImagePreviewService {
     this.buttons[1].show = hasValue;
   }
 
-  setImage(image: string) {
-    this._userImage.style.backgroundImage = `url("${image}")`;
+  setImage(data: IImageUpdate) {
+    const img = data.resize ? ImageResize.base64(data): data.image;
+
+    this._userImage.style.backgroundImage = `url("${img}")`;
     this._userImage.classList.remove('required-fill');
   }
 
@@ -113,7 +115,7 @@ export class GlSharedComponentAttachmentImagePreviewService {
 
   removeImage(init?: boolean) {
     this.clearInput();
-    this.setImage(this.image);
+    this.setImage({ image: this.image });
 
     if (!init) {
       this._currentValue.emit({ value: null });

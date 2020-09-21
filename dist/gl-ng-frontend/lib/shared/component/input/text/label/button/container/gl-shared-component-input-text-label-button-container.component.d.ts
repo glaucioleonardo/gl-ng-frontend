@@ -1,6 +1,6 @@
 import { EventEmitter } from '@angular/core';
 import { ICurrencyTypes } from "gl-w-frontend";
-export declare class GlSharedComponentInputTextLabelComponent {
+export declare class GlSharedComponentInputTextLabelButtonContainerComponent {
     disabled: boolean;
     autocomplete: boolean;
     id: string;

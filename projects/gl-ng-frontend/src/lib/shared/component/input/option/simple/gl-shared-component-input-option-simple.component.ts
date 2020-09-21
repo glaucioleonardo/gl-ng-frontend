@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'gl-shared-component-input-option-simple',
@@ -6,8 +6,6 @@ import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@
   styleUrls: ['./gl-shared-component-input-option-simple.component.scss']
 })
 export class GlSharedComponentInputOptionSimpleComponent {
-  @ViewChild('input') input: ElementRef<HTMLInputElement>;
-
   @Input() value: string;
   @Input() id: string;
   @Input() label: string;
@@ -18,9 +16,8 @@ export class GlSharedComponentInputOptionSimpleComponent {
 
   constructor() { }
 
-  onCheck() {
-    const input: HTMLInputElement = document.querySelector(`#${this.id}`) as HTMLInputElement;
+  onCheck(value: string, input: HTMLInputElement) {
     input.checked = true;
-    this.itemSelected.emit(input.value);
+    this.itemSelected.emit(value);
   }
 }

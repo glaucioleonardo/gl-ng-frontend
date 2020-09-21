@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class GlSharedComponentButtonMenuTooltipComponent {
   @Input() disabled = false;
+  @Input() hide = false;
   @Input() tooltip: string;
   @Input() src: string;
   @Input() id: string;

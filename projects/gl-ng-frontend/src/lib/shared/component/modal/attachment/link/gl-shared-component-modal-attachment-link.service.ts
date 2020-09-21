@@ -58,7 +58,7 @@ export class GlSharedComponentModalAttachmentLinkService {
   async validData() {
     const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
     const tempUrl = this._url != null && !this._url.includes('http://') && !this._url.includes('https://') ? `http://${this._url}` : this._url;
-    const validUrl = new RegExp(urlRegex).test(this._url);
+    const validUrl = new RegExp(urlRegex).test(tempUrl);
 
     if (this._name == null || this._name.trim().length === 0) {
       await this._alert.show('Por favor, informe o nome do arquivo!');

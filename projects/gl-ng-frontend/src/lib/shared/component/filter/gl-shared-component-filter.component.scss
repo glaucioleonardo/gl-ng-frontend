@@ -8,7 +8,7 @@
 
   .filter-container {
     @include pattern-gradient-border(0.3em, top);
-    @include pattern-gradient-border(2em, bottom);
+    @include pattern-gradient-border(0.5em, bottom);
     display: flex;
     flex-direction: column;
     background: $dark-gray-3;
@@ -118,8 +118,8 @@
       display: flex;
       overflow-x: hidden;
       @extend %native-scrollbar;
-      @include pattern-gradient-border-ie(1px, top, true);
-      @include pattern-gradient-border-ie(1px, bottom, true);
+      @include pattern-gradient-border(1px, top);
+      @include pattern-gradient-border(1px, bottom);
 
       &::after {
         bottom: -10.5%;
@@ -181,6 +181,14 @@
 
           .options-container {
             display: flex;
+          }
+
+          gl-shared-component-input-datepicker-simple-month-year, gl-shared-component-input-datepicker-simple-day-month-year {
+            .mat-form-field-wrapper {
+              .mat-form-field-flex {
+                height: 1.5em;
+              }
+            }
           }
 
           gl-shared-component-input-autocomplete-simple {

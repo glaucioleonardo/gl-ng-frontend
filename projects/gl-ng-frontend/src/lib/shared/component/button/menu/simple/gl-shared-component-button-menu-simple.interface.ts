@@ -5,5 +5,6 @@ export interface IMenuButton {
   canReadonly?: boolean;
   readonly?: boolean;
   alwaysVisible?: boolean;
+  hide?: boolean;
   callback?(event?): void;
 }

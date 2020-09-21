@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class GlSharedComponentButtonMenuSimpleComponent {
   @Input() disabled = false;
+  @Input() hide = false;
   @Input() src: string;
   @Input() id: string;
   @Input() alt: string;

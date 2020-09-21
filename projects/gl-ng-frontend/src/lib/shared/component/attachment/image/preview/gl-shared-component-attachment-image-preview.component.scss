@@ -15,8 +15,14 @@
       flex-grow: 0;
       position: relative;
 
+      .label-with-button-container {
+        .label-button-container {
+          margin: 0 .8em 0 0;
+        }
+      }
+
       .required-fill-dot {
-        right: 1.5em;
+        right: 0.2em;
       }
     }
 

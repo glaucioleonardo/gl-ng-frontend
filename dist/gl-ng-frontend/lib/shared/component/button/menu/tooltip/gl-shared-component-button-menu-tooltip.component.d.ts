@@ -1,5 +1,6 @@
 export declare class GlSharedComponentButtonMenuTooltipComponent {
     disabled: boolean;
+    hide: boolean;
     tooltip: string;
     src: string;
     id: string;

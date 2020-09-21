@@ -6,9 +6,11 @@ export declare class GlSharedComponentModalAlertService {
     modalClass: string;
     currentValue: Subject<boolean>;
     resolvePromise: any;
+    customYes: string;
+    customNo: string;
     constructor();
     show(message: any): Promise<unknown>;
-    showYesNo(message: any): Promise<unknown>;
+    showYesNo(message: any, customYes?: string, customNo?: string): Promise<unknown>;
     hide(): void;
     onNo(): void;
     onYes(): void;

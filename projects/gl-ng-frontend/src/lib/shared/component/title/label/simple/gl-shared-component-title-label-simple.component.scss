@@ -5,6 +5,8 @@
 @import "../../assets/style/fonts/montserrat";
 
 :host::ng-deep {
+  min-height: 1.3em;
+  max-height: 1.3em;
   display: flex;
   flex-grow: 1;
 
@@ -38,9 +40,13 @@
     }
 
     &.report {
-      background-color: $pink-translucid-8;
-      font-size: 0.7em;
+      @include font-family(thin);
+      text-transform: uppercase;
+      font-size: 1em;
       padding: 0.5em;
+      color: $white;
+      font-weight: 100;
+      background-color: rgba($black, 0.1);
     }
   }
 

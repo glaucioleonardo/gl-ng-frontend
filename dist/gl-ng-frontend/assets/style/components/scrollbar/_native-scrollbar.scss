@@ -18,4 +18,8 @@
     background-color: $dark-gray;
     border: solid 1px $dark-gray-1-8;
   }
+
+  &::-webkit-scrollbar-corner {
+    background-color: $dark-gray !important;
+  }
 }

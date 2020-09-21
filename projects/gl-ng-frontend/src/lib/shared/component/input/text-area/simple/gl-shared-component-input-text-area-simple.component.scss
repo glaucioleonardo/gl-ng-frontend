@@ -33,6 +33,9 @@
       border: none;
       color: $white;
       @extend %native-scrollbar;
+      &::-webkit-scrollbar {
+        width: 1em;
+      }
 
       &:focus {
         outline: none !important;

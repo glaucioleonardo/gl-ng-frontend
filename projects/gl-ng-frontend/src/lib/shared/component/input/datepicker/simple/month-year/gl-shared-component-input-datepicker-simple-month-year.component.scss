@@ -10,6 +10,16 @@
   flex-grow: 1;
   position: relative;
 
+  .month-picker {
+    .mat-calendar-period-button {
+      pointer-events: none;
+    }
+
+    .mat-calendar-arrow {
+      display: none;
+    }
+  }
+
   mat-form-field {
     display: flex;
     flex-grow: 1;

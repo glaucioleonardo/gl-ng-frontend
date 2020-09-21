@@ -13,12 +13,20 @@ export class GlSharedComponentModalAlertService {
   currentValue: Subject<boolean> = new Subject<boolean>();
   resolvePromise;
 
+  customYes: string;
+  customNo: string;
+
   constructor() {}
 
   show(message) {
     return this.modal(true, true, message);
   }
-  showYesNo(message) {
+  showYesNo(message, customYes?: string, customNo?: string) {
+    this.customYes = customYes;
+    this.customNo = customNo;
+
+    console.log(customNo)
+    console.log(customYes)
     return this.modal(true, false, message);
   }
 
@@ -57,6 +65,8 @@ export class GlSharedComponentModalAlertService {
         setTimeout(() => {
           this.showModal = false;
           this.message = '';
+          this.customYes = null;
+          this.customNo = null;
         }, 300);
       }
     });

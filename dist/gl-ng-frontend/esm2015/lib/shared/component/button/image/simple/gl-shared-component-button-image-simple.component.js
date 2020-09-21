@@ -6,7 +6,7 @@ GlSharedComponentButtonImageSimpleComponent.decorators = [
     { type: Component, args: [{
                 selector: 'gl-shared-component-button-image-simple',
                 template: "<img\n  class=\"button\"\n  [id]=\"id\"\n  [src]=\"src\"\n  [alt]=\"alt\"\n  (click)=\"callback($event)\">\n",
-                styles: [":host::ng-deep{align-items:center;display:flex}:host::ng-deep .button{height:1em;width:1em}:host::ng-deep .button:not(hover){opacity:.5;transform:scale(1);transition:all .2s ease-in-out}:host::ng-deep .button:hover{opacity:1;transform:scale(1.1);transition:all .2s ease-in-out}"]
+                styles: [":host::ng-deep{align-items:center;display:flex}:host::ng-deep .button{height:1em;width:1em}:host::ng-deep .button:not(hover){opacity:.5;transition:all .2s ease-in-out}:host::ng-deep .button:hover{opacity:1;transition:all .2s ease-in-out}"]
             },] }
 ];
 GlSharedComponentButtonImageSimpleComponent.ctorParameters = () => [];

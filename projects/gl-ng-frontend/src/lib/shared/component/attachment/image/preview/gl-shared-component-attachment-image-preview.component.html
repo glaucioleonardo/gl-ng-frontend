@@ -7,14 +7,15 @@
     [requiredFieldDescription]="requiredFieldDescription"
     [required]="required">
     <ng-content select="top"></ng-content>
-    <gl-shared-component-button-image-tooltip
-      *ngFor="let b of service.buttons"
-      [src]="b.src"
-      [alt]="b.alt"
-      [id]="b.id"
-      [show]="b.show && !disabled || b.id === 'expand-container-2'"
-      [callback]="b.callback"
-    ></gl-shared-component-button-image-tooltip>
+      <gl-shared-component-button-image-tooltip
+        *ngFor="let b of service.buttons"
+        [src]="b.src"
+        [alt]="b.alt"
+        [id]="b.id"
+        [show]="b.show && !disabled || b.id === 'expand-container-2'"
+        [callback]="b.callback"
+      ></gl-shared-component-button-image-tooltip>
+      <ng-content select="[slot=buttons]"></ng-content>
     <ng-content select="bottom"></ng-content>
   </gl-shared-component-title-label-button-container>
 

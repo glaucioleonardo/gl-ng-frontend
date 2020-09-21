@@ -19,14 +19,14 @@
         *ngIf="!service.isOK"
         class="no"
         (click)="service.onNo()"
-        [innerValue]="innerValueNo"
+        [innerValue]="service.customNo == null ? innerValueNo : service.customNo"
         [value]="noValue"
       ></gl-shared-component-input-button-simple>
       <gl-shared-component-input-button-simple
         *ngIf="!service.isOK"
         class="yes"
         (click)="service.onYes()"
-        [innerValue]="innerValueYes"
+        [innerValue]="service.customYes == null ? innerValueYes : service.customYes"
         [value]="yesValue"
       ></gl-shared-component-input-button-simple>
       <gl-shared-component-input-button-simple
