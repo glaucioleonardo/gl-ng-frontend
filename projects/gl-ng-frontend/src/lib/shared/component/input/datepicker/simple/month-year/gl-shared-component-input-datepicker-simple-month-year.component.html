@@ -1,15 +1,15 @@
 <ng-content></ng-content>
 <mat-form-field appearance="none" floatLabel="never">
-<!--  <mat-label>Input disabled</mat-label>-->
+  <!--  <mat-label>Input disabled</mat-label>-->
   <input
     class="item-content {{ itemContentAlignment }} {{ class }}"
+    matInput
     [id]="id"
     [placeholder]="placeholder"
     [value]="value"
     [matDatepicker]="dp3"
     [attr.maxlength]="maxLength"
     (dateChange)="changed($event)"
-    matInput
     disabled>
   <mat-datepicker-toggle *ngIf="!disabled" matSuffix (click)="clear()">
     <img
@@ -25,5 +25,11 @@
       alt="Date picker icon"
       src="assets/img/icon/datepicker/date.svg">
   </mat-datepicker-toggle>
-  <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+  <mat-datepicker
+    #dp3 disabled="false"
+    startView="multi-year"
+    (yearSelected)="chosenYearHandler($event)"
+    (monthSelected)="chosenMonthHandler($event, dp3)"
+    panelClass="month-picker">
+  ></mat-datepicker>
 </mat-form-field>

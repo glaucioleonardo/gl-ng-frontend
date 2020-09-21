@@ -1,4 +1,4 @@
 export interface IDatePickerOutput {
   date: Date;
-  dateString: string
+  dateString: 'DD/MM/YYYY';
 }

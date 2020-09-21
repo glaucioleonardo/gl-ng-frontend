@@ -1,15 +1,15 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
-import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
-import { IDatePickerOutput } from './gl-shared-component-input-datepicker-simple.interface';
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { DateGet } from "gl-w-frontend";
+import { IDatePickerOutput } from './gl-shared-component-input-datepicker-simple-day-month-year.interface';
 
 @Component({
-  selector: 'gl-shared-component-input-datepicker-simple',
-  templateUrl: './gl-shared-component-input-datepicker-simple.component.html',
-  styleUrls: ['./gl-shared-component-input-datepicker-simple.component.scss'],
+  selector: 'gl-shared-component-input-datepicker-simple-day-month-year',
+  templateUrl: './gl-shared-component-input-datepicker-simple-day-month-year.component.html',
+  styleUrls: ['./gl-shared-component-input-datepicker-simple-day-month-year.component.scss'],
   providers: [
-    {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
+    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
     {
       provide: DateAdapter,
       useClass: MomentDateAdapter,
@@ -18,20 +18,20 @@ import { DateGet } from "gl-w-frontend";
     { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
   ],
 })
-export class GlSharedComponentInputDatepickerSimpleComponent {
+export class GlSharedComponentInputDatepickerSimpleDayMonthYearComponent {
   @Input() disabled = false;
   @Input() id: string;
   @Input() placeholder: string;
   @Input() itemContentAlignment: 'left' | 'center' | 'right' = 'center';
   @Input() class: string;
   @Input() value: Date = null;
-  @Input() dateFormat = 'DD/MM/YYYY';
-
   @Input() maxLength = 255;
 
   @Output() currentValue: EventEmitter<IDatePickerOutput> = new EventEmitter();
 
-  constructor() { }
+  readonly dateFormat: 'DD/MM/YYYY' = 'DD/MM/YYYY';
+
+  constructor() {}
 
   clear() {
     this.currentValue.emit({
@@ -39,12 +39,11 @@ export class GlSharedComponentInputDatepickerSimpleComponent {
       dateString: null
     })
   }
-  changed(event) {
-    const date = new Date(event.value);
 
+  changed(event) {
     this.currentValue.emit({
-      date,
-      dateString: DateGet.customDate(date, this.dateFormat)
+      date: DateGet.customDateNoUTC(event.value, this.dateFormat),
+      dateString: DateGet.customDateNoUTCString(event.value, this.dateFormat) as 'DD/MM/YYYY'
     });
   }
 }
