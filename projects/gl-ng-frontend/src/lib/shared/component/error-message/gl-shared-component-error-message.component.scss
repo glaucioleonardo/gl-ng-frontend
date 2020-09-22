@@ -49,6 +49,7 @@
         border-radius: 10em;
         display: block;
         padding: 1.5em 4em;
+        color: $white;
         background-color: $black-translucid-4;
         @include font-family()
       }

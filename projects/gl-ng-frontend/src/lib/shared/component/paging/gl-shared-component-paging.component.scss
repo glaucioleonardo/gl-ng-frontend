@@ -46,6 +46,7 @@
             @include font-family(light);
             border-radius: 0.2em;
             font-size: 0.8em;
+            color: $white;
 
             &:not(hover) {
               background-color: $white-translucid-1;
