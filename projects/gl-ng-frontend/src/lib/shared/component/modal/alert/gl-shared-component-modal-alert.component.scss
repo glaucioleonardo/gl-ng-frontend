@@ -63,7 +63,7 @@
         user-select: none;
 
         .modal-message {
-          @include font-family(bold);
+          @include font-family(thin);
           text-transform: unset;
           user-select: none;
           display: block;
