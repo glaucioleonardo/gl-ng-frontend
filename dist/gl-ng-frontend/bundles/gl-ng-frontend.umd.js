@@ -333,8 +333,6 @@
         GlSharedComponentModalAlertService.prototype.showYesNo = function (message, customYes, customNo) {
             this.customYes = customYes;
             this.customNo = customNo;
-            console.log(customNo);
-            console.log(customYes);
             return this.modal(true, false, message);
         };
         GlSharedComponentModalAlertService.prototype.hide = function () {

@@ -25,8 +25,6 @@ export class GlSharedComponentModalAlertService {
     this.customYes = customYes;
     this.customNo = customNo;
 
-    console.log(customNo)
-    console.log(customYes)
     return this.modal(true, false, message);
   }
 

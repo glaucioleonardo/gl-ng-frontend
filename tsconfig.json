@@ -7,10 +7,10 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "module": "es2020",
+    "module": "ESNext",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES6",
+    "target": "ES2015",
     "lib": [
       "dom",
       "es2016"
