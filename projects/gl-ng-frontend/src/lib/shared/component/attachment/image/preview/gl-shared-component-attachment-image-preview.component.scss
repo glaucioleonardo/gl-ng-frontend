@@ -52,7 +52,7 @@
 
       #image {
         content: '';
-        background-size: auto 100%;
+        background-size: contain;
         background-repeat: no-repeat;
         min-width: 100%;
         min-height: 30vh;
