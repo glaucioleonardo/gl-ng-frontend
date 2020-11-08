@@ -52,6 +52,7 @@ import { GlSharedComponentHeaderDefaultComponent } from './header/default/gl-sha
 import { GlSharedComponentInputDatepickerLabelComponent } from './input/datepicker/label/gl-shared-component-input-datepicker-label.component';
 import { GlSharedComponentInputTextLabelButtonContainerComponent } from './input/text/label/button/container/gl-shared-component-input-text-label-button-container.component';
 import { GlSharedComponentInputDatepickerSimpleMonthYearComponent } from './input/datepicker/simple/month-year/gl-shared-component-input-datepicker-simple-month-year.component';
+import { GlSharedComponentButtonInterfaceComponent } from './button/interface/gl-shared-component-button-interface.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { GlSharedComponentInputDatepickerSimpleMonthYearComponent } from './inpu
     GlSharedComponentButtonAttachmentLinkComponent,
     GlSharedComponentButtonImageSimpleComponent,
     GlSharedComponentButtonImageTooltipComponent,
+    GlSharedComponentButtonInterfaceComponent,
     GlSharedComponentButtonMenuSimpleComponent,
     GlSharedComponentButtonMenuTooltipComponent,
     GlSharedComponentErrorMessageComponent,
@@ -117,6 +119,7 @@ import { GlSharedComponentInputDatepickerSimpleMonthYearComponent } from './inpu
     GlSharedComponentButtonImageSimpleComponent,
     GlSharedComponentButtonAttachmentLinkComponent,
     GlSharedComponentButtonImageTooltipComponent,
+    GlSharedComponentButtonInterfaceComponent,
     GlSharedComponentButtonMenuSimpleComponent,
     GlSharedComponentButtonMenuTooltipComponent,
     GlSharedComponentErrorMessageComponent,

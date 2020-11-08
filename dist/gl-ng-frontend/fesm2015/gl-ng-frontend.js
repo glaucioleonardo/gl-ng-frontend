@@ -2039,6 +2039,27 @@ GlSharedComponentInputDatepickerSimpleMonthYearComponent.propDecorators = {
     currentValue: [{ type: Output }]
 };
 
+class GlSharedComponentButtonInterfaceComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+GlSharedComponentButtonInterfaceComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-button-interface',
+                template: "<div\n  class=\"attachment-container dark link-container\"\n  (click)=\"buttonClick()\">\n  <img\n    class=\"attachment-icon\"\n    [src]=\"imageSrc\"\n    [alt]=\"imageAlt\">\n  <span\n    [id]=\"id\"\n    class=\"attachment-file-button\">{{ innerHtml }}</span>\n</div>\n",
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .attachment-container{align-items:center;border-radius:.5em;cursor:pointer;display:flex;margin:.2em 0;padding:.4em .3em;position:relative}:host::ng-deep .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:all .2s ease-in-out}:host::ng-deep .attachment-container:hover{background:rgba(63,64,68,.9);transition:all .2s ease-in-out}:host::ng-deep .attachment-container .attachment-icon{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;height:2em;margin:.8em .8em .8em .2em;padding:0;user-select:none;width:2em}:host::ng-deep .attachment-container .attachment-file-button{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#fff;font-family:Montserrat,sans-serif;font-weight:400;user-select:none}"]
+            },] }
+];
+GlSharedComponentButtonInterfaceComponent.ctorParameters = () => [];
+GlSharedComponentButtonInterfaceComponent.propDecorators = {
+    innerHtml: [{ type: Input }],
+    buttonClick: [{ type: Input }],
+    imageSrc: [{ type: Input }],
+    imageAlt: [{ type: Input }],
+    id: [{ type: Input }]
+};
+
 class GlComponentModule {
 }
 GlComponentModule.decorators = [
@@ -2050,6 +2071,7 @@ GlComponentModule.decorators = [
                     GlSharedComponentButtonAttachmentLinkComponent,
                     GlSharedComponentButtonImageSimpleComponent,
                     GlSharedComponentButtonImageTooltipComponent,
+                    GlSharedComponentButtonInterfaceComponent,
                     GlSharedComponentButtonMenuSimpleComponent,
                     GlSharedComponentButtonMenuTooltipComponent,
                     GlSharedComponentErrorMessageComponent,
@@ -2106,6 +2128,7 @@ GlComponentModule.decorators = [
                     GlSharedComponentButtonImageSimpleComponent,
                     GlSharedComponentButtonAttachmentLinkComponent,
                     GlSharedComponentButtonImageTooltipComponent,
+                    GlSharedComponentButtonInterfaceComponent,
                     GlSharedComponentButtonMenuSimpleComponent,
                     GlSharedComponentButtonMenuTooltipComponent,
                     GlSharedComponentErrorMessageComponent,
@@ -2250,5 +2273,5 @@ GlSharedViewModule.decorators = [
  * Generated bundle index. Do not edit.
  */
 
-export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentAttachmentImagePreviewComponent, GlSharedComponentAttachmentImagePreviewService, GlSharedComponentAttachmentItemComponent, GlSharedComponentButtonAttachmentFileComponent, GlSharedComponentButtonAttachmentFileService, GlSharedComponentButtonAttachmentLinkComponent, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentHeaderDefaultComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputDatepickerLabelComponent, GlSharedComponentInputDatepickerSimpleDayMonthYearComponent, GlSharedComponentInputDatepickerSimpleMonthYearComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelButtonContainerComponent, GlSharedComponentInputTextLabelSimpleComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalAttachmentLinkComponent, GlSharedComponentModalAttachmentLinkService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentPagingComponent, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule, ɵ0 };
+export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentAttachmentImagePreviewComponent, GlSharedComponentAttachmentImagePreviewService, GlSharedComponentAttachmentItemComponent, GlSharedComponentButtonAttachmentFileComponent, GlSharedComponentButtonAttachmentFileService, GlSharedComponentButtonAttachmentLinkComponent, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonInterfaceComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentHeaderDefaultComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputDatepickerLabelComponent, GlSharedComponentInputDatepickerSimpleDayMonthYearComponent, GlSharedComponentInputDatepickerSimpleMonthYearComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelButtonContainerComponent, GlSharedComponentInputTextLabelSimpleComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalAttachmentLinkComponent, GlSharedComponentModalAttachmentLinkService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentPagingComponent, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule, ɵ0 };
 //# sourceMappingURL=gl-ng-frontend.js.map

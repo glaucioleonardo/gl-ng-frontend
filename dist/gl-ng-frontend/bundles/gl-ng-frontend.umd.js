@@ -2427,6 +2427,29 @@
         currentValue: [{ type: i0.Output }]
     };
 
+    var GlSharedComponentButtonInterfaceComponent = /** @class */ (function () {
+        function GlSharedComponentButtonInterfaceComponent() {
+        }
+        GlSharedComponentButtonInterfaceComponent.prototype.ngOnInit = function () {
+        };
+        return GlSharedComponentButtonInterfaceComponent;
+    }());
+    GlSharedComponentButtonInterfaceComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'gl-shared-component-button-interface',
+                    template: "<div\n  class=\"attachment-container dark link-container\"\n  (click)=\"buttonClick()\">\n  <img\n    class=\"attachment-icon\"\n    [src]=\"imageSrc\"\n    [alt]=\"imageAlt\">\n  <span\n    [id]=\"id\"\n    class=\"attachment-file-button\">{{ innerHtml }}</span>\n</div>\n",
+                    styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep .attachment-container{align-items:center;border-radius:.5em;cursor:pointer;display:flex;margin:.2em 0;padding:.4em .3em;position:relative}:host::ng-deep .attachment-container:not(hover){background:rgba(63,64,68,.6);transition:all .2s ease-in-out}:host::ng-deep .attachment-container:hover{background:rgba(63,64,68,.9);transition:all .2s ease-in-out}:host::ng-deep .attachment-container .attachment-icon{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;height:2em;margin:.8em .8em .8em .2em;padding:0;user-select:none;width:2em}:host::ng-deep .attachment-container .attachment-file-button{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#fff;font-family:Montserrat,sans-serif;font-weight:400;user-select:none}"]
+                },] }
+    ];
+    GlSharedComponentButtonInterfaceComponent.ctorParameters = function () { return []; };
+    GlSharedComponentButtonInterfaceComponent.propDecorators = {
+        innerHtml: [{ type: i0.Input }],
+        buttonClick: [{ type: i0.Input }],
+        imageSrc: [{ type: i0.Input }],
+        imageAlt: [{ type: i0.Input }],
+        id: [{ type: i0.Input }]
+    };
+
     var GlComponentModule = /** @class */ (function () {
         function GlComponentModule() {
         }
@@ -2441,6 +2464,7 @@
                         GlSharedComponentButtonAttachmentLinkComponent,
                         GlSharedComponentButtonImageSimpleComponent,
                         GlSharedComponentButtonImageTooltipComponent,
+                        GlSharedComponentButtonInterfaceComponent,
                         GlSharedComponentButtonMenuSimpleComponent,
                         GlSharedComponentButtonMenuTooltipComponent,
                         GlSharedComponentErrorMessageComponent,
@@ -2497,6 +2521,7 @@
                         GlSharedComponentButtonImageSimpleComponent,
                         GlSharedComponentButtonAttachmentLinkComponent,
                         GlSharedComponentButtonImageTooltipComponent,
+                        GlSharedComponentButtonInterfaceComponent,
                         GlSharedComponentButtonMenuSimpleComponent,
                         GlSharedComponentButtonMenuTooltipComponent,
                         GlSharedComponentErrorMessageComponent,
@@ -2662,6 +2687,7 @@
     exports.GlSharedComponentButtonAttachmentLinkComponent = GlSharedComponentButtonAttachmentLinkComponent;
     exports.GlSharedComponentButtonImageSimpleComponent = GlSharedComponentButtonImageSimpleComponent;
     exports.GlSharedComponentButtonImageTooltipComponent = GlSharedComponentButtonImageTooltipComponent;
+    exports.GlSharedComponentButtonInterfaceComponent = GlSharedComponentButtonInterfaceComponent;
     exports.GlSharedComponentButtonMenuSimpleComponent = GlSharedComponentButtonMenuSimpleComponent;
     exports.GlSharedComponentButtonMenuTooltipComponent = GlSharedComponentButtonMenuTooltipComponent;
     exports.GlSharedComponentErrorMessageComponent = GlSharedComponentErrorMessageComponent;

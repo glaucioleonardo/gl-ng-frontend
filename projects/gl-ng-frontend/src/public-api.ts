@@ -24,6 +24,9 @@ export * from './lib/shared/component/button/attachment/link/gl-shared-component
 export * from './lib/shared/component/button/image/simple/gl-shared-component-button-image-simple.component';
 export * from './lib/shared/component/button/image/tooltip/gl-shared-component-button-image-tooltip.component';
 export * from './lib/shared/component/button/image/tooltip/gl-shared-component-button-image-tooltip.interface';
+
+export * from './lib/shared/component/button/interface/gl-shared-component-button-interface.component';
+
 export * from './lib/shared/component/button/menu/simple/gl-shared-component-button-menu-simple.component';
 export * from './lib/shared/component/button/menu/simple/gl-shared-component-button-menu-simple.interface';
 export * from './lib/shared/component/button/menu/tooltip/gl-shared-component-button-menu-tooltip.component';
