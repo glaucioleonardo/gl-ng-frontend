@@ -23,13 +23,19 @@ const MONTH_YEAR_FORMAT = {
   templateUrl: './gl-shared-component-input-datepicker-simple-month-year.component.html',
   styleUrls: ['./gl-shared-component-input-datepicker-simple-month-year.component.scss'],
   providers: [
-    {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
+    {
+      provide: MAT_DATE_LOCALE,
+      useValue: 'pt-BR'
+    },
     {
       provide: DateAdapter,
       useClass: MomentDateAdapter,
       deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
     },
-    {provide: MAT_DATE_FORMATS, useValue: MONTH_YEAR_FORMAT}
+    {
+      provide: MAT_DATE_FORMATS,
+      useValue: MONTH_YEAR_FORMAT
+    }
   ]
 })
 export class GlSharedComponentInputDatepickerSimpleMonthYearComponent {

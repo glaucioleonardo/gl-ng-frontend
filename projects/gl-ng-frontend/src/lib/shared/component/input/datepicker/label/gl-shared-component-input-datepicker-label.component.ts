@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IDatePickerOutput } from '../simple/day-month-year/gl-shared-component-input-datepicker-simple-day-month-year.interface';
 import { IDatePickerMonthYearOutput } from "../simple/month-year/gl-shared-component-input-datepicker-simple-month-year.interface";
+import { THorizontalAlignment } from '../../../title/label/simple/gl-shared-component-title-label-simple.interface';
 
 @Component({
   selector: 'gl-shared-component-input-datepicker-label',
@@ -11,14 +12,14 @@ export class GlSharedComponentInputDatepickerLabelComponent implements OnInit {
   @Input() disabled = false;
   @Input() id: string;
   @Input() placeholder: string;
-  @Input() itemContentAlignment: 'left' | 'center' | 'right' = 'center';
+  @Input() itemContentAlignment: THorizontalAlignment = 'center';
   @Input() class: string;
   @Input() value: Date = null;
   @Input() dateFormat: 'MM/YYYY' | 'DD/MM/YYYY' = 'DD/MM/YYYY';
 
   @Input() maxLength = 255;
   @Input() labelValue: string;
-  @Input() labelAlignment: 'left' | 'center' | 'right' = 'center';
+  @Input() labelAlignment: THorizontalAlignment = 'center';
   @Input() required: boolean;
   @Input() requiredField: string = 'Required field';
 

@@ -10,12 +10,24 @@
     display: flex;
     align-items: center;
 
-    &::after {
-      transform: translateX(-20%);
+    &.top {
+      &::before {
+        left: 108% !important;
+      }
+
+      &.center {
+        &::after {
+          transform: translateX(-20%);
+        }
+      }
+
+      &.right {
+        &::after {
+          transform: translateX(-75%);
+        }
+      }
     }
 
-    &::before {
-      left: 108% !important;
-    }
+
   }
 }

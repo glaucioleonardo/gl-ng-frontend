@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { THorizontalAlignment } from './gl-shared-component-title-label-simple.interface';
 
 @Component({
   selector: 'gl-shared-component-title-label-simple',
@@ -9,7 +10,7 @@ export class GlSharedComponentTitleLabelSimpleComponent {
 
   @Input() labelValue;
   @Input() id;
-  @Input() labelAlignment: string;
+  @Input() labelAlignment: THorizontalAlignment;
   @Input() class = '';
 
   @Input() required = false;

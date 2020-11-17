@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GlSharedComponentButtonImageSimpleComponent } from './gl-shared-component-button-image-simple.component';
 
@@ -6,7 +6,7 @@ describe('GlSharedComponentButtonImageSimpleComponent', () => {
   let component: GlSharedComponentButtonImageSimpleComponent;
   let fixture: ComponentFixture<GlSharedComponentButtonImageSimpleComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GlSharedComponentButtonImageSimpleComponent ]
     })

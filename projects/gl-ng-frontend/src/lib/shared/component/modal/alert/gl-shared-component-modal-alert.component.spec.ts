@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GlSharedComponentModalAlertComponent } from './gl-shared-component-modal-alert.component';
 
@@ -6,7 +6,7 @@ describe('GlSharedComponentModalAlertComponent', () => {
   let component: GlSharedComponentModalAlertComponent;
   let fixture: ComponentFixture<GlSharedComponentModalAlertComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GlSharedComponentModalAlertComponent ]
     })

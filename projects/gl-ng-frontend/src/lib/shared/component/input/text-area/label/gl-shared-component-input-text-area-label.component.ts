@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { THorizontalAlignment } from '../../../title/label/simple/gl-shared-component-title-label-simple.interface';
 
 @Component({
   selector: 'gl-shared-component-input-text-area-label',
@@ -8,7 +9,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class GlSharedComponentInputTextAreaLabelComponent {
   @Input() disabled = false;
   @Input() id: string;
-  @Input() labelAlignment: string;
+  @Input() labelAlignment: THorizontalAlignment;
   @Input() labelValue: string;
   @Input() placeholder: string;
   @Input() itemContentAlignment: string;

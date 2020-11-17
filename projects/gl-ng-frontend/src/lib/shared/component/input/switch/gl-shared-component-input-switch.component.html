@@ -1,0 +1,11 @@
+<div class="switch-main-container {{ enabled ? '' : 'disabled' }}">
+  <span
+    *ngIf="showLabel"
+    class="switch-label {{ labelColor }}">{{ label }}</span>
+  <div
+    (click)="activate()"
+    class="switch-item-container {{ active ? 'active' : '' }}">
+    <div
+      class="switch-item {{ active ? 'active' : '' }}"></div>
+  </div>
+</div>

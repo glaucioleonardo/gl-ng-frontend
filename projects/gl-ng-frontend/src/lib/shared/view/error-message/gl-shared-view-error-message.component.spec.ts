@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GlSharedViewErrorMessageComponent } from './gl-shared-view-error-message.component';
 
@@ -6,7 +6,7 @@ describe('GlSharedViewErrorMessageComponent', () => {
   let component: GlSharedViewErrorMessageComponent;
   let fixture: ComponentFixture<GlSharedViewErrorMessageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GlSharedViewErrorMessageComponent ]
     })

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GlSharedComponentModalAttachmentLinkComponent } from './gl-shared-component-modal-attachment-link.component';
 
@@ -6,7 +6,7 @@ describe('GlSharedComponentModalAttachmentLinkComponent', () => {
   let component: GlSharedComponentModalAttachmentLinkComponent;
   let fixture: ComponentFixture<GlSharedComponentModalAttachmentLinkComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GlSharedComponentModalAttachmentLinkComponent ]
     })

@@ -1,6 +1,6 @@
 import { AfterViewInit, ElementRef, EventEmitter } from '@angular/core';
-import { ISimpleTextResult } from './gl-shared-component-input-text-simple.interface';
-import { ICurrencyTypes } from "gl-w-frontend";
+import { ISimpleTextResult, TInputTextMask } from './gl-shared-component-input-text-simple.interface';
+import { TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-frontend';
 export declare class GlSharedComponentInputTextSimpleComponent implements AfterViewInit {
     inputElement: ElementRef<HTMLInputElement>;
     disabled: boolean;
@@ -10,8 +10,12 @@ export declare class GlSharedComponentInputTextSimpleComponent implements AfterV
     itemContentAlignment: string;
     class: string;
     value: string;
-    mask: string | ICurrencyTypes;
-    maskSymbol: string;
+    mask: TInputTextMask;
+    decimalSeparator: TDecimalSeparators;
+    allowMinus: boolean;
+    rightAlign: boolean;
+    step: number;
+    maskSymbol: TCurrencySymbolTypes;
     maxLength: number;
     currentValue: EventEmitter<ISimpleTextResult>;
     onKeyUp(args: any): void;

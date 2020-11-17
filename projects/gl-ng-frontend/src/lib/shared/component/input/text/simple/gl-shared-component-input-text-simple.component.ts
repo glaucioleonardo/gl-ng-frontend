@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { ISimpleTextResult } from './gl-shared-component-input-text-simple.interface';
-import { ICurrencyTypes, InputMask } from "gl-w-frontend";
-
+import { ISimpleTextResult, TInputTextMask } from './gl-shared-component-input-text-simple.interface';
+import { InputMask, TCurrencySymbolTypes, TCurrencyTypes, TDecimalSeparators, TPercentageTypes } from 'gl-w-frontend';
 
 @Component({
   selector: 'gl-shared-component-input-text-simple',
@@ -19,8 +18,13 @@ export class GlSharedComponentInputTextSimpleComponent implements AfterViewInit 
   @Input() class: string;
   @Input() value: string = null;
 
-  @Input() mask: string | ICurrencyTypes;
-  @Input() maskSymbol: string;
+  @Input() mask: TInputTextMask;
+  @Input() decimalSeparator: TDecimalSeparators = ',';
+  @Input() allowMinus: boolean = true;
+  @Input() rightAlign: boolean = true;
+  @Input() step: number = 5;
+
+  @Input() maskSymbol: TCurrencySymbolTypes;
   @Input() maxLength = 255;
 
   @Output() currentValue: EventEmitter<ISimpleTextResult> = new EventEmitter();
@@ -33,8 +37,31 @@ export class GlSharedComponentInputTextSimpleComponent implements AfterViewInit 
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      if (this.mask != null && this.mask.includes('currency')) {
-        this.inputElement.nativeElement.placeholder = InputMask.currency(this.inputElement.nativeElement, this.mask as ICurrencyTypes, this.maskSymbol);
+      const input = this.inputElement.nativeElement;
+
+      if (this.mask != null) {
+        if (this.mask.includes('currency')) {
+          this.inputElement.nativeElement.placeholder = InputMask.currency(
+            this.inputElement.nativeElement,
+            this.mask as TCurrencyTypes,
+            this.maskSymbol
+          );
+        } else if (this.mask === 'percentage' || this.mask === 'numeric') {
+          this.placeholder = InputMask[this.mask](
+            input,
+            this.allowMinus,
+            this.decimalSeparator,
+            this.rightAlign,
+            this.step
+          );
+        } else if (this.mask === 'integer') {
+          this.placeholder = InputMask.integer(
+            input,
+            this.allowMinus,
+            this.rightAlign,
+            this.step
+          );
+        }
       }
     }, 0);
   }

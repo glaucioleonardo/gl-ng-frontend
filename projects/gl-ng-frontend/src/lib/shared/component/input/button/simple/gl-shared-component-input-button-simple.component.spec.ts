@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GlSharedComponentInputButtonSimpleComponent } from './gl-shared-component-input-button-simple.component';
 
@@ -6,7 +6,7 @@ describe('GlSharedComponentInputButtonSimpleComponent', () => {
   let component: GlSharedComponentInputButtonSimpleComponent;
   let fixture: ComponentFixture<GlSharedComponentInputButtonSimpleComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GlSharedComponentInputButtonSimpleComponent ]
     })

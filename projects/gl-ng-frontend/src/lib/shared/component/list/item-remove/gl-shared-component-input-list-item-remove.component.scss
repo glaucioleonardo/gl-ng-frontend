@@ -1,0 +1,47 @@
+:host::ng-deep {
+  z-index: 100;
+
+  .remove-item {
+    cursor: pointer;
+    position: absolute;
+    height: 0.9em;
+    width: 0.9em;
+    left: -2em;
+    top: 0.2em;
+    z-index: 100;
+
+    &.show-remove {
+      animation: show-remove 0.2s ease-in-out;
+      animation-fill-mode: forwards;
+      animation-delay: 0.1s;
+
+      @keyframes show-remove {
+        from {left: -2em;}
+        to {left: 0.3em;}
+      }
+    }
+
+    &.hide-remove {
+      left: -2em;
+      animation: hide-remove 0.2s ease-in-out;
+      animation-fill-mode: forwards;
+
+      @keyframes hide-remove {
+        from {left: 0.3em;}
+        to {left: -2em;}
+      }
+    }
+
+    &:not(hover) {
+      transform: scale(1);
+      opacity: 0.5;
+      transition: all 0.3s ease-out;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      opacity: 1;
+      transition: all 0.3s ease-in;
+    }
+  }
+}

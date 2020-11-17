@@ -28,11 +28,14 @@ export * from './lib/shared/component/input/autocomplete/simple/gl-shared-compon
 export * from './lib/shared/component/input/autocomplete/simple/gl-shared-component-input-autocomplete-simple.interface';
 export * from './lib/shared/component/input/button/simple/gl-shared-component-input-button-simple.component';
 export * from './lib/shared/component/input/option/simple/gl-shared-component-input-option-simple.component';
+export * from './lib/shared/component/input/switch/gl-shared-component-input-switch.component';
 export * from './lib/shared/component/input/datepicker/simple/day-month-year/gl-shared-component-input-datepicker-simple-day-month-year.component';
 export * from './lib/shared/component/input/datepicker/simple/day-month-year/gl-shared-component-input-datepicker-simple-day-month-year.interface';
 export * from './lib/shared/component/input/datepicker/simple/month-year/gl-shared-component-input-datepicker-simple-month-year.component';
 export * from './lib/shared/component/input/datepicker/simple/month-year/gl-shared-component-input-datepicker-simple-month-year.interface';
 export * from './lib/shared/component/input/datepicker/label/gl-shared-component-input-datepicker-label.component';
+export * from './lib/shared/component/input/text/simple/with-step/gl-shared-component-input-text-simple-with-step.component';
+export * from './lib/shared/component/input/text/simple/with-step/gl-shared-component-input-text-simple-with-step.interface';
 export * from './lib/shared/component/input/text/simple/gl-shared-component-input-text-simple.component';
 export * from './lib/shared/component/input/text/simple/gl-shared-component-input-text-simple.interface';
 export * from './lib/shared/component/input/text/label/button/container/gl-shared-component-input-text-label-button-container.component';
@@ -40,6 +43,8 @@ export * from './lib/shared/component/input/text/label/simple/gl-shared-componen
 export * from './lib/shared/component/input/text-area/simple/gl-shared-component-input-text-area-simple.component';
 export * from './lib/shared/component/input/text-area/label/gl-shared-component-input-text-area-label.component';
 export * from './lib/shared/component/input/button/hyperlink/gl-shared-component-input-button-hyperlink.component';
+export * from './lib/shared/component/list/item-remove/gl-shared-component-input-list-item-remove.component';
+export * from './lib/shared/component/list/item-remove/gl-shared-component-input-list-item-remove.interface';
 export * from './lib/shared/component/logo/square/gl-shared-component-logo-square.component';
 export * from './lib/shared/component/menu/background/gl-shared-component-menu-background.component';
 export * from './lib/shared/component/menu/item/gl-shared-component-menu-item.component';
@@ -55,9 +60,13 @@ export * from './lib/shared/component/modal/alert/gl-shared-component-modal-aler
 export * from './lib/shared/component/modal/header/gl-shared-component-modal-header.component';
 export * from './lib/shared/component/modal/loading/gl-shared-component-modal-loading.component';
 export * from './lib/shared/component/modal/loading/gl-shared-component-modal-loading.service';
+export * from './lib/shared/component/navigation/tab/simple/gl-shared-component-navigation-tab-simple.component';
+export * from './lib/shared/component/navigation/tab/simple/gl-shared-component-navigation-tab-simple.interface';
+export * from './lib/shared/component/navigation/tab/container/gl-shared-component-navigation-tab-container.component';
 export * from './lib/shared/component/paging/gl-shared-component-paging.component';
 export * from './lib/shared/component/paging/gl-shared-component-paging.interface';
 export * from './lib/shared/component/title/label/simple/gl-shared-component-title-label-simple.component';
+export * from './lib/shared/component/title/label/simple/gl-shared-component-title-label-simple.interface';
 export * from './lib/shared/component/title/page/gl-shared-component-title-page.component';
 export * from './lib/shared/component/title/label/button/simple/gl-shared-component-title-label-button-simple.component';
 export * from './lib/shared/component/title/label/button/container/gl-shared-component-title-label-button-container.component';

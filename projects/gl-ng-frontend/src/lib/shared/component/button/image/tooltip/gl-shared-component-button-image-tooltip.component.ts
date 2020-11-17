@@ -1,4 +1,8 @@
 import { Component, Input } from '@angular/core';
+import {
+  TButtonToolTipHorizontalPosition,
+  TButtonToolTipVerticalPosition
+} from './gl-shared-component-button-image-tooltip.interface';
 
 @Component({
   selector: 'gl-shared-component-button-image-tooltip',
@@ -10,7 +14,10 @@ export class GlSharedComponentButtonImageTooltipComponent {
   @Input() alt;
   @Input() src;
   @Input() show = true;
-  @Input() callback;
+  @Input() callback: () => void;
+
+  @Input() verticalPosition: TButtonToolTipVerticalPosition = 'top'
+  @Input() horizontalPosition: TButtonToolTipHorizontalPosition = 'center'
 
   constructor() { }
 }

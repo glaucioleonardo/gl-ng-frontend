@@ -1,5 +1,6 @@
 import { EventEmitter } from '@angular/core';
 import { IComboBoxData } from "gl-w-frontend";
+import { THorizontalAlignment } from '../../../title/label/simple/gl-shared-component-title-label-simple.interface';
 export declare class GlSharedComponentInputAutocompleteLabelComponent {
     currentValue: EventEmitter<any>;
     listItems: IComboBoxData[];
@@ -7,7 +8,7 @@ export declare class GlSharedComponentInputAutocompleteLabelComponent {
     listName: string;
     id: string;
     labelValue: string;
-    labelAlignment: string;
+    labelAlignment: THorizontalAlignment;
     placeholder: string;
     itemContentAlignment: 'left' | 'center' | 'right' | '';
     class: string;

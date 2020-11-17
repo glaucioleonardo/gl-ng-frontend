@@ -6,6 +6,7 @@ import { map, startWith } from 'rxjs/operators';
 import { MatAutocomplete } from '@angular/material/autocomplete';
 import { GlSharedComponentInputAutocompleteSimpleService } from './gl-shared-component-input-autocomplete-simple.service';
 import { IComboBoxData } from "gl-w-frontend";
+import { THorizontalAlignment } from '../../../title/label/simple/gl-shared-component-title-label-simple.interface';
 
 @Component({
   selector: 'gl-shared-component-input-autocomplete-simple',
@@ -34,7 +35,7 @@ export class GlSharedComponentInputAutocompleteSimpleComponent implements OnInit
   @Input() textField: string;
 
   @Input() labelValue: string;
-  @Input() labelAlignment: 'left' | 'center' | 'right';
+  @Input() labelAlignment: THorizontalAlignment;
   @Input() required: boolean;
   @Input() requiredField: string;
 

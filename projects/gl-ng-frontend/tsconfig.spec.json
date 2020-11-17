@@ -5,13 +5,18 @@
     "types": [
       "jasmine",
       "node"
-    ]
+    ],
+    "typeRoots": ["node_modules/@types"]
   },
   "files": [
     "src/test.ts"
   ],
+//  "include": [
+//    "**/*.spec.ts",
+//    "**/*.d.ts"
+//  ],
   "include": [
-    "**/*.spec.ts",
-    "**/*.d.ts"
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts"
   ]
 }

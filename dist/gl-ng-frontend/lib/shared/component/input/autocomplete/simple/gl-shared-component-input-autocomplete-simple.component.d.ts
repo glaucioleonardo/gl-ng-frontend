@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { MatAutocomplete } from '@angular/material/autocomplete';
 import { GlSharedComponentInputAutocompleteSimpleService } from './gl-shared-component-input-autocomplete-simple.service';
 import { IComboBoxData } from "gl-w-frontend";
+import { THorizontalAlignment } from '../../../title/label/simple/gl-shared-component-title-label-simple.interface';
 export declare class GlSharedComponentInputAutocompleteSimpleComponent implements OnInit, OnDestroy, OnChanges {
     private _service;
     overlay: Overlay;
@@ -24,7 +25,7 @@ export declare class GlSharedComponentInputAutocompleteSimpleComponent implement
     valueField: string;
     textField: string;
     labelValue: string;
-    labelAlignment: 'left' | 'center' | 'right';
+    labelAlignment: THorizontalAlignment;
     required: boolean;
     requiredField: string;
     private _loaded;

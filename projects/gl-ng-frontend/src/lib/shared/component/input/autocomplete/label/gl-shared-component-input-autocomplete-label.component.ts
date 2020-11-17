@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IComboBoxData } from "gl-w-frontend";
+import { THorizontalAlignment } from '../../../title/label/simple/gl-shared-component-title-label-simple.interface';
 
 @Component({
   selector: 'gl-shared-component-input-autocomplete-label',
@@ -15,7 +16,7 @@ export class GlSharedComponentInputAutocompleteLabelComponent {
   @Input() listName: string;
   @Input() id: string;
   @Input() labelValue: string;
-  @Input() labelAlignment: string;
+  @Input() labelAlignment: THorizontalAlignment;
   @Input() placeholder: string;
   @Input() itemContentAlignment: 'left' | 'center' | 'right' | '';
   @Input() class: string;

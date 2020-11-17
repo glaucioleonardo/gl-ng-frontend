@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GlSharedComponentInputAutocompleteSimpleComponent } from './gl-shared-component-input-autocomplete-simple.component';
 
@@ -6,7 +6,7 @@ describe('GlSharedComponentInputAutocompleteSimpleComponent', () => {
   let component: GlSharedComponentInputAutocompleteSimpleComponent;
   let fixture: ComponentFixture<GlSharedComponentInputAutocompleteSimpleComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GlSharedComponentInputAutocompleteSimpleComponent ]
     })

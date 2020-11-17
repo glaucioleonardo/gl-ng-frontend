@@ -9,7 +9,7 @@ export class GlSharedComponentButtonImageSimpleComponent {
   @Input() id;
   @Input() alt;
   @Input() src;
-  @Input() callback;
+  @Input() callback: () => void;
 
   constructor() { }
 }

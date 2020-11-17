@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GlSharedComponentButtonMenuTooltipComponent } from './gl-shared-component-button-menu-tooltip.component';
 
@@ -6,7 +6,7 @@ describe('GlSharedComponentButtonMenuTooltipComponent', () => {
   let component: GlSharedComponentButtonMenuTooltipComponent;
   let fixture: ComponentFixture<GlSharedComponentButtonMenuTooltipComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GlSharedComponentButtonMenuTooltipComponent ]
     })

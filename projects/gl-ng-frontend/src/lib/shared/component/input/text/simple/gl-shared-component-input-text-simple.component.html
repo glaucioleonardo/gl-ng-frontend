@@ -3,10 +3,10 @@
   #inputElement
   class="item-content {{ itemContentAlignment }} {{ class }}"
   type="text"
+  autocomplete="off"
+  required
   [id]="id"
   [value]="value"
-  [autocomplete]="'off'"
-  required
   [placeholder]="placeholder"
   (keyup)="onKeyUp($event)"
   [disabled]="disabled"

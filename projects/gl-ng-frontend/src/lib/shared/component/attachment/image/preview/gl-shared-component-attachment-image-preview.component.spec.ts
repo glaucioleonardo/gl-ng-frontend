@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GlSharedComponentAttachmentImagePreviewComponent } from './gl-shared-component-attachment-image-preview.component';
 
@@ -6,7 +6,7 @@ describe('GlSharedComponentAttachmentImagePreviewComponent', () => {
   let component: GlSharedComponentAttachmentImagePreviewComponent;
   let fixture: ComponentFixture<GlSharedComponentAttachmentImagePreviewComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GlSharedComponentAttachmentImagePreviewComponent ]
     })

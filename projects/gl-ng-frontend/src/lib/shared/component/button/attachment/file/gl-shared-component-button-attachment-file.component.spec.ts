@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GlSharedComponentButtonAttachmentFileComponent } from './gl-shared-component-button-attachment-file.component';
 
@@ -6,7 +6,7 @@ describe('GlSharedComponentButtonAttachmentComponent', () => {
   let component: GlSharedComponentButtonAttachmentFileComponent;
   let fixture: ComponentFixture<GlSharedComponentButtonAttachmentFileComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GlSharedComponentButtonAttachmentFileComponent ]
     })
