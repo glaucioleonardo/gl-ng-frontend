@@ -11,6 +11,6 @@ export declare class GlSharedComponentInputDatepickerSimpleDayMonthYearComponent
     currentValue: EventEmitter<IDatePickerOutput>;
     readonly dateFormat: 'DD/MM/YYYY';
     constructor();
-    clear(): void;
+    clear(input: HTMLInputElement): void;
     changed(event: any): void;
 }

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GlSharedComponentInputTextLabelSimpleComponent } from './gl-shared-component-input-text-label-simple.component';
 
@@ -6,7 +6,7 @@ describe('GlSharedComponentInputTextLabelSimpleComponent', () => {
   let component: GlSharedComponentInputTextLabelSimpleComponent;
   let fixture: ComponentFixture<GlSharedComponentInputTextLabelSimpleComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GlSharedComponentInputTextLabelSimpleComponent ]
     })

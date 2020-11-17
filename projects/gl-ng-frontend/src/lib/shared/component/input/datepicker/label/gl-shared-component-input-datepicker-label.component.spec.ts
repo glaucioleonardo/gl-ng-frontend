@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GlSharedComponentInputDatepickerLabelComponent } from './gl-shared-component-input-datepicker-label.component';
 
@@ -6,7 +6,7 @@ describe('GlSharedComponentInputDatepickerLabelComponent', () => {
   let component: GlSharedComponentInputDatepickerLabelComponent;
   let fixture: ComponentFixture<GlSharedComponentInputDatepickerLabelComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GlSharedComponentInputDatepickerLabelComponent ]
     })

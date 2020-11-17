@@ -1,5 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {ICurrencyTypes} from "gl-w-frontend";
+import { TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-frontend';
+import { THorizontalAlignment } from '../../../../../title/label/simple/gl-shared-component-title-label-simple.interface';
+import { TInputTextMask } from '../../../simple/gl-shared-component-input-text-simple.interface';
 
 @Component({
   selector: 'gl-shared-component-input-text-label-button-container',
@@ -10,15 +12,20 @@ export class GlSharedComponentInputTextLabelButtonContainerComponent {
   @Input() disabled = false;
   @Input() autocomplete = false;
   @Input() id: string;
-  @Input() labelAlignment: string;
+  @Input() labelAlignment: THorizontalAlignment;
   @Input() labelValue: string;
   @Input() placeholder: string;
   @Input() itemContentAlignment: string;
   @Input() class: string;
   @Input() value: string = null;
 
-  @Input() mask: string | ICurrencyTypes;
-  @Input() maskSymbol: string;
+  @Input() mask: TInputTextMask;
+  @Input() decimalSeparator: TDecimalSeparators = ',';
+  @Input() maskSymbol: TCurrencySymbolTypes;
+  @Input() allowMinus: boolean = true;
+  @Input() rightAlign: boolean = true;
+  @Input() step: number = 5;
+
   @Input() maxLength = 255;
   @Input() required: boolean;
 
