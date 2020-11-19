@@ -1,0 +1,34 @@
+@import "../../assets/style/colors/gray";
+
+:host::ng-deep {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+
+  .reorder-list-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+    background-color: $dark-gray-2;
+
+    gl-shared-component-button-image-tooltip {
+      &:nth-child(2) {
+        margin: 0 0 0 0.2em;
+      }
+
+      &.disabled {
+        user-select: none;
+        opacity: 0.2;
+        cursor: not-allowed;
+      }
+
+      .button {
+        width: 0.8em;
+        height: 0.8em;
+      }
+    }
+  }
+}
