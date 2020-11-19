@@ -628,7 +628,7 @@ GlSharedComponentButtonMenuSimpleComponent.decorators = [
     { type: Component, args: [{
                 selector: 'gl-shared-component-button-menu-simple',
                 template: "<img *ngIf=\"!hide\"\n  [id]=\"id\"\n  class=\"menu-buttons\"\n  [src]=\"src\"\n  [alt]=\"alt\"\n  (click)=\"callback\">\n",
-                styles: [":host{height:1.45em}:host .menu-buttons{cursor:pointer;height:1.5em;margin:0 0 0 .1em;width:1.5em}:host .menu-buttons:hover{opacity:1;transition:all .1s ease-in-out}:host .menu-buttons:not(hover){opacity:.9;transition:all .2s ease-in-out}"]
+                styles: [":host{height:1.45em}:host .menu-buttons{cursor:pointer;height:1.5em;margin:0 0 0 .11em;width:1.5em}:host .menu-buttons:hover{opacity:1;transition:all .1s ease-in-out}:host .menu-buttons:not(hover){opacity:.9;transition:all .2s ease-in-out}"]
             },] }
 ];
 GlSharedComponentButtonMenuSimpleComponent.ctorParameters = () => [];
@@ -1146,7 +1146,7 @@ GlSharedComponentInputOptionSimpleComponent.decorators = [
     { type: Component, args: [{
                 selector: 'gl-shared-component-input-option-simple',
                 template: "<div class=\"input-container\">\n  <!--suppress HtmlFormInputWithoutLabel -->\n  <input\n    #input\n    [checked]=\"checked\"\n    class=\"input-radio\"\n    type=\"radio\"\n    [value]=\"value\"\n    [id]=\"id\"\n    [name]=\"name\"\n    (click)=\"onCheck(value, input)\">\n  <span (click)=\"onCheck(value, input)\" class=\"check-mark\"></span>\n  <label class=\"label\" [for]=\"id\">{{ label }}</label>\n</div>\n",
-                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep{display:block;flex-grow:1}:host::ng-deep .input-container{align-items:center;display:flex;flex-grow:1;padding:.2em .2em 0;position:relative}:host::ng-deep .input-container:not(hover) .check-mark{background-color:#1a1b1d;transition:all .3s ease-in-out}:host::ng-deep .input-container:hover .check-mark{background-color:#333437;transition:all .3s ease-in-out}:host::ng-deep .input-container .input-radio{cursor:pointer;height:2.2em;left:.75em;opacity:0;position:absolute;top:.9em;width:2.2em}:host::ng-deep .input-container .input-radio:checked~.check-mark{background-color:#1a1b1d}:host::ng-deep .input-container .input-radio:checked~.check-mark:after{background-color:#d24077;border-radius:50%;height:.5em;left:.24em;opacity:1;top:.25em;transition:opacity .5s ease-in-out,background-color .5s ease-in-out;visibility:visible;width:.5em}:host::ng-deep .input-container .check-mark{background-color:#d24077;border-radius:50%;cursor:pointer;height:1em;left:0;margin:0 .2em 0 0;position:relative;top:0;width:1em}:host::ng-deep .input-container .check-mark:after{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;content:\"\";opacity:0;pointer-events:none;position:absolute;transition:opacity .5s ease-in-out,background-color .5s ease-in-out;user-select:none;visibility:collapse}:host::ng-deep .input-container .check-mark:after:hover{transform:scale(1.1);transition:all .2s ease-in-out}:host::ng-deep .input-container .label{color:#64666c;font-family:Montserrat,sans-serif;font-size:.6em;font-weight:400}"]
+                styles: ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900\");:host::ng-deep{display:block;flex-grow:1}:host::ng-deep .input-container{align-items:center;display:flex;flex-grow:1;padding:.2em .2em 0;position:relative}:host::ng-deep .input-container:not(hover) .check-mark{background-color:#1a1b1d;transition:all .3s ease-in-out}:host::ng-deep .input-container:hover .check-mark{background-color:#333437;transition:all .3s ease-in-out}:host::ng-deep .input-container .input-radio{cursor:pointer;height:2.2em;left:.75em;opacity:0;position:absolute;top:.9em;width:2.2em}:host::ng-deep .input-container .input-radio:checked~.check-mark{background-color:#1a1b1d}:host::ng-deep .input-container .input-radio:checked~.check-mark:after{background-color:#d24077;border-radius:15%;height:.5em;left:.24em;opacity:1;top:.25em;transition:opacity .5s ease-in-out,background-color .5s ease-in-out;visibility:visible;width:.5em}:host::ng-deep .input-container .check-mark{background-color:#d24077;border-radius:15%;cursor:pointer;height:1em;left:0;margin:0 .2em 0 0;position:relative;top:0;width:1em}:host::ng-deep .input-container .check-mark:after{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;content:\"\";opacity:0;pointer-events:none;position:absolute;transition:opacity .5s ease-in-out,background-color .5s ease-in-out;user-select:none;visibility:collapse}:host::ng-deep .input-container .check-mark:after:hover{transform:scale(1.1);transition:all .2s ease-in-out}:host::ng-deep .input-container .label{color:#64666c;font-family:Montserrat,sans-serif;font-size:.6em;font-weight:400}"]
             },] }
 ];
 GlSharedComponentInputOptionSimpleComponent.ctorParameters = () => [];
@@ -2312,6 +2312,40 @@ GlSharedComponentInputListItemRemoveComponent.propDecorators = {
     itemToRemove: [{ type: Output }]
 };
 
+class GlSharedComponentInputListItemUpDownComponent {
+    constructor() {
+        this.showUp = true;
+        this.showDown = true;
+        this.moveUpDown$ = new EventEmitter();
+        this.callback = () => { };
+    }
+    onClick(type) {
+        if (type === 'move-down') {
+            if (this.showDown) {
+                this.moveUpDown$.emit(type);
+            }
+        }
+        else {
+            if (this.showUp) {
+                this.moveUpDown$.emit(type);
+            }
+        }
+    }
+}
+GlSharedComponentInputListItemUpDownComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-list-item-up-down',
+                template: "<div class=\"reorder-list-container\">\n\n  <gl-shared-component-button-image-tooltip\n    id=\"move-up-list-item\"\n    alt=\"Move up\"\n    src=\"../assets/img/icon/list/move-up.svg\"\n    [class]=\"showUp ? '' : 'disabled'\"\n    (click)=\"onClick('move-up')\"\n    [callback]=\"callback\"\n  ></gl-shared-component-button-image-tooltip>\n  <gl-shared-component-button-image-tooltip\n    id=\"move-down-list-item\"\n    alt=\"Move down\"\n    src=\"../assets/img/icon/list/move-down.svg\"\n    [class]=\"showDown ? '' : 'disabled'\"\n    (click)=\"onClick('move-down')\"\n    [callback]=\"callback\"\n  ></gl-shared-component-button-image-tooltip>\n</div>\n",
+                styles: [":host::ng-deep,:host::ng-deep .reorder-list-container{display:flex;flex-direction:row;flex-grow:1;justify-content:center}:host::ng-deep .reorder-list-container{align-items:center;background-color:#333437}:host::ng-deep .reorder-list-container gl-shared-component-button-image-tooltip:nth-child(2){margin:0 0 0 .2em}:host::ng-deep .reorder-list-container gl-shared-component-button-image-tooltip.disabled{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;cursor:not-allowed;opacity:.2;user-select:none}:host::ng-deep .reorder-list-container gl-shared-component-button-image-tooltip .button{height:.8em;width:.8em}"]
+            },] }
+];
+GlSharedComponentInputListItemUpDownComponent.ctorParameters = () => [];
+GlSharedComponentInputListItemUpDownComponent.propDecorators = {
+    showUp: [{ type: Input }],
+    showDown: [{ type: Input }],
+    moveUpDown$: [{ type: Output }]
+};
+
 class GlComponentModule {
 }
 GlComponentModule.decorators = [
@@ -2363,7 +2397,8 @@ GlComponentModule.decorators = [
                     GlSharedComponentInputDatepickerLabelComponent,
                     GlSharedComponentInputSwitchComponent,
                     GlSharedComponentInputTextSimpleWithStepComponent,
-                    GlSharedComponentInputListItemRemoveComponent
+                    GlSharedComponentInputListItemRemoveComponent,
+                    GlSharedComponentInputListItemUpDownComponent
                 ],
                 imports: [
                     CommonModule,
@@ -2425,7 +2460,8 @@ GlComponentModule.decorators = [
                     GlSharedComponentInputDatepickerLabelComponent,
                     GlSharedComponentInputSwitchComponent,
                     GlSharedComponentInputTextSimpleWithStepComponent,
-                    GlSharedComponentInputListItemRemoveComponent
+                    GlSharedComponentInputListItemRemoveComponent,
+                    GlSharedComponentInputListItemUpDownComponent
                 ]
             },] }
 ];
@@ -2535,5 +2571,5 @@ GlSharedViewModule.decorators = [
  * Generated bundle index. Do not edit.
  */
 
-export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentAttachmentImagePreviewComponent, GlSharedComponentAttachmentImagePreviewService, GlSharedComponentAttachmentItemComponent, GlSharedComponentButtonAttachmentFileComponent, GlSharedComponentButtonAttachmentFileService, GlSharedComponentButtonAttachmentLinkComponent, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonInterfaceComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentHeaderDefaultComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputDatepickerLabelComponent, GlSharedComponentInputDatepickerSimpleDayMonthYearComponent, GlSharedComponentInputDatepickerSimpleMonthYearComponent, GlSharedComponentInputListItemRemoveComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputSwitchComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelButtonContainerComponent, GlSharedComponentInputTextLabelSimpleComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentInputTextSimpleWithStepComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalAttachmentLinkComponent, GlSharedComponentModalAttachmentLinkService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentNavigationTabContainerComponent, GlSharedComponentNavigationTabSimpleComponent, GlSharedComponentPagingComponent, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule, ɵ0 };
+export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentAttachmentImagePreviewComponent, GlSharedComponentAttachmentImagePreviewService, GlSharedComponentAttachmentItemComponent, GlSharedComponentButtonAttachmentFileComponent, GlSharedComponentButtonAttachmentFileService, GlSharedComponentButtonAttachmentLinkComponent, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonInterfaceComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentHeaderDefaultComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputDatepickerLabelComponent, GlSharedComponentInputDatepickerSimpleDayMonthYearComponent, GlSharedComponentInputDatepickerSimpleMonthYearComponent, GlSharedComponentInputListItemRemoveComponent, GlSharedComponentInputListItemUpDownComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputSwitchComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelButtonContainerComponent, GlSharedComponentInputTextLabelSimpleComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentInputTextSimpleWithStepComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalAttachmentLinkComponent, GlSharedComponentModalAttachmentLinkService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentNavigationTabContainerComponent, GlSharedComponentNavigationTabSimpleComponent, GlSharedComponentPagingComponent, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule, ɵ0 };
 //# sourceMappingURL=gl-ng-frontend.js.map

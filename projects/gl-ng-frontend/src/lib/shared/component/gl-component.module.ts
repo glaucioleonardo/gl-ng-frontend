@@ -57,6 +57,7 @@ import { GlSharedComponentInputDatepickerLabelComponent } from './input/datepick
 import { GlSharedComponentInputSwitchComponent } from './input/switch/gl-shared-component-input-switch.component';
 import { GlSharedComponentInputTextSimpleWithStepComponent } from './input/text/simple/with-step/gl-shared-component-input-text-simple-with-step.component';
 import { GlSharedComponentInputListItemRemoveComponent } from './list/item-remove/gl-shared-component-input-list-item-remove.component';
+import { GlSharedComponentInputListItemUpDownComponent } from './list/item-up-down/gl-shared-component-input-list-item-up-down.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +107,8 @@ import { GlSharedComponentInputListItemRemoveComponent } from './list/item-remov
     GlSharedComponentInputDatepickerLabelComponent,
     GlSharedComponentInputSwitchComponent,
     GlSharedComponentInputTextSimpleWithStepComponent,
-    GlSharedComponentInputListItemRemoveComponent
+    GlSharedComponentInputListItemRemoveComponent,
+    GlSharedComponentInputListItemUpDownComponent
   ],
   imports: [
     CommonModule,
@@ -168,7 +170,8 @@ import { GlSharedComponentInputListItemRemoveComponent } from './list/item-remov
     GlSharedComponentInputDatepickerLabelComponent,
     GlSharedComponentInputSwitchComponent,
     GlSharedComponentInputTextSimpleWithStepComponent,
-    GlSharedComponentInputListItemRemoveComponent
+    GlSharedComponentInputListItemRemoveComponent,
+    GlSharedComponentInputListItemUpDownComponent
   ]
 })
 export class GlComponentModule { }

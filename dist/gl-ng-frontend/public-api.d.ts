@@ -45,6 +45,8 @@ export * from './lib/shared/component/input/text-area/label/gl-shared-component-
 export * from './lib/shared/component/input/button/hyperlink/gl-shared-component-input-button-hyperlink.component';
 export * from './lib/shared/component/list/item-remove/gl-shared-component-input-list-item-remove.component';
 export * from './lib/shared/component/list/item-remove/gl-shared-component-input-list-item-remove.interface';
+export * from './lib/shared/component/list/item-up-down/gl-shared-component-input-list-item-up-down.component';
+export * from './lib/shared/component/list/item-up-down/gl-shared-component-input-list-item-up-down.interface';
 export * from './lib/shared/component/logo/square/gl-shared-component-logo-square.component';
 export * from './lib/shared/component/menu/background/gl-shared-component-menu-background.component';
 export * from './lib/shared/component/menu/item/gl-shared-component-menu-item.component';

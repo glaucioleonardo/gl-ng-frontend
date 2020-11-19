@@ -43,7 +43,7 @@
         left: 0.24em;
         width: 0.5em;
         height: 0.5em;
-        border-radius: 50%;
+        border-radius: 15%;
         background-color: $pink;
 
         transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
@@ -58,7 +58,7 @@
       height: 1em;
       width: 1em;
       background-color: $pink;
-      border-radius: 50%;
+      border-radius: 15%;
       margin: 0 0.2em 0 0;
 
       /* Create the indicator (the dot/circle - hidden when not checked) */
