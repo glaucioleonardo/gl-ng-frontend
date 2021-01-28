@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-frontend",
-  "version": "2.5.1",
+  "version": "2.6.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "assets": "assets",
   "main": "lib/public-api.ts",
@@ -39,16 +39,16 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/cdk": "^11.0.0",
-    "@angular/material": "^11.0.0",
-    "@angular/common": "~11.0.0",
-    "@angular/core": "~11.0.0",
-    "@angular/material-moment-adapter": "^11.0.0"
+    "@angular/cdk": "^11.1.1",
+    "@angular/material": "^11.1.1",
+    "@angular/common": "~11.1.1",
+    "@angular/core": "~11.1.1",
+    "@angular/material-moment-adapter": "^11.1.1"
   },
   "scripts": {
     "postinstall": "ngcc"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.1.0"
   }
 }
