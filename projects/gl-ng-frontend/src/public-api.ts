@@ -48,6 +48,9 @@ export * from './lib/shared/component/input/autocomplete/simple/gl-shared-compon
 export * from './lib/shared/component/input/autocomplete/simple/gl-shared-component-input-autocomplete-simple.service';
 export * from './lib/shared/component/input/autocomplete/simple/gl-shared-component-input-autocomplete-simple.interface';
 
+export * from './lib/shared/component/input/check-box/simple/gl-shared-component-input-check-box-simple.component';
+export * from './lib/shared/component/input/check-box/label/gl-shared-component-input-check-box-label.component';
+
 export * from './lib/shared/component/input/button/simple/gl-shared-component-input-button-simple.component';
 export * from './lib/shared/component/input/option/simple/gl-shared-component-input-option-simple.component';
 

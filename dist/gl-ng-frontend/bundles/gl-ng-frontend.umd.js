@@ -2753,6 +2753,60 @@
         moveUpDown$: [{ type: i0.Output }]
     };
 
+    var GlSharedComponentInputCheckBoxSimpleComponent = /** @class */ (function () {
+        function GlSharedComponentInputCheckBoxSimpleComponent() {
+            this.checked = false;
+            this.showBackground = true;
+            this.checked$ = new i0.EventEmitter();
+        }
+        GlSharedComponentInputCheckBoxSimpleComponent.prototype.onChecked = function (checked) {
+            this.checked = checked;
+            this.checked$.emit(checked);
+        };
+        return GlSharedComponentInputCheckBoxSimpleComponent;
+    }());
+    GlSharedComponentInputCheckBoxSimpleComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'gl-shared-component-input-check-box-simple',
+                    template: "<div class=\"check-box-container {{ showBackground ? '' : 'transparent' }}\">\n  <img\n    *ngIf=\"!checked\"\n    (click)=\"onChecked(true)\"\n    alt=\"Checked\"\n    class=\"check-box unchecked\"\n    src=\"../assets/img/icon/check-box/unchecked.svg\">\n\n  <img\n    *ngIf=\"checked\"\n    (click)=\"onChecked(false)\"\n    alt=\"Unchecked\"\n    class=\"check-box checked\"\n    src=\"../assets/img/icon/check-box/checked.svg\">\n\n</div>\n",
+                    styles: [":host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .check-box-container{align-items:center;background-color:#333437;display:flex;flex-grow:1;justify-content:center}:host::ng-deep .check-box-container.transparent{background-color:transparent}:host::ng-deep .check-box-container .check-box{height:.8em;width:.8em}:host::ng-deep .check-box-container .check-box.checked:hover{opacity:1;transition:all .2s ease-in-out}:host::ng-deep .check-box-container .check-box.checked:not(hover){opacity:.8;transition:all .2s ease-in-out}:host::ng-deep .check-box-container .check-box.unchecked:hover{opacity:.6;transition:all .2s ease-in-out}:host::ng-deep .check-box-container .check-box.unchecked:not(hover){opacity:.3;transition:all .2s ease-in-out}"]
+                },] }
+    ];
+    GlSharedComponentInputCheckBoxSimpleComponent.ctorParameters = function () { return []; };
+    GlSharedComponentInputCheckBoxSimpleComponent.propDecorators = {
+        checked: [{ type: i0.Input }],
+        showBackground: [{ type: i0.Input }],
+        checked$: [{ type: i0.Output }]
+    };
+
+    var GlSharedComponentInputCheckBoxLabelComponent = /** @class */ (function () {
+        function GlSharedComponentInputCheckBoxLabelComponent() {
+            this.checked = false;
+            this.showBackground = true;
+            this.labelAlignment = 'center';
+            this.checked$ = new i0.EventEmitter();
+        }
+        return GlSharedComponentInputCheckBoxLabelComponent;
+    }());
+    GlSharedComponentInputCheckBoxLabelComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'gl-shared-component-input-check-box-label',
+                    template: "<gl-shared-component-title-label-simple\n  [labelAlignment]=\"labelAlignment\"\n  [required]=\"required\"\n  [labelValue]=\"labelValue\"\n  [requiredLabel]=\"requiredLabelDescription\"\n  [id]=\"labelId\"\n></gl-shared-component-title-label-simple>\n<gl-shared-component-input-check-box-simple\n  [checked]=\"checked\"\n  [showBackground]=\"showBackground\"\n  (checked$)=\"checked$.emit($event)\"\n></gl-shared-component-input-check-box-simple>\n",
+                    styles: [":host::ng-deep{display:flex;flex-direction:column;flex-grow:1}"]
+                },] }
+    ];
+    GlSharedComponentInputCheckBoxLabelComponent.ctorParameters = function () { return []; };
+    GlSharedComponentInputCheckBoxLabelComponent.propDecorators = {
+        checked: [{ type: i0.Input }],
+        showBackground: [{ type: i0.Input }],
+        labelId: [{ type: i0.Input }],
+        labelAlignment: [{ type: i0.Input }],
+        required: [{ type: i0.Input }],
+        labelValue: [{ type: i0.Input }],
+        requiredLabelDescription: [{ type: i0.Input }],
+        checked$: [{ type: i0.Output }]
+    };
+
     var GlComponentModule = /** @class */ (function () {
         function GlComponentModule() {
         }
@@ -2808,7 +2862,9 @@
                         GlSharedComponentInputSwitchComponent,
                         GlSharedComponentInputTextSimpleWithStepComponent,
                         GlSharedComponentInputListItemRemoveComponent,
-                        GlSharedComponentInputListItemUpDownComponent
+                        GlSharedComponentInputListItemUpDownComponent,
+                        GlSharedComponentInputCheckBoxSimpleComponent,
+                        GlSharedComponentInputCheckBoxLabelComponent
                     ],
                     imports: [
                         common.CommonModule,
@@ -2871,7 +2927,9 @@
                         GlSharedComponentInputSwitchComponent,
                         GlSharedComponentInputTextSimpleWithStepComponent,
                         GlSharedComponentInputListItemRemoveComponent,
-                        GlSharedComponentInputListItemUpDownComponent
+                        GlSharedComponentInputListItemUpDownComponent,
+                        GlSharedComponentInputCheckBoxSimpleComponent,
+                        GlSharedComponentInputCheckBoxLabelComponent
                     ]
                 },] }
     ];
@@ -3017,6 +3075,8 @@
     exports.GlSharedComponentInputAutocompleteSimpleService = GlSharedComponentInputAutocompleteSimpleService;
     exports.GlSharedComponentInputButtonHyperlinkComponent = GlSharedComponentInputButtonHyperlinkComponent;
     exports.GlSharedComponentInputButtonSimpleComponent = GlSharedComponentInputButtonSimpleComponent;
+    exports.GlSharedComponentInputCheckBoxLabelComponent = GlSharedComponentInputCheckBoxLabelComponent;
+    exports.GlSharedComponentInputCheckBoxSimpleComponent = GlSharedComponentInputCheckBoxSimpleComponent;
     exports.GlSharedComponentInputDatepickerLabelComponent = GlSharedComponentInputDatepickerLabelComponent;
     exports.GlSharedComponentInputDatepickerSimpleDayMonthYearComponent = GlSharedComponentInputDatepickerSimpleDayMonthYearComponent;
     exports.GlSharedComponentInputDatepickerSimpleMonthYearComponent = GlSharedComponentInputDatepickerSimpleMonthYearComponent;

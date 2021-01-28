@@ -1,0 +1,12 @@
+<gl-shared-component-title-label-simple
+  [labelAlignment]="labelAlignment"
+  [required]="required"
+  [labelValue]="labelValue"
+  [requiredLabel]="requiredLabelDescription"
+  [id]="labelId"
+></gl-shared-component-title-label-simple>
+<gl-shared-component-input-check-box-simple
+  [checked]="checked"
+  [showBackground]="showBackground"
+  (checked$)="checked$.emit($event)"
+></gl-shared-component-input-check-box-simple>

@@ -1,0 +1,46 @@
+@import "../../assets/style/colors/gray";
+
+:host::ng-deep {
+  display: flex;
+  flex-grow: 1;
+
+  .check-box-container {
+    display: flex;
+    flex-grow: 1;
+    background-color: $dark-gray-2;
+    align-items: center;
+    justify-content: center;
+
+    &.transparent {
+      background-color: transparent;
+    }
+
+    .check-box {
+      width: 0.8em;
+      height: 0.8em;
+
+      &.checked {
+        &:hover {
+          opacity: 1;
+          transition: all 0.2s ease-in-out;
+        }
+
+        &:not(hover) {
+          opacity: 0.8;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+      &.unchecked {
+        &:hover {
+          opacity: 0.6;
+          transition: all 0.2s ease-in-out;
+        }
+
+        &:not(hover) {
+          opacity: 0.3;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+}

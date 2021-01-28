@@ -58,6 +58,8 @@ import { GlSharedComponentInputSwitchComponent } from './input/switch/gl-shared-
 import { GlSharedComponentInputTextSimpleWithStepComponent } from './input/text/simple/with-step/gl-shared-component-input-text-simple-with-step.component';
 import { GlSharedComponentInputListItemRemoveComponent } from './list/item-remove/gl-shared-component-input-list-item-remove.component';
 import { GlSharedComponentInputListItemUpDownComponent } from './list/item-up-down/gl-shared-component-input-list-item-up-down.component';
+import { GlSharedComponentInputCheckBoxSimpleComponent } from './input/check-box/simple/gl-shared-component-input-check-box-simple.component';
+import { GlSharedComponentInputCheckBoxLabelComponent } from './input/check-box/label/gl-shared-component-input-check-box-label.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +110,9 @@ import { GlSharedComponentInputListItemUpDownComponent } from './list/item-up-do
     GlSharedComponentInputSwitchComponent,
     GlSharedComponentInputTextSimpleWithStepComponent,
     GlSharedComponentInputListItemRemoveComponent,
-    GlSharedComponentInputListItemUpDownComponent
+    GlSharedComponentInputListItemUpDownComponent,
+    GlSharedComponentInputCheckBoxSimpleComponent,
+    GlSharedComponentInputCheckBoxLabelComponent
   ],
   imports: [
     CommonModule,
@@ -171,7 +175,9 @@ import { GlSharedComponentInputListItemUpDownComponent } from './list/item-up-do
     GlSharedComponentInputSwitchComponent,
     GlSharedComponentInputTextSimpleWithStepComponent,
     GlSharedComponentInputListItemRemoveComponent,
-    GlSharedComponentInputListItemUpDownComponent
+    GlSharedComponentInputListItemUpDownComponent,
+    GlSharedComponentInputCheckBoxSimpleComponent,
+    GlSharedComponentInputCheckBoxLabelComponent
   ]
 })
 export class GlComponentModule { }

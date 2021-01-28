@@ -2346,6 +2346,58 @@ GlSharedComponentInputListItemUpDownComponent.propDecorators = {
     moveUpDown$: [{ type: Output }]
 };
 
+class GlSharedComponentInputCheckBoxSimpleComponent {
+    constructor() {
+        this.checked = false;
+        this.showBackground = true;
+        this.checked$ = new EventEmitter();
+    }
+    onChecked(checked) {
+        this.checked = checked;
+        this.checked$.emit(checked);
+    }
+}
+GlSharedComponentInputCheckBoxSimpleComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-check-box-simple',
+                template: "<div class=\"check-box-container {{ showBackground ? '' : 'transparent' }}\">\n  <img\n    *ngIf=\"!checked\"\n    (click)=\"onChecked(true)\"\n    alt=\"Checked\"\n    class=\"check-box unchecked\"\n    src=\"../assets/img/icon/check-box/unchecked.svg\">\n\n  <img\n    *ngIf=\"checked\"\n    (click)=\"onChecked(false)\"\n    alt=\"Unchecked\"\n    class=\"check-box checked\"\n    src=\"../assets/img/icon/check-box/checked.svg\">\n\n</div>\n",
+                styles: [":host::ng-deep{display:flex;flex-grow:1}:host::ng-deep .check-box-container{align-items:center;background-color:#333437;display:flex;flex-grow:1;justify-content:center}:host::ng-deep .check-box-container.transparent{background-color:transparent}:host::ng-deep .check-box-container .check-box{height:.8em;width:.8em}:host::ng-deep .check-box-container .check-box.checked:hover{opacity:1;transition:all .2s ease-in-out}:host::ng-deep .check-box-container .check-box.checked:not(hover){opacity:.8;transition:all .2s ease-in-out}:host::ng-deep .check-box-container .check-box.unchecked:hover{opacity:.6;transition:all .2s ease-in-out}:host::ng-deep .check-box-container .check-box.unchecked:not(hover){opacity:.3;transition:all .2s ease-in-out}"]
+            },] }
+];
+GlSharedComponentInputCheckBoxSimpleComponent.ctorParameters = () => [];
+GlSharedComponentInputCheckBoxSimpleComponent.propDecorators = {
+    checked: [{ type: Input }],
+    showBackground: [{ type: Input }],
+    checked$: [{ type: Output }]
+};
+
+class GlSharedComponentInputCheckBoxLabelComponent {
+    constructor() {
+        this.checked = false;
+        this.showBackground = true;
+        this.labelAlignment = 'center';
+        this.checked$ = new EventEmitter();
+    }
+}
+GlSharedComponentInputCheckBoxLabelComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'gl-shared-component-input-check-box-label',
+                template: "<gl-shared-component-title-label-simple\n  [labelAlignment]=\"labelAlignment\"\n  [required]=\"required\"\n  [labelValue]=\"labelValue\"\n  [requiredLabel]=\"requiredLabelDescription\"\n  [id]=\"labelId\"\n></gl-shared-component-title-label-simple>\n<gl-shared-component-input-check-box-simple\n  [checked]=\"checked\"\n  [showBackground]=\"showBackground\"\n  (checked$)=\"checked$.emit($event)\"\n></gl-shared-component-input-check-box-simple>\n",
+                styles: [":host::ng-deep{display:flex;flex-direction:column;flex-grow:1}"]
+            },] }
+];
+GlSharedComponentInputCheckBoxLabelComponent.ctorParameters = () => [];
+GlSharedComponentInputCheckBoxLabelComponent.propDecorators = {
+    checked: [{ type: Input }],
+    showBackground: [{ type: Input }],
+    labelId: [{ type: Input }],
+    labelAlignment: [{ type: Input }],
+    required: [{ type: Input }],
+    labelValue: [{ type: Input }],
+    requiredLabelDescription: [{ type: Input }],
+    checked$: [{ type: Output }]
+};
+
 class GlComponentModule {
 }
 GlComponentModule.decorators = [
@@ -2398,7 +2450,9 @@ GlComponentModule.decorators = [
                     GlSharedComponentInputSwitchComponent,
                     GlSharedComponentInputTextSimpleWithStepComponent,
                     GlSharedComponentInputListItemRemoveComponent,
-                    GlSharedComponentInputListItemUpDownComponent
+                    GlSharedComponentInputListItemUpDownComponent,
+                    GlSharedComponentInputCheckBoxSimpleComponent,
+                    GlSharedComponentInputCheckBoxLabelComponent
                 ],
                 imports: [
                     CommonModule,
@@ -2461,7 +2515,9 @@ GlComponentModule.decorators = [
                     GlSharedComponentInputSwitchComponent,
                     GlSharedComponentInputTextSimpleWithStepComponent,
                     GlSharedComponentInputListItemRemoveComponent,
-                    GlSharedComponentInputListItemUpDownComponent
+                    GlSharedComponentInputListItemUpDownComponent,
+                    GlSharedComponentInputCheckBoxSimpleComponent,
+                    GlSharedComponentInputCheckBoxLabelComponent
                 ]
             },] }
 ];
@@ -2571,5 +2627,5 @@ GlSharedViewModule.decorators = [
  * Generated bundle index. Do not edit.
  */
 
-export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentAttachmentImagePreviewComponent, GlSharedComponentAttachmentImagePreviewService, GlSharedComponentAttachmentItemComponent, GlSharedComponentButtonAttachmentFileComponent, GlSharedComponentButtonAttachmentFileService, GlSharedComponentButtonAttachmentLinkComponent, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonInterfaceComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentHeaderDefaultComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputDatepickerLabelComponent, GlSharedComponentInputDatepickerSimpleDayMonthYearComponent, GlSharedComponentInputDatepickerSimpleMonthYearComponent, GlSharedComponentInputListItemRemoveComponent, GlSharedComponentInputListItemUpDownComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputSwitchComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelButtonContainerComponent, GlSharedComponentInputTextLabelSimpleComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentInputTextSimpleWithStepComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalAttachmentLinkComponent, GlSharedComponentModalAttachmentLinkService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentNavigationTabContainerComponent, GlSharedComponentNavigationTabSimpleComponent, GlSharedComponentPagingComponent, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule, ɵ0 };
+export { CoreDirectivesAutofocusDirective, GlComponentModule, GlCoreModule, GlNgFrontendModule, GlSharedComponentAttachmentImagePreviewComponent, GlSharedComponentAttachmentImagePreviewService, GlSharedComponentAttachmentItemComponent, GlSharedComponentButtonAttachmentFileComponent, GlSharedComponentButtonAttachmentFileService, GlSharedComponentButtonAttachmentLinkComponent, GlSharedComponentButtonImageSimpleComponent, GlSharedComponentButtonImageTooltipComponent, GlSharedComponentButtonInterfaceComponent, GlSharedComponentButtonMenuSimpleComponent, GlSharedComponentButtonMenuTooltipComponent, GlSharedComponentErrorMessageComponent, GlSharedComponentFilterComponent, GlSharedComponentFilterContainerComponent, GlSharedComponentFilterService, GlSharedComponentFooterContainerComponent, GlSharedComponentFooterSimpleComponent, GlSharedComponentHeaderDefaultComponent, GlSharedComponentInputAutocompleteLabelComponent, GlSharedComponentInputAutocompleteSimpleComponent, GlSharedComponentInputAutocompleteSimpleService, GlSharedComponentInputButtonHyperlinkComponent, GlSharedComponentInputButtonSimpleComponent, GlSharedComponentInputCheckBoxLabelComponent, GlSharedComponentInputCheckBoxSimpleComponent, GlSharedComponentInputDatepickerLabelComponent, GlSharedComponentInputDatepickerSimpleDayMonthYearComponent, GlSharedComponentInputDatepickerSimpleMonthYearComponent, GlSharedComponentInputListItemRemoveComponent, GlSharedComponentInputListItemUpDownComponent, GlSharedComponentInputOptionSimpleComponent, GlSharedComponentInputSwitchComponent, GlSharedComponentInputTextAreaLabelComponent, GlSharedComponentInputTextAreaSimpleComponent, GlSharedComponentInputTextLabelButtonContainerComponent, GlSharedComponentInputTextLabelSimpleComponent, GlSharedComponentInputTextSimpleComponent, GlSharedComponentInputTextSimpleWithStepComponent, GlSharedComponentLogoSquareComponent, GlSharedComponentMenuBackgroundComponent, GlSharedComponentMenuComponent, GlSharedComponentMenuItemComponent, GlSharedComponentMenuService, GlSharedComponentModalAlertComponent, GlSharedComponentModalAlertService, GlSharedComponentModalAttachmentLinkComponent, GlSharedComponentModalAttachmentLinkService, GlSharedComponentModalHeaderComponent, GlSharedComponentModalLoadingComponent, GlSharedComponentModalLoadingService, GlSharedComponentNavigationTabContainerComponent, GlSharedComponentNavigationTabSimpleComponent, GlSharedComponentPagingComponent, GlSharedComponentTitleLabelButtonContainerComponent, GlSharedComponentTitleLabelButtonSimpleComponent, GlSharedComponentTitleLabelSimpleComponent, GlSharedComponentTitlePageComponent, GlSharedModule, GlSharedViewErrorMessageComponent, GlSharedViewModule, ɵ0 };
 //# sourceMappingURL=gl-ng-frontend.js.map
