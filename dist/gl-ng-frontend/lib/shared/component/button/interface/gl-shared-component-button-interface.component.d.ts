@@ -8,4 +8,3 @@ export declare class GlSharedComponentButtonInterfaceComponent implements OnInit
     constructor();
     ngOnInit(): void;
 }
-//# sourceMappingURL=gl-shared-component-button-interface.component.d.ts.map

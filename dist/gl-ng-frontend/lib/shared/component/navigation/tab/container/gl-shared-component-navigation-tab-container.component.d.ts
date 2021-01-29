@@ -8,4 +8,3 @@ export declare class GlSharedComponentNavigationTabContainerComponent {
     reset(): void;
     tabHovering(hovering: boolean, sequence: number, active: boolean): void;
 }
-//# sourceMappingURL=gl-shared-component-navigation-tab-container.component.d.ts.map

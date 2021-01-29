@@ -6,4 +6,3 @@ export declare class GlSharedComponentInputCheckBoxSimpleComponent {
     constructor();
     onChecked(checked: boolean): void;
 }
-//# sourceMappingURL=gl-shared-component-input-check-box-simple.component.d.ts.map
