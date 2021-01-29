@@ -22,3 +22,4 @@ export declare class GlSharedComponentInputAutocompleteLabelComponent {
     constructor();
     onCurrentValue(value: any): void;
 }
+//# sourceMappingURL=gl-shared-component-input-autocomplete-label.component.d.ts.map

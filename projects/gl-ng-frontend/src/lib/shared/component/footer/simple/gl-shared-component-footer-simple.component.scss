@@ -35,4 +35,26 @@
       margin: 0 0 0 0.3em;
     }
   }
+
+
+  @media screen and (min-device-width: 280px) and (orientation: portrait) {
+      .footer-container {
+        font-size: 7vw;
+      }
+  }
+  @media screen and (min-device-width: 700px) and (orientation: portrait) {
+    .footer-container {
+      font-size: 6vw;
+    }
+  }
+  @media screen and (min-device-width: 800px) and (orientation: portrait) {
+    .footer-container {
+      font-size: 5vw;
+    }
+  }
+  @media screen and (min-device-width: 1300px) and (orientation: portrait) {
+    .footer-container {
+      font-size: 4vw;
+    }
+  }
 }

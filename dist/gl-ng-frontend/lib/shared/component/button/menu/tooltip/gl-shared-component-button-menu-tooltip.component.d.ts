@@ -8,3 +8,4 @@ export declare class GlSharedComponentButtonMenuTooltipComponent {
     callback: any;
     constructor();
 }
+//# sourceMappingURL=gl-shared-component-button-menu-tooltip.component.d.ts.map

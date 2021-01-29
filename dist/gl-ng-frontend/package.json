@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-frontend",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "assets": "assets",
   "main": "bundles/gl-ng-frontend.umd.js",

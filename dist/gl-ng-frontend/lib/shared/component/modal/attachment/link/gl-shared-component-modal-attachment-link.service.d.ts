@@ -24,3 +24,4 @@ export declare class GlSharedComponentModalAttachmentLinkService {
     edit(name: string, url: string, editId: number): void;
     onModalKeyUp(e: KeyboardEvent): Promise<void>;
 }
+//# sourceMappingURL=gl-shared-component-modal-attachment-link.service.d.ts.map

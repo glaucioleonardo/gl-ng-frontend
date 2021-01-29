@@ -16,3 +16,4 @@ export declare class GlSharedComponentInputTextAreaLabelComponent {
     constructor();
     onKeyUp(values: any): void;
 }
+//# sourceMappingURL=gl-shared-component-input-text-area-label.component.d.ts.map

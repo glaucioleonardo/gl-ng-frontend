@@ -27,3 +27,4 @@ export declare class GlSharedComponentFilterComponent implements AfterViewInit {
     onApply(): void;
     onClear(): void;
 }
+//# sourceMappingURL=gl-shared-component-filter.component.d.ts.map

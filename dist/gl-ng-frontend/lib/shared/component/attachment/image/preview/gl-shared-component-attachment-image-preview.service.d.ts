@@ -22,3 +22,4 @@ export declare class GlSharedComponentAttachmentImagePreviewService {
     addImage(): void;
     removeImage(init?: boolean): void;
 }
+//# sourceMappingURL=gl-shared-component-attachment-image-preview.service.d.ts.map

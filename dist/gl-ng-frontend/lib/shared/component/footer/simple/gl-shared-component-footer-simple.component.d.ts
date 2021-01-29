@@ -4,3 +4,4 @@ export declare class GlSharedComponentFooterSimpleComponent {
     imageDescription: string;
     constructor();
 }
+//# sourceMappingURL=gl-shared-component-footer-simple.component.d.ts.map

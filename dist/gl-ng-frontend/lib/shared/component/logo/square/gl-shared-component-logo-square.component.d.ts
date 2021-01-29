@@ -5,3 +5,4 @@ export declare class GlSharedComponentLogoSquareComponent {
     verticalPosition: 'top' | 'bottom';
     constructor();
 }
+//# sourceMappingURL=gl-shared-component-logo-square.component.d.ts.map

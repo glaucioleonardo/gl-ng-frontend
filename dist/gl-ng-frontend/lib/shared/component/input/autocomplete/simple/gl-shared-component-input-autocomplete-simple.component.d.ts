@@ -44,3 +44,4 @@ export declare class GlSharedComponentInputAutocompleteSimpleComponent implement
     ngOnDestroy(): void;
     ngOnChanges(changes: SimpleChanges): void;
 }
+//# sourceMappingURL=gl-shared-component-input-autocomplete-simple.component.d.ts.map

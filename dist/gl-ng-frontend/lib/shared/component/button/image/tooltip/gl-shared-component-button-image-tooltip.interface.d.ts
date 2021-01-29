@@ -9,3 +9,4 @@ export interface IImageButtonTooltip {
 }
 export declare type TButtonToolTipVerticalPosition = 'top' | 'bottom';
 export declare type TButtonToolTipHorizontalPosition = 'left' | 'center' | 'right';
+//# sourceMappingURL=gl-shared-component-button-image-tooltip.interface.d.ts.map

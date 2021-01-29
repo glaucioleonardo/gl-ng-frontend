@@ -9,3 +9,4 @@ export declare class GlSharedComponentButtonImageTooltipComponent {
     horizontalPosition: TButtonToolTipHorizontalPosition;
     constructor();
 }
+//# sourceMappingURL=gl-shared-component-button-image-tooltip.component.d.ts.map

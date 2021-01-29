@@ -18,3 +18,4 @@ export interface IItemsPerPage {
     class: string;
     pageSize: number;
 }
+//# sourceMappingURL=gl-shared-component-paging.interface.d.ts.map

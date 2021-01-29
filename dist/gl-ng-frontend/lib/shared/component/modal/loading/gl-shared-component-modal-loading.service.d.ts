@@ -11,3 +11,4 @@ export declare class GlSharedComponentModalLoadingService {
     show(status?: string): void;
     status(message: any): void;
 }
+//# sourceMappingURL=gl-shared-component-modal-loading.service.d.ts.map

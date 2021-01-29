@@ -12,3 +12,4 @@ export declare class GlSharedComponentModalAlertComponent {
     okValue: string;
     constructor(service: GlSharedComponentModalAlertService);
 }
+//# sourceMappingURL=gl-shared-component-modal-alert.component.d.ts.map

@@ -23,3 +23,4 @@ export declare class GlSharedComponentInputTextSimpleWithStepComponent {
     convertValue(value: number): string;
     processValue(type: TStepType, value: string): void;
 }
+//# sourceMappingURL=gl-shared-component-input-text-simple-with-step.component.d.ts.map

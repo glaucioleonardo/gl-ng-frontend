@@ -15,3 +15,4 @@ export declare class GlSharedComponentFilterService {
     open(event: Event): boolean;
     close(event: Event): boolean;
 }
+//# sourceMappingURL=gl-shared-component-filter.service.d.ts.map

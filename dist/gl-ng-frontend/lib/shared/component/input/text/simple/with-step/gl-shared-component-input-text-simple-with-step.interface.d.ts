@@ -4,3 +4,4 @@ export interface IInputTextStepButton {
     newValue: number;
 }
 export declare type TStepType = 'increase' | 'decrease' | 'typing';
+//# sourceMappingURL=gl-shared-component-input-text-simple-with-step.interface.d.ts.map

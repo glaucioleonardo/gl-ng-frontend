@@ -34,7 +34,7 @@
             "karmaConfig": "projects/gl-ng-frontend/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "projects/gl-ng-frontend/src/assets/style"
+                "./projects/gl-ng-frontend/src/assets/style"
               ]
             }
           }

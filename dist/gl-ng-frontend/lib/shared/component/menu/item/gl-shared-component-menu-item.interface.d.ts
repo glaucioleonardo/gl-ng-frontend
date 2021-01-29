@@ -20,3 +20,4 @@ export interface IMenuItemComplex {
     target?: TUrlTarget;
 }
 export declare type TUrlTarget = '_self' | '_blank' | '_parent' | '_top';
+//# sourceMappingURL=gl-shared-component-menu-item.interface.d.ts.map

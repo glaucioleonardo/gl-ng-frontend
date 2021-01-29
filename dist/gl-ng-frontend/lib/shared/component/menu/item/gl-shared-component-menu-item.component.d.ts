@@ -19,3 +19,4 @@ export declare class GlSharedComponentMenuItemComponent {
     openAbsoluteLink(event: any, href: any, target?: TUrlTarget): void;
     toggleActive(): void;
 }
+//# sourceMappingURL=gl-shared-component-menu-item.component.d.ts.map

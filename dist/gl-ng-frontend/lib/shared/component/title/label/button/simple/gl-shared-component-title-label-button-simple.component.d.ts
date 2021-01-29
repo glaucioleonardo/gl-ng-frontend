@@ -7,3 +7,4 @@ export declare class GlSharedComponentTitleLabelButtonSimpleComponent {
     requiredFieldDescription: string;
     constructor();
 }
+//# sourceMappingURL=gl-shared-component-title-label-button-simple.component.d.ts.map

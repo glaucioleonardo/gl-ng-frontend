@@ -21,3 +21,4 @@ export declare class GlSharedComponentAttachmentImagePreviewComponent implements
     ngAfterViewInit(): void;
     updateImage(): void;
 }
+//# sourceMappingURL=gl-shared-component-attachment-image-preview.component.d.ts.map

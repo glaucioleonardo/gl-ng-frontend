@@ -9,3 +9,4 @@ export declare class GlSharedComponentInputOptionSimpleComponent {
     constructor();
     onCheck(value: string, input: HTMLInputElement): void;
 }
+//# sourceMappingURL=gl-shared-component-input-option-simple.component.d.ts.map

@@ -8,3 +8,4 @@ export interface IMenuButton {
     hide?: boolean;
     callback?(event?: any): void;
 }
+//# sourceMappingURL=gl-shared-component-button-menu-simple.interface.d.ts.map

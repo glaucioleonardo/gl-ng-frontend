@@ -22,3 +22,4 @@ export declare class GlSharedViewErrorMessageComponent implements AfterViewInit 
     ngAfterViewInit(): void;
     errorButtonAction(): void;
 }
+//# sourceMappingURL=gl-shared-view-error-message.component.d.ts.map

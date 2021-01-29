@@ -8,3 +8,4 @@ export declare class GlSharedComponentTitleLabelSimpleComponent {
     requiredLabel: string;
     constructor();
 }
+//# sourceMappingURL=gl-shared-component-title-label-simple.component.d.ts.map

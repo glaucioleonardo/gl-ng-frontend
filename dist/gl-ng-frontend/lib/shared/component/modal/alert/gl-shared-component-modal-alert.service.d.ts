@@ -18,3 +18,4 @@ export declare class GlSharedComponentModalAlertService {
     private modal;
     onModalKeyUp(e: KeyboardEvent): void;
 }
+//# sourceMappingURL=gl-shared-component-modal-alert.service.d.ts.map

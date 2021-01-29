@@ -8,3 +8,4 @@ export declare class GlSharedComponentErrorMessageComponent {
     constructor();
     buttonAction(): void;
 }
+//# sourceMappingURL=gl-shared-component-error-message.component.d.ts.map

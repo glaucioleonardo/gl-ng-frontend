@@ -22,3 +22,4 @@ export declare class GlSharedComponentInputTextSimpleComponent implements AfterV
     constructor();
     ngAfterViewInit(): void;
 }
+//# sourceMappingURL=gl-shared-component-input-text-simple.component.d.ts.map

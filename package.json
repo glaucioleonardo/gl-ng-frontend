@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-frontend",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "assets": "assets",
   "main": "lib/public-api.ts",
@@ -45,8 +45,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish": "cd dist\\gl-ng-frontend && npm publish && cd.. && cd..",
-    "copy-assets": "copyfiles -a -u3 projects/gl-ng-frontend/src/assets/** dist/gl-ng-frontend",
+    "publish": "cd dist/gl-ng-frontend && npm publish && cd.. && cd..",
+    "copy-assets": "copyfiles -a -u3 \"projects/gl-ng-frontend/src/assets/**\" \"dist/gl-ng-frontend\"",
     "production": "ng build --prod && npm run copy-assets",
     "production-ngcc": "ng build --prod && ngcc && npm run copy-assets",
     "postinstall": "ngcc",
