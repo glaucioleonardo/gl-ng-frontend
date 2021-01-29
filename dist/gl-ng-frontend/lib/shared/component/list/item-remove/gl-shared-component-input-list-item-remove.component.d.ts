@@ -7,3 +7,4 @@ export declare class GlSharedComponentInputListItemRemoveComponent {
     constructor();
     removeItem(): void;
 }
+//# sourceMappingURL=gl-shared-component-input-list-item-remove.component.d.ts.map

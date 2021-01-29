@@ -9,3 +9,4 @@ export declare class GlSharedComponentInputSwitchComponent {
     constructor();
     activate(): void;
 }
+//# sourceMappingURL=gl-shared-component-input-switch.component.d.ts.map
