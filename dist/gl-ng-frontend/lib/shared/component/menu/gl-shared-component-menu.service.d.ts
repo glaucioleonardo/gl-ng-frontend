@@ -15,4 +15,3 @@ export declare class GlSharedComponentMenuService implements OnDestroy {
     goToSettings(url: string, target?: string): void;
     backgroundClick(event: any): void;
 }
-//# sourceMappingURL=gl-shared-component-menu.service.d.ts.map

@@ -8,4 +8,3 @@ export declare class GlSharedComponentModalLoadingComponent implements AfterView
     constructor(service: GlSharedComponentModalLoadingService);
     ngAfterViewChecked(): void;
 }
-//# sourceMappingURL=gl-shared-component-modal-loading.component.d.ts.map

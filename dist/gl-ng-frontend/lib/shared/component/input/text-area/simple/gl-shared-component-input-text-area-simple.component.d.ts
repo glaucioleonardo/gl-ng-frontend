@@ -15,4 +15,3 @@ export declare class GlSharedComponentInputTextAreaSimpleComponent {
     constructor();
     onKeyUp(args: any): void;
 }
-//# sourceMappingURL=gl-shared-component-input-text-area-simple.component.d.ts.map

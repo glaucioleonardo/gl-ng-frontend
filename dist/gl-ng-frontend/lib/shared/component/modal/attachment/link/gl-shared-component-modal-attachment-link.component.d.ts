@@ -10,4 +10,3 @@ export declare class GlSharedComponentModalAttachmentLinkComponent {
     cancelInnerValue: string;
     constructor(service: GlSharedComponentModalAttachmentLinkService);
 }
-//# sourceMappingURL=gl-shared-component-modal-attachment-link.component.d.ts.map

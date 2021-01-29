@@ -11,4 +11,3 @@ export declare class GlSharedComponentNavigationTabSimpleComponent {
     constructor();
     activate(sequence: number): void;
 }
-//# sourceMappingURL=gl-shared-component-navigation-tab-simple.component.d.ts.map

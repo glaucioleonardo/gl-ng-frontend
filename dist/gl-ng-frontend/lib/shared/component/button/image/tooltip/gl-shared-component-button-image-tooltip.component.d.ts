@@ -1,4 +1,4 @@
-import { TButtonToolTipHorizontalPosition, TButtonToolTipVerticalPosition } from './gl-shared-component-button-image-tooltip.interface';
+import { TButtonToolTipBorder, TButtonToolTipHorizontalPosition, TButtonToolTipVerticalPosition, TButtonToolTipWidth } from './gl-shared-component-button-image-tooltip.interface';
 export declare class GlSharedComponentButtonImageTooltipComponent {
     id: any;
     alt: any;
@@ -7,6 +7,7 @@ export declare class GlSharedComponentButtonImageTooltipComponent {
     callback: () => void;
     verticalPosition: TButtonToolTipVerticalPosition;
     horizontalPosition: TButtonToolTipHorizontalPosition;
+    fullwidth: TButtonToolTipWidth;
+    borderRadius: TButtonToolTipBorder;
     constructor();
 }
-//# sourceMappingURL=gl-shared-component-button-image-tooltip.component.d.ts.map

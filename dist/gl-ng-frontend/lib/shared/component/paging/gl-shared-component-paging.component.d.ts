@@ -32,4 +32,3 @@ export declare class GlSharedComponentPagingComponent implements AfterViewInit {
     setNumberOfItems(items: number): void;
     setPage(page: number): void;
 }
-//# sourceMappingURL=gl-shared-component-paging.component.d.ts.map

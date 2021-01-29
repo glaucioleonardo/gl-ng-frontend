@@ -25,4 +25,3 @@ export declare class GlSharedComponentInputTextLabelSimpleComponent {
     constructor();
     onKeyUp(values: any): void;
 }
-//# sourceMappingURL=gl-shared-component-input-text-label-simple.component.d.ts.map

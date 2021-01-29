@@ -13,4 +13,3 @@ export declare class GlSharedComponentButtonAttachmentFileService {
     onChange(duplicatedDescription: string, invalidSizeDescription: string, invalidFormatDescription: string, attachmentIconSrc: string): void;
     clearInput(): void;
 }
-//# sourceMappingURL=gl-shared-component-button-attachment-file.service.d.ts.map

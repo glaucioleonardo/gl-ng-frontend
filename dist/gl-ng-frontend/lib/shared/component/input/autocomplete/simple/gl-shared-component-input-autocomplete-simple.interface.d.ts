@@ -11,4 +11,3 @@ export interface ISetAutocompleteValue {
     value: string;
     options: IComboBoxData[];
 }
-//# sourceMappingURL=gl-shared-component-input-autocomplete-simple.interface.d.ts.map

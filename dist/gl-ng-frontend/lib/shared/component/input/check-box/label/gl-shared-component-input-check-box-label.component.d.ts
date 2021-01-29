@@ -11,4 +11,3 @@ export declare class GlSharedComponentInputCheckBoxLabelComponent {
     checked$: EventEmitter<boolean>;
     constructor();
 }
-//# sourceMappingURL=gl-shared-component-input-check-box-label.component.d.ts.map

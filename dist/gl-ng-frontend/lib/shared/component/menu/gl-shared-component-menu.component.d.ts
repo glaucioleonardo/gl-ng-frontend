@@ -26,4 +26,3 @@ export declare class GlSharedComponentMenuComponent implements OnInit {
     constructor(service: GlSharedComponentMenuService, router: Router);
     ngOnInit(): void;
 }
-//# sourceMappingURL=gl-shared-component-menu.component.d.ts.map

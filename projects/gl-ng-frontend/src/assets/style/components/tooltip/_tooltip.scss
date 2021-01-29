@@ -14,8 +14,12 @@
         border-color: $white transparent transparent transparent;
         z-index: 100;
 
-        @if($position == 'top') { transform: translateX(-200%) translateY(90%); }
-        @else if($position == 'bottom') {
+        @if($position == 'top') {
+          transform: translateX(-200%) translateY(90%);
+        } @else if($position == 'top-center') {
+          left: 45% !important;
+          transform: translateX(0%) translateY(90%);
+        } @else if($position == 'bottom') {
             left: 107%;
             transform: translateX(-137%) translateY(100%) rotate(180deg);
         }
@@ -48,6 +52,9 @@
 
         @if($position == 'top') {
             left: 0;
+        } @else if($position == 'top-center') {
+          $padding: -0.5em;
+          transform: translateX($padding);
         } @else if($position == 'top-status-table') {
             left: 0;
             font-size: 0.9em;
@@ -197,6 +204,10 @@
 .tooltip.top {
     @include tooltip('top');
 }
+.tooltip.top.center {
+  @include tooltip('top-center');
+}
+
 
 .tooltip.top.status-table {
     @include tooltip('top-status-table');

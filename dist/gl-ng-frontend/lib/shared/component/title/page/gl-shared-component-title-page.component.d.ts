@@ -3,4 +3,3 @@ export declare class GlSharedComponentTitlePageComponent {
     subtitle: string;
     constructor();
 }
-//# sourceMappingURL=gl-shared-component-title-page.component.d.ts.map

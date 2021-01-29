@@ -5,4 +5,3 @@ export declare class GlSharedComponentButtonImageSimpleComponent {
     callback: () => void;
     constructor();
 }
-//# sourceMappingURL=gl-shared-component-button-image-simple.component.d.ts.map

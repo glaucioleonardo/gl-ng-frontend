@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
 import {
+  TButtonToolTipBorder,
   TButtonToolTipHorizontalPosition,
-  TButtonToolTipVerticalPosition
+  TButtonToolTipVerticalPosition, TButtonToolTipWidth
 } from './gl-shared-component-button-image-tooltip.interface';
 
 @Component({
@@ -16,8 +17,10 @@ export class GlSharedComponentButtonImageTooltipComponent {
   @Input() show = true;
   @Input() callback: () => void;
 
-  @Input() verticalPosition: TButtonToolTipVerticalPosition = 'top'
-  @Input() horizontalPosition: TButtonToolTipHorizontalPosition = 'center'
+  @Input() verticalPosition: TButtonToolTipVerticalPosition = 'top';
+  @Input() horizontalPosition: TButtonToolTipHorizontalPosition = 'center';
+  @Input() fullwidth: TButtonToolTipWidth = 'default';
+  @Input() borderRadius: TButtonToolTipBorder = 'default';
 
   constructor() { }
 }

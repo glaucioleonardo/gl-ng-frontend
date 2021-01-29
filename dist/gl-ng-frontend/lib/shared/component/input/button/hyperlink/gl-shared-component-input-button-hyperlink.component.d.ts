@@ -5,4 +5,3 @@ export declare class GlSharedComponentInputButtonHyperlinkComponent {
     link: string;
     constructor();
 }
-//# sourceMappingURL=gl-shared-component-input-button-hyperlink.component.d.ts.map

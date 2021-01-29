@@ -3,4 +3,3 @@ export declare class GlSharedComponentButtonAttachmentLinkComponent {
     service: GlSharedComponentModalAttachmentLinkService;
     constructor(service: GlSharedComponentModalAttachmentLinkService);
 }
-//# sourceMappingURL=gl-shared-component-button-attachment-link.component.d.ts.map

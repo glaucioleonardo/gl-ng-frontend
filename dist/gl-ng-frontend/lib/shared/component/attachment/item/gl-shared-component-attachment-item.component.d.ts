@@ -19,4 +19,3 @@ export declare class GlSharedComponentAttachmentItemComponent {
     editItem(id: number): void;
     onButtonClick(e: Event): void;
 }
-//# sourceMappingURL=gl-shared-component-attachment-item.component.d.ts.map

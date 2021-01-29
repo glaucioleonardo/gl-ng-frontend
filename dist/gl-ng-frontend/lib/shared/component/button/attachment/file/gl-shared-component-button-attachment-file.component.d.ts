@@ -22,4 +22,3 @@ export declare class GlSharedComponentButtonAttachmentFileComponent implements A
     constructor(service: GlSharedComponentButtonAttachmentFileService);
     ngAfterViewInit(): void;
 }
-//# sourceMappingURL=gl-shared-component-button-attachment-file.component.d.ts.map

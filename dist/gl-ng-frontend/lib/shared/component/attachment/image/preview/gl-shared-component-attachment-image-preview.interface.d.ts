@@ -8,4 +8,3 @@ export interface IImageUpdate {
     maxWidth?: number;
     maxHeight?: number;
 }
-//# sourceMappingURL=gl-shared-component-attachment-image-preview.interface.d.ts.map

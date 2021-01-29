@@ -7,4 +7,3 @@ export declare class GlSharedComponentButtonMenuSimpleComponent {
     callback: () => {};
     constructor();
 }
-//# sourceMappingURL=gl-shared-component-button-menu-simple.component.d.ts.map

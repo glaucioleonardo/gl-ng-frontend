@@ -8,4 +8,3 @@ export declare class GlSharedComponentInputListItemUpDownComponent {
     constructor();
     onClick(type: TListReorder): void;
 }
-//# sourceMappingURL=gl-shared-component-input-list-item-up-down.component.d.ts.map

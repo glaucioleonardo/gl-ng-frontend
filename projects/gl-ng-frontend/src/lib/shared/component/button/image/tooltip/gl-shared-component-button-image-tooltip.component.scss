@@ -10,16 +10,27 @@
     display: flex;
     align-items: center;
 
+    &.fullwidth {
+      &::after {
+        min-width: 90%;
+      }
+      &.rounded {
+        &::after {
+          border-radius: 0.5em;
+        }
+      }
+    }
+
     &.top {
       &::before {
         left: 108% !important;
       }
 
-      &.center {
-        &::after {
-          transform: translateX(-20%);
-        }
-      }
+      //&.center {
+      //  &::after {
+      //    transform: translateX(-20%);
+      //  }
+      //}
 
       &.right {
         &::after {

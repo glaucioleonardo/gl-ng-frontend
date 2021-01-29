@@ -20,4 +20,3 @@ export declare class GlSharedComponentInputDatepickerLabelComponent implements O
     ngOnInit(): void;
     onCurrentValue(event: IDatePickerOutput | IDatePickerMonthYearOutput): void;
 }
-//# sourceMappingURL=gl-shared-component-input-datepicker-label.component.d.ts.map

@@ -21,4 +21,3 @@ export declare class GlSharedComponentInputDatepickerSimpleMonthYearComponent {
     clear(): void;
     changed(event: any): void;
 }
-//# sourceMappingURL=gl-shared-component-input-datepicker-simple-month-year.component.d.ts.map

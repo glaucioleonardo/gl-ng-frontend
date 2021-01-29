@@ -5,4 +5,3 @@ export interface IAttachmentLink {
     editing?: boolean;
     editId?: number;
 }
-//# sourceMappingURL=gl-shared-component-modal-attachment-link.interface.d.ts.map

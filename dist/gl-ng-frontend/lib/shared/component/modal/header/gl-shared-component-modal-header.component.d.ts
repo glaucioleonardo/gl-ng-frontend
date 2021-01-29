@@ -4,4 +4,3 @@ export declare class GlSharedComponentModalHeaderComponent {
     modalLogo: string;
     constructor();
 }
-//# sourceMappingURL=gl-shared-component-modal-header.component.d.ts.map

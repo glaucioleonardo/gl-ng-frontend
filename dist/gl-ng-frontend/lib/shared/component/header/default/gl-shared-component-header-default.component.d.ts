@@ -14,4 +14,3 @@ export declare class GlSharedComponentHeaderDefaultComponent {
     constructor();
     onKeyDown(event: any): void;
 }
-//# sourceMappingURL=gl-shared-component-header-default.component.d.ts.map

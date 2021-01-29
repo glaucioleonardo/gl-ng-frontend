@@ -4,4 +4,3 @@ export declare class CoreDirectivesAutofocusDirective implements OnInit {
     constructor(elementRef: ElementRef);
     ngOnInit(): void;
 }
-//# sourceMappingURL=core-directives-autofocus.directive.d.ts.map
