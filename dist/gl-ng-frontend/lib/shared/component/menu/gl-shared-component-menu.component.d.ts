@@ -1,4 +1,4 @@
-import { ElementRef, OnInit } from '@angular/core';
+import { ElementRef, EventEmitter, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GlSharedComponentMenuService } from './gl-shared-component-menu.service';
 import { IMenuItem, IMenuItemComplex } from './item/gl-shared-component-menu-item.interface';
@@ -21,6 +21,7 @@ export declare class GlSharedComponentMenuComponent implements OnInit {
     menuBottomTitle: string;
     menuBottomVersion: string;
     menuPosition: TMenuPosition;
+    $click: EventEmitter<any>;
     readonly closeButton = "../assets/img/icon/side-menu/close.svg";
     readonly settingsButton = "../assets/img/icon/side-menu/admin-settings.svg";
     constructor(service: GlSharedComponentMenuService, router: Router);

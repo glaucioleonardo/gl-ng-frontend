@@ -9,7 +9,8 @@
   <a *ngIf="!absolute"
      class="menu-item"
      [routerLink]="href"
-     (click)="onClick.emit(null)"
+     [fragment]="fragment"
+     (click)="onClick($event)"
   >{{ content }}</a>
 </li>
 
@@ -33,7 +34,8 @@
     <a *ngIf="!item.absolute"
        class="menu-item"
        [routerLink]="item.href"
-       (click)="onClick.emit(null)"
+       [fragment]="item.fragment"
+       (click)="onClick($event)"
     >{{ item.content }}</a>
   </li>
 </ol>

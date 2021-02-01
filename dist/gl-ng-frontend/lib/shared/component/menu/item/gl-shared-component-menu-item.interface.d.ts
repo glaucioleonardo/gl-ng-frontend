@@ -1,6 +1,7 @@
 export interface IMenuItem {
     src?: string;
     href: string;
+    fragment?: string;
     alt: string;
     content: string;
     absolute?: boolean;
@@ -10,6 +11,7 @@ export interface IMenuItem {
 export interface IMenuItemComplex {
     src?: string;
     href: string;
+    fragment?: string;
     alt: string;
     content: string;
     absolute?: boolean;

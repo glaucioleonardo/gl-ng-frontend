@@ -6,7 +6,7 @@ GlSharedComponentMenuBackgroundComponent.decorators = [
     { type: Component, args: [{
                 selector: 'gl-shared-component-menu-background',
                 template: "<div class=\"menu-background\"></div>\n",
-                styles: [":host::ng-deep .menu-background{background-color:rgba(0,0,0,.3);height:100vh;position:fixed;width:100vw}"]
+                styles: [":host::ng-deep .menu-background{background-color:rgba(0,0,0,.3);height:calc(var(--vh, 1vh)*100);position:fixed;width:calc(var(--vw, 1vw)*100)}"]
             },] }
 ];
 GlSharedComponentMenuBackgroundComponent.ctorParameters = () => [];

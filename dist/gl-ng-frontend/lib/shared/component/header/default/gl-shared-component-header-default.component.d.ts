@@ -5,7 +5,7 @@ export declare class GlSharedComponentHeaderDefaultComponent {
     labelModel: string;
     labelId: number;
     labelArea: string;
-    type: 'only-buttons' | '';
+    type: 'only-buttons' | 'light' | 'inverted' | 'dark-translucid' | 'light-translucid' | '';
     title: string;
     subtitle: string;
     menuButtons: IMenuButton[];

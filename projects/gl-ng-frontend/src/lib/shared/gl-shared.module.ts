@@ -9,4 +9,6 @@ import { GlComponentModule } from './component/gl-component.module';
     GlComponentModule
   ]
 })
-export class GlSharedModule { }
+export class GlSharedModule {
+  
+}

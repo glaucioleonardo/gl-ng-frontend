@@ -11,7 +11,7 @@ export class GlSharedComponentHeaderDefaultComponent {
   @Input() labelModel: string;
   @Input() labelId: number;
   @Input() labelArea: string;
-  @Input() type: 'only-buttons' | '';
+  @Input() type: 'only-buttons' | 'light' | 'inverted' | 'dark-translucid' | 'light-translucid' | '';
   @Input() title: string;
   @Input() subtitle: string;
   @Input() menuButtons: IMenuButton[];

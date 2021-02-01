@@ -1,12 +1,15 @@
+@import "../../assets/style/components/view-port/view-port";
 @import "../../assets/style/colors/gray";
+@import "../../assets/style/colors/black";
+@import "../../assets/style/colors/white";
 @import "../../assets/style/colors/gradient";
 @import "../../assets/style/patterns/gradient";
 
 :host::ng-deep {
-  max-width: 100vw;
+  max-width: width(100);
 
   .header-container {
-    max-width: 100vw;
+    max-width: width(100);
     position: relative;
     background-color: $dark-gray-3;
 
@@ -48,26 +51,69 @@
     &.only-buttons {
       background-color: transparent;
     }
+    &.dark-translucid {
+      background-color: $black-translucid-3;
+    }
+    &.light-translucid {
+      background-color: $white-translucid-3;
+    }
   }
 
-  @media screen and (min-device-width: 280px) and (orientation: portrait) {
+  // Generic
+  @media screen and (min-device-width: 240px) and (orientation: portrait) {
     .header-container {
-      font-size: 7vw;
+      font-size: width(6);
+    }
+  }
+  @media screen and (min-device-width: 600px) and (orientation: portrait) {
+    .header-container {
+      font-size: width(4);
     }
   }
   @media screen and (min-device-width: 700px) and (orientation: portrait) {
     .header-container {
-      font-size: 6vw;
+      font-size: width(6);
     }
   }
   @media screen and (min-device-width: 800px) and (orientation: portrait) {
     .header-container {
-      font-size: 5vw;
+      font-size: width(5);
+    }
+  }
+  @media screen and (min-device-width: 1024px) and (orientation: portrait) {
+    .header-container {
+      font-size: width(3);
     }
   }
   @media screen and (min-device-width: 1300px) and (orientation: portrait) {
     .header-container {
-      font-size: 4vw;
+      font-size: width(4);;
+    }
+  }
+
+  @media screen and (min-device-width: 240px) and (orientation: landscape) {
+    .header-container {
+      font-size: width(3);
+    }
+  }
+  @media screen and (min-device-width: 400px) and (orientation: landscape) {
+    .header-container {
+      font-size: width(3.5);
+    }
+  }
+  @media screen and (min-device-width: 700px) and (orientation: landscape) {
+    .header-container {
+      font-size: width(2.5);
+    }
+  }
+  @media screen and (min-device-width: 800px) and (orientation: landscape) {
+    .header-container {
+      font-size: width(2);
+    }
+  }
+  @media screen and (min-device-width: 1024px) and (orientation: landscape) {
+    .header-container {
+      font-size: width(1.5);
     }
   }
 }
