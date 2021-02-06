@@ -36,6 +36,8 @@ export * from './lib/shared/component/input/datepicker/simple/day-month-year/gl-
 export * from './lib/shared/component/input/datepicker/simple/month-year/gl-shared-component-input-datepicker-simple-month-year.component';
 export * from './lib/shared/component/input/datepicker/simple/month-year/gl-shared-component-input-datepicker-simple-month-year.interface';
 export * from './lib/shared/component/input/datepicker/label/gl-shared-component-input-datepicker-label.component';
+export * from './lib/shared/component/input/drag-and-drop/simple/gl-shared-component-input-drag-and-drop-simple.component';
+export * from './lib/shared/component/input/drag-and-drop/simple/gl-shared-component-input-drag-and-drop-simple.interface';
 export * from './lib/shared/component/input/text/simple/with-step/gl-shared-component-input-text-simple-with-step.component';
 export * from './lib/shared/component/input/text/simple/with-step/gl-shared-component-input-text-simple-with-step.interface';
 export * from './lib/shared/component/input/text/simple/gl-shared-component-input-text-simple.component';
@@ -78,3 +80,4 @@ export * from './lib/shared/view/gl-shared-view.module';
 export * from './lib/shared/view/error-message/gl-shared-view-error-message.component';
 export * from './lib/core/gl-core.module';
 export * from './lib/core/directives/autofocus/core-directives-autofocus.directive';
+export * from './lib/core/directives/drag-and-drop/core-directives-drag-and-drop.directive';

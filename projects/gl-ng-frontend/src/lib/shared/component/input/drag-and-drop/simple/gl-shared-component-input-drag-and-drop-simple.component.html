@@ -1,0 +1,48 @@
+<div
+  class="file-attachment-container"
+  glCoreDirectivesDragAndDrop
+  (fileDropped)="onFileDropped($event)"
+  (change)="fileBrowserHandler($event.target)"
+  (click)="fileAttachment.click()">
+
+  <div class="description-container">
+    <img
+      alt="Upload icon"
+      class="upload-icon"
+      [src]="uploadIcon">
+
+    <span class="action-description">{{ descriptionDragAndDrop }}</span>
+    <span class="action-description">{{ descriptionDragAndDropOr }}</span>
+    <span class="action-description button">{{ descriptionDragAndDropClickHere }}</span>
+  </div>
+
+  <input
+    #fileAttachment
+    class="file-attachment"
+    id="file-attachment"
+    type="file"
+    [attr.data-maxsize]="maxSize"
+    [accept]="parsedAcceptList"
+    [disabled]="readOnly"
+    [multiple]="(maxNumberOfFiles == -1 && maxNumberOfFiles > 1) || (maxNumberOfFiles == null)">
+</div>
+<div class="attachment-list">
+  <gl-shared-component-attachment-item
+    *ngFor="let item of attachmentItems"
+    [fileIcon]="item.icon"
+    [id]="item.id"
+    [fileName]="item.name"
+    [disabled]="readOnly"
+    [addingSmooth]="true"
+
+    (removeCurrentItem)="removeAttachment($event);"
+  ></gl-shared-component-attachment-item>
+</div>
+
+<div class="button-container upload-file">
+  <gl-shared-component-input-button-simple
+    [innerValue]="uploadButtonValue"
+    value="upload-file"
+    (click)="$uploadClick()"
+  ></gl-shared-component-input-button-simple>
+</div>

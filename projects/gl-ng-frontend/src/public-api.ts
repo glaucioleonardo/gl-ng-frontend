@@ -62,6 +62,9 @@ export * from './lib/shared/component/input/datepicker/simple/month-year/gl-shar
 export * from './lib/shared/component/input/datepicker/simple/month-year/gl-shared-component-input-datepicker-simple-month-year.interface';
 export * from './lib/shared/component/input/datepicker/label/gl-shared-component-input-datepicker-label.component';
 
+export * from './lib/shared/component/input/drag-and-drop/simple/gl-shared-component-input-drag-and-drop-simple.component';
+export * from './lib/shared/component/input/drag-and-drop/simple/gl-shared-component-input-drag-and-drop-simple.interface';
+
 export * from './lib/shared/component/input/text/simple/with-step/gl-shared-component-input-text-simple-with-step.component';
 export * from './lib/shared/component/input/text/simple/with-step/gl-shared-component-input-text-simple-with-step.interface';
 export * from './lib/shared/component/input/text/simple/gl-shared-component-input-text-simple.component';
@@ -121,6 +124,7 @@ export * from './lib/core/gl-core.module';
 
 // region Directives
 export * from './lib/core/directives/autofocus/core-directives-autofocus.directive';
+export * from './lib/core/directives/drag-and-drop/core-directives-drag-and-drop.directive';
 // endregion
 
 // endregion

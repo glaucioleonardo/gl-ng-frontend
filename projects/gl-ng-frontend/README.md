@@ -11,6 +11,8 @@ This library has been generated with [Angular CLI](https://github.com/angular/an
 The full documentation is still under progress, however the components working perfectly (... or not!) 
 
 ## Table of contents ##
+0. Dependencies-peer:<br>
+   
 1. Configurations:<br>
    1.1. [ Configuring assets ](#configuring-assets)<br>
    1.2. [ Configuring external links / urls from anchors ](#external-links-anchors)<br>
@@ -83,6 +85,12 @@ The full documentation is still under progress, however the components working p
 
 4. Views<br>
     4.1. Error message (documentation under progress)
+
+### Install peer-dependencies ###
+This library must also install the following package:
+```
+npm i --save smooth-scroll
+```
 
 <a name="configuring-assets"></a>
 ### Configuring assets ###

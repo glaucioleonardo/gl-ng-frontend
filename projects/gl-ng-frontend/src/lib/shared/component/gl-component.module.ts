@@ -60,6 +60,7 @@ import { GlSharedComponentInputListItemRemoveComponent } from './list/item-remov
 import { GlSharedComponentInputListItemUpDownComponent } from './list/item-up-down/gl-shared-component-input-list-item-up-down.component';
 import { GlSharedComponentInputCheckBoxSimpleComponent } from './input/check-box/simple/gl-shared-component-input-check-box-simple.component';
 import { GlSharedComponentInputCheckBoxLabelComponent } from './input/check-box/label/gl-shared-component-input-check-box-label.component';
+import { GlSharedComponentInputDragAndDropSimpleComponent } from './input/drag-and-drop/simple/gl-shared-component-input-drag-and-drop-simple.component';
 
 @NgModule({
   declarations: [
@@ -112,7 +113,8 @@ import { GlSharedComponentInputCheckBoxLabelComponent } from './input/check-box/
     GlSharedComponentInputListItemRemoveComponent,
     GlSharedComponentInputListItemUpDownComponent,
     GlSharedComponentInputCheckBoxSimpleComponent,
-    GlSharedComponentInputCheckBoxLabelComponent
+    GlSharedComponentInputCheckBoxLabelComponent,
+    GlSharedComponentInputDragAndDropSimpleComponent
   ],
   imports: [
     CommonModule,
@@ -147,6 +149,7 @@ import { GlSharedComponentInputCheckBoxLabelComponent } from './input/check-box/
     GlSharedComponentInputAutocompleteSimpleComponent,
     GlSharedComponentInputButtonSimpleComponent,
     GlSharedComponentInputButtonHyperlinkComponent,
+    GlSharedComponentInputDragAndDropSimpleComponent,
     GlSharedComponentInputOptionSimpleComponent,
     GlSharedComponentInputTextAreaSimpleComponent,
     GlSharedComponentInputTextAreaLabelComponent,
