@@ -11,7 +11,6 @@ import { GlSharedComponentModalAlertService } from '../../../modal/alert/gl-shar
 export class GlSharedComponentInputDragAndDropSimpleComponent {
   @ViewChild('fileAttachment') input: ElementRef<HTMLInputElement>;
 
-  @Input() $uploadClick: () => void;
   @Input() uploadButtonValue = 'Upload files';
   @Input() readOnly = false;
 
@@ -84,8 +83,13 @@ export class GlSharedComponentInputDragAndDropSimpleComponent {
    * Returns the list of valid attachments added.
    */
   @Output() $attachmentItems: EventEmitter<IAttachmentData[]> = new EventEmitter();
+  /**
+   * Returns the list of valid attachments added and fires the upload button.
+   */
+  @Output() $uploadClick: EventEmitter<IAttachmentData[]> = new EventEmitter();
 
   public attachmentItems: IAttachmentData[] = [];
+
 
   constructor(private _alert: GlSharedComponentModalAlertService) { }
 
@@ -208,6 +212,10 @@ export class GlSharedComponentInputDragAndDropSimpleComponent {
   }
   click(): void {
     this.input.nativeElement.click();
+  }
+
+  uploadClick(): void {
+    this.$uploadClick.emit(this.attachmentItems);
   }
 
   private addItemToArray(file: File): void {

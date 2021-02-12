@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-name="Layer 1" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>.cls-1{fill:#98c031;}.cls-2{fill:#bbce00;}.cls-3{fill:#f5a108;}.cls-4{fill:#f8ba00;}.cls-5{fill:#661539;}.cls-6{fill:#40b5e8;}.cls-7{fill:#2197d4;}.cls-8{fill:#eb7c00;}.cls-9{fill:#eb661d;}.cls-10{fill:#24346c;}.cls-11{fill:#134991;}.cls-12{fill:#e74917;}.cls-13{fill:#e73088;}.cls-14{fill:#222a54;}.cls-15{fill:#d3007a;}.cls-16{fill:#821a49;}.cls-17{fill:#c00f65;}.cls-18{fill:#f1f2f2;}</style>
+ </defs>
+ <title>Artboard 1colored</title>
+ <polygon class="cls-1" points="3.2 9.8 3.2 5.4 7.6 5.4"/>
+ <polygon class="cls-2" points="3.2 5.4 7.6 5.4 7.6 1"/>
+ <polygon class="cls-3" points="3.2 18.6 7.6 23 7.6 18.6"/>
+ <polygon class="cls-4" points="3.2 18.6 7.6 14.2 7.6 18.6"/>
+ <polygon class="cls-5" points="12 14.2 16.4 9.8 16.4 14.2"/>
+ <polygon class="cls-6" points="7.6 1 7.6 5.4 12 5.4"/>
+ <polygon class="cls-7" points="7.6 1 12 5.4 12 1"/>
+ <polygon class="cls-8" points="7.6 23 7.6 18.6 12 18.6"/>
+ <polygon class="cls-9" points="7.6 23 12 18.6 12 23"/>
+ <polygon class="cls-10" points="12 5.4 16.4 5.4 16.4 1"/>
+ <polygon class="cls-11" points="12 5.4 16.4 1 12 1"/>
+ <polygon class="cls-12" points="16.4 23 12 23 12 18.6"/>
+ <polygon class="cls-13" points="16.4 23 12 18.6 16.4 18.6"/>
+ <polygon class="cls-14" points="20.8 5.4 16.4 1 16.4 5.4"/>
+ <polygon class="cls-11" points="20.8 9.8 20.8 5.4 16.4 5.4"/>
+ <polygon class="cls-15" points="16.4 23 16.4 18.6 20.8 18.6"/>
+ <polygon class="cls-16" points="16.4 9.8 20.8 14.2 16.4 14.2"/>
+ <polygon class="cls-16" points="20.8 18.6 16.4 18.6 16.4 14.2"/>
+ <polygon class="cls-17" points="20.8 18.6 16.4 14.2 20.8 14.2"/>
+ <polygon class="cls-18" points="7.6 13.12 3.2 17.52 3.2 10.93 7.6 6.53"/>
+</svg>

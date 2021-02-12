@@ -2,6 +2,7 @@
 @import "../../assets/style/colors/pink";
 @import "../../assets/style/colors/gray";
 @import "../../assets/style/fonts/fonts";
+@import "../../assets/style/action/readonly";
 
 :host::ng-deep {
   display: flex;
@@ -40,6 +41,10 @@
         width: 3em;
         height: 3em;
         margin: 0 0 0.3em 0;
+
+        &.readOnly {
+          @extend %readonly;
+        }
       }
 
       .action-description {
@@ -62,6 +67,14 @@
             transition: all 0.5s ease-in-out;
           }
         }
+
+        &.readOnly {
+          @extend %readonly;
+        }
+      }
+
+      &.readOnly {
+        @extend %readonly;
       }
     }
 
@@ -71,6 +84,10 @@
       color: $white;
       position: absolute;
       top: 50%;
+    }
+
+    &.readOnly {
+      @extend %readonly;
     }
   }
   .attachment-list {

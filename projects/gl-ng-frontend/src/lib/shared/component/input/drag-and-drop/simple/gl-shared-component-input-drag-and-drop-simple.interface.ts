@@ -1,3 +1,4 @@
+import { EventEmitter } from '@angular/core';
 import { IAttachmentData } from 'gl-w-frontend/lib/scripts/core/services/attachment/core-services-attachment.interface';
 
 export interface IDragAndDropVariables {
@@ -21,6 +22,8 @@ export interface IDragAndDropVariables {
   maxNumberOfFiles: number;
   acceptFileType: string[];
 
-  $uploadClick: () => void;
-  $attachmentItems: (attachments: IAttachmentData[]) => void;
+  $uploadClick: TAttachmentUploadResult;
+  $attachmentItems: TAttachmentUploadResult;
 }
+
+export type TAttachmentUploadResult = (attachments: IAttachmentData[]) => void;

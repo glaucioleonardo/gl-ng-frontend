@@ -1,19 +1,19 @@
 <div
-  class="file-attachment-container"
+  class="file-attachment-container {{ readOnly ? 'readonly' : '' }}"
   glCoreDirectivesDragAndDrop
   (fileDropped)="onFileDropped($event)"
   (change)="fileBrowserHandler($event.target)"
   (click)="fileAttachment.click()">
 
-  <div class="description-container">
+  <div class="description-container {{ readOnly ? 'readonly' : '' }}">
     <img
       alt="Upload icon"
-      class="upload-icon"
+      class="upload-icon {{ readOnly ? 'readonly' : '' }}"
       [src]="uploadIcon">
 
-    <span class="action-description">{{ descriptionDragAndDrop }}</span>
-    <span class="action-description">{{ descriptionDragAndDropOr }}</span>
-    <span class="action-description button">{{ descriptionDragAndDropClickHere }}</span>
+    <span *ngIf="!readOnly" class="action-description {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDrop }}</span>
+    <span *ngIf="!readOnly" class="action-description {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDropOr }}</span>
+    <span *ngIf="!readOnly" class="action-description button {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDropClickHere }}</span>
   </div>
 
   <input
@@ -39,10 +39,11 @@
   ></gl-shared-component-attachment-item>
 </div>
 
-<div class="button-container upload-file">
+<div class="button-container upload-file" *ngIf="attachmentItems.length > 0">
   <gl-shared-component-input-button-simple
     [innerValue]="uploadButtonValue"
+    [readonly]="readOnly"
     value="upload-file"
-    (click)="$uploadClick()"
+    (click)="uploadClick()"
   ></gl-shared-component-input-button-simple>
 </div>
