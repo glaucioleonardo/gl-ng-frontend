@@ -1,0 +1,22 @@
+@import "../../style/colors/pink";
+@import "../../style/colors/white";
+
+@mixin error {
+  background-color: rgba($pink, 0.3) !important;
+  border-color: rgb(230, 73, 73) !important;
+  color: $white !important;
+
+
+  &::placeholder {
+    color: $white-translucid-3 !important;
+  }
+  transition: all 0.2s ease-in-out;
+}
+
+.required-fill {
+  @include error;
+}
+
+.error-highlight {
+  @include error;
+}

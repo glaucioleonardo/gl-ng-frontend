@@ -14,6 +14,7 @@ export interface IDragAndDropVariables {
     uploadButtonValue: string;
     maxNumberOfFiles: number;
     acceptFileType: string[];
-    $uploadClick: () => void;
-    $attachmentItems: (attachments: IAttachmentData[]) => void;
+    $uploadClick: TAttachmentUploadResult;
+    $attachmentItems: TAttachmentUploadResult;
 }
+export declare type TAttachmentUploadResult = (attachments: IAttachmentData[]) => void;

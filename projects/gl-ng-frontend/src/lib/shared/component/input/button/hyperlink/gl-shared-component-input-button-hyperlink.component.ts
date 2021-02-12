@@ -10,6 +10,7 @@ export class GlSharedComponentInputButtonHyperlinkComponent {
   @Input() imageDescription: string;
   @Input() description: string;
   @Input() link: string;
+  @Input() readonly = false;
 
   constructor() { }
 }

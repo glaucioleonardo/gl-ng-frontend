@@ -4,7 +4,6 @@ import { GlSharedComponentModalAlertService } from '../../../modal/alert/gl-shar
 export declare class GlSharedComponentInputDragAndDropSimpleComponent {
     private _alert;
     input: ElementRef<HTMLInputElement>;
-    $uploadClick: () => void;
     uploadButtonValue: string;
     readOnly: boolean;
     descriptionDragAndDrop: string;
@@ -70,6 +69,10 @@ export declare class GlSharedComponentInputDragAndDropSimpleComponent {
      * Returns the list of valid attachments added.
      */
     $attachmentItems: EventEmitter<IAttachmentData[]>;
+    /**
+     * Returns the list of valid attachments added and fires the upload button.
+     */
+    $uploadClick: EventEmitter<IAttachmentData[]>;
     attachmentItems: IAttachmentData[];
     constructor(_alert: GlSharedComponentModalAlertService);
     private static fileNameList;
@@ -78,6 +81,7 @@ export declare class GlSharedComponentInputDragAndDropSimpleComponent {
     fileBrowserHandler(files: EventTarget): Promise<void>;
     parsedAcceptList(): string;
     click(): void;
+    uploadClick(): void;
     private addItemToArray;
     private showErrorMessage;
     private errorMessage;

@@ -9,6 +9,7 @@ export class GlSharedComponentInputButtonSimpleComponent {
   @Input() value: string;
   @Input() class: string;
   @Input() innerValue: string;
+  @Input() readonly = false;
 
   constructor() { }
 }

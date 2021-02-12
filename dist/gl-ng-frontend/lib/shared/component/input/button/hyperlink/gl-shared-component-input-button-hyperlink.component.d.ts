@@ -3,5 +3,6 @@ export declare class GlSharedComponentInputButtonHyperlinkComponent {
     imageDescription: string;
     description: string;
     link: string;
+    readonly: boolean;
     constructor();
 }
