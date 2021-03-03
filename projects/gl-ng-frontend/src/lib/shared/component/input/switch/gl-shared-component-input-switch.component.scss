@@ -87,5 +87,29 @@
         }
       }
     }
+
+    &.show-as-button {
+      display: flex;
+      flex-direction: row;
+
+      border-radius: 0.2em;
+      background-color: rgba(255, 255, 255, 0.1);
+      font-size: 0.8em;
+      padding: 0.2em 0.25em;
+      align-items: center;
+
+      .switch-button-icon {
+        $size: 1.563em;
+        border-radius: 0.15em;
+        height: $size;
+        width: $size;
+      }
+
+      .switch-label {
+        @include font-family(light);
+        flex-grow: 1;
+        padding: 0 0 0 0.8em;
+      }
+    }
   }
 }
