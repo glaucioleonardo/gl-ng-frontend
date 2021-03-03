@@ -4,8 +4,16 @@ import { GlSharedComponentModalAlertService } from '../../../modal/alert/gl-shar
 export declare class GlSharedComponentInputDragAndDropSimpleComponent {
     private _alert;
     input: ElementRef<HTMLInputElement>;
+    showContinueUpload: boolean;
+    continueUpload: boolean;
+    continueUploadLabel: string;
+    $continueUploadActive: EventEmitter<boolean>;
     uploadButtonValue: string;
     readOnly: boolean;
+    /**
+     * In case the button icon source is not passed, the icon will be hidden.
+     */
+    resumeButtonIconSrc: string;
     descriptionDragAndDrop: string;
     descriptionDragAndDropOr: string;
     descriptionDragAndDropClickHere: string;
@@ -82,6 +90,7 @@ export declare class GlSharedComponentInputDragAndDropSimpleComponent {
     parsedAcceptList(): string;
     click(): void;
     uploadClick(): void;
+    onContinueUpload(active: boolean): void;
     private addItemToArray;
     private showErrorMessage;
     private errorMessage;

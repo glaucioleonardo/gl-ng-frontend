@@ -11,6 +11,10 @@
   max-height: min-content;
   transition: all 0.3s ease-in-out;
 
+  gl-shared-component-input-switch {
+    margin: 0 0 0.15em 0;
+  }
+
   .file-attachment-container {
     display: flex;
     flex-grow: 1;
@@ -90,6 +94,8 @@
       @extend %readonly;
     }
   }
+
+
   .attachment-list {
     display: flex;
     flex-direction: column;

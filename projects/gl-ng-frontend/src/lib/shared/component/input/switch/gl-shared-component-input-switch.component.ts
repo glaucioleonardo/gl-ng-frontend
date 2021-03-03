@@ -11,6 +11,10 @@ export class GlSharedComponentInputSwitchComponent {
   @Input() label: string;
   @Input() labelColor: 'white' | 'black' = 'white';
   @Input() showLabel = true;
+  @Input() showAsInputButton = false;
+
+  @Input() buttonIconSrc: string;
+
   @Output() active$: EventEmitter<boolean> = new EventEmitter();
 
   constructor() { }
@@ -19,6 +23,12 @@ export class GlSharedComponentInputSwitchComponent {
     if (this.enabled) {
       this.active = !this.active;
       this.active$.emit(this.active);
+    }
+  }
+
+  onContainerClick(): void {
+    if (this.showAsInputButton) {
+      this.activate();
     }
   }
 }

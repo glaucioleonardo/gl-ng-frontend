@@ -1,7 +1,14 @@
-<div class="switch-main-container {{ enabled ? '' : 'disabled' }}">
+<div class="switch-main-container {{ enabled ? '' : 'disabled' }} {{ showAsInputButton ? 'show-as-button' : '' }}"
+  (click)="onContainerClick()">
+  <img
+    *ngIf="showAsInputButton && buttonIconSrc?.length > 0"
+    [src]="buttonIconSrc"
+    class="switch-button-icon"
+    alt="switch-icon">
+
   <span
     *ngIf="showLabel"
-    class="switch-label {{ labelColor }}">{{ label }}</span>
+    class="switch-label {{ labelColor }} {{ buttonIconSrc?.length > 0 ? 'has-icon' : '' }}">{{ label }}</span>
   <div
     (click)="activate()"
     class="switch-item-container {{ active ? 'active' : '' }}">

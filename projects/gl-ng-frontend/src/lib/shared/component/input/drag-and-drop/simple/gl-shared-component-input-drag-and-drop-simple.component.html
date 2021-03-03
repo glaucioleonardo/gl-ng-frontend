@@ -1,3 +1,17 @@
+<gl-shared-component-input-switch
+  *ngIf="showContinueUpload"
+  [active]="continueUpload"
+  [enabled]="!readOnly"
+  [label]="continueUploadLabel"
+  (active$)="onContinueUpload($event)"
+  class="drag-and-drop-continue-switch"
+
+  buttonIconSrc="assets/img/icon/upload/resume-upload.svg"
+  labelColor="white"
+  [showAsInputButton]="true"
+  [showLabel]="true"
+></gl-shared-component-input-switch>
+
 <div
   class="file-attachment-container {{ readOnly ? 'readonly' : '' }}"
   glCoreDirectivesDragAndDrop

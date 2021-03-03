@@ -11,9 +11,18 @@ import { GlSharedComponentModalAlertService } from '../../../modal/alert/gl-shar
 export class GlSharedComponentInputDragAndDropSimpleComponent {
   @ViewChild('fileAttachment') input: ElementRef<HTMLInputElement>;
 
+  @Input() showContinueUpload: boolean;
+  @Input() continueUpload: boolean;
+  @Input() continueUploadLabel = 'Continue previous loading';
+  @Output() $continueUploadActive: EventEmitter<boolean> = new EventEmitter();
+
   @Input() uploadButtonValue = 'Upload files';
   @Input() readOnly = false;
 
+  /**
+   * In case the button icon source is not passed, the icon will be hidden.
+   */
+  @Input() resumeButtonIconSrc: string;
   @Input() descriptionDragAndDrop = 'Drag and drop the file';
   @Input() descriptionDragAndDropOr = 'or';
   @Input() descriptionDragAndDropClickHere = 'Click here';
@@ -88,10 +97,12 @@ export class GlSharedComponentInputDragAndDropSimpleComponent {
    */
   @Output() $uploadClick: EventEmitter<IAttachmentData[]> = new EventEmitter();
 
-  public attachmentItems: IAttachmentData[] = [];
+  @Input() attachmentItems: IAttachmentData[] = [];
 
 
   constructor(private _alert: GlSharedComponentModalAlertService) { }
+
+
 
   private static fileNameList(list: string[]): string {
     let listName = '\n';
@@ -216,6 +227,11 @@ export class GlSharedComponentInputDragAndDropSimpleComponent {
 
   uploadClick(): void {
     this.$uploadClick.emit(this.attachmentItems);
+  }
+
+  onContinueUpload(active: boolean) {
+    this.$continueUploadActive.emit(active);
+    this.continueUpload = active;
   }
 
   private addItemToArray(file: File): void {
