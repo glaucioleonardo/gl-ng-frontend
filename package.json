@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-frontend",
-  "version": "2.8.1",
+  "version": "2.8.2",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "assets": "assets",
   "main": "lib/public-api.ts",
@@ -67,7 +67,7 @@
     "@angular/platform-browser": "~11.2.0",
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
-    "gl-sp-frontend": "^2.4.0",
+    "gl-sp-frontend": "^2.4.1",
     "gl-w-frontend": "^2.4.0",
     "rxjs": "^6.6.3",
     "smooth-scroll": "^16.1.3",
