@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IDatePickerOutput } from '../simple/day-month-year/gl-shared-component-input-datepicker-simple-day-month-year.interface';
-import { IDatePickerMonthYearOutput } from "../simple/month-year/gl-shared-component-input-datepicker-simple-month-year.interface";
+import { IDatePickerMonthYearOutput } from '../simple/month-year/gl-shared-component-input-datepicker-simple-month-year.interface';
 import { THorizontalAlignment } from '../../../title/label/simple/gl-shared-component-title-label-simple.interface';
 
 @Component({
@@ -21,7 +21,7 @@ export class GlSharedComponentInputDatepickerLabelComponent implements OnInit {
   @Input() labelValue: string;
   @Input() labelAlignment: THorizontalAlignment = 'center';
   @Input() required: boolean;
-  @Input() requiredField: string = 'Required field';
+  @Input() requiredField = 'Required field';
 
   @Output() currentValue: EventEmitter<IDatePickerOutput | IDatePickerMonthYearOutput> = new EventEmitter();
 

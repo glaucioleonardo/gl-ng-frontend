@@ -102,8 +102,6 @@ export class GlSharedComponentInputDragAndDropSimpleComponent {
 
   constructor(private _alert: GlSharedComponentModalAlertService) { }
 
-
-
   private static fileNameList(list: string[]): string {
     let listName = '\n';
     for (const [i, item] of list.entries()) {

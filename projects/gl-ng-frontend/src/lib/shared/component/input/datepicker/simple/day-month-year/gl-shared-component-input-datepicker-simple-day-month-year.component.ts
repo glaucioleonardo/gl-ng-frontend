@@ -1,9 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
-import { DateGet } from "gl-w-frontend";
+import { DateGet } from 'gl-w-frontend';
 import { IDatePickerOutput } from './gl-shared-component-input-datepicker-simple-day-month-year.interface';
-import { MatDatepickerInputEvent } from "@angular/material/datepicker";
 
 @Component({
   selector: 'gl-shared-component-input-datepicker-simple-day-month-year',
@@ -41,7 +40,7 @@ export class GlSharedComponentInputDatepickerSimpleDayMonthYearComponent {
     this.currentValue.emit({
       date: null,
       dateString: null
-    })
+    });
 
     input.value = null;
   }
