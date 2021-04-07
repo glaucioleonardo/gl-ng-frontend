@@ -1,12 +1,13 @@
 import { EventEmitter } from '@angular/core';
-import { IDatePickerMonthYearOutput } from "./gl-shared-component-input-datepicker-simple-month-year.interface";
-import { MatDatepicker } from "@angular/material/datepicker";
+import { THorizontalAlignment } from '../../../../title/label/simple/gl-shared-component-title-label-simple.interface';
+import { IDatePickerMonthYearOutput } from './gl-shared-component-input-datepicker-simple-month-year.interface';
+import { MatDatepicker } from '@angular/material/datepicker';
 import { Moment } from 'moment';
 export declare class GlSharedComponentInputDatepickerSimpleMonthYearComponent {
     disabled: boolean;
     id: string;
     placeholder: string;
-    itemContentAlignment: 'left' | 'center' | 'right';
+    itemContentAlignment: THorizontalAlignment;
     class: string;
     value: Date;
     maxLength: number;
@@ -15,9 +16,9 @@ export declare class GlSharedComponentInputDatepickerSimpleMonthYearComponent {
     readonly dateFormat = "DD/MM/YYYY";
     startDate: Date;
     date: Date;
+    constructor();
     chosenYearHandler(normalizedYear: Moment): void;
     chosenMonthHandler(normalizedMonth: Moment, datepicker: MatDatepicker<any>): void;
-    constructor();
     clear(): void;
     changed(event: any): void;
 }

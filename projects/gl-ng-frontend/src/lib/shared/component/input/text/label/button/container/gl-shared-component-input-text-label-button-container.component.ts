@@ -15,16 +15,16 @@ export class GlSharedComponentInputTextLabelButtonContainerComponent {
   @Input() labelAlignment: THorizontalAlignment;
   @Input() labelValue: string;
   @Input() placeholder: string;
-  @Input() itemContentAlignment: string;
+  @Input() itemContentAlignment: THorizontalAlignment;
   @Input() class: string;
   @Input() value: string = null;
 
   @Input() mask: TInputTextMask;
   @Input() decimalSeparator: TDecimalSeparators = ',';
   @Input() maskSymbol: TCurrencySymbolTypes;
-  @Input() allowMinus: boolean = true;
-  @Input() rightAlign: boolean = true;
-  @Input() step: number = 5;
+  @Input() allowMinus = true;
+  @Input() rightAlign = true;
+  @Input() step = 5;
 
   @Input() maxLength = 255;
   @Input() required: boolean;

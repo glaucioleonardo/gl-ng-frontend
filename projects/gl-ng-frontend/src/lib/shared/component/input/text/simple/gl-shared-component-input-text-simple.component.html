@@ -1,0 +1,13 @@
+<!--suppress HtmlFormInputWithoutLabel -->
+<input
+  #inputElement
+  class="item-content {{ itemContentAlignment }} {{ class }}"
+  type="text"
+  autocomplete="off"
+  required
+  [id]="id"
+  [value]="value"
+  [placeholder]="placeholder"
+  (keyup)="onKeyUp($event)"
+  [disabled]="disabled"
+  [maxLength]="maxLength">

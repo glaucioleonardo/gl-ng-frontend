@@ -1,0 +1,30 @@
+import { AfterViewInit, ElementRef, EventEmitter, OnDestroy } from '@angular/core';
+import { THorizontalAlignment } from '../../../title/label/simple/gl-shared-component-title-label-simple.interface';
+import { ISimpleTextResult, TInputTextMask } from './gl-shared-component-input-text-simple.interface';
+import { TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-frontend';
+import { GlSharedComponentInputTextSimpleService } from './gl-shared-component-input-text-simple.service';
+export declare class GlSharedComponentInputTextSimpleComponent implements AfterViewInit, OnDestroy {
+    service: GlSharedComponentInputTextSimpleService;
+    inputElement: ElementRef<HTMLInputElement>;
+    private _input;
+    disabled: boolean;
+    autocomplete: boolean;
+    id: string;
+    placeholder: string;
+    itemContentAlignment: THorizontalAlignment;
+    class: string;
+    value: string;
+    mask: TInputTextMask;
+    decimalSeparator: TDecimalSeparators;
+    allowMinus: boolean;
+    rightAlign: boolean;
+    step: number;
+    maskSymbol: TCurrencySymbolTypes;
+    maxLength: number;
+    currentValue: EventEmitter<ISimpleTextResult>;
+    onKeyUp(args: any): void;
+    constructor(service: GlSharedComponentInputTextSimpleService);
+    ngAfterViewInit(): void;
+    applyInputMask(): void;
+    ngOnDestroy(): void;
+}

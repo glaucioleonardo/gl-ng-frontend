@@ -1,0 +1,24 @@
+<gl-shared-component-input-autocomplete-simple
+  [class]="class"
+  [value]="value"
+  [listName]="listName"
+  (currentValue)="onCurrentValue($event)"
+  [id]="id"
+  [itemContentAlignment]="itemContentAlignment"
+  [placeholder]="placeholder"
+  [listItems]="listItems"
+  [disabled]="disabled"
+
+  [custom]="custom"
+  [baseUrl]="baseUrl"
+  [valueField]="valueField"
+  [textField]="textField"
+  ><gl-shared-component-title-label-simple
+    [id]="id"
+    [labelAlignment]="labelAlignment"
+    [labelValue]="labelValue"
+    [required]="required"
+    [class]="class"
+    [requiredLabel]="requiredField"
+  ></gl-shared-component-title-label-simple>
+</gl-shared-component-input-autocomplete-simple>

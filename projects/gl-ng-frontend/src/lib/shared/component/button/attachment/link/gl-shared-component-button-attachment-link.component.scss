@@ -1,0 +1,39 @@
+@import "../../assets/style/colors/gray";
+@import "../../assets/style/colors/white";
+@import "../../assets/style/fonts/montserrat";
+
+:host::ng-deep {
+  .attachment-container {
+    position: relative;
+    display: flex;
+    padding: 0.4em 0.3em;
+    border-radius: 0.5em;
+    align-items: center;
+    margin: 0.2em 0;
+    cursor: pointer;
+
+    &:not(hover) {
+      background: rgba($dark-gray-1-5, 0.6);
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      background: rgba($dark-gray-1-5, 0.9);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .attachment-icon {
+      padding: 0;
+      height: 2em;
+      width: 2em;
+      margin: 0.8em 0.8em 0.8em 0.2em;
+      user-select: none;
+    }
+
+    .attachment-file-button {
+      color: $white;
+      @include font-family(regular);
+      user-select: none;
+    }
+  }
+}

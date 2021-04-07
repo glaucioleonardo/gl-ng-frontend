@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from "@angular/material/core";
-import { MAT_MOMENT_DATE_ADAPTER_OPTIONS, MomentDateAdapter } from "@angular/material-moment-adapter";
-import { DateGet } from "gl-w-frontend";
-import { IDatePickerMonthYearOutput } from "./gl-shared-component-input-datepicker-simple-month-year.interface";
-import { MatDatepicker } from "@angular/material/datepicker";
+import { MAT_MOMENT_DATE_ADAPTER_OPTIONS, MomentDateAdapter } from '@angular/material-moment-adapter';
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+import { DateGet } from 'gl-w-frontend';
+import { THorizontalAlignment } from '../../../../title/label/simple/gl-shared-component-title-label-simple.interface';
+import { IDatePickerMonthYearOutput } from './gl-shared-component-input-datepicker-simple-month-year.interface';
+import { MatDatepicker } from '@angular/material/datepicker';
 
 import { Moment } from 'moment';
 const MONTH_YEAR_FORMAT = {
@@ -42,7 +43,7 @@ export class GlSharedComponentInputDatepickerSimpleMonthYearComponent {
   @Input() disabled = false;
   @Input() id: string;
   @Input() placeholder: string;
-  @Input() itemContentAlignment: 'left' | 'center' | 'right' = 'center';
+  @Input() itemContentAlignment: THorizontalAlignment = 'center';
   @Input() class: string;
   @Input() value: Date = DateGet.currentDate('DD/MM/YYYY');
   @Input() maxLength = 255;
@@ -53,6 +54,8 @@ export class GlSharedComponentInputDatepickerSimpleMonthYearComponent {
   readonly dateFormat = 'DD/MM/YYYY';
   startDate = this.value;
   date: Date = DateGet.customDateNoUTC('DD/MM/YYYY');
+
+  constructor() {}
 
   chosenYearHandler(normalizedYear: Moment) {
     const ctrlValue = this.date;
@@ -65,7 +68,6 @@ export class GlSharedComponentInputDatepickerSimpleMonthYearComponent {
 
     this.currentValue.emit({ date, dateString });
   }
-
   chosenMonthHandler(normalizedMonth: Moment, datepicker: MatDatepicker<any>) {
     const ctrlValue = this.date;
     ctrlValue.setMonth(normalizedMonth.month());
@@ -79,13 +81,11 @@ export class GlSharedComponentInputDatepickerSimpleMonthYearComponent {
     this.currentValue.emit({ date, dateString });
   }
 
-  constructor() {}
-
   clear() {
     this.currentValue.emit({
       date: null,
       dateString: null
-    })
+    });
   }
   changed(event) {
     this.currentValue.emit({

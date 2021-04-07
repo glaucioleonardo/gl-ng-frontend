@@ -1,0 +1,11 @@
+@import "../../assets/style/components/view-port/view-port";
+@import "../../assets/style/colors/black";
+
+:host::ng-deep {
+  .menu-background {
+    background-color: $black-translucid-3;
+    position: fixed;
+    width: width(100);
+    height: height(100);
+  }
+}

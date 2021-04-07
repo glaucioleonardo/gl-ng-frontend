@@ -1,0 +1,38 @@
+<div class="item-container {{ type }}">
+  <gl-shared-component-title-label-button-container
+    *ngIf="showLabel"
+    labelValue="Image"
+    labelAlignment="left"
+    [class]="type"
+    [requiredFieldDescription]="requiredFieldDescription"
+    [required]="required">
+    <ng-content select="top"></ng-content>
+      <gl-shared-component-button-image-tooltip
+        *ngFor="let b of service.buttons"
+        [src]="b.src"
+        [alt]="b.alt"
+        [id]="b.id"
+        [show]="b.show && !disabled || b.id === 'expand-with-step-2'"
+        [callback]="b.callback"
+      ></gl-shared-component-button-image-tooltip>
+      <ng-content select="[slot=buttons]"></ng-content>
+    <ng-content select="bottom"></ng-content>
+  </gl-shared-component-title-label-button-container>
+
+  <div class="attachment-container-content">
+    <input
+      #fileInputImage
+      id="file-input-image"
+      name="file-input-image"
+      type="file"
+      class="input-image"
+      accept="image/tif, image/tiff, image/x-png, image/jpeg, image/jpg, image/bmp, image/gif, image/svg+xml"
+      maxlength="1"
+      [attr.data-maxsize]="maxImageSize"
+      [title]="addImageDescription"
+    />
+  </div>
+  <div class="image-container">
+    <div #userImage id="image"></div>
+  </div>
+</div>

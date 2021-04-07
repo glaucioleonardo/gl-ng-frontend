@@ -1,0 +1,9 @@
+<div class="content-container {{ position === 'right' ? 'right' : 'left' }}">
+  <h1 class="main-title">{{ errorCode }}</h1>
+  <h2 class="message">{{ errorMessage }}</h2>
+  <gl-shared-component-input-button-simple
+    class="home-button"
+    [innerValue]="buttonLabel"
+    (click)="buttonAction()"
+  ></gl-shared-component-input-button-simple>
+</div>

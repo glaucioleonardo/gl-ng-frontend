@@ -9,7 +9,7 @@ export declare class GlSharedComponentInputTextLabelButtonContainerComponent {
     labelAlignment: THorizontalAlignment;
     labelValue: string;
     placeholder: string;
-    itemContentAlignment: string;
+    itemContentAlignment: THorizontalAlignment;
     class: string;
     value: string;
     mask: TInputTextMask;

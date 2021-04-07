@@ -1,1 +1,1 @@
-export type THorizontalAlignment = 'left' | 'center' | 'right'
+export type THorizontalAlignment = 'left' | 'center' | 'right';

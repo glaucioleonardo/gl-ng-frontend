@@ -1,5 +1,6 @@
 import { EventEmitter } from '@angular/core';
 import { TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-frontend';
+import { THorizontalAlignment } from '../../../../title/label/simple/gl-shared-component-title-label-simple.interface';
 import { IInputTextStepButton, TStepType } from './gl-shared-component-input-text-simple-with-step.interface';
 import { TInputTextMask } from '../gl-shared-component-input-text-simple.interface';
 export declare class GlSharedComponentInputTextSimpleWithStepComponent {
@@ -7,7 +8,7 @@ export declare class GlSharedComponentInputTextSimpleWithStepComponent {
     autocomplete: boolean;
     id: string;
     placeholder: string;
-    itemContentAlignment: string;
+    itemContentAlignment: THorizontalAlignment;
     class: string;
     value: number;
     allowMinus: boolean;

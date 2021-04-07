@@ -1,0 +1,66 @@
+@import "../../assets/style/colors/gray";
+@import "../../assets/style/colors/white";
+
+:host::ng-deep {
+  display: flex;
+  flex-grow: 1;
+
+  .item-container {
+    background-color: $dark-gray-2;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+
+    gl-shared-component-title-label-button-container {
+      flex-grow: 0;
+      position: relative;
+
+      .label-with-button-container {
+        .label-button-container {
+          margin: 0 .8em 0 0;
+        }
+      }
+
+      .required-fill-dot {
+        right: 0.2em;
+      }
+    }
+
+    &.light {
+      background-color: transparent;
+      border-right: 0.5px $white-translucid-1 solid;
+    }
+    &.dark {
+      background-color: $dark-gray-3-2;
+
+      label {
+        background-color: $dark-gray-3-4;
+      }
+    }
+
+    .attachment-container-content {
+      .input-image {
+        display: none;
+      }
+    }
+
+    .image-container {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+      #image {
+        content: '';
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-width: 100%;
+        min-height: 30vh;
+        border: 0;
+        background-position-x: center;
+        background-position-y: center;
+        flex-grow: 1;
+      }
+    }
+  }
+}

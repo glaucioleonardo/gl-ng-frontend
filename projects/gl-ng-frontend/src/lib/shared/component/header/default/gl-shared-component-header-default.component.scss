@@ -1,0 +1,119 @@
+@import "../../assets/style/components/view-port/view-port";
+@import "../../assets/style/colors/gray";
+@import "../../assets/style/colors/black";
+@import "../../assets/style/colors/white";
+@import "../../assets/style/colors/gradient";
+@import "../../assets/style/patterns/gradient";
+
+:host::ng-deep {
+  max-width: width(100);
+
+  .header-container {
+    max-width: width(100);
+    position: relative;
+    background-color: $dark-gray-3;
+
+    &.light, &.inverted {
+      background: $light-gradient-translucid;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+
+      &.dark, &.light {
+        @include pattern-gradient-border(0.2em);
+      }
+
+      &.inverted {
+        @include pattern-gradient-border(0.5px, bottom);
+      }
+
+      .default-logo {
+        margin: 0 0.5em 0 0;
+      }
+
+      .menu-bar {
+        height: 2.3em;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: flex-end;
+
+        .menu-buttons-container {
+          display: flex;
+          align-items: center;
+          margin: 0 0.5em 0 0.5em;
+        }
+      }
+    }
+
+    &.only-buttons {
+      background-color: transparent;
+    }
+    &.dark-translucid {
+      background-color: $black-translucid-3;
+    }
+    &.light-translucid {
+      background-color: $white-translucid-3;
+    }
+  }
+
+  // Generic
+  @media screen and (min-device-width: 240px) and (orientation: portrait) {
+    .header-container {
+      font-size: width(6);
+    }
+  }
+  @media screen and (min-device-width: 600px) and (orientation: portrait) {
+    .header-container {
+      font-size: width(4);
+    }
+  }
+  @media screen and (min-device-width: 700px) and (orientation: portrait) {
+    .header-container {
+      font-size: width(6);
+    }
+  }
+  @media screen and (min-device-width: 800px) and (orientation: portrait) {
+    .header-container {
+      font-size: width(5);
+    }
+  }
+  @media screen and (min-device-width: 1024px) and (orientation: portrait) {
+    .header-container {
+      font-size: width(3);
+    }
+  }
+  @media screen and (min-device-width: 1300px) and (orientation: portrait) {
+    .header-container {
+      font-size: width(4);;
+    }
+  }
+
+  @media screen and (min-device-width: 240px) and (orientation: landscape) {
+    .header-container {
+      font-size: width(3);
+    }
+  }
+  @media screen and (min-device-width: 400px) and (orientation: landscape) {
+    .header-container {
+      font-size: width(3.5);
+    }
+  }
+  @media screen and (min-device-width: 700px) and (orientation: landscape) {
+    .header-container {
+      font-size: width(2.5);
+    }
+  }
+  @media screen and (min-device-width: 800px) and (orientation: landscape) {
+    .header-container {
+      font-size: width(2);
+    }
+  }
+  @media screen and (min-device-width: 1024px) and (orientation: landscape) {
+    .header-container {
+      font-size: width(1.5);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/gl-ng-frontend",
+  "lib": {
+    "entryFile": "src/public-api.ts",
+    "styleIncludePaths": [
+      "src/assets/style",
+      "src/assets/img"
+    ],
+    "umdModuleIds": {
+      "smooth-scroll": "smooth-scroll",
+      "gl-w-frontend": "gl-w-frontend",
+      "gl-w-frontend/lib/es5/scripts/core/services/input/core-services-input.service": "gl-w-frontend/core-input",
+      "gl-w-frontend/lib/es5/scripts/core/services/attachment/core-services-attachment.service": "gl-w-frontend/core-attachment",
+      "gl-w-frontend/lib/es5/scripts/core/services/string/core-services-string.service": "gl-w-frontend/core-string"
+    }
+  }
+}

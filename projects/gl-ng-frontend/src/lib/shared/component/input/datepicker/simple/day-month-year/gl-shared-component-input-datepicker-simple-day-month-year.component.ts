@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { DateGet } from 'gl-w-frontend';
+import { THorizontalAlignment } from '../../../../title/label/simple/gl-shared-component-title-label-simple.interface';
 import { IDatePickerOutput } from './gl-shared-component-input-datepicker-simple-day-month-year.interface';
 
 @Component({
@@ -25,7 +26,7 @@ export class GlSharedComponentInputDatepickerSimpleDayMonthYearComponent {
   @Input() disabled = false;
   @Input() id: string;
   @Input() placeholder: string;
-  @Input() itemContentAlignment: 'left' | 'center' | 'right' = 'center';
+  @Input() itemContentAlignment: THorizontalAlignment = 'center';
   @Input() class: string;
   @Input() value: Date = null;
   @Input() maxLength = 255;

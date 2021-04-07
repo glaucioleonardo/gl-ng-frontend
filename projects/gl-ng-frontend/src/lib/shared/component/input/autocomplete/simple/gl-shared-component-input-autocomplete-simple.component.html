@@ -1,0 +1,49 @@
+<ng-content></ng-content>
+<div class="input-container custom-combobox {{ class }} {{ disabled ? 'read-only' : '' }} {{ listItems.length > 0 ? '' : 'no-data' }}">
+  <mat-form-field
+    (focusout)="overlay.position().global().dispose()"
+    floatLabel="never"
+    appearance="none">
+    <div class="combobox-container {{ listItems.length > 0 ? '' : 'no-data' }} {{ disabled ? 'read-only' : '' }}">
+      <input
+        #input
+        type="text"
+        aria-label="Number"
+        class="item-content {{ itemContentAlignment }} {{ class }} {{ listItems.length > 0 ? '' : 'no-data' }} {{ disabled ? 'read-only' : '' }}"
+        matInput
+        [readonly]="disabled"
+        [id]="id"
+        [placeholder]="placeholder"
+        [formControl]="autocompleteInput"
+        [maxLength]="maxLength"
+        [matAutocomplete]="auto"
+        (focusin)="reset(auto, $event)"
+        (focusout)="validate()">
+      <!--    <img-->
+      <!--      *ngIf="!disabled"-->
+      <!--      (click)="clearItems(input)"-->
+      <!--      alt="Clear items"-->
+      <!--      class="clear-items"-->
+      <!--      [src]="clearSource">-->
+
+      <!--    <img-->
+      <!--      #arrowDown-->
+      <!--      (click)="clearItems(input)"-->
+      <!--      alt="Show items"-->
+      <!--      class="arrow-down {{ class }} {{ disabled ? 'read-only' : '' }}"-->
+      <!--      [src]="imageSource">-->
+    </div>
+    <mat-autocomplete autoActiveFirstOption="true" #auto="matAutocomplete" (optionSelected)="input.blur()" [mat-dialog-close]="overlay.position().global().dispose()">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option.text">
+        {{option.text}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <img
+    #arrowDown
+    (click)="clearItems(input)"
+    alt="Show items"
+    class="arrow-down {{ class }} {{ disabled ? 'read-only' : '' }}"
+    [src]="imageSource">
+</div>
+
