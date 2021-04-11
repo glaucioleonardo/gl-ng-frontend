@@ -1,23 +1,15 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-
-import { GlSharedModule } from './shared/gl-shared.module';
-import { GlCoreModule } from './core/gl-core.module';
+import { ComponentModule } from './component/component.module';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    GlSharedModule,
-    GlCoreModule,
+  declarations: [
+
   ],
-  exports: [],
-  providers: []
+  imports: [
+    ComponentModule
+  ],
+  exports: [
+    ComponentModule
+  ]
 })
-export class GlNgFrontendModule {
-  constructor() { }
-}
+export class GlNgFrontendModule { }
