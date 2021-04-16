@@ -1,13 +1,13 @@
 {
   "name": "gl-ng-modals-frontend",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_modals.ts",
   "types": "gl-ng-modals-frontend.d.ts",
   "module": "gl-ng-modals-frontend/src/lib/gl-ng-modals-frontend.module.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/glaucioleonardo/gl-ng-modals-frontend.git"
+    "url": "https://github.com/glaucioleonardo/gl-ng-frontend/tree/master/projects/gl-ng-modals-frontend"
   },
   "keywords": [
     "angular",
@@ -22,7 +22,7 @@
   "author": "Gláucio Leonardo Sant'ana",
   "license": "MIT",
   "homepage": "https://www.glauciosantana.com",
-  "bugs": "https://github.com/glaucioleonardo/gl-ng-modals-frontend/issues",
+  "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
     "@angular/common": "^11.2.9",
     "@angular/core": "^11.2.9"

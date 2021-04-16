@@ -1,13 +1,13 @@
 {
   "name": "gl-ng-lists-frontend",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_lists.ts",
   "types": "gl-ng-lists-frontend.d.ts",
   "module": "gl-ng-lists-frontend/src/lib/gl-ng-lists-frontend.module.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/glaucioleonardo/gl-ng-lists-frontend.git"
+    "url": "https://github.com/glaucioleonardo/gl-ng-frontend/tree/master/projects/gl-ng-lists-frontend"
   },
   "keywords": [
     "angular",
@@ -21,7 +21,7 @@
   "author": "Gláucio Leonardo Sant'ana",
   "license": "MIT",
   "homepage": "https://www.glauciosantana.com",
-  "bugs": "https://github.com/glaucioleonardo/gl-ng-lists-frontend/issues",
+  "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
     "@angular/common": "^11.2.9",
     "@angular/core": "^11.2.9"
