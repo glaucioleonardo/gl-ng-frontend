@@ -1,0 +1,13 @@
+<div
+  *ngIf="show"
+  [class.hidden]="!show"
+  [id]="id"
+  [attr.tooltip]="alt"
+  class="tooltip {{ verticalPosition }} {{ horizontalPosition }} {{ fullwidth }} {{ borderRadius }}">
+  <gl-component-button-image-simple
+    [src]="src"
+    [alt]="alt"
+    [id]="id"
+    [callback]="callback"
+  ></gl-component-button-image-simple>
+</div>

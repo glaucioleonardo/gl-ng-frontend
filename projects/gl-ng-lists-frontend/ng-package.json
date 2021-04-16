@@ -1,0 +1,19 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/gl-ng-lists-frontend",
+  "lib": {
+    "entryFile": "../wrapper_lists.ts",
+    "umdModuleIds": {
+      "gl-w-frontend": "gl-w-frontend"
+    }
+  },
+  "assets": [
+    "../../node_modules/gl-scss-styles/assets",
+    "../../node_modules/gl-icons-assets/assets"
+  ],
+  "allowedNonPeerDependencies": [
+    "gl-scss-styles",
+    "gl-icons-assets",
+    "gl-w-frontend"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "gl-ng-attachments-frontend",
+  "version": "1.0.2",
+  "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
+  "main": "wrapper_attachments.ts",
+  "types": "gl-ng-attachments-frontend.d.ts",
+  "module": "gl-ng-attachments-frontend/src/lib/gl-ng-attachments-frontend.module.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glaucioleonardo/gl-ng-attachments-frontend.git"
+  },
+  "keywords": [
+    "angular",
+    "angular 2+",
+    "angular component",
+    "angular tools",
+    "angular attachments",
+    "angular attachment image preview",
+    "angular attachment item"
+  ],
+  "author": "Gláucio Leonardo Sant'ana",
+  "license": "MIT",
+  "homepage": "https://www.glauciosantana.com",
+  "bugs": "https://github.com/glaucioleonardo/gl-ng-attachments-frontend/issues",
+  "peerDependencies": {
+    "@angular/common": "^11.2.9",
+    "@angular/core": "^11.2.9"
+  },
+  "dependencies": {
+    "gl-scss-styles": "^1.0.0",
+    "gl-w-frontend": "^2.6.0",
+    "tslib": "^2.0.0"
+  },
+  "scripts": {
+    "postinstall": "ngcc",
+    "build": "ng build gl-ng-attachments-frontend",
+    "build-prod": "ng build --prod gl-ng-attachments-frontend",
+    "production": "npm run build-prod",
+    "dist": "cd ./../../dist/gl-ng-attachments-frontend",
+    "publish": "npm run build-prod && npm run dist && npm publish && cd.. && cd.."
+  }
+}

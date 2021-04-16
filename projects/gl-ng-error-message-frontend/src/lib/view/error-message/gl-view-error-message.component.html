@@ -1,0 +1,24 @@
+<div #mainContainer class="main-container">
+  <gl-component-logo-square
+    [horizontalPosition]="logoHorizontalPosition"
+    [verticalPosition]="logoVerticalPosition"
+    [imageAlt]="logoImageAlt"
+    [imageScr]="logoImageScr"
+  ></gl-component-logo-square>
+  <gl-component-error-message
+    [position]="errorPosition"
+    [errorCode]="errorCode"
+    [errorMessage]="errorMessage"
+    [buttonLabel]="errorButtonLabel"
+    (buttonAction$)="errorButtonAction()"
+  ></gl-component-error-message>
+  <gl-component-footer-container [description]="footerMainDescription">
+    <gl-component-input-button-hyperlink
+      *ngIf="footerShowContainer"
+      [description]="footerDescription"
+      [imageDescription]="footerImageDescription"
+      [imageSrc]="footerImageSrc"
+      [link]="footerLink"
+    ></gl-component-input-button-hyperlink>
+  </gl-component-footer-container>
+</div>

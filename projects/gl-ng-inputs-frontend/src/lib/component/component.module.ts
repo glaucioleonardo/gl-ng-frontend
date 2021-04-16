@@ -1,0 +1,87 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { GlNgAttachmentsFrontendModule } from '../../../../gl-ng-attachments-frontend/src/lib/gl-ng-attachments-frontend.module';
+import { GlNgButtonsFrontendModule } from '../../../../gl-ng-buttons-frontend/src/lib/gl-ng-buttons-frontend.module';
+import { GlNgTitlesFrontendModule } from '../../../../gl-ng-titles-frontend/src/lib/gl-ng-titles-frontend.module';
+import { CoreModule } from '../core/core.module';
+import { GlComponentInputAutocompleteLabelComponent } from './autocomplete/label/gl-component-input-autocomplete-label.component';
+import { GlComponentInputAutocompleteSimpleComponent } from './autocomplete/simple/gl-component-input-autocomplete-simple.component';
+import { GlComponentInputButtonHyperlinkComponent } from './button/hyperlink/gl-component-input-button-hyperlink.component';
+import { GlComponentInputButtonSimpleComponent } from './button/simple/gl-component-input-button-simple.component';
+import { GlComponentInputCheckBoxLabelComponent } from './check-box/label/gl-component-input-check-box-label.component';
+import { GlComponentInputCheckBoxSimpleComponent } from './check-box/simple/gl-component-input-check-box-simple.component';
+import { GlComponentInputDatepickerLabelComponent } from './datepicker/label/gl-component-input-datepicker-label.component';
+import { GlComponentInputDatepickerSimpleDayMonthYearComponent } from './datepicker/simple/day-month-year/gl-component-input-datepicker-simple-day-month-year.component';
+import { GlComponentInputDatepickerSimpleMonthYearComponent } from './datepicker/simple/month-year/gl-component-input-datepicker-simple-month-year.component';
+import { GlComponentInputDragAndDropSimpleComponent } from './drag-and-drop/simple/gl-component-input-drag-and-drop-simple.component';
+import { GlComponentInputOptionSimpleComponent } from './option/simple/gl-component-input-option-simple.component';
+import { GlComponentInputSwitchComponent } from './switch/gl-component-input-switch.component';
+import { GlComponentInputTextAreaLabelComponent } from './text-area/label/gl-component-input-text-area-label.component';
+import { GlComponentInputTextAreaSimpleComponent } from './text-area/simple/gl-component-input-text-area-simple.component';
+import { GlComponentInputTextLabelButtonContainerComponent } from './text/label/button/container/gl-component-input-text-label-button-container.component';
+import { GlComponentInputTextLabelSimpleComponent } from './text/label/simple/gl-component-input-text-label-simple.component';
+import { GlComponentInputTextSimpleComponent } from './text/simple/gl-component-input-text-simple.component';
+import { GlComponentInputTextSimpleWithStepComponent } from './text/simple/with-step/gl-component-input-text-simple-with-step.component';
+
+@NgModule({
+  declarations: [
+    GlComponentInputAutocompleteLabelComponent,
+    GlComponentInputAutocompleteSimpleComponent,
+    GlComponentInputButtonHyperlinkComponent,
+    GlComponentInputButtonSimpleComponent,
+    GlComponentInputCheckBoxLabelComponent,
+    GlComponentInputCheckBoxSimpleComponent,
+    GlComponentInputDatepickerLabelComponent,
+    GlComponentInputDatepickerSimpleDayMonthYearComponent,
+    GlComponentInputDatepickerSimpleMonthYearComponent,
+    GlComponentInputOptionSimpleComponent,
+    GlComponentInputSwitchComponent,
+    GlComponentInputTextLabelButtonContainerComponent,
+    GlComponentInputTextLabelSimpleComponent,
+    GlComponentInputTextSimpleComponent,
+    GlComponentInputTextSimpleWithStepComponent,
+    GlComponentInputTextAreaSimpleComponent,
+    GlComponentInputTextAreaLabelComponent,
+    GlComponentInputDragAndDropSimpleComponent
+  ],
+  imports: [
+    CommonModule,
+    GlNgTitlesFrontendModule,
+    GlNgAttachmentsFrontendModule,
+    GlNgButtonsFrontendModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    CoreModule
+  ],
+  exports: [
+    GlComponentInputAutocompleteLabelComponent,
+    GlComponentInputAutocompleteSimpleComponent,
+    GlComponentInputButtonHyperlinkComponent,
+    GlComponentInputButtonSimpleComponent,
+    GlComponentInputCheckBoxLabelComponent,
+    GlComponentInputCheckBoxSimpleComponent,
+    GlComponentInputDatepickerLabelComponent,
+    GlComponentInputDatepickerSimpleDayMonthYearComponent,
+    GlComponentInputDatepickerSimpleMonthYearComponent,
+    GlComponentInputOptionSimpleComponent,
+    GlComponentInputSwitchComponent,
+    GlComponentInputTextLabelButtonContainerComponent,
+    GlComponentInputTextLabelSimpleComponent,
+    GlComponentInputTextSimpleComponent,
+    GlComponentInputTextSimpleWithStepComponent,
+    GlComponentInputTextAreaSimpleComponent,
+    GlComponentInputTextAreaLabelComponent,
+    GlComponentInputDragAndDropSimpleComponent
+  ]
+})
+export class ComponentModule { }

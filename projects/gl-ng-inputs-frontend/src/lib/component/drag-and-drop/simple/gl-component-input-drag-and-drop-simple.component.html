@@ -1,0 +1,63 @@
+<gl-component-input-switch
+  *ngIf="showContinueUpload"
+  [active]="continueUpload"
+  [enabled]="!readOnly"
+  [label]="continueUploadLabel"
+  (active$)="onContinueUpload($event)"
+  class="drag-and-drop-continue-switch"
+
+  buttonIconSrc="../assets/img/icon/upload/resume-upload.svg"
+  labelColor="white"
+  [showAsInputButton]="true"
+  [showLabel]="true"
+></gl-component-input-switch>
+
+<div
+  class="file-attachment-container {{ readOnly ? 'readonly' : '' }}"
+  glCoreDirectivesDragAndDrop
+  (fileDropped)="onFileDropped($event)"
+  (change)="fileBrowserHandler($event.target)"
+  (click)="fileAttachment.click()">
+
+  <div class="description-container {{ readOnly ? 'readonly' : '' }}">
+    <img
+      alt="Upload icon"
+      class="upload-icon {{ readOnly ? 'readonly' : '' }}"
+      [src]="uploadIcon">
+
+    <span *ngIf="!readOnly" class="action-description {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDrop }}</span>
+    <span *ngIf="!readOnly" class="action-description {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDropOr }}</span>
+    <span *ngIf="!readOnly" class="action-description button {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDropClickHere }}</span>
+  </div>
+
+  <input
+    #fileAttachment
+    class="file-attachment"
+    id="file-attachment"
+    type="file"
+    [attr.data-maxsize]="maxSize"
+    [accept]="parsedAcceptList"
+    [disabled]="readOnly"
+    [multiple]="(maxNumberOfFiles == -1 && maxNumberOfFiles > 1) || (maxNumberOfFiles == null)">
+</div>
+<div class="attachment-list">
+  <gl-component-attachment-item
+    *ngFor="let item of attachmentItems"
+    [fileIcon]="item.icon"
+    [id]="item.id"
+    [fileName]="item.name"
+    [disabled]="readOnly"
+    [addingSmooth]="true"
+
+    (removeCurrentItem$)="removeAttachment($event);"
+  ></gl-component-attachment-item>
+</div>
+
+<div class="button-container upload-file" *ngIf="attachmentItems.length > 0">
+  <gl-component-input-button-simple
+    [innerValue]="uploadButtonValue"
+    [readonly]="readOnly"
+    value="upload-file"
+    (click)="uploadClick()"
+  ></gl-component-input-button-simple>
+</div>

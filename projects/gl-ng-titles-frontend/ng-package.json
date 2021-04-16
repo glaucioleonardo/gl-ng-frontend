@@ -1,0 +1,15 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/gl-ng-titles-frontend",
+  "lib": {
+    "entryFile": "../wrapper_titles.ts"
+  },
+  "assets": [
+    "../../node_modules/gl-icons-assets/assets",
+    "../../node_modules/gl-scss-styles/assets"
+  ],
+  "allowedNonPeerDependencies": [
+    "gl-icons-assets",
+    "gl-scss-styles"
+  ]
+}

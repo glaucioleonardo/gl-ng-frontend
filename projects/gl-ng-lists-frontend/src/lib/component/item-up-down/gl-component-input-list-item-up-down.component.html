@@ -1,0 +1,19 @@
+<div class="reorder-list-container">
+
+  <gl-component-button-image-tooltip
+    id="move-up-list-item"
+    alt="Move up"
+    src="../assets/img/icon/list/move-up.svg"
+    [class]="showUp ? '' : 'disabled'"
+    (click)="onClick('move-up')"
+    [callback]="callback"
+  ></gl-component-button-image-tooltip>
+  <gl-component-button-image-tooltip
+    id="move-down-list-item"
+    alt="Move down"
+    src="../assets/img/icon/list/move-down.svg"
+    [class]="showDown ? '' : 'disabled'"
+    (click)="onClick('move-down')"
+    [callback]="callback"
+  ></gl-component-button-image-tooltip>
+</div>

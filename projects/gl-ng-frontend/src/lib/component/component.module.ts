@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GlNgAttachmentsFrontendModule } from 'gl-ng-attachments-frontend';
-import { GlNgButtonsFrontendModule } from 'gl-ng-buttons-frontend';
-import { GlNgErrorMessageFrontendModule } from 'gl-ng-error-message-frontend';
-import { GlNgFiltersFrontendModule } from 'gl-ng-filters-frontend';
-import { GlNgFooterFrontendModule } from 'gl-ng-footer-frontend';
-import { GlNgHeadersFrontendModule } from 'gl-ng-headers-frontend';
-import { GlNgInputsFrontendModule } from 'gl-ng-inputs-frontend';
-import { GlNgListsFrontendModule } from 'gl-ng-lists-frontend';
-import { GlNgLogosFrontendModule } from 'gl-ng-logos-frontend';
-import { GlNgMenusFrontendModule } from 'gl-ng-menus-frontend';
-import { GlNgModalsFrontendModule } from 'gl-ng-modals-frontend';
-import { GlNgNavigationFrontendModule } from 'gl-ng-navigation-frontend';
-import { GlNgPagingFrontendModule } from 'gl-ng-paging-frontend';
-import { GlNgTitlesFrontendModule } from 'gl-ng-titles-frontend';
+import { GlNgAttachmentsFrontendModule } from '../../../../wrapper_attachments';
+import { GlNgButtonsFrontendModule } from '../../../../wrapper_buttons';
+import { GlNgErrorMessageFrontendModule } from '../../../../wrapper_error_message';
+import { GlNgFiltersFrontendModule } from '../../../../wrapper_filters';
+import { GlNgFooterFrontendModule } from '../../../../wrapper_footer';
+import { GlNgHeadersFrontendModule } from '../../../../wrapper_headers';
+import { GlNgInputsFrontendModule } from '../../../../wrapper_inputs';
+import { GlNgListsFrontendModule } from '../../../../wrapper_lists';
+import { GlNgLogosFrontendModule } from '../../../../wrapper_logos';
+import { GlNgMenusFrontendModule } from '../../../../wrapper_menus';
+import { GlNgModalsFrontendModule } from '../../../../wrapper_modals';
+import { GlNgNavigationFrontendModule } from '../../../../wrapper_navigation';
+import { GlNgPagingFrontendModule } from '../../../../wrapper_paging';
+import { GlNgTitlesFrontendModule } from '../../../../wrapper_titles';
 
 @NgModule({
   declarations: [],

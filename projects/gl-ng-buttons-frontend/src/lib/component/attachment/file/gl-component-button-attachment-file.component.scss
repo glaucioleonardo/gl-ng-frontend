@@ -1,0 +1,55 @@
+@import "~gl-scss-styles/assets/style/colors/gray";
+@import "~gl-scss-styles/assets/style/colors/white";
+@import "~gl-scss-styles/assets/style/fonts/montserrat";
+
+:host::ng-deep {
+  .attachment-container {
+    position: relative;
+    display: flex;
+    padding: 0.4em 0.3em;
+    border-radius: 0.5em;
+    align-items: center;
+    margin: 0.2em 0;
+    cursor: pointer;
+
+    &:not(hover) {
+      background: rgba($dark-gray-1-5, 0.6);
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      background: rgba($dark-gray-1-5, 0.9);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .file-input {
+      font-size: 1em;
+      display: none;
+    }
+
+    .attachment-icon {
+      padding: 0;
+      height: 2em;
+      width: 2em;
+      margin: 0.5em 0.8em 0.5em 0.2em;
+      user-select: none;
+    }
+
+    .file {
+      font-size: 0.8em;
+      color: rgb(30, 30, 30);
+      user-select: none;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 75%;
+      padding: 1em 0;
+    }
+
+    .attachment-file-button {
+      color: $white;
+      @include font-family(regular);
+      user-select: none;
+    }
+  }
+}

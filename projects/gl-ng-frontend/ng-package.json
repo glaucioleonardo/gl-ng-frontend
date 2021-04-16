@@ -2,22 +2,11 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/gl-ng-frontend",
   "lib": {
-    "entryFile": "src/public-api.ts",
+    "entryFile": "../wrapper_index.ts",
     "umdModuleIds": {
-      "gl-ng-attachments-frontend": "gl-ng-attachments-frontend",
-      "gl-ng-buttons-frontend": "gl-ng-buttons-frontend",
-      "gl-ng-error-message-frontend": "gl-ng-error-message-frontend",
-      "gl-ng-filters-frontend": "gl-ng-filters-frontend",
-      "gl-ng-footer-frontend": "gl-ng-footer-frontend",
-      "gl-ng-headers-frontend": "gl-ng-headers-frontend",
-      "gl-ng-inputs-frontend": "gl-ng-inputs-frontend",
-      "gl-ng-lists-frontend": "gl-ng-lists-frontend",
-      "gl-ng-logos-frontend": "gl-ng-logos-frontend",
-      "gl-ng-menus-frontend": "gl-ng-menus-frontend",
-      "gl-ng-modals-frontend": "gl-ng-modals-frontend",
-      "gl-ng-navigation-frontend": "gl-ng-navigation-frontend",
-      "gl-ng-paging-frontend": "gl-ng-paging-frontend",
-      "gl-ng-titles-frontend": "gl-ng-titles-frontend"
+      "gl-w-frontend": "gl-w-frontend",
+      "gl-sp-frontend": "gl-sp-frontend",
+      "smooth-scroll": "smooth-scroll"
     }
   },
   "assets": [
@@ -27,19 +16,8 @@
   "allowedNonPeerDependencies": [
     "gl-scss-styles",
     "gl-icons-assets",
-    "gl-ng-attachments-frontend",
-    "gl-ng-buttons-frontend",
-    "gl-ng-error-message-frontend",
-    "gl-ng-filters-frontend",
-    "gl-ng-footer-frontend",
-    "gl-ng-headers-frontend",
-    "gl-ng-inputs-frontend",
-    "gl-ng-lists-frontend",
-    "gl-ng-logos-frontend",
-    "gl-ng-menus-frontend",
-    "gl-ng-modals-frontend",
-    "gl-ng-navigation-frontend",
-    "gl-ng-paging-frontend",
-    "gl-ng-titles-frontend"
+    "gl-w-frontend",
+    "gl-sp-frontend",
+    "smooth-scroll"
   ]
 }

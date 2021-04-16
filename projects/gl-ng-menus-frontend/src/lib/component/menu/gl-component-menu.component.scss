@@ -1,0 +1,336 @@
+@import "~gl-scss-styles/assets/style/components/view-port/view-port";
+
+@import "~gl-scss-styles/assets/style/colors/gray";
+@import "~gl-scss-styles/assets/style/colors/pink";
+@import "~gl-scss-styles/assets/style/colors/white";
+
+@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@import "~gl-scss-styles/assets/style/patterns/gradient";
+
+$max-width: 17em;
+
+@mixin top-right-logo-container {
+  .logo-main-container {
+    position: absolute;
+    height: 2em;
+    right: 0.5em;
+    top: 0.3em;
+    display: flex;
+    align-items: center;
+
+    .logo-container {
+      font-size: 0.5em;
+      position: static !important;
+    }
+  }
+}
+
+:host::ng-deep {
+  .menu-container {
+    @include pattern-gradient-border(0.3em, top);
+    @include pattern-gradient-border-ie(0.7em, bottom, true);
+    background: $dark-gray-3;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: width(85);
+    max-width: $max-width;
+    min-width: $max-width;
+    z-index: 10000;
+
+    flex-grow: 1;
+    display: flex;
+    @extend %full-height;
+
+    &.left {
+      left: -110%;
+      transition: left 0.5s ease-in-out;
+    }
+    &.right {
+      right: -110%;
+      transition: right 0.5s ease-in-out;
+    }
+
+    .a {
+      display: block;
+      min-height: 3em;
+    }
+
+    .menu-nav-container {
+      overflow: hidden;
+      //noinspection CssUnknownProperty
+      scrollbar-width: none;
+      max-height: 100%;
+      flex-grow: 1;
+      display: flex;
+
+      .menu-content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        position: relative;
+
+        .menu-header-container {
+          max-width: $max-width;
+
+          .menu-header {
+            display: flex;
+            flex-direction: column;
+            margin: 0.5em 1em 1em 0.5em;
+
+            .menu-top-icons-container {
+              display: flex;
+              margin: 0 0 1.5em 0;
+
+              .close-menu, .settings-menu {
+                cursor: pointer;
+                height: 1.5em;
+                width: 1.5em;
+
+                &:active, &:hover {
+                  opacity: 1;
+                  animation: increase-decrease 0.4s ease-in-out;
+                  animation-fill-mode: forwards;
+                }
+              }
+
+              .close-menu {
+                margin: 0 0.2em 0 0;
+              }
+            }
+            .menu-header-title {
+              .title, .subtitle {
+                text-transform: uppercase;
+                user-select: none;
+                color: $white;
+                margin: 0;
+
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+              }
+
+              .title {
+                @include font-family('bold');
+                font-size: 0.9em;
+              }
+
+              .subtitle {
+                @include font-family('thin');
+                font-size: 1.5em;
+              }
+            }
+          }
+          .admin-settings {
+            visibility: collapse;
+          }
+          .menu-item-container {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.8em;
+            background-color: rgba($color: $white, $alpha: 0.3);
+
+            .menu-item {
+              min-height: 3em;
+              font-size: 0.8em;
+              display: flex;
+              align-items: center;
+              padding: 0.2em;
+
+              &:nth-child(n + 2) {
+                border-top: 1px solid;
+                border-image-source : linear-gradient(90deg, transparent 15%, $white-translucid-1 15.01%,  rgba($color: $white, $alpha: 0.05) 98%, transparent 98%);
+                border-image-slice: 1;
+              }
+
+              &:hover {
+                background-color: rgba($color: $dark-gray-1, $alpha: 0.3);
+              }
+
+              transition: all 0.2s ease-in-out;
+            }
+
+            .menu-icons {
+              margin: 0 0 0 0.7em;
+              height: 1.8em;
+              width: 1.8em;
+              opacity: 0.5;
+            }
+
+            a {
+              color: $white-translucid-6;
+              padding: 0.8em;
+              flex-grow: 1;
+              text-decoration: none;
+            }
+          }
+        }
+        .menu-content-container {
+          max-height: height(51);
+          max-width: $max-width;
+          overflow-y: auto;
+          overflow-x: hidden !important;
+
+          &.has-title {
+            max-height: height(52);
+          }
+        }
+      }
+
+      .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        bottom: height(5);
+        position: absolute;
+        width: 100%;
+
+        .main-logo {
+          height: 2em;
+          width: 2em;
+        }
+        .main-logo-title {
+          color: $white;
+          font-size: 0.4em;
+          margin: 1em 0 0 0;
+        }
+      }
+    }
+  }
+
+  .show-admin-settings {
+    visibility: visible !important;
+  }
+
+  .menu-container.menu-active {
+    &.left { left: 0; }
+    &.right { right: 0; }
+  }
+
+  .menu-background {
+    opacity: 0;
+    z-index: -100;
+  }
+
+  .visible-background {
+    width: 100%;
+    height: 100%;
+    background: rgba($color: black, $alpha: 0.6);
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .hide-subtitle {
+    opacity: 0;
+    visibility: collapse;
+    margin: 0;
+    padding: 0;
+
+    transition: all 0.25s ease-in-out;
+  }
+  .show-subtitle {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.25s ease-in-out;
+    transition-delay: 0.4s;
+  }
+
+  .hide-subtitle-container {
+    animation: hide-subtitle 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .show-subtitle-container {
+    animation: show-subtitle 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .collapsed-menu {
+    .expand {
+      transform: rotate(0deg);
+      transition: all 0.4s ease-in-out;
+    }
+
+    .menu-icons {
+      animation: decrease-increase 0.4s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+  }
+  .expanded-menu {
+    .expand {
+      transform: rotate(-180deg);
+      transition: all 0.4s ease-in-out;
+    }
+
+    .menu-icons {
+      animation: increase-decrease 0.4s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  .menu-container.dark {
+    border-left: solid 1px $dark-gray-1-8;
+    border-top: solid 0.3em rgba($pink, 0.7);
+
+    border-image-source: none;
+  }
+
+  .menu-container.translucid {
+    background: rgba($white, 0.05);
+    border-left: solid 1px rgba($white, 0.05);
+    border-top: solid 0.3em rgba($white, 0.1);
+
+    border-image-source: none;
+  }
+
+  @media screen and (min-device-width: 240px) and (orientation: portrait) {
+    .menu-container {
+      font-size: width(5.88);
+    }
+  }
+
+  @media screen and (min-device-width: 240px) and (orientation: landscape) {
+    .menu-container {
+      font-size: width(3);
+    }
+  }
+  @media screen and (min-device-width: 700px) and (orientation: landscape) {
+    .menu-container {
+      font-size: width(2);
+    }
+  }
+  @media screen and (min-device-width: 1024px) and (orientation: landscape) {
+    .menu-container {
+      font-size: width(1.5);
+    }
+  }
+
+  @media screen and (max-device-height: 300px) and (orientation: landscape) {
+    .menu-container {
+      .menu-content-container {
+        max-height: height(60);
+
+        &.has-title {
+          max-height: height(61);
+        }
+      }
+      @include top-right-logo-container;
+    }
+  }
+  @media screen and (max-device-height: 400px) and (orientation: landscape) {
+    .menu-container {
+      .menu-content-container {
+        max-height: height(65);
+
+        &.has-title {
+          max-height: height(66) !important;
+        }
+      }
+      @include top-right-logo-container;
+    }
+  }
+}

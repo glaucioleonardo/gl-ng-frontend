@@ -7,9 +7,65 @@
     "sourceMap": true,
     "declaration": false,
     "paths": {
+      "gl-ng-attachments-frontend": [
+        "dist/gl-ng-attachments-frontend/gl-ng-attachments-frontend",
+        "dist/gl-ng-attachments-frontend"
+      ],
+      "gl-ng-buttons-frontend": [
+        "dist/gl-ng-buttons-frontend/gl-ng-buttons-frontend",
+        "dist/gl-ng-buttons-frontend"
+      ],
+      "gl-ng-error-message-frontend": [
+        "dist/gl-ng-error-message-frontend/gl-ng-error-message-frontend",
+        "dist/gl-ng-error-message-frontend"
+      ],
+      "gl-ng-filters-frontend": [
+        "dist/gl-ng-filters-frontend/gl-ng-filters-frontend",
+        "dist/gl-ng-filters-frontend"
+      ],
+      "gl-ng-footer-frontend": [
+        "dist/gl-ng-footer-frontend/gl-ng-footer-frontend",
+        "dist/gl-ng-footer-frontend"
+      ],
       "gl-ng-frontend": [
         "dist/gl-ng-frontend/gl-ng-frontend",
         "dist/gl-ng-frontend"
+      ],
+      "gl-ng-headers-frontend": [
+        "dist/gl-ng-headers-frontend/gl-ng-headers-frontend",
+        "dist/gl-ng-headers-frontend"
+      ],
+      "gl-ng-inputs-frontend": [
+        "dist/gl-ng-inputs-frontend/gl-ng-inputs-frontend",
+        "dist/gl-ng-inputs-frontend"
+      ],
+      "gl-ng-lists-frontend": [
+        "dist/gl-ng-lists-frontend/gl-ng-lists-frontend",
+        "dist/gl-ng-lists-frontend"
+      ],
+      "gl-ng-logos-frontend": [
+        "dist/gl-ng-logos-frontend/gl-ng-logos-frontend",
+        "dist/gl-ng-logos-frontend"
+      ],
+      "gl-ng-menus-frontend": [
+        "dist/gl-ng-menus-frontend/gl-ng-menus-frontend",
+        "dist/gl-ng-menus-frontend"
+      ],
+      "gl-ng-modals-frontend": [
+        "dist/gl-ng-modals-frontend/gl-ng-modals-frontend",
+        "dist/gl-ng-modals-frontend"
+      ],
+      "gl-ng-navigation-frontend": [
+        "dist/gl-ng-navigation-frontend/gl-ng-navigation-frontend",
+        "dist/gl-ng-navigation-frontend"
+      ],
+      "gl-ng-paging-frontend": [
+        "dist/gl-ng-paging-frontend/gl-ng-paging-frontend",
+        "dist/gl-ng-paging-frontend"
+      ],
+      "gl-ng-titles-frontend": [
+        "dist/gl-ng-titles-frontend/gl-ng-titles-frontend",
+        "dist/gl-ng-titles-frontend"
       ]
     },
     "downlevelIteration": true,

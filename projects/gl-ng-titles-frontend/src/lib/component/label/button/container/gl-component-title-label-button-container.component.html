@@ -1,0 +1,13 @@
+<div class="label-with-button-container {{ theme }}">
+  <gl-component-title-label-simple
+    [labelValue]="labelValue"
+    [id]="id"
+    [labelAlignment]="labelAlignment"
+    [required]="required"
+    [theme]="theme"
+    [requiredLabel]="requiredFieldDescription"
+  ></gl-component-title-label-simple>
+  <div class="label-button-container">
+    <ng-content></ng-content>
+  </div>
+</div>

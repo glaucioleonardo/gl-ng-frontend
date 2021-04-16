@@ -1,0 +1,17 @@
+<div class="hyperlink-container">
+
+  <img
+    class="logo"
+    [src]="imageSrc"
+    [alt]="imageDescription">
+  <span
+    *ngIf="readonly"
+    class="message">
+    {{ description }}
+  </span>
+  <a
+    *ngIf="!readonly"
+    class="message"
+    [href]="link"
+    target="_blank">{{ description }}</a>
+</div>

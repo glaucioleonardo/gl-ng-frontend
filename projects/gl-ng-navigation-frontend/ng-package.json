@@ -1,0 +1,13 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/gl-ng-navigation-frontend",
+  "lib": {
+    "entryFile": "../wrapper_navigation.ts"
+  },
+  "assets": [
+    "../../node_modules/gl-scss-styles/assets"
+  ],
+  "allowedNonPeerDependencies": [
+    "gl-scss-styles"
+  ]
+}

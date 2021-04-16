@@ -1,0 +1,259 @@
+@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@import "~gl-scss-styles/assets/style/colors/black";
+@import "~gl-scss-styles/assets/style/colors/gray";
+@import "~gl-scss-styles/assets/style/colors/pink";
+@import "~gl-scss-styles/assets/style/colors/white";
+@import "~gl-scss-styles/assets/style/components/scrollbar/native-scrollbar";
+
+$default-transition: all 0.2s ease-in-out;
+
+:host::ng-deep {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  position: relative;
+
+  .input-container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    background-color: $dark-gray-2;
+
+    mat-form-field {
+      display: flex;
+      flex-grow: 1;
+      margin: 0;
+
+      .mat-form-field-wrapper {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        padding: 0;
+
+        .mat-form-field-flex {
+          display: flex;
+          flex-grow: 1;
+          align-items: inherit;
+
+          .mat-form-field-infix {
+            padding: 0;
+            //noinspection CssRedundantUnit
+            flex: 1 1 0px;
+            border: none;
+            width: 100%;
+            display: flex;
+
+            .combobox-container {
+              display: flex;
+              flex-grow: 1;
+              flex-direction: row;
+              pointer-events: none;
+
+              .mat-input-element {
+                @include font-family(regular);
+                position: relative;
+                padding: 0.8em;
+                border: none;
+                background-color: $dark-gray-2;
+                color: $white;
+                font-size: 0.45em;
+                flex-grow: 1;
+                margin: 0;
+
+                &::placeholder {
+                  color: $dark-gray !important;
+                }
+
+                &.left { text-align: left; }
+                &.center { text-align: center; }
+                &.right { text-align: right; }
+
+                &.light {
+                  background-color: $black-translucid-1;
+
+                  &::placeholder {
+                    color: $white-translucid-2 !important;
+                  }
+                }
+
+                &.dark {
+                  background-color: $dark-gray-3-2;
+                }
+
+                .item-content:-ms-input-placeholder {
+                  color: $dark-gray !important;
+                }
+
+                .item-content {
+                  &.light:-ms-input-placeholder {
+                    color: $gray !important;
+                  }
+                }
+              }
+
+              .clear-items {
+                width: 0.5em;
+                height: 0.5em;
+                position: absolute;
+                right: 1.5em;
+                top: 0.4em;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .arrow-down {
+      background-color: $dark-gray-2;
+      width: 0.8em;
+      height: 0.8em;
+      padding: 0 0.3em;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: $dark-gray-2-3;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &.light {
+        background-color: $black-translucid-1;
+
+        &::placeholder {
+          color: $white-translucid-2 !important;
+        }
+
+        &:hover {
+          background-color: $black-translucid-2;
+          transition: all 0.2s ease-in-out;
+        }
+        transition: all 0.2s ease-in-out;
+      }
+
+      &.dark {
+        background-color: $dark-gray-3-2;
+
+        &:hover {
+          background-color: $dark-gray-3;
+          transition: all 0.2s ease-in-out;
+        }
+        transition: all 0.2s ease-in-out;
+      }
+
+      &.read-only {
+        //display: none;
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+    &.no-data, &.read-only {
+      .arrow-down {
+        display: none;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .mat-autocomplete-panel {
+    background-color: $dark-gray-1-8;
+    border-radius: 0;
+    box-shadow: none !important;
+    @extend %native-scrollbar;
+    &::-webkit-scrollbar { width: 1em !important; }
+    transition: all 0.2s ease-in-out;
+
+    mat-option {
+      font-size: 1em;
+      border-radius: 0;
+      transition: all 0.2s ease-in-out;
+      line-height: 4em;
+      height: 4em;
+      padding: 0 1.5em;
+
+      &:nth-child(2n + 1) {
+        background-color: $dark-gray-2;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &.mat-active, &.mat-selected {
+        background-color: $pink;
+        transition: all 0.2s ease-in-out;
+      }
+      &:hover {
+        background-color: $dark-pink !important;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .light {
+    .mat-autocomplete-panel {
+      background-color:transparent;
+      transition: $default-transition;
+      @extend %native-scrollbar;
+
+      mat-option {
+        &:nth-child(2n + 1) {
+          background-color: $black-translucid-6;
+          transition: $default-transition;
+        }
+
+        &:nth-child(2n + 2) {
+          background-color: $black-translucid-7;
+          transition: $default-transition;
+        }
+
+        &.mat-active {
+          background-color: $pink;
+          transition: $default-transition;
+        }
+        &:hover {
+          background-color: $dark-pink !important;
+          transition: $default-transition;
+        }
+      }
+    }
+  }
+
+  .dark {
+    .mat-autocomplete-panel {
+      background-color:transparent;
+      transition: $default-transition;
+      @extend %native-scrollbar;
+
+      mat-option {
+        &:nth-child(2n + 1) {
+          background-color: $dark-gray-2-3;
+          transition: $default-transition;
+        }
+
+        &:nth-child(2n + 2) {
+          background-color: $dark-gray-2;
+          transition: $default-transition;
+        }
+
+        &.mat-active {
+          background-color: $pink;
+          transition: $default-transition;
+        }
+        &:hover {
+          background-color: $dark-pink !important;
+          transition: $default-transition;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-device-width:320px) and (max-device-width: 1024px) {
+    .mat-autocomplete-panel {
+      font-size: 2.8vw !important;
+    }
+  }
+
+  @media screen and (min-device-width:1024px)  {
+    .mat-autocomplete-panel {
+      font-size: 0.6vw !important;
+    }
+  }
+}

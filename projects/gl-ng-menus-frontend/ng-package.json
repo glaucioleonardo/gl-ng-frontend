@@ -1,0 +1,19 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/gl-ng-menus-frontend",
+  "lib": {
+    "entryFile": "../wrapper_menus.ts",
+    "umdModuleIds": {
+      "smooth-scroll": "smooth-scroll"
+    }
+  },
+  "assets": [
+    "../../node_modules/gl-scss-styles/assets",
+    "../../node_modules/gl-icons-assets/assets"
+  ],
+  "allowedNonPeerDependencies": [
+    "gl-scss-styles",
+    "gl-icons-assets",
+    "smooth-scroll"
+  ]
+}

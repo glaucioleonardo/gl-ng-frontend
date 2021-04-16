@@ -42,6 +42,566 @@
           }
         }
       }
+    },
+    "gl-ng-attachments-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-attachments-frontend",
+      "sourceRoot": "projects/gl-ng-attachments-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-attachments-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-attachments-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-attachments-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-attachments-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-attachments-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-attachments-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-attachments-frontend/tsconfig.lib.json",
+              "projects/gl-ng-attachments-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-buttons-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-buttons-frontend",
+      "sourceRoot": "projects/gl-ng-buttons-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-buttons-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-buttons-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-buttons-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-buttons-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-buttons-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-buttons-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-buttons-frontend/tsconfig.lib.json",
+              "projects/gl-ng-buttons-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-error-message-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-error-message-frontend",
+      "sourceRoot": "projects/gl-ng-error-message-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-error-message-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-error-message-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-error-message-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-error-message-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-error-message-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-error-message-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-error-message-frontend/tsconfig.lib.json",
+              "projects/gl-ng-error-message-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-filters-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-filters-frontend",
+      "sourceRoot": "projects/gl-ng-filters-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-filters-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-filters-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-filters-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-filters-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-filters-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-filters-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-filters-frontend/tsconfig.lib.json",
+              "projects/gl-ng-filters-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-footer-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-footer-frontend",
+      "sourceRoot": "projects/gl-ng-footer-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-footer-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-footer-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-footer-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-footer-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-footer-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-footer-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-footer-frontend/tsconfig.lib.json",
+              "projects/gl-ng-footer-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-headers-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-headers-frontend",
+      "sourceRoot": "projects/gl-ng-headers-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-headers-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-headers-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-headers-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-headers-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-headers-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-headers-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-headers-frontend/tsconfig.lib.json",
+              "projects/gl-ng-headers-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-inputs-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-inputs-frontend",
+      "sourceRoot": "projects/gl-ng-inputs-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-inputs-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-inputs-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-inputs-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-inputs-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-inputs-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-inputs-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-inputs-frontend/tsconfig.lib.json",
+              "projects/gl-ng-inputs-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-lists-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-lists-frontend",
+      "sourceRoot": "projects/gl-ng-lists-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-lists-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-lists-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-lists-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-lists-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-lists-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-lists-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-lists-frontend/tsconfig.lib.json",
+              "projects/gl-ng-lists-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-logos-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-logos-frontend",
+      "sourceRoot": "projects/gl-ng-logos-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-logos-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-logos-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-logos-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-logos-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-logos-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-logos-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-logos-frontend/tsconfig.lib.json",
+              "projects/gl-ng-logos-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-menus-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-menus-frontend",
+      "sourceRoot": "projects/gl-ng-menus-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-menus-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-menus-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-menus-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-menus-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-menus-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-menus-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-menus-frontend/tsconfig.lib.json",
+              "projects/gl-ng-menus-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-modals-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-modals-frontend",
+      "sourceRoot": "projects/gl-ng-modals-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-modals-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-modals-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-modals-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-modals-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-modals-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-modals-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-modals-frontend/tsconfig.lib.json",
+              "projects/gl-ng-modals-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-navigation-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-navigation-frontend",
+      "sourceRoot": "projects/gl-ng-navigation-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-navigation-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-navigation-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-navigation-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-navigation-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-navigation-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-navigation-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-navigation-frontend/tsconfig.lib.json",
+              "projects/gl-ng-navigation-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-paging-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-paging-frontend",
+      "sourceRoot": "projects/gl-ng-paging-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-paging-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-paging-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-paging-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-paging-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-paging-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-paging-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-paging-frontend/tsconfig.lib.json",
+              "projects/gl-ng-paging-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gl-ng-titles-frontend": {
+      "projectType": "library",
+      "root": "projects/gl-ng-titles-frontend",
+      "sourceRoot": "projects/gl-ng-titles-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-titles-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-titles-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-titles-frontend/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-titles-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-titles-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-titles-frontend/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gl-ng-titles-frontend/tsconfig.lib.json",
+              "projects/gl-ng-titles-frontend/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "gl-ng-frontend"

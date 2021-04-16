@@ -1,0 +1,70 @@
+<gl-component-menu-background
+  #background
+  (click)="service.backgroundClick($event)"
+></gl-component-menu-background>
+<div #container class="menu-container {{ className }} {{ menuPosition === 'left' ? 'left' : 'right' }}">
+  <nav class="menu-nav-container">
+    <ul class="menu-content">
+      <li class="menu-header-container">
+        <div class="menu-header">
+          <div class="menu-top-icons-container">
+            <img id="close-menu-button"
+               (click)="service.close($event)"
+               [src]="closeButton"
+               class="menu-icons close-menu"
+               alt="Close menu button">
+            <img
+              *ngIf="showSettings"
+              id="settings-menu-button"
+              (click)="service.goToSettings(settingsUrl, settingsTarget)"
+              [src]="settingsButton"
+              class="menu-icons settings-menu"
+              alt="Settings menu button">
+          </div>
+          <div class="menu-header-title">
+            <h1 class="title">{{ title }}</h1>
+            <h2 class="subtitle">{{ subtitle }}</h2>
+          </div>
+        </div>
+      </li>
+      <li class="menu-content-container {{ title?.length > 0 ? 'has-title' : '' }}">
+        <gl-component-menu-item
+          *ngFor="let menuItem of menuItems"
+          [absolute]="menuItem.absolute"
+          [alt]="menuItem.alt"
+          [src]="menuItem.src"
+          [fragment]="menuItem.fragment"
+          [routerLink]="menuItem.href"
+          [href]="menuItem.href"
+          [content]="menuItem.content"
+          [itemClass]="menuItem.class"
+          [target]="menuItem.target"
+          ($click)="$click.emit($event)"
+        ></gl-component-menu-item>
+        <gl-component-menu-item
+          *ngFor="let menuItem of menuItemsComplex"
+          [absolute]="menuItem.absolute"
+          [alt]="menuItem.alt"
+          [src]="menuItem.src"
+          [fragment]="menuItem.fragment"
+          [routerLink]="menuItem.href"
+          [href]="menuItem.href"
+          [content]="menuItem.content"
+          [itemClass]="menuItem.class"
+          [hasSubitem]="menuItem.hasSubitem"
+          [active]="menuItem.active"
+          [target]="menuItem.target"
+          [subItems]="menuItem.subItems"
+          ($click)="$click.emit($event)"
+        ></gl-component-menu-item>
+      </li>
+      <li class="logo-main-container">
+        <div class="logo-container">
+          <img class="main-logo" [src]="menuLogo" alt="Menu Logo"/>
+          <span class="main-logo-title">{{ menuBottomTitle }}</span>
+          <span class="main-logo-title">{{ menuBottomVersion == null ? 'Version: ' + systemVersion : menuBottomVersion }}</span>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>

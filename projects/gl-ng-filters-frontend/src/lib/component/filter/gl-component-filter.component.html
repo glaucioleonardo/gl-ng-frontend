@@ -1,0 +1,44 @@
+<gl-component-menu-background
+  #background
+  (click)="service.backgroundClick($event)"
+></gl-component-menu-background>
+<div #container class="filter-container {{ type }}">
+  <div class="header-filter-container">
+    <div class="menu-header">
+      <div class="menu-top-icons-container">
+        <img id="close-menu-button" (click)="service.close($event)" [src]="closeButton" class="menu-icons close-menu" alt="Close menu button">
+      </div>
+      <div class="menu-header-title">
+        <h1 class="title">{{ title }}</h1>
+        <h2 class="subtitle">{{ subtitle }}</h2>
+      </div>
+    </div>
+  </div>
+  <nav class="menu-nav-container" #menuNavContainer>
+    <div class="menu-content">
+      <div class="input-container" >
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </nav>
+  <div class="bottom-container">
+    <span
+      *ngIf="partialResult != null"
+      class="partial-result-description">{{ partialResultDescription }} {{ partialResult }} {{ partialResult > 1 ? itemPluralDescription : itemSingularDescription }}
+    </span>
+    <div class="buttons-container">
+      <gl-component-input-button-simple
+        value="apply"
+        [theme]="buttonClass"
+        [innerValue]="applyButtonDescription"
+        (click)="onApply()"
+      ></gl-component-input-button-simple>
+      <gl-component-input-button-simple
+        value="clear"
+        [theme]="buttonClass"
+        [innerValue]="clearButtonDescription"
+        (click)="onClear()"
+      ></gl-component-input-button-simple>
+    </div>
+  </div>
+</div>

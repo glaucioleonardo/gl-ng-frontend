@@ -1,0 +1,49 @@
+@import "~gl-scss-styles/assets/style/colors/gray";
+@import "~gl-scss-styles/assets/style/colors/pink";
+@import "~gl-scss-styles/assets/style/colors/white";
+@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@import "~gl-scss-styles/assets/style/patterns/gradient";
+
+:host::ng-deep {
+  z-index: 100;
+  max-width: 100vw;
+  min-width: 100vw;
+  position: fixed;
+  bottom: 0;
+  flex-grow: 1;
+
+  .footer-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: $dark-gray-3;
+    @include pattern-gradient-border(0.1em);
+    height: 1.3em;
+    z-index: 99;
+
+    .description {
+      @include font-family('light');
+      text-transform: uppercase ;
+      padding: 1em;
+      color: $white;
+      font-size: 0.5em;
+      letter-spacing: 0.14em;
+    }
+
+    .image-logo {
+      height: 1em;
+      margin: 0 0 0 0.3em;
+    }
+
+    .user-container {
+      align-self: flex-end;
+      margin: 0 0.3em 0 0;
+
+      .user-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

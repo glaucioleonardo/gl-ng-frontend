@@ -1,0 +1,12 @@
+<gl-component-title-label-simple
+  [labelAlignment]="labelAlignment"
+  [required]="required"
+  [labelValue]="labelValue"
+  [requiredLabel]="requiredLabelDescription"
+  [id]="labelId"
+></gl-component-title-label-simple>
+<gl-component-input-check-box-simple
+  [checked]="checked"
+  [showBackground]="showBackground"
+  (checked$)="checked$.emit($event)"
+></gl-component-input-check-box-simple>

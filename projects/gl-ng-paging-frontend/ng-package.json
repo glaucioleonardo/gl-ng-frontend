@@ -1,0 +1,17 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/gl-ng-paging-frontend",
+  "lib": {
+    "entryFile": "../wrapper_paging.ts",
+    "umdModuleIds": {
+      "gl-w-frontend":  "gl-w-frontend"
+    }
+  },
+  "assets": [
+    "../../node_modules/gl-scss-styles/assets"
+  ],
+  "allowedNonPeerDependencies": [
+    "gl-scss-styles",
+    "gl-w-frontend"
+  ]
+}

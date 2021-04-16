@@ -1,0 +1,31 @@
+@import "~gl-scss-styles/assets/style/colors/black";
+@import "~gl-scss-styles/assets/style/colors/gray";
+
+:host::ng-deep {
+  display: flex;
+  flex-grow: 0;
+
+  .label-with-button-container {
+    display: flex;
+    flex-grow: 1;
+    background-color: $dark-gray-2-3;
+
+    .label-button-container {
+      display: flex;
+      flex-grow: 0;
+      margin: 0 0.2em 0 0;
+
+      .button {
+        margin: 0 0 0 0.2em;
+      }
+    }
+
+    &.light {
+      background-color: $black-translucid-3;
+    }
+
+    &.dark {
+      background-color: $dark-gray-3-4;
+    }
+  }
+}

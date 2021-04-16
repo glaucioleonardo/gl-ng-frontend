@@ -1,0 +1,51 @@
+{
+  "name": "gl-ng-inputs-frontend",
+  "version": "1.1.4",
+  "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
+  "main": "wrapper_inputs.ts",
+  "types": "gl-ng-inputs-frontend.d.ts",
+  "module": "gl-ng-inputs-frontend/src/lib/gl-ng-inputs-frontend.module.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glaucioleonardo/gl-ng-inputs-frontend.git"
+  },
+  "keywords": [
+    "angular",
+    "angular 2+",
+    "angular component",
+    "angular tools",
+    "angular input",
+    "angular autocomplete",
+    "angular button",
+    "angular check-box",
+    "angular datepicker",
+    "angular drag and drop",
+    "angular option",
+    "angular switch",
+    "angular text",
+    "angular text area"
+  ],
+  "author": "Gláucio Leonardo Sant'ana",
+  "license": "MIT",
+  "homepage": "https://www.glauciosantana.com",
+  "bugs": "https://github.com/glaucioleonardo/gl-ng-inputs-frontend/issues",
+  "peerDependencies": {
+    "@angular/common": "^11.2.8",
+    "@angular/core": "^11.2.8"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0",
+    "gl-icons-assets": "^1.0.0",
+    "gl-w-frontend": "^2.6.0",
+    "@angular/cdk": "^11.2.8",
+    "@angular/material": "^11.2.8",
+    "@angular/material-moment-adapter": "^11.2.8"
+  },
+  "scripts": {
+    "postinstall": "ngcc",
+    "build": "ng build gl-ng-inputs-frontend",
+    "build-prod": "ng build --prod gl-ng-inputs-frontend",
+    "production": "npm run build-prod",
+    "publish": "npm run build-prod && cd ./../../dist/gl-ng-inputs-frontend && npm publish && cd.. && cd.."
+  }
+}

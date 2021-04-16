@@ -1,0 +1,38 @@
+{
+  "name": "gl-ng-logos-frontend",
+  "version": "1.0.1",
+  "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
+  "main": "wrapper_logos.ts",
+  "types": "gl-ng-logos-frontend.d.ts",
+  "module": "gl-ng-logos-frontend/src/lib/gl-ng-error-message-frontend.module.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glaucioleonardo/gl-ng-logos-frontend.git"
+  },
+  "keywords": [
+    "angular",
+    "angular 2+",
+    "angular component",
+    "angular tools",
+    "angular buttons"
+  ],
+  "author": "Gláucio Leonardo Sant'ana",
+  "license": "MIT",
+  "homepage": "https://www.glauciosantana.com",
+  "bugs": "https://github.com/glaucioleonardo/gl-ng-logos-frontend/issues",
+  "peerDependencies": {
+    "@angular/common": "^11.2.9",
+    "@angular/core": "^11.2.9"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0",
+    "gl-scss-styles": "^1.0.0"
+  },
+  "scripts": {
+    "postinstall": "ngcc",
+    "build": "ng build gl-ng-logos-frontend",
+    "build-prod": "ng build --prod gl-ng-logos-frontend",
+    "production": "npm run build-prod",
+    "publish": "npm run build-prod && cd ./../../dist/gl-ng-logos-frontend && npm publish && cd.. && cd.."
+  }
+}

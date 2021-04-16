@@ -1,0 +1,11 @@
+<label
+  #label
+  class="header-data {{ labelAlignment }} {{ theme }}"
+  [attr.for]="id">{{ labelValue }}
+</label>
+<img
+  *ngIf="required"
+  src="../assets/img/icon/label/dot.svg"
+  class="required-fill-dot {{ theme }}"
+  [title]="requiredLabel"
+  alt="Required fill icon">

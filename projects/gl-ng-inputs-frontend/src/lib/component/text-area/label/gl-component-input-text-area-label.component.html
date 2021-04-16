@@ -1,0 +1,18 @@
+<gl-component-input-text-area-simple
+  [theme]="theme"
+  [id]="id"
+  [placeholder]="placeholder"
+  [itemContentAlignment]="itemContentAlignment"
+  (currentValue)="onKeyUp($event)"
+  [value]="value"
+  [disabled]="disabled"
+  [maxLength]="maxLength">
+  <gl-component-title-label-simple
+    [theme]="theme"
+    [labelAlignment]="labelAlignment"
+    [id]="id"
+    [labelValue]="labelValue"
+    [required]="required"
+    [requiredLabel]="requiredLabel"
+  ></gl-component-title-label-simple>
+</gl-component-input-text-area-simple>

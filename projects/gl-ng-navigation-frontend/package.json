@@ -1,0 +1,38 @@
+{
+  "name": "gl-ng-navigation-frontend",
+  "version": "1.0.1",
+  "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
+  "main": "wrapper_navigation.ts",
+  "types": "gl-ng-navigation-frontend.d.ts",
+  "module": "gl-ng-navigation-frontend/src/lib/gl-ng-navigation-frontend.module.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glaucioleonardo/gl-ng-navigation-frontend.git"
+  },
+  "keywords": [
+    "angular",
+    "angular 2+",
+    "angular component",
+    "angular tools",
+    "angular buttons"
+  ],
+  "author": "Gláucio Leonardo Sant'ana",
+  "license": "MIT",
+  "homepage": "https://www.glauciosantana.com",
+  "bugs": "https://github.com/glaucioleonardo/gl-ng-navigation-frontend/issues",
+  "peerDependencies": {
+    "@angular/common": "^11.2.9",
+    "@angular/core": "^11.2.9"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0",
+    "gl-scss-styles": "^1.0.0"
+  },
+  "scripts": {
+    "postinstall": "ngcc",
+    "build": "ng build gl-ng-navigation-frontend",
+    "build-prod": "ng build --prod gl-ng-navigation-frontend",
+    "production": "npm run build-prod",
+    "publish": "npm run build-prod && cd ./../../dist/gl-ng-navigation-frontend && npm publish && cd.. && cd.."
+  }
+}

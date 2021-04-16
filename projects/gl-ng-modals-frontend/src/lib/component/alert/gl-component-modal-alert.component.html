@@ -1,0 +1,42 @@
+<div
+  *ngIf="service.showModal"
+  glAutoFocus
+  (keydown)="service.onModalKeyUp($event)"
+  id="modal"
+  class="modal-container {{ service.modalClass }}"
+  tabindex="-1">
+  <div class="modal-main-content">
+    <gl-component-modal-header
+      [title]="title"
+      [subtitle]="subtitle"
+      [modalLogo]="modalLogo"
+    ></gl-component-modal-header>
+    <div class="modal-message-container">
+      <span class="modal-message">{{ service.message }}</span>
+    </div>
+    <div class="button-container">
+      <gl-component-input-button-simple
+        *ngIf="!service.isOK"
+        class="no"
+        (click)="service.onNo()"
+        [innerValue]="service.customNo == null ? innerValueNo : service.customNo"
+        [value]="noValue"
+      ></gl-component-input-button-simple>
+      <gl-component-input-button-simple
+        *ngIf="!service.isOK"
+        class="yes"
+        (click)="service.onYes()"
+        [innerValue]="service.customYes == null ? innerValueYes : service.customYes"
+        [value]="yesValue"
+      ></gl-component-input-button-simple>
+      <gl-component-input-button-simple
+        *ngIf="service.isOK"
+        class="ok"
+        (click)="service.onOk()"
+        [innerValue]="innerValueOK"
+        [value]="okValue"
+      ></gl-component-input-button-simple>
+    </div>
+    <div class="modal-footer"></div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/gl-ng-filters-frontend",
+  "lib": {
+    "entryFile": "../wrapper_filters.ts",
+    "umdModuleIds": {
+      "gl-w-frontend": "gl-w-frontend",
+      "smooth-scroll": "smooth-scroll"
+    }
+  },
+  "assets": [
+    "../../node_modules/gl-scss-styles/assets"
+  ],
+  "allowedNonPeerDependencies": [
+    "gl-scss-styles",
+    "smooth-scroll"
+  ]
+}
