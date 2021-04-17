@@ -59,59 +59,20 @@
     }
   }
 
-  // Generic
-  @media screen and (min-device-width: 240px) and (orientation: portrait) {
+  // Portrait
+  @media screen and (orientation: portrait) {
     .header-container {
-      font-size: width(6);
-    }
-  }
-  @media screen and (min-device-width: 600px) and (orientation: portrait) {
-    .header-container {
-      font-size: width(4);
-    }
-  }
-  @media screen and (min-device-width: 700px) and (orientation: portrait) {
-    .header-container {
-      font-size: width(6);
-    }
-  }
-  @media screen and (min-device-width: 800px) and (orientation: portrait) {
-    .header-container {
-      font-size: width(5);
-    }
-  }
-  @media screen and (min-device-width: 1024px) and (orientation: portrait) {
-    .header-container {
-      font-size: width(3);
-    }
-  }
-  @media screen and (min-device-width: 1300px) and (orientation: portrait) {
-    .header-container {
-      font-size: width(4);;
+      font-size: height(3);
     }
   }
 
-  @media screen and (min-device-width: 240px) and (orientation: landscape) {
+  // Landscape
+  @media screen and (min-width: 240px) and (orientation: landscape) {
     .header-container {
       font-size: width(3);
     }
   }
-  @media screen and (min-device-width: 400px) and (orientation: landscape) {
-    .header-container {
-      font-size: width(3.5);
-    }
-  }
-  @media screen and (min-device-width: 700px) and (orientation: landscape) {
-    .header-container {
-      font-size: width(2.5);
-    }
-  }
-  @media screen and (min-device-width: 800px) and (orientation: landscape) {
-    .header-container {
-      font-size: width(2);
-    }
-  }
-  @media screen and (min-device-width: 1024px) and (orientation: landscape) {
+  @media screen and (min-width: 1024px) and (orientation: landscape) {
     .header-container {
       font-size: width(1.5);
     }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { IMenuButton } from '../../../../../gl-ng-buttons-frontend/src/lib/component/menu/simple/gl-component-button-menu-simple.interface';
 import { THeaderType } from './gl-component-header-default.interface';
 
@@ -7,7 +7,7 @@ import { THeaderType } from './gl-component-header-default.interface';
   templateUrl: './gl-component-header-default.component.html',
   styleUrls: ['./gl-component-header-default.component.scss']
 })
-export class GlComponentHeaderDefaultComponent {
+export class GlComponentHeaderDefaultComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() systemLogo = false;
   @Input() labelModel: string;
   @Input() labelId: number;
@@ -16,13 +16,48 @@ export class GlComponentHeaderDefaultComponent {
   @Input() title: string;
   @Input() subtitle: string;
   @Input() menuButtons: IMenuButton[];
-  @Output() keyDown: EventEmitter<any> = new EventEmitter();
+  @Input() hideOnScrollDown = false;
+  @Output() keyDown$: EventEmitter<any> = new EventEmitter();
 
   @Input() readonly: boolean;
+
+  private _previousScrollPosition = window.pageYOffset;
+  private _header: HTMLElement;
 
   constructor() { }
 
   onKeyDown(event): void {
-    this.keyDown.emit(event);
+    this.keyDown$.emit(event);
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('scroll', this.scroll, true); // third parameter
+  }
+
+  ngOnInit(): void {
+    if (this.hideOnScrollDown) {
+      window.addEventListener('scroll', this.scroll, true); // third parameter
+    }
+  }
+  ngAfterViewInit(): void {
+    this._header = document.querySelector('gl-component-header-default');
+
+    this._header.style.position = 'fixed';
+    this._header.style.top = '0';
+    this._header.style.zIndex = '100';
+    this._header.style.width = '100vw';
+  }
+
+  scroll = (): void => {
+    const currentScrollPosition = window.pageYOffset;
+
+    if (this._header != null) {
+      if (this._previousScrollPosition > currentScrollPosition) {
+        this._header.style.top = '0';
+      } else {
+        this._header.style.top = '-' + this._header.getBoundingClientRect().height.toString() + 'px';
+      }
+      this._previousScrollPosition = currentScrollPosition;
+    }
   }
 }
