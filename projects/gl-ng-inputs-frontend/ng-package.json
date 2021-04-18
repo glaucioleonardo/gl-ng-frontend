@@ -4,7 +4,8 @@
   "lib": {
     "entryFile": "../wrapper_inputs.ts",
     "umdModuleIds": {
-      "gl-w-frontend": "gl-w-frontend"
+      "gl-w-frontend": "gl-w-frontend",
+      "gl-sp-frontend": "gl-sp-frontend"
     }
   },
   "assets": [
@@ -14,6 +15,7 @@
   ],
   "allowedNonPeerDependencies": [
     "gl-w-frontend",
+    "gl-sp-frontend",
     "gl-ng-titles-frontend",
     "gl-icons-assets",
     "gl-ng-buttons-frontend",
