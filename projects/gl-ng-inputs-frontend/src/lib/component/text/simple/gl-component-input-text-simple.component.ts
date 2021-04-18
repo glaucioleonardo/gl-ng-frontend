@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, Output, ViewChild } from '@angular/core';
 import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignments.interface';
-import { ISimpleTextResult, TInputTextMask } from './gl-component-input-text-simple.interface';
+import { ISimpleTextResult, TInputTextMask, TInputType } from './gl-component-input-text-simple.interface';
 import { InputMask, TCurrencySymbolTypes, TCurrencyTypes, TDecimalSeparators } from 'gl-w-frontend';
 import { GlComponentInputTextSimpleService } from './gl-component-input-text-simple.service';
 
@@ -21,6 +21,7 @@ export class GlComponentInputTextSimpleComponent implements AfterViewInit, OnDes
   @Input() itemContentAlignment: THorizontalAlignment;
   @Input() theme: TTheme = '';
   @Input() value: string = null;
+  @Input() type: TInputType = 'text';
 
   @Input() mask: TInputTextMask;
   @Input() decimalSeparator: TDecimalSeparators = ',';

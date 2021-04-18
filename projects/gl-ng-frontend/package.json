@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-frontend",
-  "version": "3.1.2",
+  "version": "3.2.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_index.ts",
   "types": "gl-ng-frontend.d.ts",
@@ -38,8 +38,8 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "^11.2.9",
-    "@angular/core": "^11.2.9"
+    "@angular/common": "^11.2.10",
+    "@angular/core": "^11.2.10"
   },
   "dependencies": {
     "tslib": "^2.0.0",
