@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { StringConverter, TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-frontend';
 import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignments.interface';
 import { IInputTextStepButton, TStepType } from './gl-component-input-text-simple-with-step.interface';
-import { TInputTextMask } from '../gl-component-input-text-simple.interface';
+import { TInputTextMask, TInputType } from '../gl-component-input-text-simple.interface';
 
 @Component({
   selector: 'gl-component-input-text-simple-with-step',
@@ -17,6 +17,7 @@ export class GlComponentInputTextSimpleWithStepComponent {
   @Input() itemContentAlignment: THorizontalAlignment;
   @Input() theme: TTheme = '';
   @Input() value = 0;
+  @Input() type: TInputType = 'text';
 
   @Input() allowMinus = true;
   @Input() rightAlign = true;

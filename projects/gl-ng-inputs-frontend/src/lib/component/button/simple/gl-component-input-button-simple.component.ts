@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TInputButtonSimpleClass } from './gl-component-input-button-simple.interface';
+import { TInputButtonSimpleClass, TInputButtonType } from './gl-component-input-button-simple.interface';
 
 @Component({
   selector: 'gl-component-input-button-simple',
@@ -11,6 +11,7 @@ export class GlComponentInputButtonSimpleComponent {
   @Input() theme: TInputButtonSimpleClass = '';
   @Input() innerValue: string;
   @Input() readonly = false;
+  @Input() type: TInputButtonType = 'button';
 
   constructor() { }
 }

@@ -1,9 +1,11 @@
 <!--suppress HtmlFormInputWithoutLabel -->
+<span
+  class="icon"
+  *ngIf="showIcon && iconSrc != null"
+></span>
 <input
   #inputElement
-  class="item-content {{ itemContentAlignment }} {{ theme }}"
-  autocomplete="off"
-  required
+  class="item-content {{ itemContentAlignment }} {{ theme }} {{ showIcon ? 'show-icon' : '' }}"
   [type]="type"
   [id]="id"
   [value]="value"

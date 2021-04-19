@@ -54,9 +54,11 @@
     }
     &.dark-translucid {
       background-color: $black-translucid-3;
+      backdrop-filter: blur(10px);
     }
     &.light-translucid {
       background-color: $white-translucid-3;
+      backdrop-filter: blur(10px);
     }
   }
 

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-frontend';
 import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignments.interface';
-import { TInputTextMask } from '../../simple/gl-component-input-text-simple.interface';
+import { TInputTextMask, TInputType } from '../../simple/gl-component-input-text-simple.interface';
 
 @Component({
   selector: 'gl-component-input-text-label-simple',
@@ -18,6 +18,7 @@ export class GlComponentInputTextLabelSimpleComponent {
   @Input() itemContentAlignment: THorizontalAlignment;
   @Input() theme: TTheme = '';
   @Input() value: string = null;
+  @Input() type: TInputType = 'text';
 
   @Input() allowMinus = true;
   @Input() rightAlign = true;
