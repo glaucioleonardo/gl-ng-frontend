@@ -89,6 +89,7 @@
     }
 
     &.only-buttons, &.transparent {
+      backdrop-filter: none;
       background-color: transparent;
     }
     &.dark {

@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-headers-frontend",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_headers.ts",
   "types": "gl-ng-headers-frontend.d.ts",
@@ -34,7 +34,6 @@
     "build": "ng build gl-ng-headers-frontend",
     "build-prod": "ng build --prod gl-ng-headers-frontend",
     "production": "npm run build-prod",
-    "publish": "npm run build-prod && cd ./../../dist/gl-ng-headers-frontend && npm publish && cd .. && cd ..",
-    "publish-mac": "npm run build-prod && cd ./../../dist/gl-ng-headers-frontend && npm publish && cd .. && cd .."
+    "publish": "npm run build-prod && cd ./../../dist/gl-ng-headers-frontend && npm publish && cd .. && cd .."
   }
 }
