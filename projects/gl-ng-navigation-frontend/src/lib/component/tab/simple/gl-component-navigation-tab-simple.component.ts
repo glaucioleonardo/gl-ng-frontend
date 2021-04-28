@@ -14,6 +14,9 @@ export class GlComponentNavigationTabSimpleComponent {
   @Input() tabIsTheLast: boolean;
   @Input() tabEnabled = true;
 
+  @Input() srcIcon: string = null;
+  @Input() showIcon = false;
+
   @Output() activate$: EventEmitter<number> = new EventEmitter();
 
   constructor() { }

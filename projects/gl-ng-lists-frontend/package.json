@@ -29,7 +29,7 @@
   "dependencies": {
     "tslib": "^2.0.0",
     "gl-scss-styles": "^2.0.0",
-    "gl-icons-assets": "^1.0.0",
+    "gl-icons-assets": "^1.2.0",
     "gl-w-frontend": "^2.6.0"
   },
   "scripts": {

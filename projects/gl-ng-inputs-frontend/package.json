@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-inputs-frontend",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_inputs.ts",
   "types": "gl-ng-inputs-frontend.d.ts",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "tslib": "^2.0.0",
-    "gl-icons-assets": "^1.0.0",
+    "gl-icons-assets": "^1.2.0",
     "gl-scss-styles": "^2.0.0",
     "gl-w-frontend": "^2.6.0",
     "gl-sp-frontend": "^2.4.1",
@@ -48,7 +48,6 @@
     "build": "ng build gl-ng-inputs-frontend",
     "build-prod": "ng build --prod gl-ng-inputs-frontend",
     "production": "npm run build-prod",
-    "publish": "npm run build-prod && cd ./../../dist/gl-ng-inputs-frontend && npm publish && cd .. && cd ..",
-    "publish-mac": "npm run build-prod && cd ./../../dist/gl-ng-inputs-frontend && npm publish && cd .. && cd .."
+    "publish": "npm run build-prod && cd ./../../dist/gl-ng-inputs-frontend && npm publish && cd .. && cd .."
   }
 }

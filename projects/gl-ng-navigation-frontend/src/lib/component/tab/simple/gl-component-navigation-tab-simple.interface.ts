@@ -1,3 +1,5 @@
+import { Input } from '@angular/core';
+
 export interface INavigationTab {
   active: boolean;
   showSeparator: boolean;
@@ -7,4 +9,7 @@ export interface INavigationTab {
   isTheFirst: boolean;
   isTheLast: boolean;
   enabled: boolean;
+
+  srcIcon?: string;
+  showIcon?: boolean;
 }

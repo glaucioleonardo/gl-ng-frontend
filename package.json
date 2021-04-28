@@ -22,7 +22,7 @@
     "@angular/platform-browser": "~11.2.10",
     "@angular/platform-browser-dynamic": "~11.2.10",
     "@angular/router": "~11.2.10",
-    "gl-icons-assets": "^1.0.0",
+    "gl-icons-assets": "^1.2.0",
     "gl-scss-styles": "^2.0.0",
     "gl-sp-frontend": "^2.4.1",
     "rxjs": "~6.6.0",

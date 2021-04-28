@@ -27,7 +27,7 @@
   "dependencies": {
     "tslib": "^2.0.0",
     "gl-scss-styles": "^2.0.0",
-    "gl-icons-assets": "^1.0.0",
+    "gl-icons-assets": "^1.2.0",
     "smooth-scroll": "^16.1.3"
   },
   "scripts": {

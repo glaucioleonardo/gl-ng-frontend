@@ -37,7 +37,7 @@
       justify-content: center;
       width: 1em;
       height: 1em;
-      border-radius: 0.2em;
+      border-radius: 0.25em;
       margin: 0.25em 0.5em 0.25em 0.25em;
       z-index: 100;
       transition: all 0.2s ease-in;
@@ -58,7 +58,17 @@
       font-size: 0.5em;
       color: $dark-gray;
       user-select: none;
+      flex: 1 1 auto;
       transition: all 0.2s ease-in;
+    }
+
+    .navigation-tab-icon {
+      width: 1em;
+      height: 1em;
+      border-radius: 0.25em;
+      margin: 0 0.25em 0 0;
+      z-index: 10;
+      user-select: none;
     }
 
     &.active {
@@ -111,11 +121,19 @@
         color: $white;
         transition: all 0.2s ease-in-out;
       }
+
+      .navigation-tab-icon {
+        opacity: 1;
+      }
     }
 
     &:not(.active) {
       border-top-left-radius: 0.2em;
       border-top-right-radius: 0.2em;
+
+      .navigation-tab-icon {
+        opacity: 0.1;
+      }
 
       &:hover {
         position: relative;
@@ -154,6 +172,10 @@
         .tab-description {
           color: $white;
           transition: all 0.2s ease-in;
+        }
+
+        .navigation-tab-icon {
+          opacity: 0.3;
         }
       }
     }
