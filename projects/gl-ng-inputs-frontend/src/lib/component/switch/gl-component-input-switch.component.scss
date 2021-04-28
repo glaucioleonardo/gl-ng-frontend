@@ -1,22 +1,29 @@
-@import "~gl-scss-styles/assets/style/colors/black";
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/colors/green";
-@import "~gl-scss-styles/assets/style/colors/white";
-@import "~gl-scss-styles/assets/style/fonts/fonts";
+//@import "~gl-scss-styles/assets/style/colors/black/black";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-light";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/green/green-light";
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/fonts/montserrat";
 
 :host::ng-deep {
+  font-size: 1em;
+  display: flex;
+  flex: 1 1 auto;
+
   .switch-main-container {
     display: flex;
+    font-size: 1em;
+    flex: 1 1 auto;
     flex-direction: row;
     align-items: center;
 
     .switch-label {
       @include font-family(semi-bold);
-      font-size: 0.5em;
+      font-size: 1em;
       user-select: none;
 
       &.black {
-        color: $black;
+        color: $dark-gray-3-2;
       }
 
       &.white {
@@ -24,6 +31,7 @@
       }
     }
     .switch-item-container {
+      font-size: 2em;
       position: relative;
       justify-content: center;
       display: flex;
@@ -35,7 +43,7 @@
       padding: 0 0.1em;
       flex-direction: column;
       cursor: pointer;
-      border: solid 2px lighten($light-gray, 40%);
+      border: solid 2px $gray-light-4;
       transition: all 0.5s ease-in-out;
 
       &.active {
@@ -49,24 +57,24 @@
         width: 0.9em;
         height: 0.9em;
         border-radius: 1em;
-        background-color: lighten($light-gray, 50%);
+        background-color: $gray-light-5;
         cursor: pointer;
         left: 0.1em;
         top: 0.06em;
         transition: all 0.5s ease-in-out;
 
         &:hover {
-          background-color: lighten($light-gray, 30%);
+          background-color: $gray-light-3;
           transition: all 0.2s ease-in-out;
         }
 
         &.active {
           left: 0.9em;
-          background-color: lighten($light-gray, 55%);
+          background-color: lighten($gray, 55%);
           transition: all 0.5s ease-in-out;
 
           &:hover {
-            background-color: lighten($light-gray, 100%);
+            background-color: $gray-light-10;
             transition: all 0.2s ease-in-out;
           }
         }

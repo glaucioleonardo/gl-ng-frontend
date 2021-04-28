@@ -11,8 +11,13 @@ export * from './gl-ng-logos-frontend/src/lib/interfaces/global.interface';
 
 // region square
 import { GlComponentLogoSquareComponent } from './gl-ng-logos-frontend/src/lib/component/square/gl-component-logo-square.component';
+import { GlComponentLogoTextOnlyComponent } from './gl-ng-logos-frontend/src/lib/component/text-only/gl-component-logo-text-only.component';
 import * as GlComponentLogoSquareInterface from './gl-ng-logos-frontend/src/lib/component/square/gl-component-logo-square.interface';
 
-export { GlComponentLogoSquareComponent, GlComponentLogoSquareInterface };
+export {
+  GlComponentLogoSquareComponent,
+  GlComponentLogoSquareInterface,
+  GlComponentLogoTextOnlyComponent
+};
 // endregion
 

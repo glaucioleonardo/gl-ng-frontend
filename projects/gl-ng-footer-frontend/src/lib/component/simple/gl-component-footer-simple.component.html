@@ -1,5 +1,5 @@
-<section class="footer-container">
-  <span class="description">{{ description }}</span>
+<section class="footer-container {{ theme }}">
+  <span class="description">{{ description }} {{ imageLogo == null ? '' : 'has-logo' }}</span>
   <img
     *ngIf="imageLogo != null"
     class="image-logo"

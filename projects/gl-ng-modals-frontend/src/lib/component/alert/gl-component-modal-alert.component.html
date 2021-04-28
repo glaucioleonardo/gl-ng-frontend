@@ -1,6 +1,5 @@
 <div
   *ngIf="service.showModal"
-  glAutoFocus
   (keydown)="service.onModalKeyUp($event)"
   id="modal"
   class="modal-container {{ service.modalClass }}"
@@ -37,6 +36,5 @@
         [value]="okValue"
       ></gl-component-input-button-simple>
     </div>
-    <div class="modal-footer"></div>
   </div>
 </div>

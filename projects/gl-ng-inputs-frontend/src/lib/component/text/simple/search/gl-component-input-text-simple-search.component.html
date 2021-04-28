@@ -1,0 +1,29 @@
+<div class="search-container">
+  <img
+    (mouseenter)="onSearchFocus(searchInput, backgroundTranslucid)"
+    (focusin)="onSearchFocus(searchInput, backgroundTranslucid)"
+    (mouseleave)="onSearchLostFocus(searchInput, backgroundTranslucid)"
+    (focusout)="onSearchLostFocus(searchInput, backgroundTranslucid)"
+    (click)="onSearchKeyDown(searchInput, $event, true)"
+    id="search-button"
+    class="search-icon"
+    src="../assets/img/icon/search/search-icon.svg"
+    alt="Search icon">
+  <gl-component-input-text-simple
+    #searchInput
+    id="search-input"
+    maxLength="50"
+    type="search"
+    placeholder="Busque aqui sua requisição de compra..."
+    class="search-input"
+    theme="light"
+    [value]="search"
+    (mouseenter)="onSearchFocus(searchInput, backgroundTranslucid)"
+    (focusin)="onSearchFocus(searchInput, backgroundTranslucid)"
+    (mouseleave)="onSearchLostFocus(searchInput, backgroundTranslucid)"
+    (focusout)="onSearchLostFocus(searchInput, backgroundTranslucid)"
+    (keydown)="onSearchKeyDown(searchInput, $event)"
+  ></gl-component-input-text-simple>
+
+  <div #backgroundTranslucid class="translucid-background"></div>
+</div>

@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { IMenuButton } from '../../../../../gl-ng-buttons-frontend/src/lib/component/menu/simple/gl-component-button-menu-simple.interface';
-import { THeaderType } from './gl-component-header-default.interface';
+import { THeaderTheme } from './gl-component-header-default.interface';
 
 @Component({
   selector: 'gl-component-header-default',
@@ -12,7 +12,7 @@ export class GlComponentHeaderDefaultComponent implements OnInit, AfterViewInit,
   @Input() labelModel: string;
   @Input() labelId: number;
   @Input() labelArea: string;
-  @Input() type: THeaderType = '';
+  @Input() theme: THeaderTheme = '';
   @Input() title: string;
   @Input() subtitle: string;
   @Input() menuButtons: IMenuButton[];

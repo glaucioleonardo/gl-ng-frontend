@@ -1,60 +1,112 @@
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/colors/pink";
-@import "~gl-scss-styles/assets/style/colors/white";
+@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
+@import "~gl-scss-styles/assets/style/components/view-port/view-port-width";
+
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
 @import "~gl-scss-styles/assets/style/fonts/montserrat";
-@import "~gl-scss-styles/assets/style/patterns/gradient";
 
 :host::ng-deep {
   z-index: 100;
-  max-width: 100vw;
-  min-width: 100vw;
-  position: fixed;
+  font-size: 1em;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex: 0 1 auto;
+  width: 100%;
+  align-items: stretch;
+  justify-content: stretch;
+  margin: 0;
   bottom: 0;
-  flex-grow: 1;
 
   .footer-container {
+    border-top: solid 1px $white-translucid-3;
+    backdrop-filter: blur(30px);
+    border-top: solid 1px $white-translucid-3;
+    background-color: rgba($dark-gray-3-2, 0.5);
+
+    flex: 1 1 auto;
+    font-size: 1em;
     position: relative;
     display: flex;
     justify-content: center;
-    background-color: $dark-gray-3;
-    @include pattern-gradient-border(0.1em);
-    height: 1.3em;
+    padding: 1em 0.5em;
     z-index: 99;
 
     .description {
-      @include font-family('light');
-      text-transform: uppercase ;
-      padding: 1em;
+      @include font-family(light);
+      @extend %ellipsis-content;
+      text-transform: uppercase;
       color: $white;
-      font-size: 0.5em;
       letter-spacing: 0.14em;
+      text-align: center;
+      width: width(80);
+
+      &.has-logo {
+        width: width(70);
+      }
     }
 
     .image-logo {
       height: 1em;
-      margin: 0 0 0 0.3em;
     }
-  }
 
+    &.dark {
+      background-color: rgba($dark-gray-3-2, 0.5);
+    }
+    &.dark-semi-opaque {
+      background-color: rgba($dark-gray-3-2, 0.9);
+    }
+    &.dark-opaque {
+      backdrop-filter: none;
+      background-color: $dark-gray-3-2;
+    }
 
-  @media screen and (min-device-width: 280px) and (orientation: portrait) {
-      .footer-container {
-        font-size: 7vw;
+    &.light {
+      background-color: $white-translucid-5;
+
+      .description {
+        color: $dark-gray-3-2;
       }
-  }
-  @media screen and (min-device-width: 700px) and (orientation: portrait) {
-    .footer-container {
-      font-size: 6vw;
+    }
+    &.light-semi-opaque {
+      background-color: $white-translucid-9;
+
+      .description {
+        color: $dark-gray-3-2;
+      }
+    }
+    &.light-opaque {
+      backdrop-filter: none;
+      background-color: $white;
+
+      .description {
+        color: $dark-gray-3-2;
+      }
+    }
+
+    &.transparent {
+      background-color: transparent;
     }
   }
-  @media screen and (min-device-width: 800px) and (orientation: portrait) {
-    .footer-container {
-      font-size: 5vw;
-    }
-  }
-  @media screen and (min-device-width: 1300px) and (orientation: portrait) {
-    .footer-container {
-      font-size: 4vw;
-    }
+
+
+  //@media screen and (min-device-width: 280px) and (orientation: portrait) {
+  //    .footer-container {
+  //      font-size: 7vw;
+  //    }
+  //}
+  //@media screen and (min-device-width: 700px) and (orientation: portrait) {
+  //  .footer-container {
+  //    font-size: 6vw;
+  //  }
+  //}
+  //@media screen and (min-device-width: 800px) and (orientation: portrait) {
+  //  .footer-container {
+  //    font-size: 5vw;
+  //  }
+  //}
+  @media screen and (min-device-width: 1024px) and (orientation: landscape) {
+    font-size: 0.8em;
   }
 }

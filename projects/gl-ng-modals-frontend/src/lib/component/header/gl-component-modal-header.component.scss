@@ -1,39 +1,43 @@
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/colors/pink";
+@import "~gl-scss-styles/assets/style/colors/white/white";
 @import "~gl-scss-styles/assets/style/fonts/montserrat";
 @import "~gl-scss-styles/assets/style/patterns/gradient";
 
 :host::ng-deep {
+  font-size: 1em;
+
   .modal-title-container {
-    background-color: $dark-gray-3;
+    font-size: 1em;
     @include pattern-gradient-border(1px, 'bottom');
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 0.5em 0;
+    padding: 1em 0;
     text-align: left;
     width: 100%;
-    font-size: 0.65em;
 
     .modal-logo {
-      margin: 0 0.5em;
-      height: 1.5em;
-      width: 1.5em;
+      margin: 0.5em 1.5em 1.5em 1.5em;
+      height: 5em;
+      width: 5em;
+      user-select: none;
     }
 
     .modal-title-text-container {
       display: flex;
       align-items: center;
+      text-align: center;
       margin: 0 1em;
       flex-grow: 1;
 
       .modal-title{
-        @include font-family(regular);
-        color: $dark-gray;
-        text-transform: uppercase;
+        @include font-family(bold);
+        color: $white;
         user-select: none;
 
-        &:nth-child(1) {margin: 0 0.3em 0 0;}
+        &:nth-child(1) {
+          margin: 0 0.3em 0 0;
+        }
       }
     }
   }

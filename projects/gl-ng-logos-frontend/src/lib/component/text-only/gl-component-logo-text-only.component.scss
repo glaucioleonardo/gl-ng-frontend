@@ -1,0 +1,67 @@
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
+
+:host::ng-deep {
+  font-size: 1em;
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
+  align-items: stretch;
+
+  .title-container {
+    max-width: calc(90vw);
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    align-items: stretch;
+
+    &.click {
+      cursor: pointer;
+    }
+
+    .title {
+      @extend %ellipsis-content;
+      @include font-family(thin);
+      font-size: 1.2em;
+      color: $white;
+      text-transform: lowercase;
+      user-select: none;
+
+      text-align: center;
+      min-height: 1.2em;
+    }
+
+    .title-1 {
+      @include font-family(semi-bold);
+      margin: 0 0.2em 0 0;
+    }
+    .title-2 {
+      position: relative;
+    }
+    .release {
+      @include font-family(bold);
+      color: $white;
+      font-size: 0.5em;
+      margin: 0.7em 0 0 0;
+      user-select: none;
+      display: block;
+    }
+
+    &.column-view {
+      flex-direction: column;
+
+      .title {
+        margin: 0;
+        flex: 1 1 0;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .release {
+        text-align: center;
+      }
+    }
+  }
+}

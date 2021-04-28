@@ -1,22 +1,34 @@
-@import "~gl-scss-styles/assets/style/colors/black";
-@import "~gl-scss-styles/assets/style/colors/gray";
+@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
 
 :host::ng-deep {
+  flex: 1 1 auto;
+  font-size: 1em;
   display: flex;
-  flex-grow: 0;
+  width: 100%;
+  align-items: stretch;
+  justify-content: stretch;
 
   .label-with-button-container {
     display: flex;
     flex-grow: 1;
     background-color: $dark-gray-2-3;
+    font-size: 1em;
+    border-radius: 0.5em;
+
+    gl-component-title-label-simple {
+      flex: 1 1 auto;
+      font-size: 1em;
+    }
 
     .label-button-container {
       display: flex;
       flex-grow: 0;
       margin: 0 0.2em 0 0;
+      font-size: 2em;
 
       .button {
-        margin: 0 0 0 0.2em;
+        margin: 0 0 0 0.1em;
       }
     }
 

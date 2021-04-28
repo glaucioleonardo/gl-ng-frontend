@@ -1,15 +1,18 @@
-@import "~gl-scss-styles/assets/style/colors/black";
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/colors/pink";
-@import "~gl-scss-styles/assets/style/colors/white";
-@import "~gl-scss-styles/assets/style/patterns/gradient";
+@import "~gl-scss-styles/assets/style/components/view-port/view-port-width";
+@import "~gl-scss-styles/assets/style/components/view-port/view-port-height";
+@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/white/white";
 @import "~gl-scss-styles/assets/style/fonts/montserrat";
 
 :host::ng-deep {
+  font-size: 1em;
+
   .modal-container {
+    font-size: 1em;
     position: fixed;
-    min-width: 100vw;
-    min-height: 100vh;
+    min-width: width(100);
+    min-height: height(100);
     z-index: 100000;
     top: 0;
     left: 0;
@@ -17,6 +20,8 @@
     justify-items: center;
     align-items: center;
     height: 0;
+    background: $black-translucid-8;
+    backdrop-filter: blur(10px);
 
     animation: show-modal 0.5s ease-in-out;
     animation-fill-mode: forwards;
@@ -32,26 +37,22 @@
       transition-delay: 0.5s;
     }
 
-    background: $black-translucid-8;
-
     .modal-main-content {
       opacity: 0;
-      //background: $dark-gray-4;
-      background: rgba($dark-gray-4, 0.5);
       margin: 0 auto;
       word-wrap: break-word;
       display: flex;
       flex-direction: column;
       justify-content: stretch;
-      //align-items: center;
-      width: 90vw;
       max-width: 36em;
-      min-height: 10em;
-      //noinspection CssOverwrittenProperties
       height: max-content;
-      //noinspection CssOverwrittenProperties
-      height: 1em;
       align-items: stretch;
+      border-radius: 0.5em;
+      backdrop-filter: blur(10px);
+      background-color: rgba($dark-gray, 0.2);
+      border: solid 1px $dark-gray-2;
+      padding: 1em;
+      width: 80vw;
 
       .modal-message-container {
         display: flex;
@@ -63,14 +64,13 @@
         user-select: none;
 
         .modal-message {
-          @include font-family(thin);
+          @include font-family(regular);
           text-transform: unset;
           user-select: none;
           display: block;
           text-align: center;
           width: 100%;
-
-          font-size: 0.6em;
+          font-size: 0.8em;
           color: $white;
           white-space: pre-wrap;
         }
@@ -80,20 +80,11 @@
         display: flex;
         justify-content: center;
         align-items: stretch;
-        height: 2em;
+        flex-direction: column;
 
         gl-component-input-button-simple {
-          margin: 0 0.2em;
-          max-width: calc(100% / 3)
+          margin: 0.1em 0;
         }
-      }
-
-      .modal-footer {
-        height: 0.5em;
-        background-color: $dark-gray-3-5;
-        @include pattern-gradient-border(1px, 'top');
-        margin: 0.2em 0 0 0;
-        width: 100%;
       }
     }
   }
@@ -108,16 +99,11 @@
   }
 }
 
-@media screen and (min-device-width: 1024px) and (orientation: landscape) {
+@media screen and (orientation: landscape) {
   :host::ng-deep {
     .modal-container {
       .modal-main-content {
-        width: 30vw;
-
-        gl-component-input-button-simple {
-          margin: 0 0.2em;
-          max-width: calc(30vw / 3)
-        }
+        width: width(17);
       }
     }
   }

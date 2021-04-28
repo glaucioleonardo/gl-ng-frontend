@@ -28,6 +28,7 @@ import { GlComponentInputTextLabelButtonContainerComponent } from './text/label/
 import { GlComponentInputTextLabelSimpleComponent } from './text/label/simple/gl-component-input-text-label-simple.component';
 import { GlComponentInputTextSimpleComponent } from './text/simple/gl-component-input-text-simple.component';
 import { GlComponentInputTextSimpleWithStepComponent } from './text/simple/with-step/gl-component-input-text-simple-with-step.component';
+import { GlComponentInputTextSimpleSearchComponent } from './text/simple/search/gl-component-input-text-simple-search.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { GlComponentInputTextSimpleWithStepComponent } from './text/simple/with-
     GlComponentInputTextSimpleWithStepComponent,
     GlComponentInputTextAreaSimpleComponent,
     GlComponentInputTextAreaLabelComponent,
-    GlComponentInputDragAndDropSimpleComponent
+    GlComponentInputDragAndDropSimpleComponent,
+    GlComponentInputTextSimpleSearchComponent
   ],
   imports: [
     CommonModule,
@@ -81,7 +83,8 @@ import { GlComponentInputTextSimpleWithStepComponent } from './text/simple/with-
     GlComponentInputTextSimpleWithStepComponent,
     GlComponentInputTextAreaSimpleComponent,
     GlComponentInputTextAreaLabelComponent,
-    GlComponentInputDragAndDropSimpleComponent
+    GlComponentInputDragAndDropSimpleComponent,
+    GlComponentInputTextSimpleSearchComponent
   ]
 })
 export class ComponentModule { }

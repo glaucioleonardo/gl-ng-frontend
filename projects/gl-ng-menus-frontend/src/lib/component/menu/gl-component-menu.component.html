@@ -20,10 +20,16 @@
               [src]="settingsButton"
               class="menu-icons settings-menu"
               alt="Settings menu button">
+
+            <div class="logo-container">
+              <img class="main-logo" [src]="menuLogo" alt="Menu Logo"/>
+            </div>
+
           </div>
           <div class="menu-header-title">
             <h1 class="title">{{ title }}</h1>
             <h2 class="subtitle">{{ subtitle }}</h2>
+            <h3 class="system-version">{{ menuBottomVersion == null ? 'Version: ' + systemVersion : menuBottomVersion }}</h3>
           </div>
         </div>
       </li>
@@ -58,13 +64,13 @@
           ($click)="$click.emit($event)"
         ></gl-component-menu-item>
       </li>
-      <li class="logo-main-container">
-        <div class="logo-container">
-          <img class="main-logo" [src]="menuLogo" alt="Menu Logo"/>
-          <span class="main-logo-title">{{ menuBottomTitle }}</span>
-          <span class="main-logo-title">{{ menuBottomVersion == null ? 'Version: ' + systemVersion : menuBottomVersion }}</span>
-        </div>
-      </li>
+<!--      <li class="logo-main-container">-->
+<!--        <div class="logo-container">-->
+<!--&lt;!&ndash;          <img class="main-logo" [src]="menuLogo" alt="Menu Logo"/>&ndash;&gt;-->
+<!--          <span class="main-logo-title">{{ menuBottomTitle }}</span>-->
+<!--          <span class="main-logo-title">{{ menuBottomVersion == null ? 'Version: ' + systemVersion : menuBottomVersion }}</span>-->
+<!--        </div>-->
+<!--      </li>-->
     </ul>
   </nav>
 </div>

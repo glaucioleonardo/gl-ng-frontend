@@ -5,6 +5,11 @@
   "projects": {
     "gl-ng-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-frontend",
       "sourceRoot": "projects/gl-ng-frontend/src",
       "prefix": "gl",
@@ -45,6 +50,11 @@
     },
     "gl-ng-attachments-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-attachments-frontend",
       "sourceRoot": "projects/gl-ng-attachments-frontend/src",
       "prefix": "gl",
@@ -85,6 +95,11 @@
     },
     "gl-ng-buttons-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-buttons-frontend",
       "sourceRoot": "projects/gl-ng-buttons-frontend/src",
       "prefix": "gl",
@@ -125,6 +140,11 @@
     },
     "gl-ng-error-message-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-error-message-frontend",
       "sourceRoot": "projects/gl-ng-error-message-frontend/src",
       "prefix": "gl",
@@ -165,6 +185,11 @@
     },
     "gl-ng-filters-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-filters-frontend",
       "sourceRoot": "projects/gl-ng-filters-frontend/src",
       "prefix": "gl",
@@ -205,6 +230,11 @@
     },
     "gl-ng-footer-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-footer-frontend",
       "sourceRoot": "projects/gl-ng-footer-frontend/src",
       "prefix": "gl",
@@ -245,6 +275,11 @@
     },
     "gl-ng-headers-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-headers-frontend",
       "sourceRoot": "projects/gl-ng-headers-frontend/src",
       "prefix": "gl",
@@ -285,6 +320,11 @@
     },
     "gl-ng-inputs-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-inputs-frontend",
       "sourceRoot": "projects/gl-ng-inputs-frontend/src",
       "prefix": "gl",
@@ -325,6 +365,11 @@
     },
     "gl-ng-lists-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-lists-frontend",
       "sourceRoot": "projects/gl-ng-lists-frontend/src",
       "prefix": "gl",
@@ -365,6 +410,11 @@
     },
     "gl-ng-logos-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-logos-frontend",
       "sourceRoot": "projects/gl-ng-logos-frontend/src",
       "prefix": "gl",
@@ -405,6 +455,11 @@
     },
     "gl-ng-menus-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-menus-frontend",
       "sourceRoot": "projects/gl-ng-menus-frontend/src",
       "prefix": "gl",
@@ -445,6 +500,11 @@
     },
     "gl-ng-modals-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-modals-frontend",
       "sourceRoot": "projects/gl-ng-modals-frontend/src",
       "prefix": "gl",
@@ -485,6 +545,11 @@
     },
     "gl-ng-navigation-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-navigation-frontend",
       "sourceRoot": "projects/gl-ng-navigation-frontend/src",
       "prefix": "gl",
@@ -525,6 +590,11 @@
     },
     "gl-ng-paging-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-paging-frontend",
       "sourceRoot": "projects/gl-ng-paging-frontend/src",
       "prefix": "gl",
@@ -565,6 +635,11 @@
     },
     "gl-ng-titles-frontend": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/gl-ng-titles-frontend",
       "sourceRoot": "projects/gl-ng-titles-frontend/src",
       "prefix": "gl",

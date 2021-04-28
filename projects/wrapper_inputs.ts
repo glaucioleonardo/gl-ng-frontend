@@ -78,14 +78,19 @@ import { GlComponentInputTextLabelButtonContainerComponent } from './gl-ng-input
 import { GlComponentInputTextLabelSimpleComponent } from './gl-ng-inputs-frontend/src/lib/component/text/label/simple/gl-component-input-text-label-simple.component';
 import { GlComponentInputTextSimpleComponent } from './gl-ng-inputs-frontend/src/lib/component/text/simple/gl-component-input-text-simple.component';
 import { GlComponentInputTextSimpleWithStepComponent } from './gl-ng-inputs-frontend/src/lib/component/text/simple/with-step/gl-component-input-text-simple-with-step.component';
-import * as GlComponentInputTextSimpleWithStepInterface from './gl-ng-inputs-frontend/src/lib/component/text/simple/with-step/gl-component-input-text-simple-with-step.interface';
 import { GlComponentInputTextSimpleService } from './gl-ng-inputs-frontend/src/lib/component/text/simple/gl-component-input-text-simple.service';
+
+import { GlComponentInputTextSimpleSearchComponent } from './gl-ng-inputs-frontend/src/lib/component/text/simple/search/gl-component-input-text-simple-search.component';
+import * as GlComponentInputTextSimpleSearchInterface from './gl-ng-inputs-frontend/src/lib/component/text/simple/search/gl-component-input-text-simple-search.interface';
+
+import * as GlComponentInputTextSimpleWithStepInterface from './gl-ng-inputs-frontend/src/lib/component/text/simple/with-step/gl-component-input-text-simple-with-step.interface';
 import * as GlComponentInputTextSimpleInterface from './gl-ng-inputs-frontend/src/lib/component/text/simple/gl-component-input-text-simple.interface';
 
 export {
   GlComponentInputTextLabelButtonContainerComponent, GlComponentInputTextLabelSimpleComponent,
   GlComponentInputTextSimpleComponent, GlComponentInputTextSimpleService, GlComponentInputTextSimpleInterface,
-  GlComponentInputTextSimpleWithStepComponent, GlComponentInputTextSimpleWithStepInterface
+  GlComponentInputTextSimpleWithStepComponent, GlComponentInputTextSimpleWithStepInterface,
+  GlComponentInputTextSimpleSearchComponent, GlComponentInputTextSimpleSearchInterface
 };
 // endregion
 

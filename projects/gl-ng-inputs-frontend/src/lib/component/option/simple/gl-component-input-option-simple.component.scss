@@ -1,16 +1,21 @@
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/colors/pink";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
+@import "~gl-scss-styles/assets/style/colors/pink/pink";
 @import "~gl-scss-styles/assets/style/fonts/montserrat";
 
 :host::ng-deep {
-  display: block;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
 
   .input-container {
+    font-size: 1em;
     position: relative;
-    padding: 0.2em 0.2em 0 0.2em;
     display: flex;
-    flex-grow: 1;
+    flex: 0 1 auto;
     align-items: center;
 
     &:not(hover) .check-mark {
@@ -29,8 +34,8 @@
       cursor: pointer;
       height: 2.2em;
       width: 2.2em;
-      left: 0.75em;
-      top: 0.9em;
+      left: 0.15em;
+      top: 0.15em;
 
       &:checked ~ .check-mark {
         background-color: $dark-gray-3;
@@ -39,11 +44,11 @@
       &:checked ~ .check-mark:after {
         visibility: visible;
         opacity: 1;
-        top: 0.25em;
-        left: 0.24em;
-        width: 0.5em;
-        height: 0.5em;
-        border-radius: 15%;
+        top: 0.5em;
+        left: 0.5em;
+        width: 1em;
+        height: 1em;
+        border-radius: 20%;
         background-color: $pink;
 
         transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
@@ -55,11 +60,11 @@
       cursor: pointer;
       top: 0;
       left: 0;
-      height: 1em;
-      width: 1em;
+      height: 2em;
+      width: 2em;
       background-color: $pink;
-      border-radius: 15%;
-      margin: 0 0.2em 0 0;
+      border-radius: 30%;
+      margin: 0 0.4em 0 0;
 
       /* Create the indicator (the dot/circle - hidden when not checked) */
       &:after {
@@ -81,7 +86,35 @@
     .label {
       @include font-family(regular);
       color: $dark-gray;
-      font-size: 0.6em;
+      font-size: 1em;
+
+      &.bold {
+        @include font-family(bold);
+      }
+    }
+
+    &.light {
+      &:not(hover) {
+        .check-mark {
+          background-color: $white;
+        }
+      }
+
+      &:hover {
+        .check-mark {
+          background-color: $white-translucid-7;
+        }
+      }
+
+      .input-radio {
+        &:checked ~ .check-mark {
+          background-color: $white;
+        }
+      }
+
+      .label {
+        color: $white
+      }
     }
   }
 }

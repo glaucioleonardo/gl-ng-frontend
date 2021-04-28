@@ -1,19 +1,27 @@
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/colors/white";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
 
 @import "~gl-scss-styles/assets/style/fonts/montserrat";
 
 :host::ng-deep {
-  background-color: $dark-gray-2-5;
+  font-size: 1em;
   display: flex;
+  position: relative;
   flex-direction: column;
-  flex: 1 1 0;
+  flex: 1 1 auto;
+  width: 100%;
+  align-items: stretch;
+  justify-content: stretch;
+  margin: 0;
+  background-color: $dark-gray-3-2;
 
   .navigation-tab {
+    font-size: 2em;
     margin: 0.2em 0 0 0;
     display: flex;
     align-items: center;
-    background-color: $dark-gray-2-5;
+    background-color: $dark-gray-3-2;
     transition: all 0.2s ease-in-out;
 
     &.disabled {
@@ -24,7 +32,7 @@
     .tab-sequence {
       display: flex;
       color: $dark-gray;
-      background-color: $dark-gray-2;
+      background-color: $dark-gray-2-5;
       align-items: center;
       justify-content: center;
       width: 1em;
@@ -35,8 +43,9 @@
       transition: all 0.2s ease-in;
 
       .tab-sequence-content {
-        @include font-family('regular');
+        @include font-family(bold);
         font-size: 0.5em;
+        //font-size: 1em;
         z-index: 100;
         user-select: none;
         transition: all 0.2s ease-in;
@@ -44,9 +53,9 @@
     }
 
     .tab-description {
-      @include font-family('thin');
-      text-transform: uppercase;
-      font-size: 0.6em;
+      @extend %ellipsis-content;
+      @include font-family(semi-bold);
+      font-size: 0.5em;
       color: $dark-gray;
       user-select: none;
       transition: all 0.2s ease-in;
@@ -54,20 +63,20 @@
 
     &.active {
       position: relative;
-      background-color: $dark-gray-2;
+      background-color: $dark-gray-2-7;
       border-top-left-radius: 0.2em;
       border-top-right-radius: 0.2em;
       z-index: 1000;
-      transition: all 0.2s ease-in-out;
+      transition: all 0.0s ease-in-out;
 
       &.first-item {
         margin: 0.2em 0 0 0.4em;
-        transition: all 0.2s ease-in-out;
+        transition: margin 0.2s ease-in-out;
       }
 
       &.last-item {
         margin: 0.2em 0.4em 0 0;
-        transition: all 0.2s ease-in-out;
+        transition: margin 0.2s ease-in-out;
       }
 
       &:before, &:after {
@@ -76,21 +85,21 @@
         height: 0.4em;
         width: 0.75em;
         bottom: 0;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.0s ease-in-out;
       }
 
       &:before {
         left: -0.75em;
         border-radius: 0 0 0.4em 0;
-        box-shadow: 0.4em 0 0 0 $dark-gray-2;
-        transition: all 0.2s ease-in-out;
+        box-shadow: 0.4em 0 0 0 $dark-gray-2-7;
+        transition: all 0.0s ease-in-out;
       }
 
       &:after {
         right: -0.75em;
         border-radius: 0 0 0 0.4em;
-        box-shadow: -0.4em 0 0 0 $dark-gray-2;
-        transition: all 0.2s ease-in-out;
+        box-shadow: -0.4em 0 0 0 $dark-gray-2-7;
+        transition: all 0.0s ease-in-out;
       }
 
       .tab-sequence {
@@ -105,6 +114,9 @@
     }
 
     &:not(.active) {
+      border-top-left-radius: 0.2em;
+      border-top-right-radius: 0.2em;
+
       &:hover {
         position: relative;
         background-color: $dark-gray-2-3;
@@ -112,7 +124,7 @@
         border-top-right-radius: 0.2em;
         margin: 0.2em 0 0 0;
         z-index: 1;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.0s ease-in-out;
 
         &:before, &:after {
           z-index: 0;
@@ -121,24 +133,22 @@
           height: 0.4em;
           width: 0.75em;
           bottom: 0;
-          transition: all 0.2s ease-in-out;
-          transition-delay: 0.5s;
+          transition: all 0.0s ease-in-out;
         }
 
         &:before {
           left: -0.75em;
           border-radius: 0 0 0.4em 0;
           box-shadow: 0.4em 0 0 0 $dark-gray-2-3;
-          transition: all 0.2s ease-in;
-          transition-delay: 0.5s;
+          transition: all 0.0s ease-in;
+          transition-delay: 0.0s;
         }
 
         &:after {
           right: -0.75em;
           border-radius: 0 0 0 0.4em;
           box-shadow: -0.4em 0 0 0 $dark-gray-2-3;
-          transition: all 0.2s ease-in;
-          transition-delay: 0.5s;
+          transition: all 0.0s ease-in;
         }
 
         .tab-description {
@@ -150,7 +160,8 @@
 
   }
   .border-bottom {
+    font-size: 1em;
     height: 0.2em;
-    background-color: $dark-gray-2;
+    background-color: $dark-gray-2-7;
   }
 }

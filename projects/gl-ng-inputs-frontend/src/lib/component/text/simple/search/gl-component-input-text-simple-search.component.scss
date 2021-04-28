@@ -1,0 +1,97 @@
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
+@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@import "~gl-scss-styles/assets/style/anims/blur-animation";
+
+:host::ng-deep {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    flex: 1 1 auto;
+
+    .translucid-background {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      visibility: collapse;
+      background: linear-gradient(90deg, $black-translucid-1 0%, $black-translucid-3 100%);
+      transition: all ease-in-out 0.5s;
+
+      &.highlight {
+        @extend %blur-animation-fade-in;
+        background-color: $black-translucid-5;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        visibility: visible;
+        transition: all ease-in-out 0.5s;
+      }
+
+      &.remove-highlight {
+        @extend %blur-animation-fade-out;
+        visibility: collapse;
+        opacity: 0;
+        transition: all ease-in-out 2s;
+      }
+    }
+
+    gl-component-input-text-simple {
+      z-index: 10;
+
+      .item-content {
+        padding-right: 3em;
+        flex: 1 1 auto;
+
+        &:hover, &:focus {
+          box-shadow: 0 0 0.5em $white;
+          transition: all ease-in-out 0.5s;
+        }
+
+        &:not(hover), &:not(focus) {
+          box-shadow: 0 0 0 $white;
+          transition: all ease-in-out 0.2s;
+        }
+      }
+
+      &.highlight {
+       .item-content {
+         box-shadow: 0 0 0.5em $white;
+         transition: all ease-in-out 0.5s;
+       }
+      }
+      &.remove-highlight {
+        .item-content {
+          box-shadow: 0 0 0.0 $white;
+          transition: all ease-in-out 0.2s;
+        }
+      }
+    }
+
+    .search-icon {
+      z-index: 11;
+      width: 1.5em;
+      height: 1.5em;
+      position: absolute;
+      right: 0.8em;
+      top: 0.6em;
+      opacity: 0.3;
+      cursor: pointer;
+
+      &:hover, &:focus{
+        &~ gl-component-input-text-simple {
+          .item-content {
+            box-shadow: 0 0 0.5em $white;
+            transition: all ease-in-out 0.5s;
+          }
+        }
+      }
+    }
+  }
+}

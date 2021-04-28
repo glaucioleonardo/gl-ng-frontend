@@ -1,7 +1,38 @@
+%default-border-radius {
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
 :host::ng-deep {
   display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  align-items: stretch;
+  justify-content: stretch;
+  margin: 1px;
 
   gl-component-title-label-simple {
-    flex-grow: 0;
+    .header-data {
+      font-size: 1em;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  gl-component-input-datepicker-simple-month-year, gl-component-input-datepicker-simple-day-month-year {
+    @extend %default-border-radius;
+    font-size: 1em;
+
+    mat-form-field {
+      @extend %default-border-radius;
+
+      .mat-form-field-wrapper {
+        @extend %default-border-radius;
+
+        .mat-form-field-flex {
+          @extend %default-border-radius;
+        }
+      }
+    }
   }
 }

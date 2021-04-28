@@ -1,21 +1,104 @@
-@import "~gl-scss-styles/assets/style/colors/white";
+@import "~gl-scss-styles/assets/style/colors/white/white";
 @import "~gl-scss-styles/assets/style/fonts/montserrat";
+@import "~gl-scss-styles/assets/style/components/view-port/view-port-width";
+@import "~gl-scss-styles/assets/style/components/view-port/view-port-height";
+@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
 
 :host::ng-deep {
   .main-loading {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: 999999999;
-    top: 0;
-    left: 0;
-    background: rgba(black, 0.85);
-
+    font-size: 1em;
+    flex: 1 1 auto;
+    background-color: $black-translucid-2;
+    backdrop-filter: blur(10px) opacity(0);
     display: flex;
     justify-content: center;
     flex-direction: column;
+    z-index: 999999999;
+
+    position: fixed;
+    width: width(100);
+    height: height(100);
+    top: 0;
+    left: 0;
+
+    animation-name: blur-animation;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+
+    @keyframes blur-animation {
+      from {
+        backdrop-filter: blur(10px) opacity(0);
+      }
+      to {
+        backdrop-filter: blur(10px) opacity(1);
+      }
+    }
+
+
+    transition: all 1s ease-in-out, visibility 1s ease-in-out;
+
+    &.hide-loading {
+      opacity: 0;
+      z-index: -1;
+      visibility: collapse;
+      transition: all 1s ease-in-out, visibility 1s ease-in-out;
+    }
+
+    .loading-container {
+      flex: 0 1 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .lds-facebook {
+        font-size: 1.5em;
+        display: inline-block;
+        position: relative;
+        width: 4em;
+        height: 4em;
+
+        div {
+          display: inline-block;
+          position: absolute;
+          left: 0.38em;
+          width: 0.81em;
+          background: #fff;
+          animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+
+          &:nth-child(1) {
+            left: 0.38em;
+            animation-delay: -0.24s;
+          }
+          &:nth-child(2) {
+            left: 1.63em;
+            animation-delay: -0.12s;
+          }
+          &:nth-child(3) {
+            left: 2.81em;
+            animation-delay: 0s;
+          }
+
+          @keyframes lds-facebook {
+            0% {
+              top: 0.38em;
+              height: 3.19em;
+            }
+            50%, 100% {
+              top: 1.19em;
+              height: 1.63em;
+            }
+          }
+        }
+      }
+    }
+    .custom-loading {
+      max-height: 5em;
+    }
 
     .status-container {
+      font-size: 1.5em;
       display: flex;
       flex-direction: column;
 
@@ -38,54 +121,5 @@
         white-space: pre-line;
       }
     }
-  }
-}
-
-.loading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hide-loading {
-  opacity: 0;
-  visibility: collapse;
-  transition: all 1s ease-in-out, visibility 1s ease-in-out;
-}
-
-.lds-facebook {
-  display: inline-block;
-  position: relative;
-  width: 64px;
-  height: 64px;
-}
-.lds-facebook div {
-  display: inline-block;
-  position: absolute;
-  left: 6px;
-  width: 13px;
-  background: #fff;
-  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-}
-.lds-facebook div:nth-child(1) {
-  left: 6px;
-  animation-delay: -0.24s;
-}
-.lds-facebook div:nth-child(2) {
-  left: 26px;
-  animation-delay: -0.12s;
-}
-.lds-facebook div:nth-child(3) {
-  left: 45px;
-  animation-delay: 0s;
-}
-@keyframes lds-facebook {
-  0% {
-    top: 6px;
-    height: 51px;
-  }
-  50%, 100% {
-    top: 19px;
-    height: 26px;
   }
 }

@@ -1,7 +1,8 @@
-@import "~gl-scss-styles/assets/style/colors/white";
-@import "~gl-scss-styles/assets/style/colors/pink";
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/fonts/fonts";
+@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/colors/pink/pink-dark";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/fonts/montserrat";
 @import "~gl-scss-styles/assets/style/action/readonly";
 
 :host::ng-deep {

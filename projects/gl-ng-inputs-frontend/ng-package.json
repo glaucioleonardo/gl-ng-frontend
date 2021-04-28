@@ -14,6 +14,7 @@
     "../../node_modules/gl-scss-styles/assets"
   ],
   "allowedNonPeerDependencies": [
+    "gl-scss-styles",
     "gl-w-frontend",
     "gl-sp-frontend",
     "gl-ng-titles-frontend",

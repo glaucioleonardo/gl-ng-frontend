@@ -1,4 +1,4 @@
-<div class="input-container">
+<div class="input-container {{ theme }}">
   <!--suppress HtmlFormInputWithoutLabel -->
   <input
     #input
@@ -9,6 +9,13 @@
     [id]="id"
     [name]="name"
     (click)="onCheck(value, input)">
-  <span (click)="onCheck(value, input)" class="check-mark"></span>
-  <label class="label" [for]="id">{{ label }}</label>
+  <span
+    (click)="onCheck(value, input)"
+    class="check-mark"
+  ></span>
+  <label
+    class="label {{ boldLabel ? 'bold' : '' }}"
+    [for]="id"
+    (click)="onCheck(value, input)"
+  >{{ label }}</label>
 </div>

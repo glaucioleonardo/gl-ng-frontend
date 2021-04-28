@@ -1,15 +1,21 @@
-@import '~gl-scss-styles/assets/style/colors/gray';
-
 :host::ng-deep {
+  font-size: 1em;
   display: flex;
-  flex: 1 0 auto;
+  position: relative;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+  align-items: stretch;
+  justify-content: stretch;
+  margin: 0;
 
   .item-container {
+    font-size: 1em;
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    flex: 1 0 auto;
+    flex: 1 1 auto;
 
     gl-component-input-text-simple {
       margin: 0;
@@ -21,18 +27,22 @@
     }
 
     .step-button-container {
+      font-size: 2em;
       display: flex;
       flex-direction: row;
       position: absolute;
-      right: 0.3em;
-      top: 0.3em;
+      right: 0.15em;
+      top: 0.2em;
 
-      gl-component-button-image-simple {
-        margin: 0 0 0 0.05em;
+      gl-component-button-image-tooltip {
+        margin: 0 0 0 0.1em;
 
-        .button {
-          width: 0.8em;
-          height: 0.8em;
+        gl-component-button-image-simple {
+
+          .button {
+            width: 1em;
+            height: 1em;
+          }
         }
       }
     }

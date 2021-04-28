@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-footer-frontend",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_footer.ts",
   "types": "gl-ng-footer-frontend.d.ts",
@@ -26,13 +26,13 @@
   },
   "dependencies": {
     "tslib": "^2.0.0",
-    "gl-scss-styles": "^1.0.0"
+    "gl-scss-styles": "^2.0.0"
   },
   "scripts": {
     "postinstall": "ngcc",
     "build": "ng build gl-ng-footer-frontend",
     "build-prod": "ng build --prod gl-ng-footer-frontend",
     "production": "npm run build-prod",
-    "publish": "npm run build-prod && cd ./../../dist/gl-ng-footer-frontend && npm publish && cd.. && cd.."
+    "publish": "npm run build-prod && cd ./../../dist/gl-ng-footer-frontend && npm publish && cd .. && cd .."
   }
 }

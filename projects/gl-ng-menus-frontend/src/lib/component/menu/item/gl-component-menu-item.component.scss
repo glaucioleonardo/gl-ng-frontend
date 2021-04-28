@@ -1,30 +1,26 @@
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/colors/gradient";
-@import "~gl-scss-styles/assets/style/colors/pink";
-@import "~gl-scss-styles/assets/style/colors/white";
+@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
 @import "~gl-scss-styles/assets/style/fonts/montserrat";
-@import "~gl-scss-styles/assets/style/anims/show-hide";
+
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
 
 :host::ng-deep {
+  font-size: 1.5em;
   outline: none !important;
 
   .menu-title {
-    background: $standard-gradient;
+    font-size: 1em;
+    background-color: $white-translucid-1;
     margin: 0 0 1px 0;
     position: relative;
     display: flex;
     align-items: center;
-    border-left: solid $pink 0.2em;
-
-    .material-icons {
-      color: rgba($color: $white, $alpha: 0.6);
-      font-size: 1.2em;
-      padding: 0.3em;
-      margin: 0 0.5em 0 0.3em;
-    }
+    border-left: solid $white-translucid-3 0.2em;
+    padding: 0.2em 0.3em;
 
     .menu-icons {
-      padding: 0.2em 0.5em 0.2em 0.5em;
+      border-radius: 0.25em;
       height: 1.5em;
       width: 1.5em;
     }
@@ -40,18 +36,19 @@
     }
 
     .menu-item {
+      @extend %ellipsis-content;
+
       text-decoration: none;
       font-size: 0.6em;
-      @include font-family('light');
-      text-transform: uppercase;
+      @include font-family(regular);
       color: $white-translucid-4;
-      padding: 1.5em 0.7em;
+      padding: 1.2em 0.7em;
       flex-grow: 1;
       cursor: pointer;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      max-width: 79%;
+      max-width: 67%;
     }
 
     &.active {

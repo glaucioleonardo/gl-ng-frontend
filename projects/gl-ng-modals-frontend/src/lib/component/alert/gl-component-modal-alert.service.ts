@@ -16,6 +16,10 @@ export class GlComponentModalAlertService {
   customYes: string;
   customNo: string;
 
+  private _okButton: HTMLInputElement;
+  private _noButton: HTMLInputElement;
+  private _yesButton: HTMLInputElement;
+
   constructor() {}
 
   show(message): Promise<unknown> {
@@ -58,6 +62,18 @@ export class GlComponentModalAlertService {
         this.modalClass = 'hide-modal';
         this.showModal = show;
         this.modalClass = 'show-modal';
+
+        setTimeout(() => {
+          this.setElements();
+
+          setTimeout(() => {
+            if (isOK) {
+              this._okButton.focus();
+            } else {
+              this._yesButton.focus();
+            }
+          }, 300);
+        }, 300);
       } else {
         this.modalClass = 'hide-modal';
         setTimeout(() => {
@@ -76,5 +92,13 @@ export class GlComponentModalAlertService {
     } else if (e.key === 'Escape') {
       if (this.isOK) { this.onOk(); } else { this.onNo(); }
     }
+  }
+
+  private setElements(): void {
+    const container = document.querySelector('.modal-container .modal-main-content .button-container');
+
+    this._okButton = container.querySelector('.ok .default-button');
+    this._noButton = container.querySelector('.no .default-button');
+    this._yesButton = container.querySelector('.yes .default-button');
   }
 }

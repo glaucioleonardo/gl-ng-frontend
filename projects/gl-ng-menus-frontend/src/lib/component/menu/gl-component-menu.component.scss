@@ -1,43 +1,32 @@
-@import "~gl-scss-styles/assets/style/components/view-port/view-port";
+@import "~gl-scss-styles/assets/style/components/view-port/view-port-height";
+@import "~gl-scss-styles/assets/style/components/view-port/view-port-width";
+@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
 
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/colors/pink";
-@import "~gl-scss-styles/assets/style/colors/white";
+@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/pink/pink";
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
 
+@import "~gl-scss-styles/assets/style/anims/blur-animation";
 @import "~gl-scss-styles/assets/style/fonts/montserrat";
-@import "~gl-scss-styles/assets/style/patterns/gradient";
-
-$max-width: 17em;
-
-@mixin top-right-logo-container {
-  .logo-main-container {
-    position: absolute;
-    height: 2em;
-    right: 0.5em;
-    top: 0.3em;
-    display: flex;
-    align-items: center;
-
-    .logo-container {
-      font-size: 0.5em;
-      position: static !important;
-    }
-  }
-}
 
 :host::ng-deep {
+  font-size: 1em;
+
   .menu-container {
-    @include pattern-gradient-border(0.3em, top);
-    @include pattern-gradient-border-ie(0.7em, bottom, true);
-    background: $dark-gray-3;
+    font-size: 1em;
+
+    border-top: 0.1em solid $white-translucid-3;
+    background-color: $black-translucid-4;
+    backdrop-filter: blur(30px);
     position: fixed;
     background-size: cover;
     top: 0;
     bottom: 0;
     overflow: hidden;
-    width: width(85);
-    max-width: $max-width;
-    min-width: $max-width;
+    width: width(100);
+    min-width: width(100);
     z-index: 10000;
 
     flex-grow: 1;
@@ -45,24 +34,21 @@ $max-width: 17em;
     @extend %full-height;
 
     &.left {
-      left: -110%;
+      left: width(-110);
       transition: left 0.5s ease-in-out;
     }
     &.right {
-      right: -110%;
+      right: width(-110);
       transition: right 0.5s ease-in-out;
     }
 
     .a {
       display: block;
-      min-height: 3em;
     }
 
     .menu-nav-container {
       overflow: hidden;
-      //noinspection CssUnknownProperty
-      scrollbar-width: none;
-      max-height: 100%;
+      max-height: height(100);
       flex-grow: 1;
       display: flex;
 
@@ -73,21 +59,24 @@ $max-width: 17em;
         position: relative;
 
         .menu-header-container {
-          max-width: $max-width;
+          display: flex;
+          flex-direction: column;
+          padding: 0.5em 1em 1em 0.5em;
+          max-width: calc(#{width(100)} - 1.2em);
 
           .menu-header {
             display: flex;
             flex-direction: column;
-            margin: 0.5em 1em 1em 0.5em;
 
             .menu-top-icons-container {
               display: flex;
               margin: 0 0 1.5em 0;
 
-              .close-menu, .settings-menu {
+              .close-menu, .settings-menu, .main-logo {
                 cursor: pointer;
-                height: 1.5em;
-                width: 1.5em;
+                height: 2.8em;
+                width: 2.8em;
+                border-radius: 0.5em;
 
                 &:active, &:hover {
                   opacity: 1;
@@ -97,104 +86,55 @@ $max-width: 17em;
               }
 
               .close-menu {
-                margin: 0 0.2em 0 0;
+                margin: 0 0.4em 0 0;
+              }
+
+              .logo-container {
+                display: flex;
+                flex-grow: 1;
+                justify-content: flex-end;
               }
             }
             .menu-header-title {
-              .title, .subtitle {
-                text-transform: uppercase;
+              .title, .subtitle, .system-version {
                 user-select: none;
                 color: $white;
                 margin: 0;
 
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
+                @extend %ellipsis-content;
               }
 
               .title {
-                @include font-family('bold');
-                font-size: 0.9em;
+                @include font-family(bold);
+                font-size: 1.2em;
+                padding: 0.2em 0;
               }
 
               .subtitle {
-                @include font-family('thin');
-                font-size: 1.5em;
+                @include font-family(light);
+                font-size: 1.2em;
+              }
+
+              .system-version {
+                @include font-family(bold);
+                font-size: 0.6em;
+                margin: 1em 0 0 0;
+                padding: 1em 0 1em 0;
+                color: $pink;
               }
             }
           }
           .admin-settings {
             visibility: collapse;
           }
-          .menu-item-container {
-            display: flex;
-            flex-direction: column;
-            font-size: 0.8em;
-            background-color: rgba($color: $white, $alpha: 0.3);
-
-            .menu-item {
-              min-height: 3em;
-              font-size: 0.8em;
-              display: flex;
-              align-items: center;
-              padding: 0.2em;
-
-              &:nth-child(n + 2) {
-                border-top: 1px solid;
-                border-image-source : linear-gradient(90deg, transparent 15%, $white-translucid-1 15.01%,  rgba($color: $white, $alpha: 0.05) 98%, transparent 98%);
-                border-image-slice: 1;
-              }
-
-              &:hover {
-                background-color: rgba($color: $dark-gray-1, $alpha: 0.3);
-              }
-
-              transition: all 0.2s ease-in-out;
-            }
-
-            .menu-icons {
-              margin: 0 0 0 0.7em;
-              height: 1.8em;
-              width: 1.8em;
-              opacity: 0.5;
-            }
-
-            a {
-              color: $white-translucid-6;
-              padding: 0.8em;
-              flex-grow: 1;
-              text-decoration: none;
-            }
-          }
         }
         .menu-content-container {
-          max-height: height(51);
-          max-width: $max-width;
-          overflow-y: auto;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
           overflow-x: hidden !important;
-
-          &.has-title {
-            max-height: height(52);
-          }
-        }
-      }
-
-      .logo-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        bottom: height(5);
-        position: absolute;
-        width: 100%;
-
-        .main-logo {
-          height: 2em;
-          width: 2em;
-        }
-        .main-logo-title {
-          color: $white;
-          font-size: 0.4em;
-          margin: 1em 0 0 0;
+          overflow-y: auto;
+          border-bottom: 0.1em solid $white-translucid-3;
         }
       }
     }
@@ -204,9 +144,15 @@ $max-width: 17em;
     visibility: visible !important;
   }
 
-  .menu-container.menu-active {
-    &.left { left: 0; }
-    &.right { right: 0; }
+  .menu-container {
+    &.menu-active {
+      &.left {
+        left: 0;
+      }
+      &.right {
+        right: 0;
+      }
+    }
   }
 
   .menu-background {
@@ -215,14 +161,23 @@ $max-width: 17em;
   }
 
   .visible-background {
-    width: 100%;
-    height: 100%;
-    background: rgba($color: black, $alpha: 0.6);
+    width: width(100);
+    height: height(100);
+    background-color: $black-translucid-3;
     opacity: 1;
     position: fixed;
     top: 0;
     z-index: 999;
+
+    @extend %blur-animation-fade-in;
+
     transition: opacity 1s ease-in-out;
+  }
+
+  .hide-background {
+    opacity: 0;
+    @extend %blur-animation-fade-out;
+    transition: opacity 1.1s ease-in-out;
   }
 
   .hide-subtitle {
@@ -287,50 +242,65 @@ $max-width: 17em;
     border-image-source: none;
   }
 
-  @media screen and (min-device-width: 240px) and (orientation: portrait) {
+  @media screen and (min-width: 300px) and (orientation: portrait) {
     .menu-container {
-      font-size: width(5.88);
-    }
-  }
-
-  @media screen and (min-device-width: 240px) and (orientation: landscape) {
-    .menu-container {
-      font-size: width(3);
-    }
-  }
-  @media screen and (min-device-width: 700px) and (orientation: landscape) {
-    .menu-container {
-      font-size: width(2);
-    }
-  }
-  @media screen and (min-device-width: 1024px) and (orientation: landscape) {
-    .menu-container {
-      font-size: width(1.5);
-    }
-  }
-
-  @media screen and (max-device-height: 300px) and (orientation: landscape) {
-    .menu-container {
-      .menu-content-container {
-        max-height: height(60);
-
-        &.has-title {
-          max-height: height(61);
+      .menu-header {
+        .menu-header-title {
+          font-size: 1.2em;
         }
       }
-      @include top-right-logo-container;
     }
   }
-  @media screen and (max-device-height: 400px) and (orientation: landscape) {
+  @media screen and (min-width: 360px) and (orientation: portrait) {
     .menu-container {
-      .menu-content-container {
-        max-height: height(65);
-
-        &.has-title {
-          max-height: height(66) !important;
+      .menu-header {
+        .menu-header-title {
+          font-size: 1.5em;
         }
       }
-      @include top-right-logo-container;
+    }
+  }
+  @media screen and (min-width: 700px) and (orientation: portrait) {
+    .menu-container {
+      .menu-header {
+        .menu-header-title {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+
+
+  @media screen and (min-width: 700px) and (orientation: landscape) {
+    .menu-container {
+      .menu-header {
+        .menu-header-title {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+  @media screen and (max-height: 350px) and (orientation: landscape) {
+    .menu-container {
+      .menu-header-container {
+        padding: 0.5em 1em 0 0.5em !important;
+
+        .menu-header {
+          .menu-top-icons-container {
+            margin: 0 0 0.5em !important;
+          }
+          .menu-header-title {
+            font-size: 1.0em;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    .menu-container {
+      width: 23em;
+      min-width: 23em;
     }
   }
 }

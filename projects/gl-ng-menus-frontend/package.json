@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-menus-frontend",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_menus.ts",
   "types": "gl-ng-menus-frontend.d.ts",
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "tslib": "^2.0.0",
-    "gl-scss-styles": "^1.0.0",
+    "gl-scss-styles": "^2.0.0",
     "gl-icons-assets": "^1.0.0",
     "smooth-scroll": "^16.1.3"
   },
@@ -35,6 +35,6 @@
     "build": "ng build gl-ng-menus-frontend",
     "build-prod": "ng build --prod gl-ng-menus-frontend",
     "production": "npm run build-prod",
-    "publish": "npm run build-prod && cd ./../../dist/gl-ng-menus-frontend && npm publish && cd.. && cd.."
+    "publish": "npm run build-prod && cd ./../../dist/gl-ng-menus-frontend && npm publish && cd .. && cd .."
   }
 }

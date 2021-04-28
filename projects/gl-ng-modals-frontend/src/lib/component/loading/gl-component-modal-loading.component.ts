@@ -10,6 +10,7 @@ export class GlComponentModalLoadingComponent implements AfterViewChecked {
   @ViewChild('mainLoading', { read: ElementRef, static: true }) mainLoading: ElementRef<HTMLDivElement>;
 
   @Input() defaultMessage: string;
+  @Input() customLoading: false;
 
   loaded = false;
 

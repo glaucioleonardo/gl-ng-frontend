@@ -1,41 +1,76 @@
-@import "~gl-scss-styles/assets/style/components/view-port/view-port";
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/colors/black";
-@import "~gl-scss-styles/assets/style/colors/white";
-@import "~gl-scss-styles/assets/style/colors/gradient";
-@import "~gl-scss-styles/assets/style/patterns/gradient";
+@import "~gl-scss-styles/assets/style/components/view-port/view-port-width";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
+//@import "~gl-scss-styles/assets/style/colors/gradient";
+//@import "~gl-scss-styles/assets/style/patterns/gradient";
+@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
+
+%white-background {
+  h1, h2, h3, h4, h5 {
+    color: $dark-gray-3-2;
+  }
+
+  .default-logo {
+    img {
+      filter: invert(100%);
+    }
+  }
+  .menu-buttons {
+    filter: invert(100%);
+  }
+}
 
 :host::ng-deep {
+  font-size: 1em;
   max-width: width(100);
   transition: all 0.5s ease-in-out;
 
   .header-container {
+    font-size: 1em;
     max-width: width(100);
     position: relative;
     background-color: $dark-gray-3;
+    backdrop-filter: blur(30px);
 
     &.light, &.inverted {
-      background: $light-gradient-translucid;
+      //background: $light-gradient-translucid;
+      background-color: $black-translucid-2;
     }
 
     .header-content {
+      padding: 0.5em 0;
       display: flex;
       align-items: center;
 
       &.dark, &.light {
-        @include pattern-gradient-border(0.2em);
+        border-top: solid 1px $white-translucid-3;
+        border-bottom: solid 1px $white-translucid-3;
+        backdrop-filter: blur(30px);
+
+        //@include pattern-gradient-border(0.2em);
       }
 
       &.inverted {
-        @include pattern-gradient-border(0.5px, bottom);
+        border-bottom: solid 1px $white-translucid-3;
+        backdrop-filter: blur(30px);
+        //@include pattern-gradient-border(0.5px, bottom);
       }
 
       .default-logo {
+        font-size: 2em;
         margin: 0 0.5em 0 0;
+      }
+      .title-container {
+        font-size: 2em;
+        .title-2 {
+          @extend %ellipsis-content;
+        }
       }
 
       .menu-bar {
-        height: 2.3em;
+        font-size: 2em;
         display: flex;
         align-items: center;
         flex-grow: 1;
@@ -43,41 +78,58 @@
 
         .menu-buttons-container {
           display: flex;
-          align-items: center;
+          align-items: stretch;
           margin: 0 0.5em 0 0.5em;
+
+          .menu-buttons {
+            border-radius: 0.25em;
+          }
         }
       }
     }
 
-    &.only-buttons {
+    &.only-buttons, &.transparent {
       background-color: transparent;
     }
-    &.dark-translucid {
-      background-color: $black-translucid-3;
-      backdrop-filter: blur(10px);
+    &.dark {
+      background-color: rgba($dark-gray-3-2, 0.3);
     }
-    &.light-translucid {
+    &.dark-semi-opaque {
+      background-color: rgba($dark-gray-3-2, 0.9);
+    }
+    &.dark-opaque {
+      background-color: $dark-gray-3-2;
+    }
+
+    &.light {
       background-color: $white-translucid-3;
-      backdrop-filter: blur(10px);
+    }
+    &.light-semi-opaque {
+      @extend %white-background;
+      background-color: $white-translucid-9;
+    }
+    &.light-opaque {
+      @extend %white-background;
+      background-color: $white;
     }
   }
 
-  // Portrait
-  @media screen and (orientation: portrait) {
-    .header-container {
-      font-size: height(3);
-    }
-  }
-
-  // Landscape
-  @media screen and (min-width: 240px) and (orientation: landscape) {
-    .header-container {
-      font-size: width(3);
-    }
-  }
-  @media screen and (min-width: 1024px) and (orientation: landscape) {
-    .header-container {
-      font-size: width(1.5);
-    }
-  }
+  //// Portrait
+  //@media screen and (orientation: portrait) {
+  //  .header-container {
+  //    font-size: height(3);
+  //  }
+  //}
+  //
+  //// Landscape
+  //@media screen and (min-width: 240px) and (orientation: landscape) {
+  //  .header-container {
+  //    font-size: width(3);
+  //  }
+  //}
+  //@media screen and (min-width: 1024px) and (orientation: landscape) {
+  //  .header-container {
+  //    font-size: width(1.5);
+  //  }
+  //}
 }

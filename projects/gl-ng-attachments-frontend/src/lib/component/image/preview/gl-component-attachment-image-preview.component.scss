@@ -1,11 +1,13 @@
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/colors/white";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
 
 :host::ng-deep {
   display: flex;
   flex-grow: 1;
+  font-size: 1em;
 
   .item-container {
+    font-size: 1em;
     background-color: $dark-gray-2;
     display: flex;
     flex-grow: 1;

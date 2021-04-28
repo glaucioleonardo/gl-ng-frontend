@@ -1,19 +1,29 @@
 @import "~gl-scss-styles/assets/style/fonts/montserrat";
-@import "~gl-scss-styles/assets/style/colors/black";
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/colors/pink";
-@import "~gl-scss-styles/assets/style/colors/white";
+@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/gray/gray";
+@import "~gl-scss-styles/assets/style/colors/pink/pink";
+@import "~gl-scss-styles/assets/style/colors/pink/pink-dark";
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
 @import "~gl-scss-styles/assets/style/components/scrollbar/native-scrollbar";
+@import '~gl-scss-styles/assets/style/components/input/input-ellipsis';
 
 $default-transition: all 0.2s ease-in-out;
 
 :host::ng-deep {
+  font-size: 1em;
   display: flex;
   flex-direction: column;
-  flex: 1 0 auto;
   position: relative;
+  flex: 1 1 auto;
+  width: 100%;
+  align-items: stretch;
+  justify-content: stretch;
 
   .input-container {
+    width: 100%;
+    font-size: 1em;
     display: flex;
     flex-grow: 1;
     align-items: center;
@@ -38,7 +48,7 @@ $default-transition: all 0.2s ease-in-out;
           .mat-form-field-infix {
             padding: 0;
             //noinspection CssRedundantUnit
-            flex: 1 1 0px;
+            flex: 1 1 0;
             border: none;
             width: 100%;
             display: flex;
@@ -56,9 +66,10 @@ $default-transition: all 0.2s ease-in-out;
                 border: none;
                 background-color: $dark-gray-2;
                 color: $white;
-                font-size: 0.45em;
+                font-size: 1em;
                 flex-grow: 1;
                 margin: 0;
+                @extend %ellipsis-content;
 
                 &::placeholder {
                   color: $dark-gray !important;
@@ -106,8 +117,9 @@ $default-transition: all 0.2s ease-in-out;
 
     .arrow-down {
       background-color: $dark-gray-2;
-      width: 0.8em;
-      height: 0.8em;
+      width: 2em;
+      height: 2em;
+      border-radius: 0.25em;
       padding: 0 0.3em;
       transition: all 0.2s ease-in-out;
 
@@ -247,13 +259,14 @@ $default-transition: all 0.2s ease-in-out;
 
   @media screen and (min-device-width:320px) and (max-device-width: 1024px) {
     .mat-autocomplete-panel {
-      font-size: 2.8vw !important;
+      //font-size: 2.8vw !important;
+      font-size: 1em !important;
     }
   }
 
   @media screen and (min-device-width:1024px)  {
     .mat-autocomplete-panel {
-      font-size: 0.6vw !important;
+      font-size: 1em !important;
     }
   }
 }

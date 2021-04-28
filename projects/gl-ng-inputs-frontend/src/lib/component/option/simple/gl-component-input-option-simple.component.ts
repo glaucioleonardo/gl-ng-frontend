@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TTheme } from '../../../core/interfaces/alignments.interface';
 
 @Component({
   selector: 'gl-component-input-option-simple',
@@ -11,6 +12,9 @@ export class GlComponentInputOptionSimpleComponent {
   @Input() label: string;
   @Input() name: string;
   @Input() checked: boolean;
+  @Input() theme: TTheme = '';
+
+  @Input() boldLabel = false;
 
   @Output() itemSelected: EventEmitter<string> = new EventEmitter();
 

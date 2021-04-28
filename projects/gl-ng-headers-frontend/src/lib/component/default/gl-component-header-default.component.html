@@ -1,10 +1,10 @@
-<section class="header-container {{ type }}" [attr.type]="type" (window:keydown)="onKeyDown($event)">
-  <div class="header-content {{ type }}" >
-    <div class="default-logo" *ngIf="type != 'only-buttons'">
+<section class="header-container {{ theme }}" [attr.type]="theme" (window:keydown)="onKeyDown($event)">
+  <div class="header-content {{ theme }}" >
+    <div class="default-logo" *ngIf="theme != 'only-buttons'">
       <ng-content select="[slot=default-logo]"></ng-content>
     </div>
     <gl-component-title-page
-      *ngIf="type != 'only-buttons' && !systemLogo"
+      *ngIf="theme != 'only-buttons' && !systemLogo"
       [title]="title"
       [subtitle]="subtitle"
     ></gl-component-title-page>

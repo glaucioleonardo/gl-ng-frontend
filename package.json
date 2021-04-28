@@ -7,9 +7,10 @@
     "build": "ng build",
     "build-prod": "ng build --prod",
     "production": "npm run build-prod",
-    "publish": "npm run build-prod && cd dist/gl-ng-frontend && npm publish && cd.. && cd..",
+    "publish": "npm run build-prod && cd dist/gl-ng-frontend && npm publish && cd .. && cd ..",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "gl-styles": "cd D:\\_local-development\\_glaucio\\packages\\gl-scss-styles && npm run production && cd D:\\_local-development\\_glaucio\\packages\\gl-ng-frontend && npm pack D:\\_local-development\\_glaucio\\packages\\gl-scss-styles && npm i --prefer-offline ./gl-scss-styles-2.0.0.tgz && shx rm -rf ./gl-scss-styles-2.0.0.tgz"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +23,7 @@
     "@angular/platform-browser-dynamic": "~11.2.10",
     "@angular/router": "~11.2.10",
     "gl-icons-assets": "^1.0.0",
-    "gl-scss-styles": "^1.0.0",
+    "gl-scss-styles": "^2.0.0",
     "gl-sp-frontend": "^2.4.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

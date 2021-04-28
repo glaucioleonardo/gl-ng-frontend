@@ -15,6 +15,8 @@ import { Subject } from 'rxjs';
   menuHidden: Subject<boolean> = new Subject();
   opened = false;
 
+  private _timeouts: any[] = [];
+
   constructor() { }
 
   ngOnDestroy(): void {
@@ -31,8 +33,13 @@ import { Subject } from 'rxjs';
 
   close(event: Event): boolean {
     event.preventDefault();
+    this.background.classList.add('hide-background');
     this.container.classList.remove('menu-active');
-    this.background.classList.remove('visible-background');
+
+    this._timeouts.push(setTimeout(() => {
+      this.background.classList.remove('hide-background');
+      this.background.classList.remove('visible-background');
+    }, 1100));
 
     this.menuHidden.next(true);
     this.opened = false;
@@ -41,6 +48,11 @@ import { Subject } from 'rxjs';
   open(event: Event): boolean {
     event.preventDefault();
     this.container.classList.add('menu-active');
+
+    for (const timeout of this._timeouts) {
+      clearInterval(timeout);
+    }
+
     this.background.classList.add('visible-background');
 
     this.menuHidden.next(false);

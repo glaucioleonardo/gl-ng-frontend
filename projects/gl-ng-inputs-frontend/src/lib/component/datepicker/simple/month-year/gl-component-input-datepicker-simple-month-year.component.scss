@@ -1,116 +1,141 @@
-@import '~gl-scss-styles/assets/style/colors/black';
-@import '~gl-scss-styles/assets/style/colors/gray';
-@import '~gl-scss-styles/assets/style/colors/white';
-@import '~gl-scss-styles/assets/style/fonts/fonts';
+@import "../gl-component-input-datepicker-simple";
 
-:host::ng-deep {
-  background-color: $dark-gray-2;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  position: relative;
-
-  .month-picker {
-    .mat-calendar-period-button {
-      pointer-events: none;
-    }
-
-    .mat-calendar-arrow {
-      display: none;
-    }
-  }
-
-  mat-form-field {
-    display: flex;
-    flex-grow: 1;
-    line-height: 1;
-
-    .mat-form-field-wrapper {
-      display: flex;
-      flex-grow: 1;
-      padding: 0;
-
-      .mat-form-field-flex {
-        height: 1.275em;
-        padding: 0.2em 0.3em 0.2em 0.45em;
-        border-radius: 0;
-        align-items: center;
-
-        .mat-form-field-infix {
-          border: none;
-          width: auto;
-          padding: 0;
-          display: flex;
-        }
-        .mat-form-field-suffix {
-          flex-direction: row;
-          display: flex;
-
-          .mat-datepicker-toggle {
-            margin: 0 0 0 0.1em;
-
-            .mat-focus-indicator {
-              width: 0.8em;
-              height: 0.8em;
-
-              .mat-button-wrapper {
-                width: 0.8em;
-                height: 0.8em;
-                display: flex;
-                align-items: center;
-
-                svg, .datepicker-button {
-                  width: 0.8em;
-                  height: 0.8em;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .item-content {
-      @include font-family(regular);
-      border: none;
-
-      color: $white;
-      font-size: 0.45em;
-      flex-grow: 1;
-
-      &:focus {
-        outline: none !important;
-      }
-
-      &::placeholder {
-        color: $dark-gray !important;
-      }
-
-      &.left { text-align: left; }
-      &.center { text-align: center; }
-      &.right { text-align: right; }
-
-      &.light {
-        background-color: $black-translucid-1;
-
-        &::placeholder {
-          color: $white-translucid-2 !important;
-        }
-      }
-
-      &.dark {
-        background-color: $dark-gray-3-2;
-      }
-    }
-
-    .item-content:-ms-input-placeholder {
-      color: $dark-gray !important;
-    }
-
-    .item-content {
-      &.light:-ms-input-placeholder {
-        color: $gray !important;
-      }
-    }
-  }
-}
+//@import '~gl-scss-styles/assets/style/colors/black/black-translucid';
+//@import '~gl-scss-styles/assets/style/colors/gray/gray-dark';
+//@import '~gl-scss-styles/assets/style/colors/gray/gray';
+//@import '~gl-scss-styles/assets/style/colors/white/white';
+//@import '~gl-scss-styles/assets/style/colors/white/white-translucid';
+//@import '~gl-scss-styles/assets/style/fonts/montserrat';
+//
+//:host::ng-deep {
+//  background-color: $dark-gray-2;
+//
+//  font-size: 1em;
+//  display: flex;
+//  flex-direction: column;
+//  position: relative;
+//  flex: 1 1 auto;
+//  width: 100%;
+//  align-items: stretch;
+//  justify-content: stretch;
+//
+//  .month-picker {
+//    .mat-calendar-period-button {
+//      pointer-events: none;
+//    }
+//
+//    .mat-calendar-arrow {
+//      display: none;
+//    }
+//  }
+//
+//  mat-form-field {
+//    font-size: 1em;
+//    display: flex;
+//    //flex-grow: 1;
+//    line-height: 1;
+//    flex: 1 1 auto;
+//
+//    .mat-form-field-wrapper {
+//      display: flex;
+//      //flex-grow: 1;
+//      padding: 0;
+//      flex: 1 1 auto;
+//
+//      .mat-form-field-flex {
+//        //height: 1.275em;
+//        padding: 0.2em 0.3em 0.2em 0.45em;
+//        //border-radius: 0;
+//        align-items: center;
+//        flex: 1 1 auto;
+//
+//        .mat-form-field-infix {
+//          border: none;
+//          width: auto;
+//          padding: 0;
+//          display: flex;
+//          flex: 1 1 auto;
+//        }
+//        .mat-form-field-suffix {
+//          flex-direction: row;
+//          display: flex;
+//
+//          .mat-datepicker-toggle {
+//            margin: 0 0 0 0.1em;
+//
+//            .mat-focus-indicator {
+//              %size {
+//                $size: 2em;
+//                width: $size;
+//                height: $size;
+//              }
+//              //width: 0.8em;
+//              //height: 0.8em;
+//              @extend %size;
+//
+//              .mat-button-wrapper {
+//                //width: 0.8em;
+//                //height: 0.8em;
+//                @extend %size;
+//                display: flex;
+//                align-items: center;
+//
+//                svg, .datepicker-button {
+//                  //width: 0.8em;
+//                  //height: 0.8em;
+//                  border-radius: 0.25em;
+//                  @extend %size;
+//                }
+//              }
+//            }
+//          }
+//        }
+//      }
+//    }
+//
+//    .item-content {
+//      @include font-family(regular);
+//      border: none;
+//
+//      color: $white;
+//      //font-size: 0.45em;
+//      font-size: 1em;
+//      //flex-grow: 1;
+//      flex: 1 1 auto;
+//
+//      &:focus {
+//        outline: none !important;
+//      }
+//
+//      &::placeholder {
+//        color: $dark-gray !important;
+//      }
+//
+//      &.left { text-align: left; }
+//      &.center { text-align: center; }
+//      &.right { text-align: right; }
+//
+//      &.light {
+//        background-color: $black-translucid-1;
+//
+//        &::placeholder {
+//          color: $white-translucid-2 !important;
+//        }
+//      }
+//
+//      &.dark {
+//        background-color: $dark-gray-3-2;
+//      }
+//    }
+//
+//    .item-content:-ms-input-placeholder {
+//      color: $dark-gray !important;
+//    }
+//
+//    .item-content {
+//      &.light:-ms-input-placeholder {
+//        color: $gray !important;
+//      }
+//    }
+//  }
+//}

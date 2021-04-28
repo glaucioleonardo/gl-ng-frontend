@@ -1,26 +1,41 @@
-@import "~gl-scss-styles/assets/style/colors/black";
-@import "~gl-scss-styles/assets/style/colors/gray";
-@import "~gl-scss-styles/assets/style/colors/pink";
-@import "~gl-scss-styles/assets/style/colors/white";
+@import "~gl-scss-styles/assets/style/colors/black/black";
+@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/pink/pink-dark";
+@import "~gl-scss-styles/assets/style/colors/white/white";
 @import "~gl-scss-styles/assets/style/fonts/montserrat";
 
+%title {
+  @include font-family(extra-light);
+  border-radius: 0.3em;
+  text-transform: uppercase;
+  font-size: 2em;
+  padding: 0.3em 0;
+  margin: 0.2em 0 0.2em 0;
+}
+
 :host::ng-deep {
+  flex: 0 1 0;
+  font-size: 1em;
   display: flex;
-  flex-grow: 1;
+  width: 100%;
+  align-items: stretch;
+  justify-content: stretch;
 
   .header-data {
-    min-height: 1.3em;
-    max-height: 1.3em;
-    line-height: 1.3em;
+    font-size: 1em;
+    border-radius: 0.5em;
+    @include font-family(semi-bold);
     position: relative;
     flex-grow: 1;
-    @include font-family(regular);
     background-color: $dark-gray-2-3;
     color: $white;
-    font-size: 0.45em;
-    padding: 1em 1em;
+    padding: 0.8em 1em;
     text-align: center;
     user-select: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 
     &.light {
       background-color: $black-translucid-3;
@@ -31,12 +46,14 @@
     }
 
     &.category-title {
-      @include font-family(thin);
-      max-height: initial;
-      text-transform: uppercase;
-      font-size: 1em;
-      padding: 0.3em 0;
+      @extend %title;
       background-color: $dark-pink;
+    }
+
+    &.category-title-light {
+      @extend %title;
+      background-color: $white;
+      color: $dark-gray-3-2;
     }
 
     &.left {
@@ -62,7 +79,7 @@
 
   .required-fill-dot {
     position: absolute;
-    top: 0.5em;
+    top: 1.1em;
     right: 0.2em;
     width: 0.3em;
     height: 0.3em;

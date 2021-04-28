@@ -1,0 +1,9 @@
+<div class="title-container {{ clickable ? 'click' : '' }} {{ columnView ? 'column-view' : '' }}"
+     (click)="onClick()">
+  <h1 class="title title-1">{{ title }}</h1>
+  <h1 class="title title-2">{{ subtitle }}{{ formType == null ? '' : ': ' + formType }}</h1>
+  <span
+    *ngIf="showRelease && releaseName != null"
+    class="release">{{ releaseName }}
+  </span>
+</div>
