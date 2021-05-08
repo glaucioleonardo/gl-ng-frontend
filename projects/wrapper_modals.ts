@@ -36,3 +36,9 @@ import { GlComponentModalLoadingComponent } from './gl-ng-modals-frontend/src/li
 import { GlComponentModalLoadingService } from './gl-ng-modals-frontend/src/lib/component/loading/gl-component-modal-loading.service';
 export { GlComponentModalLoadingComponent, GlComponentModalLoadingService };
 // endregion
+
+// region Upload File
+export { GlComponentModalUploadFileComponent } from './gl-ng-modals-frontend/src/lib/component/upload-file/gl-component-modal-upload-file.component';
+export { GlComponentModalUploadFileService } from './gl-ng-modals-frontend/src/lib/component/upload-file/gl-component-modal-upload-file.service';
+export * as GlComponentModalUploadFileInterface from './gl-ng-modals-frontend/src/lib/component/upload-file/gl-component-modal-upload-file.service';
+// endregion

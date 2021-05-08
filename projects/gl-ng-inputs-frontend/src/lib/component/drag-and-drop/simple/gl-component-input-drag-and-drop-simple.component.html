@@ -53,8 +53,9 @@
   ></gl-component-attachment-item>
 </div>
 
-<div class="button-container upload-file" *ngIf="attachmentItems.length > 0">
+<div class="button-container upload-file" *ngIf="attachmentItems.length > 0 && showUploadButton">
   <gl-component-input-button-simple
+    #uploadFileButton
     [innerValue]="uploadButtonValue"
     [readonly]="readOnly"
     value="upload-file"

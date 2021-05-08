@@ -1,0 +1,98 @@
+@import "~gl-scss-styles/assets/style/components/view-port/view-port-width";
+@import "~gl-scss-styles/assets/style/components/view-port/view-port-height";
+@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/fonts/montserrat";
+
+:host::ng-deep {
+  font-size: 1em;
+
+  .modal-container {
+    font-size: 1em;
+    position: fixed;
+    min-width: width(100);
+    min-height: height(100);
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 0;
+    background: $black-translucid-8;
+    backdrop-filter: blur(10px);
+
+    animation: show-modal 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+
+    @keyframes show-modal {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    & > .modal-main-content {
+      opacity: 1 !important;
+      transition: all 0.5s ease-in-out;
+      transition-delay: 0.5s;
+    }
+
+    .modal-main-content {
+      opacity: 0;
+      margin: 0 auto;
+      word-wrap: break-word;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      max-width: 36em;
+      height: max-content;
+      align-items: stretch;
+      border-radius: 0.5em;
+      backdrop-filter: blur(10px);
+      background-color: rgba($dark-gray, 0.2);
+      border: solid 1px $dark-gray-2;
+      padding: 1em;
+      width: 80vw;
+
+      .modal-upload-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        height: max-content;
+        margin: 1em 0;
+        user-select: none;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+
+        gl-component-input-button-simple {
+          margin: 0.1em 0;
+        }
+      }
+    }
+  }
+
+  .hide-modal {
+    animation: hide-modal 0.3s ease-in-out;
+    animation-fill-mode: forwards;
+    @keyframes hide-modal {
+      from {opacity: 1;}
+      to {opacity: 0;}
+    }
+  }
+}
+
+@media screen and (orientation: landscape) {
+  :host::ng-deep {
+    .modal-container {
+      .modal-main-content {
+        width: width(17);
+      }
+    }
+  }
+}

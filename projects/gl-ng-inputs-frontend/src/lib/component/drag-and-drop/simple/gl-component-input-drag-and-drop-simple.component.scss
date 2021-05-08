@@ -1,25 +1,39 @@
 @import "~gl-scss-styles/assets/style/colors/white/white-translucid";
 @import "~gl-scss-styles/assets/style/colors/white/white";
 @import "~gl-scss-styles/assets/style/colors/pink/pink-dark";
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
 @import "~gl-scss-styles/assets/style/fonts/montserrat";
 @import "~gl-scss-styles/assets/style/action/readonly";
+@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
 
 :host::ng-deep {
+  font-size: 1em;
   display: flex;
-  flex-grow: 1;
+  flex: 1 1 auto;
   flex-direction: column;
   max-height: min-content;
+  max-width: 100%;
   transition: all 0.3s ease-in-out;
 
   gl-component-input-switch {
     margin: 0 0 0.15em 0;
+    max-width: 100%;
+
+    .switch-main-container {
+      max-width: calc(100% - 0.5em);
+
+      &.show-as-button {
+        .switch-label {
+          max-width: calc(100% - 7.5em);
+        }
+      }
+    }
   }
 
   .file-attachment-container {
+    font-size: 1em;
     display: flex;
     flex-grow: 1;
-    border-radius: 0.2em;
+    border-radius: 0.5em;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -41,8 +55,14 @@
       justify-content: center;
       align-items: center;
       width: 100%;
+      padding: 1em;
 
       .upload-icon {
+        filter: invert(100%);
+        background: black;
+        padding: 1em;
+        border-radius: 1em;
+
         width: 3em;
         height: 3em;
         margin: 0 0 0.3em 0;
@@ -53,23 +73,26 @@
       }
 
       .action-description {
-        @include font-family('semi-bold');
-        font-size: 0.4em;
-        padding: 0.5em;
+        @include font-family(regular);
+        font-size: 1em;
+        padding: 0.2em;
         color: $white;
         user-select: none;
 
         &.button {
-          margin: 1em 0 0 0;
-          background-color: $dark-pink;
-          padding: 1em 6em;
-          border-radius: 0.2em;
-          opacity: 0.5;
-          transition: all 0.5s ease-in-out;
+          @include font-family(semi-bold);
+          flex: 1 1 auto;
+          width: 92%;
+          text-align: center;
+          margin: 0.5em 0 0 0;
+          background-color: rgba($dark-pink, 0.5);
+          padding: 0.8em;
+          border-radius: 0.5em;
+          transition: all 0.3s ease-in-out;
 
           &:hover {
-            opacity: 1;
-            transition: all 0.5s ease-in-out;
+            background-color: rgba($dark-pink, 1);
+            transition: all 0.3s ease-in-out;
           }
         }
 
@@ -96,21 +119,31 @@
     }
   }
 
-
   .attachment-list {
     display: flex;
     flex-direction: column;
-    border-radius: 0.2em;
+    border-radius: 0.5em;
     margin: 0.08em 0 0 0;
     overflow-y: auto;
     max-height: calc(10rem);
 
     gl-component-attachment-item {
-      font-size: 0.4em;
+      font-size: 1em;
 
       .attachment-container {
+        padding: 0;
+        margin: 0.1em 0;
+
         background-color: $white-translucid-1;
         transition: all 0.3s ease-in-out;
+
+        .attachment-icon {
+          border-radius: 0.5em;
+        }
+        .remove-item {
+          border-radius: 0.5em;
+          margin: 0 0.4em 0 .4em;
+        }
 
         .file {
           color: $white;
@@ -125,38 +158,8 @@
     }
   }
   .button-container {
-    &.upload-file {
-      margin: 0.1em 0 0 0;
-      position: relative;
-
-      gl-component-input-button-simple {
-        height: 1.6em;
-
-        .default-button {
-          @include font-family(semi-bold);
-          border-radius: 0.35em;
-          background-color: $white;
-          text-align: center ;
-          color: $dark-gray-3;
-          font-size: 0.4em;
-          text-transform: none;
-          padding: 0;
-        }
-      }
-
-      .button-icon {
-        position: absolute;
-        top: 0.15em;
-        left: 0.17em;
-        border-radius: 0.15em;
-
-        $size: 1.25em;
-        height: $size;
-        width: $size;
-      }
-    }
+    display: none;
   }
-
   .file-over {
     animation-name: file-over;
     animation-timing-function: ease-in-out;

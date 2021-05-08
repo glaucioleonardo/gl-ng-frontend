@@ -1,9 +1,9 @@
-//@import "~gl-scss-styles/assets/style/colors/black/black";
 @import "~gl-scss-styles/assets/style/colors/gray/gray-light";
 @import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
 @import "~gl-scss-styles/assets/style/colors/green/green-light";
 @import "~gl-scss-styles/assets/style/colors/white/white";
 @import "~gl-scss-styles/assets/style/fonts/montserrat";
+@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
 
 :host::ng-deep {
   font-size: 1em;
@@ -97,23 +97,23 @@
     }
 
     &.show-as-button {
+      background-color: rgba(255, 255, 255, 0.1);
       display: flex;
       flex-direction: row;
-
-      border-radius: 0.2em;
-      background-color: rgba(255, 255, 255, 0.1);
-      font-size: 0.8em;
-      padding: 0.2em 0.25em;
+      border-radius: 0.5em;
+      font-size: 1em;
+      padding: 0.25em 0.25em;
       align-items: center;
 
       .switch-button-icon {
-        $size: 1.563em;
-        border-radius: 0.15em;
+        $size: 2em;
+        border-radius: 0.5em;
         height: $size;
         width: $size;
       }
 
       .switch-label {
+        @extend %ellipsis-content;
         @include font-family(light);
         flex-grow: 1;
         padding: 0 0 0 0.8em;

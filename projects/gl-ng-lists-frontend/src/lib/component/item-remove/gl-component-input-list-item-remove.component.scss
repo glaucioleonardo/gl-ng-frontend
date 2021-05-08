@@ -10,38 +10,19 @@
     position: absolute;
     height: 2em;
     width: 2em;
-    left: -3em;
-    top: 0.45em;
+    left: -4em;
+    top: 0.40em;
     z-index: 100;
 
     &.show-remove {
-      animation: show-remove 0.2s ease-in-out;
-      animation-fill-mode: forwards;
-      animation-delay: 0.1s;
-
-      @keyframes show-remove {
-        from {
-          left: -3em;
-        }
-        to {
-          left: 0.3em;
-        }
-      }
+      left: 0.3em;
+      transition: all 0.2s ease-in-out;
+      transition-delay: 0.1s;
     }
 
     &.hide-remove {
-      left: -2em;
-      animation: hide-remove 0.2s ease-in-out;
-      animation-fill-mode: forwards;
-
-      @keyframes hide-remove {
-        from {
-          left: 0.3em;
-        }
-        to {
-          left: -3em;}
-
-      }
+      left: -4em;
+      transition: all 0.2s ease-in-out;
     }
 
     &:not(hover) {

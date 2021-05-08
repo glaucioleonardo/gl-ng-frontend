@@ -11,6 +11,7 @@ import { GlComponentModalAlertService } from '../../../../../../gl-ng-modals-fro
 export class GlComponentInputDragAndDropSimpleComponent {
   @ViewChild('fileAttachment') input: ElementRef<HTMLInputElement>;
 
+  @Input() showUploadButton = true;
   @Input() showContinueUpload: boolean;
   @Input() continueUpload: boolean;
   @Input() continueUploadLabel = 'Continue previous loading';
@@ -33,7 +34,7 @@ export class GlComponentInputDragAndDropSimpleComponent {
    * The message must contain the string $var1$. It'll be replaced during runtime.
    * I.e.: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit: $var1$'
    */
-  @Input() invalidExtensionMessageSingular = 'The invlid file has not been added to the attachment list. Accepted file extensions: $var1$';
+  @Input() invalidExtensionMessageSingular = 'The invalid file has not been added to the attachment list. Accepted file extensions: $var1$';
   /**
    * The message must contain the string $var1$. It'll be replaced during runtime.
    * I.e.: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit: $var1$'
@@ -43,7 +44,6 @@ export class GlComponentInputDragAndDropSimpleComponent {
    * The message must contain the string $var1$. It'll be replaced during runtime.
    * I.e.: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit: $var1$'
    */
-
   @Input() duplicatedMessageSingular = 'The duplicated file has not been added to the attachment list. Rejected files: $var1$';
   /**
    * The message must contain the string $var1$. It'll be replaced during runtime.
@@ -54,14 +54,12 @@ export class GlComponentInputDragAndDropSimpleComponent {
    * The message must contain the string $var1$ and $var2$. It'll be replaced during runtime.
    * I.e.: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit: $var1$'
    */
-
   @Input() invalidSizeMessageSingular = 'The current file is over $var1$KB and has not been added to the attachment list. Rejected files: $var2$';
   /**
    * The message must contain the string $var1$ and $var2$. It'll be replaced during runtime.
    * I.e.: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit: $var1$'
    */
-  @Input() invalidSizeMessagePlural =
-    'The files with size over $var1$KB have not been added to the attachment list. Rejected files: $var2$';
+  @Input() invalidSizeMessagePlural = 'The files with size over $var1$KB have not been added to the attachment list. Rejected files: $var2$';
 
   /**
    * The message must contain the string $var1$. It'll be replaced during runtime.

@@ -6,6 +6,7 @@ import { GlComponentModalAlertComponent } from './alert/gl-component-modal-alert
 import { GlComponentModalAttachmentLinkComponent } from './attachment/link/gl-component-modal-attachment-link.component';
 import { GlComponentModalHeaderComponent } from './header/gl-component-modal-header.component';
 import { GlComponentModalLoadingComponent } from './loading/gl-component-modal-loading.component';
+import { GlComponentModalUploadFileComponent } from './upload-file/gl-component-modal-upload-file.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { GlComponentModalLoadingComponent } from './loading/gl-component-modal-l
     GlComponentModalAttachmentLinkComponent,
     GlComponentModalHeaderComponent,
     GlComponentModalLoadingComponent,
+    GlComponentModalUploadFileComponent,
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { GlComponentModalLoadingComponent } from './loading/gl-component-modal-l
     GlComponentModalAlertComponent,
     GlComponentModalAttachmentLinkComponent,
     GlComponentModalHeaderComponent,
-    GlComponentModalLoadingComponent
+    GlComponentModalLoadingComponent,
+    GlComponentModalUploadFileComponent
   ]
 })
 export class ComponentModule { }
