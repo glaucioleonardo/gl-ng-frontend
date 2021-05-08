@@ -49,10 +49,10 @@ export class GlComponentHeaderDefaultComponent implements OnInit, AfterViewInit,
   }
 
   scroll = (): void => {
-    const currentScrollPosition = window.pageYOffset;
+    const currentScrollPosition = window.pageYOffset <= 0 ? 0 : window.pageYOffset;
 
     if (this._header != null) {
-      if (this._previousScrollPosition > currentScrollPosition) {
+      if (currentScrollPosition === 0 || this._previousScrollPosition > currentScrollPosition) {
         this._header.style.top = '0';
       } else {
         this._header.style.top = '-' + this._header.getBoundingClientRect().height.toString() + 'px';
