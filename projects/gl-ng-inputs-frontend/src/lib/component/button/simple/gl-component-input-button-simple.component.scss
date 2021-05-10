@@ -11,6 +11,7 @@
   align-items: stretch;
   margin: 0;
   outline: none;
+  appearance: none;
 
   .default-button {
     @include font-family(semi-bold);

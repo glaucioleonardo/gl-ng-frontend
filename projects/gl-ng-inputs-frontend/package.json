@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-inputs-frontend",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_inputs.ts",
   "types": "gl-ng-inputs-frontend.d.ts",
