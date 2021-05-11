@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IAttachmentData } from 'gl-w-frontend/lib/scripts/core/services/attachment/core-services-attachment.interface';
 import { GlComponentModalUploadFileService } from './gl-component-modal-upload-file.service';
 
@@ -7,14 +7,14 @@ import { GlComponentModalUploadFileService } from './gl-component-modal-upload-f
   templateUrl: './gl-component-modal-upload-file.component.html',
   styleUrls: ['./gl-component-modal-upload-file.component.scss']
 })
-export class GlComponentModalUploadFileComponent implements OnDestroy {
+export class GlComponentModalUploadFileComponent implements OnInit {
   @Input() title: string;
   @Input() subtitle: string;
   @Input() modalLogo: string;
   @Input() innerValueUpload = 'Upload';
   @Input() innerValueCancel = 'Cancel';
   @Input() readOnly = false;
-  @Input() attachmentItems: IAttachmentData[] = [];
+  @Input() attachments: IAttachmentData[] = [];
 
   @Input() uploadValue = 'upload';
   @Input() cancelValue = 'cancel';
@@ -92,10 +92,39 @@ export class GlComponentModalUploadFileComponent implements OnDestroy {
    */
   @Input() acceptFileType: string[] = [];
 
+  constructor(public service: GlComponentModalUploadFileService) {}
 
-  constructor(public service: GlComponentModalUploadFileService) { }
+  ngOnInit(): void {
+    if (this.attachments.length > 0) {
+      this.service.attachmentItems$.next(this.attachments);
+    }
+  }
 
-  ngOnDestroy(): void {
-    this.service.attachmentItems$.observers.map(x => x.complete());
+  onCancel(): void {
+    this.service.currentValue$.next(false);
+    this.service.resolvePromise(false);
+    this.service.hide();
+  }
+  async onUpload(): Promise<void | unknown> {
+    if (this.service.attachmentItems.length === 0) {
+      return this.service.showError('Não existem arquivos anexados! Por favor, insira pelo menos um arquivo antes de continuar!');
+    }
+
+    const attachments: IAttachmentData[] = [...this.service.attachmentItems];
+
+    this.service.currentValue$.next(true);
+    this.service.resolvePromise(true);
+    this.service.hide();
+
+    await this.service.uploadAction(attachments);
+    this.service.uploadAction = null;
+  }
+
+  onModalKeyUp(e: KeyboardEvent): void | unknown {
+    if (e.key === 'Enter') {
+      return this.onUpload();
+    } else if (e.key === 'Escape') {
+      this.onCancel();
+    }
   }
 }

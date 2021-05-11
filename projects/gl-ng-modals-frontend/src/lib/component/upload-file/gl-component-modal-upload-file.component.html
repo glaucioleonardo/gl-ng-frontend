@@ -1,6 +1,6 @@
 <div
   *ngIf="service.showModal"
-  (keydown)="service.onModalKeyUp($event)"
+  (keydown)="onModalKeyUp($event)"
   id="modal"
   class="modal-container {{ service.modalClass }}"
   tabindex="-1">
@@ -16,6 +16,7 @@
         [uploadIcon]="uploadIcon"
         [maxSize]="maxSize"
         [showUploadButton]="false"
+        [handleErrorMessage]="true"
 
         [descriptionDragAndDrop]="descriptionDragAndDrop"
         [descriptionDragAndDropOr]="descriptionDragAndDropOr"
@@ -34,26 +35,28 @@
 
         [maxNumberOfFiles]="maxNumberOfFiles"
         [acceptFileType]="acceptFileType"
-        ($attachmentItems)="service.attachmentItems$.next($event)"
         [readOnly]="readOnly"
 
-        [attachmentItems]="attachmentItems"
+        [attachmentItems]="service.attachmentItems"
         [showContinueUpload]="showContinueUpload"
-        ($continueUploadActive)="continueUpload = $event"
         [continueUpload]="continueUpload"
         [continueUploadLabel]="continueUploadLabel"
+
+        ($attachmentItems)="service.attachmentItems$.next($event)"
+        ($continueUploadActive)="continueUpload = $event"
+        (handleErrorMessageResult$)="service.showError($event)"
       ></gl-component-input-drag-and-drop-simple>
     </div>
     <div class="button-container">
       <gl-component-input-button-simple
         class="cancel"
-        (click)="service.onCancel()"
+        (click)="onCancel()"
         [innerValue]="innerValueCancel"
         [value]="cancelValue"
       ></gl-component-input-button-simple>
       <gl-component-input-button-simple
         class="upload"
-        (click)="service.onUpload()"
+        (click)="onUpload()"
         [innerValue]="innerValueUpload"
         [value]="uploadValue"
       ></gl-component-input-button-simple>

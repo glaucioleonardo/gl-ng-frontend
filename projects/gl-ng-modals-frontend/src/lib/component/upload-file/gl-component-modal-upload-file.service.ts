@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { IAttachmentData } from 'gl-w-frontend/lib/scripts/core/services/attachment/core-services-attachment.interface';
 import { Subject } from 'rxjs';
 import { GlComponentModalAlertService } from '../alert/gl-component-modal-alert.service';
@@ -7,69 +7,75 @@ import { TModalUploadFunction } from './gl-component-modal-upload-file.interface
 @Injectable({
   providedIn: 'root'
 })
-export class GlComponentModalUploadFileService {
-  attachmentItems$: Subject<IAttachmentData[]> = new Subject();
-  uploadAction: TModalUploadFunction;
-  showModal: boolean;
-  modalClass: string;
-  currentValue: Subject<boolean> = new Subject<boolean>();
-  resolvePromise;
+export class GlComponentModalUploadFileService implements OnDestroy {
+  get modalClass(): string {
+    return this._modalClass;
+  }
+  get showModal(): boolean {
+    return this._showModal;
+  }
+  get attachmentItems(): IAttachmentData[] {
+    return this._attachmentItems;
+  }
 
+  attachmentItems$: Subject<IAttachmentData[]> = new Subject();
+  currentValue$: Subject<boolean> = new Subject<boolean>();
+
+  uploadAction: TModalUploadFunction;
+  uploadActionCaller: any;
+  resolvePromise: (value) => void;
+
+  private _modalClass: string;
+  private _showModal: boolean;
   private _attachmentItems: IAttachmentData[] = [];
   private _uploadButton: HTMLInputElement;
   private _cancelButton: HTMLInputElement;
 
-  constructor(private _alert: GlComponentModalAlertService) {
-    this.attachmentItems$.subscribe(attachments => {
-      this._attachmentItems = attachments;
+  constructor(public alert: GlComponentModalAlertService) {
+    setTimeout(async () => {
+      await this.clear();
     });
   }
 
-  show(uploadAction: TModalUploadFunction): Promise<unknown> {
-    this.uploadAction = uploadAction;
-    return this.modal(true);
-  }
-  hide(): void {
-    this.modal(false);
+  async ngOnDestroy(): Promise<void> {
+    await this.clear();
   }
 
-  onCancel(): void {
-    this.currentValue.next(false);
-    this.resolvePromise(false);
-    this.hide();
-  }
-  async onUpload(): Promise<void | unknown> {
-    if (this._attachmentItems.length === 0) {
-      this.hide();
-      await this._alert.show('Não existem arquivos anexados! Por favor, insira pelo menos um arquivo antes de continuar!');
-      return this.show(this.uploadAction);
+  async show(action: TModalUploadFunction, caller: any, resetData = true, clearObservers = false, subscribe = true): Promise<unknown> {
+    await this.clear(resetData, clearObservers);
+
+    this.uploadActionCaller = caller;
+
+    if (caller != null) {
+      this.uploadAction = action.bind(caller);
+    } else {
+      this.uploadAction = action;
     }
 
-    this.currentValue.next(true);
-    this.resolvePromise(true);
-    this.hide();
-
-    await this.uploadAction(this._attachmentItems);
-    this.uploadAction = null;
+    return this.modal(true, resetData, clearObservers);
   }
-  onModalKeyUp(e: KeyboardEvent): void | unknown {
-    if (e.key === 'Enter') {
-      return this.onUpload();
-    } else if (e.key === 'Escape') {
-      this.onCancel();
-    }
+  hide(resetData = true, clearObservers = true): void {
+    this.modal(false, resetData, clearObservers);
   }
 
-  private modal(show: boolean): Promise<unknown> {
+  async showError(message: string): Promise<void | unknown> {
+    this.hide(false, false);
+    await this.alert.show(message);
+    return this.show(this.uploadAction, this.uploadActionCaller, false, false, false);
+  }
+
+  private modal(show: boolean, resetData = false, clearObservers = false): Promise<unknown> {
     this.attachmentItems$.observers.map(x => x.complete());
 
-    return new Promise(resolve => {
+    return new Promise(async resolve => {
       this.resolvePromise = resolve;
 
+      await this.clear(resetData, clearObservers);
+
       if (show) {
-        this.modalClass = 'hide-modal';
-        this.showModal = show;
-        this.modalClass = 'show-modal';
+        this._modalClass = 'hide-modal';
+        this._showModal = show;
+        this._modalClass = 'show-modal';
 
         setTimeout(() => {
           this.setElements();
@@ -79,9 +85,9 @@ export class GlComponentModalUploadFileService {
           }, 300);
         }, 300);
       } else {
-        this.modalClass = 'hide-modal';
+        this._modalClass = 'hide-modal';
         setTimeout(() => {
-          this.showModal = false;
+          this._showModal = false;
         }, 300);
       }
     });
@@ -91,5 +97,43 @@ export class GlComponentModalUploadFileService {
 
     this._uploadButton = container.querySelector('.upload .default-button');
     this._cancelButton = container.querySelector('.cancel .default-button');
+  }
+
+  private subscription(): Promise<void> {
+    return new Promise(resolve => {
+
+      if (this.attachmentItems$.observers.length === 0) {
+        this.attachmentItems$.subscribe(attachments => {
+          this._attachmentItems = attachments;
+        });
+
+        resolve();
+      } else {
+        resolve();
+      }
+    });
+  }
+  private clearObservers(): Promise<void> {
+    return new Promise(resolve => {
+      this.attachmentItems$.observers.map(x => x.complete());
+      resolve();
+    });
+  }
+  private clearItems(): Promise<void> {
+    return new Promise(resolve => {
+      this._attachmentItems = [];
+      resolve();
+    });
+  }
+  private async clear(resetData = true, clearObservers = true): Promise<void> {
+    if (resetData) {
+      await this.clearItems();
+    }
+
+    if (clearObservers) {
+      await this.clearObservers();
+    }
+
+    await this.subscription();
   }
 }

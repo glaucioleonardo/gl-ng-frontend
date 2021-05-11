@@ -15,10 +15,10 @@ export class GlComponentInputDragAndDropSimpleComponent {
   @Input() showContinueUpload: boolean;
   @Input() continueUpload: boolean;
   @Input() continueUploadLabel = 'Continue previous loading';
-  @Output() $continueUploadActive: EventEmitter<boolean> = new EventEmitter();
 
   @Input() uploadButtonValue = 'Upload files';
   @Input() readOnly = false;
+  @Input() handleErrorMessage = false;
 
   /**
    * In case the button icon source is not passed, the icon will be hidden.
@@ -59,7 +59,8 @@ export class GlComponentInputDragAndDropSimpleComponent {
    * The message must contain the string $var1$ and $var2$. It'll be replaced during runtime.
    * I.e.: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit: $var1$'
    */
-  @Input() invalidSizeMessagePlural = 'The files with size over $var1$KB have not been added to the attachment list. Rejected files: $var2$';
+  @Input() invalidSizeMessagePlural =
+    'The files with size over $var1$KB have not been added to the attachment list. Rejected files: $var2$';
 
   /**
    * The message must contain the string $var1$. It'll be replaced during runtime.
@@ -90,14 +91,16 @@ export class GlComponentInputDragAndDropSimpleComponent {
   /**
    * Returns the list of valid attachments added.
    */
+
+  @Input() attachmentItems: IAttachmentData[] = [];
+
   @Output() $attachmentItems: EventEmitter<IAttachmentData[]> = new EventEmitter();
   /**
    * Returns the list of valid attachments added and fires the upload button.
    */
   @Output() $uploadClick: EventEmitter<IAttachmentData[]> = new EventEmitter();
-
-  @Input() attachmentItems: IAttachmentData[] = [];
-
+  @Output() $continueUploadActive: EventEmitter<boolean> = new EventEmitter();
+  @Output() handleErrorMessageResult$: EventEmitter<string> = new EventEmitter();
 
   constructor(private _alert: GlComponentModalAlertService) { }
 
@@ -294,7 +297,11 @@ export class GlComponentInputDragAndDropSimpleComponent {
     const plural = pluralMessage.replace('$var1$', fileNames);
     const message = isPlural ? plural : singular;
 
-    await this._alert.show(message);
+    if (this.handleErrorMessage) {
+      this.handleErrorMessageResult$.emit(message);
+    } else {
+      await this._alert.show(message);
+    }
   }
   private async errorMessageTwoVariables(
     arrayList: string[], singularMessage: string, pluralMessage: string, firstVariable: string,
@@ -306,6 +313,10 @@ export class GlComponentInputDragAndDropSimpleComponent {
 
     const message = isPlural ? plural : singular;
 
-    await this._alert.show(message);
+    if (this.handleErrorMessage) {
+      this.handleErrorMessageResult$.emit(message);
+    } else {
+      await this._alert.show(message);
+    }
   }
 }

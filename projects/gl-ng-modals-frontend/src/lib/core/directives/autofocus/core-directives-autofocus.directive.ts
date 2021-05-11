@@ -11,9 +11,9 @@ export class CoreDirectivesAutofocusDirective implements AfterViewInit {
 
   ngAfterViewInit(): void {
     if (this.focusInnerClass != null) {
-      this.elementRef.nativeElement.querySelector(this.focusInnerClass).focus();
+      this.elementRef?.nativeElement?.querySelector(this.focusInnerClass)?.focus();
     } else {
-      this.elementRef.nativeElement.focus();
+      this.elementRef?.nativeElement?.focus();
     }
   }
 }

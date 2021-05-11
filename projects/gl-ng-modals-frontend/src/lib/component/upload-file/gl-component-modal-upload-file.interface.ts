@@ -1,1 +1,1 @@
-export type TModalUploadFunction = (param?: any[]) => Promise<any>;
+export type TModalUploadFunction = (param?: any[], caller?: any) => Promise<any>;
