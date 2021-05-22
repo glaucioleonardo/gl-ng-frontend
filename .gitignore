@@ -45,3 +45,4 @@ testem.log
 .DS_Store
 Thumbs.db
 /dist/
+/projects/gl-ng-frontend/node_modules/

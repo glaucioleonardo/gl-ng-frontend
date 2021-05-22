@@ -24,6 +24,7 @@
       src="../assets/img/icon/list/show-remove.svg"
       [id]="id + '-decrease'"
       [callback]="callback"
+      [show]="!disabled"
       (click)="processValue('decrease', null)"
     ></gl-component-button-image-tooltip>
     <gl-component-button-image-tooltip
@@ -31,6 +32,7 @@
       src="../assets/img/icon/list/add-line.svg"
       [id]="id + '-increase'"
       [callback]="callback"
+      [show]="!disabled"
       (click)="processValue('increase', null)"
     ></gl-component-button-image-tooltip>
   </div>

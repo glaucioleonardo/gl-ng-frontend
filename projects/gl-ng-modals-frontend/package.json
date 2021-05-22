@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-modals-frontend",
-  "version": "2.1.2",
+  "version": "3.0.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_modals.ts",
   "types": "gl-ng-modals-frontend.d.ts",
@@ -24,18 +24,16 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "^11.2.13",
-    "@angular/core": "^11.2.13"
+    "@angular/common": "^12.0.1",
+    "@angular/core": "^12.0.1"
   },
   "dependencies": {
-    "tslib": "^2.0.0",
     "gl-scss-styles": "^2.1.0",
-    "gl-w-frontend": "^3.1.0"
+    "gl-w-frontend": "^3.3.0"
   },
   "scripts": {
-    "postinstall": "ngcc",
     "build": "ng build gl-ng-modals-frontend",
-    "build-prod": "ng build --prod gl-ng-modals-frontend",
+    "build-prod": "ng build --configuration production gl-ng-modals-frontend",
     "production": "npm run build-prod",
     "publish": "npm run build-prod && cd \"./../../dist/gl-ng-modals-frontend\" && npm publish && cd .. && cd .."
   }
