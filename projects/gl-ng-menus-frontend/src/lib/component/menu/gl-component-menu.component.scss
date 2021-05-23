@@ -62,6 +62,7 @@
           display: flex;
           flex-direction: column;
           padding: 0.5em 1em 1em 0.5em;
+          min-width: 100%;
           max-width: calc(#{width(100)} - 1.2em);
 
           .menu-header {
@@ -72,7 +73,7 @@
               display: flex;
               margin: 0 0 1.5em 0;
 
-              .close-menu, .settings-menu, .main-logo {
+              .close-menu, .settings-menu, .logout-menu ,.main-logo {
                 cursor: pointer;
                 height: 2.8em;
                 width: 2.8em;
@@ -85,7 +86,7 @@
                 }
               }
 
-              .close-menu {
+              .close-menu, .settings-menu {
                 margin: 0 0.4em 0 0;
               }
 
@@ -96,6 +97,8 @@
               }
             }
             .menu-header-title {
+              padding: 0 0 0 0.5em;
+
               .title, .subtitle, .system-version {
                 user-select: none;
                 color: $white;

@@ -10,6 +10,11 @@ export class GlComponentButtonImageSimpleComponent {
   @Input() alt;
   @Input() src;
   @Input() callback: (args?: any[]) => void;
+  @Input() disableDragging = false;
 
   constructor() { }
+
+  preventDragging(): boolean {
+    return !this.disableDragging;
+  }
 }

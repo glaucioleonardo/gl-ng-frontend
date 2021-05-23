@@ -12,6 +12,11 @@ export class GlComponentInputButtonSimpleComponent {
   @Input() innerValue: string;
   @Input() readonly = false;
   @Input() type: TInputButtonType = 'button';
+  @Input() disableDragging = false;
 
-  constructor() { }
+  constructor() {}
+
+  preventDragging(): boolean {
+    return !this.disableDragging;
+  }
 }

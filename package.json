@@ -22,7 +22,7 @@
     "@angular/platform-browser": "~12.0.1",
     "@angular/platform-browser-dynamic": "~12.0.1",
     "@angular/router": "~12.0.1",
-    "gl-icons-assets": "^1.3.0",
+    "gl-icons-assets": "^1.4.2",
     "gl-scss-styles": "^2.1.0",
     "gl-sp-frontend": "^2.4.1",
     "gl-w-frontend": "^3.3.0",

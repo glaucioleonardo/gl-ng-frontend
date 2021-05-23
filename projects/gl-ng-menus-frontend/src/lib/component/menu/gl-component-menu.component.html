@@ -20,6 +20,13 @@
               [src]="settingsButton"
               class="menu-icons settings-menu"
               alt="Settings menu button">
+            <img
+              *ngIf="showLogout"
+              id="logout-menu-button"
+              (click)="$logoutClick.emit($event)"
+              [src]="logoutButton"
+              class="menu-icons logout-menu"
+              alt="Close menu button">
 
             <div class="logo-container">
               <img class="main-logo" [src]="menuLogo" alt="Menu Logo"/>

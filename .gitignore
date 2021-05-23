@@ -9,6 +9,21 @@
 
 # dependencies
 /node_modules
+/projects/gl-ng-frontend/node_modules/
+/projects/gl-ng-attachments-frontend/node_modules/
+/projects/gl-ng-buttons-frontend/node_modules/
+/projects/gl-ng-error-message-frontend/node_modules/
+/projects/gl-ng-filters-frontend/node_modules/
+/projects/gl-ng-footer-frontend/node_modules/
+/projects/gl-ng-headers-frontend/node_modules/
+/projects/gl-ng-inputs-frontend/node_modules/
+/projects/gl-ng-lists-frontend/node_modules/
+/projects/gl-ng-logos-frontend/node_modules/
+/projects/gl-ng-menus-frontend/node_modules/
+/projects/gl-ng-modals-frontend/node_modules/
+/projects/gl-ng-navigation-frontend/node_modules/
+/projects/gl-ng-paging-frontend/node_modules/
+/projects/gl-ng-titles-frontend/node_modules/
 
 # profiling files
 chrome-profiler-events*.json
@@ -45,4 +60,3 @@ testem.log
 .DS_Store
 Thumbs.db
 /dist/
-/projects/gl-ng-frontend/node_modules/

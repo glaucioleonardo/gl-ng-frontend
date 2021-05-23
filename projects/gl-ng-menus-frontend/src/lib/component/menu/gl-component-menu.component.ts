@@ -19,6 +19,7 @@ export class GlComponentMenuComponent implements OnInit {
   @Input() menuItems: IMenuItem[];
   @Input() menuItemsComplex: IMenuItemComplex[];
   @Input() showSettings: boolean;
+  @Input() showLogout: boolean;
   @Input() className: string;
   @Input() settingsUrl: string;
   @Input() settingsTarget = '_blank';
@@ -27,10 +28,14 @@ export class GlComponentMenuComponent implements OnInit {
   @Input() menuBottomVersion = '1.0.0';
   @Input() menuPosition: TMenuPosition = 'right';
 
-  @Output() $click: EventEmitter<any> = new EventEmitter();
+  @Input() logoutButton = './assets/img/icon/side-menu/logout.svg';
+  @Input() closeButton = '../assets/img/icon/side-menu/close.svg';
+  @Input() settingsButton = '../assets/img/icon/side-menu/admin-settings.svg';
 
-  readonly closeButton = '../assets/img/icon/side-menu/close.svg';
-  readonly settingsButton = '../assets/img/icon/side-menu/admin-settings.svg';
+  @Output() $click: EventEmitter<any> = new EventEmitter();
+  @Output() $logoutClick: EventEmitter<MouseEvent> = new EventEmitter();
+
+
 
   constructor(
     public service: GlComponentMenuService,

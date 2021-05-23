@@ -3,4 +3,5 @@
   [type]="type"
   [value]="value"
   [disabled]="readonly"
+  (dragstart)="preventDragging()"
 >{{ innerValue }}</button>
