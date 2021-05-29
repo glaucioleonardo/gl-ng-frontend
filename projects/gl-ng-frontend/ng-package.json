@@ -6,7 +6,8 @@
     "umdModuleIds": {
       "gl-w-frontend": "gl-w-frontend",
       "gl-sp-frontend": "gl-sp-frontend",
-      "smooth-scroll": "smooth-scroll"
+      "smooth-scroll": "smooth-scroll",
+      "decimal.js": "decimal.js"
     }
   },
   "assets": [

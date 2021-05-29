@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, O
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignments.interface';
 import { ISimpleTextResult, TInputTextMask, TInputTextTheme, TInputType } from './gl-component-input-text-simple.interface';
-import { InputMask, TCurrencySymbolTypes, TCurrencyTypes, TDecimalSeparators } from 'gl-w-frontend';
+import { InputMask, StringConverter, TCurrencySymbolTypes, TCurrencyTypes, TDecimalSeparators } from 'gl-w-frontend';
 import { GlComponentInputTextSimpleService } from './gl-component-input-text-simple.service';
 
 @Component({
@@ -50,17 +50,63 @@ export class GlComponentInputTextSimpleComponent implements AfterViewInit, OnDes
   @Input() maxLength = 255;
 
   @Output() currentValue: EventEmitter<ISimpleTextResult> = new EventEmitter();
-  @Output() onKeyUp(args): void {
-    if (args.target.value.trim().length > 0) {
-      args.target.classList.remove('required-fill');
+  @Output() onKeyUp(input: HTMLInputElement, event: KeyboardEvent): void {
+    const value = input.value;
+
+    switch (event.key) {
+      case 'ArrowLeft': case 'ArrowRight': case 'ArrowUp': case 'ArrowDown': case 'Control': case 'Alt': case 'Shift':
+      case 'CapsLock': case 'Escape': case 'Meta': case 'F1': case 'F2': case 'F3': case 'F4': case 'F5': case 'F6': case 'F7':
+      case 'F8': case 'F9': case 'F10': case 'F11': case 'F12': case 'Insert': case 'Home': case 'End': case 'PageUp':
+      case 'PageDown': case 'NumLock':
+        break;
+      default:
+        if (!event.altKey && !event.ctrlKey && !event.shiftKey) {
+          let parsedValue: string = value;
+
+          if (this.mask != null) {
+            // @ts-ignore
+            const unmaskedValue = input.inputmask.unmaskedvalue();
+
+            switch (this.mask) {
+              case 'currency': case 'integer': case 'numeric':
+                parsedValue = StringConverter.stringCurrencyToNumber(unmaskedValue, this.decimalSeparator, this.maskSymbol).toString();
+                break;
+
+              case 'million-currency':
+                parsedValue = unmaskedValue.replace(',', '.');
+                break;
+
+              case 'percentage':
+                parsedValue = unmaskedValue.replace(this.decimalSeparator, '.');
+                break;
+
+              default:
+                parsedValue = unmaskedValue;
+                break;
+            }
+            // const currentValueParsed =
+            // StringConverter.stringCurrencyToNumber(this.value, this.decimalSeparator, this.maskSymbol).toFixed(2);
+          }
+
+          if (value.trim().length > 0) {
+            input.classList.remove('required-fill');
+          }
+
+          this.currentValue.emit({
+            value,
+            // @ts-ignore
+            unmaskedValue: parsedValue
+          });
+
+          this.markAsTouched();
+          this.onChange({
+            value,
+            // @ts-ignore
+            unmaskedValue: parsedValue
+          });
+        }
+        break;
     }
-
-    this.currentValue.emit({
-      value: args.target.value
-    });
-
-    this.markAsTouched();
-    this.onChange(args.target.value?.trim());
   }
 
   constructor(public service: GlComponentInputTextSimpleService) { }
@@ -123,11 +169,11 @@ export class GlComponentInputTextSimpleComponent implements AfterViewInit, OnDes
     }, 0);
   }
 
-  onChange = (value) => {};
+  onChange = (value: ISimpleTextResult) => {};
   onTouched = () => {};
 
-  writeValue(value: any): void {
-    this.value = value;
+  writeValue(result: ISimpleTextResult): void {
+    this.value = result.value;
   }
   registerOnChange(onChange: any): void {
     this.onChange = onChange;

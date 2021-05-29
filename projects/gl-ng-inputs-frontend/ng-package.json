@@ -5,7 +5,8 @@
     "entryFile": "../wrapper_inputs.ts",
     "umdModuleIds": {
       "gl-w-frontend": "gl-w-frontend",
-      "gl-sp-frontend": "gl-sp-frontend"
+      "gl-sp-frontend": "gl-sp-frontend",
+      "decimal.js": "decimal.js"
     }
   },
   "assets": [
@@ -19,11 +20,13 @@
     "gl-sp-frontend",
     "gl-ng-titles-frontend",
     "gl-icons-assets",
+    "decimal.js",
     "gl-ng-buttons-frontend",
     "gl-ng-attachments-frontend",
     "gl-ng-modals-frontend",
     "@angular/cdk",
     "@angular/material",
-    "@angular/material-moment-adapter"
+    "@angular/material-moment-adapter",
+    "moment"
   ]
 }

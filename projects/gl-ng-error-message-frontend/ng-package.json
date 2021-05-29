@@ -4,7 +4,8 @@
   "lib": {
     "entryFile": "../wrapper_error_message.ts",
     "umdModuleIds": {
-      "gl-w-frontend": "gl-w-frontend"
+      "gl-w-frontend": "gl-w-frontend",
+      "decimal.js": "decimal.js"
     }
   },
   "assets": [

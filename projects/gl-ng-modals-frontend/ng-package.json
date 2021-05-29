@@ -4,7 +4,8 @@
   "lib": {
     "entryFile": "../wrapper_modals.ts",
     "umdModuleIds": {
-      "gl-w-frontend": "gl-w-frontend"
+      "gl-w-frontend": "gl-w-frontend",
+      "decimal.js": "decimal.js"
     }
   },
   "assets": [

@@ -5,7 +5,8 @@
     "entryFile": "../wrapper_filters.ts",
     "umdModuleIds": {
       "gl-w-frontend": "gl-w-frontend",
-      "smooth-scroll": "smooth-scroll"
+      "smooth-scroll": "smooth-scroll",
+      "decimal.js": "decimal.js"
     }
   },
   "assets": [

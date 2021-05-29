@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-frontend",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_index.ts",
   "types": "gl-ng-frontend.d.ts",
@@ -38,14 +38,14 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "^12.0.1",
-    "@angular/core": "^12.0.1"
+    "@angular/common": "^12.0.2",
+    "@angular/core": "^12.0.2"
   },
   "dependencies": {
     "gl-scss-styles": "^2.1.0",
     "gl-icons-assets": "^1.4.2",
     "gl-sp-frontend": "^2.4.1",
-    "gl-w-frontend": "^3.3.0",
+    "gl-w-frontend": "^3.4.0",
     "smooth-scroll": "^16.1.3"
   },
   "scripts": {

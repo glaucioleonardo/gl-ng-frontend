@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { StringConverter, TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-frontend';
 import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignments.interface';
 import { IInputTextStepButton, TStepType } from './gl-component-input-text-simple-with-step.interface';
 import { TInputTextMask, TInputType } from '../gl-component-input-text-simple.interface';
+import Decimal from 'decimal.js';
 
 @Component({
   selector: 'gl-component-input-text-simple-with-step',
@@ -10,6 +11,8 @@ import { TInputTextMask, TInputType } from '../gl-component-input-text-simple.in
   styleUrls: ['./gl-component-input-text-simple-with-step.component.scss']
 })
 export class GlComponentInputTextSimpleWithStepComponent {
+  @ViewChild('inputWithStepElement', { read: ElementRef, static: true }) inputElement: ElementRef<HTMLInputElement>;
+
   @Input() disabled = false;
   @Input() autocomplete = false;
   @Input() id: string;
@@ -43,35 +46,45 @@ export class GlComponentInputTextSimpleWithStepComponent {
   }
 
   processValue(type: TStepType, value: string): void {
+    const input: HTMLInputElement = this.inputElement.nativeElement.querySelector('input.item-content');
     const previousValue: number = this.value == null || Number.isNaN(this.value) ? 0 : this.value;
-    const step = this.mask === 'percentage' ? this.step / 100.0 : this.step;
+    const step = this.mask === 'percentage' ? new Decimal(this.step).dividedBy(100).toDecimalPlaces(2).toNumber() : this.step;
     let newValue: number;
 
-    if (type === 'increase') {
-      newValue = previousValue + step;
+    const symbol = this.mask === 'percentage' ? '%' : '';
+    const parsed = new Decimal(this.value).mul(100).toNumber();
+    const currentValue = StringConverter.decimalNumberToString(parsed, ',', 2) + symbol;
 
-      this.currentValue.emit({
-        type: 'increase',
-        previousValue: this.mask === 'percentage' ? previousValue : previousValue,
-        newValue: this.mask === 'percentage' ? newValue : newValue
-      });
-    } else if (type === 'decrease') {
-      newValue = previousValue - step;
+    if (currentValue !== value) {
+      if (type === 'increase') {
+        newValue = previousValue + step;
+        input.value = this.convertValue(this.value);
 
-      this.currentValue.emit({
-        type: 'decrease',
-        previousValue: this.mask === 'percentage' ? previousValue : previousValue,
-        newValue: this.mask === 'percentage' ? newValue : newValue
-      });
-    } else {
-      const parsedValue: string = value == null || value.length === 0 ? '0.00%' : value;
-      newValue = StringConverter.percentageToNumber(parsedValue);
+        this.currentValue.emit({
+          type: 'increase',
+          previousValue: this.mask === 'percentage' ? previousValue : previousValue,
+          newValue: this.mask === 'percentage' ? newValue : newValue
+        });
+      } else if (type === 'decrease') {
+        newValue = previousValue - step;
+        input.value = this.convertValue(this.value);
 
-      this.currentValue.emit({
-        type: 'typing',
-        previousValue: this.mask === 'percentage' ? previousValue : previousValue,
-        newValue: this.mask === 'percentage' ? newValue : newValue
-      });
+        this.currentValue.emit({
+          type: 'decrease',
+          previousValue: this.mask === 'percentage' ? previousValue : previousValue,
+          newValue: this.mask === 'percentage' ? newValue : newValue
+        });
+      } else {
+        const parsedValue: string = value == null || value.length === 0 ? '0.00%' : value;
+        newValue = StringConverter.percentageToNumber(parsedValue);
+        input.value = this.convertValue(this.value);
+
+        this.currentValue.emit({
+          type: 'typing',
+          previousValue: this.mask === 'percentage' ? previousValue : previousValue,
+          newValue: this.mask === 'percentage' ? newValue : newValue
+        });
+      }
     }
   }
 }

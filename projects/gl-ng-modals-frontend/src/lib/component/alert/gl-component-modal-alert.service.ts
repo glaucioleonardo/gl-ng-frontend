@@ -22,10 +22,10 @@ export class GlComponentModalAlertService {
 
   constructor() {}
 
-  show(message): Promise<unknown> {
+  show(message): Promise<boolean> {
     return this.modal(true, true, message);
   }
-  showYesNo(message, customYes?: string, customNo?: string): Promise<unknown> {
+  showYesNo(message, customYes?: string, customNo?: string): Promise<boolean> {
     this.customYes = customYes;
     this.customNo = customNo;
 
@@ -52,7 +52,7 @@ export class GlComponentModalAlertService {
     this.hide();
   }
 
-  private modal(show: boolean, isOK: boolean = true, message: string = ''): Promise<unknown> {
+  private modal(show: boolean, isOK: boolean = true, message: string = ''): Promise<boolean> {
     return new Promise(resolve => {
       this.resolvePromise = resolve;
       this.isOK = isOK;

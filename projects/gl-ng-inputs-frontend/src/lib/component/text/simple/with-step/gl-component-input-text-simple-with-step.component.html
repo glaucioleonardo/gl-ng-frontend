@@ -1,12 +1,13 @@
 <div class="item-container">
   <gl-component-input-text-simple
+    #inputWithStepElement
     [theme]="theme"
     [value]="convertValue(value)"
     [id]="id"
     [type]="type"
     [itemContentAlignment]="itemContentAlignment"
     [placeholder]="placeholder"
-    (currentValue)="processValue('typing', $event.value)"
+    (currentValue)="processValue('typing', $event.value?.trim())"
     [disabled]="disabled"
     [autocomplete]="autocomplete"
     [allowMinus]="allowMinus"
