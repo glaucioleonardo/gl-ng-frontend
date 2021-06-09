@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, Output, ViewChild } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignments.interface';
+import { THorizontalAlignment } from '../../../core/interfaces/alignments.interface';
 import { ISimpleTextResult, TInputTextMask, TInputTextTheme, TInputType } from './gl-component-input-text-simple.interface';
-import { InputMask, StringConverter, TCurrencySymbolTypes, TCurrencyTypes, TDecimalSeparators } from 'gl-w-frontend';
+import { InputMask, NumberParse, TCurrencySymbolTypes, TCurrencyTypes, TDecimalSeparators } from 'gl-w-frontend';
 import { GlComponentInputTextSimpleService } from './gl-component-input-text-simple.service';
 
 @Component({
@@ -69,7 +69,7 @@ export class GlComponentInputTextSimpleComponent implements AfterViewInit, OnDes
 
             switch (this.mask) {
               case 'currency': case 'integer': case 'numeric':
-                parsedValue = StringConverter.stringCurrencyToNumber(unmaskedValue, this.decimalSeparator, this.maskSymbol).toString();
+                parsedValue = NumberParse.stringCurrencyToNumber(unmaskedValue, this.decimalSeparator, this.maskSymbol).toString();
                 break;
 
               case 'million-currency':

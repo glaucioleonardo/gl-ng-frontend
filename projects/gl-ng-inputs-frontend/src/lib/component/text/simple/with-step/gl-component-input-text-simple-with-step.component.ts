@@ -1,5 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { StringConverter, TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-frontend';
+import { NumberParse, TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-frontend';
 import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignments.interface';
 import { IInputTextStepButton, TStepType } from './gl-component-input-text-simple-with-step.interface';
 import { TInputTextMask, TInputType } from '../gl-component-input-text-simple.interface';
@@ -39,7 +39,7 @@ export class GlComponentInputTextSimpleWithStepComponent {
 
   convertValue(value: number): string {
     if (this.mask === 'percentage') {
-      return StringConverter.numberToPercentage(value, false);
+      return NumberParse.toPercentage(value, false);
     } else {
       return this.value.toString();
     }
@@ -53,7 +53,7 @@ export class GlComponentInputTextSimpleWithStepComponent {
 
     const symbol = this.mask === 'percentage' ? '%' : '';
     const parsed = new Decimal(this.value).mul(100).toNumber();
-    const currentValue = StringConverter.decimalNumberToString(parsed, ',', 2) + symbol;
+    const currentValue = NumberParse.decimalToString(parsed, ',', 2) + symbol;
 
     if (currentValue !== value) {
       if (type === 'increase') {
@@ -76,7 +76,7 @@ export class GlComponentInputTextSimpleWithStepComponent {
         });
       } else {
         const parsedValue: string = value == null || value.length === 0 ? '0.00%' : value;
-        newValue = StringConverter.percentageToNumber(parsedValue);
+        newValue = NumberParse.percentageToNumber(parsedValue);
         input.value = this.convertValue(this.value);
 
         this.currentValue.emit({

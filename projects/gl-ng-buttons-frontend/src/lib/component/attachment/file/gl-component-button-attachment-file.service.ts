@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { AttachmentIcon, AttachmentParser, AttachmentValidate, StringConverter } from 'gl-w-frontend';
+import { AttachmentIcon, AttachmentParser, AttachmentValidate, NumberParse } from 'gl-w-frontend';
 import { IAttachmentData } from 'gl-sp-frontend';
 import { GlComponentModalAlertService } from '../../../../../../gl-ng-modals-frontend/src/lib/component/alert/gl-component-modal-alert.service';
 
@@ -49,7 +49,7 @@ export class GlComponentButtonAttachmentFileService {
       return;
     } else if (!sizeValid) {
       const maxSize: number = AttachmentValidate.maxSize(this._input);
-      const maxSizeStr: string = StringConverter.formatNumber(maxSize);
+      const maxSizeStr: string = NumberParse.formatDecimalSeparator(maxSize);
       this.clearInput();
       this._alert.show(`${invalidSizeDescription}: ${maxSizeStr}KB`).then(() => {});
       return;

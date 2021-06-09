@@ -1,7 +1,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
-import { AttachmentConvert, AttachmentParser, AttachmentValidate, ImageResize, StringConverter } from 'gl-w-frontend';
+import { AttachmentConvert, AttachmentParser, AttachmentValidate, ImageResize, NumberParse } from 'gl-w-frontend';
 import { IImageButtonTooltip } from '../../../../../../gl-ng-buttons-frontend/src/lib/component/image/tooltip/gl-component-button-image-tooltip.interface';
 import { GlComponentModalAlertService } from '../../../../../../gl-ng-modals-frontend/src/lib/component/alert/gl-component-modal-alert.service';
 
@@ -77,7 +77,7 @@ export class GlComponentAttachmentImagePreviewService {
 
     if (!sizeValid) {
       const maxSize: number = AttachmentValidate.maxSize(this._input);
-      const maxSizeStr = StringConverter.formatNumber(maxSize);
+      const maxSizeStr = NumberParse.formatDecimalSeparator(maxSize);
       this._alert.show(`${invalidSizeDescription} ${maxSizeStr}KB`).then(() => {});
       return;
     }
