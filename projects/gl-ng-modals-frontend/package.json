@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-modals-frontend",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_modals.ts",
   "types": "gl-ng-modals-frontend.d.ts",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "gl-scss-styles": "^2.1.0",
-    "gl-w-frontend": "^4.0.0"
+    "gl-w-frontend": "^4.0.1"
   },
   "scripts": {
     "build": "ng build gl-ng-modals-frontend",
