@@ -42,6 +42,7 @@ export class GlComponentInputTextSimpleComponent implements AfterViewInit, OnDes
 
   @Input() mask: TInputTextMask;
   @Input() decimalSeparator: TDecimalSeparators = ',';
+  @Input() decimalPlaces = 2;
   @Input() allowMinus = true;
   @Input() rightAlign = true;
   @Input() step = 5;
@@ -69,7 +70,12 @@ export class GlComponentInputTextSimpleComponent implements AfterViewInit, OnDes
 
             switch (this.mask) {
               case 'currency': case 'integer': case 'numeric':
-                parsedValue = NumberParse.stringCurrencyToNumber(unmaskedValue, this.decimalSeparator, this.maskSymbol).toString();
+                parsedValue = NumberParse.stringCurrencyToNumber(
+                  unmaskedValue,
+                  this.decimalSeparator,
+                  this.maskSymbol,
+                  this.decimalPlaces
+                ).toString();
                 break;
 
               case 'million-currency':

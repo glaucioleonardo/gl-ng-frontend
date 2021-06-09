@@ -28,6 +28,7 @@ export class GlComponentInputTextSimpleWithStepComponent {
 
   @Input() mask: TInputTextMask;
   @Input() decimalSeparator: TDecimalSeparators = ',';
+  @Input() decimalPlaces = 2;
   @Input() maskSymbol: TCurrencySymbolTypes;
   @Input() maxLength = 255;
 
@@ -39,7 +40,7 @@ export class GlComponentInputTextSimpleWithStepComponent {
 
   convertValue(value: number): string {
     if (this.mask === 'percentage') {
-      return NumberParse.toPercentage(value, false);
+      return NumberParse.toPercentage(value, false, this.decimalSeparator, this.decimalPlaces);
     } else {
       return this.value.toString();
     }
@@ -53,7 +54,7 @@ export class GlComponentInputTextSimpleWithStepComponent {
 
     const symbol = this.mask === 'percentage' ? '%' : '';
     const parsed = new Decimal(this.value).mul(100).toNumber();
-    const currentValue = NumberParse.decimalToString(parsed, ',', 2) + symbol;
+    const currentValue = NumberParse.decimalToString(parsed, ',', this.decimalPlaces) + symbol;
 
     if (currentValue !== value) {
       if (type === 'increase') {
@@ -76,7 +77,7 @@ export class GlComponentInputTextSimpleWithStepComponent {
         });
       } else {
         const parsedValue: string = value == null || value.length === 0 ? '0.00%' : value;
-        newValue = NumberParse.percentageToNumber(parsedValue);
+        newValue = NumberParse.percentageToNumber(parsedValue, this.decimalSeparator, this.decimalPlaces);
         input.value = this.convertValue(this.value);
 
         this.currentValue.emit({
