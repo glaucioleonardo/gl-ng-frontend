@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-filters-frontend",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_filters.ts",
   "types": "gl-ng-filters-frontend.d.ts",
@@ -21,8 +21,8 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "^12.0.3",
-    "@angular/core": "^12.0.3"
+    "@angular/common": "^12.1.0",
+    "@angular/core": "^12.1.0"
   },
   "dependencies": {
     "gl-scss-styles": "^2.1.0",

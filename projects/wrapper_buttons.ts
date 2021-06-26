@@ -19,9 +19,15 @@ export { GlComponentButtonAttachmentFileComponent, GlComponentButtonAttachmentFi
 // region image
 import { GlComponentButtonImageSimpleComponent } from './gl-ng-buttons-frontend/src/lib/component/image/simple/gl-component-button-image-simple.component';
 import { GlComponentButtonImageTooltipComponent } from './gl-ng-buttons-frontend/src/lib/component/image/tooltip/gl-component-button-image-tooltip.component';
+import * as GlComponentButtonImageSimpleInterface from './gl-ng-buttons-frontend/src/lib/component/image/simple/gl-component-button-image-simple.interface';
 import * as GlComponentButtonImageTooltipInterface from './gl-ng-buttons-frontend/src/lib/component/image/tooltip/gl-component-button-image-tooltip.interface';
 
-export { GlComponentButtonImageSimpleComponent, GlComponentButtonImageTooltipComponent, GlComponentButtonImageTooltipInterface };
+export {
+  GlComponentButtonImageSimpleComponent,
+  GlComponentButtonImageTooltipComponent,
+  GlComponentButtonImageSimpleInterface,
+  GlComponentButtonImageTooltipInterface
+};
 // endregion
 
 // region interface

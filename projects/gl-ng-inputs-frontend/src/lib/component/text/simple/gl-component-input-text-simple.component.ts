@@ -175,11 +175,11 @@ export class GlComponentInputTextSimpleComponent implements AfterViewInit, OnDes
     }, 0);
   }
 
-  onChange = (value: ISimpleTextResult) => {};
+  onChange = (value: any) => {};
   onTouched = () => {};
 
-  writeValue(result: ISimpleTextResult): void {
-    this.value = result.value;
+  writeValue(result: any): void {
+    this.value = result;
   }
   registerOnChange(onChange: any): void {
     this.onChange = onChange;
