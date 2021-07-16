@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -10,6 +10,8 @@ import { GlNgAttachmentsFrontendModule } from '../../../../gl-ng-attachments-fro
 import { GlNgButtonsFrontendModule } from '../../../../gl-ng-buttons-frontend/src/lib/gl-ng-buttons-frontend.module';
 import { GlNgTitlesFrontendModule } from '../../../../gl-ng-titles-frontend/src/lib/gl-ng-titles-frontend.module';
 import { CoreModule } from '../core/core.module';
+import { CoreDirectivesClickOutsideDirective } from '../core/directives/click-outside/core-directives-click-outside.directive';
+import { CorePipesListFilterPipe } from '../core/pipes/list-filter/core-pipes-list-filter.pipe';
 import { GlComponentInputAutocompleteLabelComponent } from './autocomplete/label/gl-component-input-autocomplete-label.component';
 import { GlComponentInputAutocompleteSimpleComponent } from './autocomplete/simple/gl-component-input-autocomplete-simple.component';
 import { GlComponentInputButtonHyperlinkComponent } from './button/hyperlink/gl-component-input-button-hyperlink.component';
@@ -29,9 +31,12 @@ import { GlComponentInputTextLabelSimpleComponent } from './text/label/simple/gl
 import { GlComponentInputTextSimpleComponent } from './text/simple/gl-component-input-text-simple.component';
 import { GlComponentInputTextSimpleWithStepComponent } from './text/simple/with-step/gl-component-input-text-simple-with-step.component';
 import { GlComponentInputTextSimpleSearchComponent } from './text/simple/search/gl-component-input-text-simple-search.component';
+import { GlComponentInputDropdownSimpleComponent } from './dropdown/simple/gl-component-input-dropdown-simple.component';
+import { GlComponentInputDropdownLabelComponent } from './dropdown/label/gl-component-input-dropdown-label.component';
 
 @NgModule({
   declarations: [
+    CoreDirectivesClickOutsideDirective,
     GlComponentInputAutocompleteLabelComponent,
     GlComponentInputAutocompleteSimpleComponent,
     GlComponentInputButtonHyperlinkComponent,
@@ -41,6 +46,7 @@ import { GlComponentInputTextSimpleSearchComponent } from './text/simple/search/
     GlComponentInputDatepickerLabelComponent,
     GlComponentInputDatepickerSimpleDayMonthYearComponent,
     GlComponentInputDatepickerSimpleMonthYearComponent,
+    GlComponentInputDropdownSimpleComponent,
     GlComponentInputOptionSimpleComponent,
     GlComponentInputSwitchComponent,
     GlComponentInputTextLabelButtonContainerComponent,
@@ -50,21 +56,23 @@ import { GlComponentInputTextSimpleSearchComponent } from './text/simple/search/
     GlComponentInputTextAreaSimpleComponent,
     GlComponentInputTextAreaLabelComponent,
     GlComponentInputDragAndDropSimpleComponent,
-    GlComponentInputTextSimpleSearchComponent
+    GlComponentInputTextSimpleSearchComponent,
+    GlComponentInputDropdownLabelComponent
   ],
   imports: [
-    CommonModule,
-    GlNgTitlesFrontendModule,
-    GlNgAttachmentsFrontendModule,
-    GlNgButtonsFrontendModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatAutocompleteModule,
-    MatDialogModule,
-    MatDatepickerModule,
-    CoreModule
-  ],
+        CommonModule,
+        GlNgTitlesFrontendModule,
+        GlNgAttachmentsFrontendModule,
+        GlNgButtonsFrontendModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatAutocompleteModule,
+        MatDialogModule,
+        MatDatepickerModule,
+        CoreModule,
+        FormsModule
+    ],
   exports: [
     GlComponentInputAutocompleteLabelComponent,
     GlComponentInputAutocompleteSimpleComponent,
@@ -75,6 +83,8 @@ import { GlComponentInputTextSimpleSearchComponent } from './text/simple/search/
     GlComponentInputDatepickerLabelComponent,
     GlComponentInputDatepickerSimpleDayMonthYearComponent,
     GlComponentInputDatepickerSimpleMonthYearComponent,
+    GlComponentInputDropdownSimpleComponent,
+    GlComponentInputDropdownLabelComponent,
     GlComponentInputOptionSimpleComponent,
     GlComponentInputSwitchComponent,
     GlComponentInputTextLabelButtonContainerComponent,
@@ -85,6 +95,13 @@ import { GlComponentInputTextSimpleSearchComponent } from './text/simple/search/
     GlComponentInputTextAreaLabelComponent,
     GlComponentInputDragAndDropSimpleComponent,
     GlComponentInputTextSimpleSearchComponent
-  ]
+  ],
+  providers: [CorePipesListFilterPipe]
 })
-export class ComponentModule { }
+export class ComponentModule {
+  static forRoot(): ModuleWithProviders<ComponentModule> {
+    return {
+      ngModule: ComponentModule
+    };
+  }
+}

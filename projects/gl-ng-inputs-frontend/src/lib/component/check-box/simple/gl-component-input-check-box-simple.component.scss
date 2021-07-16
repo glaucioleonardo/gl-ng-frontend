@@ -3,6 +3,7 @@
 :host::ng-deep {
   display: flex;
   flex-grow: 1;
+  font-size: 1em;
 
   .check-box-container {
     display: flex;
@@ -10,6 +11,7 @@
     background-color: $dark-gray-2;
     align-items: center;
     justify-content: center;
+    border-radius: 0.5em;
 
     &.transparent {
       background-color: transparent;
@@ -40,6 +42,10 @@
           opacity: 0.3;
           transition: all 0.2s ease-in-out;
         }
+      }
+
+      &.disabled {
+        user-select: none;
       }
     }
   }

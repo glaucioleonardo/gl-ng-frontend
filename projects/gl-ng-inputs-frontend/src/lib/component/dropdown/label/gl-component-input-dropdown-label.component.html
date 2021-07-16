@@ -1,0 +1,21 @@
+<gl-component-title-label-simple
+  [labelAlignment]="labelAlignment"
+  [required]="required"
+  [labelValue]="labelValue"
+  [requiredLabel]="requiredLabelDescription"
+  [id]="labelId"
+></gl-component-title-label-simple>
+
+<gl-component-input-dropdown-simple
+  [placeholder]="placeholder"
+  [disabled]="disabled"
+  [settings]="settings"
+  [selected]="selected"
+  [data]="data"
+  ($filterChange)="$filterChange.emit($event)"
+  ($dropDownClose)="$dropDownClose.emit($event)"
+  ($select)="$select.emit($event)"
+  ($deselect)="$deselect.emit($event)"
+  ($selectAll)="$selectAll.emit($event)"
+  ($deselectAll)="$deselectAll.emit($event)"
+></gl-component-input-dropdown-simple>

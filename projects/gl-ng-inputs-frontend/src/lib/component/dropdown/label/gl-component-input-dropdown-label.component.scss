@@ -1,0 +1,27 @@
+:host::ng-deep {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+  align-items: stretch;
+  justify-content: stretch;
+  margin: 1px;
+
+  gl-component-input-dropdown-simple {
+    font-size: 1em;
+
+    .dropdown-btn {
+      font-size: 1em;
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+    }
+  }
+
+  gl-component-title-label-simple {
+    .header-data {
+      font-size: 1em;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ComponentModule } from './component/component.module';
 import { CoreModule } from './core/core.module';
@@ -16,4 +16,10 @@ import { CoreModule } from './core/core.module';
     ComponentModule
   ]
 })
-export class GlNgInputsFrontendModule { }
+export class GlNgInputsFrontendModule {
+  static forRoot(): ModuleWithProviders<GlNgInputsFrontendModule> {
+    return {
+      ngModule: GlNgInputsFrontendModule
+    };
+  }
+}

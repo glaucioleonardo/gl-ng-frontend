@@ -1,0 +1,85 @@
+<div class="multiselect-dropdown"
+   tabindex="0"
+   (blur)="onTouched()"
+   (clickOutside)="closeDropdown()">
+  <div class="multiselect-dropdown-container" [class.disabled]="disabled">
+    <span
+      class="dropdown-btn {{ selectedItems.length > 0 ? 'has-items' : '' }}"
+      tabindex="-1"
+      (click)="toggleDropdown($event)">
+
+      <span class="placeholder" *ngIf="selectedItems.length == 0">{{_placeholder}}</span>
+
+      <span *ngFor="let item of selectedItems; trackBy: trackByFn;let k = index" class="selected-item-container {{ _settings.singleSelection ? 'single-item' : 'multiple-item' }}" >
+        <span
+          class="selected-item"
+          [hidden]="k  > (this._settings.itemsShowLimit-1)">
+          <span >{{item.text}}&nbsp;</span>
+          <img
+            *ngIf="!disabled"
+            alt="Remove item"
+            class="remove-item"
+            src="../assets/img/icon/check-box/checked.svg"
+            (click)="onItemClick($event,item)">
+          </span>
+      </span>
+
+      <span class="buttons-container"
+        [ngClass]="{ 'dropdown-multiselect--active': _settings.defaultOpen }">
+
+        <span class="items-remaining-container" *ngIf="itemShowRemaining()>0">
+           <span
+             class="items-remaining"
+           >+{{itemShowRemaining()}}</span>
+        </span>
+         <img
+           *ngIf="!disabled"
+           alt="Show items"
+           class="dropdown-multiselect__caret arrow-down {{ 'theme' }} {{ disabled ? 'read-only' : '' }}"
+           [src]="imageSource">
+      </span>
+    </span>
+  </div>
+
+  <div class="dropdown-list" [hidden]="!_settings.defaultOpen">
+    <ul class="item1">
+      <li
+        class="multiselect-item-checkbox select-all"
+        (click)="toggleSelectAll()"
+        *ngIf="(_data.length > 0 || _settings.allowRemoteDataSearch) && !_settings.singleSelection && _settings.enableCheckAll && _settings.limitSelection===-1">
+
+        <input
+          type="checkbox"
+          aria-label="multiselect-select-all"
+          [checked]="isAllItemsSelected()"
+          [disabled]="disabled || isLimitSelectionReached()"/>
+        <div class="check-box-inner select-all">{{!isAllItemsSelected() ? _settings.selectAllText : _settings.unSelectAllText}}</div>
+      </li>
+      <li class="filter-textbox" *ngIf="(_data.length>0 || _settings.allowRemoteDataSearch) && _settings.allowSearchFilter">
+        <input
+          type="text"
+          aria-label="multiselect-search"
+          [readOnly]="disabled"
+          [placeholder]="_settings.searchPlaceholderText"
+          [(ngModel)]="filter.text"
+          (ngModelChange)="onFilterTextChange($event)">
+      </li>
+    </ul>
+    <ul class="item2" [style.maxHeight]="_settings.maxHeight+'px'">
+      <li class="multiselect-item-checkbox"
+        *ngFor="let item of _data | multiSelectFilter:filter; let i = index;"
+        (click)="onItemClick($event,item)">
+        <input
+          type="checkbox"
+          [attr.aria-label]="item.text"
+          [checked]="isSelected(item)"
+          [disabled]="disabled || (isLimitSelectionReached() && !isSelected(item)) || item.isDisabled"/>
+        <div class="check-box-inner">{{item.text}}</div>
+      </li>
+      <li class="no-data"
+        *ngIf="_data.length == 0 && !_settings.allowRemoteDataSearch">
+        <h5>{{_settings.noDataAvailablePlaceholderText}}</h5>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TCheckboxTheme, TCheckedIcon, TUncheckedIcon } from './gl-component-input-check-box-simple.interface';
 
 @Component({
   selector: 'gl-component-input-check-box-simple',
@@ -9,6 +10,11 @@ export class GlComponentInputCheckBoxSimpleComponent {
 
   @Input() checked = false;
   @Input() showBackground = true;
+  @Input() disabled = false;
+
+  @Input() theme: TCheckboxTheme = 'dark';
+  @Input() checkedIcon: TCheckedIcon = 'checked';
+  @Input() uncheckedIcon: TUncheckedIcon = 'unchecked';
 
   @Output() checked$: EventEmitter<boolean> = new EventEmitter();
 

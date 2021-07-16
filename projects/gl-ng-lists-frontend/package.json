@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-lists-frontend",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_lists.ts",
   "types": "gl-ng-lists-frontend.d.ts",
@@ -28,8 +28,8 @@
   },
   "dependencies": {
     "gl-scss-styles": "^2.1.0",
-    "gl-icons-assets": "^1.4.2",
-    "gl-w-frontend": "^4.0.2"
+    "gl-icons-assets": "^1.5.0",
+    "gl-w-frontend": "^4.1.1"
   },
   "scripts": {
     "build": "ng build gl-ng-lists-frontend",

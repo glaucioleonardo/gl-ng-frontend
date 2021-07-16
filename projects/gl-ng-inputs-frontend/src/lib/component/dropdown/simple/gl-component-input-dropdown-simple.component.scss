@@ -1,0 +1,345 @@
+@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
+@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@import "~gl-scss-styles/assets/style/colors/pink/pink-dark";
+@import "~gl-scss-styles/assets/style/colors/white/white";
+@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
+
+:host::ng-deep {
+  display: flex;
+  flex: 1 1 auto;
+  font-size: 1em;
+  position: relative;
+  align-items: stretch;
+  justify-content: stretch;
+  $base-color: $dark-pink;
+  $disable-background-color: #eceeef;
+
+  .multiselect-dropdown {
+    @include font-family(regular);
+    width: 100%;
+    position: relative;
+
+    .multiselect-dropdown-container {
+
+      .dropdown-btn {
+        display: inline-block;
+        width: 100%;
+        padding: 0.894em;
+        cursor: pointer;
+        border-radius: 0.5em;
+        background-color: $dark-gray-2;
+        height: 2.788em;
+        overflow: hidden;
+
+        vertical-align: middle;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        &.has-items {
+          padding: 0.3em 5em 0.3em 0.25em;
+
+        }
+
+        .buttons-container {
+          float:right !important;
+
+          .items-remaining-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $white;
+            border-radius: 0.5em;
+            position: absolute;
+            right: 2.7em;
+            top: 0.4em;
+            width: 2em;
+            height: 2em;
+
+            .items-remaining {
+              @include font-family(bold);
+            }
+          }
+        }
+
+        .placeholder {
+          color: $dark-gray;
+        }
+
+        .selected-item-container {
+          display: flex;
+          float: left;
+          margin: 0 0 2em 0;
+          height: 2.188em;
+
+          .selected-item {
+            margin-right: 0.2em;
+            padding: 0.5em;
+            color: #fff;
+            border-radius: 0.5em;
+            float: left;
+            align-items: center;
+
+            span {
+              @extend %ellipsis-content;
+              flex-grow: 1;
+              margin: 0 0.5em 0 0;
+              font-size: 0.8em;
+              display: inline-block;
+              line-height: 1.5em;
+              max-width: 10em;
+            }
+
+            .remove-item {
+              width: 1em;
+              height: 1.2em;
+              border-radius: 0.25em;
+            }
+
+            &:not(hover) {
+              background-color: rgba($base-color, 0.8);
+              transition: background-color 0.2s ease-in-out;
+            }
+            &:hover {
+              background-color: $base-color;
+              transition: background-color 0.2s ease-in-out;
+            }
+          }
+
+          &.single-item {
+            $width: calc(100% + 2.5em);
+            min-width: $width;
+            margin: 0;
+            display: flex;
+
+            .selected-item {
+              background-color: transparent;
+              display: flex;
+              flex-grow: 1;
+              height: 1.188em;
+
+              span {
+                display: flex;
+                flex-grow: 1;
+                max-width: none;
+                font-size: 1em;
+              }
+            }
+          }
+        }
+
+        .dropdown-multiselect__caret {
+          position: absolute;
+          width: 2em;
+          height: 2em;
+          right: 0.4em;
+          top: 0.4em;
+          cursor: pointer;
+          border-radius: 0.5em;
+          transition: transform 0.2s ease;
+
+          &:not(hover) {
+            opacity: 0.8;
+            transition: opacity 0.2s ease-in-out;
+          }
+          &:hover {
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+          }
+        }
+        .dropdown-multiselect--active .dropdown-multiselect__caret {
+          transform: rotateZ(180deg);
+        }
+      }
+    }
+
+    .disabled {
+      & > span {
+        background-color: $disable-background-color;
+      }
+    }
+  }
+
+  .dropdown-list {
+    position: absolute;
+    padding: 0.25em;
+    width: 99.5%;
+    z-index: 9999;
+    border: 1px solid $dark-gray;
+    border-radius: 0.5em;
+    backdrop-filter: blur(10px);
+    background: rgba($dark-gray-3, 0.8);
+    margin-top: 0.2em;
+
+    .item1 {
+      overflow: hidden;
+
+      .filter-textbox {
+        margin: 1px 0;
+        position: relative;
+
+        input {
+          @include font-family(regular);
+          color: $white;
+          font-size: 1em;
+
+          border-radius: 0.3em;
+          background-color: $dark-pink;
+          padding: 0.8em;
+          border: 0;
+          width:calc(100% - 1.6em);
+
+          &::placeholder {
+            color: $white-translucid-5;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    margin: 0;
+  }
+  li {
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .multiselect-item-checkbox {
+    border-radius: 0.3em;
+    padding: 0.8em;
+    background-color: rgba($dark-gray, 0.3);
+    display: flex;
+    margin: 1px 0;
+
+    &:hover, &:active {
+      background-color: rgba($dark-gray, 0.5);
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .check-box-inner {
+      color: $white;
+      margin: 0 0 0 3em;
+
+      &.select-all {
+        @include font-family(semi-bold);
+      }
+    }
+
+    input[type='checkbox'] {
+      appearance: none;
+      border-radius: 0.5em;
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+      font-size: 0.7em;
+
+      &:focus + div:before, &:hover + div:before {
+        border-color: $base-color;
+        background-color: #f2f2f2;
+      }
+
+      &:active + div:before {
+        transition-duration: 0s;
+      }
+
+      & + div {
+        position: relative;
+        padding-left: 2.5em;
+        vertical-align: middle;
+        user-select: none;
+        cursor: pointer;
+        margin: 0;
+
+        &:before {
+          box-sizing: content-box;
+          content: '';
+          color: $base-color;
+          position: absolute;
+          top: 15%;
+          left: 0;
+          width: 1.6em;
+          height: 1.6em;
+          margin-top: -0.65em;
+          border: 2px solid $base-color;
+          text-align: center;
+          border-radius: 0.5em;
+          transition: all 0.4s ease;
+        }
+
+        &:after {
+          box-sizing: content-box;
+          content: '';
+          background-color: $base-color;
+          position: absolute;
+          top: 15%;
+          left: 4px;
+          width: 1.4em;
+          height: 1.4em;
+          margin-top: -5px;
+          transform: scale(0);
+          transform-origin: 50%;
+          transition: transform 200ms ease-out;
+        }
+      }
+
+      &:disabled {
+        & + div:before {
+          border-color: #cccccc;
+        }
+        &:checked + div:before {
+          background-color: #cccccc;
+        }
+      }
+
+      & + div:after {
+        background-color: transparent;
+        top: 50%;
+        left: 0.34em;
+        width: 1em;
+        height: 0.4em;
+        margin-top: -0.6em;
+        border-style: solid;
+        border-color: #ffffff;
+        border-width: 0 0 0.24em 0.24em;
+        border-image: none;
+        transform: rotate(-45deg) scale(0);
+      }
+
+      &:checked {
+        & + div:after {
+          content: '';
+          transform: rotate(-45deg) scale(1);
+          transition: transform 200ms ease-out;
+        }
+
+        & + div:before {
+          animation: borderscale 200ms ease-in;
+          background: $base-color;
+
+          @keyframes borderscale {
+            50% {
+              box-shadow: 0 0 0 2px $base-color;
+            }
+          }
+        }
+
+        & + div:after {
+          transform: rotate(-45deg) scale(1);
+        }
+      }
+    }
+  }
+}

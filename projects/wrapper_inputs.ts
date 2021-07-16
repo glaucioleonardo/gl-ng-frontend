@@ -8,12 +8,18 @@ export { GlNgInputsFrontendModule } from './gl-ng-inputs-frontend/src/lib/gl-ng-
 
 // region directives
 import { CoreDirectivesDragAndDropDirective } from './gl-ng-inputs-frontend/src/lib/core/directives/drag-and-drop/core-directives-drag-and-drop.directive';
-export { CoreDirectivesDragAndDropDirective };
+import { CoreDirectivesClickOutsideDirective } from './gl-ng-inputs-frontend/src/lib/core/directives/click-outside/core-directives-click-outside.directive';
+export { CoreDirectivesDragAndDropDirective, CoreDirectivesClickOutsideDirective };
 // endregion
 
 // region interfaces
 import * as GLInputsInterfaces from './gl-ng-inputs-frontend/src/lib/core/interfaces/alignments.interface';
 export { GLInputsInterfaces };
+// endregion
+
+// region pipes
+import { CorePipesListFilterPipe } from './gl-ng-inputs-frontend/src/lib/core/pipes/list-filter/core-pipes-list-filter.pipe';
+export { CorePipesListFilterPipe };
 // endregion
 
 // region autocomplete
@@ -61,6 +67,19 @@ export {
 import { GlComponentInputDragAndDropSimpleComponent } from './gl-ng-inputs-frontend/src/lib/component/drag-and-drop/simple/gl-component-input-drag-and-drop-simple.component';
 import * as GlComponentInputDragAndDropSimpleInterface from './gl-ng-inputs-frontend/src/lib/component/drag-and-drop/simple/gl-component-input-drag-and-drop-simple.interface';
 export { GlComponentInputDragAndDropSimpleComponent, GlComponentInputDragAndDropSimpleInterface };
+// endregion
+
+// region dropdown
+import { GlComponentInputDropdownSimpleComponent } from './gl-ng-inputs-frontend/src/lib/component/dropdown/simple/gl-component-input-dropdown-simple.component';
+import { GlComponentInputDropdownLabelComponent } from './gl-ng-inputs-frontend/src/lib/component/dropdown/label/gl-component-input-dropdown-label.component';
+import { IDropdownSettings, ListItem as DropDownListItem } from './gl-ng-inputs-frontend/src/lib/component/dropdown/simple/gl-component-input-dropdown-simple.model';
+
+export {
+  GlComponentInputDropdownSimpleComponent,
+  GlComponentInputDropdownLabelComponent,
+  IDropdownSettings,
+  DropDownListItem
+};
 // endregion
 
 // region option
