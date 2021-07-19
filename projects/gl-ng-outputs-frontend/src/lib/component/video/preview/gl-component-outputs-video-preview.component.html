@@ -1,0 +1,45 @@
+<vg-player (onPlayerReady)="onPlayerReady($event, media)" class="{{ roundedStyle ? 'rounded-style' : ''  }}">
+  <vg-overlay-play *ngIf="playerReady" (click)="service.stopOther(id)"></vg-overlay-play>
+  <vg-buffering *ngIf="showControls"></vg-buffering>
+
+  <vg-scrub-bar [vgSlider]="showControls" *ngIf="showControls">
+    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+    <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+  </vg-scrub-bar>
+
+  <vg-controls *ngIf="showControls" [vgAutohide]="true" [vgAutohideTime]="2">
+    <vg-play-pause (click)="service.stopOther(id)" ></vg-play-pause>
+    <vg-playback-button *ngIf="showVideoSpeed"></vg-playback-button>
+
+    <vg-time-display *ngIf="showCurrentTime" vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+
+    <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+
+    <vg-time-display *ngIf="showLeftTime" vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+    <vg-scrub-bar *ngIf="showLeftTime" style="pointer-events: none;"></vg-scrub-bar>
+    <vg-time-display *ngIf="showTotalTime" vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+
+    <vg-track-selector *ngIf="showClosedCaption"></vg-track-selector>
+    <vg-mute *ngIf="showMute"></vg-mute>
+    <vg-volume *ngIf="showVolume"></vg-volume>
+
+    <vg-fullscreen></vg-fullscreen>
+  </vg-controls>
+
+  <img
+    *ngIf="media.paused && showBackground"
+    [src]="squareActive ? backgroundSquare : backgroundWidescreen"
+    alt="Background Image"
+    id="background-video-image">
+
+  <video
+    #media
+    [vgMaster]="masterVideo"
+    class="{{ fitVideoToContainer ? 'fit-video' : '' }}"
+    [vgMedia]="media"
+    [id]="id"
+    [preload]="videoPreload">
+    <source *ngIf="sourceWebM != null" [src]="sourceWebM" type="video/webm">
+    <source *ngIf="sourceMp4 != null" [src]="sourceMp4" type="video/mp4">
+  </video>
+</vg-player>

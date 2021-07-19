@@ -15,10 +15,13 @@ export class GlComponentInputDropdownLabelComponent {
   @Input() labelId: string;
 
   @Input() placeholder: string;
-  @Input() disabled = false;
+  @Input() disabled: boolean;
   @Input() settings: IDropdownSettings;
   @Input() selected: ListItem[];
   @Input() data: ListItem[];
+
+  @Input() iconPreview: string;
+  @Input() showIcon = false;
 
   @Output() $filterChange: EventEmitter<ListItem> = new EventEmitter<any>();
   @Output() $dropDownClose: EventEmitter<ListItem> = new EventEmitter<any>();

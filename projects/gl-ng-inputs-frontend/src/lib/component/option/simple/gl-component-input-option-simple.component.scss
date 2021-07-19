@@ -116,5 +116,10 @@
         color: $white
       }
     }
+
+
+    .disabled {
+      user-select: none;
+    }
   }
 }

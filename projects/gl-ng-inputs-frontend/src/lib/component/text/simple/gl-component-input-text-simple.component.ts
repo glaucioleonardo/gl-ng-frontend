@@ -55,13 +55,13 @@ export class GlComponentInputTextSimpleComponent implements AfterViewInit, OnDes
     const value = input.value;
 
     switch (event.key) {
-      case 'ArrowLeft': case 'ArrowRight': case 'ArrowUp': case 'ArrowDown': case 'Control': case 'Alt': case 'Shift':
+      case 'ArrowLeft': case 'ArrowRight': case 'ArrowUp': case 'ArrowDown': case 'Control': case 'Alt':
       case 'CapsLock': case 'Escape': case 'Meta': case 'F1': case 'F2': case 'F3': case 'F4': case 'F5': case 'F6': case 'F7':
       case 'F8': case 'F9': case 'F10': case 'F11': case 'F12': case 'Insert': case 'Home': case 'End': case 'PageUp':
       case 'PageDown': case 'NumLock':
         break;
       default:
-        if (!event.altKey && !event.ctrlKey && !event.shiftKey) {
+        if (!event.altKey && !event.ctrlKey) {
           let parsedValue: string = value;
 
           if (this.mask != null) {

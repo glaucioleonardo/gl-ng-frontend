@@ -3,7 +3,7 @@
   <input
     #input
     [checked]="checked"
-    class="input-radio"
+    class="input-radio {{ disabled ? 'disabled' : '' }}"
     type="radio"
     [value]="value"
     [id]="id"
@@ -11,10 +11,10 @@
     (click)="onCheck(value, input)">
   <span
     (click)="onCheck(value, input)"
-    class="check-mark"
+    class="check-mark {{ disabled ? 'disabled' : '' }}"
   ></span>
   <label
-    class="label {{ boldLabel ? 'bold' : '' }}"
+    class="label {{ boldLabel ? 'bold' : '' }} {{ disabled ? 'disabled' : '' }}"
     [for]="id"
     (click)="onCheck(value, input)"
   >{{ label }}</label>

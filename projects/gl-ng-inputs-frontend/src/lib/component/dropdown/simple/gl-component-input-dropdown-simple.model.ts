@@ -4,6 +4,7 @@ export interface IDropdownSettings {
   singleSelection?: boolean;
   idField?: string;
   textField?: string;
+  iconField?: string;
   disabledField?: string;
   enableCheckAll?: boolean;
   selectAllText?: string;
@@ -27,16 +28,19 @@ export class ListItem {
   // tslint:disable-next-line
   text: String | number;
   isDisabled?: boolean;
+  icon?: string;
 
   public constructor(source: any) {
     if (typeof source === 'string' || typeof source === 'number') {
       this.value = this.text = source;
       this.isDisabled = false;
+      this.icon = '';
     }
     if (typeof source === 'object') {
       this.value = source.value;
       this.text = source.text;
       this.isDisabled = source.isDisabled;
+      this.icon = source.icon;
     }
   }
 }

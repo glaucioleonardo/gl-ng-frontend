@@ -13,6 +13,7 @@ export class GlComponentInputOptionSimpleComponent {
   @Input() name: string;
   @Input() checked: boolean;
   @Input() theme: TTheme = '';
+  @Input() disabled: boolean;
 
   @Input() boldLabel = false;
 
@@ -21,7 +22,9 @@ export class GlComponentInputOptionSimpleComponent {
   constructor() { }
 
   onCheck(value: string, input: HTMLInputElement): void {
-    input.checked = true;
-    this.itemSelected.emit(value);
+    if (!this.disabled) {
+      input.checked = true;
+      this.itemSelected.emit(value);
+    }
   }
 }

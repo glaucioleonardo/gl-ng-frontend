@@ -4,24 +4,24 @@
    (clickOutside)="closeDropdown()">
   <div class="multiselect-dropdown-container" [class.disabled]="disabled">
     <span
-      class="dropdown-btn {{ selectedItems.length > 0 ? 'has-items' : '' }}"
+      class="dropdown-btn {{ selectedItems.length > 0 ? 'has-items' : '' }} {{ _settings.singleSelection ? 'single-item' : 'multiple-item' }}"
       tabindex="-1"
       (click)="toggleDropdown($event)">
 
-      <span class="placeholder" *ngIf="selectedItems.length == 0">{{_placeholder}}</span>
+      <span class="placeholder {{ showIconPreview() ? 'has-icon-preview' : '' }}" *ngIf="selectedItems.length == 0">{{_placeholder}}</span>
 
       <span *ngFor="let item of selectedItems; trackBy: trackByFn;let k = index" class="selected-item-container {{ _settings.singleSelection ? 'single-item' : 'multiple-item' }}" >
         <span
           class="selected-item"
           [hidden]="k  > (this._settings.itemsShowLimit-1)">
-          <span >{{item.text}}&nbsp;</span>
+          <span [title]="item.text">{{item.text}}</span>
           <img
-            *ngIf="!disabled"
+            *ngIf="!disabled && (!_settings.singleSelection || !defaultSettings.singleSelection)"
             alt="Remove item"
             class="remove-item"
             src="../assets/img/icon/check-box/checked.svg"
             (click)="onItemClick($event,item)">
-          </span>
+        </span>
       </span>
 
       <span class="buttons-container"
@@ -32,6 +32,11 @@
              class="items-remaining"
            >+{{itemShowRemaining()}}</span>
         </span>
+        <img
+          *ngIf="showIconPreview()"
+          alt="Icon preview"
+          class="icon-preview"
+          [src]="iconPreview">
          <img
            *ngIf="!disabled"
            alt="Show items"

@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-attachments-frontend",
-  "version": "3.0.6",
+  "version": "3.0.7",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_attachments.ts",
   "types": "gl-ng-attachments-frontend.d.ts",
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "gl-scss-styles": "^2.1.0",
-    "gl-w-frontend": "^4.1.1"
+    "gl-w-frontend": "^4.1.2"
   },
   "scripts": {
     "build": "ng build gl-ng-attachments-frontend",

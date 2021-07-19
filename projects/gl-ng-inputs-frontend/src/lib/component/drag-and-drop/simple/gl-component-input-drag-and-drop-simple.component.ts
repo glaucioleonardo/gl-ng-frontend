@@ -95,6 +95,7 @@ export class GlComponentInputDragAndDropSimpleComponent {
   @Input() attachmentItems: IAttachmentData[] = [];
 
   @Output() $attachmentItems: EventEmitter<IAttachmentData[]> = new EventEmitter();
+  @Output() $removedAttachmentItems: EventEmitter<IAttachmentData[]> = new EventEmitter();
   /**
    * Returns the list of valid attachments added and fires the upload button.
    */
@@ -183,6 +184,7 @@ export class GlComponentInputDragAndDropSimpleComponent {
   }
 
   removeAttachment(removed): void {
+    const removedItem: IAttachmentData[] = this.attachmentItems.filter(x => x.id === removed.id);
     const tempList = this.attachmentItems.filter(x => x.id !== removed.id);
     const attachments: IAttachmentData[] = [];
 
@@ -199,6 +201,7 @@ export class GlComponentInputDragAndDropSimpleComponent {
 
     this.attachmentItems = attachments;
     this.$attachmentItems.emit(attachments);
+    this.$removedAttachmentItems.emit(removedItem);
   }
   async fileBrowserHandler(files: EventTarget): Promise<void> {
     const fileList: FileList = (files as HTMLInputElement).files;

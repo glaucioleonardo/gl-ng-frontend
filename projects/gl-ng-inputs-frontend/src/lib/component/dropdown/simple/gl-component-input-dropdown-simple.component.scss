@@ -40,6 +40,9 @@
         &.has-items {
           padding: 0.3em 5em 0.3em 0.25em;
 
+          &.single-item {
+            padding: 0.3em 3em 0.5em 0.25em;
+          }
         }
 
         .buttons-container {
@@ -61,10 +64,26 @@
               @include font-family(bold);
             }
           }
+          .icon-preview {
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            right: 2.7em;
+            top: 0.4em;
+            border-radius: 0.5em;
+            object-fit: cover;
+          }
         }
 
         .placeholder {
+          user-select: none;
           color: $dark-gray;
+
+          &.has-icon-preview {
+            @extend %ellipsis-content;
+            max-width: calc(100% - 4em);
+            display: inline-block;
+          }
         }
 
         .selected-item-container {
@@ -110,14 +129,17 @@
           &.single-item {
             $width: calc(100% + 2.5em);
             min-width: $width;
+            max-width: 100%;
             margin: 0;
             display: flex;
+            align-items: center;
 
             .selected-item {
               background-color: transparent;
               display: flex;
               flex-grow: 1;
               height: 1.188em;
+              max-width: calc(100% - 2.5em);
 
               span {
                 display: flex;
@@ -183,12 +205,13 @@
           @include font-family(regular);
           color: $white;
           font-size: 1em;
+          width: 100%;
 
           border-radius: 0.3em;
           background-color: $dark-pink;
           padding: 0.8em;
           border: 0;
-          width:calc(100% - 1.6em);
+          //width:calc(100% - 1.6em);
 
           &::placeholder {
             color: $white-translucid-5;
@@ -197,6 +220,15 @@
             outline: none;
           }
         }
+      }
+    }
+    .item2 {
+      min-height: 2em;
+
+      .no-data {
+        @include font-family(regular);
+        color: $white;
+        padding: 0.5em;
       }
     }
   }
@@ -213,8 +245,12 @@
   }
 
   .multiselect-item-checkbox {
+    $height: 2.4em;
+    max-height: $height;
+    min-height: $height;
+
     border-radius: 0.3em;
-    padding: 0.8em;
+    //padding: 0.8em;
     background-color: rgba($dark-gray, 0.3);
     display: flex;
     margin: 1px 0;
@@ -225,8 +261,15 @@
     }
 
     .check-box-inner {
+      @extend %ellipsis-content;
       color: $white;
       margin: 0 0 0 3em;
+
+      max-height: $height;
+      min-height: $height;
+      line-height: $height;
+      max-width: calc(100% - 0.5em);
+      display: inline-block;
 
       &.select-all {
         @include font-family(semi-bold);
@@ -268,8 +311,8 @@
           content: '';
           color: $base-color;
           position: absolute;
-          top: 15%;
-          left: 0;
+          top: 39.5%;
+          left: 0.3em;
           width: 1.6em;
           height: 1.6em;
           margin-top: -0.65em;
@@ -306,8 +349,8 @@
 
       & + div:after {
         background-color: transparent;
-        top: 50%;
-        left: 0.34em;
+        top: 54%;
+        left: 0.6em;
         width: 1em;
         height: 0.4em;
         margin-top: -0.6em;

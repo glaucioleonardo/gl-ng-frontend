@@ -677,6 +677,43 @@
           }
         }
       }
+    },
+    "gl-ng-outputs-frontend": {
+      "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/gl-ng-outputs-frontend",
+      "sourceRoot": "projects/gl-ng-outputs-frontend/src",
+      "prefix": "gl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/gl-ng-outputs-frontend/tsconfig.lib.json",
+            "project": "projects/gl-ng-outputs-frontend/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gl-ng-outputs-frontend/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/gl-ng-outputs-frontend/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gl-ng-outputs-frontend/src/test.ts",
+            "tsConfig": "projects/gl-ng-outputs-frontend/tsconfig.spec.json",
+            "karmaConfig": "projects/gl-ng-outputs-frontend/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "gl-ng-frontend"

@@ -59,6 +59,10 @@
         "dist/gl-ng-navigation-frontend/gl-ng-navigation-frontend",
         "dist/gl-ng-navigation-frontend"
       ],
+      "gl-ng-outputs-frontend": [
+        "dist/gl-ng-outputs-frontend/gl-ng-outputs-frontend",
+        "dist/gl-ng-outputs-frontend"
+      ],
       "gl-ng-paging-frontend": [
         "dist/gl-ng-paging-frontend/gl-ng-paging-frontend",
         "dist/gl-ng-paging-frontend"

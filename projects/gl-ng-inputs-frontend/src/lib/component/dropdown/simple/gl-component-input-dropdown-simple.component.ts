@@ -33,6 +33,7 @@ export class GlComponentInputDropdownSimpleComponent implements ControlValueAcce
     singleSelection: true,
     idField: 'value',
     textField: 'text',
+    iconField: 'icon',
     disabledField: 'isDisabled',
     enableCheckAll: true,
     selectAllText: 'Select All',
@@ -63,6 +64,8 @@ export class GlComponentInputDropdownSimpleComponent implements ControlValueAcce
   }
 
   @Input() disabled = false;
+  @Input() iconPreview: string;
+  @Input() showIcon = false;
 
   @Input()
   public set settings(value: IDropdownSettings) {
@@ -102,7 +105,8 @@ export class GlComponentInputDropdownSimpleComponent implements ControlValueAcce
           : new ListItem({
             value: item[this._settings.idField],
             text: item[this._settings.textField],
-            isDisabled: item[this._settings.disabledField]
+            isDisabled: item[this._settings.disabledField],
+            icon: item[this._settings.iconField]
           })
       );
     }
@@ -234,12 +238,13 @@ export class GlComponentInputDropdownSimpleComponent implements ControlValueAcce
                 : new ListItem({
                   value: firstItem[this._settings.idField],
                   text: firstItem[this._settings.textField],
-                  isDisabled: firstItem[this._settings.disabledField]
+                  isDisabled: firstItem[this._settings.disabledField],
+                  icon: firstItem[this._settings.iconField]
                 })
             ];
           }
         } catch (e) {
-          // console.error(e.body.msg);
+          console.error(e.body.msg);
         }
       } else {
         const _data = value.map((item: any) =>
@@ -248,7 +253,8 @@ export class GlComponentInputDropdownSimpleComponent implements ControlValueAcce
             : new ListItem({
               value: item[this._settings.idField],
               text: item[this._settings.textField],
-              isDisabled: item[this._settings.disabledField]
+              isDisabled: item[this._settings.disabledField],
+              icon: item[this._settings.iconField]
             })
         );
         if (this._settings.limitSelection > 0) {
@@ -282,6 +288,13 @@ export class GlComponentInputDropdownSimpleComponent implements ControlValueAcce
   }
 
   // region Parse
+  showIconPreview(): boolean {
+    const showIcon = this.showIcon;
+    const single = this._settings?.singleSelection || this.settings?.singleSelection;
+    const iconPreview = this.iconPreview != null && this.iconPreview.length > 0;
+
+    return showIcon && single && iconPreview;
+  }
   itemShowRemaining(): number {
     return this.selectedItems.length - this._settings.itemsShowLimit;
   }
@@ -316,6 +329,7 @@ export class GlComponentInputDropdownSimpleComponent implements ControlValueAcce
       if (this._sourceDataFields.includes(this._settings.disabledField)) {
         obj[this._settings.disabledField] = val.isDisabled;
       }
+      obj[this._settings.iconField] = val.icon;
       return obj;
     }
     if (this._sourceDataType === 'number') {
