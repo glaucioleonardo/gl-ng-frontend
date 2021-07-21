@@ -20,12 +20,12 @@
 
     &:not(hover) .check-mark {
       background-color: $dark-gray-3;
-      transition: all 0.3s ease-in-out;
+      transition: background-color 0.3s ease-in-out;
     }
 
     &:hover .check-mark {
       background-color: $dark-gray-2;
-      transition: all 0.3s ease-in-out;
+      transition: background-color 0.3s ease-in-out;
     }
 
     .input-radio {
@@ -78,7 +78,7 @@
 
         &:hover {
           transform: scale(1.1);
-          transition: all 0.2s ease-in-out;
+          transition: transform 0.2s ease-in-out;
         }
       }
     }

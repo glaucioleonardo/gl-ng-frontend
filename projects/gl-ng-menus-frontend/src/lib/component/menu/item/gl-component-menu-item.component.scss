@@ -32,7 +32,7 @@
       opacity: 0.5;
 
       transform: rotate(0deg);
-      transition: all 0.25s ease-in-out;
+      transition: opacity 0.25s ease-in-out;
     }
 
     .menu-item {
@@ -54,19 +54,19 @@
     &.active {
       .menu-arrow {
         transform: rotate(180deg);
-        transition: all 0.25s ease-in-out;
+        transition: transform 0.25s ease-in-out;
       }
     }
     &:not(hover) {
       .menu-icons {
         transform: scale(1);
-        transition: all 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out;
       }
     }
     &:hover {
       .menu-icons {
         transform: scale(1.2);
-        transition: all 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out;
       }
     }
   }
@@ -77,13 +77,13 @@
     border-left: solid transparent 0.2em;
 
     &:not(hover) {
-      background: $dark-gray-2-3;
-      transition: all 0.3s ease-in-out;
+      background-color: $dark-gray-2-3;
+      transition: background-color 0.3s ease-in-out;
     }
 
     &:hover {
-      background: $dark-gray-1;
-      transition: all 0.3s ease-in-out;
+      background-color: $dark-gray-1;
+      transition: background-color 0.3s ease-in-out;
     }
   }
   .menu-title.translucid {
@@ -92,13 +92,13 @@
     border-left: solid transparent 0.2em;
 
     &:not(hover) {
-      background: rgba($white, 0.05);
-      transition: all 0.3s ease-in-out;
+      background-color: rgba($white, 0.05);
+      transition: background-color 0.3s ease-in-out;
     }
 
     &:hover {
-      background: rgba($white, 0.1);
-      transition: all 0.3s ease-in-out;
+      background-color: rgba($white, 0.1);
+      transition: background-color 0.3s ease-in-out;
     }
   }
 
@@ -110,13 +110,13 @@
   .subitem-container {
     .menu-title {
       transform: scaleY(0);
-      transition: all 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
 
     &.active {
       .menu-title {
         transform: scaleY(1);
-        transition: all 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
         transition-delay: 0.1s;
       }
     }

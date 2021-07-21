@@ -13,13 +13,13 @@
     cursor: pointer;
 
     &:not(hover) {
-      background: rgba($dark-gray-1-5, 0.6);
-      transition: all 0.2s ease-in-out;
+      background-color: rgba($dark-gray-1-5, 0.6);
+      transition: background-color 0.2s ease-in-out;
     }
 
     &:hover {
-      background: rgba($dark-gray-1-5, 0.9);
-      transition: all 0.2s ease-in-out;
+      background-color: rgba($dark-gray-1-5, 0.9);
+      transition: background-color 0.2s ease-in-out;
     }
 
     .attachment-icon {

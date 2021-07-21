@@ -16,7 +16,7 @@
     z-index: 999999999;
 
     position: fixed;
-    width: width(100);
+    width: 100vw;
     height: height(100);
     top: 0;
     left: 0;
@@ -37,13 +37,13 @@
     }
 
 
-    transition: all 1s ease-in-out, visibility 1s ease-in-out;
+    transition: background-color 1s ease-in-out, visibility 1s ease-in-out;
 
     &.hide-loading {
       opacity: 0;
       z-index: -1;
       visibility: collapse;
-      transition: all 1s ease-in-out, visibility 1s ease-in-out;
+      transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
     }
 
     .loading-container {

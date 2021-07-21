@@ -226,14 +226,14 @@
   .visible-background {
     width: 100%;
     height: 100%;
-    background: rgba($color: black, $alpha: 0.6);
+    background-color: rgba($color: black, $alpha: 0.6);
     opacity: 1;
     visibility: visible;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
-    transition: all 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
   }
 
   .hide-subtitle {
@@ -242,13 +242,13 @@
     margin: 0;
     padding: 0;
 
-    transition: all 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
   }
 
   .show-subtitle {
     opacity: 1;
     visibility: visible;
-    transition: all 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
     transition-delay: 0.4s;
   }
 
@@ -264,7 +264,7 @@
   .collapsed-menu {
     .expand {
       transform: rotate(0deg);
-      transition: all 0.4s ease-in-out;
+      transition: transform 0.4s ease-in-out;
     }
 
     .menu-icons {
@@ -275,7 +275,7 @@
   .expanded-menu {
     .expand {
       transform: rotate(-180deg);
-      transition: all 0.4s ease-in-out;
+      transition: transform 0.4s ease-in-out;
     }
 
     .menu-icons {

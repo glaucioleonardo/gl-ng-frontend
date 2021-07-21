@@ -9,7 +9,7 @@
 @import "~gl-scss-styles/assets/style/components/scrollbar/native-scrollbar";
 @import '~gl-scss-styles/assets/style/components/input/input-ellipsis';
 
-$default-transition: all 0.2s ease-in-out;
+$default-transition: background-color 0.2s ease-in-out;
 
 :host::ng-deep {
   font-size: 1em;
@@ -121,11 +121,11 @@ $default-transition: all 0.2s ease-in-out;
       height: 2em;
       border-radius: 0.5em;
       margin: 0 0.3em;
-      transition: all 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
 
       &:hover {
         background-color: $dark-gray-2-3;
-        transition: all 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out;
       }
 
       &.light {
@@ -137,9 +137,9 @@ $default-transition: all 0.2s ease-in-out;
 
         &:hover {
           background-color: $black-translucid-2;
-          transition: all 0.2s ease-in-out;
+          transition: background-color 0.2s ease-in-out;
         }
-        transition: all 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out;
       }
 
       &.dark {
@@ -147,9 +147,9 @@ $default-transition: all 0.2s ease-in-out;
 
         &:hover {
           background-color: $dark-gray-3;
-          transition: all 0.2s ease-in-out;
+          transition: background-color 0.2s ease-in-out;
         }
-        transition: all 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out;
       }
 
       &.read-only {
@@ -173,35 +173,34 @@ $default-transition: all 0.2s ease-in-out;
     box-shadow: none !important;
     @extend %native-scrollbar;
     &::-webkit-scrollbar { width: 1em !important; }
-    transition: all 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 
     mat-option {
       font-size: 1em;
       border-radius: 0;
-      transition: all 0.2s ease-in-out;
       line-height: 4em;
       height: 4em;
       padding: 0 1.5em;
 
       &:nth-child(2n + 1) {
         background-color: $dark-gray-2;
-        transition: all 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out;
       }
 
       &.mat-active, &.mat-selected {
         background-color: $pink;
-        transition: all 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out;
       }
       &:hover {
         background-color: $dark-pink !important;
-        transition: all 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out;
       }
     }
   }
 
   .light {
     .mat-autocomplete-panel {
-      background-color:transparent;
+      background-color: transparent;
       transition: $default-transition;
       @extend %native-scrollbar;
 

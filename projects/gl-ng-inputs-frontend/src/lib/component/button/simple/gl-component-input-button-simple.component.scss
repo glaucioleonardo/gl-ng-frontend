@@ -50,7 +50,7 @@
     &:not(hover) {
       background-color: $white-translucid-4;
       color: $white;
-      transition: all 0.3s ease-in-out;
+      transition: background-color 0.3s ease-in-out;
     }
   }
 
@@ -64,7 +64,7 @@
       background-color: $white-translucid-9;
       color: $dark-gray-1;
     }
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
   }
 
   &:focus, &:active, &:hover {

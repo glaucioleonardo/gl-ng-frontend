@@ -22,7 +22,7 @@
       z-index: -1;
       visibility: collapse;
       background: linear-gradient(90deg, $black-translucid-1 0%, $black-translucid-3 100%);
-      transition: all ease-in-out 0.5s;
+      transition: background ease-in-out 0.5s;
 
       &.highlight {
         @extend %blur-animation-fade-in;
@@ -31,14 +31,14 @@
         height: 100vh;
         z-index: 1;
         visibility: visible;
-        transition: all ease-in-out 0.5s;
+        transition: background-color ease-in-out 0.5s;
       }
 
       &.remove-highlight {
         @extend %blur-animation-fade-out;
         visibility: collapse;
         opacity: 0;
-        transition: all ease-in-out 2s;
+        transition: opacity ease-in-out 2s;
       }
     }
 
@@ -51,25 +51,25 @@
 
         &:hover, &:focus {
           box-shadow: 0 0 0.5em $white;
-          transition: all ease-in-out 0.5s;
+          transition: box-shadow ease-in-out 0.5s;
         }
 
         &:not(hover), &:not(focus) {
           box-shadow: 0 0 0 $white;
-          transition: all ease-in-out 0.2s;
+          transition: box-shadow ease-in-out 0.2s;
         }
       }
 
       &.highlight {
        .item-content {
          box-shadow: 0 0 0.5em $white;
-         transition: all ease-in-out 0.5s;
+         transition: box-shadow ease-in-out 0.5s;
        }
       }
       &.remove-highlight {
         .item-content {
           box-shadow: 0 0 0.0 $white;
-          transition: all ease-in-out 0.2s;
+          transition: box-shadow ease-in-out 0.2s;
         }
       }
     }
@@ -88,7 +88,7 @@
         &~ gl-component-input-text-simple {
           .item-content {
             box-shadow: 0 0 0.5em $white;
-            transition: all ease-in-out 0.5s;
+            transition: box-shadow ease-in-out 0.5s;
           }
         }
       }

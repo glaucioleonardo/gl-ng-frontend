@@ -24,23 +24,23 @@
       &.checked {
         &:hover {
           opacity: 1;
-          transition: all 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out;
         }
 
         &:not(hover) {
           opacity: 0.8;
-          transition: all 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out;
         }
       }
       &.unchecked {
         &:hover {
           opacity: 0.6;
-          transition: all 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out;
         }
 
         &:not(hover) {
           opacity: 0.3;
-          transition: all 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out;
         }
       }
 

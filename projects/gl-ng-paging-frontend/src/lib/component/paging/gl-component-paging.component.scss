@@ -51,19 +51,19 @@
 
             &:not(hover) {
               background-color: $white-translucid-1;
-              transition: all 0.5s ease-in-out;
+              transition: background-color 0.5s ease-in-out;
             }
 
             &:hover {
               background-color: $white-translucid-3;
-              transition: all 0.2s ease-in-out;
+              transition: background-color 0.2s ease-in-out;
             }
 
             &.active {
               @include font-family(bold);
               background-color: $white;
               color: $dark-gray;
-              transition: all 0.5s ease-in-out;
+              transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
             }
           }
         }
@@ -89,12 +89,12 @@
 
         &:not(hover) {
           opacity: 0.2;
-          transition: all 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out;
         }
 
         &:hover {
           opacity: 1.0;
-          transition: all 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out;
         }
       }
     }
@@ -137,13 +137,13 @@
 
           &:not(hover) {
             background-color: $white-translucid-1;
-            transition: all 0.5s ease-in-out;
+            transition: background-color 0.5s ease-in-out;
             color: $white;
           }
 
           &:hover {
             background-color: $white-translucid-3;
-            transition: all 0.2s ease-in-out;
+            transition: background-color 0.2s ease-in-out;
           }
 
           &.active {
@@ -151,7 +151,7 @@
             font-size: 0.7em;
             background-color: $white;
             color: $dark-gray-1;
-            transition: all 0.5s ease-in-out;
+            transition: background-color 0.5s ease-in-out;
           }
         }
       }

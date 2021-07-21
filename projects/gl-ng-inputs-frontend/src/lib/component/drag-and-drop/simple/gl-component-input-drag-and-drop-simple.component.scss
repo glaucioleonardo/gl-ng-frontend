@@ -12,7 +12,6 @@
   flex-direction: column;
   max-height: min-content;
   max-width: 100%;
-  transition: all 0.3s ease-in-out;
 
   gl-component-input-switch {
     margin: 0 0 0.15em 0;
@@ -88,11 +87,11 @@
           background-color: rgba($dark-pink, 0.5);
           padding: 0.8em;
           border-radius: 0.5em;
-          transition: all 0.3s ease-in-out;
+          transition: background-color 0.3s ease-in-out;
 
           &:hover {
             background-color: rgba($dark-pink, 1);
-            transition: all 0.3s ease-in-out;
+            transition: background-color 0.3s ease-in-out;
           }
         }
 
@@ -135,7 +134,7 @@
         margin: 0.1em 0;
 
         background-color: $white-translucid-1;
-        transition: all 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
 
         .attachment-icon {
           border-radius: 0.5em;
@@ -152,7 +151,7 @@
 
         &:hover {
           background-color: $white-translucid-2;
-          transition: all 0.3s ease-in-out;
+          transition: background-color 0.3s ease-in-out;
         }
       }
     }

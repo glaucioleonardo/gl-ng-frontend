@@ -44,12 +44,12 @@
       flex-direction: column;
       cursor: pointer;
       border: solid 2px $gray-light-4;
-      transition: all 0.5s ease-in-out;
+      transition: background-color 0.5s ease-in-out;
 
       &.active {
         border: solid 2px darken($light-green, 20%);
         background-color: $light-green;
-        transition: all 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
       }
 
       .switch-item {
@@ -61,21 +61,21 @@
         cursor: pointer;
         left: 0.1em;
         top: 0.06em;
-        transition: all 0.5s ease-in-out;
+        transition: background-color 0.5s ease-in-out;
 
         &:hover {
           background-color: $gray-light-3;
-          transition: all 0.2s ease-in-out;
+          transition: background-color 0.2s ease-in-out;
         }
 
         &.active {
           left: 0.9em;
           background-color: lighten($gray, 55%);
-          transition: all 0.5s ease-in-out;
+          transition: background-color 0.5s ease-in-out;
 
           &:hover {
             background-color: $gray-light-10;
-            transition: all 0.2s ease-in-out;
+            transition: background-color 0.2s ease-in-out;
           }
         }
       }

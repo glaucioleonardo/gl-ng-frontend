@@ -16,15 +16,15 @@
     &:not(hover) {
       background-color: rgba($white, 0.3);
       .file { color: $dark-gray-2; }
-      transition: all 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
     }
 
     &:hover {
-      background: rgba($white, 1);
+      background-color: rgba($white, 1);
       .file { color: $white; }
       .file { color: $dark-gray-2; }
 
-      transition: all 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
     }
 
     .attachment-icon {
@@ -43,12 +43,12 @@
 
       &:not(hover) {
         opacity: 0.5;
-        transition: all 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
       }
 
       &:hover {
         opacity: 1;
-        transition: all 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
       }
     }
 

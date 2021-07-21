@@ -1,10 +1,7 @@
-@import "~gl-scss-styles/assets/style/components/view-port/view-port-width";
 @import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
 @import "~gl-scss-styles/assets/style/colors/black/black-translucid";
 @import "~gl-scss-styles/assets/style/colors/white/white";
 @import "~gl-scss-styles/assets/style/colors/white/white-translucid";
-//@import "~gl-scss-styles/assets/style/colors/gradient";
-//@import "~gl-scss-styles/assets/style/patterns/gradient";
 @import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
 
 %white-background {
@@ -24,12 +21,11 @@
 
 :host::ng-deep {
   font-size: 1em;
-  max-width: width(100);
-  transition: all 0.5s ease-in-out;
+  max-width: 100vw;
 
   .header-container {
     font-size: 1em;
-    max-width: width(100);
+    max-width: 100vw;
     position: relative;
     background-color: $dark-gray-3;
     backdrop-filter: blur(30px);
@@ -114,23 +110,4 @@
       background-color: $white;
     }
   }
-
-  //// Portrait
-  //@media screen and (orientation: portrait) {
-  //  .header-container {
-  //    font-size: height(3);
-  //  }
-  //}
-  //
-  //// Landscape
-  //@media screen and (min-width: 240px) and (orientation: landscape) {
-  //  .header-container {
-  //    font-size: width(3);
-  //  }
-  //}
-  //@media screen and (min-width: 1024px) and (orientation: landscape) {
-  //  .header-container {
-  //    font-size: width(1.5);
-  //  }
-  //}
 }
