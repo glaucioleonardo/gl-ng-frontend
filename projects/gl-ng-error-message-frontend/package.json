@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-error-message-frontend",
-  "version": "3.0.8",
+  "version": "3.0.9",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_error_message.ts",
   "types": "gl-ng-error-message-frontend.d.ts",
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "gl-scss-styles": "^2.1.0",
-    "gl-w-frontend": "^4.1.2"
+    "gl-w-frontend": "^4.1.4"
   },
   "scripts": {
     "build": "ng build gl-ng-error-message-frontend",

@@ -64,7 +64,7 @@ export class GlComponentButtonAttachmentFileService {
         new: true,
         url: '',
         remove: false,
-        id: this._attachments.length
+        id: this._attachments.length,
       };
 
       this.clearInput();

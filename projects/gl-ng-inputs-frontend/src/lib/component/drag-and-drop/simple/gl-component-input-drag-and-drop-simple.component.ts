@@ -190,12 +190,14 @@ export class GlComponentInputDragAndDropSimpleComponent {
 
     for (const item of tempList) {
       attachments.push({
-        id: attachments.length,
+        id: item.id,
         name: item.file.name,
         icon: AttachmentIcon.get(item.file.name),
         file: item.file,
-        new: true,
-        remove: false
+        new: item.new,
+        remove: true,
+        url: item.url,
+        type: item.type
       });
     }
 
