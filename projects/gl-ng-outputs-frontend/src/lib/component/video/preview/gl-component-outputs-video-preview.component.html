@@ -1,5 +1,11 @@
-<vg-player (onPlayerReady)="onPlayerReady($event, media)" class="{{ roundedStyle ? 'rounded-style' : ''  }}">
-  <vg-overlay-play *ngIf="playerReady" (click)="service.stopOther(id)"></vg-overlay-play>
+<img
+  *ngIf="galleryPreview"
+  draggable="false"
+  class="video-gallery-item-type"
+  src="assets/img/icon/project-gallery/video-icon.svg"
+  alt="Video icon">
+<vg-player [class.border-radius]="borderRadius" (onPlayerReady)="onPlayerReady($event, media)">
+  <vg-overlay-play *ngIf="playerReady && !galleryPreview" (click)="service.stopOther(id)"></vg-overlay-play>
   <vg-buffering *ngIf="showControls"></vg-buffering>
 
   <vg-scrub-bar [vgSlider]="showControls" *ngIf="showControls">
@@ -8,7 +14,7 @@
   </vg-scrub-bar>
 
   <vg-controls *ngIf="showControls" [vgAutohide]="true" [vgAutohideTime]="2">
-    <vg-play-pause (click)="service.stopOther(id)" ></vg-play-pause>
+    <vg-play-pause *ngIf="showPlayPause" (click)="service.stopOther(id)" ></vg-play-pause>
     <vg-playback-button *ngIf="showVideoSpeed"></vg-playback-button>
 
     <vg-time-display *ngIf="showCurrentTime" vgProperty="current" vgFormat="mm:ss"></vg-time-display>
@@ -34,6 +40,15 @@
 
   <video
     #media
+    [muted]="galleryPreview"
+    [autoplay]="galleryPreview"
+    [controls]="!galleryPreview"
+    [loop]="galleryPreview"
+    [draggable]="!galleryPreview"
+    [volume]="galleryPreview ? 0 : 0.5"
+    preload
+    playsinline
+
     [vgMaster]="masterVideo"
     class="{{ fitVideoToContainer ? 'fit-video' : '' }}"
     [vgMedia]="media"

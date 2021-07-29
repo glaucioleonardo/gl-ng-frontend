@@ -13,6 +13,7 @@ export class GlComponentOutputsVideoPreviewComponent {
   @Input() masterVideo = false;
   @Input() showControls = false;
   @Input() showVideoSpeed = true;
+  @Input() showPlayPause = true;
   @Input() showCurrentTime = true;
   @Input() showLeftTime = false;
   @Input() showTotalTime = true;
@@ -21,8 +22,7 @@ export class GlComponentOutputsVideoPreviewComponent {
   @Input() showClosedCaption = false;
   @Input() fitVideoToContainer = true;
   @Input() squareActive = true;
-
-  @Input() roundedStyle = true;
+  @Input() borderRadius = true;
 
   @Input() videoPreload: TVideoPreload = 'auto';
 
@@ -30,8 +30,11 @@ export class GlComponentOutputsVideoPreviewComponent {
   @Input() backgroundSquare = 'assets/img/background/project-video-background-portrait.png';
   @Input() backgroundWidescreen = 'assets/img/background/project-video-background-landscape.png';
 
+  @Input() sourceImage: string;
   @Input() sourceMp4: string;
   @Input() sourceWebM: string;
+
+  @Input() galleryPreview = false;
 
   @Output() playerData$$: EventEmitter<IPlayerData> = new EventEmitter();
 
@@ -42,16 +45,18 @@ export class GlComponentOutputsVideoPreviewComponent {
   onPlayerReady(event: VgApiService, video: HTMLVideoElement): void {
     setTimeout(() => {
       this.playerReady = true;
-      video.volume = 0.5;
 
-      const playerData: IPlayerData = {
-        player: video,
-        id: this.id,
-        master: this.masterVideo
-      };
-      this.playerData$$.emit(playerData);
-      this.service.players.push(playerData);
+      if (!this.galleryPreview) {
+        video.volume = 0.5;
+
+        const playerData: IPlayerData = {
+          player: video,
+          id: this.id,
+          master: this.masterVideo
+        };
+        this.playerData$$.emit(playerData);
+        this.service.players.push(playerData);
+      }
     }, 100);
   }
-
 }

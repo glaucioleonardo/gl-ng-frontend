@@ -1,6 +1,24 @@
+
 :host::ng-deep {
+  position: relative;
+
+  .video-gallery-item-type {
+    position: absolute;
+    top: 0.2em;
+    right: -3.5em;
+    width: 0.8em;
+    height: 0.8em;
+    user-select: none;
+    z-index: 1000;
+  }
+
   vg-player {
     font-size: 1em;
+    transform: translateZ(0);
+
+    &.border-radius {
+      border-radius: 1em;
+    }
 
     vg-controls {
       vg-scrub-bar {
@@ -26,25 +44,15 @@
       position: absolute;
       z-index: 50;
     }
-
-    &.rounded-style {
-        border-radius: 0.5em;
-
-      #background-video-image {
-        border-radius: 0.5em;
-      }
-    }
   }
 
   @media screen and (min-device-width: 280px) {
     vg-player {
-      //font-size: 3.3vw;
       font-size: 1em;
     }
   }
   @media screen and (min-device-width: 280px) and (orientation: landscape) {
     vg-player {
-      //font-size: 1.5vw;
       font-size: 1em;
     }
   }
