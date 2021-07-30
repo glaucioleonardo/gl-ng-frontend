@@ -26,3 +26,8 @@ export interface IDragAndDropVariables {
 }
 
 export type TAttachmentUploadResult = (attachments: IAttachmentData[]) => void;
+
+export interface IDragAndDropAddedResult {
+  merged: IAttachmentData[];
+  new: IAttachmentData[];
+}

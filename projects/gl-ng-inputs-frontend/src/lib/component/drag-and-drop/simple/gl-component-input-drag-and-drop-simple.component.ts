@@ -2,6 +2,7 @@ import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@
 import { AttachmentIcon, AttachmentValidate } from 'gl-w-frontend';
 import { IAttachmentData } from 'gl-w-frontend/lib/scripts/core/services/attachment/core-services-attachment.interface';
 import { GlComponentModalAlertService } from '../../../../../../gl-ng-modals-frontend/src/lib/component/alert/gl-component-modal-alert.service';
+import { IDragAndDropAddedResult } from './gl-component-input-drag-and-drop-simple.interface';
 
 @Component({
   selector: 'gl-component-input-drag-and-drop-simple',
@@ -94,7 +95,7 @@ export class GlComponentInputDragAndDropSimpleComponent {
 
   @Input() attachmentItems: IAttachmentData[] = [];
 
-  @Output() $attachmentItems: EventEmitter<IAttachmentData[]> = new EventEmitter();
+  @Output() $attachmentItems: EventEmitter<IDragAndDropAddedResult> = new EventEmitter();
   @Output() $removedAttachmentItems: EventEmitter<IAttachmentData[]> = new EventEmitter();
   /**
    * Returns the list of valid attachments added and fires the upload button.
@@ -120,6 +121,7 @@ export class GlComponentInputDragAndDropSimpleComponent {
     const invalidFileList: string[] = [];
     const invalidSizeList: string[] = [];
     const invalidLengthList: string[] = [];
+    const newItems: IAttachmentData[] = [];
 
     if (this.maxNumberOfFiles === -1 || this.maxNumberOfFiles > 1) {
       // tslint:disable-next-line:prefer-for-of
@@ -136,7 +138,7 @@ export class GlComponentInputDragAndDropSimpleComponent {
             invalidSizeList.push(file.name);
           } else {
             if (this.maxNumberOfFiles === -1 || this.attachmentItems.length < this.maxNumberOfFiles) {
-              this.addItemToArray(file);
+              newItems.push(this.addItemToArray(file));
             } else {
               invalidLengthList.push(file.name);
             }
@@ -165,7 +167,7 @@ export class GlComponentInputDragAndDropSimpleComponent {
             invalidSizeList.push(file.name);
           } else {
             if (this.attachmentItems.length === 0) {
-              this.addItemToArray(file);
+              newItems.push(this.addItemToArray(file));
             } else {
               invalidLengthList.push(file.name);
             }
@@ -180,7 +182,10 @@ export class GlComponentInputDragAndDropSimpleComponent {
     }
 
     this.input.nativeElement.value = '';
-    this.$attachmentItems.emit(this.attachmentItems);
+    this.$attachmentItems.emit({
+      merged: this.attachmentItems,
+      new: [...newItems]
+    });
   }
 
   removeAttachment(removed): void {
@@ -201,8 +206,11 @@ export class GlComponentInputDragAndDropSimpleComponent {
       });
     }
 
-    this.attachmentItems = attachments;
-    this.$attachmentItems.emit(attachments);
+    this.attachmentItems = [...attachments];
+    this.$attachmentItems.emit({
+      merged: attachments,
+      new: []
+    });
     this.$removedAttachmentItems.emit(removedItem);
   }
   async fileBrowserHandler(files: EventTarget): Promise<void> {
@@ -239,15 +247,18 @@ export class GlComponentInputDragAndDropSimpleComponent {
     this.continueUpload = active;
   }
 
-  private addItemToArray(file: File): void {
-    this.attachmentItems.push({
+  private addItemToArray(file: File): IAttachmentData {
+    const item = {
       id: this.attachmentItems.length,
       name: file.name,
       icon: AttachmentIcon.get(file.name),
       file,
       new: true,
       remove: false
-    });
+    };
+
+    this.attachmentItems.push(item);
+    return item;
   }
   private async showErrorMessage(
     invalidFileList: string[], duplicatedList: string[], invalidSizeList: string[], invalidLengthList: string[] = []): Promise<void> {
