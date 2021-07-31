@@ -43,7 +43,7 @@
     [muted]="galleryPreview"
     [autoplay]="galleryPreview"
     [controls]="!galleryPreview"
-    [loop]="galleryPreview"
+    [loop]="loop || galleryPreview"
     [draggable]="!galleryPreview"
     [volume]="galleryPreview ? 0 : 0.5"
     preload

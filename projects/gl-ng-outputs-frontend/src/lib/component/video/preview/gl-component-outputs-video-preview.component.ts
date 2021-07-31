@@ -23,6 +23,7 @@ export class GlComponentOutputsVideoPreviewComponent {
   @Input() fitVideoToContainer = true;
   @Input() squareActive = true;
   @Input() borderRadius = true;
+  @Input() loop = false;
 
   @Input() videoPreload: TVideoPreload = 'auto';
 
@@ -55,7 +56,11 @@ export class GlComponentOutputsVideoPreviewComponent {
           master: this.masterVideo
         };
         this.playerData$$.emit(playerData);
-        this.service.players.push(playerData);
+
+        const exist = this.service.players.filter(x => x.id === this.id).length > 0;
+        if (!exist) {
+          this.service.players.push(playerData);
+        }
       }
     }, 100);
   }
