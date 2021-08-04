@@ -24,6 +24,8 @@ export class GlComponentOutputsVideoPreviewComponent {
   @Input() squareActive = true;
   @Input() borderRadius = true;
   @Input() loop = false;
+  @Input() muted = false;
+  @Input() autoplay = false;
 
   @Input() videoPreload: TVideoPreload = 'auto';
 
@@ -37,31 +39,47 @@ export class GlComponentOutputsVideoPreviewComponent {
 
   @Input() galleryPreview = false;
 
-  @Output() playerData$$: EventEmitter<IPlayerData> = new EventEmitter();
+  @Output() playerData$: EventEmitter<IPlayerData> = new EventEmitter();
+  @Output() Playing$: EventEmitter<boolean> = new EventEmitter();
 
   playerReady = false;
 
   constructor(public service: GlComponentOutputsVideoPreviewService) { }
 
   onPlayerReady(event: VgApiService, video: HTMLVideoElement): void {
-    setTimeout(() => {
+    setTimeout(async () => {
       this.playerReady = true;
 
       if (!this.galleryPreview) {
-        video.volume = 0.5;
+        if (!this.autoplay) {
+          video.pause();
+        }
 
         const playerData: IPlayerData = {
           player: video,
           id: this.id,
           master: this.masterVideo
         };
-        this.playerData$$.emit(playerData);
+        this.playerData$.emit(playerData);
 
         const exist = this.service.players.filter(x => x.id === this.id).length > 0;
+        video.onplaying = () => {
+          this.Playing$.emit(!video.paused);
+        };
+
         if (!exist) {
           this.service.players.push(playerData);
         }
       }
     }, 100);
+  }
+  onPlayPause(id: string, video: HTMLVideoElement): void {
+    this.Playing$.emit(!video.paused);
+    this.service.stopOther(id);
+
+    if (!this.galleryPreview && !this.muted) {
+      video.muted = false;
+      video.volume = 0.5;
+    }
   }
 }

@@ -5,7 +5,10 @@
   src="assets/img/icon/project-gallery/video-icon.svg"
   alt="Video icon">
 <vg-player [class.border-radius]="borderRadius" (onPlayerReady)="onPlayerReady($event, media)">
-  <vg-overlay-play *ngIf="playerReady && !galleryPreview" (click)="service.stopOther(id)"></vg-overlay-play>
+  <vg-overlay-play
+    *ngIf="playerReady && !galleryPreview"
+    (click)="onPlayPause(id, media)"
+  ></vg-overlay-play>
   <vg-buffering *ngIf="showControls"></vg-buffering>
 
   <vg-scrub-bar [vgSlider]="showControls" *ngIf="showControls">
@@ -14,7 +17,10 @@
   </vg-scrub-bar>
 
   <vg-controls *ngIf="showControls" [vgAutohide]="true" [vgAutohideTime]="2">
-    <vg-play-pause *ngIf="showPlayPause" (click)="service.stopOther(id)" ></vg-play-pause>
+    <vg-play-pause
+      *ngIf="showPlayPause"
+      (click)="onPlayPause(id, media)"
+    ></vg-play-pause>
     <vg-playback-button *ngIf="showVideoSpeed"></vg-playback-button>
 
     <vg-time-display *ngIf="showCurrentTime" vgProperty="current" vgFormat="mm:ss"></vg-time-display>
@@ -40,12 +46,12 @@
 
   <video
     #media
-    [muted]="galleryPreview"
-    [autoplay]="galleryPreview"
+    [muted]="true"
+    [autoplay]="true"
     [controls]="!galleryPreview"
     [loop]="loop || galleryPreview"
     [draggable]="!galleryPreview"
-    [volume]="galleryPreview ? 0 : 0.5"
+    [volume]="galleryPreview"
     preload
     playsinline
 
