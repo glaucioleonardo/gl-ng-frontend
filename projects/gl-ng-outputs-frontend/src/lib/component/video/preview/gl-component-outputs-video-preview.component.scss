@@ -44,6 +44,10 @@
       position: absolute;
       z-index: 50;
     }
+
+    &.transparent {
+      background-color: transparent;
+    }
   }
 
   @media screen and (min-device-width: 280px) {

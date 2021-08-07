@@ -38,6 +38,8 @@ export class GlComponentOutputsVideoPreviewComponent {
   @Input() sourceWebM: string;
 
   @Input() galleryPreview = false;
+  @Input() transparentVideo = false;
+
 
   @Output() playerData$: EventEmitter<IPlayerData> = new EventEmitter();
   @Output() Playing$: EventEmitter<boolean> = new EventEmitter();

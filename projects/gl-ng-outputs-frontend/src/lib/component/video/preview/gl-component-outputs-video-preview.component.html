@@ -4,19 +4,21 @@
   class="video-gallery-item-type"
   src="assets/img/icon/project-gallery/video-icon.svg"
   alt="Video icon">
-<vg-player [class.border-radius]="borderRadius" (onPlayerReady)="onPlayerReady($event, media)">
+<vg-player
+  [class.transparent]="transparentVideo"
+  [class.border-radius]="borderRadius"  (onPlayerReady)="onPlayerReady($event, media)">
   <vg-overlay-play
-    *ngIf="playerReady && !galleryPreview"
+    *ngIf="playerReady && !galleryPreview && !transparentVideo"
     (click)="onPlayPause(id, media)"
   ></vg-overlay-play>
-  <vg-buffering *ngIf="showControls"></vg-buffering>
+  <vg-buffering *ngIf="showControls && !transparentVideo"></vg-buffering>
 
-  <vg-scrub-bar [vgSlider]="showControls" *ngIf="showControls">
+  <vg-scrub-bar [vgSlider]="showControls" *ngIf="showControls && !transparentVideo">
     <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
     <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
   </vg-scrub-bar>
 
-  <vg-controls *ngIf="showControls" [vgAutohide]="true" [vgAutohideTime]="2">
+  <vg-controls *ngIf="showControls && !transparentVideo" [vgAutohide]="true" [vgAutohideTime]="2">
     <vg-play-pause
       *ngIf="showPlayPause"
       (click)="onPlayPause(id, media)"
@@ -39,7 +41,7 @@
   </vg-controls>
 
   <img
-    *ngIf="media.paused && showBackground"
+    *ngIf="media.paused && showBackground && !transparentVideo"
     [src]="squareActive ? backgroundSquare : backgroundWidescreen"
     alt="Background Image"
     id="background-video-image">
@@ -48,7 +50,7 @@
     #media
     [muted]="true"
     [autoplay]="true"
-    [controls]="!galleryPreview"
+    [controls]="!galleryPreview && !transparentVideo"
     [loop]="loop || galleryPreview"
     [draggable]="!galleryPreview"
     [volume]="galleryPreview"
