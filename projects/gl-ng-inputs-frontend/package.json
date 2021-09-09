@@ -36,12 +36,12 @@
   "dependencies": {
     "gl-icons-assets": "^1.5.0",
     "gl-scss-styles": "^2.1.0",
-    "gl-w-frontend": "^4.1.4",
-    "gl-sp-frontend": "^2.4.1",
+    "gl-w-frontend": "^4.1.7",
+    "gl-sp-frontend": "^2.4.3",
     "decimal.js": "^10.3.1",
-    "@angular/cdk": "^12.1.0",
-    "@angular/material": "^12.1.0",
-    "@angular/material-moment-adapter": "^12.1.0",
+    "@angular/cdk": "^12.2.5",
+    "@angular/material": "^12.2.5",
+    "@angular/material-moment-adapter": "^12.2.5",
     "moment": "^2.29.1"
   },
   "scripts": {

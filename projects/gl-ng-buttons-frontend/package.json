@@ -31,7 +31,7 @@
   "dependencies": {
     "gl-scss-styles": "^2.1.0",
     "gl-icons-assets": "^1.5.0",
-    "gl-sp-frontend": "^2.4.1"
+    "gl-sp-frontend": "^2.4.3"
   },
   "scripts": {
     "build": "ng build gl-ng-buttons-frontend",

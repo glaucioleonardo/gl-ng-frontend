@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "gl-scss-styles": "^2.1.0",
-    "gl-w-frontend": "^4.1.4"
+    "gl-w-frontend": "^4.1.7"
   },
   "scripts": {
     "build": "ng build gl-ng-paging-frontend",
