@@ -33,9 +33,9 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.1.0",
+    "@angular-devkit/build-angular": "~12.2.5",
     "@angular/cdk": "^12.1.0",
-    "@angular/cli": "~12.1.0",
+    "@angular/cli": "~12.2.5",
     "@angular/compiler-cli": "~12.1.0",
     "@angular/material": "^12.1.0",
     "@angular/material-moment-adapter": "^12.1.0",
