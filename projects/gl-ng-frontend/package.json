@@ -38,8 +38,8 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "^12.1.0",
-    "@angular/core": "^12.1.0"
+    "@angular/common": "~12.2.5",
+    "@angular/core": "^12.2.5"
   },
   "dependencies": {
     "gl-scss-styles": "^2.1.0",
