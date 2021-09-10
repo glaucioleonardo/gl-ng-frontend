@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-frontend",
-  "version": "5.3.2",
+  "version": "5.3.3",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_index.ts",
   "types": "gl-ng-frontend.d.ts",
