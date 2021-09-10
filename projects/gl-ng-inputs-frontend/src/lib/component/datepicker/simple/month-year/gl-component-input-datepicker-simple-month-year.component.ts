@@ -6,7 +6,10 @@ import { DateGet } from 'gl-w-frontend';
 import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignments.interface';
 import { IDatePickerMonthYearOutput } from './gl-component-input-datepicker-simple-month-year.interface';
 
-import { Moment } from 'moment';
+// import { Moment } from 'moment/min/locales.min';
+import 'moment/min/locales.min';
+declare const Moment: any;
+// const Moment = require('moment/min/locales.min');
 const MONTH_YEAR_FORMAT = {
   parse: {
     dateInput: 'MM/YYYY',
@@ -57,7 +60,7 @@ export class GlComponentInputDatepickerSimpleMonthYearComponent {
 
   constructor() {}
 
-  chosenYearHandler(normalizedYear: Moment): void {
+  chosenYearHandler(normalizedYear: any): void {
     const ctrlValue = this.date;
     ctrlValue.setFullYear(normalizedYear.year());
     this.date = ctrlValue;
@@ -68,7 +71,7 @@ export class GlComponentInputDatepickerSimpleMonthYearComponent {
 
     this.currentValue.emit({ date, dateString });
   }
-  chosenMonthHandler(normalizedMonth: Moment, datepicker: MatDatepicker<any>): void {
+  chosenMonthHandler(normalizedMonth: any, datepicker: MatDatepicker<any>): void {
     const ctrlValue = this.date;
     ctrlValue.setMonth(normalizedMonth.month());
     this.date = ctrlValue;

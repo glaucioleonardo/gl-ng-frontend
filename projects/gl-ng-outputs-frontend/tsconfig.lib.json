@@ -10,7 +10,7 @@
     "types": [],
     "paths": {
       "moment": [
-        "../node_modules/moment/min/locales.min.js"
+        "node_modules/moment/min/locales.min.js"
       ]
     },
     "lib": [
