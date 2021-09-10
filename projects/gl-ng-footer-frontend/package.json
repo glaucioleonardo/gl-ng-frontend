@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-footer-frontend",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_footer.ts",
   "types": "gl-ng-footer-frontend.d.ts",
