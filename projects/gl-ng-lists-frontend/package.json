@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-lists-frontend",
-  "version": "3.0.11",
+  "version": "3.0.12",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_lists.ts",
   "types": "gl-ng-lists-frontend.d.ts",
