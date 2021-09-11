@@ -1,8 +1,7 @@
-@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   max-width: 100vw;
@@ -10,7 +9,7 @@
   .pagination-container {
     max-width: 100vw;
     position: relative;
-    background-color: $dark-gray-3;
+    background-color: c-gray-dark.$d3;
     font-size: 0.5em;
     display: flex;
     align-items: center;
@@ -24,7 +23,7 @@
       align-items: center;
 
       #page-info {
-        color: $white;
+        color: white;
         margin: auto 1.2em;
         font-size: 0.8em;
         user-select: none;
@@ -44,25 +43,25 @@
           display: flex;
 
           .default-button {
-            @include font-family(light);
+            @include fonts.font-family-custom(light);
             border-radius: 0.2em;
             font-size: 0.8em;
-            color: $white;
+            color: white;
 
             &:not(hover) {
-              background-color: $white-translucid-1;
+              background-color: c-white-translucid.$t1;
               transition: background-color 0.5s ease-in-out;
             }
 
             &:hover {
-              background-color: $white-translucid-3;
+              background-color: c-white-translucid.$t3;
               transition: background-color 0.2s ease-in-out;
             }
 
             &.active {
-              @include font-family(bold);
-              background-color: $white;
-              color: $dark-gray;
+              @include fonts.font-family-custom('bold');
+              background-color: white;
+              color: c-gray-dark.$d;;
               transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
             }
           }
@@ -109,11 +108,11 @@
       width: 20em;
 
       .label-page-items {
-        @include font-family(light);
+        @include fonts.font-family-custom(light);
         padding: 0.8em 1em 0.3em 1em;
         user-select: none;
         font-size: 0.8em;
-        color: $white;
+        color: white;
         opacity: 1;
         text-transform: uppercase;
         margin: 0 0.5em 0 0;
@@ -128,7 +127,7 @@
         justify-content: center;
 
         .default-button {
-          @include font-family(light);
+          @include fonts.font-family-custom(light);
           min-height: 1.5em;
           min-width: 1.5em;
           flex: 1 1 0.2em;
@@ -136,21 +135,21 @@
           font-size: 0.6em;
 
           &:not(hover) {
-            background-color: $white-translucid-1;
+            background-color: c-white-translucid.$t1;
             transition: background-color 0.5s ease-in-out;
-            color: $white;
+            color: white;
           }
 
           &:hover {
-            background-color: $white-translucid-3;
+            background-color: c-white-translucid.$t3;
             transition: background-color 0.2s ease-in-out;
           }
 
           &.active {
-            @include font-family('black');
+            @include fonts.font-family-custom(black);
             font-size: 0.7em;
-            background-color: $white;
-            color: $dark-gray-1;
+            background-color: white;
+            color: c-gray-dark.$d1;
             transition: background-color 0.5s ease-in-out;
           }
         }
@@ -158,7 +157,7 @@
     }
 
     &.translucid {
-      background-color: $black-translucid-2;
+      background-color: c-black-translucid.$t2;
     }
   }
 }

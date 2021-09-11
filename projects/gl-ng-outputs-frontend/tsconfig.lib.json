@@ -9,9 +9,7 @@
     "inlineSources": true,
     "types": [],
     "paths": {
-      "moment": [
-        "node_modules/moment/min/locales.min.js"
-      ]
+
     },
     "lib": [
       "dom",

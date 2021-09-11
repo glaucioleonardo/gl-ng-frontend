@@ -1,9 +1,9 @@
-@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
-@import "~gl-scss-styles/assets/style/components/scrollbar/native-scrollbar";
-@import "~gl-scss-styles/assets/style/general/required-fields";
+@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
+@use "~gl-scss-styles/assets/style/components/scrollbar/native-scrollbar";
+@use "~gl-scss-styles/assets/style/general/required-fields";
 
 :host::ng-deep {
   font-size: 1em;
@@ -31,7 +31,7 @@
     }
 
     .item-content {
-      @include font-family;
+      @include fonts.font-family-custom();
       resize: none;
       padding: 0.8em;
       font-size: 1em;
@@ -41,9 +41,9 @@
       flex: 1 1 0;
       overflow-x: hidden;
       overflow-y: auto;
-      background-color: $dark-gray-2;
+      background-color: c-gray-dark.$d2;
       border: none;
-      color: $white;
+      color: white;
       @extend %native-scrollbar;
       &::-webkit-scrollbar {
         width: 1em;
@@ -54,22 +54,22 @@
       }
 
       &::placeholder {
-        color: $dark-gray;
+        color: c-gray-dark.$d;;
       }
 
       &.light {
-        background-color: $black-translucid-1;
+        background-color: c-black-translucid.$t1;
       }
       &.dark {
-        background-color: $dark-gray-3-2;
+        background-color: c-gray-dark.$d3-2;
       }
     }
 
     .item-content:-ms-input-placeholder {
-      color: $dark-gray !important;
+      color: c-gray-dark.$d !important;
     }
     .item-content.light:-ms-input-placeholder {
-      color: $white-translucid-2 !important;
+      color: c-white-translucid.$t2 !important;
     }
   }
 }

@@ -1,9 +1,9 @@
-@import '~gl-scss-styles/assets/style/colors/black/black';
-@import '~gl-scss-styles/assets/style/colors/black/black-translucid';
-@import '~gl-scss-styles/assets/style/colors/gray/gray-dark';
-@import '~gl-scss-styles/assets/style/colors/gray/gray';
-@import '~gl-scss-styles/assets/style/fonts/montserrat';
-@import "~gl-scss-styles/assets/style/general/required-fields";
+@use '~gl-scss-styles/assets/style/colors/white/c-white-translucid';
+@use '~gl-scss-styles/assets/style/colors/black/c-black-translucid';
+@use '~gl-scss-styles/assets/style/colors/gray/c-gray-dark';
+@use '~gl-scss-styles/assets/style/colors/gray/c-gray';
+@use '~gl-scss-styles/assets/style/fonts/fonts';
+@use "~gl-scss-styles/assets/style/general/required-fields";
 
 :host::ng-deep {
   font-size: 1em;
@@ -28,16 +28,16 @@
     position: absolute;
     border-top-left-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
-    background-color: rgba($black, 0.3);
+    background-color: rgba(black, 0.3);
   }
 
   .item-content {
-    @include font-family(regular);
+    @include fonts.font-family-custom(regular);
     padding: 0.8em;
     border: none;
     border-radius: 0.5em;
-    background-color: $dark-gray-2;
-    color: $white;
+    background-color: c-gray-dark.$d2;
+    color: white;
     font-size: 1em;
     flex-grow: 1;
     margin: 0;
@@ -47,7 +47,7 @@
     }
 
     &::placeholder {
-      color: $dark-gray !important;
+      color: c-gray-dark.$d !important;
     }
 
     &.left { text-align: left; }
@@ -55,22 +55,22 @@
     &.right { text-align: right; }
 
     &.light {
-      color: $dark-gray-3;
-      background-color: $white;
+      color: c-gray-dark.$d3;
+      background-color: white;
 
       &::placeholder {
-        color: $dark-gray !important;
+        color: c-gray-dark.$d !important;
       }
     }
     &.light-translucid {
-      background-color: $black-translucid-1;
+      background-color: c-black-translucid.$t1;
 
       &::placeholder {
-        color: $white-translucid-2 !important;
+        color: c-white-translucid.$t2 !important;
       }
     }
     &.dark {
-      background-color: $dark-gray-3-2;
+      background-color: c-gray-dark.$d3-2;
     }
 
     &.show-icon {
@@ -79,12 +79,12 @@
   }
 
   .item-content:-ms-input-placeholder {
-    color: $dark-gray !important;
+    color: c-gray-dark.$d !important;
   }
 
   .item-content {
     &.light:-ms-input-placeholder {
-      color: $gray !important;
+      color: c-gray.$d !important;
     }
   }
 }

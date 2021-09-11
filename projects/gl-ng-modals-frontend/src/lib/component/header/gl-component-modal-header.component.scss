@@ -1,13 +1,12 @@
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
-@import "~gl-scss-styles/assets/style/patterns/gradient";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
+@use "~gl-scss-styles/assets/style/patterns/gradient";
 
 :host::ng-deep {
   font-size: 1em;
 
   .modal-title-container {
     font-size: 1em;
-    @include pattern-gradient-border(1px, 'bottom');
+    @include gradient.pattern-gradient-border(1px, 'bottom');
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -32,8 +31,8 @@
       flex-grow: 1;
 
       .modal-title{
-        @include font-family(bold);
-        color: $white;
+        @include fonts.font-family-custom(bold);
+        color: white;
         user-select: none;
 
         &:nth-child(1) {

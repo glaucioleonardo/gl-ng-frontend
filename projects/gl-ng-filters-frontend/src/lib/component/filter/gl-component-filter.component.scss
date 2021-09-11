@@ -1,19 +1,18 @@
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/pink/pink";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
-@import "~gl-scss-styles/assets/style/patterns/gradient";
-@import "~gl-scss-styles/assets/style/components/scrollbar/native-scrollbar";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/pink/c-pink";
+@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
+@use "~gl-scss-styles/assets/style/patterns/gradient";
+@use "~gl-scss-styles/assets/style/components/scrollbar/native-scrollbar";
 
 :host::ng-deep {
 
   .filter-container {
-    @include pattern-gradient-border(0.3em, top);
-    @include pattern-gradient-border(0.5em, bottom);
+    @include gradient.pattern-gradient-border(0.3em, top);
+    @include gradient.pattern-gradient-border(0.5em, bottom);
     display: flex;
     flex-direction: column;
-    background: $dark-gray-3;
+    background: c-gray-dark.$d3;
     position: fixed;
     background-size: cover;
     top: 0;
@@ -29,9 +28,9 @@
     height: 100vh;
 
     &.translucid {
-      background: rgba($white, 0.05);
-      border-left: solid 1px rgba($white, 0.05);
-      border-top: solid 0.3em rgba($white, 0.1);
+      background: rgba(white, 0.05);
+      border-left: solid 1px rgba(white, 0.05);
+      border-top: solid 0.3em rgba(white, 0.1);
 
       border-image-source: none;
     }
@@ -71,18 +70,18 @@
           .title, .subtitle {
             text-transform: uppercase;
             user-select: none;
-            color: $white;
+            color: white;
             margin: 0;
           }
 
           .title {
-            @include font-family('bold');
+            @include fonts.font-family-custom(bold);
             font-size: 0.9em;
             display: none;
           }
 
           .subtitle {
-            @include font-family('thin');
+            @include fonts.font-family-custom(thin);
             font-size: 1.5em;
           }
         }
@@ -94,8 +93,8 @@
       margin: 1em 0 0.4em 0;
 
       .partial-result-description {
-        @include font-family(bold);
-        color: $pink;
+        @include fonts.font-family-custom('bold');
+        color: c-pink.$d;
         font-size: 0.5em;
         padding: 0 0 0 0.5em;
         text-align: center;
@@ -120,8 +119,8 @@
       display: flex;
       overflow-x: hidden;
       @extend %native-scrollbar;
-      @include pattern-gradient-border(1px, top);
-      @include pattern-gradient-border(1px, bottom);
+      @include gradient.pattern-gradient-border(1px, top);
+      @include gradient.pattern-gradient-border(1px, bottom);
 
       &::after {
         bottom: -10.5%;
@@ -139,10 +138,10 @@
           position: relative;
           display: flex;
           align-items: center;
-          border-left: solid $white 0.2em;
+          border-left: solid white 0.2em;
 
           .material-icons {
-            color: rgba($color: $white, $alpha: 0.6);
+            color: rgba($color: white, $alpha: 0.6);
             font-size: 1.2em;
             padding: 0.3em;
             margin: 0 0.5em 0 0.3em;
@@ -150,7 +149,7 @@
 
           .material-icons.expand {
             position: absolute;
-            color: $white;
+            color: white;
             top: 0.5em;
             right: 0.3em;
           }
@@ -164,9 +163,9 @@
           a {
             text-decoration: none;
             font-size: 0.6em;
-            @include font-family('light');
+            @include fonts.font-family-custom(light);
             text-transform: uppercase;
-            color: $white;
+            color: white;
             padding: 1.5em 0.7em;
             flex-grow: 1;
           }
@@ -175,9 +174,9 @@
         .input-container {
           gl-component-filter-container {
             .type-container {
-              background-color: rgba($white, 0.03);
-              border-bottom: solid 1px $white-translucid-1;
-              border-bottom: solid 1px rgba($white, 0.03);;
+              background-color: rgba(white, 0.03);
+              border-bottom: solid 1px c-white-translucid.$t1;
+              border-bottom: solid 1px rgba(white, 0.03);;
             }
           }
 

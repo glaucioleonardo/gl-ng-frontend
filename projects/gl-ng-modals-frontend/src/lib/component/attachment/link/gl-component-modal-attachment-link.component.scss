@@ -1,9 +1,8 @@
-@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/gray/gray";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/patterns/gradient";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray";
+@use "~gl-scss-styles/assets/style/patterns/gradient";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   .modal-link-container {
@@ -32,11 +31,11 @@
       transition-delay: 0.5s;
     }
 
-    background: $black-translucid-8;
+    background: c-black-translucid.$t8;
 
     .modal-main-content {
       opacity: 0;
-      background: $dark-gray-4;
+      background: c-gray-dark.$d4;
       margin: 0 auto;
       word-wrap: break-word;
       display: flex;
@@ -64,8 +63,8 @@
           align-items: stretch;
 
           label {
-            @include font-family(regular);
-            color: $gray;
+            @include fonts.font-family-custom(regular);
+            color: c-gray.$d;
             user-select: none;
             padding: 0.5em 0.5em;
             text-transform: none;
@@ -75,8 +74,8 @@
           }
 
           input {
-            @include font-family(bold);
-            color: $white;
+            @include fonts.font-family-custom('bold');
+            color: white;
             background-color: transparent;
             border: none;
             flex-grow: 1;
@@ -85,7 +84,7 @@
             text-align: left;
             padding: 1em;
             height: 2.2em;
-            @include pattern-gradient-border(1px, bottom)
+            @include gradient.pattern-gradient-border(1px, bottom)
           }
         }
 
@@ -107,8 +106,8 @@
 
       .modal-footer {
         height: 0.5em;
-        background-color: $dark-gray-3-5;
-        @include pattern-gradient-border(1px, 'top');
+        background-color: c-gray-dark.$d3-5;
+        @include gradient.pattern-gradient-border(1px, 'top');
         margin: 0.2em 0 0 0;
         width: 100%;
       }

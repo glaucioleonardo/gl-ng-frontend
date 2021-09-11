@@ -1,15 +1,13 @@
-@import "~gl-scss-styles/assets/style/components/view-port/view-port-height";
-//@import "~gl-scss-styles/assets/style/components/view-port/view-port-width";
-@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
+@use "~gl-scss-styles/assets/style/components/view-port/view-port-height";
+@use "~gl-scss-styles/assets/style/components/input/input-ellipsis";
 
-@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/pink/pink";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
+@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/pink/c-pink";
+@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
 
-@import "~gl-scss-styles/assets/style/anims/blur-animation";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/anims/blur-animation";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   font-size: 1em;
@@ -17,8 +15,8 @@
   .menu-container {
     font-size: 1em;
 
-    border-top: 0.1em solid $white-translucid-3;
-    background-color: $black-translucid-4;
+    border-top: 0.1em solid c-white-translucid.$t3;
+    background-color: c-black-translucid.$t4;
     backdrop-filter: blur(30px);
     position: fixed;
     background-size: cover;
@@ -48,7 +46,7 @@
 
     .menu-nav-container {
       overflow: hidden;
-      max-height: height(100);
+      max-height: view-port-height.height(100);
       flex-grow: 1;
       display: flex;
 
@@ -101,29 +99,29 @@
 
               .title, .subtitle, .system-version {
                 user-select: none;
-                color: $white;
+                color: white;
                 margin: 0;
 
                 @extend %ellipsis-content;
               }
 
               .title {
-                @include font-family(bold);
+                @include fonts.font-family-custom('bold');
                 font-size: 1.2em;
                 padding: 0.2em 0;
               }
 
               .subtitle {
-                @include font-family(light);
+                @include fonts.font-family-custom(light);
                 font-size: 1.2em;
               }
 
               .system-version {
-                @include font-family(bold);
+                @include fonts.font-family-custom('bold');
                 font-size: 0.6em;
                 margin: 1em 0 0 0;
                 padding: 1em 0 1em 0;
-                color: $pink;
+                color: c-pink.$d;
               }
             }
           }
@@ -137,7 +135,7 @@
           flex-grow: 1;
           overflow-x: hidden !important;
           overflow-y: auto;
-          border-bottom: 0.1em solid $white-translucid-3;
+          border-bottom: 0.1em solid c-white-translucid.$t3;
         }
       }
     }
@@ -165,8 +163,8 @@
 
   .visible-background {
     width: 100vw;
-    height: height(100);
-    background-color: $black-translucid-3;
+    height: view-port-height.height(100);
+    background-color: c-black-translucid.$t3;
     opacity: 1;
     position: fixed;
     top: 0;
@@ -231,16 +229,16 @@
   }
 
   .menu-container.dark {
-    border-left: solid 1px $dark-gray-1-8;
-    border-top: solid 0.3em rgba($pink, 0.7);
+    border-left: solid 1px c-gray-dark.$d1-8;
+    border-top: solid 0.3em rgba(c-pink.$d, 0.7);
 
     border-image-source: none;
   }
 
   .menu-container.translucid {
-    background: rgba($white, 0.05);
-    border-left: solid 1px rgba($white, 0.05);
-    border-top: solid 0.3em rgba($white, 0.1);
+    background: rgba(white, 0.05);
+    border-left: solid 1px rgba(white, 0.05);
+    border-top: solid 0.3em rgba(white, 0.1);
 
     border-image-source: none;
   }

@@ -1,18 +1,18 @@
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/pink/pink";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/pink/c-pink";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   .type-container {
     display: flex;
     flex-direction: column;
-    background-color: $dark-gray-2-3;
+    background-color: c-gray-dark.$d2-3;
     padding: 0.7em 0.7em 0.2em 0.7em;
-    border-bottom: solid 1px $dark-gray-1-8;
+    border-bottom: solid 1px c-gray-dark.$d1-8;
 
     .title {
-      @include font-family(regular);
-      color: $pink;
+      @include fonts.font-family-custom(regular);
+      color: c-pink.$d;
       text-transform: uppercase;
       font-size: 0.4em;
       user-select: none;

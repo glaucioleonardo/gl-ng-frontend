@@ -1,9 +1,8 @@
-@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/colors/pink/pink-dark";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
-@import "~gl-scss-styles/assets/style/action/readonly";
-@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
+@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
+@use "~gl-scss-styles/assets/style/colors/pink/c-pink-dark";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
+@use "~gl-scss-styles/assets/style/action/readonly";
+@use "~gl-scss-styles/assets/style/components/input/input-ellipsis";
 
 :host::ng-deep {
   font-size: 1em;
@@ -36,7 +35,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: $white-translucid-1;
+    background-color: c-white-translucid.$t1;
     min-height: 8em;
 
     .file-attachment {
@@ -72,25 +71,25 @@
       }
 
       .action-description {
-        @include font-family(regular);
+        @include fonts.font-family-custom(regular);
         font-size: 1em;
         padding: 0.2em;
-        color: $white;
+        color: white;
         user-select: none;
 
         &.button {
-          @include font-family(semi-bold);
+          @include fonts.font-family-custom(semi-bold);
           flex: 1 1 auto;
           width: 92%;
           text-align: center;
           margin: 0.5em 0 0 0;
-          background-color: rgba($dark-pink, 0.5);
+          background-color: rgba(c-pink-dark.$d, 0.5);
           padding: 0.8em;
           border-radius: 0.5em;
           transition: background-color 0.3s ease-in-out;
 
           &:hover {
-            background-color: rgba($dark-pink, 1);
+            background-color: rgba(c-pink-dark.$d, 1);
             transition: background-color 0.3s ease-in-out;
           }
         }
@@ -106,9 +105,9 @@
     }
 
     .description {
-      @include font-family(semi-bold);
+      @include fonts.font-family-custom(semi-bold);
       font-size: 0.5em;
-      color: $white;
+      color: white;
       position: absolute;
       top: 50%;
     }
@@ -133,7 +132,7 @@
         padding: 0;
         margin: 0.1em 0;
 
-        background-color: $white-translucid-1;
+        background-color: c-white-translucid.$t1;
         transition: background-color 0.3s ease-in-out;
 
         .attachment-icon {
@@ -145,12 +144,12 @@
         }
 
         .file {
-          color: $white;
+          color: white;
           width: 84.5%;
         }
 
         &:hover {
-          background-color: $white-translucid-2;
+          background-color: c-white-translucid.$t2;
           transition: background-color 0.3s ease-in-out;
         }
       }
@@ -214,10 +213,10 @@
 
     @keyframes file-over {
       0% {
-        background-color: $white-translucid-1;
+        background-color: c-white-translucid.$t1;
       }
       100% {
-        background-color: $white-translucid-3;
+        background-color: c-white-translucid.$t3;
       }
     }
   }
@@ -230,10 +229,10 @@
 
     @keyframes file-not-over {
       0% {
-        background-color: $white-translucid-3;
+        background-color: c-white-translucid.$t3;
       }
       100% {
-        background-color: $white-translucid-1;
+        background-color: c-white-translucid.$t1;
       }
     }
   }

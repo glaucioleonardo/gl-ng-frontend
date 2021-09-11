@@ -1,8 +1,7 @@
-@import "~gl-scss-styles/assets/style/components/view-port/view-port-height";
-@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/components/view-port/view-port-height";
+@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   font-size: 1em;
@@ -11,7 +10,7 @@
     font-size: 1em;
     position: fixed;
     min-width: 100vw;
-    min-height: height(100);
+    min-height: view-port-height.height(100);
     z-index: 100000;
     top: 0;
     left: 0;
@@ -19,7 +18,7 @@
     justify-items: center;
     align-items: center;
     height: 0;
-    background: $black-translucid-8;
+    background: c-black-translucid.$t8;
     backdrop-filter: blur(10px);
 
     animation: show-modal 0.5s ease-in-out;
@@ -48,8 +47,8 @@
       align-items: stretch;
       border-radius: 0.5em;
       backdrop-filter: blur(10px);
-      background-color: rgba($dark-gray, 0.2);
-      border: solid 1px $dark-gray-2;
+      background-color: rgba(c-gray-dark.$d, 0.2);
+      border: solid 1px c-gray-dark.$d2;
       padding: 1em;
       width: 80vw;
 

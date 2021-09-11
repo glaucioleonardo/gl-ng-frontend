@@ -1,5 +1,5 @@
-@import "~gl-scss-styles/assets/style/colors/orange/orange";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/colors/orange/c-orange";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   .hyperlink-container {
@@ -18,9 +18,9 @@
 
     .message {
       margin: 0 0 0 0.2em;
-      @include font-family('regular');
+      @include fonts.font-family-custom(regular);
       font-size: 0.5em;
-      color: $orange;
+      color: c-orange.$d;
     }
   }
 }

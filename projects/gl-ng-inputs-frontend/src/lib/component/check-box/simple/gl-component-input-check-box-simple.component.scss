@@ -1,4 +1,4 @@
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
 
 :host::ng-deep {
   display: flex;
@@ -8,7 +8,7 @@
   .check-box-container {
     display: flex;
     flex-grow: 1;
-    background-color: $dark-gray-2;
+    background-color: c-gray-dark.$d2;
     align-items: center;
     justify-content: center;
     border-radius: 0.5em;

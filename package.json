@@ -10,7 +10,8 @@
     "publish": "npm run build-prod && cd dist/gl-ng-frontend && npm publish && cd .. && cd ..",
     "test": "ng test",
     "lint": "ng lint",
-    "gl-styles": "cd D:\\_local-development\\_glaucio\\packages\\gl-scss-styles && npm run production && cd D:\\_local-development\\_glaucio\\packages\\gl-ng-frontend && npm pack D:\\_local-development\\_glaucio\\packages\\gl-scss-styles && npm i --prefer-offline ./gl-scss-styles-2.0.0.tgz && shx rm -rf ./gl-scss-styles-2.0.0.tgz"
+    "gl-styles": "npm run --prefix /Volumes/Data/Backup/Development/web-packages/gl-scss-styles production && npm pack /Volumes/Data/Backup/Development/web-packages/gl-scss-styles && npm i --prefer-offline ./gl-scss-styles-3.0.0.tgz && shx rm -rf ./gl-scss-styles-3.0.0.tgz",
+    "glw": "npm run --prefix /Volumes/Data/Backup/Development/web-packages/gl-w-frontend production && npm pack /Volumes/Data/Backup/Development/web-packages/gl-w-frontend && npm i --prefer-offline ./gl-w-frontend-4.1.8.tgz && shx rm -rf ./gl-w-frontend-4.1.8.tgz"
   },
   "private": true,
   "dependencies": {
@@ -25,9 +26,9 @@
     "@videogular/ngx-videogular": "^4.1.0",
     "decimal.js": "^10.3.1",
     "gl-icons-assets": "^1.5.0",
-    "gl-scss-styles": "^2.1.0",
+    "gl-scss-styles": "^3.0.1",
     "gl-sp-frontend": "^2.4.3",
-    "gl-w-frontend": "^4.1.7",
+    "gl-w-frontend": "^5.0.0",
     "rxjs": "~6.6.7",
     "tslib": "^2.3.1",
     "zone.js": "~0.11.4"
@@ -39,22 +40,21 @@
     "@angular/compiler-cli": "~12.2.5",
     "@angular/material": "~12.2.5",
     "@angular/material-moment-adapter": "~12.2.5",
-    "@types/jasmine": "~3.7.7",
-    "@types/node": "^12.11.7",
+    "@types/jasmine": "~3.9.0",
+    "@types/node": "^12.12.6",
     "codelyzer": "^6.0.2",
-    "jasmine-core": "~3.7.1",
+    "jasmine-core": "~3.9.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.3.4",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.1",
-    "karma-jasmine-html-reporter": "^1.6.0",
-    "moment": "^2.29.1",
-    "ng-packagr": "^12.1.0",
+    "karma-jasmine-html-reporter": "^1.7.0",
+    "ng-packagr": "^12.2.1",
     "protractor": "~7.0.0",
     "smooth-scroll": "^16.1.3",
-    "ts-node": "~8.3.0",
+    "ts-node": "~8.10.2",
     "tslint": "~6.1.3",
-    "typescript": "~4.2.4"
+    "typescript": "~4.3.5"
   }
 }

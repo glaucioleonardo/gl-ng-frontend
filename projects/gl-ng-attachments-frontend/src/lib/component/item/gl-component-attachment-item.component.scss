@@ -1,6 +1,5 @@
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   font-size: 1em;
@@ -14,15 +13,15 @@
     cursor: pointer;
 
     &:not(hover) {
-      background-color: rgba($white, 0.3);
-      .file { color: $dark-gray-2; }
+      background-color: rgba(white, 0.3);
+      .file { color: c-gray-dark.$d2; }
       transition: background-color 0.2s ease-in-out;
     }
 
     &:hover {
-      background-color: rgba($white, 1);
-      .file { color: $white; }
-      .file { color: $dark-gray-2; }
+      background-color: rgba(white, 1);
+      .file { color: white; }
+      .file { color: c-gray-dark.$d2; }
 
       transition: background-color 0.2s ease-in-out;
     }
@@ -57,7 +56,7 @@
     }
 
     .file {
-      @include font-family(regular);
+      @include fonts.font-family-custom(regular);
       user-select: none;
       white-space: nowrap;
       text-overflow: ellipsis;

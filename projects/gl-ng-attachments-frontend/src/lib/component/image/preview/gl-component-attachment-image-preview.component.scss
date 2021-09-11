@@ -1,5 +1,5 @@
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
 
 :host::ng-deep {
   display: flex;
@@ -8,7 +8,7 @@
 
   .item-container {
     font-size: 1em;
-    background-color: $dark-gray-2;
+    background-color: c-gray-dark.$d2;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -30,13 +30,13 @@
 
     &.light {
       background-color: transparent;
-      border-right: 0.5px $white-translucid-1 solid;
+      border-right: 0.5px c-white-translucid.$t1 solid;
     }
     &.dark {
-      background-color: $dark-gray-3-2;
+      background-color: c-gray-dark.$d3-2;
 
       label {
-        background-color: $dark-gray-3-4;
+        background-color: c-gray-dark.$d3-4;
       }
     }
 

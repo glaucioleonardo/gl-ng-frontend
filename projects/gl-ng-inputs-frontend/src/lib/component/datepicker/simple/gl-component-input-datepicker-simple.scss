@@ -1,10 +1,9 @@
-@import '~gl-scss-styles/assets/style/colors/black/black-translucid';
-@import '~gl-scss-styles/assets/style/colors/gray/gray-dark';
-@import '~gl-scss-styles/assets/style/colors/gray/gray';
-@import '~gl-scss-styles/assets/style/colors/white/white';
-@import '~gl-scss-styles/assets/style/colors/white/white-translucid';
-@import '~gl-scss-styles/assets/style/fonts/montserrat';
-@import '~gl-scss-styles/assets/style/components/input/input-ellipsis';
+@use '~gl-scss-styles/assets/style/colors/black/c-black-translucid';
+@use '~gl-scss-styles/assets/style/colors/gray/c-gray-dark';
+@use '~gl-scss-styles/assets/style/colors/gray/c-gray';
+@use '~gl-scss-styles/assets/style/colors/white/c-white-translucid';
+@use '~gl-scss-styles/assets/style/fonts/fonts';
+@use '~gl-scss-styles/assets/style/components/input/input-ellipsis';
 
 %size {
   $size: 2em;
@@ -13,7 +12,7 @@
 }
 
 :host::ng-deep {
-  background-color: $dark-gray-2;
+  background-color: c-gray-dark.$d2;
   border-radius: 0.5em;
 
   font-size: 1em;
@@ -52,7 +51,7 @@
 
       .mat-form-field-flex {
         //height: 1.275em;
-        padding: 0.2em 0.3em 0.2em 0.45em;
+        //padding: 0.2em 0.3em 0.2em 0.45em;
         padding: 0.2em 0.3em 0.2em 0.9em;
         //border-radius: 0;
         align-items: center;
@@ -101,10 +100,10 @@
     }
 
     .item-content {
-      @include font-family(regular);
+      @include fonts.font-family-custom(regular);
       border: none;
 
-      color: $white;
+      color: white;
       //font-size: 0.45em;
       font-size: 1em;
       //flex-grow: 1;
@@ -116,7 +115,7 @@
       }
 
       &::placeholder {
-        color: $dark-gray !important;
+        color: c-gray-dark.$d !important;
       }
 
       &.left { text-align: left; }
@@ -124,25 +123,25 @@
       &.right { text-align: right; }
 
       &.light {
-        background-color: $black-translucid-1;
+        background-color: c-black-translucid.$t1;
 
         &::placeholder {
-          color: $white-translucid-2 !important;
+          color: c-white-translucid.$t2 !important;
         }
       }
 
       &.dark {
-        background-color: $dark-gray-3-2;
+        background-color: c-gray-dark.$d3-2;
       }
     }
 
     .item-content:-ms-input-placeholder {
-      color: $dark-gray !important;
+      color: c-gray-dark.$d !important;
     }
 
     .item-content {
       &.light:-ms-input-placeholder {
-        color: $gray !important;
+        color: c-gray.$d !important;
       }
     }
   }

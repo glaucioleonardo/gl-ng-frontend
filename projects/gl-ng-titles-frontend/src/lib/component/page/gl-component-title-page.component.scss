@@ -1,5 +1,4 @@
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 .page-title {
   margin: 0 0.5em 0 0.5em;
@@ -10,18 +9,18 @@
     display: flex;
 
     .title {
-      @include font-family('bold');
+      @include fonts.font-family-custom(bold);
     }
 
     .title, .subtitle {
       text-transform: uppercase;
       user-select: none;
-      color: $white;
+      color: white;
       font-size: 1.5em;
     }
 
     .subtitle {
-      @include font-family('thin');
+      @include fonts.font-family-custom(thin);
       margin: 0 0 0 0.3em;
     }
   }

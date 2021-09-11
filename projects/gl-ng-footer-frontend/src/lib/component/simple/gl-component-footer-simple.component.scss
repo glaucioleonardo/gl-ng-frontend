@@ -1,9 +1,7 @@
-@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
-
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/components/input/input-ellipsis";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   z-index: 100;
@@ -19,10 +17,10 @@
   bottom: 0;
 
   .footer-container {
-    border-top: solid 1px $white-translucid-3;
+    border-top: solid 1px c-white-translucid.$t3;
     backdrop-filter: blur(30px);
-    border-top: solid 1px $white-translucid-3;
-    background-color: rgba($dark-gray-3-2, 0.5);
+    border-top: solid 1px c-white-translucid.$t3;
+    background-color: rgba(c-gray-dark.$d3-2, 0.5);
 
     flex: 1 1 auto;
     font-size: 1em;
@@ -33,10 +31,10 @@
     z-index: 99;
 
     .description {
-      @include font-family(light);
+      @include fonts.font-family-custom(light);
       @extend %ellipsis-content;
       text-transform: uppercase;
-      color: $white;
+      color: white;
       letter-spacing: 0.14em;
       text-align: center;
       width: 80vw;
@@ -51,36 +49,36 @@
     }
 
     &.dark {
-      background-color: rgba($dark-gray-3-2, 0.5);
+      background-color: rgba(c-gray-dark.$d3-2, 0.5);
     }
     &.dark-semi-opaque {
-      background-color: rgba($dark-gray-3-2, 0.9);
+      background-color: rgba(c-gray-dark.$d3-2, 0.9);
     }
     &.dark-opaque {
       backdrop-filter: none;
-      background-color: $dark-gray-3-2;
+      background-color: c-gray-dark.$d3-2;
     }
 
     &.light {
-      background-color: $white-translucid-5;
+      background-color: c-white-translucid.$t5;
 
       .description {
-        color: $dark-gray-3-2;
+        color: c-gray-dark.$d3-2;
       }
     }
     &.light-semi-opaque {
-      background-color: $white-translucid-9;
+      background-color: c-white-translucid.$t9;
 
       .description {
-        color: $dark-gray-3-2;
+        color: c-gray-dark.$d3-2;
       }
     }
     &.light-opaque {
       backdrop-filter: none;
-      background-color: $white;
+      background-color: white;
 
       .description {
-        color: $dark-gray-3-2;
+        color: c-gray-dark.$d3-2;
       }
     }
 

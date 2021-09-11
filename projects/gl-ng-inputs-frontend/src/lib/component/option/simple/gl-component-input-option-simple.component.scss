@@ -1,8 +1,7 @@
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
-@import "~gl-scss-styles/assets/style/colors/pink/pink";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
+@use "~gl-scss-styles/assets/style/colors/pink/c-pink";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   font-size: 1em;
@@ -19,12 +18,12 @@
     align-items: center;
 
     &:not(hover) .check-mark {
-      background-color: $dark-gray-3;
+      background-color: c-gray-dark.$d3;
       transition: background-color 0.3s ease-in-out;
     }
 
     &:hover .check-mark {
-      background-color: $dark-gray-2;
+      background-color: c-gray-dark.$d2;
       transition: background-color 0.3s ease-in-out;
     }
 
@@ -38,7 +37,7 @@
       top: 0.15em;
 
       &:checked ~ .check-mark {
-        background-color: $dark-gray-3;
+        background-color: c-gray-dark.$d3;
       }
 
       &:checked ~ .check-mark:after {
@@ -49,7 +48,7 @@
         width: 1em;
         height: 1em;
         border-radius: 20%;
-        background-color: $pink;
+        background-color: c-pink.$d;
 
         transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
       }
@@ -62,7 +61,7 @@
       left: 0;
       height: 2em;
       width: 2em;
-      background-color: $pink;
+      background-color: c-pink.$d;
       border-radius: 30%;
       margin: 0 0.4em 0 0;
 
@@ -84,36 +83,36 @@
     }
 
     .label {
-      @include font-family(regular);
-      color: $dark-gray;
+      @include fonts.font-family-custom(regular);
+      color: c-gray-dark.$d;;
       font-size: 1em;
 
       &.bold {
-        @include font-family(bold);
+        @include fonts.font-family-custom('bold');
       }
     }
 
     &.light {
       &:not(hover) {
         .check-mark {
-          background-color: $white;
+          background-color: white;
         }
       }
 
       &:hover {
         .check-mark {
-          background-color: $white-translucid-7;
+          background-color: c-white-translucid.$t7;
         }
       }
 
       .input-radio {
         &:checked ~ .check-mark {
-          background-color: $white;
+          background-color: white;
         }
       }
 
       .label {
-        color: $white
+        color: white
       }
     }
 

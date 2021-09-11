@@ -1,9 +1,9 @@
-@import "~gl-scss-styles/assets/style/colors/gray/gray-light";
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/green/green-light";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
-@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-light";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray";
+@use "~gl-scss-styles/assets/style/colors/green/c-green-light";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
+@use "~gl-scss-styles/assets/style/components/input/input-ellipsis";
 
 :host::ng-deep {
   font-size: 1em;
@@ -18,16 +18,16 @@
     align-items: center;
 
     .switch-label {
-      @include font-family(semi-bold);
+      @include fonts.font-family-custom(semi-bold);
       font-size: 1em;
       user-select: none;
 
       &.black {
-        color: $dark-gray-3-2;
+        color: c-gray-dark.$d3-2;
       }
 
       &.white {
-        color: $white;
+        color: white;
       }
     }
     .switch-item-container {
@@ -35,7 +35,7 @@
       position: relative;
       justify-content: center;
       display: flex;
-      background-color: $white;
+      background-color: white;
       width: 1.7em;
       height: 1em;
       border-radius: 2em;
@@ -43,12 +43,12 @@
       padding: 0 0.1em;
       flex-direction: column;
       cursor: pointer;
-      border: solid 2px $gray-light-4;
+      border: solid 2px c-gray-light.$d4;
       transition: background-color 0.5s ease-in-out;
 
       &.active {
-        border: solid 2px darken($light-green, 20%);
-        background-color: $light-green;
+        border: solid 2px darken(c-green-light.$d, 20%);
+        background-color: c-green-light.$d;
         transition: background-color 0.3s ease-in-out;
       }
 
@@ -57,24 +57,24 @@
         width: 0.9em;
         height: 0.9em;
         border-radius: 1em;
-        background-color: $gray-light-5;
+        background-color: c-gray-light.$d5;
         cursor: pointer;
         left: 0.1em;
         top: 0.06em;
         transition: background-color 0.5s ease-in-out;
 
         &:hover {
-          background-color: $gray-light-3;
+          background-color: c-gray-light.$d3;
           transition: background-color 0.2s ease-in-out;
         }
 
         &.active {
           left: 0.9em;
-          background-color: lighten($gray, 55%);
+          background-color: lighten(c-gray.$d, 55%);
           transition: background-color 0.5s ease-in-out;
 
           &:hover {
-            background-color: $gray-light-10;
+            background-color: c-gray-light.$d10;
             transition: background-color 0.2s ease-in-out;
           }
         }
@@ -114,7 +114,7 @@
 
       .switch-label {
         @extend %ellipsis-content;
-        @include font-family(light);
+        @include fonts.font-family-custom(light);
         flex-grow: 1;
         padding: 0 0 0 0.8em;
       }

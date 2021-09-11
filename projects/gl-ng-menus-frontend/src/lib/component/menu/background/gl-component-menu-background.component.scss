@@ -1,12 +1,11 @@
-@import "~gl-scss-styles/assets/style/components/view-port/view-port-height";
-//@import "~gl-scss-styles/assets/style/components/view-port/view-port-width";
-@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
+@use "~gl-scss-styles/assets/style/components/view-port/view-port-height";
+@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
 
 :host::ng-deep {
   .menu-background {
-    background-color: $black-translucid-3;
+    background-color: c-black-translucid.$t3;
     position: fixed;
     width: 100vw;
-    height: height(100);
+    height: view-port-height.height(100);
   }
 }

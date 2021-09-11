@@ -6,10 +6,6 @@ import { DateGet } from 'gl-w-frontend';
 import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignments.interface';
 import { IDatePickerMonthYearOutput } from './gl-component-input-datepicker-simple-month-year.interface';
 
-// import { Moment } from 'moment/min/locales.min';
-import 'moment/min/locales.min';
-declare const Moment: any;
-// const Moment = require('moment/min/locales.min');
 const MONTH_YEAR_FORMAT = {
   parse: {
     dateInput: 'MM/YYYY',

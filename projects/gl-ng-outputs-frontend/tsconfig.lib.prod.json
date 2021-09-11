@@ -4,9 +4,7 @@
   "compilerOptions": {
     "declarationMap": false,
     "paths": {
-      "moment": [
-        "node_modules/moment/min/locales.min.js"
-      ]
+
     }
   },
   "angularCompilerOptions": {

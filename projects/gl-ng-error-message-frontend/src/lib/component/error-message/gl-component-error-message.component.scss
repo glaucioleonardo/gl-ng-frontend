@@ -1,7 +1,6 @@
-@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
-@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   display: flex;
@@ -27,15 +26,15 @@
 
 
     .main-title {
-      @include font-family(extra-bold);
-      color: $white-translucid-3;
+      @include fonts.font-family-custom(extra-bold);
+      color: c-white-translucid.$t3;
       font-size: 11em;
       user-select: none;
     }
 
     .message {
-      @include font-family(thin);
-      color: $white-translucid-3;
+      @include fonts.font-family-custom(thin);
+      color: c-white-translucid.$t3;
       user-select: none;
       font-size: 1.5em;
     }
@@ -50,9 +49,9 @@
         border-radius: 10em;
         display: block;
         padding: 1.5em 4em;
-        color: $white;
-        background-color: $black-translucid-4;
-        @include font-family()
+        color: white;
+        background-color: c-black-translucid.$t4;
+        @include fonts.font-family-custom()
       }
     }
   }

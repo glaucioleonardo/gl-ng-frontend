@@ -1,12 +1,11 @@
-@import "~gl-scss-styles/assets/style/colors/black/black";
-@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/pink/pink-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/colors/black/c-black";
+@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/pink/c-pink-dark";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 %title {
-  @include font-family(extra-light);
+  @include fonts.font-family-custom(extra-light);
   border-radius: 0.3em;
   text-transform: uppercase;
   font-size: 2em;
@@ -26,11 +25,11 @@
   .header-data {
     font-size: 1em;
     border-radius: 0.5em;
-    @include font-family(semi-bold);
+    @include fonts.font-family-custom(semi-bold);
     position: relative;
     flex-grow: 1;
-    background-color: $dark-gray-2-3;
-    color: $white;
+    background-color: c-gray-dark.$d2-3;
+    color: white;
     padding: 0.8em 1em;
     text-align: center;
     user-select: none;
@@ -39,22 +38,22 @@
     overflow: hidden;
 
     &.light {
-      background-color: $black-translucid-3;
+      background-color: c-black-translucid.$t3;
     }
 
     &.dark {
-      background-color: $dark-gray-3-4;
+      background-color: c-gray-dark.$d3-4;
     }
 
     &.category-title {
       @extend %title;
-      background-color: $dark-pink;
+      background-color: c-pink-dark.$d;
     }
 
     &.category-title-light {
       @extend %title;
-      background-color: $white;
-      color: $dark-gray-3-2;
+      background-color: white;
+      color: c-gray-dark.$d3-2;
     }
 
     &.left {
@@ -68,13 +67,13 @@
     }
 
     &.report {
-      @include font-family(thin);
+      @include fonts.font-family-custom(thin);
       text-transform: uppercase;
       font-size: 1em;
       padding: 0.5em;
-      color: $white;
+      color: white;
       font-weight: 100;
-      background-color: rgba($black, 0.1);
+      background-color: rgba(c-black.$d, 0.1);
     }
   }
 

@@ -1,6 +1,5 @@
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   .attachment-container {
@@ -13,12 +12,12 @@
     cursor: pointer;
 
     &:not(hover) {
-      background-color: rgba($dark-gray-1-5, 0.6);
+      background-color: rgba(c-gray-dark.$d1-5, 0.6);
       transition: background-color 0.2s ease-in-out;
     }
 
     &:hover {
-      background-color: rgba($dark-gray-1-5, 0.9);
+      background-color: rgba(c-gray-dark.$d1-5, 0.9);
       transition: background-color 0.2s ease-in-out;
     }
 
@@ -31,8 +30,8 @@
     }
 
     .attachment-file-button {
-      color: $white;
-      @include font-family(regular);
+      color: white;
+      @include fonts.font-family-custom(regular);
       user-select: none;
     }
   }

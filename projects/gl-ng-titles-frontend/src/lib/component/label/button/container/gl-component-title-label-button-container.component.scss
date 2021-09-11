@@ -1,5 +1,5 @@
-@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
 
 :host::ng-deep {
   flex: 1 1 auto;
@@ -12,7 +12,7 @@
   .label-with-button-container {
     display: flex;
     flex-grow: 1;
-    background-color: $dark-gray-2-3;
+    background-color: c-gray-dark.$d2-3;
     font-size: 1em;
     border-radius: 0.5em;
 
@@ -33,11 +33,11 @@
     }
 
     &.light {
-      background-color: $black-translucid-3;
+      background-color: c-black-translucid.$t3;
     }
 
     &.dark {
-      background-color: $dark-gray-3-4;
+      background-color: c-gray-dark.$d3-4;
     }
   }
 }

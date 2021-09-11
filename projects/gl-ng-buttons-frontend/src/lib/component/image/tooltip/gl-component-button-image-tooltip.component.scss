@@ -1,4 +1,4 @@
-@import "~gl-scss-styles/assets/style/components/tooltip/tooltip";
+@use "~gl-scss-styles/assets/style/components/tooltip/tooltip";
 
 :host::ng-deep {
   display: flex;
@@ -25,12 +25,6 @@
       &::before {
         left: 108% !important;
       }
-
-      //&.center {
-      //  &::after {
-      //    transform: translateX(-20%);
-      //  }
-      //}
 
       &.right {
         &::after {

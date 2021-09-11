@@ -1,9 +1,9 @@
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
 
 :host::ng-deep {
   display: flex;
   flex-grow: 1;
-  background-color: $dark-gray-3;
+  background-color: c-gray-dark.$d3;
 
   .main-container {
     display: flex;

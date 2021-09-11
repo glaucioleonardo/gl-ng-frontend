@@ -1,7 +1,6 @@
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   font-size: 1em;
@@ -14,7 +13,7 @@
   appearance: none;
 
   .default-button {
-    @include font-family(semi-bold);
+    @include fonts.font-family-custom(semi-bold);
     border: none;
     margin: 0;
     border-radius: 0.5em;
@@ -28,12 +27,12 @@
     @extend %button-not-hover;
     @extend %button-focus;
 
-    background-color: $white;
-    color: $dark-gray-3;
+    background-color: white;
+    color: c-gray-dark.$d3;
 
     &.light-translucid {
-      @include font-family(regular);
-      background-color: $white-translucid-1;
+      @include fonts.font-family-custom(regular);
+      background-color: c-white-translucid.$t1;
     }
   }
 
@@ -48,21 +47,21 @@
 
   %button-not-hover {
     &:not(hover) {
-      background-color: $white-translucid-4;
-      color: $white;
+      background-color: c-white-translucid.$t4;
+      color: white;
       transition: background-color 0.3s ease-in-out;
     }
   }
 
   %button-focused {
-    background-color: $white;
-    color: $dark-gray-3;
+    background-color: white;
+    color: c-gray-dark.$d3;
     border-radius: 0.5em;
 
     &.light-translucid {
-      @include font-family(regular);
-      background-color: $white-translucid-9;
-      color: $dark-gray-1;
+      @include fonts.font-family-custom(regular);
+      background-color: c-white-translucid.$t9;
+      color: c-gray-dark.$d1;
     }
     transition: background-color 0.3s ease-in-out;
   }

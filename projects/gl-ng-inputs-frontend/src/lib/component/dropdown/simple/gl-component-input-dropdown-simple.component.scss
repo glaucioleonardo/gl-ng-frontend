@@ -1,9 +1,8 @@
-@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/pink/pink-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
+@use "~gl-scss-styles/assets/style/components/input/input-ellipsis";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/pink/c-pink-dark";
+@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
 
 :host::ng-deep {
   display: flex;
@@ -12,11 +11,11 @@
   position: relative;
   align-items: stretch;
   justify-content: stretch;
-  $base-color: $dark-pink;
+  $base-color: c-pink-dark.$d;
   $disable-background-color: #eceeef;
 
   .multiselect-dropdown {
-    @include font-family(regular);
+    @include fonts.font-family-custom(regular);
     width: 100%;
     position: relative;
 
@@ -28,7 +27,7 @@
         padding: 0.894em;
         cursor: pointer;
         border-radius: 0.5em;
-        background-color: $dark-gray-2;
+        background-color: c-gray-dark.$d2;
         height: 2.788em;
         overflow: hidden;
 
@@ -52,7 +51,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: $white;
+            background-color: white;
             border-radius: 0.5em;
             position: absolute;
             right: 2.7em;
@@ -61,7 +60,7 @@
             height: 2em;
 
             .items-remaining {
-              @include font-family(bold);
+              @include fonts.font-family-custom('bold');
             }
           }
           .icon-preview {
@@ -77,7 +76,7 @@
 
         .placeholder {
           user-select: none;
-          color: $dark-gray;
+          color: c-gray-dark.$d;;
 
           &.has-icon-preview {
             @extend %ellipsis-content;
@@ -188,10 +187,10 @@
     padding: 0.25em;
     width: 99.5%;
     z-index: 9999;
-    border: 1px solid $dark-gray;
+    border: 1px solid c-gray-dark.$d;;
     border-radius: 0.5em;
     backdrop-filter: blur(10px);
-    background: rgba($dark-gray-3, 0.8);
+    background: rgba(c-gray-dark.$d3, 0.8);
     margin-top: 0.2em;
 
     .item1 {
@@ -202,19 +201,19 @@
         position: relative;
 
         input {
-          @include font-family(regular);
-          color: $white;
+          @include fonts.font-family-custom(regular);
+          color: white;
           font-size: 1em;
           width: 100%;
 
           border-radius: 0.3em;
-          background-color: $dark-pink;
+          background-color: c-pink-dark.$d;
           padding: 0.8em;
           border: 0;
           //width:calc(100% - 1.6em);
 
           &::placeholder {
-            color: $white-translucid-5;
+            color: c-white-translucid.$t5;
           }
           &:focus {
             outline: none;
@@ -226,8 +225,8 @@
       min-height: 2em;
 
       .no-data {
-        @include font-family(regular);
-        color: $white;
+        @include fonts.font-family-custom(regular);
+        color: white;
         padding: 0.5em;
       }
     }
@@ -251,18 +250,18 @@
 
     border-radius: 0.3em;
     //padding: 0.8em;
-    background-color: rgba($dark-gray, 0.3);
+    background-color: rgba(c-gray-dark.$d, 0.3);
     display: flex;
     margin: 1px 0;
 
     &:hover, &:active {
-      background-color: rgba($dark-gray, 0.5);
+      background-color: rgba(c-gray-dark.$d, 0.5);
       transition: background-color 0.2s ease-in-out;
     }
 
     .check-box-inner {
       @extend %ellipsis-content;
-      color: $white;
+      color: white;
       margin: 0 0 0 3em;
 
       max-height: $height;
@@ -272,7 +271,7 @@
       display: inline-block;
 
       &.select-all {
-        @include font-family(semi-bold);
+        @include fonts.font-family-custom(semi-bold);
       }
     }
 

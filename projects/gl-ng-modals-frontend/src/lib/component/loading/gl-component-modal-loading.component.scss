@@ -1,14 +1,13 @@
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
-@import "~gl-scss-styles/assets/style/components/view-port/view-port-width";
-@import "~gl-scss-styles/assets/style/components/view-port/view-port-height";
-@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
+@use "~gl-scss-styles/assets/style/components/view-port/view-port-width";
+@use "~gl-scss-styles/assets/style/components/view-port/view-port-height";
+@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
 
 :host::ng-deep {
   .main-loading {
     font-size: 1em;
     flex: 1 1 auto;
-    background-color: $black-translucid-2;
+    background-color: c-black-translucid.$t2;
     backdrop-filter: blur(10px) opacity(0);
     display: flex;
     justify-content: center;
@@ -17,7 +16,7 @@
 
     position: fixed;
     width: 100vw;
-    height: height(100);
+    height: view-port-height.height(100);
     top: 0;
     left: 0;
 
@@ -112,8 +111,8 @@
       }
 
       .loading-status {
-        @include font-family(light);
-        color: $white;
+        @include fonts.font-family-custom(light);
+        color: white;
         font-size: 0.5em;
         width: 100%;
         margin: 1em 0 0 0;

@@ -1,7 +1,6 @@
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/colors/black/black-translucid";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
-@import "~gl-scss-styles/assets/style/anims/blur-animation";
+@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
+@use "~gl-scss-styles/assets/style/anims/blur-animation";
 
 :host::ng-deep {
   display: flex;
@@ -21,12 +20,12 @@
       top: 0;
       z-index: -1;
       visibility: collapse;
-      background: linear-gradient(90deg, $black-translucid-1 0%, $black-translucid-3 100%);
+      background: linear-gradient(90deg, c-black-translucid.$t1 0%, c-black-translucid.$t3 100%);
       transition: background ease-in-out 0.5s;
 
       &.highlight {
         @extend %blur-animation-fade-in;
-        background-color: $black-translucid-5;
+        background-color: c-black-translucid.$t5;
         width: 100vw;
         height: 100vh;
         z-index: 1;
@@ -50,25 +49,25 @@
         flex: 1 1 auto;
 
         &:hover, &:focus {
-          box-shadow: 0 0 0.5em $white;
+          box-shadow: 0 0 0.5em white;
           transition: box-shadow ease-in-out 0.5s;
         }
 
         &:not(hover), &:not(focus) {
-          box-shadow: 0 0 0 $white;
+          box-shadow: 0 0 0 white;
           transition: box-shadow ease-in-out 0.2s;
         }
       }
 
       &.highlight {
        .item-content {
-         box-shadow: 0 0 0.5em $white;
+         box-shadow: 0 0 0.5em white;
          transition: box-shadow ease-in-out 0.5s;
        }
       }
       &.remove-highlight {
         .item-content {
-          box-shadow: 0 0 0.0 $white;
+          box-shadow: 0 0 0 white;
           transition: box-shadow ease-in-out 0.2s;
         }
       }
@@ -87,7 +86,7 @@
       &:hover, &:focus{
         &~ gl-component-input-text-simple {
           .item-content {
-            box-shadow: 0 0 0.5em $white;
+            box-shadow: 0 0 0.5em white;
             transition: box-shadow ease-in-out 0.5s;
           }
         }

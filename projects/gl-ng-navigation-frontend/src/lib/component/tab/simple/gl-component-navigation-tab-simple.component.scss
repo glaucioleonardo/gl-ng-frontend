@@ -1,8 +1,6 @@
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
-
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/components/input/input-ellipsis";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   font-size: 1em;
@@ -14,14 +12,14 @@
   align-items: stretch;
   justify-content: stretch;
   margin: 0;
-  background-color: $dark-gray-3-2;
+  background-color: c-gray-dark.$d3-2;
 
   .navigation-tab {
     font-size: 2em;
     margin: 0.2em 0 0 0;
     display: flex;
     align-items: center;
-    background-color: $dark-gray-3-2;
+    background-color: c-gray-dark.$d3-2;
     transition: background-color 0.2s ease-in-out;
 
     &.disabled {
@@ -31,8 +29,8 @@
 
     .tab-sequence {
       display: flex;
-      color: $dark-gray;
-      background-color: $dark-gray-2-5;
+      color: c-gray-dark.$d;;
+      background-color: c-gray-dark.$d2-5;
       align-items: center;
       justify-content: center;
       width: 1em;
@@ -43,7 +41,7 @@
       transition: background-color 0.2s ease-in;
 
       .tab-sequence-content {
-        @include font-family(bold);
+        @include fonts.font-family-custom('bold');
         font-size: 0.5em;
         //font-size: 1em;
         z-index: 100;
@@ -53,9 +51,9 @@
 
     .tab-description {
       @extend %ellipsis-content;
-      @include font-family(semi-bold);
+      @include fonts.font-family-custom(semi-bold);
       font-size: 0.5em;
-      color: $dark-gray;
+      color: c-gray-dark.$d;
       user-select: none;
       flex: 1 1 auto;
       transition: color 0.2s ease-in;
@@ -72,7 +70,7 @@
 
     &.active {
       position: relative;
-      background-color: $dark-gray-2-7;
+      background-color: c-gray-dark.$d2-7;
       border-top-left-radius: 0.2em;
       border-top-right-radius: 0.2em;
       z-index: 1000;
@@ -100,24 +98,24 @@
       &:before {
         left: -0.75em;
         border-radius: 0 0 0.4em 0;
-        box-shadow: 0.4em 0 0 0 $dark-gray-2-7;
+        box-shadow: 0.4em 0 0 0 c-gray-dark.$d2-7;
         transition: left 0.0s ease-in-out;
       }
 
       &:after {
         right: -0.75em;
         border-radius: 0 0 0 0.4em;
-        box-shadow: -0.4em 0 0 0 $dark-gray-2-7;
+        box-shadow: -0.4em 0 0 0 c-gray-dark.$d2-7;
         transition: right 0.0s ease-in-out;
       }
 
       .tab-sequence {
-        background-color: $white;
+        background-color: white;
         transition: background-color 0.2s ease-in-out;
       }
 
       .tab-description {
-        color: $white;
+        color: white;
         transition: color 0.2s ease-in-out;
       }
 
@@ -136,7 +134,7 @@
 
       &:hover {
         position: relative;
-        background-color: $dark-gray-2-3;
+        background-color: c-gray-dark.$d2-3;
         border-top-left-radius: 0.2em;
         border-top-right-radius: 0.2em;
         margin: 0.2em 0 0 0;
@@ -156,7 +154,7 @@
         &:before {
           left: -0.75em;
           border-radius: 0 0 0.4em 0;
-          box-shadow: 0.4em 0 0 0 $dark-gray-2-3;
+          box-shadow: 0.4em 0 0 0 c-gray-dark.$d2-3;
           transition: left 0.0s ease-in;
           transition-delay: 0.0s;
         }
@@ -164,12 +162,12 @@
         &:after {
           right: -0.75em;
           border-radius: 0 0 0 0.4em;
-          box-shadow: -0.4em 0 0 0 $dark-gray-2-3;
+          box-shadow: -0.4em 0 0 0 c-gray-dark.$d2-3;
           transition: right 0.0s ease-in;
         }
 
         .tab-description {
-          color: $white;
+          color: white;
           transition: color 0.2s ease-in;
         }
 
@@ -183,6 +181,6 @@
   .border-bottom {
     font-size: 1em;
     height: 0.2em;
-    background-color: $dark-gray-2-7;
+    background-color: c-gray-dark.$d2-7;
   }
 }

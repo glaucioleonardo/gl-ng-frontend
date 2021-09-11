@@ -1,9 +1,8 @@
-@import "~gl-scss-styles/assets/style/components/input/input-ellipsis";
-@import "~gl-scss-styles/assets/style/fonts/montserrat";
+@use "~gl-scss-styles/assets/style/components/input/input-ellipsis";
+@use "~gl-scss-styles/assets/style/fonts/fonts";
 
-@import "~gl-scss-styles/assets/style/colors/gray/gray-dark";
-@import "~gl-scss-styles/assets/style/colors/white/white";
-@import "~gl-scss-styles/assets/style/colors/white/white-translucid";
+@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
 
 :host::ng-deep {
   font-size: 1.5em;
@@ -11,12 +10,12 @@
 
   .menu-title {
     font-size: 1em;
-    background-color: $white-translucid-1;
+    background-color: c-white-translucid.$t1;
     margin: 0 0 1px 0;
     position: relative;
     display: flex;
     align-items: center;
-    border-left: solid $white-translucid-3 0.2em;
+    border-left: solid c-white-translucid.$t3 0.2em;
     padding: 0.2em 0.3em;
 
     .menu-icons {
@@ -40,8 +39,8 @@
 
       text-decoration: none;
       font-size: 0.6em;
-      @include font-family(regular);
-      color: $white-translucid-4;
+      @include fonts.font-family-custom(regular);
+      color: c-white-translucid.$t4;
       padding: 1.2em 0.7em;
       flex-grow: 1;
       cursor: pointer;
@@ -73,31 +72,31 @@
 
   .menu-title.dark {
     margin: 0;
-    border-bottom: solid 1px $dark-gray-1-8;
+    border-bottom: solid 1px c-gray-dark.$d1-8;
     border-left: solid transparent 0.2em;
 
     &:not(hover) {
-      background-color: $dark-gray-2-3;
+      background-color: c-gray-dark.$d2-3;
       transition: background-color 0.3s ease-in-out;
     }
 
     &:hover {
-      background-color: $dark-gray-1;
+      background-color: c-gray-dark.$d1;
       transition: background-color 0.3s ease-in-out;
     }
   }
   .menu-title.translucid {
     margin: 0;
-    border-bottom: solid 0.5px rgba($white, 0.1);
+    border-bottom: solid 0.5px rgba(white, 0.1);
     border-left: solid transparent 0.2em;
 
     &:not(hover) {
-      background-color: rgba($white, 0.05);
+      background-color: rgba(white, 0.05);
       transition: background-color 0.3s ease-in-out;
     }
 
     &:hover {
-      background-color: rgba($white, 0.1);
+      background-color: rgba(white, 0.1);
       transition: background-color 0.3s ease-in-out;
     }
   }
