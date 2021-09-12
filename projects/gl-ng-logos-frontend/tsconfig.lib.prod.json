@@ -7,7 +7,8 @@
 
     }
   },
-  "angularCompilerOptions": {
-    "enableIvy": false
+    "angularCompilerOptions": {
+    "enableIvy": true,
+    "compilationMode": "partial"
   }
 }
