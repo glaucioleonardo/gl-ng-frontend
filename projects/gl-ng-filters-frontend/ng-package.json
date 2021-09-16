@@ -18,6 +18,12 @@
   ],
   "allowedNonPeerDependencies": [
     "gl-scss-styles",
-    "smooth-scroll"
+    "smooth-scroll",
+    "decimal.js",
+    "gl-w-number-frontend",
+    "gl-w-image-frontend",
+    "gl-w-date-frontend",
+    "gl-w-input-frontend",
+    "gl-w-attachment-frontend"
   ]
 }

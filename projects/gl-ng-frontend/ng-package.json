@@ -27,6 +27,7 @@
     "gl-w-date-frontend",
     "gl-w-input-frontend",
     "gl-sp-frontend",
-    "smooth-scroll"
+    "smooth-scroll",
+    "decimal.js"
   ]
 }

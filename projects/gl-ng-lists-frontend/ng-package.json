@@ -15,6 +15,7 @@
   "allowedNonPeerDependencies": [
     "gl-scss-styles",
     "gl-icons-assets",
-    "gl-w-frontend"
+    "gl-w-attachment-frontend",
+    "gl-w-number-frontend"
   ]
 }

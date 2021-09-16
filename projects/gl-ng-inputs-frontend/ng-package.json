@@ -34,6 +34,7 @@
     "gl-w-attachment-frontend",
     "gl-w-number-frontend",
     "gl-w-input-frontend",
+    "gl-w-image-frontend",
 
     "@angular/cdk",
     "@angular/material",
