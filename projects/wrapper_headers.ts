@@ -5,15 +5,11 @@ export { ComponentModule as GlNgHeadersComponentModule } from './gl-ng-headers-f
 export { GlNgHeadersFrontendModule } from './gl-ng-headers-frontend/src/lib/gl-ng-headers-frontend.module';
 
 // region interfaces
-export * from './gl-ng-headers-frontend/src/lib/interfaces/global.interface';
+export { TTheme } from './gl-ng-headers-frontend/src/lib/interfaces/global.interface';
 // endregion
 
 // region default
-import {
-  GlComponentHeaderDefaultComponent
-} from './gl-ng-headers-frontend/src/lib/component/default/gl-component-header-default.component';
-import * as GlComponentHeaderDefaultInterface from './gl-ng-headers-frontend/src/lib/component/default/gl-component-header-default.interface';
-
-export { GlComponentHeaderDefaultComponent, GlComponentHeaderDefaultInterface };
+export { GlComponentHeaderDefaultComponent } from './gl-ng-headers-frontend/src/lib/component/default/gl-component-header-default.component';
+export { THeaderTheme } from './gl-ng-headers-frontend/src/lib/component/default/gl-component-header-default.interface';
 // endregion
 

@@ -5,7 +5,7 @@ export { ComponentModule as  GlNgMenusComponentModule } from './gl-ng-menus-fron
 export { GlNgMenusFrontendModule } from './gl-ng-menus-frontend/src/lib/gl-ng-menus-frontend.module';
 
 // region interfaces
-export * from './gl-ng-menus-frontend/src/lib/interfaces/global.interface';
+export { TTheme } from './gl-ng-menus-frontend/src/lib/interfaces/global.interface';
 // endregion
 
 
@@ -15,13 +15,9 @@ export { GlComponentMenuBackgroundComponent };
 // endregion
 
 // region item
-import { GlComponentMenuComponent } from './gl-ng-menus-frontend/src/lib/component/menu/gl-component-menu.component';
-import { GlComponentMenuService } from './gl-ng-menus-frontend/src/lib/component/menu/gl-component-menu.service';
-import { GlComponentMenuItemComponent } from './gl-ng-menus-frontend/src/lib/component/menu/item/gl-component-menu-item.component';
-import * as GlComponentMenuInterface from './gl-ng-menus-frontend/src/lib/component/menu/gl-component-menu.interface';
-import * as GlComponentMenuItemInterface from './gl-ng-menus-frontend/src/lib/component/menu/item/gl-component-menu-item.interface';
-
-export {
-  GlComponentMenuItemComponent, GlComponentMenuItemInterface, GlComponentMenuComponent, GlComponentMenuService, GlComponentMenuInterface
-};
+export { GlComponentMenuComponent } from './gl-ng-menus-frontend/src/lib/component/menu/gl-component-menu.component';
+export { GlComponentMenuService } from './gl-ng-menus-frontend/src/lib/component/menu/gl-component-menu.service';
+export { GlComponentMenuItemComponent } from './gl-ng-menus-frontend/src/lib/component/menu/item/gl-component-menu-item.component';
+export { TMenuPosition } from './gl-ng-menus-frontend/src/lib/component/menu/gl-component-menu.interface';
+export { IMenuItemComplex, TMenuItemTheme, IMenuItem, TUrlTarget } from './gl-ng-menus-frontend/src/lib/component/menu/item/gl-component-menu-item.interface';
 // endregion

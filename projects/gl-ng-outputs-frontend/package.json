@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-outputs-frontend",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_outputs.ts",
   "types": "gl-ng-outputs-frontend.d.ts",

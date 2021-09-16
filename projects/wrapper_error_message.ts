@@ -6,18 +6,15 @@ export { ViewModule as GlNgErrorMessageViewModule } from './gl-ng-error-message-
 export { GlNgErrorMessageFrontendModule } from './gl-ng-error-message-frontend/src/lib/gl-ng-error-message-frontend.module';
 
 // region interfaces
-export * from './gl-ng-error-message-frontend/src/lib/interfaces/global.interface';
+export { TTheme } from './gl-ng-error-message-frontend/src/lib/interfaces/global.interface';
 // endregion
 
 // region error-message
-import { GlComponentErrorMessageComponent } from './gl-ng-error-message-frontend/src/lib/component/error-message/gl-component-error-message.component';
-import * as GlComponentErrorMessageInterface from './gl-ng-error-message-frontend/src/lib/component/error-message/gl-component-error-message.component.interface';
-
-export { GlComponentErrorMessageComponent, GlComponentErrorMessageInterface };
+export { GlComponentErrorMessageComponent } from './gl-ng-error-message-frontend/src/lib/component/error-message/gl-component-error-message.component';
+export { TErrorMessagePosition } from './gl-ng-error-message-frontend/src/lib/component/error-message/gl-component-error-message.component.interface';
 // endregion
 
 // region view error-message
-import { GlViewErrorMessageComponent } from './gl-ng-error-message-frontend/src/lib/view/error-message/gl-view-error-message.component';
-export { GlViewErrorMessageComponent };
+export { GlViewErrorMessageComponent } from './gl-ng-error-message-frontend/src/lib/view/error-message/gl-view-error-message.component';
 // endregion
 

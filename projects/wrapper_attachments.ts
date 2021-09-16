@@ -7,20 +7,17 @@ export { ComponentModule  as GlNgAttachmentsComponentModule} from './gl-ng-attac
 export { GlNgAttachmentsFrontendModule } from './gl-ng-attachments-frontend/src/lib/gl-ng-attachments-frontend.module';
 
 // region interfaces
-export * from './gl-ng-attachments-frontend/src/lib/core/interfaces/global.interface';
+export { TTheme } from './gl-ng-attachments-frontend/src/lib/core/interfaces/global.interface';
 // endregion
 
 // region image
-import { GlComponentAttachmentImagePreviewComponent } from './gl-ng-attachments-frontend/src/lib/component/image/preview/gl-component-attachment-image-preview.component';
-import { GlComponentAttachmentImagePreviewService } from './gl-ng-attachments-frontend/src/lib/component/image/preview/gl-component-attachment-image-preview.service';
-import * as GlComponentAttachmentImagePreviewInterface from './gl-ng-attachments-frontend/src/lib/component/image/preview/gl-component-attachment-image-preview.interface';
-
-export { GlComponentAttachmentImagePreviewComponent, GlComponentAttachmentImagePreviewService, GlComponentAttachmentImagePreviewInterface };
+export { GlComponentAttachmentImagePreviewComponent } from './gl-ng-attachments-frontend/src/lib/component/image/preview/gl-component-attachment-image-preview.component';
+export { GlComponentAttachmentImagePreviewService } from './gl-ng-attachments-frontend/src/lib/component/image/preview/gl-component-attachment-image-preview.service';
+export { IImageString, IImageUpdate } from './gl-ng-attachments-frontend/src/lib/component/image/preview/gl-component-attachment-image-preview.interface';
 // endregion
 
 // region item
-import { GlComponentAttachmentItemComponent } from './gl-ng-attachments-frontend/src/lib/component/item/gl-component-attachment-item.component';
-import * as GlComponentAttachmentItemInterface from './gl-ng-attachments-frontend/src/lib/component/item/gl-component-attachment-item.interface';
-export { GlComponentAttachmentItemComponent, GlComponentAttachmentItemInterface };
+export { GlComponentAttachmentItemComponent } from './gl-ng-attachments-frontend/src/lib/component/item/gl-component-attachment-item.component';
+export { TAttachmentItemType } from './gl-ng-attachments-frontend/src/lib/component/item/gl-component-attachment-item.interface';
 // endregion
 

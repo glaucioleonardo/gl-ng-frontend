@@ -10,8 +10,7 @@ export { GlNgOutputsFrontendModule } from './gl-ng-outputs-frontend/src/lib/gl-n
 // endregion
 
 // region interfaces
-import * as GLOutputsInterfaces from './gl-ng-outputs-frontend/src/lib/interfaces/global.interface';
-export { GLOutputsInterfaces };
+export { TTheme } from './gl-ng-outputs-frontend/src/lib/interfaces/global.interface';
 // endregion
 
 // region pipes
@@ -19,14 +18,8 @@ export { GLOutputsInterfaces };
 // endregion
 
 // region Video
-import { GlComponentOutputsVideoPreviewComponent } from './gl-ng-outputs-frontend/src/lib/component/video/preview/gl-component-outputs-video-preview.component';
-import { GlComponentOutputsVideoPreviewService } from './gl-ng-outputs-frontend/src/lib/component/video/preview/gl-component-outputs-video-preview.service';
-import * as GlComponentOutputsVideoPreviewServiceInterface from './gl-ng-outputs-frontend/src/lib/component/video/preview/gl-component-outputs-video-preview.interface';
-
-export {
-  GlComponentOutputsVideoPreviewComponent,
-  GlComponentOutputsVideoPreviewService,
-  GlComponentOutputsVideoPreviewServiceInterface,
-};
+export { GlComponentOutputsVideoPreviewComponent } from './gl-ng-outputs-frontend/src/lib/component/video/preview/gl-component-outputs-video-preview.component';
+export { GlComponentOutputsVideoPreviewService } from './gl-ng-outputs-frontend/src/lib/component/video/preview/gl-component-outputs-video-preview.service';
+export { TVideoPreload, IPlayerData } from './gl-ng-outputs-frontend/src/lib/component/video/preview/gl-component-outputs-video-preview.interface';
 // endregion
 

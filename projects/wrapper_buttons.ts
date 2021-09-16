@@ -5,7 +5,7 @@ export { ComponentModule as GlNgButtonsComponentModule } from './gl-ng-buttons-f
 export { GlNgButtonsFrontendModule } from './gl-ng-buttons-frontend/src/lib/gl-ng-buttons-frontend.module';
 
 // region interfaces
-export * from './gl-ng-buttons-frontend/src/lib/interfaces/global.interface';
+export { TTheme } from './gl-ng-buttons-frontend/src/lib/interfaces/global.interface';
 // endregion
 
 // region attachment
@@ -19,14 +19,20 @@ export { GlComponentButtonAttachmentFileComponent, GlComponentButtonAttachmentFi
 // region image
 import { GlComponentButtonImageSimpleComponent } from './gl-ng-buttons-frontend/src/lib/component/image/simple/gl-component-button-image-simple.component';
 import { GlComponentButtonImageTooltipComponent } from './gl-ng-buttons-frontend/src/lib/component/image/tooltip/gl-component-button-image-tooltip.component';
-import * as GlComponentButtonImageSimpleInterface from './gl-ng-buttons-frontend/src/lib/component/image/simple/gl-component-button-image-simple.interface';
-import * as GlComponentButtonImageTooltipInterface from './gl-ng-buttons-frontend/src/lib/component/image/tooltip/gl-component-button-image-tooltip.interface';
+import { IButtonImageSimple } from './gl-ng-buttons-frontend/src/lib/component/image/simple/gl-component-button-image-simple.interface';
+import {
+  IImageButtonTooltip, TButtonToolTipBorder, TButtonToolTipHorizontalPosition, TButtonToolTipVerticalPosition, TButtonToolTipWidth
+} from './gl-ng-buttons-frontend/src/lib/component/image/tooltip/gl-component-button-image-tooltip.interface';
 
 export {
   GlComponentButtonImageSimpleComponent,
   GlComponentButtonImageTooltipComponent,
-  GlComponentButtonImageSimpleInterface,
-  GlComponentButtonImageTooltipInterface
+  IButtonImageSimple,
+  IImageButtonTooltip,
+  TButtonToolTipBorder,
+  TButtonToolTipHorizontalPosition,
+  TButtonToolTipVerticalPosition,
+  TButtonToolTipWidth
 };
 // endregion
 
@@ -38,8 +44,8 @@ export { GlComponentButtonInterfaceComponent };
 // region menu
 import { GlComponentButtonMenuSimpleComponent } from './gl-ng-buttons-frontend/src/lib/component/menu/simple/gl-component-button-menu-simple.component';
 import { GlComponentButtonMenuTooltipComponent } from './gl-ng-buttons-frontend/src/lib/component/menu/tooltip/gl-component-button-menu-tooltip.component';
-import * as GlComponentButtonMenuSimpleInterface from './gl-ng-buttons-frontend/src/lib/component/menu/simple/gl-component-button-menu-simple.interface';
+import { IMenuButton } from './gl-ng-buttons-frontend/src/lib/component/menu/simple/gl-component-button-menu-simple.interface';
 
-export { GlComponentButtonMenuSimpleComponent, GlComponentButtonMenuSimpleInterface, GlComponentButtonMenuTooltipComponent };
+export { GlComponentButtonMenuSimpleComponent, IMenuButton, GlComponentButtonMenuTooltipComponent };
 // endregion
 

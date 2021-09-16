@@ -5,17 +5,14 @@ export { ComponentModule as GlNgNavigationComponentModule } from './gl-ng-naviga
 export { GlNgNavigationFrontendModule } from './gl-ng-navigation-frontend/src/lib/gl-ng-navigation-frontend.module';
 
 // region interfaces
-export * from './gl-ng-navigation-frontend/src/lib/interfaces/global.interface';
+export { TTheme } from './gl-ng-navigation-frontend/src/lib/interfaces/global.interface';
 // endregion
 
 // region simple
-import { GlComponentNavigationTabSimpleComponent } from './gl-ng-navigation-frontend/src/lib/component/tab/simple/gl-component-navigation-tab-simple.component';
-import * as GlComponentNavigationTabSimpleInterface from './gl-ng-navigation-frontend/src/lib/component/tab/simple/gl-component-navigation-tab-simple.component';
-
-export { GlComponentNavigationTabSimpleComponent, GlComponentNavigationTabSimpleInterface };
+export { GlComponentNavigationTabSimpleComponent } from './gl-ng-navigation-frontend/src/lib/component/tab/simple/gl-component-navigation-tab-simple.component';
+export { INavigationTab } from './gl-ng-navigation-frontend/src/lib/component/tab/simple/gl-component-navigation-tab-simple.interface';
 // endregion
 
 // region container
-import { GlComponentNavigationTabContainerComponent } from './gl-ng-navigation-frontend/src/lib/component/tab/container/gl-component-navigation-tab-container.component';
-export { GlComponentNavigationTabContainerComponent };
+export { GlComponentNavigationTabContainerComponent } from './gl-ng-navigation-frontend/src/lib/component/tab/container/gl-component-navigation-tab-container.component';
 // endregion
