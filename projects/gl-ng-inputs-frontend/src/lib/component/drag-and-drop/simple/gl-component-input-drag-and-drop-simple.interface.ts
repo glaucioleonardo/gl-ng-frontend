@@ -22,7 +22,7 @@ export interface IDragAndDropVariables {
   acceptFileType: string[];
 
   $uploadClick: TAttachmentUploadResult;
-  $attachmentItems: TAttachmentUploadResult;
+  $attachmentItems: IDragAndDropAddedResult;
 }
 
 export type TAttachmentUploadResult = (attachments: IAttachmentData[]) => void;
