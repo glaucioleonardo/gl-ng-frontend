@@ -4,7 +4,8 @@
   "lib": {
     "entryFile": "../wrapper_lists.ts",
     "umdModuleIds": {
-      "gl-w-frontend": "gl-w-frontend"
+      "gl-w-attachment-frontend": "gl-w-attachment-frontend",
+      "gl-w-number-frontend": "gl-w-number-frontend"
     }
   },
   "assets": [

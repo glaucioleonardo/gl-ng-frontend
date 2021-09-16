@@ -4,9 +4,13 @@
   "lib": {
     "entryFile": "../wrapper_filters.ts",
     "umdModuleIds": {
-      "gl-w-frontend": "gl-w-frontend",
       "smooth-scroll": "smooth-scroll",
-      "decimal.js": "decimal.js"
+      "decimal.js": "decimal.js",
+      "gl-w-number-frontend": "gl-w-number-frontend",
+      "gl-w-image-frontend": "gl-w-image-frontend",
+      "gl-w-date-frontend": "gl-w-date-frontend",
+      "gl-w-input-frontend": "gl-w-input-frontend",
+      "gl-w-attachment-frontend": "gl-w-attachment-frontend"
     }
   },
   "assets": [

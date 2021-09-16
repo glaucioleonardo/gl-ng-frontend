@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-outputs-frontend",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_outputs.ts",
   "types": "gl-ng-outputs-frontend.d.ts",
@@ -20,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
-
   "peerDependencies": {
     "@angular/common": "~12.2.5",
     "@angular/core": "^12.2.5"

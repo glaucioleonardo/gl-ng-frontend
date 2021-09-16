@@ -4,7 +4,8 @@
   "lib": {
     "entryFile": "../wrapper_buttons.ts",
     "umdModuleIds": {
-      "gl-w-frontend": "gl-w-frontend"
+      "gl-w-attachment-frontend": "gl-w-attachment-frontend",
+      "gl-w-number-frontend": "gl-w-number-frontend"
     }
   },
   "assets": [
@@ -14,6 +15,8 @@
   "allowedNonPeerDependencies": [
     "gl-scss-styles",
     "gl-icons-assets",
-    "gl-sp-frontend"
+    "gl-sp-frontend",
+    "gl-w-attachment-frontend",
+    "gl-w-number-frontend"
   ]
 }

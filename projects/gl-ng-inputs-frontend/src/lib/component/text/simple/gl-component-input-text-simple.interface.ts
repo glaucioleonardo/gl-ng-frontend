@@ -1,4 +1,4 @@
-import { TCurrencyTypes, TPercentageTypes } from 'gl-w-frontend';
+import { TCurrencyTypes, TPercentageTypes } from 'gl-w-input-frontend';
 
 export interface ISimpleTextResult {
   value: string;

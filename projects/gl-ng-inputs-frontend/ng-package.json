@@ -4,7 +4,12 @@
   "lib": {
     "entryFile": "../wrapper_inputs.ts",
     "umdModuleIds": {
-      "gl-w-frontend": "gl-w-frontend",
+      "gl-w-combobox-frontend": "gl-w-combobox-frontend",
+      "gl-w-date-frontend": "gl-w-date-frontend",
+      "gl-w-attachment-frontend": "gl-w-attachment-frontend",
+      "gl-w-number-frontend": "gl-w-number-frontend",
+      "gl-w-input-frontend": "gl-w-input-frontend",
+      "gl-w-image-frontend": "gl-w-image-frontend'",
       "gl-sp-frontend": "gl-sp-frontend",
       "decimal.js": "decimal.js"
     }
@@ -16,7 +21,6 @@
   ],
   "allowedNonPeerDependencies": [
     "gl-scss-styles",
-    "gl-w-frontend",
     "gl-sp-frontend",
     "gl-ng-titles-frontend",
     "gl-icons-assets",
@@ -24,6 +28,13 @@
     "gl-ng-buttons-frontend",
     "gl-ng-attachments-frontend",
     "gl-ng-modals-frontend",
+
+    "gl-w-combobox-frontend",
+    "gl-w-date-frontend",
+    "gl-w-attachment-frontend",
+    "gl-w-number-frontend",
+    "gl-w-input-frontend",
+
     "@angular/cdk",
     "@angular/material",
     "@angular/material-moment-adapter"

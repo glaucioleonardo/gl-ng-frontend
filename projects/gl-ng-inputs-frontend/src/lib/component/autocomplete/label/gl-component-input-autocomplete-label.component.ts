@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IComboBoxData } from 'gl-w-frontend';
+import { IComboBoxData } from 'gl-w-combobox-frontend';
 import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignments.interface';
 
 @Component({

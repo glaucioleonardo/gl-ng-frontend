@@ -1,5 +1,3 @@
-import { IComboBoxData } from 'gl-w-frontend';
-
 export interface IDropdownSettings {
   singleSelection?: boolean;
   idField?: string;

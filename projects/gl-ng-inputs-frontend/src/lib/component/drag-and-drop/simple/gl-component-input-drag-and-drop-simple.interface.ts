@@ -1,4 +1,4 @@
-import { IAttachmentData } from 'gl-w-frontend/lib/scripts/core/services/attachment/core-services-attachment.interface';
+import { IAttachmentData } from 'gl-w-attachment-frontend';
 
 export interface IDragAndDropVariables {
   descriptionDragAndDrop: string;

@@ -1,5 +1,5 @@
 import { Injectable, OnDestroy } from '@angular/core';
-import { IAttachmentData } from 'gl-w-frontend/lib/scripts/core/services/attachment/core-services-attachment.interface';
+import { IAttachmentData } from 'gl-w-attachment-frontend';
 import { Subject } from 'rxjs';
 import { GlComponentModalAlertService } from '../alert/gl-component-modal-alert.service';
 import { TModalUploadFunction } from './gl-component-modal-upload-file.interface';

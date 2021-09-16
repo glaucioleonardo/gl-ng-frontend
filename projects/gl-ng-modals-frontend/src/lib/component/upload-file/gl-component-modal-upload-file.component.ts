@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IAttachmentData } from 'gl-w-frontend/lib/scripts/core/services/attachment/core-services-attachment.interface';
+import { IAttachmentData } from 'gl-w-attachment-frontend';
 import { GlComponentModalUploadFileService } from './gl-component-modal-upload-file.service';
 
 @Component({

@@ -1,8 +1,9 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, Output, ViewChild } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { InputMask, TCurrencyTypes } from 'gl-w-input-frontend';
+import { NumberParse, TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-number-frontend';
 import { THorizontalAlignment } from '../../../core/interfaces/alignments.interface';
 import { ISimpleTextResult, TInputTextMask, TInputTextTheme, TInputType } from './gl-component-input-text-simple.interface';
-import { InputMask, NumberParse, TCurrencySymbolTypes, TCurrencyTypes, TDecimalSeparators } from 'gl-w-frontend';
 import { GlComponentInputTextSimpleService } from './gl-component-input-text-simple.service';
 
 @Component({

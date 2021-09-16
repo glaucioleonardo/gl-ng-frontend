@@ -1,6 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { AttachmentIcon, AttachmentValidate } from 'gl-w-frontend';
-import { IAttachmentData } from 'gl-w-frontend/lib/scripts/core/services/attachment/core-services-attachment.interface';
+import { AttachmentIcon, AttachmentValidate, IAttachmentData } from 'gl-w-attachment-frontend';
 import { GlComponentModalAlertService } from '../../../../../../gl-ng-modals-frontend/src/lib/component/alert/gl-component-modal-alert.service';
 import { IDragAndDropAddedResult } from './gl-component-input-drag-and-drop-simple.interface';
 

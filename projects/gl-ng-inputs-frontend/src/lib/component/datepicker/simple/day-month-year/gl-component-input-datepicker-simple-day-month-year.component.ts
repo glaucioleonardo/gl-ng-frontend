@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MAT_MOMENT_DATE_ADAPTER_OPTIONS, MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
-import { DateGet } from 'gl-w-frontend';
+import { DateGet } from 'gl-w-date-frontend';
 import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignments.interface';
 import { IDatePickerOutput } from './gl-component-input-datepicker-simple-day-month-year.interface';
 

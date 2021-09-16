@@ -2,9 +2,9 @@ import { Overlay } from '@angular/cdk/overlay';
 import { Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatAutocomplete } from '@angular/material/autocomplete';
+import { IComboBoxData } from 'gl-w-combobox-frontend';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { IComboBoxData } from 'gl-w-frontend';
 import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignments.interface';
 import { GlComponentInputAutocompleteSimpleService } from './gl-component-input-autocomplete-simple.service';
 

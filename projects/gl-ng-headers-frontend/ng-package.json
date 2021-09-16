@@ -4,14 +4,14 @@
   "lib": {
     "entryFile": "../wrapper_headers.ts",
     "umdModuleIds": {
-      "gl-w-frontend": "gl-w-frontend"
+      "gl-w-attachment-frontend": "gl-w-attachment-frontend",
+      "gl-w-number-frontend": "gl-w-number-frontend"
     }
   },
   "assets": [
     "../../node_modules/gl-scss-styles/assets"
   ],
   "allowedNonPeerDependencies": [
-    "gl-scss-styles",
-    "gl-w-frontend"
+    "gl-scss-styles"
   ]
 }

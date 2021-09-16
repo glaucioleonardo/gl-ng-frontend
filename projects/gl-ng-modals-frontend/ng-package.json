@@ -4,7 +4,11 @@
   "lib": {
     "entryFile": "../wrapper_modals.ts",
     "umdModuleIds": {
-      "gl-w-frontend": "gl-w-frontend",
+      "gl-w-attachment-frontend": "gl-w-attachment-frontend",
+      "gl-w-number-frontend": "gl-w-number-frontend",
+      "gl-w-image-frontend": "gl-w-image-frontend",
+      "gl-w-date-frontend": "gl-w-date-frontend",
+      "gl-w-input-frontend": "gl-w-input-frontend",
       "decimal.js": "decimal.js"
     }
   },
@@ -13,6 +17,6 @@
   ],
   "allowedNonPeerDependencies": [
     "gl-scss-styles",
-    "gl-w-frontend"
+    "gl-w-attachment-frontend"
   ]
 }

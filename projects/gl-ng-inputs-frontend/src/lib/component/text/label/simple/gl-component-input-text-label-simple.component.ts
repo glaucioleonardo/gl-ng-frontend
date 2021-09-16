@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-frontend';
+import { TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-number-frontend';
 import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignments.interface';
 import { TInputTextMask, TInputType } from '../../simple/gl-component-input-text-simple.interface';
 
