@@ -21,3 +21,10 @@ export { GlComponentMenuItemComponent } from './gl-ng-menus-frontend/src/lib/com
 export { TMenuPosition } from './gl-ng-menus-frontend/src/lib/component/menu/gl-component-menu.interface';
 export { IMenuItemComplex, TMenuItemTheme, IMenuItem, TUrlTarget } from './gl-ng-menus-frontend/src/lib/component/menu/item/gl-component-menu-item.interface';
 // endregion
+
+// region action
+export { GlComponentModalActionsComponent } from './gl-ng-menus-frontend/src/lib/component/modal/actions/gl-component-modal-actions.component';
+export { GlComponentModalActionsService } from './gl-ng-menus-frontend/src/lib/component/modal/actions/gl-component-modal-actions.service';
+export { GlComponentModalActionsItemComponent } from './gl-ng-menus-frontend/src/lib/component/modal/actions/item/gl-component-modal-actions-item.component';
+export { IModalItemAction } from './gl-ng-menus-frontend/src/lib/component/modal/actions/item/gl-component-modal-actions-item.interface';
+// endregion

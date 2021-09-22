@@ -1,0 +1,11 @@
+<div class="action-item-container" (click)="onClick()" *ngIf="!hide">
+  <span
+    class="action-title"
+    [class.red]="red"
+  >{{ title }}</span>
+
+  <img
+    alt="Icon"
+    class="action-icon"
+    [src]="icon">
+</div>

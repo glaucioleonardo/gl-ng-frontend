@@ -1,0 +1,29 @@
+<div
+  *ngIf="service.showModal"
+  (keydown.escape)="service.hide()"
+  id="modal"
+  class="modal-container {{ service.modalClass }}"
+  tabindex="-1">
+
+  <div class="modal-main-content">
+    <div class="background" (click)="service.hide()"></div>
+
+    <div class="action-main-container">
+      <gl-component-modal-actions-item
+        *ngFor="let item of service.actions"
+        [title]="item.title"
+        [icon]="item.icon"
+        [red]="item.red"
+        [hide]="item.hide"
+        [action]="item.action"
+        ($clicked)="service.hide()"
+      ></gl-component-modal-actions-item>
+    </div>
+
+    <img
+      alt="Close icon"
+      class="close close-modal"
+      src="assets/img/icon/menu/close.svg"
+      (click)="service.hide()">
+  </div>
+</div>
