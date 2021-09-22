@@ -65,10 +65,6 @@
       z-index: 2;
 
       gl-component-modal-actions-item {
-        .action-item-container {
-          border-bottom: solid 1px c-gray-dark.$d2;
-        }
-
         &:nth-child(1) {
           .action-item-container {
             border-top-left-radius: 0.5em;

@@ -3,5 +3,7 @@ export interface IModalItemAction {
   icon: string;
   action: () => void;
   red: boolean;
+  green: boolean;
   hide?: boolean;
+  groupSplit?: boolean;
 }

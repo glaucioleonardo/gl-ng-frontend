@@ -9,8 +9,10 @@ export class GlComponentModalActionsItemComponent implements OnInit {
   @Input() title: string;
   @Input() icon: string;
   @Input() red = false;
+  @Input() green = false;
   @Input() action: () => void;
   @Input() hide = true;
+  @Input() groupSplit = false;
 
   @Output() $clicked: EventEmitter<void> = new EventEmitter();
 
@@ -37,8 +39,13 @@ export class GlComponentModalActionsItemComponent implements OnInit {
     GlComponentModalActionsItemComponent.checkField(this.title, 'title');
     GlComponentModalActionsItemComponent.checkField(this.icon, 'icon');
     GlComponentModalActionsItemComponent.checkField(this.red, 'red');
+    GlComponentModalActionsItemComponent.checkField(this.green, 'green');
     GlComponentModalActionsItemComponent.checkField(this.action, 'action');
     GlComponentModalActionsItemComponent.checkField(this.hide, 'hide');
+
+    if (this.red && this.green) {
+      throw Error('You cannot set the item as green and red!');
+    }
   }
 
   onClick(): void {

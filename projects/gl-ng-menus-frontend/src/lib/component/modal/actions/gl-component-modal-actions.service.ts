@@ -22,7 +22,7 @@ export class GlComponentModalActionsService {
     }
     this.actions.push(...actions);
   }
-  addSingleAction(title: string, icon: string, action: () => void, red: boolean, hide?: boolean, removeCurrent: boolean = false): void {
+  addSingleAction(title: string, icon: string, action: () => void, red: boolean, green: boolean, hide?: boolean, groupSplit?: boolean, removeCurrent: boolean = false): void {
     const actionExists = this.actions.filter(x => x.title === title).length > 0;
 
     if (removeCurrent) {
@@ -30,7 +30,7 @@ export class GlComponentModalActionsService {
     }
 
     if (!actionExists) {
-      this.actions.push({ title, icon, action, red, hide });
+      this.actions.push({ title, icon, action, red, green, hide, groupSplit });
     }
   }
   removeAction(index: number, deleteCount: number = 1): void {

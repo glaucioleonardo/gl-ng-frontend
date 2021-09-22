@@ -1,7 +1,8 @@
-<div class="action-item-container" (click)="onClick()" *ngIf="!hide">
+<div class="action-item-container" [class.group-split]="groupSplit" (click)="onClick()" *ngIf="!hide">
   <span
     class="action-title"
     [class.red]="red"
+    [class.green]="green"
   >{{ title }}</span>
 
   <img
