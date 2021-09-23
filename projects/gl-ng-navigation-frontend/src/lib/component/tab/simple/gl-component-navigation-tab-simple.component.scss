@@ -43,7 +43,6 @@
       .tab-sequence-content {
         @include fonts.font-family-custom('bold');
         font-size: 0.5em;
-        //font-size: 1em;
         z-index: 100;
         user-select: none;
       }
@@ -173,6 +172,86 @@
 
         .navigation-tab-icon {
           opacity: 0.3;
+        }
+      }
+    }
+
+    &.safari-style {
+      font-size: 1.5em;
+      background-color: c-gray-dark.$d2-7;
+      margin: 0.25em 0.125em;
+
+      $first-item-margin: 0.25em 0.125em 0.25em 0.25em;
+      $last-item-margin: 0.25em 0.25em 0.25em 0.125em;
+
+      &.first-item {
+        margin: $first-item-margin;
+        transition: margin 0.2s ease-in-out;
+      }
+      &.last-item {
+        margin: $last-item-margin;
+        transition: margin 0.2s ease-in-out;
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+        user-select: none;
+      }
+
+      .tab-sequence {
+        border-radius: 0.15em;
+
+        .tab-sequence-content {
+          @include fonts.font-family-custom(semi-regular);
+        }
+      }
+
+      .tab-description {
+        @include fonts.font-family-custom(regular);
+      }
+
+      .navigation-tab-icon {
+        width: 0.8em;
+        height: 0.8em;
+        border-radius: 0.15em;
+      }
+
+      &.active {
+        border-radius: 0.25em;
+
+        &.first-item {
+          margin: $first-item-margin;
+        }
+
+        &.last-item {
+          margin: $last-item-margin;
+        }
+
+        &:before, &:after {
+          content: none;
+        }
+      }
+
+      &:not(.active) {
+        border-radius: 0.25em;
+
+        &:hover {
+          position: relative;
+          background-color: c-gray-dark.$d2-3;
+          border-radius: 0.25em;
+          margin: 0.25em 0.125em;
+
+          &:before, &:after {
+            content: none;
+          }
+
+          &.first-item {
+            margin: $first-item-margin;
+          }
+
+          &.last-item {
+            margin: $last-item-margin;
+          }
         }
       }
     }

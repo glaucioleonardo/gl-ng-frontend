@@ -1,4 +1,12 @@
-<div class="navigation-tab {{ tabEnabled ? '' : 'disabled' }} {{ tabActive ? 'active' : '' }} {{ tabIsTheFirst ? 'first-item' : '' }} {{ tabIsTheLast ? 'last-item' : '' }}" (click)="activate(tabSequence)">
+<div
+  class="navigation-tab"
+  (click)="activate(tabSequence)"
+  [class.disabled]="tabEnabled"
+  [class.active]="tabActive"
+  [class.first-item]="tabIsTheFirst"
+  [class.last-item]="tabIsTheLast"
+  [class.safari-style]="safariStyle">
+
   <div class="tab-sequence">
     <span class="tab-sequence-content">{{ tabSequence }}</span>
   </div>
@@ -9,4 +17,4 @@
     class="navigation-tab-icon"
     alt="Tab icon">
 </div>
-<div class="border-bottom"></div>
+<div class="border-bottom" *ngIf="!safariStyle"></div>

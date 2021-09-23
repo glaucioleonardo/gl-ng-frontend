@@ -13,6 +13,7 @@ export class GlComponentNavigationTabSimpleComponent {
   @Input() tabIsTheFirst: boolean;
   @Input() tabIsTheLast: boolean;
   @Input() tabEnabled = true;
+  @Input() safariStyle = true;
 
   @Input() srcIcon: string = null;
   @Input() showIcon = false;
