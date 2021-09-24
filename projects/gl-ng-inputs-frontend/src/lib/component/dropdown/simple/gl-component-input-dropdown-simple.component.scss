@@ -199,6 +199,8 @@
       .filter-textbox {
         margin: 1px 0;
         position: relative;
+        flex-grow: 1;
+        display: flex;
 
         input {
           @include fonts.font-family-custom(regular);
