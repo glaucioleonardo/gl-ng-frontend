@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-inputs-frontend",
-  "version": "5.0.10",
+  "version": "5.1.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_inputs.ts",
   "types": "gl-ng-inputs-frontend.d.ts",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "gl-icons-assets": "^1.5.0",
-    "gl-scss-styles": "^3.1.0",
+    "gl-scss-styles": "^3.1.1",
     "gl-sp-frontend": "^2.4.5",
     "decimal.js": "^10.3.1",
     "@angular/cdk": "^12.2.5",

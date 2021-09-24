@@ -53,7 +53,7 @@ export { IDragAndDropAddedResult, IDragAndDropVariables, TAttachmentUploadResult
 // region dropdown
 export { GlComponentInputDropdownSimpleComponent, DROPDOWN_CONTROL_VALUE_ACCESSOR } from './gl-ng-inputs-frontend/src/lib/component/dropdown/simple/gl-component-input-dropdown-simple.component';
 export { GlComponentInputDropdownLabelComponent } from './gl-ng-inputs-frontend/src/lib/component/dropdown/label/gl-component-input-dropdown-label.component';
-export { IDropdownSettings, ListItem as DropDownListItem, } from './gl-ng-inputs-frontend/src/lib/component/dropdown/simple/gl-component-input-dropdown-simple.model';
+export { IDropdownSettings, ListItem as DropDownListItem } from './gl-ng-inputs-frontend/src/lib/component/dropdown/simple/gl-component-input-dropdown-simple.model';
 // endregion
 
 // region option
@@ -80,5 +80,6 @@ export { ISimpleTextResult, TInputTextTheme, TInputType, TInputTextMask } from '
 
 // region text-area
 export { GlComponentInputTextAreaSimpleComponent } from './gl-ng-inputs-frontend/src/lib/component/text-area/simple/gl-component-input-text-area-simple.component';
+export { ISimpleTextAreaResult } from './gl-ng-inputs-frontend/src/lib/component/text-area/simple/gl-component-input-text-area-simple.interface';
 export { GlComponentInputTextAreaLabelComponent } from './gl-ng-inputs-frontend/src/lib/component/text-area/label/gl-component-input-text-area-label.component';
 // endregion

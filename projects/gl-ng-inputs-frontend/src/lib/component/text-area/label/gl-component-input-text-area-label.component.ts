@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignments.interface';
+import { ISimpleTextAreaResult } from '../simple/gl-component-input-text-area-simple.interface';
 
 @Component({
   selector: 'gl-component-input-text-area-label',
@@ -20,7 +21,7 @@ export class GlComponentInputTextAreaLabelComponent {
   @Input() required: boolean;
   @Input() requiredLabel = 'Required label';
 
-  @Output() currentValue = new EventEmitter();
+  @Output() currentValue: EventEmitter<ISimpleTextAreaResult> = new EventEmitter();
 
   constructor() { }
 

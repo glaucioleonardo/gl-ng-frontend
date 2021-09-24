@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignments.interface';
+import { ISimpleTextAreaResult } from './gl-component-input-text-area-simple.interface';
 
 @Component({
   selector: 'gl-component-input-text-area-simple',
@@ -19,7 +20,7 @@ export class GlComponentInputTextAreaSimpleComponent {
 
   @Input() value = '';
   @Input() maxLength: number;
-  @Output() currentValue = new EventEmitter();
+  @Output() currentValue: EventEmitter<ISimpleTextAreaResult> = new EventEmitter();
 
   constructor() { }
 
