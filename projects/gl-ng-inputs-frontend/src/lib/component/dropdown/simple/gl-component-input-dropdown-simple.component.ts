@@ -132,14 +132,20 @@ export class GlComponentInputDropdownSimpleComponent implements ControlValueAcce
     }
 
     const found = this.isSelected(item);
+    const sameSingleItem = this.isSameSingleItem(item);
     const allowAdd = this._settings.limitSelection === -1 || (this._settings.limitSelection > 0 && this.selectedItems.length < this._settings.limitSelection);
 
-    if (!found) {
+    if (!found || !sameSingleItem) {
       if (allowAdd) {
         this.addSelected(item);
       }
     } else {
       this.removeSelected(item);
+
+      if (sameSingleItem) {
+        this.selectedItems = [];
+        this.$select.emit(this.emittedValue(null));
+      }
     }
 
     if (this._settings.singleSelection && this._settings.closeDropDownOnSelection) {
@@ -202,6 +208,19 @@ export class GlComponentInputDropdownSimpleComponent implements ControlValueAcce
       // should be disabled in single selection mode
       return false;
     }
+  }
+  isSameSingleItem(item: ListItem): boolean {
+    const singleItem = this._settings.singleSelection;
+    const isListItem = typeof item !== 'string' && typeof item !== 'number';
+    let isEqual: boolean;
+
+    if (isListItem) {
+      isEqual = this.selectedItems[0] === item;
+    } else {
+      isEqual = this.selectedItems[0].value === item.value;
+    }
+
+    return singleItem && isEqual;
   }
 
   addSelected(item: ListItem): void {
