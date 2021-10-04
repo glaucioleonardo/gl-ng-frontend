@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-logos-frontend",
-  "version": "4.0.4",
+  "version": "4.0.5",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_logos.ts",
   "types": "gl-ng-logos-frontend.d.ts",
@@ -21,11 +21,11 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "~12.2.5",
-    "@angular/core": "^12.2.5"
+    "@angular/common": "~12.2.8",
+    "@angular/core": "^12.2.8"
   },
   "dependencies": {
-    "gl-scss-styles": "^3.1.0"
+    "gl-scss-styles": "^3.1.1"
   },
   "scripts": {
     "build": "ng build gl-ng-logos-frontend",

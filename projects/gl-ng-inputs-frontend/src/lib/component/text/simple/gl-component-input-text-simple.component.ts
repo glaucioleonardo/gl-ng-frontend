@@ -141,7 +141,7 @@ export class GlComponentInputTextSimpleComponent implements AfterViewInit, OnDes
 
   applyInputMask(): void {
     setTimeout(() => {
-      if (this.mask != null && this._input != null) {
+      if (this.mask != null && this._input != null && this._input.value != null) {
         if (this.mask.includes('currency')) {
           this.inputElement.nativeElement.placeholder = InputMask.currency(
             this.inputElement.nativeElement,

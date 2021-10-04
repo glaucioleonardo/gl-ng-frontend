@@ -115,7 +115,8 @@ export {
   GlComponentInputTextSimpleService,
   GlComponentInputTextSimpleWithStepComponent,
   GlNgInputsFrontendModule,
-  TInputTextMask
+  TInputTextMask,
+  ISimpleTextAreaResult
 } from './wrapper_inputs';
 
 export {
@@ -148,7 +149,11 @@ export {
   GlComponentMenuComponent,
   GlComponentMenuItemComponent,
   GlNgMenusFrontendModule,
-  TUrlTarget
+  TUrlTarget,
+  IModalItemAction,
+  GlComponentModalActionsService,
+  GlComponentModalActionsItemComponent,
+  GlComponentModalActionsComponent
 } from './wrapper_menus';
 
 export {
