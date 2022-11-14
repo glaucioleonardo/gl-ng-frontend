@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-lists-frontend",
-  "version": "4.0.6",
+  "version": "4.0.7",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_lists.ts",
   "types": "gl-ng-lists-frontend.d.ts",
@@ -23,12 +23,12 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "~12.2.8",
-    "@angular/core": "^12.2.8"
+    "@angular/common": "~12.2.16",
+    "@angular/core": "~12.2.16"
   },
   "dependencies": {
     "gl-scss-styles": "^3.1.1",
-    "gl-icons-assets": "^1.5.0",
+    "gl-icons-assets": "^1.5.1",
     "gl-w-attachment-frontend": "^1.0.2",
     "gl-w-number-frontend": "^1.0.1"
   },
