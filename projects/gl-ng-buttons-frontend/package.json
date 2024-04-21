@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-buttons-frontend",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_buttons.ts",
   "types": "gl-ng-buttons-frontend.d.ts",
