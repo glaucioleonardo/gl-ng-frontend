@@ -1,9 +1,9 @@
-@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
-@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
-@use "~gl-scss-styles/assets/style/colors/white/c-white-translucid";
-@use "~gl-scss-styles/assets/style/fonts/fonts";
-@use "~gl-scss-styles/assets/style/components/scrollbar/native-scrollbar";
-@use "~gl-scss-styles/assets/style/general/required-fields";
+@use "node_modules/gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "node_modules/gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "node_modules/gl-scss-styles/assets/style/colors/white/c-white-translucid";
+@use "node_modules/gl-scss-styles/assets/style/fonts/fonts";
+@use "node_modules/gl-scss-styles/assets/style/components/scrollbar/native-scrollbar";
+@use "node_modules/gl-scss-styles/assets/style/general/required-fields";
 
 :host::ng-deep {
   font-size: 1em;

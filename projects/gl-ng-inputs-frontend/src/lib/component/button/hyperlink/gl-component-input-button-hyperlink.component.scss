@@ -1,5 +1,5 @@
-@use "~gl-scss-styles/assets/style/colors/orange/c-orange";
-@use "~gl-scss-styles/assets/style/fonts/fonts";
+@use "node_modules/gl-scss-styles/assets/style/colors/orange/c-orange";
+@use "node_modules/gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   .hyperlink-container {

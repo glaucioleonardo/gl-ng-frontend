@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-titles-frontend",
-  "version": "4.0.7",
+  "version": "4.1.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_titles.ts",
   "types": "gl-ng-titles-frontend.d.ts",
@@ -22,8 +22,8 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "~12.2.16",
-    "@angular/core": "~12.2.16"
+    "@angular/common": "~12.2.17",
+    "@angular/core": "~12.2.17"
   },
   "dependencies": {
     "gl-icons-assets": "^1.5.1",

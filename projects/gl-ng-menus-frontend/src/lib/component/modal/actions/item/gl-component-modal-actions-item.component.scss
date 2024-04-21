@@ -1,7 +1,7 @@
-@use "~gl-scss-styles/assets/style/fonts/fonts";
-@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
-@use "~gl-scss-styles/assets/style/colors/red/c-red-light";
-@use "~gl-scss-styles/assets/style/colors/green/c-green-light";
+@use "node_modules/gl-scss-styles/assets/style/fonts/fonts";
+@use "node_modules/gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "node_modules/gl-scss-styles/assets/style/colors/red/c-red-light";
+@use "node_modules/gl-scss-styles/assets/style/colors/green/c-green-light";
 
 :host::ng-deep {
   .action-item-container {

@@ -1,6 +1,6 @@
-@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
-@use "~gl-scss-styles/assets/style/colors/pink/c-pink";
-@use "~gl-scss-styles/assets/style/fonts/fonts";
+@use "node_modules/gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "node_modules/gl-scss-styles/assets/style/colors/pink/c-pink";
+@use "node_modules/gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   .type-container {

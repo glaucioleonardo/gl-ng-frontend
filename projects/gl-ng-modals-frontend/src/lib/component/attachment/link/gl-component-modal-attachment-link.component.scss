@@ -1,8 +1,8 @@
-@use "~gl-scss-styles/assets/style/colors/black/c-black-translucid";
-@use "~gl-scss-styles/assets/style/colors/gray/c-gray-dark";
-@use "~gl-scss-styles/assets/style/colors/gray/c-gray";
-@use "~gl-scss-styles/assets/style/patterns/gradient";
-@use "~gl-scss-styles/assets/style/fonts/fonts";
+@use "node_modules/gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "node_modules/gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "node_modules/gl-scss-styles/assets/style/colors/gray/c-gray";
+@use "node_modules/gl-scss-styles/assets/style/patterns/gradient";
+@use "node_modules/gl-scss-styles/assets/style/fonts/fonts";
 
 :host::ng-deep {
   .modal-link-container {

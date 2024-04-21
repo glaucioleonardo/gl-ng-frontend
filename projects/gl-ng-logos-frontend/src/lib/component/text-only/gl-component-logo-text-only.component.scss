@@ -1,5 +1,5 @@
-@use "~gl-scss-styles/assets/style/fonts/fonts";
-@use "~gl-scss-styles/assets/style/components/input/input-ellipsis";
+@use "node_modules/gl-scss-styles/assets/style/fonts/fonts";
+@use "node_modules/gl-scss-styles/assets/style/components/input/input-ellipsis";
 
 :host::ng-deep {
   font-size: 1em;
