@@ -1,0 +1,10 @@
+.adding-row-animated {
+  animation: adding-row 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+
+  @keyframes adding-row {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}

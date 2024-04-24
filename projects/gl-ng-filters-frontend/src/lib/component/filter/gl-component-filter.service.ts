@@ -37,7 +37,8 @@ export class GlComponentFilterService {
   }
   open(event: Event): boolean {
     event.preventDefault();
-    this.applyPartialResult();
+
+
     this.container.classList.add('menu-active');
     this.background.classList.add('visible-background');
 
@@ -51,6 +52,13 @@ export class GlComponentFilterService {
 
     this.menuHidden$.next(false);
     this.opened = true;
+
+    setTimeout(async (): Promise<void> => {
+      if(this.applyPartialResult !== null && this.applyPartialResult !== undefined) {
+        await this.applyPartialResult();
+      }
+    }, 100);
+
     return true;
   }
   close(event: Event): boolean {
