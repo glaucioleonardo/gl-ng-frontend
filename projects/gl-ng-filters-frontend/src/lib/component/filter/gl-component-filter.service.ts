@@ -22,12 +22,14 @@ export class GlComponentFilterService {
     background: HTMLDivElement,
     menuNavContainer: HTMLDivElement,
     router: Router,
+    applyPartialResult: () => Promise<void>
   ): void {
     this.container = container;
     this.background = background;
     this.menuNavContainer = menuNavContainer;
     this.router = router;
     this.menuHidden$.next(true);
+    this.applyPartialResult = applyPartialResult;
   }
 
   backgroundClick(event): void {

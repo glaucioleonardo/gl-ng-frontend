@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
 import { TFilterButtonClass, TFilterType } from './gl-component-filter.interface';
 import { GlComponentFilterService } from './gl-component-filter.service';
@@ -34,17 +34,18 @@ export class GlComponentFilterComponent implements AfterViewInit {
   constructor(
     public router: Router,
     public service: GlComponentFilterService
-  ) {
-    service.applyPartialResult = this.applyPartialResult;
-  }
+  ) {}
 
   ngAfterViewInit(): void {
     this.service.initialize(
       this.container.nativeElement,
       this.background.nativeElement,
       this.menuNavContainer.nativeElement,
-      this.router
+      this.router,
+      this.applyPartialResult
     );
+
+
   }
 
   onApply(): void {
