@@ -2,15 +2,7 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/gl-ng-error-message-frontend",
   "lib": {
-    "entryFile": "../wrapper_error_message.ts",
-    "umdModuleIds": {
-      "gl-w-number-frontend": "gl-w-number-frontend",
-      "gl-w-image-frontend": "gl-w-image-frontend",
-      "gl-w-date-frontend": "gl-w-date-frontend",
-      "gl-w-input-frontend": "gl-w-input-frontend",
-      "gl-w-attachment-frontend": "gl-w-attachment-frontend",
-      "decimal.js": "decimal.js"
-    }
+    "entryFile": "../wrapper_error_message.ts"
   },
   "assets": [
     "../../node_modules/gl-scss-styles/assets"

@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-paging-frontend",
-  "version": "4.1.2",
+  "version": "5.0.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_paging.ts",
   "types": "gl-ng-paging-frontend.d.ts",
@@ -21,16 +21,16 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "~12.2.17",
-    "@angular/core": "~12.2.17"
+    "@angular/common": "~13.4.0",
+    "@angular/core": "~13.4.0"
   },
   "dependencies": {
     "gl-scss-styles": "^3.1.1",
-    "gl-w-attachment-frontend": "^1.0.3",
-    "gl-w-number-frontend": "^1.1.0",
-    "gl-w-image-frontend": "^1.0.1",
-    "gl-w-date-frontend": "^1.1.0",
-    "gl-w-input-frontend": "^1.1.0",
+    "gl-w-attachment-frontend": "^2.0.0",
+    "gl-w-number-frontend": "^2.0.0",
+    "gl-w-image-frontend": "^2.0.0",
+    "gl-w-date-frontend": "^2.0.0",
+    "gl-w-input-frontend": "^2.0.0",
     "decimal.js": "^10.4.3"
   },
   "scripts": {

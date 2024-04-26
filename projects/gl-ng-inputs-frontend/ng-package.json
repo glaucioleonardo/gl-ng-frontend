@@ -2,17 +2,7 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/gl-ng-inputs-frontend",
   "lib": {
-    "entryFile": "../wrapper_inputs.ts",
-    "umdModuleIds": {
-      "gl-w-combobox-frontend": "gl-w-combobox-frontend",
-      "gl-w-date-frontend": "gl-w-date-frontend",
-      "gl-w-attachment-frontend": "gl-w-attachment-frontend",
-      "gl-w-number-frontend": "gl-w-number-frontend",
-      "gl-w-input-frontend": "gl-w-input-frontend",
-      "gl-w-image-frontend": "gl-w-image-frontend'",
-      "gl-sp-frontend": "gl-sp-frontend",
-      "decimal.js": "decimal.js"
-    }
+    "entryFile": "../wrapper_inputs.ts"
   },
   "assets": [
     "./assets",

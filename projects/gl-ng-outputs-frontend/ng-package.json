@@ -2,13 +2,7 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/gl-ng-outputs-frontend",
   "lib": {
-    "entryFile": "../wrapper_outputs.ts",
-    "umdModuleIds": {
-      "@videogular/ngx-videogular/controls": "@videogular/ngx-videogular/controls",
-      "@videogular/ngx-videogular/core": "'@videogular/ngx-videogular/core",
-      "@videogular/ngx-videogular/overlay-play": "@videogular/ngx-videogular/overlay-play",
-      "@videogular/ngx-videogular/buffering":  "@videogular/ngx-videogular/buffering"
-    }
+    "entryFile": "../wrapper_outputs.ts"
   },
   "assets": [
     "../../node_modules/gl-scss-styles/assets",

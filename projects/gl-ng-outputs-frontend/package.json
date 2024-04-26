@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-outputs-frontend",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_outputs.ts",
   "types": "gl-ng-outputs-frontend.d.ts",
@@ -21,12 +21,12 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "~12.2.17",
-    "@angular/core": "~12.2.17"
+    "@angular/common": "~13.4.0",
+    "@angular/core": "~13.4.0"
   },
   "dependencies": {
-    "gl-scss-styles": "^3.1.1",
-    "@videogular/ngx-videogular": "^4.2.0"
+    "@videogular/ngx-videogular": "^5.0.1",
+    "gl-scss-styles": "^3.1.1"
   },
   "scripts": {
     "build": "ng build gl-ng-outputs-frontend",

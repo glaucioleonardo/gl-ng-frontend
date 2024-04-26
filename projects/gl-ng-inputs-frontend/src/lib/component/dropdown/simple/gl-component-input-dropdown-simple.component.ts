@@ -217,6 +217,7 @@ export class GlComponentInputDropdownSimpleComponent implements ControlValueAcce
     if (isListItem) {
       isEqual = this.selectedItems[0] === item;
     } else {
+      // @ts-ignore //Todo this is a Typescript bug: https://github.com/microsoft/TypeScript/issues/42999
       isEqual = this.selectedItems[0].value === item.value;
     }
 

@@ -2,15 +2,7 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/gl-ng-paging-frontend",
   "lib": {
-    "entryFile": "../wrapper_paging.ts",
-    "umdModuleIds": {
-      "gl-w-attachment-frontend": "gl-w-attachment-frontend",
-      "gl-w-number-frontend": "gl-w-number-frontend",
-      "gl-w-image-frontend": "gl-w-image-frontend",
-      "gl-w-date-frontend": "gl-w-date-frontend",
-      "gl-w-input-frontend": "gl-w-input-frontend",
-      "decimal.js": "decimal.js"
-    }
+    "entryFile": "../wrapper_paging.ts"
   },
   "assets": [
     "../../node_modules/gl-scss-styles/assets"

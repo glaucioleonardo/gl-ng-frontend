@@ -11,6 +11,25 @@
     "publish": "npm run build-prod && cd dist/gl-ng-frontend && npm publish && cd .. && cd ..",
     "test": "ng test",
     "lint": "ng lint",
+
+    "lib-pub-attachment": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-attachments-frontend",
+    "lib-pub-buttons": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-buttons-frontend",
+    "lib-pub-error-message": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-error-message-frontend",
+    "lib-pub-filters": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-filters-frontend",
+    "lib-pub-footer": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-footer-frontend",
+    "lib-pub-headers": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-headers-frontend",
+    "lib-pub-inputs": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-inputs-frontend",
+    "lib-pub-lists": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-lists-frontend",
+    "lib-pub-logos": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-logos-frontend",
+    "lib-pub-menus": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-menus-frontend",
+    "lib-pub-modals": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-modals-frontend",
+    "lib-pub-navigation": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-navigation-frontend",
+    "lib-pub-outputs": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-outputs-frontend",
+    "lib-pub-paging": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-paging-frontend",
+    "lib-pub-titles": "npm run publish --prefix D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-titles-frontend",
+
+    "lib-pub-all": "npm run publish && npm run lib-pub-attachment && npm run lib-pub-buttons && npm run lib-pub-error-message && npm run lib-pub-filters && npm run lib-pub-footer && npm run lib-pub-headers && npm run lib-pub-inputs && npm run lib-pub-lists && npm run lib-pub-logos && npm run lib-pub-menus && npm run lib-pub-modals && npm run lib-pub-navigation && npm run lib-pub-navigation && npm run lib-pub-outputs && npm run lib-pub-paging && npm run lib-pub-titles",
+
     "gl-styles": "npm run --prefix /Volumes/Data/Backup/Development/web-packages/gl-scss-styles production && npm pack /Volumes/Data/Backup/Development/web-packages/gl-scss-styles && npm i --prefer-offline ./gl-scss-styles-3.0.0.tgz && shx rm -rf ./gl-scss-styles-3.0.0.tgz",
     "glw": "npm run --prefix /Volumes/Data/Backup/Development/web-packages/gl-w-frontend production && npm pack /Volumes/Data/Backup/Development/web-packages/gl-w-frontend && npm i --prefer-offline ./gl-w-frontend-4.1.8.tgz && shx rm -rf ./gl-w-frontend-4.1.8.tgz"
   },

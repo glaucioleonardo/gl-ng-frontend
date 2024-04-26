@@ -88,10 +88,14 @@ export class GlComponentInputAutocompleteSimpleComponent implements OnInit, OnDe
   }
 
   private setup(): void {
-    this.filteredOptions = this.autocompleteInput.valueChanges.pipe(
-      startWith(''),
-      map(value => this.filter(value))
-    );
+    // @ts-ignore Todo check typescript bug
+    this.filteredOptions = this
+      .autocompleteInput
+      .valueChanges
+      // @ts-ignore Todo check typescript bug
+      .pipe(startWith(''),
+        map(value => this.filter(value))
+      );
 
     setTimeout(() => { this.validate(); });
   }

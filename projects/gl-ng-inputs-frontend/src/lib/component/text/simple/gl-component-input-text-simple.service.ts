@@ -11,6 +11,6 @@ export class GlComponentInputTextSimpleService {
   constructor() { }
 
   updateInputMask(): void {
-    this.updateInputMask$.next();
+    this.updateInputMask$.next(undefined);
   }
 }
