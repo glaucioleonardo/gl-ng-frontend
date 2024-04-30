@@ -1,6 +1,6 @@
 import { Overlay } from '@angular/cdk/overlay';
 import { Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { MatAutocomplete } from '@angular/material/autocomplete';
 import { IComboBoxData } from 'gl-w-combobox-frontend';
 import { Observable } from 'rxjs';
@@ -42,7 +42,7 @@ export class GlComponentInputAutocompleteSimpleComponent implements OnInit, OnDe
   private _loaded = false;
   readonly imageSource = '../assets/img/icon/drop-down/arrow-down.svg';
   readonly clearSource = '../assets/img/icon/drop-down/clear.svg';
-  autocompleteInput = new FormControl();
+  autocompleteInput = new UntypedFormControl();
   filteredOptions: Observable<IComboBoxData[]>;
 
   constructor(private _service: GlComponentInputAutocompleteSimpleService, public overlay: Overlay) {

@@ -718,6 +718,5 @@
         }
       }
     }
-  },
-  "defaultProject": "gl-ng-frontend"
+  }
 }
