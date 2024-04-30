@@ -5,7 +5,7 @@
     "entryFile": "../wrapper_logos.ts"
   },
   "assets": [
-    "../../node_modules/gl-scss-styles/assets"
+    "./node_modules/gl-scss-styles/assets"
   ],
   "allowedNonPeerDependencies": [
     "gl-scss-styles"

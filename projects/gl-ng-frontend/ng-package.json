@@ -5,8 +5,8 @@
     "entryFile": "../wrapper_index.ts"
   },
   "assets": [
-    "../../node_modules/gl-scss-styles/assets",
-    "../../node_modules/gl-icons-assets/assets"
+    "./node_modules/gl-scss-styles/assets",
+    "./node_modules/gl-icons-assets/assets"
   ],
   "allowedNonPeerDependencies": [
     "gl-scss-styles",

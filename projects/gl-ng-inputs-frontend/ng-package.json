@@ -6,8 +6,8 @@
   },
   "assets": [
     "./assets",
-    "../../node_modules/gl-icons-assets/assets",
-    "../../node_modules/gl-scss-styles/assets"
+    "./node_modules/gl-icons-assets/assets",
+    "./node_modules/gl-scss-styles/assets"
   ],
   "allowedNonPeerDependencies": [
     "gl-scss-styles",
