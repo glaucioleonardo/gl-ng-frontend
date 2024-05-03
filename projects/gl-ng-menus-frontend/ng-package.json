@@ -11,6 +11,6 @@
   "allowedNonPeerDependencies": [
     "gl-scss-styles",
     "gl-icons-assets",
-    "smooth-scroll"
+    "scroll-into-view-if-needed"
   ]
 }

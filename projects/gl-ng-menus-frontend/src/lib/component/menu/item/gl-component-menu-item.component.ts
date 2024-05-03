@@ -3,8 +3,8 @@ import { Router, RouterLink } from '@angular/router';
 import { IMenuItem, TMenuItemTheme, TUrlTarget } from './gl-component-menu-item.interface';
 import { style, state, animate, transition, trigger } from '@angular/animations';
 import { GlComponentMenuService } from '../gl-component-menu.service';
-import * as SmoothScroll from 'smooth-scroll';
-import { NgIf, NgFor } from '@angular/common';
+import { NgIf, NgFor, ViewportScroller } from '@angular/common';
+import scrollIntoView from 'scroll-into-view-if-needed';
 
 @Component({
     selector: 'gl-component-menu-item',
@@ -60,7 +60,8 @@ export class GlComponentMenuItemComponent {
 
   constructor(
     private _router: Router,
-    private _menu: GlComponentMenuService
+    private _menu: GlComponentMenuService,
+    private _viewportScroller: ViewportScroller
   ) {
 
   }
@@ -84,16 +85,13 @@ export class GlComponentMenuItemComponent {
       this._menu.close(event);
 
       const element: HTMLElement = document.querySelector(`#${this.fragment}`);
-      const scroll = new SmoothScroll(`#${this.fragment}`, {
-        speed: 1000,
-        speedAsDuration: true,
-        easing: 'easeInOutQuad',
-        updateURL: true,
-        popstate: true
+      scrollIntoView(element, {
+        block: 'start',
+        behavior: 'smooth',
+        scrollMode: 'always',
       });
-      scroll.animateScroll(element);
 
-      this.$click.emit({ event, href: this.href, fragment: this.fragment });
+        this.$click.emit({ event, href: this.href, fragment: this.fragment });
     }
   }
 }

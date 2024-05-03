@@ -9,7 +9,6 @@
   ],
   "allowedNonPeerDependencies": [
     "gl-scss-styles",
-    "smooth-scroll",
     "decimal.js",
     "gl-w-number-frontend",
     "gl-w-image-frontend",
