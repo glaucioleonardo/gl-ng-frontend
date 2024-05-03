@@ -18,7 +18,8 @@
     "gl-ng-buttons-frontend",
     "gl-ng-attachments-frontend",
     "gl-ng-modals-frontend",
-
+    "@angular/animations",
+    "@angular/forms",
     "gl-w-combobox-frontend",
     "gl-w-date-frontend",
     "gl-w-attachment-frontend",

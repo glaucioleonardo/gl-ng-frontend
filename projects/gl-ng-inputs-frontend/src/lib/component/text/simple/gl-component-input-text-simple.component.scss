@@ -1,9 +1,9 @@
-@use '~gl-scss-styles/assets/style/colors/white/c-white-translucid';
-@use '~gl-scss-styles/assets/style/colors/black/c-black-translucid';
-@use '~gl-scss-styles/assets/style/colors/gray/c-gray-dark';
-@use '~gl-scss-styles/assets/style/colors/gray/c-gray';
-@use '~gl-scss-styles/assets/style/fonts/fonts';
-@use "node_modules/gl-scss-styles/assets/style/general/required-fields";
+@use 'gl-scss-styles/assets/style/colors/white/c-white-translucid';
+@use 'gl-scss-styles/assets/style/colors/black/c-black-translucid';
+@use 'gl-scss-styles/assets/style/colors/gray/c-gray-dark';
+@use 'gl-scss-styles/assets/style/colors/gray/c-gray';
+@use 'gl-scss-styles/assets/style/fonts/fonts';
+@use "gl-scss-styles/assets/style/general/required-fields";
 
 :host::ng-deep {
   font-size: 1em;

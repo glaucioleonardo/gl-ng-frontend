@@ -1,8 +1,8 @@
-@use "node_modules/gl-scss-styles/assets/style/colors/black/c-black";
-@use "node_modules/gl-scss-styles/assets/style/colors/black/c-black-translucid";
-@use "node_modules/gl-scss-styles/assets/style/colors/gray/c-gray-dark";
-@use "node_modules/gl-scss-styles/assets/style/colors/pink/c-pink-dark";
-@use "node_modules/gl-scss-styles/assets/style/fonts/fonts";
+@use "gl-scss-styles/assets/style/colors/black/c-black";
+@use "gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "gl-scss-styles/assets/style/colors/pink/c-pink-dark";
+@use "gl-scss-styles/assets/style/fonts/fonts";
 
 %title {
   @include fonts.font-family-custom(extra-light);

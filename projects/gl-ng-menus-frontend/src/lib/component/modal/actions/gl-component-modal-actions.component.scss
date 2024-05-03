@@ -1,6 +1,6 @@
-@use "node_modules/gl-scss-styles/assets/style/components/view-port/view-port-height";
-@use "node_modules/gl-scss-styles/assets/style/colors/black/c-black-translucid";
-@use "node_modules/gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "gl-scss-styles/assets/style/components/view-port/view-port-height";
+@use "gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "gl-scss-styles/assets/style/colors/gray/c-gray-dark";
 
 :host::ng-deep {
   font-size: 1em;
