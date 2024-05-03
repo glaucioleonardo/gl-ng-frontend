@@ -3,7 +3,6 @@
  */
 
 export { ComponentModule as GlNgInputsComponentModule } from './gl-ng-inputs-frontend/src/lib/component/component.module';
-export { CoreModule as GlNgInputsCoreModule} from './gl-ng-inputs-frontend/src/lib/core/core.module';
 export { GlNgInputsFrontendModule } from './gl-ng-inputs-frontend/src/lib/gl-ng-inputs-frontend.module';
 
 // region directives

@@ -2,7 +2,6 @@
  * Public API Surface of gl-ng-modals-frontend
  */
 export { ComponentModule as GlNgModalsComponentModule } from './gl-ng-modals-frontend/src/lib/component/component.module';
-export { CoreModule as GlNgModalsCoreModule } from './gl-ng-modals-frontend/src/lib/core/core.module';
 export { GlNgModalsFrontendModule } from  './gl-ng-modals-frontend/src/lib/gl-ng-modals-frontend.module';
 
 // region interfaces

@@ -1,8 +1,6 @@
 /*
  * Public API Surface of gl-ng-buttons-frontend
  */
-export { ComponentModule as GlNgButtonsComponentModule } from './gl-ng-buttons-frontend/src/lib/component/component.module';
-export { GlNgButtonsFrontendModule } from './gl-ng-buttons-frontend/src/lib/gl-ng-buttons-frontend.module';
 
 // region interfaces
 export { TTheme } from './gl-ng-buttons-frontend/src/lib/interfaces/global.interface';

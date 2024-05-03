@@ -6,10 +6,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
 import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
 import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
-import { GlNgAttachmentsFrontendModule } from '../../../../gl-ng-attachments-frontend/src/lib/gl-ng-attachments-frontend.module';
-import { GlNgButtonsFrontendModule } from '../../../../gl-ng-buttons-frontend/src/lib/gl-ng-buttons-frontend.module';
-import { GlNgTitlesFrontendModule } from '../../../../gl-ng-titles-frontend/src/lib/gl-ng-titles-frontend.module';
-import { CoreModule } from '../core/core.module';
+
+
+
+
 import { CoreDirectivesClickOutsideDirective } from '../core/directives/click-outside/core-directives-click-outside.directive';
 import { CorePipesListFilterPipe } from '../core/pipes/list-filter/core-pipes-list-filter.pipe';
 import { GlComponentInputAutocompleteLabelComponent } from './autocomplete/label/gl-component-input-autocomplete-label.component';
@@ -36,41 +36,37 @@ import { GlComponentInputDropdownLabelComponent } from './dropdown/label/gl-comp
 
 @NgModule({
     imports: [
-        CommonModule,
-        GlNgTitlesFrontendModule,
-        GlNgAttachmentsFrontendModule,
-        GlNgButtonsFrontendModule,
-        MatFormFieldModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        MatAutocompleteModule,
-        MatDialogModule,
-        MatDatepickerModule,
-        CoreModule,
-        FormsModule,
-        CoreDirectivesClickOutsideDirective,
-        GlComponentInputAutocompleteLabelComponent,
-        GlComponentInputAutocompleteSimpleComponent,
-        GlComponentInputButtonHyperlinkComponent,
-        GlComponentInputButtonSimpleComponent,
-        GlComponentInputCheckBoxLabelComponent,
-        GlComponentInputCheckBoxSimpleComponent,
-        GlComponentInputDatepickerLabelComponent,
-        GlComponentInputDatepickerSimpleDayMonthYearComponent,
-        GlComponentInputDatepickerSimpleMonthYearComponent,
-        GlComponentInputDropdownSimpleComponent,
-        GlComponentInputOptionSimpleComponent,
-        GlComponentInputSwitchComponent,
-        GlComponentInputTextLabelButtonContainerComponent,
-        GlComponentInputTextLabelSimpleComponent,
-        GlComponentInputTextSimpleComponent,
-        GlComponentInputTextSimpleWithStepComponent,
-        GlComponentInputTextAreaSimpleComponent,
-        GlComponentInputTextAreaLabelComponent,
-        GlComponentInputDragAndDropSimpleComponent,
-        GlComponentInputTextSimpleSearchComponent,
-        GlComponentInputDropdownLabelComponent
-    ],
+    CommonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    FormsModule,
+    CoreDirectivesClickOutsideDirective,
+    GlComponentInputAutocompleteLabelComponent,
+    GlComponentInputAutocompleteSimpleComponent,
+    GlComponentInputButtonHyperlinkComponent,
+    GlComponentInputButtonSimpleComponent,
+    GlComponentInputCheckBoxLabelComponent,
+    GlComponentInputCheckBoxSimpleComponent,
+    GlComponentInputDatepickerLabelComponent,
+    GlComponentInputDatepickerSimpleDayMonthYearComponent,
+    GlComponentInputDatepickerSimpleMonthYearComponent,
+    GlComponentInputDropdownSimpleComponent,
+    GlComponentInputOptionSimpleComponent,
+    GlComponentInputSwitchComponent,
+    GlComponentInputTextLabelButtonContainerComponent,
+    GlComponentInputTextLabelSimpleComponent,
+    GlComponentInputTextSimpleComponent,
+    GlComponentInputTextSimpleWithStepComponent,
+    GlComponentInputTextAreaSimpleComponent,
+    GlComponentInputTextAreaLabelComponent,
+    GlComponentInputDragAndDropSimpleComponent,
+    GlComponentInputTextSimpleSearchComponent,
+    GlComponentInputDropdownLabelComponent
+],
     exports: [
         GlComponentInputAutocompleteLabelComponent,
         GlComponentInputAutocompleteSimpleComponent,

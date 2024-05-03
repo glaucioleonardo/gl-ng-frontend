@@ -1,8 +1,6 @@
 /*
  * Public API Surface of gl-ng-navigation-frontend
  */
-export { ComponentModule as GlNgNavigationComponentModule } from './gl-ng-navigation-frontend/src/lib/component/component.module';
-export { GlNgNavigationFrontendModule } from './gl-ng-navigation-frontend/src/lib/gl-ng-navigation-frontend.module';
 
 // region interfaces
 export { TTheme } from './gl-ng-navigation-frontend/src/lib/interfaces/global.interface';

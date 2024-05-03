@@ -2,7 +2,6 @@
  * Public API Surface of gl-ng-titles-frontend
  */
 
-export { GlNgTitlesFrontendModule } from './gl-ng-titles-frontend/src/lib/gl-ng-titles-frontend.module';
 
 // region interfaces
 export { TTheme } from './gl-ng-titles-frontend/src/lib/interfaces/global.interface';

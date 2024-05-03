@@ -2,8 +2,6 @@
  * Public API Surface of gl-ng-outputs-frontend
  */
 
-export { ComponentModule as GlNgOutputsComponentModule} from './gl-ng-outputs-frontend/src/lib/component/component.module';
-export { GlNgOutputsFrontendModule } from './gl-ng-outputs-frontend/src/lib/gl-ng-outputs-frontend.module';
 
 // region directives
 

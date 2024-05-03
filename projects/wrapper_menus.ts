@@ -1,8 +1,6 @@
 /*
  * Public API Surface of gl-ng-menus-frontend
  */
-export { ComponentModule as  GlNgMenusComponentModule } from './gl-ng-menus-frontend/src/lib/component/component.module';
-export { GlNgMenusFrontendModule } from './gl-ng-menus-frontend/src/lib/gl-ng-menus-frontend.module';
 
 // region interfaces
 export { TTheme } from './gl-ng-menus-frontend/src/lib/interfaces/global.interface';

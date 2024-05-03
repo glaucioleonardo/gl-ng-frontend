@@ -6,16 +6,12 @@ export {
   TAttachmentItemType,
   IImageString,
   IImageUpdate,
-  GlNgAttachmentsComponentModule,
   GlComponentAttachmentImagePreviewComponent,
   GlComponentAttachmentImagePreviewService,
   GlComponentAttachmentItemComponent,
-  GlNgAttachmentsCoreModule,
-  GlNgAttachmentsFrontendModule
 } from './wrapper_attachments';
 
 export {
-  GlNgButtonsComponentModule,
   TButtonToolTipWidth,
   TButtonToolTipVerticalPosition,
   TButtonToolTipHorizontalPosition,
@@ -30,7 +26,6 @@ export {
   GlComponentButtonInterfaceComponent,
   GlComponentButtonMenuSimpleComponent,
   GlComponentButtonMenuTooltipComponent,
-  GlNgButtonsFrontendModule,
   IMenuButton
 } from './wrapper_buttons';
 
@@ -52,22 +47,17 @@ export {
 } from './wrapper_filters';
 
 export {
-  GlNgFooterComponentModule,
   GlComponentFooterContainerComponent,
   GlComponentFooterSimpleComponent,
-  GlNgFooterFrontendModule
 } from './wrapper_footer';
 
 export {
-  GlNgHeadersComponentModule,
   GlComponentHeaderDefaultComponent,
-  GlNgHeadersFrontendModule,
   THeaderTheme
 } from './wrapper_headers';
 
 export {
   GlNgInputsComponentModule,
-  GlNgInputsCoreModule,
   THorizontalAlignment,
   TInputType,
   ISimpleTextResult,
@@ -120,26 +110,21 @@ export {
 } from './wrapper_inputs';
 
 export {
-  GlNgListsComponentModule,
   TListReorder,
   IListRemoveItem,
   GlComponentInputListItemRemoveComponent,
   GlComponentInputListItemUpDownComponent,
-  GlNgListsFrontendModule,
   IMoveDownResult
 } from './wrapper_lists';
 
 export {
-  GlNgLogosComponentModule,
   TLogoVerticalPosition,
   TLogoHorizontalPosition,
   GlComponentLogoTextOnlyComponent,
   GlComponentLogoSquareComponent,
-  GlNgLogosFrontendModule
 } from './wrapper_logos';
 
 export {
-  GlNgMenusComponentModule,
   GlComponentMenuService,
   IMenuItem,
   TMenuItemTheme,
@@ -148,7 +133,6 @@ export {
   GlComponentMenuBackgroundComponent,
   GlComponentMenuComponent,
   GlComponentMenuItemComponent,
-  GlNgMenusFrontendModule,
   TUrlTarget,
   IModalItemAction,
   GlComponentModalActionsService,
@@ -159,7 +143,6 @@ export {
 export {
   GlNgModalsComponentModule,
   GlComponentModalUploadFileService,
-  GlNgModalsCoreModule,
   TModalUploadFunction,
   GlComponentModalLoadingService,
   GlComponentModalAlertService,
@@ -175,10 +158,8 @@ export {
 } from './wrapper_modals';
 
 export {
-  GlNgNavigationComponentModule,
   GlComponentNavigationTabSimpleComponent,
   GlComponentNavigationTabContainerComponent,
-  GlNgNavigationFrontendModule,
   INavigationTab
 } from './wrapper_navigation';
 
@@ -199,7 +180,6 @@ export {
   GlComponentTitleLabelSimpleComponent,
   GlComponentTitlePageComponent,
   TLabelTheme,
-  GlNgTitlesFrontendModule
 } from './wrapper_titles';
 
 export { ComponentModule } from './gl-ng-frontend/src/lib/component/component.module';

@@ -1,8 +1,6 @@
 /*
  * Public API Surface of gl-ng-lists-frontend
  */
-export { ComponentModule as GlNgListsComponentModule } from './gl-ng-lists-frontend/src/lib/component/component.module';
-export { GlNgListsFrontendModule } from './gl-ng-lists-frontend/src/lib/gl-ng-lists-frontend.module';
 
 // region interfaces
 export { TTheme } from './gl-ng-lists-frontend/src/lib/interfaces/global.interface';

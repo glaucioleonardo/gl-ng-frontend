@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GlNgInputsFrontendModule } from '../../../../gl-ng-inputs-frontend/src/lib/gl-ng-inputs-frontend.module';
-import { CoreModule } from '../core/core.module';
+
 import { GlComponentModalAlertComponent } from './alert/gl-component-modal-alert.component';
 import { GlComponentModalAttachmentLinkComponent } from './attachment/link/gl-component-modal-attachment-link.component';
 import { GlComponentModalHeaderComponent } from './header/gl-component-modal-header.component';
@@ -10,15 +10,14 @@ import { GlComponentModalUploadFileComponent } from './upload-file/gl-component-
 
 @NgModule({
     imports: [
-        CommonModule,
-        CoreModule,
-        GlNgInputsFrontendModule,
-        GlComponentModalAlertComponent,
-        GlComponentModalAttachmentLinkComponent,
-        GlComponentModalHeaderComponent,
-        GlComponentModalLoadingComponent,
-        GlComponentModalUploadFileComponent
-    ],
+    CommonModule,
+    GlNgInputsFrontendModule,
+    GlComponentModalAlertComponent,
+    GlComponentModalAttachmentLinkComponent,
+    GlComponentModalHeaderComponent,
+    GlComponentModalLoadingComponent,
+    GlComponentModalUploadFileComponent
+],
     exports: [
         GlComponentModalAlertComponent,
         GlComponentModalAttachmentLinkComponent,

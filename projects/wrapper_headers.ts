@@ -1,8 +1,6 @@
 /*
  * Public API Surface of gl-ng-headers-frontend
  */
-export { ComponentModule as GlNgHeadersComponentModule } from './gl-ng-headers-frontend/src/lib/component/component.module';
-export { GlNgHeadersFrontendModule } from './gl-ng-headers-frontend/src/lib/gl-ng-headers-frontend.module';
 
 // region interfaces
 export { TTheme } from './gl-ng-headers-frontend/src/lib/interfaces/global.interface';
