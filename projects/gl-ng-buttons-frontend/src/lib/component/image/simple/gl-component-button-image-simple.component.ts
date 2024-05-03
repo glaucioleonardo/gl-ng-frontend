@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'gl-component-button-image-simple',
-  templateUrl: './gl-component-button-image-simple.component.html',
-  styleUrls: ['./gl-component-button-image-simple.component.scss']
+    selector: 'gl-component-button-image-simple',
+    templateUrl: './gl-component-button-image-simple.component.html',
+    styleUrls: ['./gl-component-button-image-simple.component.scss'],
+    standalone: true
 })
 export class GlComponentButtonImageSimpleComponent {
   @Input() id;

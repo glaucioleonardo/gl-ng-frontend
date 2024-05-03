@@ -3,9 +3,10 @@ import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignment
 import { ISimpleTextAreaResult } from './gl-component-input-text-area-simple.interface';
 
 @Component({
-  selector: 'gl-component-input-text-area-simple',
-  templateUrl: './gl-component-input-text-area-simple.component.html',
-  styleUrls: ['./gl-component-input-text-area-simple.component.scss']
+    selector: 'gl-component-input-text-area-simple',
+    templateUrl: './gl-component-input-text-area-simple.component.html',
+    styleUrls: ['./gl-component-input-text-area-simple.component.scss'],
+    standalone: true
 })
 export class GlComponentInputTextAreaSimpleComponent {
   @ViewChild('textArea', { read: ElementRef, static: true }) textArea: ElementRef<HTMLTextAreaElement>;

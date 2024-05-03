@@ -8,8 +8,8 @@ describe('GlSharedComponentAttachmentImagePreviewComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentAttachmentImagePreviewComponent ]
-    })
+    imports: [GlComponentAttachmentImagePreviewComponent]
+})
     .compileComponents();
   }));
 

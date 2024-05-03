@@ -8,8 +8,8 @@ describe('GlSharedComponentMenuBackgroundComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentMenuBackgroundComponent ]
-    })
+    imports: [GlComponentMenuBackgroundComponent]
+})
     .compileComponents();
   }));
 

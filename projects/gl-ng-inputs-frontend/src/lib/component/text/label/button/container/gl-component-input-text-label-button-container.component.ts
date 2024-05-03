@@ -2,11 +2,15 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import { TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-number-frontend';
 import { THorizontalAlignment, TTheme } from '../../../../../core/interfaces/alignments.interface';
 import { TInputTextMask, TInputType } from '../../../simple/gl-component-input-text-simple.interface';
+import { GlComponentInputTextSimpleComponent } from '../../../simple/gl-component-input-text-simple.component';
+import { GlComponentTitleLabelButtonContainerComponent } from '../../../../../../../../gl-ng-titles-frontend/src/lib/component/label/button/container/gl-component-title-label-button-container.component';
 
 @Component({
-  selector: 'gl-component-input-text-label-button-container',
-  templateUrl: './gl-component-input-text-label-button-container.component.html',
-  styleUrls: ['./gl-component-input-text-label-button-container.component.scss']
+    selector: 'gl-component-input-text-label-button-container',
+    templateUrl: './gl-component-input-text-label-button-container.component.html',
+    styleUrls: ['./gl-component-input-text-label-button-container.component.scss'],
+    standalone: true,
+    imports: [GlComponentTitleLabelButtonContainerComponent, GlComponentInputTextSimpleComponent]
 })
 export class GlComponentInputTextLabelButtonContainerComponent {
   @Input() disabled = false;

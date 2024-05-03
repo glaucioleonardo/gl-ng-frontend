@@ -7,18 +7,16 @@ import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
 import { GlComponentOutputsVideoPreviewComponent } from './video/preview/gl-component-outputs-video-preview.component';
 
 @NgModule({
-  declarations: [
-    GlComponentOutputsVideoPreviewComponent
-  ],
-  imports: [
-    CommonModule,
-    VgCoreModule,
-    VgOverlayPlayModule,
-    VgBufferingModule,
-    VgControlsModule
-  ],
-  exports: [
-    GlComponentOutputsVideoPreviewComponent
-  ]
+    imports: [
+        CommonModule,
+        VgCoreModule,
+        VgOverlayPlayModule,
+        VgBufferingModule,
+        VgControlsModule,
+        GlComponentOutputsVideoPreviewComponent
+    ],
+    exports: [
+        GlComponentOutputsVideoPreviewComponent
+    ]
 })
 export class ComponentModule { }

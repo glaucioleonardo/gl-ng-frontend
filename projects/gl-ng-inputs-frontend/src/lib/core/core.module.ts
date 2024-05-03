@@ -4,13 +4,11 @@ import { CoreDirectivesDragAndDropDirective } from './directives/drag-and-drop/c
 import { CorePipesListFilterPipe } from './pipes/list-filter/core-pipes-list-filter.pipe';
 
 @NgModule({
-  declarations: [
-    CoreDirectivesDragAndDropDirective,
-    CorePipesListFilterPipe
-  ],
-  imports: [
-    CommonModule
-  ],
+    imports: [
+        CommonModule,
+        CoreDirectivesDragAndDropDirective,
+        CorePipesListFilterPipe
+    ],
     exports: [
         CoreDirectivesDragAndDropDirective,
         CorePipesListFilterPipe

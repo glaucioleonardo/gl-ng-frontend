@@ -5,16 +5,14 @@ import { GlNgTitlesFrontendModule } from '../../../../gl-ng-titles-frontend/src/
 import { GlComponentHeaderDefaultComponent } from './default/gl-component-header-default.component';
 
 @NgModule({
-  declarations: [
-    GlComponentHeaderDefaultComponent
-  ],
-  imports: [
-    CommonModule,
-    GlNgTitlesFrontendModule,
-    GlNgButtonsFrontendModule
-  ],
-  exports: [
-    GlComponentHeaderDefaultComponent
-  ]
+    imports: [
+        CommonModule,
+        GlNgTitlesFrontendModule,
+        GlNgButtonsFrontendModule,
+        GlComponentHeaderDefaultComponent
+    ],
+    exports: [
+        GlComponentHeaderDefaultComponent
+    ]
 })
 export class ComponentModule { }

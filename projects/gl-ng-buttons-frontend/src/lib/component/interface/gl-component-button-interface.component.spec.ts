@@ -8,8 +8,8 @@ describe('GlComponentButtonInterfaceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlComponentButtonInterfaceComponent ]
-    })
+    imports: [GlComponentButtonInterfaceComponent]
+})
     .compileComponents();
   });
 

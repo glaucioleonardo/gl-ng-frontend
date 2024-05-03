@@ -2,9 +2,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TTheme } from '../../../core/interfaces/alignments.interface';
 
 @Component({
-  selector: 'gl-component-input-option-simple',
-  templateUrl: './gl-component-input-option-simple.component.html',
-  styleUrls: ['./gl-component-input-option-simple.component.scss']
+    selector: 'gl-component-input-option-simple',
+    templateUrl: './gl-component-input-option-simple.component.html',
+    styleUrls: ['./gl-component-input-option-simple.component.scss'],
+    standalone: true
 })
 export class GlComponentInputOptionSimpleComponent {
   @Input() value: string;

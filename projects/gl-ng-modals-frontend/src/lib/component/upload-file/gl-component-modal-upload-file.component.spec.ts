@@ -8,8 +8,8 @@ describe('GlComponentModalUploadFileComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlComponentModalUploadFileComponent ]
-    })
+    imports: [GlComponentModalUploadFileComponent]
+})
     .compileComponents();
   });
 

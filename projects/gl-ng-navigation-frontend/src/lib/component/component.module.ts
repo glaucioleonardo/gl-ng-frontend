@@ -4,16 +4,14 @@ import { GlComponentNavigationTabContainerComponent } from './tab/container/gl-c
 import { GlComponentNavigationTabSimpleComponent } from './tab/simple/gl-component-navigation-tab-simple.component';
 
 @NgModule({
-  declarations: [
-    GlComponentNavigationTabSimpleComponent,
-    GlComponentNavigationTabContainerComponent
-  ],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    GlComponentNavigationTabSimpleComponent,
-    GlComponentNavigationTabContainerComponent
-  ]
+    imports: [
+        CommonModule,
+        GlComponentNavigationTabSimpleComponent,
+        GlComponentNavigationTabContainerComponent
+    ],
+    exports: [
+        GlComponentNavigationTabSimpleComponent,
+        GlComponentNavigationTabContainerComponent
+    ]
 })
 export class ComponentModule { }

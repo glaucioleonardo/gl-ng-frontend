@@ -1,11 +1,16 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { TTheme } from '../../../core/interfaces/global.interface';
 import { GlComponentAttachmentImagePreviewService } from './gl-component-attachment-image-preview.service';
+import { GlComponentButtonImageTooltipComponent } from '../../../../../../gl-ng-buttons-frontend/src/lib/component/image/tooltip/gl-component-button-image-tooltip.component';
+import { GlComponentTitleLabelButtonContainerComponent } from '../../../../../../gl-ng-titles-frontend/src/lib/component/label/button/container/gl-component-title-label-button-container.component';
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'gl-component-attachment-image-preview',
-  templateUrl: './gl-component-attachment-image-preview.component.html',
-  styleUrls: ['./gl-component-attachment-image-preview.component.scss']
+    selector: 'gl-component-attachment-image-preview',
+    templateUrl: './gl-component-attachment-image-preview.component.html',
+    styleUrls: ['./gl-component-attachment-image-preview.component.scss'],
+    standalone: true,
+    imports: [NgIf, GlComponentTitleLabelButtonContainerComponent, NgFor, GlComponentButtonImageTooltipComponent]
 })
 export class GlComponentAttachmentImagePreviewComponent implements AfterViewInit{
   @ViewChild('fileInputImage', { read: ElementRef, static: true }) fileInputImage: ElementRef<HTMLInputElement>;

@@ -8,8 +8,8 @@ describe('GlComponentButtonMenuSimpleComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentButtonMenuSimpleComponent ]
-    })
+    imports: [GlComponentButtonMenuSimpleComponent]
+})
     .compileComponents();
   }));
 

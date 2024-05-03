@@ -8,8 +8,8 @@ describe('GlComponentInputTextSimpleSearchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlComponentInputTextSimpleSearchComponent ]
-    })
+    imports: [GlComponentInputTextSimpleSearchComponent]
+})
     .compileComponents();
   });
 

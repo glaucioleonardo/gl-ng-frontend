@@ -8,8 +8,8 @@ describe('GlComponentButtonImageTooltipComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentButtonImageTooltipComponent ]
-    })
+    imports: [GlComponentButtonImageTooltipComponent]
+})
     .compileComponents();
   }));
 

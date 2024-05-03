@@ -2,11 +2,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-number-frontend';
 import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignments.interface';
 import { TInputTextMask, TInputType } from '../../simple/gl-component-input-text-simple.interface';
+import { GlComponentInputTextSimpleComponent } from '../../simple/gl-component-input-text-simple.component';
+import { GlComponentTitleLabelSimpleComponent } from '../../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.component';
 
 @Component({
-  selector: 'gl-component-input-text-label-simple',
-  templateUrl: './gl-component-input-text-label-simple.component.html',
-  styleUrls: ['./gl-component-input-text-label-simple.component.scss']
+    selector: 'gl-component-input-text-label-simple',
+    templateUrl: './gl-component-input-text-label-simple.component.html',
+    styleUrls: ['./gl-component-input-text-label-simple.component.scss'],
+    standalone: true,
+    imports: [GlComponentTitleLabelSimpleComponent, GlComponentInputTextSimpleComponent]
 })
 export class GlComponentInputTextLabelSimpleComponent {
   @Input() disabled = false;

@@ -8,8 +8,8 @@ describe('GlSharedComponentMenuItemComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentMenuItemComponent ]
-    })
+    imports: [GlComponentMenuItemComponent]
+})
     .compileComponents();
   }));
 

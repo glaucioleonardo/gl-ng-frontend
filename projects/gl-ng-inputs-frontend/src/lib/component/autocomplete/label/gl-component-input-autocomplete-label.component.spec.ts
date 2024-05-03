@@ -7,8 +7,8 @@ describe('GlComponentInputAutocompleteLabelSharepointComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentInputAutocompleteLabelComponent ]
-    })
+    imports: [GlComponentInputAutocompleteLabelComponent]
+})
     .compileComponents();
   }));
 

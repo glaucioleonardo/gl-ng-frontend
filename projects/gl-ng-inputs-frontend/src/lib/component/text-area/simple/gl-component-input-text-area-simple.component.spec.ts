@@ -7,8 +7,8 @@ describe('GlComponentInputTextAreaSimpleComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentInputTextAreaSimpleComponent ]
-    })
+    imports: [GlComponentInputTextAreaSimpleComponent]
+})
     .compileComponents();
   }));
 

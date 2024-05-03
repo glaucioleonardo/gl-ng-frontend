@@ -8,8 +8,8 @@ describe('GlComponentFilterComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentFilterComponent ]
-    })
+    imports: [GlComponentFilterComponent]
+})
     .compileComponents();
   }));
 

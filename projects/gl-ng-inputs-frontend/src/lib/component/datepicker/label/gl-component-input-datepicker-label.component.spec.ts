@@ -8,8 +8,8 @@ describe('GlComponentInputDatepickerLabelComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentInputDatepickerLabelComponent ]
-    })
+    imports: [GlComponentInputDatepickerLabelComponent]
+})
     .compileComponents();
   }));
 

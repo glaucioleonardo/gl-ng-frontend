@@ -8,8 +8,8 @@ describe('GlSharedComponentHeaderDefaultComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentHeaderDefaultComponent ]
-    })
+    imports: [GlComponentHeaderDefaultComponent]
+})
     .compileComponents();
   }));
 

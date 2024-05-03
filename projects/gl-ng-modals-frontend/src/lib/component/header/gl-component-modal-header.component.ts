@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'gl-component-modal-header',
-  templateUrl: './gl-component-modal-header.component.html',
-  styleUrls: ['./gl-component-modal-header.component.scss']
+    selector: 'gl-component-modal-header',
+    templateUrl: './gl-component-modal-header.component.html',
+    styleUrls: ['./gl-component-modal-header.component.scss'],
+    standalone: true
 })
 export class GlComponentModalHeaderComponent {
   @Input() title: string;

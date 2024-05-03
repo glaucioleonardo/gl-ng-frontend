@@ -3,9 +3,11 @@ import { GlComponentInputTextSimpleComponent } from '../gl-component-input-text-
 import { ISearchOutput } from './gl-component-input-text-simple-search.interface';
 
 @Component({
-  selector: 'gl-component-input-text-simple-search',
-  templateUrl: './gl-component-input-text-simple-search.component.html',
-  styleUrls: ['./gl-component-input-text-simple-search.component.scss']
+    selector: 'gl-component-input-text-simple-search',
+    templateUrl: './gl-component-input-text-simple-search.component.html',
+    styleUrls: ['./gl-component-input-text-simple-search.component.scss'],
+    standalone: true,
+    imports: [GlComponentInputTextSimpleComponent]
 })
 export class GlComponentInputTextSimpleSearchComponent implements AfterViewInit{
   @Input() isOnSearch = false;

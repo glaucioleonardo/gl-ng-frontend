@@ -1,10 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { THorizontalAlignment } from '../../../core/interfaces/alignments.interface';
+import { GlComponentInputCheckBoxSimpleComponent } from '../simple/gl-component-input-check-box-simple.component';
+import { GlComponentTitleLabelSimpleComponent } from '../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.component';
 
 @Component({
-  selector: 'gl-component-input-check-box-label',
-  templateUrl: './gl-component-input-check-box-label.component.html',
-  styleUrls: ['./gl-component-input-check-box-label.component.scss']
+    selector: 'gl-component-input-check-box-label',
+    templateUrl: './gl-component-input-check-box-label.component.html',
+    styleUrls: ['./gl-component-input-check-box-label.component.scss'],
+    standalone: true,
+    imports: [GlComponentTitleLabelSimpleComponent, GlComponentInputCheckBoxSimpleComponent]
 })
 export class GlComponentInputCheckBoxLabelComponent {
 

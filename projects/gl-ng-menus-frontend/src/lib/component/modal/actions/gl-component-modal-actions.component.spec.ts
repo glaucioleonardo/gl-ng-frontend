@@ -8,8 +8,8 @@ describe('ActionsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlComponentModalActionsComponent ]
-    })
+    imports: [GlComponentModalActionsComponent]
+})
     .compileComponents();
   });
 

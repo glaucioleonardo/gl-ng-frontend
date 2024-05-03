@@ -8,8 +8,8 @@ describe('GlComponentInputDropdownLabelComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlComponentInputDropdownLabelComponent ]
-    })
+    imports: [GlComponentInputDropdownLabelComponent]
+})
     .compileComponents();
   });
 

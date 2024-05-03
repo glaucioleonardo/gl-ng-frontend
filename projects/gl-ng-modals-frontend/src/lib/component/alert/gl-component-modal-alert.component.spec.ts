@@ -8,8 +8,8 @@ describe('GlComponentModalAlertComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentModalAlertComponent ]
-    })
+    imports: [GlComponentModalAlertComponent]
+})
     .compileComponents();
   }));
 

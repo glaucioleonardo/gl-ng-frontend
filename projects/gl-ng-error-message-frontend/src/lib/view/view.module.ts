@@ -7,18 +7,16 @@ import { ComponentModule } from '../component/component.module';
 import { GlViewErrorMessageComponent } from './error-message/gl-view-error-message.component';
 
 @NgModule({
-  declarations: [
-    GlViewErrorMessageComponent
-  ],
-  exports: [
-    GlViewErrorMessageComponent
-  ],
-  imports: [
-    CommonModule,
-    ComponentModule,
-    GlNgLogosFrontendModule,
-    GlNgFooterFrontendModule,
-    GlNgInputsFrontendModule
-  ]
+    exports: [
+        GlViewErrorMessageComponent
+    ],
+    imports: [
+        CommonModule,
+        ComponentModule,
+        GlNgLogosFrontendModule,
+        GlNgFooterFrontendModule,
+        GlNgInputsFrontendModule,
+        GlViewErrorMessageComponent
+    ]
 })
 export class ViewModule { }

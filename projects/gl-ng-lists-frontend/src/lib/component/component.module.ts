@@ -5,17 +5,15 @@ import { GlComponentInputListItemRemoveComponent } from './item-remove/gl-compon
 import { GlComponentInputListItemUpDownComponent } from './item-up-down/gl-component-input-list-item-up-down.component';
 
 @NgModule({
-  declarations: [
-    GlComponentInputListItemRemoveComponent,
-    GlComponentInputListItemUpDownComponent
-  ],
-  imports: [
-    CommonModule,
-    GlNgButtonsFrontendModule
-  ],
-  exports: [
-    GlComponentInputListItemRemoveComponent,
-    GlComponentInputListItemUpDownComponent
-  ]
+    imports: [
+        CommonModule,
+        GlNgButtonsFrontendModule,
+        GlComponentInputListItemRemoveComponent,
+        GlComponentInputListItemUpDownComponent
+    ],
+    exports: [
+        GlComponentInputListItemRemoveComponent,
+        GlComponentInputListItemUpDownComponent
+    ]
 })
 export class ComponentModule { }

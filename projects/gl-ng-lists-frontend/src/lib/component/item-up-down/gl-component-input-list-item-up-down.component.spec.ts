@@ -8,8 +8,8 @@ describe('GlComponentInputListItemUpDownComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlComponentInputListItemUpDownComponent ]
-    })
+    imports: [GlComponentInputListItemUpDownComponent]
+})
     .compileComponents();
   });
 

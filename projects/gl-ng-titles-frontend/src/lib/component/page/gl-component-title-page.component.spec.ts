@@ -8,8 +8,8 @@ describe('GlSharedComponentTitlePageComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentTitlePageComponent ]
-    })
+    imports: [GlComponentTitlePageComponent]
+})
     .compileComponents();
   }));
 

@@ -8,8 +8,8 @@ describe('GlSharedComponentModalLoadingComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentModalLoadingComponent ]
-    })
+    imports: [GlComponentModalLoadingComponent]
+})
     .compileComponents();
   }));
 

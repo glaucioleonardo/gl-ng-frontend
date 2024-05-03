@@ -8,8 +8,8 @@ describe('GlSharedComponentModalAttachmentLinkComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentModalAttachmentLinkComponent ]
-    })
+    imports: [GlComponentModalAttachmentLinkComponent]
+})
     .compileComponents();
   }));
 

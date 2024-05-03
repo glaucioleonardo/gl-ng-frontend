@@ -1,7 +1,8 @@
 import { Directive, EventEmitter, HostBinding, HostListener, Output } from '@angular/core';
 
 @Directive({
-  selector: '[glCoreDirectivesDragAndDrop]'
+    selector: '[glCoreDirectivesDragAndDrop]',
+    standalone: true
 })
 export class CoreDirectivesDragAndDropDirective {
   @HostBinding('class.file-over') fileOver: boolean;

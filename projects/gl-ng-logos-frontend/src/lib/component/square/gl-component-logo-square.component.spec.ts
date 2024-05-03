@@ -8,8 +8,8 @@ describe('GlComponentLogoSquareComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentLogoSquareComponent ]
-    })
+    imports: [GlComponentLogoSquareComponent]
+})
     .compileComponents();
   }));
 

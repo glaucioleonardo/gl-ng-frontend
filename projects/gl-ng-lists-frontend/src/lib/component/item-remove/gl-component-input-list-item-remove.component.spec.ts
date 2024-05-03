@@ -8,8 +8,8 @@ describe('GlComponentInputListItemRemoveComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlComponentInputListItemRemoveComponent ]
-    })
+    imports: [GlComponentInputListItemRemoveComponent]
+})
     .compileComponents();
   });
 

@@ -1,10 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { INavigationTab } from '../simple/gl-component-navigation-tab-simple.interface';
+import { GlComponentNavigationTabSimpleComponent } from '../simple/gl-component-navigation-tab-simple.component';
+import { NgFor, NgStyle } from '@angular/common';
 
 @Component({
-  selector: 'gl-component-navigation-tab-container',
-  templateUrl: './gl-component-navigation-tab-container.component.html',
-  styleUrls: ['./gl-component-navigation-tab-container.component.scss']
+    selector: 'gl-component-navigation-tab-container',
+    templateUrl: './gl-component-navigation-tab-container.component.html',
+    styleUrls: ['./gl-component-navigation-tab-container.component.scss'],
+    standalone: true,
+    imports: [NgFor, GlComponentNavigationTabSimpleComponent, NgStyle]
 })
 export class GlComponentNavigationTabContainerComponent {
 

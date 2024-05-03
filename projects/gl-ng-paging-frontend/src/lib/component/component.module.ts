@@ -4,15 +4,13 @@ import { GlNgInputsFrontendModule } from '../../../../gl-ng-inputs-frontend/src/
 import { GlComponentPagingComponent } from './paging/gl-component-paging.component';
 
 @NgModule({
-  declarations: [
-    GlComponentPagingComponent
-  ],
-  imports: [
-    CommonModule,
-    GlNgInputsFrontendModule
-  ],
-  exports: [
-    GlComponentPagingComponent
-  ]
+    imports: [
+        CommonModule,
+        GlNgInputsFrontendModule,
+        GlComponentPagingComponent
+    ],
+    exports: [
+        GlComponentPagingComponent
+    ]
 })
 export class ComponentModule { }

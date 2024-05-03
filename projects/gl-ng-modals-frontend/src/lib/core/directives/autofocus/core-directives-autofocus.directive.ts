@@ -1,7 +1,8 @@
 import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core';
 
 @Directive({
-  selector: '[glAutoFocus]'
+    selector: '[glAutoFocus]',
+    standalone: true
 })
 export class CoreDirectivesAutofocusDirective implements AfterViewInit {
 

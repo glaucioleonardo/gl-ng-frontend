@@ -8,8 +8,8 @@ describe('GlComponentButtonAttachmentLinkComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentButtonAttachmentLinkComponent ]
-    })
+    imports: [GlComponentButtonAttachmentLinkComponent]
+})
     .compileComponents();
   }));
 

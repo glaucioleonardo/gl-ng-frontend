@@ -8,8 +8,8 @@ describe('GlComponentLogoTextOnlyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlComponentLogoTextOnlyComponent ]
-    })
+    imports: [GlComponentLogoTextOnlyComponent]
+})
     .compileComponents();
   });
 

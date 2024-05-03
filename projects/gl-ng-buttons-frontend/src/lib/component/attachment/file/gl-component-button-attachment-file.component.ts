@@ -3,9 +3,10 @@ import { GlComponentButtonAttachmentFileService } from './gl-component-button-at
 import { IAttachmentData } from 'gl-sp-frontend';
 
 @Component({
-  selector: 'gl-component-button-attachment-file',
-  templateUrl: './gl-component-button-attachment-file.component.html',
-  styleUrls: ['./gl-component-button-attachment-file.component.scss']
+    selector: 'gl-component-button-attachment-file',
+    templateUrl: './gl-component-button-attachment-file.component.html',
+    styleUrls: ['./gl-component-button-attachment-file.component.scss'],
+    standalone: true
 })
 export class GlComponentButtonAttachmentFileComponent implements AfterViewInit {
   @ViewChild('fileInput', { read: ElementRef, static: true }) fileInput: ElementRef<HTMLInputElement>;

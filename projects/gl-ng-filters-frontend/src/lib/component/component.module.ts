@@ -6,18 +6,16 @@ import { GlComponentFilterContainerComponent } from './filter/container/gl-compo
 import { GlComponentFilterComponent } from './filter/gl-component-filter.component';
 
 @NgModule({
-  declarations: [
-    GlComponentFilterComponent,
-    GlComponentFilterContainerComponent
-  ],
-  imports: [
-    CommonModule,
-    GlNgInputsFrontendModule,
-    GlNgMenusFrontendModule
-  ],
-  exports: [
-    GlComponentFilterComponent,
-    GlComponentFilterContainerComponent
-  ]
+    imports: [
+        CommonModule,
+        GlNgInputsFrontendModule,
+        GlNgMenusFrontendModule,
+        GlComponentFilterComponent,
+        GlComponentFilterContainerComponent
+    ],
+    exports: [
+        GlComponentFilterComponent,
+        GlComponentFilterContainerComponent
+    ]
 })
 export class ComponentModule { }

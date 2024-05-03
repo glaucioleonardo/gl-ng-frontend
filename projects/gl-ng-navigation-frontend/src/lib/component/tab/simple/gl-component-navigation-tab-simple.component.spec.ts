@@ -8,8 +8,8 @@ describe('GlSharedComponentNavigationTabSimpleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlComponentNavigationTabSimpleComponent ]
-    })
+    imports: [GlComponentNavigationTabSimpleComponent]
+})
     .compileComponents();
   });
 

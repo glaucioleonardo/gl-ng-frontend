@@ -4,15 +4,13 @@ import { GlNgInputsFrontendModule } from '../../../../gl-ng-inputs-frontend/src/
 import { GlComponentErrorMessageComponent } from './error-message/gl-component-error-message.component';
 
 @NgModule({
-  declarations: [
-    GlComponentErrorMessageComponent
-  ],
-  imports: [
-    CommonModule,
-    GlNgInputsFrontendModule
-  ],
-  exports: [
-    GlComponentErrorMessageComponent
-  ]
+    imports: [
+        CommonModule,
+        GlNgInputsFrontendModule,
+        GlComponentErrorMessageComponent
+    ],
+    exports: [
+        GlComponentErrorMessageComponent
+    ]
 })
 export class ComponentModule { }

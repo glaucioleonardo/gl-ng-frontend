@@ -4,11 +4,15 @@ import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignm
 import { IInputTextStepButton, TStepType } from './gl-component-input-text-simple-with-step.interface';
 import { TInputTextMask, TInputType } from '../gl-component-input-text-simple.interface';
 import Decimal from 'decimal.js';
+import { GlComponentButtonImageTooltipComponent } from '../../../../../../../gl-ng-buttons-frontend/src/lib/component/image/tooltip/gl-component-button-image-tooltip.component';
+import { GlComponentInputTextSimpleComponent } from '../gl-component-input-text-simple.component';
 
 @Component({
-  selector: 'gl-component-input-text-simple-with-step',
-  templateUrl: './gl-component-input-text-simple-with-step.component.html',
-  styleUrls: ['./gl-component-input-text-simple-with-step.component.scss']
+    selector: 'gl-component-input-text-simple-with-step',
+    templateUrl: './gl-component-input-text-simple-with-step.component.html',
+    styleUrls: ['./gl-component-input-text-simple-with-step.component.scss'],
+    standalone: true,
+    imports: [GlComponentInputTextSimpleComponent, GlComponentButtonImageTooltipComponent]
 })
 export class GlComponentInputTextSimpleWithStepComponent {
   @ViewChild('inputWithStepElement', { read: ElementRef, static: true }) inputElement: ElementRef<HTMLInputElement>;

@@ -8,8 +8,8 @@ describe('GlViewErrorMessageComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlViewErrorMessageComponent ]
-    })
+    imports: [GlViewErrorMessageComponent]
+})
     .compileComponents();
   }));
 

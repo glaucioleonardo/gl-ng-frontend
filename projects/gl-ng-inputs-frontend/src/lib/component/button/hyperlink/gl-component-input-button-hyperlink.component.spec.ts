@@ -7,8 +7,8 @@ describe('GlComponentInputButtonHyperlinkComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentInputButtonHyperlinkComponent ]
-    })
+    imports: [GlComponentInputButtonHyperlinkComponent]
+})
     .compileComponents();
   }));
 

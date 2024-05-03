@@ -8,8 +8,8 @@ describe('GlComponentErrorMessageComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentErrorMessageComponent ]
-    })
+    imports: [GlComponentErrorMessageComponent]
+})
     .compileComponents();
   }));
 

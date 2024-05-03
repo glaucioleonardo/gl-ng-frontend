@@ -8,8 +8,8 @@ describe('GlComponentOutputsVideoPreviewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlComponentOutputsVideoPreviewComponent ]
-    })
+    imports: [GlComponentOutputsVideoPreviewComponent]
+})
     .compileComponents();
   });
 

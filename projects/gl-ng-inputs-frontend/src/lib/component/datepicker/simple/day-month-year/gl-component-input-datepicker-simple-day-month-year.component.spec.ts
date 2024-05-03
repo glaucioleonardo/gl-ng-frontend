@@ -11,8 +11,8 @@ describe('GlComponentInputDatepickerSimpleDayMonthYearComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlComponentInputDatepickerSimpleDayMonthYearComponent ]
-    })
+    imports: [GlComponentInputDatepickerSimpleDayMonthYearComponent]
+})
       .compileComponents();
   });
 

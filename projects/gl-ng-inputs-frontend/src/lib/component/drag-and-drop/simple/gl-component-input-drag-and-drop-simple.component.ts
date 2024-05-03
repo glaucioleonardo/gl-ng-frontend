@@ -2,11 +2,18 @@ import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@
 import { AttachmentIcon, AttachmentValidate, IAttachmentData } from 'gl-w-attachment-frontend';
 import { GlComponentModalAlertService } from '../../../../../../gl-ng-modals-frontend/src/lib/component/alert/gl-component-modal-alert.service';
 import { IDragAndDropAddedResult } from './gl-component-input-drag-and-drop-simple.interface';
+import { GlComponentInputButtonSimpleComponent } from '../../button/simple/gl-component-input-button-simple.component';
+import { GlComponentAttachmentItemComponent } from '../../../../../../gl-ng-attachments-frontend/src/lib/component/item/gl-component-attachment-item.component';
+import { CoreDirectivesDragAndDropDirective } from '../../../core/directives/drag-and-drop/core-directives-drag-and-drop.directive';
+import { GlComponentInputSwitchComponent } from '../../switch/gl-component-input-switch.component';
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'gl-component-input-drag-and-drop-simple',
-  templateUrl: './gl-component-input-drag-and-drop-simple.component.html',
-  styleUrls: ['./gl-component-input-drag-and-drop-simple.component.scss']
+    selector: 'gl-component-input-drag-and-drop-simple',
+    templateUrl: './gl-component-input-drag-and-drop-simple.component.html',
+    styleUrls: ['./gl-component-input-drag-and-drop-simple.component.scss'],
+    standalone: true,
+    imports: [NgIf, GlComponentInputSwitchComponent, CoreDirectivesDragAndDropDirective, NgFor, GlComponentAttachmentItemComponent, GlComponentInputButtonSimpleComponent]
 })
 export class GlComponentInputDragAndDropSimpleComponent {
   @ViewChild('fileAttachment') input: ElementRef<HTMLInputElement>;

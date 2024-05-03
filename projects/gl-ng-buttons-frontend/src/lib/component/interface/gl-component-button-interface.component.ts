@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'gl-component-button-interface',
-  templateUrl: './gl-component-button-interface.component.html',
-  styleUrls: ['./gl-component-button-interface.component.scss']
+    selector: 'gl-component-button-interface',
+    templateUrl: './gl-component-button-interface.component.html',
+    styleUrls: ['./gl-component-button-interface.component.scss'],
+    standalone: true
 })
 export class GlComponentButtonInterfaceComponent implements OnInit {
   @Input() innerHtml: string;

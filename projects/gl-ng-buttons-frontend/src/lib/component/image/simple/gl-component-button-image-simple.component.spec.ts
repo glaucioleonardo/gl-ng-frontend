@@ -8,8 +8,8 @@ describe('GlComponentButtonImageSimpleComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentButtonImageSimpleComponent ]
-    })
+    imports: [GlComponentButtonImageSimpleComponent]
+})
     .compileComponents();
   }));
 

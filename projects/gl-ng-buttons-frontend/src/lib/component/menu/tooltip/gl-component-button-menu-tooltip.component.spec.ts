@@ -8,8 +8,8 @@ describe('GlComponentButtonMenuTooltipComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentButtonMenuTooltipComponent ]
-    })
+    imports: [GlComponentButtonMenuTooltipComponent]
+})
     .compileComponents();
   }));
 

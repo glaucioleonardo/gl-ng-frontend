@@ -7,8 +7,8 @@ describe('GlComponentInputTextLabelSimpleComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentInputTextLabelSimpleComponent ]
-    })
+    imports: [GlComponentInputTextLabelSimpleComponent]
+})
     .compileComponents();
   }));
 

@@ -2,11 +2,16 @@ import {AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewC
 import { Router } from '@angular/router';
 import { TFilterButtonClass, TFilterType } from './gl-component-filter.interface';
 import { GlComponentFilterService } from './gl-component-filter.service';
+import { GlComponentInputButtonSimpleComponent } from '../../../../../gl-ng-inputs-frontend/src/lib/component/button/simple/gl-component-input-button-simple.component';
+import { NgIf } from '@angular/common';
+import { GlComponentMenuBackgroundComponent } from '../../../../../gl-ng-menus-frontend/src/lib/component/menu/background/gl-component-menu-background.component';
 
 @Component({
-  selector: 'gl-component-filter',
-  templateUrl: './gl-component-filter.component.html',
-  styleUrls: ['./gl-component-filter.component.scss']
+    selector: 'gl-component-filter',
+    templateUrl: './gl-component-filter.component.html',
+    styleUrls: ['./gl-component-filter.component.scss'],
+    standalone: true,
+    imports: [GlComponentMenuBackgroundComponent, NgIf, GlComponentInputButtonSimpleComponent]
 })
 export class GlComponentFilterComponent implements AfterViewInit {
   @ViewChild('container', { static: true, read: ElementRef }) container: ElementRef<HTMLDivElement>;

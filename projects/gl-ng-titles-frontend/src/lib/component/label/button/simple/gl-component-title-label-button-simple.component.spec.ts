@@ -8,8 +8,8 @@ describe('GlSharedComponentTitleLabelButtonSimpleComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentTitleLabelButtonSimpleComponent ]
-    })
+    imports: [GlComponentTitleLabelButtonSimpleComponent]
+})
     .compileComponents();
   }));
 

@@ -8,8 +8,8 @@ describe('GlComponentPagingComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentPagingComponent ]
-    })
+    imports: [GlComponentPagingComponent]
+})
     .compileComponents();
   }));
 

@@ -1,10 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MAT_MOMENT_DATE_ADAPTER_OPTIONS, MomentDateAdapter } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
-import { MatDatepicker } from '@angular/material/datepicker';
+import { MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
 import { DateGet } from 'gl-w-date-frontend';
 import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignments.interface';
 import { IDatePickerMonthYearOutput } from './gl-component-input-datepicker-simple-month-year.interface';
+import { NgIf } from '@angular/common';
+import { MatLegacyInputModule } from '@angular/material/legacy-input';
+import { MatLegacyFormFieldModule } from '@angular/material/legacy-form-field';
 
 const MONTH_YEAR_FORMAT = {
   parse: {
@@ -19,24 +22,26 @@ const MONTH_YEAR_FORMAT = {
 };
 
 @Component({
-  selector: 'gl-component-input-datepicker-simple-month-year',
-  templateUrl: './gl-component-input-datepicker-simple-month-year.component.html',
-  styleUrls: ['./gl-component-input-datepicker-simple-month-year.component.scss'],
-  providers: [
-    {
-      provide: MAT_DATE_LOCALE,
-      useValue: 'pt-BR'
-    },
-    {
-      provide: DateAdapter,
-      useClass: MomentDateAdapter,
-      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
-    },
-    {
-      provide: MAT_DATE_FORMATS,
-      useValue: MONTH_YEAR_FORMAT
-    }
-  ]
+    selector: 'gl-component-input-datepicker-simple-month-year',
+    templateUrl: './gl-component-input-datepicker-simple-month-year.component.html',
+    styleUrls: ['./gl-component-input-datepicker-simple-month-year.component.scss'],
+    providers: [
+        {
+            provide: MAT_DATE_LOCALE,
+            useValue: 'pt-BR'
+        },
+        {
+            provide: DateAdapter,
+            useClass: MomentDateAdapter,
+            deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+        },
+        {
+            provide: MAT_DATE_FORMATS,
+            useValue: MONTH_YEAR_FORMAT
+        }
+    ],
+    standalone: true,
+    imports: [MatLegacyFormFieldModule, MatLegacyInputModule, MatDatepickerModule, NgIf]
 })
 export class GlComponentInputDatepickerSimpleMonthYearComponent {
   @Input() disabled = false;

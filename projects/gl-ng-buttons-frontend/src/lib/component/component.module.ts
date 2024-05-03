@@ -9,27 +9,24 @@ import { GlComponentButtonMenuSimpleComponent } from './menu/simple/gl-component
 import { GlComponentButtonMenuTooltipComponent } from './menu/tooltip/gl-component-button-menu-tooltip.component';
 
 @NgModule({
-  declarations: [
-    GlComponentButtonAttachmentFileComponent,
-    GlComponentButtonAttachmentLinkComponent,
-    GlComponentButtonImageSimpleComponent,
-    GlComponentButtonImageTooltipComponent,
-    GlComponentButtonInterfaceComponent,
-    GlComponentButtonMenuSimpleComponent,
-    GlComponentButtonMenuTooltipComponent
-  ],
-  imports: [
-    CommonModule,
-    // GlNgModalsFrontendModule
-  ],
-  exports: [
-    GlComponentButtonAttachmentFileComponent,
-    GlComponentButtonAttachmentLinkComponent,
-    GlComponentButtonImageSimpleComponent,
-    GlComponentButtonImageTooltipComponent,
-    GlComponentButtonInterfaceComponent,
-    GlComponentButtonMenuSimpleComponent,
-    GlComponentButtonMenuTooltipComponent
-  ]
+    imports: [
+        CommonModule,
+        GlComponentButtonAttachmentFileComponent,
+        GlComponentButtonAttachmentLinkComponent,
+        GlComponentButtonImageSimpleComponent,
+        GlComponentButtonImageTooltipComponent,
+        GlComponentButtonInterfaceComponent,
+        GlComponentButtonMenuSimpleComponent,
+        GlComponentButtonMenuTooltipComponent
+    ],
+    exports: [
+        GlComponentButtonAttachmentFileComponent,
+        GlComponentButtonAttachmentLinkComponent,
+        GlComponentButtonImageSimpleComponent,
+        GlComponentButtonImageTooltipComponent,
+        GlComponentButtonInterfaceComponent,
+        GlComponentButtonMenuSimpleComponent,
+        GlComponentButtonMenuTooltipComponent
+    ]
 })
 export class ComponentModule { }

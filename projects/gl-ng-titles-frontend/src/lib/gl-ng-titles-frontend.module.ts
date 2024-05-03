@@ -6,20 +6,18 @@ import { GlComponentTitleLabelSimpleComponent } from './component/label/simple/g
 import { GlComponentTitlePageComponent } from './component/page/gl-component-title-page.component';
 
 @NgModule({
-  declarations: [
-    GlComponentTitleLabelSimpleComponent,
-    GlComponentTitleLabelButtonSimpleComponent,
-    GlComponentTitleLabelButtonContainerComponent,
-    GlComponentTitlePageComponent
-  ],
     imports: [
-        CommonModule
+        CommonModule,
+        GlComponentTitleLabelSimpleComponent,
+        GlComponentTitleLabelButtonSimpleComponent,
+        GlComponentTitleLabelButtonContainerComponent,
+        GlComponentTitlePageComponent
     ],
-  exports: [
-    GlComponentTitleLabelSimpleComponent,
-    GlComponentTitleLabelButtonSimpleComponent,
-    GlComponentTitleLabelButtonContainerComponent,
-    GlComponentTitlePageComponent
-  ]
+    exports: [
+        GlComponentTitleLabelSimpleComponent,
+        GlComponentTitleLabelButtonSimpleComponent,
+        GlComponentTitleLabelButtonContainerComponent,
+        GlComponentTitlePageComponent
+    ]
 })
 export class GlNgTitlesFrontendModule { }

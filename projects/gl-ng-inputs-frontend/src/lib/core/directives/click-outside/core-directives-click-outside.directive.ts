@@ -1,8 +1,9 @@
 import { Directive, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Directive({
-  // tslint:disable-next-line:directive-selector
-  selector: '[clickOutside]'
+    // tslint:disable-next-line:directive-selector
+    selector: '[clickOutside]',
+    standalone: true
 })
 export class CoreDirectivesClickOutsideDirective {
   @Output() public clickOutside = new EventEmitter<MouseEvent>();

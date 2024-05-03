@@ -1,17 +1,24 @@
 import { Overlay } from '@angular/cdk/overlay';
 import { Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
-import { UntypedFormControl } from '@angular/forms';
-import { MatLegacyAutocomplete as MatAutocomplete } from '@angular/material/legacy-autocomplete';
+import { UntypedFormControl, ReactiveFormsModule } from '@angular/forms';
+import { MatLegacyAutocomplete as MatAutocomplete, MatLegacyAutocompleteModule } from '@angular/material/legacy-autocomplete';
 import { IComboBoxData } from 'gl-w-combobox-frontend';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignments.interface';
 import { GlComponentInputAutocompleteSimpleService } from './gl-component-input-autocomplete-simple.service';
+import { MatLegacyOptionModule } from '@angular/material/legacy-core';
+import { NgFor, AsyncPipe } from '@angular/common';
+import { MatLegacyDialogModule } from '@angular/material/legacy-dialog';
+import { MatLegacyInputModule } from '@angular/material/legacy-input';
+import { MatLegacyFormFieldModule } from '@angular/material/legacy-form-field';
 
 @Component({
-  selector: 'gl-component-input-autocomplete-simple',
-  templateUrl: './gl-component-input-autocomplete-simple.component.html',
-  styleUrls: ['./gl-component-input-autocomplete-simple.component.scss']
+    selector: 'gl-component-input-autocomplete-simple',
+    templateUrl: './gl-component-input-autocomplete-simple.component.html',
+    styleUrls: ['./gl-component-input-autocomplete-simple.component.scss'],
+    standalone: true,
+    imports: [MatLegacyFormFieldModule, MatLegacyInputModule, ReactiveFormsModule, MatLegacyAutocompleteModule, MatLegacyDialogModule, NgFor, MatLegacyOptionModule, AsyncPipe]
 })
 export class GlComponentInputAutocompleteSimpleComponent implements OnInit, OnDestroy, OnChanges {
   @ViewChild('input') input: ElementRef<HTMLInputElement>;

@@ -1,42 +1,45 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { IMenuItem, TMenuItemTheme, TUrlTarget } from './gl-component-menu-item.interface';
 import { style, state, animate, transition, trigger } from '@angular/animations';
 import { GlComponentMenuService } from '../gl-component-menu.service';
 import * as SmoothScroll from 'smooth-scroll';
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'gl-component-menu-item',
-  templateUrl: './gl-component-menu-item.component.html',
-  styleUrls: ['./gl-component-menu-item.component.scss'],
-  animations: [
-    trigger('fadeInOut', [
-      state('', style({
-        opacity: 0,
-        height: 0,
-        transform: 'scaleY(0)'
-      })),
-      transition(':enter', [   // :enter is alias to 'void => *'
-        style({
-          opacity: 0,
-          height: 0,
-          transform: 'scaleY(0)'
-        }),
-        animate('0.3s ease-in', style({
-          opacity: 1,
-          height: '*',
-          transform: 'scaleY(1)'
-        }))
-      ]),
-      transition(':leave', [   // :leave is alias to '* => void'
-        animate(250, style({
-          opacity: 0,
-          height: 0,
-          transform: 'scaleY(0)'
-        }))
-      ])
-    ])
-  ]
+    selector: 'gl-component-menu-item',
+    templateUrl: './gl-component-menu-item.component.html',
+    styleUrls: ['./gl-component-menu-item.component.scss'],
+    animations: [
+        trigger('fadeInOut', [
+            state('', style({
+                opacity: 0,
+                height: 0,
+                transform: 'scaleY(0)'
+            })),
+            transition(':enter', [
+                style({
+                    opacity: 0,
+                    height: 0,
+                    transform: 'scaleY(0)'
+                }),
+                animate('0.3s ease-in', style({
+                    opacity: 1,
+                    height: '*',
+                    transform: 'scaleY(1)'
+                }))
+            ]),
+            transition(':leave', [
+                animate(250, style({
+                    opacity: 0,
+                    height: 0,
+                    transform: 'scaleY(0)'
+                }))
+            ])
+        ])
+    ],
+    standalone: true,
+    imports: [NgIf, RouterLink, NgFor]
 })
 export class GlComponentMenuItemComponent {
   @Input() itemClass: TMenuItemTheme = 'dark';

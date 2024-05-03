@@ -2,9 +2,10 @@ import { Component, Input } from '@angular/core';
 import { TInputButtonSimpleClass, TInputButtonType } from './gl-component-input-button-simple.interface';
 
 @Component({
-  selector: 'gl-component-input-button-simple',
-  templateUrl: './gl-component-input-button-simple.component.html',
-  styleUrls: ['./gl-component-input-button-simple.component.scss']
+    selector: 'gl-component-input-button-simple',
+    templateUrl: './gl-component-input-button-simple.component.html',
+    styleUrls: ['./gl-component-input-button-simple.component.scss'],
+    standalone: true
 })
 export class GlComponentInputButtonSimpleComponent {
   @Input() value: string;

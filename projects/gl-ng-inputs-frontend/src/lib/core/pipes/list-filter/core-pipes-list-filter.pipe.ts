@@ -2,8 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { ListItem } from '../../../component/dropdown/simple/gl-component-input-dropdown-simple.model';
 
 @Pipe({
-  name: 'multiSelectFilter',
-  pure: false
+    name: 'multiSelectFilter',
+    pure: false,
+    standalone: true
 })
 export class CorePipesListFilterPipe implements PipeTransform {
 

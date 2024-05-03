@@ -7,8 +7,8 @@ describe('GlComponentInputOptionSimpleComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentInputOptionSimpleComponent ]
-    })
+    imports: [GlComponentInputOptionSimpleComponent]
+})
     .compileComponents();
   }));
 

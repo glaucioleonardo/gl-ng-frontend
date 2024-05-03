@@ -6,18 +6,16 @@ import { GlComponentAttachmentImagePreviewComponent } from './image/preview/gl-c
 import { GlComponentAttachmentItemComponent } from './item/gl-component-attachment-item.component';
 
 @NgModule({
-  declarations: [
-    GlComponentAttachmentImagePreviewComponent,
-    GlComponentAttachmentItemComponent
-  ],
-  imports: [
-    CommonModule,
-    GlNgTitlesFrontendModule,
-    GlNgButtonsFrontendModule
-  ],
-  exports: [
-    GlComponentAttachmentImagePreviewComponent,
-    GlComponentAttachmentItemComponent
-  ]
+    imports: [
+        CommonModule,
+        GlNgTitlesFrontendModule,
+        GlNgButtonsFrontendModule,
+        GlComponentAttachmentImagePreviewComponent,
+        GlComponentAttachmentItemComponent
+    ],
+    exports: [
+        GlComponentAttachmentImagePreviewComponent,
+        GlComponentAttachmentItemComponent
+    ]
 })
 export class ComponentModule { }

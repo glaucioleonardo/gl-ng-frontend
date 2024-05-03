@@ -1,12 +1,18 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { VgApiService } from '@videogular/ngx-videogular/core';
+import { VgApiService, VgCoreModule } from '@videogular/ngx-videogular/core';
 import { IPlayerData, TVideoPreload } from './gl-component-outputs-video-preview.interface';
 import { GlComponentOutputsVideoPreviewService } from './gl-component-outputs-video-preview.service';
+import { VgControlsModule } from '@videogular/ngx-videogular/controls';
+import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
+import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'gl-component-outputs-video-preview',
-  templateUrl: './gl-component-outputs-video-preview.component.html',
-  styleUrls: ['./gl-component-outputs-video-preview.component.scss']
+    selector: 'gl-component-outputs-video-preview',
+    templateUrl: './gl-component-outputs-video-preview.component.html',
+    styleUrls: ['./gl-component-outputs-video-preview.component.scss'],
+    standalone: true,
+    imports: [NgIf, VgCoreModule, VgOverlayPlayModule, VgBufferingModule, VgControlsModule]
 })
 export class GlComponentOutputsVideoPreviewComponent {
   @Input() id = 'single-video';

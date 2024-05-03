@@ -8,8 +8,8 @@ describe('GlSharedComponentFooterContainerComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlComponentFooterContainerComponent ]
-    })
+    imports: [GlComponentFooterContainerComponent]
+})
     .compileComponents();
   }));
 

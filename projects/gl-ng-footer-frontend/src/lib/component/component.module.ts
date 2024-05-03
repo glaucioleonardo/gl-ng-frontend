@@ -4,16 +4,14 @@ import { GlComponentFooterContainerComponent } from './container/gl-component-fo
 import { GlComponentFooterSimpleComponent } from './simple/gl-component-footer-simple.component';
 
 @NgModule({
-  declarations: [
-    GlComponentFooterSimpleComponent,
-    GlComponentFooterContainerComponent
-  ],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    GlComponentFooterSimpleComponent,
-    GlComponentFooterContainerComponent
-  ]
+    imports: [
+        CommonModule,
+        GlComponentFooterSimpleComponent,
+        GlComponentFooterContainerComponent
+    ],
+    exports: [
+        GlComponentFooterSimpleComponent,
+        GlComponentFooterContainerComponent
+    ]
 })
 export class ComponentModule { }

@@ -9,24 +9,22 @@ import { GlComponentModalLoadingComponent } from './loading/gl-component-modal-l
 import { GlComponentModalUploadFileComponent } from './upload-file/gl-component-modal-upload-file.component';
 
 @NgModule({
-  declarations: [
-    GlComponentModalAlertComponent,
-    GlComponentModalAttachmentLinkComponent,
-    GlComponentModalHeaderComponent,
-    GlComponentModalLoadingComponent,
-    GlComponentModalUploadFileComponent,
-  ],
-  imports: [
-    CommonModule,
-    CoreModule,
-    GlNgInputsFrontendModule
-  ],
-  exports: [
-    GlComponentModalAlertComponent,
-    GlComponentModalAttachmentLinkComponent,
-    GlComponentModalHeaderComponent,
-    GlComponentModalLoadingComponent,
-    GlComponentModalUploadFileComponent
-  ]
+    imports: [
+        CommonModule,
+        CoreModule,
+        GlNgInputsFrontendModule,
+        GlComponentModalAlertComponent,
+        GlComponentModalAttachmentLinkComponent,
+        GlComponentModalHeaderComponent,
+        GlComponentModalLoadingComponent,
+        GlComponentModalUploadFileComponent
+    ],
+    exports: [
+        GlComponentModalAlertComponent,
+        GlComponentModalAttachmentLinkComponent,
+        GlComponentModalHeaderComponent,
+        GlComponentModalLoadingComponent,
+        GlComponentModalUploadFileComponent
+    ]
 })
 export class ComponentModule { }

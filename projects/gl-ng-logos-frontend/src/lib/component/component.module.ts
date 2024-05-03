@@ -4,16 +4,14 @@ import { GlComponentLogoSquareComponent } from './square/gl-component-logo-squar
 import { GlComponentLogoTextOnlyComponent } from './text-only/gl-component-logo-text-only.component';
 
 @NgModule({
-  declarations: [
-    GlComponentLogoSquareComponent,
-    GlComponentLogoTextOnlyComponent
-  ],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    GlComponentLogoSquareComponent,
-    GlComponentLogoTextOnlyComponent
-  ]
+    imports: [
+        CommonModule,
+        GlComponentLogoSquareComponent,
+        GlComponentLogoTextOnlyComponent
+    ],
+    exports: [
+        GlComponentLogoSquareComponent,
+        GlComponentLogoTextOnlyComponent
+    ]
 })
 export class ComponentModule { }

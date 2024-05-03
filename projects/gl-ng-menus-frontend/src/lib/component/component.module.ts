@@ -8,23 +8,21 @@ import { GlComponentModalActionsComponent } from './modal/actions/gl-component-m
 import { GlComponentModalActionsItemComponent } from './modal/actions/item/gl-component-modal-actions-item.component';
 
 @NgModule({
-  declarations: [
-    GlComponentMenuBackgroundComponent,
-    GlComponentMenuItemComponent,
-    GlComponentMenuComponent,
-    GlComponentModalActionsComponent,
-    GlComponentModalActionsItemComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  exports: [
-    GlComponentMenuBackgroundComponent,
-    GlComponentMenuItemComponent,
-    GlComponentMenuComponent,
-    GlComponentModalActionsComponent,
-    GlComponentModalActionsItemComponent
-  ]
+    imports: [
+        CommonModule,
+        RouterModule,
+        GlComponentMenuBackgroundComponent,
+        GlComponentMenuItemComponent,
+        GlComponentMenuComponent,
+        GlComponentModalActionsComponent,
+        GlComponentModalActionsItemComponent
+    ],
+    exports: [
+        GlComponentMenuBackgroundComponent,
+        GlComponentMenuItemComponent,
+        GlComponentMenuComponent,
+        GlComponentModalActionsComponent,
+        GlComponentModalActionsItemComponent
+    ]
 })
 export class ComponentModule { }
