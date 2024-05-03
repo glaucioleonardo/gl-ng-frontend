@@ -1,0 +1,39 @@
+@use "gl-scss-styles/assets/style/fonts/fonts";
+@use "gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+@use "gl-scss-styles/assets/style/colors/red/c-red-light";
+
+:host::ng-deep {
+  .action-item-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.8em 1em;
+    cursor: pointer;
+
+    &:not(hover), &:not(active) {
+      background-color: rgba(c-gray-dark.$d3, 0.8);
+      transition: background-color ease-in-out 0.2s;
+    }
+
+    &:hover, &:active {
+      background-color: rgba(c-gray-dark.$d2-5, 0.8);
+      transition: background-color ease-in-out 0.2s;
+    }
+
+    .action-title {
+      @include fonts.font-family-custom(light);
+      font-size: 0.8em;
+      color: white;
+      flex: 1 1 auto;
+      user-select: none;
+
+      &.red {
+        color: c-red-light.$d;
+      }
+    }
+
+    .action-icon {
+      width: 1em;
+    }
+  }
+}

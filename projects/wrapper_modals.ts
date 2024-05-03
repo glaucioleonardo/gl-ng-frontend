@@ -6,10 +6,17 @@ export { GlNgModalsFrontendModule } from  './gl-ng-modals-frontend/src/lib/gl-ng
 
 // region interfaces
 export { TTheme } from './gl-ng-modals-frontend/src/lib/interfaces/global.interface';
+export { IModalItemAction } from './gl-ng-modals-frontend/src/lib/component/actions/item/gl-components-modal-actions-item.interface';
 // endregion
 
 // region directives
 export { CoreDirectivesAutofocusDirective } from './gl-ng-modals-frontend/src/lib/core/directives/autofocus/core-directives-autofocus.directive';
+// endregion
+
+// region actions
+export { GlComponentsModalActionsItemComponent } from './gl-ng-modals-frontend/src/lib/component/actions/item/gl-components-modal-actions-item.component';
+export { GlComponentsModalActionsComponent } from './gl-ng-modals-frontend/src/lib/component/actions/gl-components-modal-actions.component';
+export { GlComponentsModalActionsService } from './gl-ng-modals-frontend/src/lib/component/actions/gl-components-modal-actions.service';
 // endregion
 
 // region alert
