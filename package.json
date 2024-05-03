@@ -6,7 +6,6 @@
     "ng": "ng",
     "test": "ng test",
     "lint": "ng lint",
-
     "lib-pub-main": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-frontend && npm run publish",
     "lib-pub-attachment": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-attachments-frontend && npm run publish",
     "lib-pub-buttons": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-buttons-frontend && npm run publish",
@@ -23,7 +22,6 @@
     "lib-pub-outputs": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-outputs-frontend && npm run publish",
     "lib-pub-paging": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-paging-frontend && npm run publish",
     "lib-pub-titles": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-titles-frontend && npm run publish",
-
     "lib-pub-all": "npm run lib-pub-main && npm run lib-pub-attachment && npm run lib-pub-buttons && npm run lib-pub-error-message && npm run lib-pub-filters && npm run lib-pub-footer && npm run lib-pub-headers && npm run lib-pub-inputs && npm run lib-pub-lists && npm run lib-pub-logos && npm run lib-pub-menus && npm run lib-pub-modals && npm run lib-pub-navigation && npm run lib-pub-navigation && npm run lib-pub-outputs && npm run lib-pub-paging && npm run lib-pub-titles",
     "lib-pub-all-b": "npm run lib-pub-main & npm run lib-pub-attachment & npm run lib-pub-buttons & npm run lib-pub-error-message & npm run lib-pub-filters & npm run lib-pub-footer & npm run lib-pub-headers & npm run lib-pub-inputs & npm run lib-pub-lists & npm run lib-pub-logos & npm run lib-pub-menus & npm run lib-pub-modals & npm run lib-pub-navigation & npm run lib-pub-navigation & npm run lib-pub-outputs & npm run lib-pub-paging & npm run lib-pub-titles",
     "gl-styles": "npm run --prefix /Volumes/Data/Backup/Development/web-packages/gl-scss-styles production && npm pack /Volumes/Data/Backup/Development/web-packages/gl-scss-styles && npm i --prefer-offline ./gl-scss-styles-3.0.0.tgz && shx rm -rf ./gl-scss-styles-3.0.0.tgz",
@@ -31,25 +29,25 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^14.3.0",
-    "@angular/common": "^14.3.0",
-    "@angular/compiler": "^14.3.0",
-    "@angular/core": "^14.3.0",
-    "@angular/forms": "^14.3.0",
-    "@angular/platform-browser": "^14.3.0",
-    "@angular/platform-browser-dynamic": "^14.3.0",
-    "@angular/router": "^14.3.0",
+    "@angular/animations": "^15.2.10",
+    "@angular/common": "^15.2.10",
+    "@angular/compiler": "^15.2.10",
+    "@angular/core": "^15.2.10",
+    "@angular/forms": "^15.2.10",
+    "@angular/platform-browser": "^15.2.10",
+    "@angular/platform-browser-dynamic": "^15.2.10",
+    "@angular/router": "^15.2.10",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^14.2.13",
+    "@angular-devkit/build-angular": "^15.2.11",
     "@angular-eslint/eslint-plugin": "^17.3.0",
     "@angular-eslint/eslint-plugin-template": "^17.3.0",
     "@angular/cdk": "^14.2.7",
-    "@angular/cli": "^14.2.13",
-    "@angular/compiler-cli": "^14.3.0",
+    "@angular/cli": "^15.2.11",
+    "@angular/compiler-cli": "^15.2.10",
     "@angular/material": "^14.2.7",
     "@angular/material-moment-adapter": "^14.2.7",
     "@types/jasmine": "~4.0.0",
@@ -68,8 +66,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.0.0",
-    "ng-packagr": "^14.2.2",
+    "ng-packagr": "^15.2.2",
     "ts-node": "~9.1.1",
-    "typescript": "~4.7.2"
+    "typescript": "~4.9.5"
   }
 }
