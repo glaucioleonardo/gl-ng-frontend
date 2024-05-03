@@ -1,7 +1,7 @@
 import { Overlay } from '@angular/cdk/overlay';
 import { Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { UntypedFormControl } from '@angular/forms';
-import { MatAutocomplete } from '@angular/material/autocomplete';
+import { MatLegacyAutocomplete as MatAutocomplete } from '@angular/material/legacy-autocomplete';
 import { IComboBoxData } from 'gl-w-combobox-frontend';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
