@@ -1,0 +1,105 @@
+@use "gl-scss-styles/assets/style/components/view-port/view-port-height";
+@use "gl-scss-styles/assets/style/colors/black/c-black-translucid";
+@use "gl-scss-styles/assets/style/colors/gray/c-gray-dark";
+
+:host::ng-deep {
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  .modal-container {
+    font-size: 1em;
+    position: fixed;
+    min-width: 100vw;
+    min-height: view-port-height.height(100);
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 0;
+    background-color: c-black-translucid.$t5;
+    backdrop-filter: blur(10px);
+    padding: 0 0 view-port-height.height(5) 0;
+
+    animation: show-modal 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+
+    @keyframes show-modal {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    & > .modal-main-content {
+      opacity: 1 !important;
+      transition: all 0.5s ease-in-out;
+      transition-delay: 0.5s;
+    }
+  }
+
+  .modal-main-content {
+    width: 80vw;
+    max-height: view-port-height.height(80);
+    border-radius: 0.5em;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 20em;
+
+    .action-main-container {
+      border-radius: 0.5em;
+
+      app-shared-components-modal-actions-item {
+        .action-item-container {
+          border-bottom: solid 1px c-gray-dark.$d2;
+        }
+
+        &:nth-child(1) {
+          .action-item-container {
+            border-top-left-radius: 0.5em;
+            border-top-right-radius: 0.5em;
+          }
+        }
+        &:nth-last-child(1) {
+          .action-item-container {
+            border-bottom-left-radius: 0.5em;
+            border-bottom-right-radius: 0.5em;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+    .close-modal {
+      border-radius: 2em;
+      align-self: center;
+      width: 2em;
+      height: 2em;
+      margin: 1em 0 1em 0;
+      cursor: pointer;
+
+      &:hover, &:active {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+      }
+      &:not(hover), &:not(active) {
+        opacity: 0.5;
+        transition: opacity 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .hide-modal {
+    animation: hide-modal 0.3s ease-in-out;
+    animation-fill-mode: forwards;
+    @keyframes hide-modal {
+      from {opacity: 1;}
+      to {opacity: 0;}
+    }
+  }
+}
