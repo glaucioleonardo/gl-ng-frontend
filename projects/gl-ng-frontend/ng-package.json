@@ -9,15 +9,24 @@
     "./node_modules/gl-icons-assets/assets"
   ],
   "allowedNonPeerDependencies": [
+    "@angular/animations",
+    "@angular/common",
+    "@angular/forms",
+    "@angular/platform-browser-dynamic",
+    "@angular/cdk",
+    "@angular/material",
+    "@angular/material-moment-adapter",
+    "gl-w-attachment-frontend",
+    "gl-w-combobox-frontend",
+    "gl-w-date-frontend",
+    "gl-w-image-frontend",
+    "gl-w-input-frontend",
+    "gl-w-number-frontend",
     "gl-scss-styles",
     "gl-icons-assets",
-    "gl-w-attachment-frontend",
-    "gl-w-number-frontend",
-    "gl-w-image-frontend",
-    "gl-w-date-frontend",
-    "gl-w-input-frontend",
     "gl-sp-frontend",
+    "decimal.js",
     "smooth-scroll",
-    "decimal.js"
+    "@videogular/ngx-videogular"
   ]
 }

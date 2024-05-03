@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-inputs-frontend",
-  "version": "7.0.0",
+  "version": "8.0.1",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_inputs.ts",
   "types": "gl-ng-inputs-frontend.d.ts",
@@ -30,23 +30,25 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "~14.3.0",
-    "@angular/core": "~14.3.0"
+    "@angular/common": "~15.2.10",
+    "@angular/core": "~15.2.10"
   },
   "dependencies": {
-    "@angular/cdk": "^14.2.7",
-    "@angular/material": "^14.2.7",
-    "@angular/material-moment-adapter": "^14.2.7",
+    "@angular/animations": "^15.2.10",
+    "@angular/forms": "^15.2.10",
+    "@angular/cdk": "^15.2.9",
+    "@angular/material": "^15.2.9",
+    "@angular/material-moment-adapter": "^15.2.9",
     "decimal.js": "^10.4.3",
     "gl-icons-assets": "^1.5.1",
     "gl-scss-styles": "^3.1.1",
-    "gl-sp-frontend": "^4.0.0",
-    "gl-w-attachment-frontend": "^3.0.1",
-    "gl-w-combobox-frontend": "^3.0.1",
-    "gl-w-date-frontend": "^3.0.1",
-    "gl-w-image-frontend": "^3.0.1",
-    "gl-w-input-frontend": "^3.0.1",
-    "gl-w-number-frontend": "^3.0.1"
+    "gl-sp-frontend": "^5.0.0",
+    "gl-w-attachment-frontend": "^4.0.0",
+    "gl-w-combobox-frontend": "^4.0.0",
+    "gl-w-date-frontend": "^4.0.0",
+    "gl-w-image-frontend": "^4.0.0",
+    "gl-w-input-frontend": "^4.0.0",
+    "gl-w-number-frontend": "^4.0.0"
   },
   "scripts": {
     "build": "ng build gl-ng-inputs-frontend",
