@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-menus-frontend",
-  "version": "7.0.2",
+  "version": "8.0.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_menus.ts",
   "types": "gl-ng-menus-frontend.d.ts",
@@ -21,10 +21,18 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "~15.2.10",
-    "@angular/core": "~15.2.10"
+    "@angular/common": "~16.2.12",
+    "@angular/core": "~16.2.12",
+
+    "gl-icons-assets": "^1.5.1",
+    "gl-scss-styles": "^3.1.1",
+    "scroll-into-view-if-needed": "^3.1.0"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@angular/common": "~16.2.12",
+    "@angular/core": "~16.2.12",
+
     "gl-icons-assets": "^1.5.1",
     "gl-scss-styles": "^3.1.1",
     "scroll-into-view-if-needed": "^3.1.0"

@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-navigation-frontend",
-  "version": "7.0.1",
+  "version": "8.0.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_navigation.ts",
   "types": "gl-ng-navigation-frontend.d.ts",
@@ -21,10 +21,16 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "~15.2.10",
-    "@angular/core": "~15.2.10"
+    "@angular/common": "~16.2.12",
+    "@angular/core": "~16.2.12",
+
+    "gl-scss-styles": "^3.1.1"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@angular/common": "~16.2.12",
+    "@angular/core": "~16.2.12",
+
     "gl-scss-styles": "^3.1.1"
   },
   "scripts": {
