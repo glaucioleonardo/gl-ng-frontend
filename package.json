@@ -6,7 +6,6 @@
     "ng": "ng",
     "test": "ng test",
     "lint": "ng lint",
-
     "lib-i-main": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-frontend && npm i",
     "lib-i-attachment": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-attachments-frontend && npm i",
     "lib-i-buttons": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-buttons-frontend && npm i",
@@ -24,7 +23,6 @@
     "lib-i-paging": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-paging-frontend && npm i",
     "lib-i-titles": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-titles-frontend && npm i",
     "lib-i-all": "npm run lib-i-main && npm run lib-i-attachment && npm run lib-i-buttons && npm run lib-i-error-message && npm run lib-i-filters && npm run lib-i-footer && npm run lib-i-headers && npm run lib-i-inputs && npm run lib-i-lists && npm run lib-i-logos && npm run lib-i-menus && npm run lib-i-modals && npm run lib-i-navigation && npm run lib-i-navigation && npm run lib-i-outputs && npm run lib-i-paging && npm run lib-i-titles",
-
     "lib-prod-main": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-frontend && npm run production",
     "lib-prod-attachment": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-attachments-frontend && npm run production",
     "lib-prod-buttons": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-buttons-frontend && npm run production",
@@ -42,7 +40,6 @@
     "lib-prod-paging": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-paging-frontend && npm run production",
     "lib-prod-titles": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-titles-frontend && npm run production",
     "lib-prod-all": "npm run lib-prod-main && npm run lib-prod-attachment && npm run lib-prod-buttons && npm run lib-prod-error-message && npm run lib-prod-filters && npm run lib-prod-footer && npm run lib-prod-headers && npm run lib-prod-inputs && npm run lib-prod-lists && npm run lib-prod-logos && npm run lib-prod-menus && npm run lib-prod-modals && npm run lib-prod-navigation && npm run lib-prod-navigation && npm run lib-prod-outputs && npm run lib-prod-paging && npm run lib-prod-titles",
-
     "lib-pub-main": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-frontend && npm run publish",
     "lib-pub-attachment": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-attachments-frontend && npm run publish",
     "lib-pub-buttons": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-buttons-frontend && npm run publish",
@@ -61,31 +58,30 @@
     "lib-pub-titles": "cd D:\\_local-development\\gl-ng-frontend\\projects\\gl-ng-titles-frontend && npm run publish",
     "lib-pub-all": "npm run lib-pub-main && npm run lib-pub-attachment && npm run lib-pub-buttons && npm run lib-pub-error-message && npm run lib-pub-filters && npm run lib-pub-footer && npm run lib-pub-headers && npm run lib-pub-inputs && npm run lib-pub-lists && npm run lib-pub-logos && npm run lib-pub-menus && npm run lib-pub-modals && npm run lib-pub-navigation && npm run lib-pub-navigation && npm run lib-pub-outputs && npm run lib-pub-paging && npm run lib-pub-titles",
     "lib-pub-all-b": "npm run lib-pub-main & npm run lib-pub-attachment & npm run lib-pub-buttons & npm run lib-pub-error-message & npm run lib-pub-filters & npm run lib-pub-footer & npm run lib-pub-headers & npm run lib-pub-inputs & npm run lib-pub-lists & npm run lib-pub-logos & npm run lib-pub-menus & npm run lib-pub-modals & npm run lib-pub-navigation & npm run lib-pub-navigation & npm run lib-pub-outputs & npm run lib-pub-paging & npm run lib-pub-titles",
-
     "gl-styles": "npm run --prefix /Volumes/Data/Backup/Development/web-packages/gl-scss-styles production && npm pack /Volumes/Data/Backup/Development/web-packages/gl-scss-styles && npm i --prefer-offline ./gl-scss-styles-3.0.0.tgz && shx rm -rf ./gl-scss-styles-3.0.0.tgz",
     "glw": "npm run --prefix /Volumes/Data/Backup/Development/web-packages/gl-w-frontend production && npm pack /Volumes/Data/Backup/Development/web-packages/gl-w-frontend && npm i --prefer-offline ./gl-w-frontend-4.1.8.tgz && shx rm -rf ./gl-w-frontend-4.1.8.tgz"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^15.2.10",
-    "@angular/common": "^15.2.10",
-    "@angular/compiler": "^15.2.10",
-    "@angular/core": "^15.2.10",
-    "@angular/forms": "^15.2.10",
-    "@angular/platform-browser": "^15.2.10",
-    "@angular/platform-browser-dynamic": "^15.2.10",
-    "@angular/router": "^15.2.10",
+    "@angular/animations": "^16.2.12",
+    "@angular/common": "^16.2.12",
+    "@angular/compiler": "^16.2.12",
+    "@angular/core": "^16.2.12",
+    "@angular/forms": "^16.2.12",
+    "@angular/platform-browser": "^16.2.12",
+    "@angular/platform-browser-dynamic": "^16.2.12",
+    "@angular/router": "^16.2.12",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.12.0"
+    "zone.js": "~0.13.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.2.11",
+    "@angular-devkit/build-angular": "^16.2.14",
     "@angular-eslint/eslint-plugin": "^17.3.0",
     "@angular-eslint/eslint-plugin-template": "^17.3.0",
     "@angular/cdk": "^15.2.9",
-    "@angular/cli": "^15.2.11",
-    "@angular/compiler-cli": "^15.2.10",
+    "@angular/cli": "^16.2.14",
+    "@angular/compiler-cli": "^16.2.12",
     "@angular/material": "^15.2.9",
     "@angular/material-moment-adapter": "^15.2.9",
     "@types/jasmine": "~4.0.0",
@@ -104,7 +100,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.0.0",
-    "ng-packagr": "^15.2.2",
+    "ng-packagr": "^16.2.3",
     "ts-node": "~9.1.1",
     "typescript": "~4.9.5"
   }
