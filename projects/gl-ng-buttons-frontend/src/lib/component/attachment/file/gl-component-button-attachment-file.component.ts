@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { GlComponentButtonAttachmentFileService } from './gl-component-button-attachment-file.service';
-import { IAttachmentData } from 'gl-sp-frontend';
+import { IAttachmentData } from 'gl-w-attachment-frontend';
 
 @Component({
     selector: 'gl-component-button-attachment-file',

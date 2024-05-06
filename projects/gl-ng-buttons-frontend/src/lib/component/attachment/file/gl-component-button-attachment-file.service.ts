@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { IAttachmentData } from 'gl-sp-frontend';
+import { IAttachmentData } from 'gl-w-attachment-frontend';
 import { AttachmentIcon, AttachmentParser, AttachmentValidate } from 'gl-w-attachment-frontend';
 import { NumberParse } from 'gl-w-number-frontend';
 import { GlComponentModalAlertService } from '../../../../../../gl-ng-modals-frontend/src/lib/component/alert/gl-component-modal-alert.service';
