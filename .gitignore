@@ -61,3 +61,4 @@ testem.log
 Thumbs.db
 /dist/
 /projects/gl-ng-outputs-frontend/node_modules/
+/.angular/
