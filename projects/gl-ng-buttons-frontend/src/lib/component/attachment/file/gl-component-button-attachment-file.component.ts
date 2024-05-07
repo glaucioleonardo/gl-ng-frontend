@@ -1,12 +1,16 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { GlComponentButtonAttachmentFileService } from './gl-component-button-attachment-file.service';
 import { IAttachmentData } from 'gl-w-attachment-frontend';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-    selector: 'gl-component-button-attachment-file',
-    templateUrl: './gl-component-button-attachment-file.component.html',
-    styleUrls: ['./gl-component-button-attachment-file.component.scss'],
-    standalone: true
+  selector: 'gl-component-button-attachment-file',
+  templateUrl: './gl-component-button-attachment-file.component.html',
+  styleUrls: ['./gl-component-button-attachment-file.component.scss'],
+  imports: [
+    NgOptimizedImage
+  ],
+  standalone: true
 })
 export class GlComponentButtonAttachmentFileComponent implements AfterViewInit {
   @ViewChild('fileInput', { read: ElementRef, static: true }) fileInput: ElementRef<HTMLInputElement>;

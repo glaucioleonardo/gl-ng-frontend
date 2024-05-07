@@ -5,7 +5,8 @@
     alt="Checked"
     class="check-box unchecked"
     [class.disabled]="disabled"
-    [src]="'../assets/img/icon/check-box/' + uncheckedIcon + '.svg'">
+    [ngSrc]="'../assets/img/icon/check-box/' + uncheckedIcon + '.svg'"
+    fill="true">
 
   <img
     *ngIf="checked"
@@ -13,6 +14,7 @@
     alt="Unchecked"
     class="check-box checked"
     [class.disabled]="disabled"
-    [src]="'../assets/img/icon/check-box/' + checkedIcon +'.svg'">
+    [ngSrc]="'../assets/img/icon/check-box/' + checkedIcon +'.svg'"
+    fill="true">
 
 </div>

@@ -4,6 +4,7 @@
     height: 3em;
     position: absolute;
     opacity: 0.1;
+    object-fit: contain;
 
     &.top { top: 1em; }
     &.right { right: 1em; }

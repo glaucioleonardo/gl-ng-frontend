@@ -1,14 +1,14 @@
 import { AfterViewInit, Component, EventEmitter, Input, Output } from '@angular/core';
 import { IItemsPerPage, IPageButtons, IPaging, TPagingThemeType, TPagingType } from './gl-component-paging.interface';
 import { GlComponentInputButtonSimpleComponent } from '../../../../../gl-ng-inputs-frontend/src/lib/component/button/simple/gl-component-input-button-simple.component';
-import { NgIf, NgFor } from '@angular/common';
+import { NgIf, NgFor, NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-paging',
     templateUrl: './gl-component-paging.component.html',
     styleUrls: ['./gl-component-paging.component.scss'],
     standalone: true,
-    imports: [NgIf, NgFor, GlComponentInputButtonSimpleComponent]
+  imports: [NgIf, NgFor, GlComponentInputButtonSimpleComponent, NgOptimizedImage]
 })
 export class GlComponentPagingComponent implements AfterViewInit {
   @Input() pageInfo: string;

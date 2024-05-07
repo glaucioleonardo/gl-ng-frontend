@@ -1,5 +1,9 @@
 <li class="menu-title {{ itemClass }}" *ngIf="!hasSubitem">
-  <img [src]="src" class="menu-icons" [alt]="alt"/>
+  <img
+    [ngSrc]="src"
+    class="menu-icons"
+    [alt]="alt"
+    fill="true"/>
   <a
     class="menu-item"
     *ngIf="absolute"
@@ -15,16 +19,28 @@
 </li>
 
 <li class="menu-title {{ itemClass }} {{ active ? 'active' : '' }}" *ngIf="hasSubitem">
-  <img [src]="src" class="menu-icons" [alt]="alt"/>
+  <img
+    [ngSrc]="src"
+    class="menu-icons"
+    [alt]="alt"
+    fill="true"/>
   <div
     class="menu-item"
     (click)="toggleActive()"
   >{{ content }}</div>
-  <img src="../assets/img/icon/side-menu/arrow-down.svg" class="menu-arrow" [alt]="alt"/>
+  <img
+    ngSrc="../assets/img/icon/side-menu/arrow-down.svg"
+    class="menu-arrow"
+    [alt]="alt"
+    fill="true"/>
 </li>
 <ol *ngIf="hasSubitem && active" [@fadeInOut] class="subitem-container {{ active ? 'active' : '' }}">
   <li class="menu-title adding-row-animated {{ item.class }}" *ngFor="let item of subItems">
-    <img [src]="item.src" class="menu-icons" [alt]="item.alt"/>
+    <img
+      [ngSrc]="item.src"
+      class="menu-icons"
+      [alt]="item.alt"
+      fill="true"/>
     <a
       class="menu-item"
       *ngIf="item.absolute"

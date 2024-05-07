@@ -76,6 +76,7 @@
       height: 2em;
       margin: 1em 0 1em 0;
       cursor: pointer;
+      object-fit: contain;
 
       &:hover, &:active {
         opacity: 1;

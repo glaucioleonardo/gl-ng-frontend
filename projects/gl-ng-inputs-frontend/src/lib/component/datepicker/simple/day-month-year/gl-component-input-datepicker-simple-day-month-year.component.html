@@ -17,14 +17,16 @@
       matDatepickerToggleIcon
       class="datepicker-button"
       alt="Date picker icon"
-      src="../assets/img/icon/datepicker/clear.svg">
+      ngSrc="../assets/img/icon/datepicker/clear.svg"
+      fill="true">
   </mat-datepicker-toggle>
   <mat-datepicker-toggle *ngIf="!disabled" matSuffix [for]="dp3">
     <img
       matDatepickerToggleIcon
       class="datepicker-button"
       alt="Date picker icon"
-      src="../assets/img/icon/datepicker/date.svg">
+      ngSrc="../assets/img/icon/datepicker/date.svg"
+      fill="true">
   </mat-datepicker-toggle>
   <mat-datepicker #dp3 disabled="false"></mat-datepicker>
 </mat-form-field>

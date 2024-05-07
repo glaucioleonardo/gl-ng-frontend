@@ -6,7 +6,13 @@
   <div class="header-filter-container">
     <div class="menu-header">
       <div class="menu-top-icons-container">
-        <img id="close-menu-button" (click)="service.close($event)" [src]="closeButton" class="menu-icons close-menu" alt="Close menu button">
+        <img
+          id="close-menu-button"
+          (click)="service.close($event)"
+          [ngSrc]="closeButton"
+          class="menu-icons close-menu"
+          alt="Close menu button"
+          fill="true">
       </div>
       <div class="menu-header-title">
         <h1 class="title">{{ title }}</h1>

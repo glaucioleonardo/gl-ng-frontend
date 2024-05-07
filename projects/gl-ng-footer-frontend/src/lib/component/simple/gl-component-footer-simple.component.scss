@@ -1,7 +1,7 @@
-@use "gl-scss-styles/assets/style/components/input/input-ellipsis";
 @use "gl-scss-styles/assets/style/colors/gray/c-gray-dark";
 @use "gl-scss-styles/assets/style/colors/white/c-white-translucid";
 @use "gl-scss-styles/assets/style/fonts/fonts";
+@import "gl-scss-styles/assets/style/components/input/input-ellipsis";
 
 :host::ng-deep {
   z-index: 100;
@@ -46,6 +46,7 @@
 
     .image-logo {
       height: 1em;
+      object-fit: contain;
     }
 
     &.dark {

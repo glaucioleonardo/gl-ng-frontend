@@ -4,7 +4,8 @@
     *ngIf="imageLogo != null"
     class="image-logo"
     [alt]="imageDescription"
-    [src]="imageLogo">
+    [ngSrc]="imageLogo"
+    fill="true">
   <div class="user-container">
     <ng-content></ng-content>
   </div>

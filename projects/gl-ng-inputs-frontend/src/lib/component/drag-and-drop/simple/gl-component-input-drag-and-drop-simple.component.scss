@@ -1,8 +1,8 @@
 @use "gl-scss-styles/assets/style/colors/white/c-white-translucid";
 @use "gl-scss-styles/assets/style/colors/pink/c-pink-dark";
 @use "gl-scss-styles/assets/style/fonts/fonts";
-@use "gl-scss-styles/assets/style/action/readonly";
-@use "gl-scss-styles/assets/style/components/input/input-ellipsis";
+@import "gl-scss-styles/assets/style/action/readonly";
+@import "gl-scss-styles/assets/style/components/input/input-ellipsis";
 
 :host::ng-deep {
   font-size: 1em;
@@ -60,6 +60,7 @@
         background: black;
         padding: 1em;
         border-radius: 1em;
+        object-fit: contain;
 
         width: 3em;
         height: 3em;

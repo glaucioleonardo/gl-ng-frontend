@@ -8,7 +8,7 @@ import { map, startWith } from 'rxjs/operators';
 import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignments.interface';
 import { GlComponentInputAutocompleteSimpleService } from './gl-component-input-autocomplete-simple.service';
 import { MatOptionModule } from '@angular/material/core';
-import { NgFor, AsyncPipe } from '@angular/common';
+import { NgFor, AsyncPipe, NgOptimizedImage } from '@angular/common';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -18,7 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     templateUrl: './gl-component-input-autocomplete-simple.component.html',
     styleUrls: ['./gl-component-input-autocomplete-simple.component.scss'],
     standalone: true,
-    imports: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, MatAutocompleteModule, MatDialogModule, NgFor, MatOptionModule, AsyncPipe]
+  imports: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, MatAutocompleteModule, MatDialogModule, NgFor, MatOptionModule, AsyncPipe, NgOptimizedImage]
 })
 export class GlComponentInputAutocompleteSimpleComponent implements OnInit, OnDestroy, OnChanges {
   @ViewChild('input') input: ElementRef<HTMLInputElement>;

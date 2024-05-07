@@ -5,14 +5,14 @@ import { GlComponentOutputsVideoPreviewService } from './gl-component-outputs-vi
 import { VgControlsModule } from '@videogular/ngx-videogular/controls';
 import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
-import { NgIf } from '@angular/common';
+import { NgIf, NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-outputs-video-preview',
     templateUrl: './gl-component-outputs-video-preview.component.html',
     styleUrls: ['./gl-component-outputs-video-preview.component.scss'],
     standalone: true,
-    imports: [NgIf, VgCoreModule, VgOverlayPlayModule, VgBufferingModule, VgControlsModule]
+  imports: [NgIf, VgCoreModule, VgOverlayPlayModule, VgBufferingModule, VgControlsModule, NgOptimizedImage]
 })
 export class GlComponentOutputsVideoPreviewComponent {
   @Input() id = 'single-video';

@@ -1,13 +1,14 @@
 import { AfterViewInit, Component, EventEmitter, Input, Output } from '@angular/core';
 import { GlComponentInputTextSimpleComponent } from '../gl-component-input-text-simple.component';
 import { ISearchOutput } from './gl-component-input-text-simple-search.interface';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-input-text-simple-search',
     templateUrl: './gl-component-input-text-simple-search.component.html',
     styleUrls: ['./gl-component-input-text-simple-search.component.scss'],
     standalone: true,
-    imports: [GlComponentInputTextSimpleComponent]
+  imports: [GlComponentInputTextSimpleComponent, NgOptimizedImage]
 })
 export class GlComponentInputTextSimpleSearchComponent implements AfterViewInit{
   @Input() isOnSearch = false;

@@ -3,7 +3,7 @@
 @use "gl-scss-styles/assets/style/colors/gray/c-gray";
 @use "gl-scss-styles/assets/style/colors/green/c-green-light";
 @use "gl-scss-styles/assets/style/fonts/fonts";
-@use "gl-scss-styles/assets/style/components/input/input-ellipsis";
+@import "gl-scss-styles/assets/style/components/input/input-ellipsis";
 
 :host::ng-deep {
   font-size: 1em;
@@ -110,6 +110,7 @@
         border-radius: 0.5em;
         height: $size;
         width: $size;
+        object-fit: contain;
       }
 
       .switch-label {

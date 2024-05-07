@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IListRemoveItem } from './gl-component-input-list-item-remove.interface';
-import { NgClass } from '@angular/common';
+import { NgClass, NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-input-list-item-remove',
     templateUrl: './gl-component-input-list-item-remove.component.html',
     styleUrls: ['./gl-component-input-list-item-remove.component.scss'],
     standalone: true,
-    imports: [NgClass]
+  imports: [NgClass, NgOptimizedImage]
 })
 export class GlComponentInputListItemRemoveComponent {
 

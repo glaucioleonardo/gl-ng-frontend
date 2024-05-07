@@ -1,4 +1,3 @@
-import { EventEmitter } from '@angular/core';
 import { IAttachmentData } from 'gl-w-attachment-frontend';
 
 export interface IDragAndDropVariables {

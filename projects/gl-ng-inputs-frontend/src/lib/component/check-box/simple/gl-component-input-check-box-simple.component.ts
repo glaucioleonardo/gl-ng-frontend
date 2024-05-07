@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TCheckboxTheme, TCheckedIcon, TUncheckedIcon } from './gl-component-input-check-box-simple.interface';
-import { NgIf } from '@angular/common';
+import { NgIf, NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-input-check-box-simple',
     templateUrl: './gl-component-input-check-box-simple.component.html',
     styleUrls: ['./gl-component-input-check-box-simple.component.scss'],
     standalone: true,
-    imports: [NgIf]
+  imports: [NgIf, NgOptimizedImage]
 })
 export class GlComponentInputCheckBoxSimpleComponent {
 

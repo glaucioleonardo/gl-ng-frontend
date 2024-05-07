@@ -1,11 +1,15 @@
 import { Component, Input } from '@angular/core';
 import { TLogoHorizontalPosition, TLogoVerticalPosition } from './gl-component-logo-square.interface';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-    selector: 'gl-component-logo-square',
-    templateUrl: './gl-component-logo-square.component.html',
-    styleUrls: ['./gl-component-logo-square.component.scss'],
-    standalone: true
+  selector: 'gl-component-logo-square',
+  templateUrl: './gl-component-logo-square.component.html',
+  styleUrls: ['./gl-component-logo-square.component.scss'],
+  imports: [
+    NgOptimizedImage
+  ],
+  standalone: true
 })
 export class GlComponentLogoSquareComponent {
   @Input() imageScr: string;

@@ -13,6 +13,7 @@
     left: -4em;
     top: 0.40em;
     z-index: 100;
+    object-fit: contain;
 
     &.show-remove {
       left: 0.3em;

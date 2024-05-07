@@ -4,7 +4,7 @@ import { GlComponentMenuService } from './gl-component-menu.service';
 import { IMenuItem, IMenuItemComplex } from './item/gl-component-menu-item.interface';
 import { TMenuPosition } from './gl-component-menu.interface';
 import { GlComponentMenuItemComponent } from './item/gl-component-menu-item.component';
-import { NgIf, NgFor } from '@angular/common';
+import { NgIf, NgFor, NgOptimizedImage } from '@angular/common';
 import { GlComponentMenuBackgroundComponent } from './background/gl-component-menu-background.component';
 
 @Component({
@@ -12,7 +12,7 @@ import { GlComponentMenuBackgroundComponent } from './background/gl-component-me
     templateUrl: './gl-component-menu.component.html',
     styleUrls: ['./gl-component-menu.component.scss'],
     standalone: true,
-    imports: [GlComponentMenuBackgroundComponent, NgIf, NgFor, GlComponentMenuItemComponent, RouterLink]
+  imports: [GlComponentMenuBackgroundComponent, NgIf, NgFor, GlComponentMenuItemComponent, RouterLink, NgOptimizedImage]
 })
 export class GlComponentMenuComponent implements OnInit {
   @ViewChild('container', { static: true, read: ElementRef }) container: ElementRef<HTMLDivElement>;

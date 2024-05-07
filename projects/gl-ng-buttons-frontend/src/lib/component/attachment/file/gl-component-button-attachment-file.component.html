@@ -8,6 +8,10 @@
     [accept]="accept"
     [title]="title"
     [attr.data-maxsize]="maxFileSize"/>
-  <img class="attachment-icon" [src]="icon" alt="Attachment Icon">
+  <img
+    class="attachment-icon"
+    [ngSrc]="icon"
+    alt="Attachment Icon"
+    fill="true">
   <span class="attachment-file-button">{{ description }}</span>
 </div>

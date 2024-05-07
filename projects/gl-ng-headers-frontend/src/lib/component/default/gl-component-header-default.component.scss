@@ -1,7 +1,7 @@
 @use "gl-scss-styles/assets/style/colors/gray/c-gray-dark";
 @use "gl-scss-styles/assets/style/colors/black/c-black-translucid";
 @use "gl-scss-styles/assets/style/colors/white/c-white-translucid";
-@use "gl-scss-styles/assets/style/components/input/input-ellipsis";
+@import "gl-scss-styles/assets/style/components/input/input-ellipsis";
 
 %white-background {
   h1, h2, h3, h4, h5 {

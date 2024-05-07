@@ -12,6 +12,7 @@
       height: 1em;
       width: 1em;
       margin: 0 0.1em;
+      object-fit: contain;
 
       &:hover {
         transform: scale(1.1);
@@ -24,6 +25,9 @@
         opacity: 0.5;
         transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
       }
+    }
+    .required-fill-dot {
+      object-fit: contain;
     }
   }
 }

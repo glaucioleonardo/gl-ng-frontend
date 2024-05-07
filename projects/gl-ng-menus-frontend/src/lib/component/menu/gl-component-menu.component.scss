@@ -1,13 +1,14 @@
 @use "gl-scss-styles/assets/style/components/view-port/view-port-height";
-@use "gl-scss-styles/assets/style/components/input/input-ellipsis";
 
 @use "gl-scss-styles/assets/style/colors/black/c-black-translucid";
 @use "gl-scss-styles/assets/style/colors/gray/c-gray-dark";
 @use "gl-scss-styles/assets/style/colors/pink/c-pink";
 @use "gl-scss-styles/assets/style/colors/white/c-white-translucid";
 
-@use "gl-scss-styles/assets/style/anims/blur-animation";
 @use "gl-scss-styles/assets/style/fonts/fonts";
+@import "gl-scss-styles/assets/style/components/view-port/view-port-height";
+@import "gl-scss-styles/assets/style/components/input/input-ellipsis";
+@import "gl-scss-styles/assets/style/anims/blur-animation";
 
 :host::ng-deep {
   font-size: 1em;
@@ -76,6 +77,7 @@
                 height: 2.8em;
                 width: 2.8em;
                 border-radius: 0.5em;
+                object-fit: contain;
 
                 &:active, &:hover {
                   opacity: 1;
@@ -212,6 +214,7 @@
     }
 
     .menu-icons {
+      object-fit: contain;
       animation: decrease-increase 0.4s ease-in-out;
       animation-fill-mode: forwards;
     }

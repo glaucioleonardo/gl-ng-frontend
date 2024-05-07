@@ -6,6 +6,7 @@
     width: 1em;
     height: 1em;
     border-radius: 0.25em;
+    object-fit: contain;
 
     &:not(hover) {
       opacity: 0.5;

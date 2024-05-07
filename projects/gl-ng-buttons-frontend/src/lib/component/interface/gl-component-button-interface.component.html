@@ -3,8 +3,9 @@
   (click)="buttonClick()">
   <img
     class="attachment-icon"
-    [src]="imageSrc"
-    [alt]="imageAlt">
+    [ngSrc]="imageSrc"
+    [alt]="imageAlt"
+    fill="true">
   <span
     [id]="id"
     class="attachment-file-button">{{ innerHtml }}</span>

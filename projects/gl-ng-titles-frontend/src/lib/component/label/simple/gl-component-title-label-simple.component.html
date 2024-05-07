@@ -1,3 +1,4 @@
+<!--suppress XmlInvalidId -->
 <label
   #label
   class="header-data {{ labelAlignment }} {{ theme }}"
@@ -5,7 +6,8 @@
 </label>
 <img
   *ngIf="required"
-  src="../assets/img/icon/label/dot.svg"
+  ngSrc="../assets/img/icon/label/dot.svg"
   class="required-fill-dot {{ theme }}"
   [title]="requiredLabel"
-  alt="Required fill icon">
+  alt="Required fill icon"
+  fill="true">

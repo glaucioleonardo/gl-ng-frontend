@@ -2,7 +2,7 @@ import { Component, HostListener, forwardRef, Input, Output, EventEmitter, Chang
 import { NG_VALUE_ACCESSOR, ControlValueAccessor, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CorePipesListFilterPipe } from '../../../core/pipes/list-filter/core-pipes-list-filter.pipe';
 import { IDropdownSettings, ListItem } from './gl-component-input-dropdown-simple.model';
-import { NgIf, NgFor, NgClass } from '@angular/common';
+import { NgIf, NgFor, NgClass, NgOptimizedImage } from '@angular/common';
 import { CoreDirectivesClickOutsideDirective } from '../../../core/directives/click-outside/core-directives-click-outside.directive';
 
 export const DROPDOWN_CONTROL_VALUE_ACCESSOR: any = {
@@ -19,7 +19,7 @@ const noop = () => {};
     providers: [DROPDOWN_CONTROL_VALUE_ACCESSOR],
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
-    imports: [CoreDirectivesClickOutsideDirective, NgIf, NgFor, NgClass, ReactiveFormsModule, FormsModule, CorePipesListFilterPipe]
+  imports: [CoreDirectivesClickOutsideDirective, NgIf, NgFor, NgClass, ReactiveFormsModule, FormsModule, CorePipesListFilterPipe, NgOptimizedImage]
 })
 export class GlComponentInputDropdownSimpleComponent implements ControlValueAccessor {
   readonly imageSource = '../assets/img/icon/drop-down/arrow-down.svg';

@@ -1,13 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { TTheme } from '../../../../interfaces/global.interface';
-import { NgIf } from '@angular/common';
+import { NgIf, NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-title-label-button-simple',
     templateUrl: './gl-component-title-label-button-simple.component.html',
     styleUrls: ['./gl-component-title-label-button-simple.component.scss'],
     standalone: true,
-    imports: [NgIf]
+  imports: [NgIf, NgOptimizedImage]
 })
 export class GlComponentTitleLabelButtonSimpleComponent {
 

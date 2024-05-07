@@ -8,28 +8,36 @@
       <li class="menu-header-container">
         <div class="menu-header">
           <div class="menu-top-icons-container">
-            <img id="close-menu-button"
-               (click)="service.close($event)"
-               [src]="closeButton"
-               class="menu-icons close-menu"
-               alt="Close menu button">
+            <img
+              id="close-menu-button"
+              (click)="service.close($event)"
+              [ngSrc]="closeButton"
+              class="menu-icons close-menu"
+              alt="Close menu button"
+              fill="true">
             <img
               *ngIf="showSettings"
               id="settings-menu-button"
               (click)="service.goToSettings(settingsUrl, settingsTarget)"
-              [src]="settingsButton"
+              [ngSrc]="settingsButton"
               class="menu-icons settings-menu"
-              alt="Settings menu button">
+              alt="Settings menu button"
+              fill="true">
             <img
               *ngIf="showLogout"
               id="logout-menu-button"
               (click)="$logoutClick.emit($event)"
-              [src]="logoutButton"
+              [ngSrc]="logoutButton"
               class="menu-icons logout-menu"
-              alt="Close menu button">
+              alt="Close menu button"
+              fill="true">
 
             <div class="logo-container">
-              <img class="main-logo" [src]="menuLogo" alt="Menu Logo"/>
+              <img
+                class="main-logo"
+                [ngSrc]="menuLogo"
+                alt="Menu Logo"
+                fill="true"/>
             </div>
 
           </div>

@@ -1,6 +1,3 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { GlComponentInputDatepickerSimpleMonthYearComponent } from './gl-component-input-datepicker-simple-month-year.component';
-
 describe('GlComponentInputDatepickerSimpleMonthYearComponent', () => {
   // let component: GlComponentInputDatepickerSimpleMonthYearComponent;
   // let fixture: ComponentFixture<GlComponentInputDatepickerSimpleMonthYearComponent>;

@@ -1,7 +1,4 @@
 
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { GlComponentInputCheckBoxSimpleComponent } from './gl-component-input-check-box-simple.component';
-
 describe('GlComponentInputCheckBoxSimpleComponent', () => {
   // let component: GlComponentInputCheckBoxSimpleComponent;
   // let fixture: ComponentFixture<GlComponentInputCheckBoxSimpleComponent>;

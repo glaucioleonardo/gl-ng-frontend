@@ -1,10 +1,14 @@
 import { Component, Input } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-    selector: 'gl-component-button-image-simple',
-    templateUrl: './gl-component-button-image-simple.component.html',
-    styleUrls: ['./gl-component-button-image-simple.component.scss'],
-    standalone: true
+  selector: 'gl-component-button-image-simple',
+  templateUrl: './gl-component-button-image-simple.component.html',
+  styleUrls: ['./gl-component-button-image-simple.component.scss'],
+  imports: [
+    NgOptimizedImage
+  ],
+  standalone: true
 })
 export class GlComponentButtonImageSimpleComponent {
   @Input() id;

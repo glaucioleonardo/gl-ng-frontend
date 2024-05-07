@@ -23,7 +23,8 @@
     <img
       alt="Upload icon"
       class="upload-icon {{ readOnly ? 'readonly' : '' }}"
-      [src]="uploadIcon">
+      [ngSrc]="uploadIcon"
+      fill="true">
 
     <span *ngIf="!readOnly" class="action-description {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDrop }}</span>
     <span *ngIf="!readOnly" class="action-description {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDropOr }}</span>

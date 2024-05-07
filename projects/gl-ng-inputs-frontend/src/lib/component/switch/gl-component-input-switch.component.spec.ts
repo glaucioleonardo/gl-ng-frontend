@@ -1,6 +1,3 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { GlComponentInputSwitchComponent } from './gl-component-input-switch.component';
-
 describe('GlComponentInputSwitchComponent', () => {
   // let component: GlComponentInputSwitchComponent;
   // let fixture: ComponentFixture<GlComponentInputSwitchComponent>;

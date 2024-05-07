@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { GlComponentsModalActionsService } from './gl-components-modal-actions.service';
 import { GlComponentsModalActionsItemComponent } from './item/gl-components-modal-actions-item.component';
-import { NgForOf, NgIf } from '@angular/common';
+import { NgForOf, NgIf, NgOptimizedImage } from '@angular/common';
 
 @Component({
   standalone: true,
@@ -10,7 +10,8 @@ import { NgForOf, NgIf } from '@angular/common';
   imports: [
     GlComponentsModalActionsItemComponent,
     NgIf,
-    NgForOf
+    NgForOf,
+    NgOptimizedImage
   ],
   styleUrls: ['./gl-components-modal-actions.component.scss']
 })

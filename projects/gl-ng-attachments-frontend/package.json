@@ -25,17 +25,19 @@
   "peerDependencies": {
     "@angular/common": "~17.3.7",
     "@angular/core": "~17.3.7",
+    "decimal.js": "^10.4.3",
     "gl-scss-styles": "^3.1.1",
+    "gl-icons-assets": "^1.5.1",
     "gl-w-attachment-frontend": "^6.0.0",
     "gl-w-image-frontend": "^6.0.0",
-    "gl-w-number-frontend": "^6.0.0",
-    "decimal.js": "^10.4.3"
+    "gl-w-number-frontend": "^6.0.0"
   },
   "devDependencies": {
     "@angular/common": "~17.3.7",
     "@angular/core": "~17.3.7",
     "decimal.js": "^10.4.3",
     "gl-scss-styles": "^3.1.1",
+    "gl-icons-assets": "^1.5.1",
     "gl-w-attachment-frontend": "^6.0.0",
     "gl-w-image-frontend": "^6.0.0",
     "gl-w-number-frontend": "^6.0.0"

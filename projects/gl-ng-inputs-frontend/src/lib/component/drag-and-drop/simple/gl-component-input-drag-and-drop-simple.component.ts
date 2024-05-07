@@ -6,14 +6,14 @@ import { GlComponentInputButtonSimpleComponent } from '../../button/simple/gl-co
 import { GlComponentAttachmentItemComponent } from '../../../../../../gl-ng-attachments-frontend/src/lib/component/item/gl-component-attachment-item.component';
 import { CoreDirectivesDragAndDropDirective } from '../../../core/directives/drag-and-drop/core-directives-drag-and-drop.directive';
 import { GlComponentInputSwitchComponent } from '../../switch/gl-component-input-switch.component';
-import { NgIf, NgFor } from '@angular/common';
+import { NgIf, NgFor, NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-input-drag-and-drop-simple',
     templateUrl: './gl-component-input-drag-and-drop-simple.component.html',
     styleUrls: ['./gl-component-input-drag-and-drop-simple.component.scss'],
     standalone: true,
-    imports: [NgIf, GlComponentInputSwitchComponent, CoreDirectivesDragAndDropDirective, NgFor, GlComponentAttachmentItemComponent, GlComponentInputButtonSimpleComponent]
+  imports: [NgIf, GlComponentInputSwitchComponent, CoreDirectivesDragAndDropDirective, NgFor, GlComponentAttachmentItemComponent, GlComponentInputButtonSimpleComponent, NgOptimizedImage]
 })
 export class GlComponentInputDragAndDropSimpleComponent {
   @ViewChild('fileAttachment') input: ElementRef<HTMLInputElement>;

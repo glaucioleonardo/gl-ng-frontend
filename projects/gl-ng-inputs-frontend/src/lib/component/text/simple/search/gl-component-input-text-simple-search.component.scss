@@ -1,6 +1,6 @@
 @use "gl-scss-styles/assets/style/colors/black/c-black-translucid";
 @use "gl-scss-styles/assets/style/fonts/fonts";
-@use "gl-scss-styles/assets/style/anims/blur-animation";
+@import "gl-scss-styles/assets/style/anims/blur-animation";
 
 :host::ng-deep {
   display: flex;
@@ -82,6 +82,7 @@
       top: 0.6em;
       opacity: 0.3;
       cursor: pointer;
+      object-fit: contain;
 
       &:hover, &:focus{
         &~ gl-component-input-text-simple {
