@@ -6,8 +6,8 @@ import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignm
 import { IDatePickerOutput } from './gl-component-input-datepicker-simple-day-month-year.interface';
 import { NgIf } from '@angular/common';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatLegacyInputModule } from '@angular/material/legacy-input';
-import { MatLegacyFormFieldModule } from '@angular/material/legacy-form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
     selector: 'gl-component-input-datepicker-simple-day-month-year',
@@ -26,7 +26,7 @@ import { MatLegacyFormFieldModule } from '@angular/material/legacy-form-field';
         },
     ],
     standalone: true,
-    imports: [MatLegacyFormFieldModule, MatLegacyInputModule, MatDatepickerModule, NgIf]
+    imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, NgIf]
 })
 export class GlComponentInputDatepickerSimpleDayMonthYearComponent {
   @Input() disabled = false;
