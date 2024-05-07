@@ -1,12 +1,16 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { NgIf } from '@angular/common';
 
 @Component({
   standalone: true,
   selector: 'gl-components-modal-actions-item',
   templateUrl: './gl-components-modal-actions-item.component.html',
+  imports: [
+    NgIf
+  ],
   styleUrls: ['./gl-components-modal-actions-item.component.scss']
 })
-export class GlComponentsModalActionsItemComponent implements OnInit {
+export class GlComponentsModalActionsItemComponent {
   @Input() title: string;
   @Input() icon: string;
   @Input() red: boolean;
@@ -17,12 +21,8 @@ export class GlComponentsModalActionsItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
   onClick(): void {
     this.action();
     this.$clicked.emit();
   }
-
 }

@@ -12,9 +12,16 @@ export class GlComponentsModalActionsService {
   resolvePromise;
   binder;
 
-  private _closeButton: HTMLInputElement;
+  container: Element;
+  closeButton: HTMLInputElement;
 
-  constructor() { }
+  constructor() {}
+
+  _showContainer(visible: boolean) {
+    if (visible) {
+      this.setElements();
+    }
+  }
 
   addAction(actions: IModalItemAction[], removeCurrent: boolean = false): void {
     if (removeCurrent) {
@@ -50,29 +57,26 @@ export class GlComponentsModalActionsService {
       this.resolvePromise = resolve;
 
       if (show) {
-        this.modalClass = 'hide-modal';
         this.showModal = show;
-        this.modalClass = 'show-modal';
-
-        setTimeout(() => {
-          this.setElements();
-
-          setTimeout(() => {
-            this._closeButton.focus();
-          }, 300);
-        }, 300);
       } else {
         this.modalClass = 'hide-modal';
         setTimeout(() => {
-          this.showModal = false;
+          this.showModal = show;
         }, 300);
       }
     });
   }
 
   private setElements(): void {
-    const container = document.querySelector('.modal-container');
+    this.container = document.querySelector('#modal-actions-close-container') as HTMLElement;
+    this.closeButton = document.querySelector('#modal-actions-close-button');
 
-    this._closeButton = container.querySelector('.close');
+    setTimeout(() => {
+      this.modalClass = 'show-modal';
+
+      setTimeout(() => {
+        this.closeButton.focus();
+      }, 300)
+    }, 0)
   }
 }

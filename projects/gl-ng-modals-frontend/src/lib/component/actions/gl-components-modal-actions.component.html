@@ -1,9 +1,10 @@
 <div
   *ngIf="service.showModal"
   (keydown)="service.onModalKeyUp($event)"
-  id="modal"
+  id="modal-actions-close-container"
   class="modal-container {{ service.modalClass }}"
-  tabindex="-1">
+  tabindex="-1"
+  #modalActionsCloseContainer>
 
   <div class="modal-main-content">
     <div class="action-main-container">
@@ -19,9 +20,12 @@
     </div>
 
     <img
+      tabindex="100"
+      id="modal-actions-close-button"
       alt="Close icon"
       class="close close-modal"
       src="assets/img/icon/menu/close.svg"
+      (keydown)="service.onModalKeyUp($event)"
       (click)="service.hide()">
   </div>
 </div>
