@@ -7,7 +7,5 @@
   "assets": [
     "./node_modules/gl-scss-styles/assets"
   ],
-  "allowedNonPeerDependencies": [
-    "gl-scss-styles"
-  ]
+  "allowedNonPeerDependencies": []
 }

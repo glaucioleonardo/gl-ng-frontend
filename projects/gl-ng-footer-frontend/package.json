@@ -21,15 +21,15 @@
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
-    "@angular/common": "~16.2.12",
-    "@angular/core": "~16.2.12",
+    "@angular/common": "~17.3.7",
+    "@angular/core": "~17.3.7",
 
     "gl-scss-styles": "^3.1.1"
   },
   "dependencies": {},
   "devDependencies": {
-    "@angular/common": "~16.2.12",
-    "@angular/core": "~16.2.12",
+    "@angular/common": "~17.3.7",
+    "@angular/core": "~17.3.7",
 
     "gl-scss-styles": "^3.1.1"
   },
