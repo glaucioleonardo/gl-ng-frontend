@@ -113,7 +113,6 @@
               width: 1em;
               height: 1.2em;
               border-radius: 0.25em;
-              object-fit: contain;
             }
 
             &:not(hover) {
@@ -160,7 +159,6 @@
           cursor: pointer;
           border-radius: 0.5em;
           transition: transform 0.2s ease;
-          object-fit: contain;
 
           &:not(hover) {
             opacity: 0.8;

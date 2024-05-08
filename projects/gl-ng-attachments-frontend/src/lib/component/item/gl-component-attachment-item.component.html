@@ -1,9 +1,8 @@
 <div class="attachment-container {{ addingSmooth ? 'adding-row-animated' : '' }}">
   <img
     class="attachment-icon"
-    [ngSrc]="fileIcon"
-    alt="Ícone anexo"
-    fill="true">
+    [src]="fileIcon"
+    alt="Ícone anexo">
   <a
     (click)="onButtonClick($event)"
     [id]="id"
@@ -14,14 +13,12 @@
     *ngIf="!disabled && type === 'link'"
     (click)="editItem(id)"
     class="edit-item"
-    ngSrc="../assets/img/icon/menu/attachment/edit.svg"
-    alt="Editar anexo"
-    fill="true"/>
+    src="../assets/img/icon/menu/attachment/edit.svg"
+    alt="Editar anexo"/>
   <img
     *ngIf="!disabled"
     (click)="removeItem(id)"
     class="remove-item"
-    ngSrc="../assets/img/icon/menu/attachment/delete.svg"
-    alt="Apagar anexo"
-    fill="true"/>
+    src="../assets/img/icon/menu/attachment/delete.svg"
+    alt="Apagar anexo"/>
 </div>

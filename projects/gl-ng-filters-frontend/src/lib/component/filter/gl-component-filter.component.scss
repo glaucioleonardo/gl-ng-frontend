@@ -54,7 +54,6 @@
             cursor: pointer;
             height: 1.5em;
             width: 1.5em;
-            object-fit: contain;
 
             &:active, &:hover {
               opacity: 1;
@@ -159,7 +158,6 @@
             padding: 0.2em 0.5em 0.2em 0.5em;
             height: 1.5em;
             width: 1.5em;
-            object-fit: contain;
           }
 
           a {

@@ -121,7 +121,6 @@ $default-transition: background-color 0.2s ease-in-out;
       border-radius: 0.5em;
       margin: 0 0.3em;
       transition: background-color 0.2s ease-in-out;
-      object-fit: contain;
 
       &:hover {
         background-color: c-gray-dark.$d2-3;

@@ -5,15 +5,13 @@
     <img
       class="label-button"
       [id]="id"
-      [ngSrc]="src"
-      [alt]="alt"
-      fill="true">
+      [src]="src"
+      [alt]="alt">
   </div>
   <img
     *ngIf="required"
-    ngSrc="../assets/img/icon/label/dot.svg"
+    src="../assets/img/icon/label/dot.svg"
     class="required-fill-dot"
     [title]="requiredFieldDescription"
-    alt="Required fill icon"
-    fill="true">
+    alt="Required fill icon">
 </div>

@@ -31,7 +31,6 @@
       height: 2.15em;
       width: 2.15em;
       border-radius: 0.3em;
-      object-fit: contain;
       margin: 0 0.6em 0 0.4em;
     }
 
@@ -40,7 +39,6 @@
       height: 2.15em;
       width: 2.15em;
       margin: 0 0 0 0.1em;
-      object-fit: contain;
 
       &:not(hover) {
         opacity: 0.5;

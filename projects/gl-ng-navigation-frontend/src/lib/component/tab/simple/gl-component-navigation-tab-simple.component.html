@@ -13,9 +13,8 @@
   <span class="tab-description">{{ tabDescription }}</span>
   <img
     *ngIf="showIcon"
-    [ngSrc]="srcIcon"
+    [src]="srcIcon"
     class="navigation-tab-icon"
-    alt="Tab icon"
-    fill="true">
+    alt="Tab icon">
 </div>
 <div class="border-bottom" *ngIf="!safariStyle"></div>

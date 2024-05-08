@@ -2,9 +2,8 @@
   *ngIf="galleryPreview"
   draggable="false"
   class="video-gallery-item-type"
-  ngSrc="assets/img/icon/project-gallery/video-icon.svg"
-  alt="Video icon"
-  fill="true">
+  src="assets/img/icon/project-gallery/video-icon.svg"
+  alt="Video icon">
 <vg-player
   [class.transparent]="transparentVideo"
   [class.border-radius]="borderRadius"  (onPlayerReady)="onPlayerReady($event, media)">
@@ -43,10 +42,10 @@
 
   <img
     *ngIf="media.paused && showBackground && !transparentVideo"
-    [ngSrc]="squareActive ? backgroundSquare : backgroundWidescreen"
+    [src]="squareActive ? backgroundSquare : backgroundWidescreen"
     alt="Background Image"
     id="background-video-image"
-    fill="true">
+    >
 
   <video
     #media

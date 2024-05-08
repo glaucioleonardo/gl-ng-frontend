@@ -2,10 +2,9 @@
   (click)="onContainerClick()">
   <img
     *ngIf="showAsInputButton && buttonIconSrc?.length > 0"
-    [ngSrc]="buttonIconSrc"
+    [src]="buttonIconSrc"
     class="switch-button-icon"
-    alt="switch-icon"
-    fill="true">
+    alt="switch-icon">
 
   <span
     *ngIf="showLabel"

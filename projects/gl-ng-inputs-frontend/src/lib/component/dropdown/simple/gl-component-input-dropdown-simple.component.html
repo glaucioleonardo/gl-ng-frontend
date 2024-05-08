@@ -19,9 +19,8 @@
             *ngIf="!disabled && (!_settings.singleSelection || !defaultSettings.singleSelection)"
             alt="Remove item"
             class="remove-item"
-            ngSrc="../assets/img/icon/check-box/checked.svg"
-            (click)="onItemClick($event,item)"
-            fill="true">
+            src="../assets/img/icon/check-box/checked.svg"
+            (click)="onItemClick($event,item)">
         </span>
       </span>
 
@@ -37,14 +36,12 @@
           *ngIf="showIconPreview()"
           alt="Icon preview"
           class="icon-preview"
-          [ngSrc]="iconPreview"
-          fill="true">
+          [src]="iconPreview">
          <img
            *ngIf="!disabled"
            alt="Show items"
            class="dropdown-multiselect__caret arrow-down {{ 'theme' }} {{ disabled ? 'read-only' : '' }}"
-           [ngSrc]="imageSource"
-           fill="true">
+           [src]="imageSource">
       </span>
     </span>
   </div>

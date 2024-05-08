@@ -4,17 +4,15 @@
        *ngIf="hasPrevious" (click)="onPageChange($event, 'first')"
        [title]="firstPageTitle">
       <img
-        [ngSrc]="firstIcon"
-        [alt]="firstPageTitle"
-        fill="true">
+        [src]="firstIcon"
+        [alt]="firstPageTitle">
     </a>
     <a id="prev-page" class="anchor-button"
        *ngIf="hasPrevious" (click)="onPageChange($event, 'previous')"
        [title]="previousPageTitle">
       <img
-        [ngSrc]="previousIcon"
-        [alt]="previousPageTitle"
-        fill="true">
+        [src]="previousIcon"
+        [alt]="previousPageTitle">
     </a>
     <span id="page-info">{{ pageInfo }}</span>
     <div class="page-buttons-container">
@@ -31,17 +29,15 @@
        *ngIf="hasNext" (click)="onPageChange($event, 'next')"
        [title]="nextPageTitle">
       <img
-        [ngSrc]="nextIcon"
-        [alt]="nextPageTitle"
-        fill="true">
+        [src]="nextIcon"
+        [alt]="nextPageTitle">
     </a>
     <a href="#" id="last-page" class="anchor-button"
        *ngIf="hasNext" (click)="onPageChange($event, 'last')"
        [title]="lastPageTitle">
       <img
-        [ngSrc]="lastIcon"
-        [alt]="lastPageTitle"
-        fill="true">
+        [src]="lastIcon"
+        [alt]="lastPageTitle">
     </a>
   </div>
 
