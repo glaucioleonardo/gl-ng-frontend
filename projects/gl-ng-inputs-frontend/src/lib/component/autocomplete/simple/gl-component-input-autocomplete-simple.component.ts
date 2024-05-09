@@ -1,5 +1,5 @@
 import { Overlay } from '@angular/cdk/overlay';
-import { Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { UntypedFormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocomplete, MatAutocompleteModule } from '@angular/material/autocomplete';
 import { IComboBoxData } from 'gl-w-combobox-frontend';
@@ -20,7 +20,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     standalone: true,
   imports: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, MatAutocompleteModule, MatDialogModule, NgFor, MatOptionModule, AsyncPipe, NgOptimizedImage]
 })
-export class GlComponentInputAutocompleteSimpleComponent implements OnInit, OnDestroy, OnChanges {
+export class GlComponentInputAutocompleteSimpleComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
   @ViewChild('input') input: ElementRef<HTMLInputElement>;
 
   @Output() currentValue = new EventEmitter<IComboBoxData>();
@@ -92,6 +92,11 @@ export class GlComponentInputAutocompleteSimpleComponent implements OnInit, OnDe
 
   async ngOnInit(): Promise<void> {
     this.setup();
+  }
+  ngAfterViewInit(): void {
+    if (this.theme !== '') {
+      document.body.classList.add(this.theme);
+    }
   }
 
   private setup(): void {

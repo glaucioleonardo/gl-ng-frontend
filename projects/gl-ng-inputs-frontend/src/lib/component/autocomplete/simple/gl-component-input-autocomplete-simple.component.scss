@@ -4,6 +4,7 @@
 @use "gl-scss-styles/assets/style/colors/gray/c-gray";
 @use "gl-scss-styles/assets/style/colors/pink/c-pink";
 @use "gl-scss-styles/assets/style/colors/pink/c-pink-dark";
+@use "gl-scss-styles/assets/style/colors/white/c-white";
 @use "gl-scss-styles/assets/style/colors/white/c-white-translucid";
 @import "gl-scss-styles/assets/style/components/input/input-ellipsis";
 @import "gl-scss-styles/assets/style/components/scrollbar/native-scrollbar";
@@ -19,55 +20,94 @@ $default-transition: background-color 0.2s ease-in-out;
   width: 100%;
   align-items: stretch;
   justify-content: stretch;
+  height: 2.6em;
 
   .input-container {
     width: 100%;
     font-size: 1em;
     display: flex;
     flex-grow: 1;
-    align-items: center;
+    border-radius: 0.8em;
     background-color: c-gray-dark.$d2;
+
+    &.light {
+      background-color: c-black-translucid.$t1;
+
+      &::placeholder {
+        color: c-white-translucid.$t2 !important;
+      }
+    }
+
+    &.dark {
+      background-color: c-gray-dark.$d3-2;
+    }
 
     mat-form-field {
       display: flex;
       flex-grow: 1;
-      margin: 0;
+      text-align: left;
+      min-width: unset;
+      flex-direction: unset;
+      font-family: inherit;
+      line-height: unset;
+      font-size: unset;
+      letter-spacing: unset;
+      font-weight: unset;
+      --mat-mdc-form-field-floating-label-scale: unset;
 
-      .mat-form-field-wrapper {
+      .mat-mdc-text-field-wrapper {
         display: flex;
         flex-grow: 1;
-        flex-direction: column;
-        padding: 0;
+        width: 100%;
 
-        .mat-form-field-flex {
+        height: unset;
+        flex: unset;
+        will-change: unset;
+        border: none;
+        border-radius: unset;
+        align-items: unset;
+        padding: unset;
+        position: unset;
+        box-sizing: unset;
+
+        .mat-mdc-form-field-flex {
           display: flex;
           flex-grow: 1;
-          align-items: inherit;
+          align-items: unset;
+          box-sizing: unset;
+          width: unset;
 
-          .mat-form-field-infix {
-            padding: 0;
-            //noinspection CssRedundantUnit
-            flex: 1 1 0;
-            border: none;
-            width: 100%;
+          .mdc-notched-outline {
+            display: none;
+          }
+
+          .mat-mdc-form-field-infix {
             display: flex;
+            padding: unset;
+            box-sizing: unset;
+            min-height: unset;
+            min-width: unset;
+            width: unset;
+            position: unset;
+            flex: 1 1 auto;
 
             .combobox-container {
               display: flex;
               flex-grow: 1;
-              flex-direction: row;
-              pointer-events: none;
+              //pointer-events: none;
 
-              .mat-input-element {
+              .mat-mdc-input-element {
                 @include fonts.font-family-custom(regular);
-                position: relative;
-                padding: 0.8em;
-                border: none;
+                padding: 0.2em 0.8em;
                 background-color: c-gray-dark.$d2;
-                color: white;
-                font-size: 1em;
+                color: c-white.$d;
+                font-size: 0.8em;
                 flex-grow: 1;
-                margin: 0;
+                display: flex;
+                height: unset;
+                caret-color: unset;
+                border-top-left-radius: 0.8em;
+                border-bottom-left-radius: 0.8em;
                 @extend %ellipsis-content;
 
                 &::placeholder {
@@ -112,6 +152,9 @@ $default-transition: background-color 0.2s ease-in-out;
           }
         }
       }
+      .mat-mdc-form-field-subscript-wrapper {
+        display: none !important;
+      }
     }
 
     .arrow-down {
@@ -120,6 +163,7 @@ $default-transition: background-color 0.2s ease-in-out;
       height: 2em;
       border-radius: 0.5em;
       margin: 0 0.3em;
+      align-self: center;
       transition: background-color 0.2s ease-in-out;
 
       &:hover {
@@ -152,111 +196,165 @@ $default-transition: background-color 0.2s ease-in-out;
       }
 
       &.read-only {
-        //display: none;
         user-select: none;
         pointer-events: none;
       }
     }
     &.no-data, &.read-only {
       .arrow-down {
-        display: none;
+        //Todo uncomment
+        //display: none;
+      }
+
+      mat-form-field {
+        .mat-mdc-text-field-wrapper {
+          .mat-mdc-form-field-flex {
+            .mat-mdc-form-field-infix {
+              .combobox-container {
+                pointer-events: none;
+
+                .mat-mdc-input-element {
+                  border-radius: 0.8em;
+                }
+              }
+            }
+          }
+        }
+        .mat-mdc-form-field-subscript-wrapper {
+          display: none !important;
+        }
       }
     }
   }
 }
 
 ::ng-deep {
-  .mat-autocomplete-panel {
-    background-color: c-gray-dark.$d1-8;
-    border-radius: 0;
-    box-shadow: none !important;
-    @extend %native-scrollbar;
-    &::-webkit-scrollbar { width: 1em !important; }
-    transition: background-color 0.2s ease-in-out;
+  .cdk-overlay-container {
+    display: flex;
+    flex-grow: 1;
 
-    mat-option {
-      font-size: 1em;
-      border-radius: 0;
-      line-height: 4em;
-      height: 4em;
-      padding: 0 1.5em;
+    .cdk-overlay-connected-position-bounding-box {
+      display: flex;
+      flex-grow: 1;
 
-      &:nth-child(2n + 1) {
-        background-color: c-gray-dark.$d2;
-        transition: background-color 0.2s ease-in-out;
-      }
+      .cdk-overlay-pane {
+        margin-top: 0.2em;
+        overflow: hidden;
+        display: flex;
+        flex-grow: 1;
+        border-radius: 0.8em;
 
-      &.mat-active, &.mat-selected {
-        background-color: c-pink.$d;
-        transition: background-color 0.2s ease-in-out;
-      }
-      &:hover {
-        background-color: c-pink-dark.$d !important;
-        transition: background-color 0.2s ease-in-out;
-      }
-    }
-  }
+        .mat-mdc-autocomplete-panel {
+          background-color: c-gray-dark.$d1-8;
+          box-shadow: none !important;
 
-  .light {
-    .mat-autocomplete-panel {
-      background-color: transparent;
-      transition: $default-transition;
-      @extend %native-scrollbar;
+          @extend %native-scrollbar;
+          &::-webkit-scrollbar { width: 1em !important; }
+          transition: background-color 0.2s ease-in-out;
 
-      mat-option {
-        &:nth-child(2n + 1) {
-          background-color: c-black-translucid.$t6;
-          transition: $default-transition;
-        }
+          mat-option {
+            @include fonts.font-family-custom(regular);
+            font-size: 0.8em;
+            border-radius: 0;
+            //line-height: 4em;
+            //height: 4em;
+            color: c-white.$d;
+            padding: 0 1.5em;
+            min-height: 3.4em;
 
-        &:nth-child(2n + 2) {
-          background-color: c-black-translucid.$t7;
-          transition: $default-transition;
-        }
+            &:nth-child(2n + 1) {
+              background-color: c-gray-dark.$d2;
+              transition: background-color 0.2s ease-in-out;
+            }
 
-        &.mat-active {
-          background-color: c-pink.$d;
-          transition: $default-transition;
-        }
-        &:hover {
-          background-color: c-pink-dark.$d !important;
-          transition: $default-transition;
+            &.mat-active, &.mat-selected {
+              background-color: c-pink.$d;
+              transition: background-color 0.2s ease-in-out;
+            }
+            &:hover {
+              background-color: c-pink-dark.$d !important;
+              transition: background-color 0.2s ease-in-out;
+            }
+          }
         }
       }
     }
   }
 
-  .dark {
-    .mat-autocomplete-panel {
-      background-color:transparent;
-      transition: $default-transition;
-      @extend %native-scrollbar;
+  body {
+    &.light {
+      .cdk-overlay-container {
+        .cdk-overlay-connected-position-bounding-box {
+          .cdk-overlay-pane {
+            .mat-mdc-autocomplete-panel {
+              background-color: c-black-translucid.$t5;
+              transition: $default-transition;
+              @extend %native-scrollbar;
 
-      mat-option {
-        &:nth-child(2n + 1) {
-          background-color: c-gray-dark.$d2-3;
-          transition: $default-transition;
-        }
+              mat-option {
+                &:nth-child(2n + 1) {
+                  background-color: c-black-translucid.$t3;
+                  transition: $default-transition;
+                }
 
-        &:nth-child(2n + 2) {
-          background-color: c-gray-dark.$d2;
-          transition: $default-transition;
-        }
+                &:nth-child(2n + 2) {
+                  background-color: c-black-translucid.$t4;
+                  transition: $default-transition;
+                }
 
-        &.mat-active {
-          background-color: c-pink.$d;
-          transition: $default-transition;
+                &.mat-active {
+                  background-color: c-pink.$d;
+                  transition: $default-transition;
+                }
+                &:hover {
+                  background-color: c-pink-dark.$d !important;
+                  transition: $default-transition;
+                }
+              }
+            }
+          }
         }
-        &:hover {
-          background-color: c-pink-dark.$d !important;
-          transition: $default-transition;
+      }
+    }
+
+    &.dark {
+      .cdk-overlay-container {
+        .cdk-overlay-connected-position-bounding-box {
+          .cdk-overlay-pane {
+            .mat-mdc-autocomplete-panel {
+              background-color: c-gray-dark.$d10;
+              transition: $default-transition;
+              @extend %native-scrollbar;
+
+              mat-option {
+                &:nth-child(2n + 1) {
+                  background-color: c-gray-dark.$d3-4;
+                  transition: $default-transition;
+                }
+
+                &:nth-child(2n + 2) {
+                  background-color: c-gray-dark.$d4;
+                  transition: $default-transition;
+                }
+
+                &.mat-active {
+                  background-color: c-pink.$d;
+                  transition: $default-transition;
+                }
+                &:hover {
+                  background-color: c-pink-dark.$d !important;
+                  transition: $default-transition;
+                }
+              }
+            }
+          }
         }
       }
     }
   }
 
   @media screen and (min-device-width:320px) and (max-device-width: 1024px) {
-    .mat-autocomplete-panel {
+    .mat-mdc-autocomplete-panel {
       //font-size: 2.8vw !important;
       font-size: 1em !important;
     }

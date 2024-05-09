@@ -2,8 +2,8 @@
 <div class="input-container custom-combobox {{ theme }} {{ disabled ? 'read-only' : '' }} {{ listItems.length > 0 ? '' : 'no-data' }}">
   <mat-form-field
     (focusout)="overlay.position().global().dispose()"
-    floatLabel="never"
-    appearance="none">
+    floatLabel="auto"
+    appearance="outline">
     <div class="combobox-container {{ listItems.length > 0 ? '' : 'no-data' }} {{ disabled ? 'read-only' : '' }}">
       <input
         #input
