@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-inputs-frontend",
-  "version": "10.0.3",
+  "version": "10.0.4",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_inputs.ts",
   "types": "gl-ng-inputs-frontend.d.ts",
@@ -41,14 +41,14 @@
     "decimal.js": "^10.4.3",
     "gl-icons-assets": "^1.5.1",
     "gl-scss-styles": "^3.1.1",
-    "gl-sp-frontend": "^7.0.1",
+    "gl-sp-frontend": "^7.0.2",
     "gl-w-attachment-frontend": "^6.0.1",
-    "gl-w-combobox-frontend": "^6.0.1",
-    "gl-w-date-frontend": "^6.0.1",
+    "gl-w-combobox-frontend": "^6.0.2",
+    "gl-w-date-frontend": "^6.0.2",
     "gl-w-image-frontend": "^6.0.1",
     "gl-w-input-frontend": "^6.0.1",
     "gl-w-number-frontend": "^6.0.1",
-    "moment": "^2.30.1"
+    "moment": "^2.24.0"
   },
   "dependencies": {
     "@angular/animations": "^17.3.7",
@@ -60,14 +60,14 @@
     "decimal.js": "^10.4.3",
     "gl-icons-assets": "^1.5.1",
     "gl-scss-styles": "^3.1.1",
-    "gl-sp-frontend": "^7.0.1",
+    "gl-sp-frontend": "^7.0.2",
     "gl-w-attachment-frontend": "^6.0.1",
-    "gl-w-combobox-frontend": "^6.0.1",
-    "gl-w-date-frontend": "^6.0.1",
+    "gl-w-combobox-frontend": "^6.0.2",
+    "gl-w-date-frontend": "^6.0.2",
     "gl-w-image-frontend": "^6.0.1",
     "gl-w-input-frontend": "^6.0.1",
     "gl-w-number-frontend": "^6.0.1",
-    "moment": "^2.30.1"
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "@angular/common": "~17.3.7",
