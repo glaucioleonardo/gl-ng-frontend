@@ -8,5 +8,13 @@
     "./node_modules/gl-scss-styles/assets",
     "./node_modules/gl-icons-assets/assets"
   ],
-  "allowedNonPeerDependencies": []
+  "allowedNonPeerDependencies": [
+    "decimal.js",
+    "gl-scss-styles",
+    "gl-icons-assets",
+    "gl-sp-frontend",
+    "gl-w-attachment-frontend",
+    "gl-w-number-frontend",
+    "gl-w-combobox-frontend"
+  ]
 }

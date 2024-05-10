@@ -8,5 +8,24 @@
     "./node_modules/gl-scss-styles/assets",
     "./node_modules/gl-icons-assets/assets"
   ],
-  "allowedNonPeerDependencies": []
+  "allowedNonPeerDependencies": [
+    "@angular/animations",
+    "@angular/forms",
+    "@angular/platform-browser-dynamic",
+    "@angular/cdk",
+    "@angular/material",
+    "@angular/material-moment-adapter",
+    "gl-w-attachment-frontend",
+    "gl-w-combobox-frontend",
+    "gl-w-date-frontend",
+    "gl-w-image-frontend",
+    "gl-w-input-frontend",
+    "gl-w-number-frontend",
+    "gl-scss-styles",
+    "gl-icons-assets",
+    "gl-sp-frontend",
+    "decimal.js",
+    "@videogular/ngx-videogular",
+    "scroll-into-view-if-needed"
+  ]
 }

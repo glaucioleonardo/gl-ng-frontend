@@ -8,5 +8,12 @@
     "./node_modules/gl-scss-styles/assets",
     "./assets"
   ],
-  "allowedNonPeerDependencies": []
+  "allowedNonPeerDependencies": [
+    "@angular/animations",
+    "@angular/common",
+    "@angular/forms",
+    "@angular/platform-browser-dynamic",
+    "@videogular/ngx-videogular",
+    "gl-scss-styles"
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-buttons-frontend",
-  "version": "9.0.1",
+  "version": "9.0.2",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_buttons.ts",
   "types": "gl-ng-buttons-frontend.d.ts",
@@ -24,27 +24,29 @@
   "license": "MIT",
   "homepage": "https://www.glauciosantana.com",
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
+  "dependencies": {
+    "decimal.js": "^10.4.3",
+    "gl-icons-assets": "^1.5.1",
+    "gl-scss-styles": "^3.1.1",
+    "gl-sp-frontend": "^7.0.1",
+    "gl-w-attachment-frontend": "^6.0.1",
+    "gl-w-combobox-frontend": "^6.0.1",
+    "gl-w-number-frontend": "^6.0.1"
+  },
   "peerDependencies": {
     "@angular/common": "~17.3.7",
     "@angular/core": "~17.3.7",
     "decimal.js": "^10.4.3",
     "gl-icons-assets": "^1.5.1",
     "gl-scss-styles": "^3.1.1",
-    "gl-sp-frontend": "^7.0.0",
-    "gl-w-attachment-frontend": "^6.0.0",
-    "gl-w-combobox-frontend": "^6.0.0",
-    "gl-w-number-frontend": "^6.0.0"
+    "gl-sp-frontend": "^7.0.1",
+    "gl-w-attachment-frontend": "^6.0.1",
+    "gl-w-combobox-frontend": "^6.0.1",
+    "gl-w-number-frontend": "^6.0.1"
   },
   "devDependencies": {
     "@angular/common": "~17.3.7",
-    "@angular/core": "~17.3.7",
-    "decimal.js": "^10.4.3",
-    "gl-icons-assets": "^1.5.1",
-    "gl-scss-styles": "^3.1.1",
-    "gl-sp-frontend": "^7.0.0",
-    "gl-w-attachment-frontend": "^6.0.0",
-    "gl-w-combobox-frontend": "^6.0.0",
-    "gl-w-number-frontend": "^6.0.0"
+    "@angular/core": "~17.3.7"
   },
   "scripts": {
     "build": "ng build gl-ng-buttons-frontend",

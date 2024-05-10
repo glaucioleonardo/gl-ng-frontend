@@ -4,5 +4,12 @@
   "lib": {
     "entryFile": "../wrapper_attachments.ts"
   },
-  "allowedNonPeerDependencies": []
+  "allowedNonPeerDependencies": [
+    "decimal.js",
+    "gl-icons-assets",
+    "gl-scss-styles",
+    "gl-w-attachment-frontend",
+    "gl-w-image-frontend",
+    "gl-w-number-frontend"
+  ]
 }

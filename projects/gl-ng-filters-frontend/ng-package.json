@@ -7,5 +7,13 @@
   "assets": [
     "./node_modules/gl-scss-styles/assets"
   ],
-  "allowedNonPeerDependencies": []
+  "allowedNonPeerDependencies": [
+    "gl-scss-styles",
+    "decimal.js",
+    "gl-w-number-frontend",
+    "gl-w-image-frontend",
+    "gl-w-date-frontend",
+    "gl-w-input-frontend",
+    "gl-w-attachment-frontend"
+  ]
 }

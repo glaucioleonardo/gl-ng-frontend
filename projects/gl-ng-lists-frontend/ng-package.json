@@ -8,5 +8,10 @@
     "./node_modules/gl-scss-styles/assets",
     "./node_modules/gl-icons-assets/assets"
   ],
-  "allowedNonPeerDependencies": []
+  "allowedNonPeerDependencies": [
+    "gl-scss-styles",
+    "gl-icons-assets",
+    "gl-w-attachment-frontend",
+    "gl-w-number-frontend"
+  ]
 }

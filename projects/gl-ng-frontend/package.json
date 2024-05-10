@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-frontend",
-  "version": "11.0.2",
+  "version": "11.0.3",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_index.ts",
   "types": "gl-ng-frontend.d.ts",
@@ -51,42 +51,42 @@
     "@videogular/ngx-videogular": "^8.0.0",
     "scroll-into-view-if-needed": "^3.1.0",
 
-    "gl-w-attachment-frontend": "^6.0.0",
-    "gl-w-combobox-frontend": "^6.0.0",
-    "gl-w-date-frontend": "^6.0.0",
-    "gl-w-image-frontend": "^6.0.0",
-    "gl-w-input-frontend": "^6.0.0",
-    "gl-w-number-frontend": "^6.0.0",
+    "gl-w-attachment-frontend": "^6.0.1",
+    "gl-w-combobox-frontend": "^6.0.1",
+    "gl-w-date-frontend": "^6.0.1",
+    "gl-w-image-frontend": "^6.0.1",
+    "gl-w-input-frontend": "^6.0.1",
+    "gl-w-number-frontend": "^6.0.1",
 
-    "gl-sp-frontend": "^7.0.0",
+    "gl-sp-frontend": "^7.0.1",
     "gl-scss-styles": "^3.1.1",
     "gl-icons-assets": "^1.5.1"
   },
   "dependencies": {
-  },
-  "devDependencies": {
-    "@angular/common": "~17.3.7",
-    "@angular/core": "~17.3.7",
+    "gl-w-attachment-frontend": "^6.0.1",
+    "gl-w-combobox-frontend": "^6.0.1",
+    "gl-w-date-frontend": "^6.0.1",
+    "gl-w-image-frontend": "^6.0.1",
+    "gl-w-input-frontend": "^6.0.1",
+    "gl-w-number-frontend": "^6.0.1",
+
+    "gl-sp-frontend": "^7.0.1",
+    "gl-scss-styles": "^3.1.1",
+    "gl-icons-assets": "^1.5.1",
+    "decimal.js": "^10.4.3",
+    "@videogular/ngx-videogular": "^8.0.0",
+    "scroll-into-view-if-needed": "^3.1.0",
+
     "@angular/animations": "^17.3.7",
     "@angular/forms": "^17.3.7",
     "@angular/platform-browser-dynamic": "^17.3.7",
     "@angular/cdk": "^17.3.7",
     "@angular/material": "^17.3.7",
-    "@angular/material-moment-adapter": "^17.3.7",
-
-    "gl-w-attachment-frontend": "^6.0.0",
-    "gl-w-combobox-frontend": "^6.0.0",
-    "gl-w-date-frontend": "^6.0.0",
-    "gl-w-image-frontend": "^6.0.0",
-    "gl-w-input-frontend": "^6.0.0",
-    "gl-w-number-frontend": "^6.0.0",
-
-    "gl-sp-frontend": "^7.0.0",
-    "gl-scss-styles": "^3.1.1",
-    "gl-icons-assets": "^1.5.1",
-    "decimal.js": "^10.4.3",
-    "@videogular/ngx-videogular": "^8.0.0",
-    "scroll-into-view-if-needed": "^3.1.0"
+    "@angular/material-moment-adapter": "^17.3.7"
+  },
+  "devDependencies": {
+    "@angular/common": "~17.3.7",
+    "@angular/core": "~17.3.7"
   },
   "scripts": {
     "build": "ng build gl-ng-frontend",

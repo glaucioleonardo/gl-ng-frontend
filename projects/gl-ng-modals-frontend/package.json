@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-modals-frontend",
-  "version": "9.0.1",
+  "version": "9.0.2",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_modals.ts",
   "types": "gl-ng-modals-frontend.d.ts",
@@ -28,25 +28,25 @@
     "@angular/core": "~17.3.7",
 
     "gl-scss-styles": "^3.1.1",
-    "gl-w-attachment-frontend": "^6.0.0",
-    "gl-w-number-frontend": "^6.0.0",
-    "gl-w-image-frontend": "^6.0.0",
-    "gl-w-date-frontend": "^6.0.0",
-    "gl-w-input-frontend": "^6.0.0",
+    "gl-w-attachment-frontend": "^6.0.1",
+    "gl-w-number-frontend": "^6.0.1",
+    "gl-w-image-frontend": "^6.0.1",
+    "gl-w-date-frontend": "^6.0.1",
+    "gl-w-input-frontend": "^6.0.1",
     "decimal.js": "^10.4.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "gl-scss-styles": "^3.1.1",
+    "gl-w-attachment-frontend": "^6.0.1",
+    "gl-w-number-frontend": "^6.0.1",
+    "gl-w-image-frontend": "^6.0.1",
+    "gl-w-date-frontend": "^6.0.1",
+    "gl-w-input-frontend": "^6.0.1",
+    "decimal.js": "^10.4.3"
+  },
   "devDependencies": {
     "@angular/common": "~17.3.7",
-    "@angular/core": "~17.3.7",
-
-    "gl-scss-styles": "^3.1.1",
-    "gl-w-attachment-frontend": "^6.0.0",
-    "gl-w-number-frontend": "^6.0.0",
-    "gl-w-image-frontend": "^6.0.0",
-    "gl-w-date-frontend": "^6.0.0",
-    "gl-w-input-frontend": "^6.0.0",
-    "decimal.js": "^10.4.3"
+    "@angular/core": "~17.3.7"
   },
   "scripts": {
     "build": "ng build gl-ng-modals-frontend",
