@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-filters-frontend",
-  "version": "9.0.3",
+  "version": "9.1.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_filters.ts",
   "types": "gl-ng-filters-frontend.d.ts",
@@ -22,24 +22,16 @@
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
     "@angular/common": "~17.3.7",
-    "@angular/core": "~17.3.7",
-
-    "gl-scss-styles": "^3.1.1",
-    "decimal.js": "^10.4.3",
-    "gl-w-number-frontend": "^6.0.1",
-    "gl-w-image-frontend": "^6.0.1",
-    "gl-w-date-frontend": "^6.0.2",
-    "gl-w-input-frontend": "^6.0.1",
-    "gl-w-attachment-frontend": "^6.0.1"
+    "@angular/core": "~17.3.7"
   },
   "dependencies": {
     "gl-scss-styles": "^3.1.1",
     "decimal.js": "^10.4.3",
-    "gl-w-number-frontend": "^6.0.1",
-    "gl-w-image-frontend": "^6.0.1",
-    "gl-w-date-frontend": "^6.0.2",
-    "gl-w-input-frontend": "^6.0.1",
-    "gl-w-attachment-frontend": "^6.0.1"
+    "gl-w-number-frontend": "^6.1.1",
+    "gl-w-image-frontend": "^6.1.0",
+    "gl-w-date-frontend": "^6.1.2",
+    "gl-w-input-frontend": "^6.1.2",
+    "gl-w-attachment-frontend": "^6.1.0"
   },
   "devDependencies": {
     "@angular/common": "~17.3.7",

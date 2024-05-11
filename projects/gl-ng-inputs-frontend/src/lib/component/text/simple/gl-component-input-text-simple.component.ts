@@ -76,7 +76,6 @@ export class GlComponentInputTextSimpleComponent implements AfterViewInit, OnDes
               case 'currency': case 'integer': case 'numeric':
                 parsedValue = NumberParse.stringCurrencyToNumber(
                   unmaskedValue,
-                  this.decimalSeparator,
                   this.maskSymbol,
                   this.decimalPlaces
                 ).toString();

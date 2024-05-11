@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-logos-frontend",
-  "version": "9.0.2",
+  "version": "9.1.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_logos.ts",
   "types": "gl-ng-logos-frontend.d.ts",
@@ -22,9 +22,7 @@
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
     "@angular/common": "~17.3.7",
-    "@angular/core": "~17.3.7",
-
-    "gl-scss-styles": "^3.1.1"
+    "@angular/core": "~17.3.7"
   },
   "dependencies": {
     "gl-scss-styles": "^3.1.1"

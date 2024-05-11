@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-outputs-frontend",
-  "version": "7.0.2",
+  "version": "7.1.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_outputs.ts",
   "types": "gl-ng-outputs-frontend.d.ts",
@@ -22,13 +22,7 @@
   "bugs": "https://github.com/glaucioleonardo/gl-ng-frontend/issues",
   "peerDependencies": {
     "@angular/common": "~17.3.7",
-    "@angular/core": "~17.3.7",
-
-    "@angular/animations": "^17.3.7",
-    "@angular/forms": "^17.3.7",
-    "@angular/platform-browser-dynamic": "^17.3.7",
-    "@videogular/ngx-videogular": "^8.0.0",
-    "gl-scss-styles": "^3.1.1"
+    "@angular/core": "~17.3.7"
   },
   "dependencies": {
     "@angular/animations": "^17.3.7",
