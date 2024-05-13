@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-buttons-frontend",
-  "version": "9.2.0",
+  "version": "9.2.1",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_buttons.ts",
   "types": "gl-ng-buttons-frontend.d.ts",
@@ -30,7 +30,7 @@
     "gl-scss-styles": "^3.1.1",
     "gl-sp-frontend": "^7.1.0",
     "gl-w-attachment-frontend": "^6.1.0",
-    "gl-w-combobox-frontend": "^6.1.1",
+    "gl-w-combobox-frontend": "^6.2.1",
     "gl-w-number-frontend": "^6.1.1"
   },
   "peerDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-frontend",
-  "version": "11.2.0",
+  "version": "11.2.1",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_index.ts",
   "types": "gl-ng-frontend.d.ts",
@@ -50,7 +50,7 @@
     "@angular/material-moment-adapter": "^17.3.7",
 
     "gl-w-attachment-frontend": "^6.1.0",
-    "gl-w-combobox-frontend": "^6.1.1",
+    "gl-w-combobox-frontend": "^6.2.1",
     "gl-w-date-frontend": "^6.1.2",
     "gl-w-image-frontend": "^6.1.0",
     "gl-w-input-frontend": "^6.1.2",
