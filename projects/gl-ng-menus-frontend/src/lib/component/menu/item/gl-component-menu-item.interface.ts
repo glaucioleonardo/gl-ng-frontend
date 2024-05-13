@@ -1,4 +1,5 @@
 export interface IMenuItem {
+  id: number;
   src?: string;
   href: string;
   fragment?: string;
@@ -10,6 +11,7 @@ export interface IMenuItem {
 }
 
 export interface IMenuItemComplex {
+  id: number;
   src?: string;
   href: string;
   fragment?: string;

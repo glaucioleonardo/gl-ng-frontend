@@ -1,12 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { NgIf, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   standalone: true,
   selector: 'gl-components-modal-actions-item',
   templateUrl: './gl-components-modal-actions-item.component.html',
   imports: [
-    NgIf,
     NgOptimizedImage
   ],
   styleUrls: ['./gl-components-modal-actions-item.component.scss']

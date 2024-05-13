@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { NgIf, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-input-button-hyperlink',
     templateUrl: './gl-component-input-button-hyperlink.component.html',
     styleUrls: ['./gl-component-input-button-hyperlink.component.scss'],
     standalone: true,
-  imports: [NgIf, NgOptimizedImage]
+  imports: [NgOptimizedImage]
 })
 export class GlComponentInputButtonHyperlinkComponent {
   @Input() imageSrc: string;

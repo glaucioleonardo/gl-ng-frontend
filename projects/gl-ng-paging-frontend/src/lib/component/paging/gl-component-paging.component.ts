@@ -1,14 +1,14 @@
 import { AfterViewInit, Component, EventEmitter, Input, Output } from '@angular/core';
 import { IItemsPerPage, IPageButtons, IPaging, TPagingThemeType, TPagingType } from './gl-component-paging.interface';
 import { GlComponentInputButtonSimpleComponent } from '../../../../../gl-ng-inputs-frontend/src/lib/component/button/simple/gl-component-input-button-simple.component';
-import { NgIf, NgFor, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-paging',
     templateUrl: './gl-component-paging.component.html',
     styleUrls: ['./gl-component-paging.component.scss'],
     standalone: true,
-  imports: [NgIf, NgFor, GlComponentInputButtonSimpleComponent, NgOptimizedImage]
+  imports: [GlComponentInputButtonSimpleComponent, NgOptimizedImage]
 })
 export class GlComponentPagingComponent implements AfterViewInit {
   @Input() pageInfo: string;
@@ -47,6 +47,7 @@ export class GlComponentPagingComponent implements AfterViewInit {
       const pageSize = +this[`pageSizeValue${i}`];
 
       this.itemsPerPage.push({
+        id: this.itemsPerPage.length - 1,
         title: `${pageSize} ${this.itemsPerPageDescriptions.toLowerCase()}`,
         innerValue: pageSize?.toString(),
         value: pageSize?.toString(),

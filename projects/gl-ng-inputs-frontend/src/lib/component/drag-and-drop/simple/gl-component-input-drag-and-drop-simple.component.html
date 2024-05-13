@@ -1,16 +1,17 @@
-<gl-component-input-switch
-  *ngIf="showContinueUpload"
-  [active]="continueUpload"
-  [enabled]="!readOnly"
-  [label]="continueUploadLabel"
-  (active$)="onContinueUpload($event)"
-  class="drag-and-drop-continue-switch"
+@if (showContinueUpload) {
+  <gl-component-input-switch
+    [active]="continueUpload"
+    [enabled]="!readOnly"
+    [label]="continueUploadLabel"
+    (active$)="onContinueUpload($event)"
+    class="drag-and-drop-continue-switch"
 
-  buttonIconSrc="../assets/img/icon/upload/resume-upload.svg"
-  labelColor="white"
-  [showAsInputButton]="true"
-  [showLabel]="true"
-></gl-component-input-switch>
+    buttonIconSrc="../assets/img/icon/upload/resume-upload.svg"
+    labelColor="white"
+    [showAsInputButton]="true"
+    [showLabel]="true"
+  ></gl-component-input-switch>
+}
 
 <div
   class="file-attachment-container {{ readOnly ? 'readonly' : '' }}"
@@ -25,9 +26,11 @@
       class="upload-icon {{ readOnly ? 'readonly' : '' }}"
       [src]="uploadIcon">
 
-    <span *ngIf="!readOnly" class="action-description {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDrop }}</span>
-    <span *ngIf="!readOnly" class="action-description {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDropOr }}</span>
-    <span *ngIf="!readOnly" class="action-description button {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDropClickHere }}</span>
+    @if(!readOnly) {
+      <span class="action-description {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDrop }}</span>
+      <span class="action-description {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDropOr }}</span>
+      <span class="action-description button {{ readOnly ? 'readonly' : '' }}">{{ descriptionDragAndDropClickHere }}</span>
+    }
   </div>
 
   <input
@@ -41,24 +44,28 @@
     [multiple]="(maxNumberOfFiles == -1 && maxNumberOfFiles > 1) || (maxNumberOfFiles == null)">
 </div>
 <div class="attachment-list">
-  <gl-component-attachment-item
-    *ngFor="let item of attachmentItems"
-    [fileIcon]="item.icon"
-    [id]="item.id"
-    [fileName]="item.name"
-    [disabled]="readOnly"
-    [addingSmooth]="true"
+  @for(item of attachmentItems; track item.id) {
+    <gl-component-attachment-item
+      [fileIcon]="item.icon"
+      [id]="item.id"
+      [fileName]="item.name"
+      [disabled]="readOnly"
+      [addingSmooth]="true"
 
-    (removeCurrentItem$)="removeAttachment($event);"
-  ></gl-component-attachment-item>
+      (removeCurrentItem$)="removeAttachment($event);"
+    ></gl-component-attachment-item>
+  }
 </div>
 
-<div class="button-container upload-file" *ngIf="attachmentItems.length > 0 && showUploadButton">
-  <gl-component-input-button-simple
-    #uploadFileButton
-    [innerValue]="uploadButtonValue"
-    [readonly]="readOnly"
-    value="upload-file"
-    (click)="uploadClick()"
-  ></gl-component-input-button-simple>
-</div>
+@if (attachmentItems.length > 0 && showUploadButton) {
+  <div class="button-container upload-file">
+    <gl-component-input-button-simple
+      #uploadFileButton
+      [innerValue]="uploadButtonValue"
+      [readonly]="readOnly"
+      value="upload-file"
+      (click)="uploadClick()"
+    ></gl-component-input-button-simple>
+  </div>
+
+}

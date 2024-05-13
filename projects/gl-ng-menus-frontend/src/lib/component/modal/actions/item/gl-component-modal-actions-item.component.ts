@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NgIf, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-modal-actions-item',
     templateUrl: './gl-component-modal-actions-item.component.html',
     styleUrls: ['./gl-component-modal-actions-item.component.scss'],
     standalone: true,
-  imports: [NgIf, NgOptimizedImage]
+  imports: [NgOptimizedImage]
 })
 export class GlComponentModalActionsItemComponent implements OnInit {
   @Input() title: string;

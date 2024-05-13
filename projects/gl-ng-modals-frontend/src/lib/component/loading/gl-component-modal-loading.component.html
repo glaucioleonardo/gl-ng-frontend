@@ -1,14 +1,23 @@
-<div #mainLoading class="main-loading" *ngIf="service._showLoading">
-  <div class="loading-container" *ngIf="!customLoading">
-    <div class="lds-facebook"><div></div><div></div><div></div></div>
-  </div>
-  <div class="custom-loading" *ngIf="customLoading">
-    <ng-content select="[slot=custom-loading]"></ng-content>
-  </div>
-  <div class="status-container">
-    <div class="user-content">
-      <ng-content select="[slot=user-content]"></ng-content>
+@if(service._showLoading) {
+  <div #mainLoading class="main-loading">
+    @if(!customLoading) {
+      <div class="loading-container">
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+      </div>
+    }
+
+    @if(customLoading) {
+      <div class="custom-loading">
+        <ng-content select="[slot=custom-loading]"></ng-content>
+      </div>
+    }
+
+    <div class="status-container">
+      <div class="user-content">
+        <ng-content select="[slot=user-content]"></ng-content>
+      </div>
+      <h2 class="subtitle loading-status">{{ service._loadingStatus }}</h2>
     </div>
-    <h2 class="subtitle loading-status">{{ service._loadingStatus }}</h2>
   </div>
-</div>
+}
+

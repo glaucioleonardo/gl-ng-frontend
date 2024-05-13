@@ -1,18 +1,19 @@
 <div class="check-box-container {{ theme }} {{ showBackground ? '' : 'transparent' }}">
-  <img
-    *ngIf="!checked"
-    (click)="onChecked(true)"
-    alt="Checked"
-    class="check-box unchecked"
-    [class.disabled]="disabled"
-    [src]="'../assets/img/icon/check-box/' + uncheckedIcon + '.svg'">
+  @if(!checked) {
+    <img
+      (click)="onChecked(true)"
+      alt="Checked"
+      class="check-box unchecked"
+      [class.disabled]="disabled"
+      [src]="'../assets/img/icon/check-box/' + uncheckedIcon + '.svg'">
+  }
 
-  <img
-    *ngIf="checked"
-    (click)="onChecked(false)"
-    alt="Unchecked"
-    class="check-box checked"
-    [class.disabled]="disabled"
-    [src]="'../assets/img/icon/check-box/' + checkedIcon +'.svg'">
-
+  @if(checked) {
+    <img
+      (click)="onChecked(false)"
+      alt="Unchecked"
+      class="check-box checked"
+      [class.disabled]="disabled"
+      [src]="'../assets/img/icon/check-box/' + checkedIcon +'.svg'">
+  }
 </div>

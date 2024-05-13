@@ -13,12 +13,13 @@
     (buttonAction$)="errorButtonAction()"
   ></gl-component-error-message>
   <gl-component-footer-container [description]="footerMainDescription">
-    <gl-component-input-button-hyperlink
-      *ngIf="footerShowContainer"
-      [description]="footerDescription"
-      [imageDescription]="footerImageDescription"
-      [imageSrc]="footerImageSrc"
-      [link]="footerLink"
-    ></gl-component-input-button-hyperlink>
+    @if (footerShowContainer) {
+      <gl-component-input-button-hyperlink
+        [description]="footerDescription"
+        [imageDescription]="footerImageDescription"
+        [imageSrc]="footerImageSrc"
+        [link]="footerLink"
+      ></gl-component-input-button-hyperlink>
+    }
   </gl-component-footer-container>
 </div>

@@ -1,27 +1,33 @@
 <section class="header-container {{ theme }}" [attr.type]="theme" (window:keydown)="onKeyDown($event)">
   <div class="header-content {{ theme }}" >
-    <div class="default-logo" *ngIf="theme != 'only-buttons'">
-      <ng-content select="[slot=default-logo]"></ng-content>
-    </div>
-    <gl-component-title-page
-      *ngIf="theme != 'only-buttons' && !systemLogo"
-      [title]="title"
-      [subtitle]="subtitle"
-    ></gl-component-title-page>
+    @if(theme != 'only-buttons') {
+      <div class="default-logo">
+        <ng-content select="[slot=default-logo]"></ng-content>
+      </div>
+    }
+
+    @if(theme != 'only-buttons' && !systemLogo) {
+      <gl-component-title-page
+        [title]="title"
+        [subtitle]="subtitle"
+      ></gl-component-title-page>
+    }
+
     <ng-content class="system-logo" select="[slot=system-logo]"></ng-content>
 
     <div class="menu-bar">
       <div class="menu-buttons-container">
         <ng-content></ng-content>
-        <gl-component-button-menu-tooltip
-          *ngFor="let menuButton of menuButtons;"
-          [disabled]="(readonly && !menuButton.canReadonly) || (!readonly && menuButton.canReadonly && menuButton.readonly)"
-          [tooltip]="menuButton.alt"
-          [src]="menuButton.src"
-          [id]="menuButton.id"
-          [alt]="menuButton.alt"
-          [callback]="menuButton.callback">
-        </gl-component-button-menu-tooltip>
+        @for (menuButton of menuButtons; track menuButton.id) {
+          <gl-component-button-menu-tooltip
+            [disabled]="(readonly && !menuButton.canReadonly) || (!readonly && menuButton.canReadonly && menuButton.readonly)"
+            [tooltip]="menuButton.alt"
+            [src]="menuButton.src"
+            [id]="menuButton.id"
+            [alt]="menuButton.alt"
+            [callback]="menuButton.callback">
+          </gl-component-button-menu-tooltip>
+        }
       </div>
     </div>
   </div>

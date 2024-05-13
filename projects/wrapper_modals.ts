@@ -7,6 +7,7 @@ export { GlNgModalsFrontendModule } from  './gl-ng-modals-frontend/src/lib/gl-ng
 // region interfaces
 export { TTheme } from './gl-ng-modals-frontend/src/lib/interfaces/global.interface';
 export { IModalItemAction } from './gl-ng-modals-frontend/src/lib/component/actions/item/gl-components-modal-actions-item.interface';
+export { IAlertData } from './gl-ng-modals-frontend/src/lib/component/alert/gl-component-modal-alert.interface';
 // endregion
 
 // region directives

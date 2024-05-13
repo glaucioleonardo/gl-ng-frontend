@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { TErrorMessageErrorPosition, TErrorMessageLogoHorizontalPosition, TErrorMessageLogoVerticalPosition } from './gl-view-error-message.interface';
 import { GlComponentInputButtonHyperlinkComponent } from '../../../../../gl-ng-inputs-frontend/src/lib/component/button/hyperlink/gl-component-input-button-hyperlink.component';
-import { NgIf } from '@angular/common';
 import { GlComponentFooterContainerComponent } from '../../../../../gl-ng-footer-frontend/src/lib/component/container/gl-component-footer-container.component';
 import { GlComponentErrorMessageComponent } from '../../component/error-message/gl-component-error-message.component';
 import { GlComponentLogoSquareComponent } from '../../../../../gl-ng-logos-frontend/src/lib/component/square/gl-component-logo-square.component';
@@ -11,7 +10,7 @@ import { GlComponentLogoSquareComponent } from '../../../../../gl-ng-logos-front
     templateUrl: './gl-view-error-message.component.html',
     styleUrls: ['./gl-view-error-message.component.scss'],
     standalone: true,
-    imports: [GlComponentLogoSquareComponent, GlComponentErrorMessageComponent, GlComponentFooterContainerComponent, NgIf, GlComponentInputButtonHyperlinkComponent]
+    imports: [GlComponentLogoSquareComponent, GlComponentErrorMessageComponent, GlComponentFooterContainerComponent, GlComponentInputButtonHyperlinkComponent]
 })
 export class GlViewErrorMessageComponent implements AfterViewInit {
   @ViewChild('mainContainer') mainContainer: ElementRef<HTMLDivElement>;

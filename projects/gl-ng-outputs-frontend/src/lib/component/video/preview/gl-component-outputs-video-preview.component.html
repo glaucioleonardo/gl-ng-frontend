@@ -1,51 +1,73 @@
-<img
-  *ngIf="galleryPreview"
-  draggable="false"
-  class="video-gallery-item-type"
-  src="assets/img/icon/project-gallery/video-icon.svg"
-  alt="Video icon">
+@if(galleryPreview) {
+  <img
+    draggable="false"
+    class="video-gallery-item-type"
+    src="assets/img/icon/project-gallery/video-icon.svg"
+    alt="Video icon">
+}
+
 <vg-player
   [class.transparent]="transparentVideo"
   [class.border-radius]="borderRadius"  (onPlayerReady)="onPlayerReady($event, media)">
-  <vg-overlay-play
-    *ngIf="playerReady && !galleryPreview && !transparentVideo"
-    (click)="onPlayPause(id, media)"
-  ></vg-overlay-play>
-  <vg-buffering *ngIf="showControls && !transparentVideo"></vg-buffering>
 
-  <vg-scrub-bar [vgSlider]="showControls" *ngIf="showControls && !transparentVideo">
-    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-    <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
-  </vg-scrub-bar>
+  @if(playerReady && !galleryPreview && !transparentVideo) {
+    <vg-overlay-play (click)="onPlayPause(id, media)"></vg-overlay-play>
+  }
 
-  <vg-controls *ngIf="showControls && !transparentVideo" [vgAutohide]="true" [vgAutohideTime]="2">
-    <vg-play-pause
-      *ngIf="showPlayPause"
-      (click)="onPlayPause(id, media)"
-    ></vg-play-pause>
-    <vg-playback-button *ngIf="showVideoSpeed"></vg-playback-button>
+  @if(showControls && !transparentVideo) {
+    <vg-buffering></vg-buffering>
 
-    <vg-time-display *ngIf="showCurrentTime" vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+    <vg-scrub-bar [vgSlider]="showControls">
+      <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+      <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+    </vg-scrub-bar>
 
-    <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+    <vg-controls [vgAutohide]="true" [vgAutohideTime]="2">
+      @if(showPlayPause) {
+        <vg-play-pause (click)="onPlayPause(id, media)"></vg-play-pause>
+      }
 
-    <vg-time-display *ngIf="showLeftTime" vgProperty="left" vgFormat="mm:ss"></vg-time-display>
-    <vg-scrub-bar *ngIf="showLeftTime" style="pointer-events: none;"></vg-scrub-bar>
-    <vg-time-display *ngIf="showTotalTime" vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+      @if(showVideoSpeed) {
+        <vg-playback-button></vg-playback-button>
+      }
 
-    <vg-track-selector *ngIf="showClosedCaption"></vg-track-selector>
-    <vg-mute *ngIf="showMute"></vg-mute>
-    <vg-volume *ngIf="showVolume"></vg-volume>
+      @if(showCurrentTime) {
+        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+      }
 
-    <vg-fullscreen></vg-fullscreen>
-  </vg-controls>
+      <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
 
-  <img
-    *ngIf="media.paused && showBackground && !transparentVideo"
-    [src]="squareActive ? backgroundSquare : backgroundWidescreen"
-    alt="Background Image"
-    id="background-video-image"
-    >
+      @if(showLeftTime) {
+        <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+        <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+      }
+
+      @if(showTotalTime) {
+        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+      }
+
+      @if(showClosedCaption) {
+        <vg-track-selector></vg-track-selector>
+      }
+
+      @if(showMute) {
+        <vg-mute></vg-mute>
+      }
+
+      @if(showVolume) {
+        <vg-volume></vg-volume>
+      }
+
+      <vg-fullscreen></vg-fullscreen>
+    </vg-controls>
+  }
+
+  @if(media.paused && showBackground && !transparentVideo) {
+    <img
+      [src]="squareActive ? backgroundSquare : backgroundWidescreen"
+      alt="Background Image"
+      id="background-video-image">
+  }
 
   <video
     #media
@@ -63,7 +85,13 @@
     [vgMedia]="media"
     [id]="id"
     [preload]="videoPreload">
-    <source *ngIf="sourceWebM != null" [src]="sourceWebM" type="video/webm">
-    <source *ngIf="sourceMp4 != null" [src]="sourceMp4" type="video/mp4">
+
+    @if(sourceWebM != null) {
+      <source [src]="sourceWebM" type="video/webm">
+    }
+
+    @if(sourceMp4 != null) {
+      <source [src]="sourceMp4" type="video/mp4">
+    }
   </video>
 </vg-player>

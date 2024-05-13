@@ -27,10 +27,13 @@
     </div>
   </nav>
   <div class="bottom-container">
-    <span
-      *ngIf="partialResult != null"
-      class="partial-result-description">{{ partialResultDescription }} {{ partialResult }} {{ partialResult > 1 ? itemPluralDescription : itemSingularDescription }}
+
+    @if(partialResult != null) {
+      <span
+        class="partial-result-description">{{ partialResultDescription }} {{ partialResult }} {{ partialResult > 1 ? itemPluralDescription : itemSingularDescription }}
     </span>
+    }
+
     <div class="buttons-container">
       <gl-component-input-button-simple
         value="apply"

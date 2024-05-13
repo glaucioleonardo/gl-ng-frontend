@@ -3,7 +3,7 @@ import { Router, RouterLink } from '@angular/router';
 import { IMenuItem, TMenuItemTheme, TUrlTarget } from './gl-component-menu-item.interface';
 import { style, state, animate, transition, trigger } from '@angular/animations';
 import { GlComponentMenuService } from '../gl-component-menu.service';
-import { NgIf, NgFor, ViewportScroller, NgOptimizedImage } from '@angular/common';
+import { ViewportScroller, NgOptimizedImage } from '@angular/common';
 import scrollIntoView from 'scroll-into-view-if-needed';
 
 @Component({
@@ -39,7 +39,7 @@ import scrollIntoView from 'scroll-into-view-if-needed';
         ])
     ],
     standalone: true,
-  imports: [NgIf, RouterLink, NgFor, NgOptimizedImage]
+  imports: [RouterLink, NgOptimizedImage]
 })
 export class GlComponentMenuItemComponent {
   @Input() itemClass: TMenuItemTheme = 'dark';

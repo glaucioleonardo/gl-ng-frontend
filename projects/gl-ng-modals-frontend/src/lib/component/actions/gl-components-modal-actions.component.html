@@ -1,31 +1,35 @@
-<div
-  *ngIf="service.showModal"
-  (keydown)="service.onModalKeyUp($event)"
-  id="modal-actions-close-container"
-  class="modal-container {{ service.modalClass }}"
-  tabindex="-1"
-  #modalActionsCloseContainer>
+@if(service.showModal){
+  <div
+    (keydown)="service.onModalKeyUp($event)"
+    id="modal-actions-close-container"
+    class="modal-container {{ service.modalClass }}"
+    tabindex="-1"
+    #modalActionsCloseContainer>
 
-  <div class="modal-main-content">
-    <div class="action-main-container">
-      <gl-components-modal-actions-item
-        *ngFor="let item of service.actions"
-        [title]="item.title"
-        [icon]="item.icon"
-        [red]="item.red"
-        [hide]="item.hide"
-        [action]="item.action"
-        ($clicked)="service.hide()"
-      ></gl-components-modal-actions-item>
+    <div class="modal-main-content">
+      <div class="action-main-container">
+        @for(item of service.actions; track item.id) {
+          <gl-components-modal-actions-item
+            [title]="item.title"
+            [icon]="item.icon"
+            [red]="item.red"
+            [hide]="item.hide"
+            [action]="item.action"
+            ($clicked)="service.hide()"
+          ></gl-components-modal-actions-item>
+        }
+
+      </div>
+
+      <img
+        tabindex="100"
+        id="modal-actions-close-button"
+        alt="Close icon"
+        class="close close-modal"
+        src="assets/img/icon/menu/close.svg"
+        (keydown)="service.onModalKeyUp($event)"
+        (click)="service.hide()">
     </div>
-
-    <img
-      tabindex="100"
-      id="modal-actions-close-button"
-      alt="Close icon"
-      class="close close-modal"
-      src="assets/img/icon/menu/close.svg"
-      (keydown)="service.onModalKeyUp($event)"
-      (click)="service.hide()">
   </div>
-</div>
+}
+

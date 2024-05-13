@@ -4,14 +4,20 @@
     class="logo"
     [src]="imageSrc"
     [alt]="imageDescription">
-  <span
-    *ngIf="readonly"
-    class="message">
+
+  @if(readonly) {
+    <span
+      class="message">
     {{ description }}
   </span>
-  <a
-    *ngIf="!readonly"
-    class="message"
-    [href]="link"
-    target="_blank">{{ description }}</a>
+  }
+
+  @if(!readonly) {
+    <a
+      class="message"
+      target="_blank"
+      [href]="link"
+    >{{ description }}</a>
+  }
+
 </div>

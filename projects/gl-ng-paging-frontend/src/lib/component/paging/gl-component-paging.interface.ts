@@ -6,6 +6,7 @@ export interface IInitialFinalRange {
 }
 
 export interface IPageButtons {
+  id: number;
   page: number;
   active: boolean;
 }
@@ -19,6 +20,7 @@ export type TPagingType = 'first' | 'next' | 'previous' | 'last';
 export type TPagingThemeType = 'translucid' | 'dark' | '';
 
 export interface IItemsPerPage {
+  id: number;
   title: string;
   innerValue: string;
   value: string;

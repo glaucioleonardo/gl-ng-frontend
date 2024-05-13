@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { NgIf, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-navigation-tab-simple',
     templateUrl: './gl-component-navigation-tab-simple.component.html',
     styleUrls: ['./gl-component-navigation-tab-simple.component.scss'],
     standalone: true,
-  imports: [NgIf, NgOptimizedImage]
+  imports: [NgOptimizedImage]
 })
 export class GlComponentNavigationTabSimpleComponent {
   @Input() tabActive: boolean;

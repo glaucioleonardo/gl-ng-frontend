@@ -9,16 +9,19 @@
     [href]="attachmentUrl"
     class="file"
   >{{ fileName }}</a>
-  <img
-    *ngIf="!disabled && type === 'link'"
-    (click)="editItem(id)"
-    class="edit-item"
-    src="../assets/img/icon/menu/attachment/edit.svg"
-    alt="Editar anexo"/>
-  <img
-    *ngIf="!disabled"
-    (click)="removeItem(id)"
-    class="remove-item"
-    src="../assets/img/icon/menu/attachment/delete.svg"
-    alt="Apagar anexo"/>
+  @if(!disabled && type === 'link') {
+    <img
+      (click)="editItem(id)"
+      class="edit-item"
+      src="../assets/img/icon/menu/attachment/edit.svg"
+      alt="Editar anexo"/>
+  }
+
+  @if(!disabled) {
+    <img
+      (click)="removeItem(id)"
+      class="remove-item"
+      src="../assets/img/icon/menu/attachment/delete.svg"
+      alt="Apagar anexo"/>
+  }
 </div>

@@ -1,55 +1,64 @@
 <div class="pagination-container {{ type }}">
   <div class="pagination-buttons-container">
-    <a id="first-page" class="anchor-button"
-       *ngIf="hasPrevious" (click)="onPageChange($event, 'first')"
-       [title]="firstPageTitle">
-      <img
-        [src]="firstIcon"
-        [alt]="firstPageTitle">
-    </a>
-    <a id="prev-page" class="anchor-button"
-       *ngIf="hasPrevious" (click)="onPageChange($event, 'previous')"
-       [title]="previousPageTitle">
-      <img
-        [src]="previousIcon"
-        [alt]="previousPageTitle">
-    </a>
+    @if(hasPrevious) {
+      <a id="first-page" class="anchor-button"
+         (click)="onPageChange($event, 'first')"
+         [title]="firstPageTitle">
+        <img
+          [src]="firstIcon"
+          [alt]="firstPageTitle">
+      </a>
+      <a id="prev-page" class="anchor-button"
+         (click)="onPageChange($event, 'previous')"
+         [title]="previousPageTitle">
+        <img
+          [src]="previousIcon"
+          [alt]="previousPageTitle">
+      </a>
+    }
+
+
     <span id="page-info">{{ pageInfo }}</span>
     <div class="page-buttons-container">
-      <gl-component-input-button-simple
-        *ngFor="let button of pageButtons"
-        [value]="button.page.toString()"
-        [innerValue]="button.page.toString()"
-        (click)="setPage(button.page)"
-        [class]="button.active ? 'active' : ''"
-        [title]="pageDescription + ' ' + button.page.toString()"
-      ></gl-component-input-button-simple>
+      @for(button of pageButtons; track button.id) {
+        <gl-component-input-button-simple
+          [value]="button.page.toString()"
+          [innerValue]="button.page.toString()"
+          (click)="setPage(button.page)"
+          [class]="button.active ? 'active' : ''"
+          [title]="pageDescription + ' ' + button.page.toString()"
+        ></gl-component-input-button-simple>
+      }
     </div>
-    <a href="#" id="next-page" class="anchor-button"
-       *ngIf="hasNext" (click)="onPageChange($event, 'next')"
-       [title]="nextPageTitle">
-      <img
-        [src]="nextIcon"
-        [alt]="nextPageTitle">
-    </a>
-    <a href="#" id="last-page" class="anchor-button"
-       *ngIf="hasNext" (click)="onPageChange($event, 'last')"
-       [title]="lastPageTitle">
-      <img
-        [src]="lastIcon"
-        [alt]="lastPageTitle">
-    </a>
+
+    @if (hasNext) {
+      <a href="#" id="next-page" class="anchor-button"
+         (click)="onPageChange($event, 'next')"
+         [title]="nextPageTitle">
+        <img
+          [src]="nextIcon"
+          [alt]="nextPageTitle">
+      </a>
+      <a href="#" id="last-page" class="anchor-button"
+         (click)="onPageChange($event, 'last')"
+         [title]="lastPageTitle">
+        <img
+          [src]="lastIcon"
+          [alt]="lastPageTitle">
+      </a>
+    }
   </div>
 
   <div class="number-items-page" >
     <span class="label-page-items">{{ itemsPerPageDescriptions }}</span>
-    <gl-component-input-button-simple
-      *ngFor="let item of itemsPerPage"
+    @for(item of itemsPerPage; track item.id) {
+      <gl-component-input-button-simple
         [title]="item.title"
         [innerValue]="item.innerValue"
         [value]="item.value"
         [theme]="item.theme"
         (click)="setNumberOfItems(item.pageSize)"
-    ></gl-component-input-button-simple>
+      ></gl-component-input-button-simple>
+    }
   </div>
 </div>

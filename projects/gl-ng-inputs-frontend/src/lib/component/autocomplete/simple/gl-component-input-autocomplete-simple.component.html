@@ -21,9 +21,12 @@
         (focusout)="validate()">
     </div>
     <mat-autocomplete autoActiveFirstOption="true" #auto="matAutocomplete" (optionSelected)="input.blur()" [mat-dialog-close]="overlay.position().global().dispose()">
-      <mat-option *ngFor="let option of filteredOptions | async" [value]="option.text">
-        {{option.text}}
-      </mat-option>
+
+      @for(option of filteredOptions | async; track option.id) {
+        <mat-option [value]="option.text">
+          {{option.text}}
+        </mat-option>
+      }
     </mat-autocomplete>
   </mat-form-field>
   <img

@@ -1,19 +1,21 @@
-<gl-component-navigation-tab-simple
-  *ngFor="let tab of navigationTabs; let i = index"
-  [tabEnabled]="tab.enabled"
-  [tabSequence]="tab.sequence"
-  [tabDescription]="tab.description"
-  [tabActive]="tab.active"
-  [showSeparator]="tab.showSeparator"
-  [tabIsTheFirst]="tab.isTheFirst"
-  [tabIsTheLast]="tab.isTheLast"
-  [ngStyle]="{
+@for(tab of navigationTabs; track tab.sequence) {
+  <gl-component-navigation-tab-simple
+    [tabEnabled]="tab.enabled"
+    [tabSequence]="tab.sequence"
+    [tabDescription]="tab.description"
+    [tabActive]="tab.active"
+    [showSeparator]="tab.showSeparator"
+    [tabIsTheFirst]="tab.isTheFirst"
+    [tabIsTheLast]="tab.isTheLast"
+    [ngStyle]="{
     'z-index': tab.active ? 1000 : (100 - tab.sequence)
   }"
-  [id]="'navigation-tab-' + tab.sequence"
-  [showIcon]="tab.showIcon"
-  [srcIcon]="tab.srcIcon"
-  (mouseover)="tabHovering(true, tab.sequence, tab.active)"
-  (mouseleave)="tabHovering(false, tab.sequence, tab.active)"
-  (activate$)="activate($event)"
-></gl-component-navigation-tab-simple>
+    [id]="'navigation-tab-' + tab.sequence"
+    [showIcon]="tab.showIcon"
+    [srcIcon]="tab.srcIcon"
+    (mouseover)="tabHovering(true, tab.sequence, tab.active)"
+    (mouseleave)="tabHovering(false, tab.sequence, tab.active)"
+    (activate$)="activate($event)"
+  ></gl-component-navigation-tab-simple>
+}
+

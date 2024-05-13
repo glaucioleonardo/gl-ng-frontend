@@ -1,13 +1,13 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { THorizontalAlignment, TLabelTheme } from './gl-component-title-label-simple.interface';
-import { NgIf, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-title-label-simple',
     templateUrl: './gl-component-title-label-simple.component.html',
     styleUrls: ['./gl-component-title-label-simple.component.scss'],
     standalone: true,
-  imports: [NgIf, NgOptimizedImage]
+  imports: [NgOptimizedImage]
 })
 export class GlComponentTitleLabelSimpleComponent implements AfterViewInit {
   @ViewChild('label') label: ElementRef<HTMLLabelElement>;

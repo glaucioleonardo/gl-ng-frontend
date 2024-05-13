@@ -1,8 +1,9 @@
-<div class="action-item-container" (click)="onClick()" *ngIf="!hide">
-  <span class="action-title {{ red ? 'red' : '' }}">{{ title }}</span>
-  <img
-    alt="Icon"
-    class="action-icon"
-    [src]="icon"
-    >
-</div>
+@if (!hide){
+  <div class="action-item-container" (click)="onClick()">
+    <span class="action-title {{ red ? 'red' : '' }}">{{ title }}</span>
+    <img
+      alt="Icon"
+      class="action-icon"
+      [src]="icon">
+  </div>
+}

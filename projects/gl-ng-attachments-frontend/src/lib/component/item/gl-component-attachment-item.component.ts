@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TAttachmentItemType } from './gl-component-attachment-item.interface';
-import { NgIf, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-attachment-item',
     templateUrl: './gl-component-attachment-item.component.html',
     styleUrls: ['./gl-component-attachment-item.component.scss'],
     standalone: true,
-  imports: [NgIf, NgOptimizedImage]
+  imports: [NgOptimizedImage]
 })
 export class GlComponentAttachmentItemComponent {
   @Input() disabled = false;

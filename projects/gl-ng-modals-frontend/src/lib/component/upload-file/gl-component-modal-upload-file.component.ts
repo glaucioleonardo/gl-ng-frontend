@@ -4,14 +4,14 @@ import { GlComponentModalUploadFileService } from './gl-component-modal-upload-f
 import { GlComponentInputButtonSimpleComponent } from '../../../../../gl-ng-inputs-frontend/src/lib/component/button/simple/gl-component-input-button-simple.component';
 import { GlComponentInputDragAndDropSimpleComponent } from '../../../../../gl-ng-inputs-frontend/src/lib/component/drag-and-drop/simple/gl-component-input-drag-and-drop-simple.component';
 import { GlComponentModalHeaderComponent } from '../header/gl-component-modal-header.component';
-import { NgIf } from '@angular/common';
+
 
 @Component({
     selector: 'gl-component-modal-upload-file',
     templateUrl: './gl-component-modal-upload-file.component.html',
     styleUrls: ['./gl-component-modal-upload-file.component.scss'],
     standalone: true,
-    imports: [NgIf, GlComponentModalHeaderComponent, GlComponentInputDragAndDropSimpleComponent, GlComponentInputButtonSimpleComponent]
+    imports: [GlComponentModalHeaderComponent, GlComponentInputDragAndDropSimpleComponent, GlComponentInputButtonSimpleComponent]
 })
 export class GlComponentModalUploadFileComponent implements OnInit {
   @Input() title: string;

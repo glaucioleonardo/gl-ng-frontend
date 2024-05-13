@@ -5,7 +5,6 @@ import { NumberParse, TCurrencySymbolTypes, TDecimalSeparators } from 'gl-w-numb
 import { THorizontalAlignment } from '../../../core/interfaces/alignments.interface';
 import { ISimpleTextResult, TInputTextMask, TInputTextTheme, TInputType } from './gl-component-input-text-simple.interface';
 import { GlComponentInputTextSimpleService } from './gl-component-input-text-simple.service';
-import { NgIf } from '@angular/common';
 
 @Component({
     selector: 'gl-component-input-text-simple',
@@ -24,7 +23,7 @@ import { NgIf } from '@angular/common';
         // }
     ],
     standalone: true,
-    imports: [NgIf]
+    imports: []
 })
 export class GlComponentInputTextSimpleComponent implements AfterViewInit, OnDestroy, ControlValueAccessor {
   @ViewChild('inputElement', { read: ElementRef, static: true }) inputElement: ElementRef<HTMLInputElement>;

@@ -11,20 +11,24 @@
     [attr.maxlength]="maxLength"
     (dateChange)="changed($event)"
     disabled>
-  <mat-datepicker-toggle *ngIf="!disabled" matSuffix (click)="clear()">
-    <img
-      matDatepickerToggleIcon
-      class="datepicker-button"
-      alt="Date picker icon"
-      src="../assets/img/icon/datepicker/clear.svg">
-  </mat-datepicker-toggle>
-  <mat-datepicker-toggle *ngIf="!disabled" matSuffix [for]="dp3">
-    <img
-      matDatepickerToggleIcon
-      class="datepicker-button"
-      alt="Date picker icon"
-      src="../assets/img/icon/datepicker/date.svg">
-  </mat-datepicker-toggle>
+
+  @if (!disabled) {
+    <mat-datepicker-toggle matSuffix (click)="clear()">
+      <img
+        matDatepickerToggleIcon
+        class="datepicker-button"
+        alt="Date picker icon"
+        src="../assets/img/icon/datepicker/clear.svg">
+    </mat-datepicker-toggle>
+    <mat-datepicker-toggle matSuffix [for]="dp3">
+      <img
+        matDatepickerToggleIcon
+        class="datepicker-button"
+        alt="Date picker icon"
+        src="../assets/img/icon/datepicker/date.svg">
+    </mat-datepicker-toggle>
+  }
+
   <mat-datepicker
     #dp3 disabled="false"
     startView="multi-year"

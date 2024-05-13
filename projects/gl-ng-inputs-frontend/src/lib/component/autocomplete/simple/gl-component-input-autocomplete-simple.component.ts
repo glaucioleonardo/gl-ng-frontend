@@ -8,7 +8,7 @@ import { map, startWith } from 'rxjs/operators';
 import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignments.interface';
 import { GlComponentInputAutocompleteSimpleService } from './gl-component-input-autocomplete-simple.service';
 import { MatOptionModule } from '@angular/material/core';
-import { NgFor, AsyncPipe, NgOptimizedImage } from '@angular/common';
+import { AsyncPipe, NgOptimizedImage } from '@angular/common';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -18,7 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     templateUrl: './gl-component-input-autocomplete-simple.component.html',
     styleUrls: ['./gl-component-input-autocomplete-simple.component.scss'],
     standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, MatAutocompleteModule, MatDialogModule, NgFor, MatOptionModule, AsyncPipe, NgOptimizedImage]
+  imports: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, MatAutocompleteModule, MatDialogModule, MatOptionModule, AsyncPipe, NgOptimizedImage]
 })
 export class GlComponentInputAutocompleteSimpleComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
   @ViewChild('input') input: ElementRef<HTMLInputElement>;
@@ -126,11 +126,19 @@ export class GlComponentInputAutocompleteSimpleComponent implements OnInit, OnDe
     if (value != null && value.trim().length > 0 && filteredData.length > 0) {
       input.value = filteredData[0].text;
       this.autocompleteInput.setValue(filteredData[0].text);
-      this.currentValue.emit({ text: filteredData[0].text, value: filteredData[0].value });
+      this.currentValue.emit({
+        id: filteredData[0].id,
+        text: filteredData[0].text,
+        value: filteredData[0].value
+      });
     } else {
       input.value = '';
       this.autocompleteInput.setValue('');
-      this.currentValue.emit({ text: null, value: null });
+      this.currentValue.emit({
+        id: null,
+        text: null,
+        value: null
+      });
     }
   }
 
@@ -142,7 +150,11 @@ export class GlComponentInputAutocompleteSimpleComponent implements OnInit, OnDe
   clearItems(input: HTMLInputElement): void {
     input.value = null;
     this.autocompleteInput.setValue(null);
-    this.currentValue.emit({ text: null, value: null });
+    this.currentValue.emit({
+      id: null,
+      text: null,
+      value: null
+    });
     setTimeout(() => {
       input.click();
     }, 100);

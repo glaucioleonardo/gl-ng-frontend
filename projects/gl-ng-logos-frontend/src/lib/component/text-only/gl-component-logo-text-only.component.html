@@ -2,8 +2,10 @@
      (click)="onClick()">
   <h1 class="title title-1">{{ title }}</h1>
   <h1 class="title title-2">{{ subtitle }}{{ formType == null ? '' : ': ' + formType }}</h1>
-  <span
-    *ngIf="showRelease && releaseName != null"
-    class="release">{{ releaseName }}
+  @if(showRelease && releaseName != null) {
+    <span
+      class="release">{{ releaseName }}
   </span>
+  }
+
 </div>

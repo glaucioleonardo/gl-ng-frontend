@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { GlComponentModalActionsService } from './gl-component-modal-actions.service';
 import { GlComponentModalActionsItemComponent } from './item/gl-component-modal-actions-item.component';
-import { NgIf, NgFor, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'gl-component-modal-actions',
     templateUrl: './gl-component-modal-actions.component.html',
     styleUrls: ['./gl-component-modal-actions.component.scss'],
     standalone: true,
-  imports: [NgIf, NgFor, GlComponentModalActionsItemComponent, NgOptimizedImage]
+  imports: [GlComponentModalActionsItemComponent, NgOptimizedImage]
 })
 export class GlComponentModalActionsComponent {
 

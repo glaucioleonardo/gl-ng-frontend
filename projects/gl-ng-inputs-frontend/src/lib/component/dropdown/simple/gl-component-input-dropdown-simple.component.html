@@ -8,83 +8,106 @@
       tabindex="-1"
       (click)="toggleDropdown($event)">
 
-      <span class="placeholder {{ showIconPreview() ? 'has-icon-preview' : '' }}" *ngIf="selectedItems.length == 0">{{_placeholder}}</span>
+      @if(selectedItems.length == 0) {
+        <span
+          class="placeholder {{ showIconPreview() ? 'has-icon-preview' : '' }}"
+        >{{_placeholder}}</span>
+      }
 
-      <span *ngFor="let item of selectedItems; trackBy: trackByFn;let k = index" class="selected-item-container {{ _settings.singleSelection ? 'single-item' : 'multiple-item' }}" >
+
+      @for (item of selectedItems; track item.id) {
+        <span class="selected-item-container {{ _settings.singleSelection ? 'single-item' : 'multiple-item' }}" >
         <span
           class="selected-item"
-          [hidden]="k  > (this._settings.itemsShowLimit-1)">
+          [hidden]="item.id  > (this._settings.itemsShowLimit-1)">
           <span [title]="item.text">{{item.text}}</span>
-          <img
-            *ngIf="!disabled && (!_settings.singleSelection || !defaultSettings.singleSelection)"
-            alt="Remove item"
-            class="remove-item"
-            src="../assets/img/icon/check-box/checked.svg"
-            (click)="onItemClick($event,item)">
+          @if(!disabled && (!_settings.singleSelection || !defaultSettings.singleSelection)) {
+            <img
+              alt="Remove item"
+              class="remove-item"
+              src="../assets/img/icon/check-box/checked.svg"
+              (click)="onItemClick($event,item)">
+          }
         </span>
       </span>
+      }
 
       <span class="buttons-container"
         [ngClass]="{ 'dropdown-multiselect--active': _settings.defaultOpen }">
 
-        <span class="items-remaining-container" *ngIf="itemShowRemaining()>0">
+        @if(itemShowRemaining()>0) {
+          <span class="items-remaining-container">
            <span
              class="items-remaining"
            >+{{itemShowRemaining()}}</span>
         </span>
-        <img
-          *ngIf="showIconPreview()"
-          alt="Icon preview"
-          class="icon-preview"
-          [src]="iconPreview">
-         <img
-           *ngIf="!disabled"
-           alt="Show items"
-           class="dropdown-multiselect__caret arrow-down {{ 'theme' }} {{ disabled ? 'read-only' : '' }}"
-           [src]="imageSource">
+        }
+
+        @if(showIconPreview()) {
+          <img
+            alt="Icon preview"
+            class="icon-preview"
+            [src]="iconPreview">
+        }
+
+        @if(!disabled) {
+          <img
+            alt="Show items"
+            class="dropdown-multiselect__caret arrow-down {{ 'theme' }} {{ disabled ? 'read-only' : '' }}"
+            [src]="imageSource">
+        }
+
       </span>
     </span>
   </div>
 
   <div class="dropdown-list" [hidden]="!_settings.defaultOpen">
     <ul class="item1">
-      <li
-        class="multiselect-item-checkbox select-all"
-        (click)="toggleSelectAll()"
-        *ngIf="(_data.length > 0 || _settings.allowRemoteDataSearch) && !_settings.singleSelection && _settings.enableCheckAll && _settings.limitSelection===-1">
+      @if((_data.length > 0 || _settings.allowRemoteDataSearch) && !_settings.singleSelection && _settings.enableCheckAll && _settings.limitSelection===-1) {
+        <li
+          class="multiselect-item-checkbox select-all"
+          (click)="toggleSelectAll()">
 
-        <input
-          type="checkbox"
-          aria-label="multiselect-select-all"
-          [checked]="isAllItemsSelected()"
-          [disabled]="disabled || isLimitSelectionReached()"/>
-        <div class="check-box-inner select-all">{{!isAllItemsSelected() ? _settings.selectAllText : _settings.unSelectAllText}}</div>
-      </li>
-      <li class="filter-textbox" *ngIf="(_data.length>0 || _settings.allowRemoteDataSearch) && _settings.allowSearchFilter">
-        <input
-          type="text"
-          aria-label="multiselect-search"
-          [readOnly]="disabled"
-          [placeholder]="_settings.searchPlaceholderText"
-          [(ngModel)]="filter.text"
-          (ngModelChange)="onFilterTextChange($event)">
-      </li>
+          <input
+            type="checkbox"
+            aria-label="multiselect-select-all"
+            [checked]="isAllItemsSelected()"
+            [disabled]="disabled || isLimitSelectionReached()"/>
+          <div class="check-box-inner select-all">{{!isAllItemsSelected() ? _settings.selectAllText : _settings.unSelectAllText}}</div>
+        </li>
+      }
+
+      @if((_data.length>0 || _settings.allowRemoteDataSearch) && _settings.allowSearchFilter) {
+        <li class="filter-textbox">
+          <input
+            type="text"
+            aria-label="multiselect-search"
+            [readOnly]="disabled"
+            [placeholder]="_settings.searchPlaceholderText"
+            [(ngModel)]="filter.text"
+            (ngModelChange)="onFilterTextChange($event)">
+        </li>
+      }
     </ul>
     <ul class="item2" [style.maxHeight]="_settings.maxHeight+'px'">
-      <li class="multiselect-item-checkbox"
-        *ngFor="let item of _data | multiSelectFilter:filter; let i = index;"
-        (click)="onItemClick($event,item)">
-        <input
-          type="checkbox"
-          [attr.aria-label]="item.text"
-          [checked]="isSelected(item)"
-          [disabled]="disabled || (isLimitSelectionReached() && !isSelected(item)) || item.isDisabled"/>
-        <div class="check-box-inner">{{item.text}}</div>
-      </li>
-      <li class="no-data"
-        *ngIf="_data.length == 0 && !_settings.allowRemoteDataSearch">
-        <h5>{{_settings.noDataAvailablePlaceholderText}}</h5>
-      </li>
+      @for(item of _data | multiSelectFilter:filter; track item.id) {
+        <li class="multiselect-item-checkbox"
+            (click)="onItemClick($event,item)">
+          <input
+            type="checkbox"
+            [attr.aria-label]="item.text"
+            [checked]="isSelected(item)"
+            [disabled]="disabled || (isLimitSelectionReached() && !isSelected(item)) || item.isDisabled"/>
+          <div class="check-box-inner">{{item.text}}</div>
+        </li>
+      }
+
+      @if(_data.length == 0 && !_settings.allowRemoteDataSearch) {
+        <li class="no-data">
+          <h5>{{_settings.noDataAvailablePlaceholderText}}</h5>
+        </li>
+      }
+
     </ul>
   </div>
 </div>

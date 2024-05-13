@@ -8,10 +8,11 @@
       [src]="src"
       [alt]="alt">
   </div>
-  <img
-    *ngIf="required"
-    src="../assets/img/icon/label/dot.svg"
-    class="required-fill-dot"
-    [title]="requiredFieldDescription"
-    alt="Required fill icon">
+  @if(required) {
+    <img
+      src="../assets/img/icon/label/dot.svg"
+      class="required-fill-dot"
+      [title]="requiredFieldDescription"
+      alt="Required fill icon">
+  }
 </div>

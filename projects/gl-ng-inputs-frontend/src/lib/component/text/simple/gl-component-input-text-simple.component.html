@@ -1,8 +1,10 @@
 <!--suppress HtmlFormInputWithoutLabel -->
-<span
-  class="icon"
-  *ngIf="showIcon && iconSrc != null"
-></span>
+@if(showIcon && iconSrc != null) {
+  <span
+    class="icon"
+  ></span>
+}
+
 <input
   #inputElement
   class="item-content {{ itemContentAlignment }} {{ theme }} {{ showIcon ? 'show-icon' : '' }}"

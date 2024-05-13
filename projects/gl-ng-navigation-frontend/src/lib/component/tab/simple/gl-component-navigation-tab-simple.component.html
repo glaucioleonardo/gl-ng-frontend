@@ -11,10 +11,14 @@
     <span class="tab-sequence-content">{{ tabSequence }}</span>
   </div>
   <span class="tab-description">{{ tabDescription }}</span>
-  <img
-    *ngIf="showIcon"
-    [src]="srcIcon"
-    class="navigation-tab-icon"
-    alt="Tab icon">
+  @if(showIcon) {
+    <img
+      [src]="srcIcon"
+      class="navigation-tab-icon"
+      alt="Tab icon">
+  }
+
 </div>
-<div class="border-bottom" *ngIf="!safariStyle"></div>
+@if(!safariStyle) {
+  <div class="border-bottom"></div>
+}

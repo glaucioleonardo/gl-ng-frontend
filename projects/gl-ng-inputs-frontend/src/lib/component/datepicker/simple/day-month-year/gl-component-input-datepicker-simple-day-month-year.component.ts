@@ -4,7 +4,7 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/materia
 import { DateGet } from 'gl-w-date-frontend';
 import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignments.interface';
 import { IDatePickerOutput } from './gl-component-input-datepicker-simple-day-month-year.interface';
-import { NgIf, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -26,7 +26,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
         },
     ],
     standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, NgIf, NgOptimizedImage]
+  imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, NgOptimizedImage]
 })
 export class GlComponentInputDatepickerSimpleDayMonthYearComponent {
   @Input() disabled = false;

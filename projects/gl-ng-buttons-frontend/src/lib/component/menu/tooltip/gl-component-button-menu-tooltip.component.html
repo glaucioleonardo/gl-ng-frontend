@@ -1,9 +1,11 @@
-<div [attr.alt]="alt" class="tooltip-menu" *ngIf="!disabled && !hide">
-  <gl-component-button-menu-simple
-    [src]="src"
-    [id]="id"
-    [alt]="alt"
-    [hide]="hide"
-    (click)="callback($event)"
-  ></gl-component-button-menu-simple>
-</div>
+@if(!disabled && !hide) {
+  <div [attr.alt]="alt" class="tooltip-menu">
+    <gl-component-button-menu-simple
+      [src]="src"
+      [id]="id"
+      [alt]="alt"
+      [hide]="hide"
+      (click)="callback($event)"
+    ></gl-component-button-menu-simple>
+  </div>
+}

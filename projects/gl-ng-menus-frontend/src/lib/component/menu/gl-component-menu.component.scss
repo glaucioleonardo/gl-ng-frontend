@@ -115,6 +115,7 @@
               .subtitle {
                 @include fonts.font-family-custom(light);
                 font-size: 1.2em;
+                line-height: 1.2em;
               }
 
               .system-version {

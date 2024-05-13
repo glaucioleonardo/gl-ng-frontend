@@ -21,9 +21,8 @@ export interface IDropdownSettings {
 }
 
 export class ListItem {
-  // tslint:disable-next-line
+  id: number;
   value: String | number;
-  // tslint:disable-next-line
   text: String | number;
   isDisabled?: boolean;
   icon?: string;

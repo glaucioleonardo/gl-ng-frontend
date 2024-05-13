@@ -1,12 +1,14 @@
-<div class="action-item-container" [class.group-split]="groupSplit" (click)="onClick()" *ngIf="!hide">
+@if(!hide) {
+  <div class="action-item-container" [class.group-split]="groupSplit" (click)="onClick()">
   <span
     class="action-title"
     [class.red]="red"
     [class.green]="green"
   >{{ title }}</span>
 
-  <img
-    alt="Icon"
-    class="action-icon"
-    [src]="icon">
-</div>
+    <img
+      alt="Icon"
+      class="action-icon"
+      [src]="icon">
+  </div>
+}

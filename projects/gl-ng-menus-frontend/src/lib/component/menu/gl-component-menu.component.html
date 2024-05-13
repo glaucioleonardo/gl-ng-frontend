@@ -14,20 +14,22 @@
               [src]="closeButton"
               class="menu-icons close-menu"
               alt="Close menu button">
-            <img
-              *ngIf="showSettings"
-              id="settings-menu-button"
-              (click)="service.goToSettings(settingsUrl, settingsTarget)"
-              [src]="settingsButton"
-              class="menu-icons settings-menu"
-              alt="Settings menu button">
-            <img
-              *ngIf="showLogout"
-              id="logout-menu-button"
-              (click)="$logoutClick.emit($event)"
-              [src]="logoutButton"
-              class="menu-icons logout-menu"
-              alt="Close menu button">
+            @if(showSettings) {
+              <img
+                id="settings-menu-button"
+                (click)="service.goToSettings(settingsUrl, settingsTarget)"
+                [src]="settingsButton"
+                class="menu-icons settings-menu"
+                alt="Settings menu button">
+            }
+           @if(showLogout) {
+             <img
+               id="logout-menu-button"
+               (click)="$logoutClick.emit($event)"
+               [src]="logoutButton"
+               class="menu-icons logout-menu"
+               alt="Close menu button">
+           }
 
             <div class="logo-container">
               <img
@@ -45,35 +47,38 @@
         </div>
       </li>
       <li class="menu-content-container {{ title?.length > 0 ? 'has-title' : '' }}">
-        <gl-component-menu-item
-          *ngFor="let menuItem of menuItems"
-          [absolute]="menuItem.absolute"
-          [alt]="menuItem.alt"
-          [src]="menuItem.src"
-          [fragment]="menuItem.fragment"
-          [routerLink]="menuItem.href"
-          [href]="menuItem.href"
-          [content]="menuItem.content"
-          [itemClass]="menuItem.class"
-          [target]="menuItem.target"
-          ($click)="$click.emit($event)"
-        ></gl-component-menu-item>
-        <gl-component-menu-item
-          *ngFor="let menuItem of menuItemsComplex"
-          [absolute]="menuItem.absolute"
-          [alt]="menuItem.alt"
-          [src]="menuItem.src"
-          [fragment]="menuItem.fragment"
-          [routerLink]="menuItem.href"
-          [href]="menuItem.href"
-          [content]="menuItem.content"
-          [itemClass]="menuItem.class"
-          [hasSubitem]="menuItem.hasSubitem"
-          [active]="menuItem.active"
-          [target]="menuItem.target"
-          [subItems]="menuItem.subItems"
-          ($click)="$click.emit($event)"
-        ></gl-component-menu-item>
+        @for(menuItem of menuItems; track menuItem.id) {
+          <gl-component-menu-item
+            [absolute]="menuItem.absolute"
+            [alt]="menuItem.alt"
+            [src]="menuItem.src"
+            [fragment]="menuItem.fragment"
+            [routerLink]="menuItem.href"
+            [href]="menuItem.href"
+            [content]="menuItem.content"
+            [itemClass]="menuItem.class"
+            [target]="menuItem.target"
+            ($click)="$click.emit($event)"
+          ></gl-component-menu-item>
+        }
+
+        @for(menuItem of menuItemsComplex; track menuItem.id) {
+          <gl-component-menu-item
+            [absolute]="menuItem.absolute"
+            [alt]="menuItem.alt"
+            [src]="menuItem.src"
+            [fragment]="menuItem.fragment"
+            [routerLink]="menuItem.href"
+            [href]="menuItem.href"
+            [content]="menuItem.content"
+            [itemClass]="menuItem.class"
+            [hasSubitem]="menuItem.hasSubitem"
+            [active]="menuItem.active"
+            [target]="menuItem.target"
+            [subItems]="menuItem.subItems"
+            ($click)="$click.emit($event)"
+          ></gl-component-menu-item>
+        }
       </li>
 <!--      <li class="logo-main-container">-->
 <!--        <div class="logo-container">-->

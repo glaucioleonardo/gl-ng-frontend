@@ -3,14 +3,13 @@ import { IMenuButton } from '../../../../../gl-ng-buttons-frontend/src/lib/compo
 import { THeaderTheme } from './gl-component-header-default.interface';
 import { GlComponentButtonMenuTooltipComponent } from '../../../../../gl-ng-buttons-frontend/src/lib/component/menu/tooltip/gl-component-button-menu-tooltip.component';
 import { GlComponentTitlePageComponent } from '../../../../../gl-ng-titles-frontend/src/lib/component/page/gl-component-title-page.component';
-import { NgIf, NgFor } from '@angular/common';
 
 @Component({
     selector: 'gl-component-header-default',
     templateUrl: './gl-component-header-default.component.html',
     styleUrls: ['./gl-component-header-default.component.scss'],
     standalone: true,
-    imports: [NgIf, GlComponentTitlePageComponent, NgFor, GlComponentButtonMenuTooltipComponent]
+    imports: [GlComponentTitlePageComponent, GlComponentButtonMenuTooltipComponent]
 })
 export class GlComponentHeaderDefaultComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() systemLogo = false;
