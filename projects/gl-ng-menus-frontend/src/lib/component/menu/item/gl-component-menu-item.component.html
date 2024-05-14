@@ -5,11 +5,16 @@
       class="menu-icons"
       [alt]="alt"/>
     @if(absolute) {
+<!--      <a-->
+<!--        class="menu-item"-->
+<!--        [href]="'externalRedirect'"-->
+<!--        (click)="openAbsoluteLink($event, href, target)"-->
+<!--        >{{ content }}</a>-->
       <a
         class="menu-item"
-        [href]="'externalRedirect'"
-        (click)="openAbsoluteLink($event, href, target)"
-        >{{ content }}</a>
+        [href]="href"
+        [target]="target"
+      >{{ content }}</a>
     }
 
     @if (!absolute) {
@@ -49,11 +54,16 @@
           class="menu-icons"
           [alt]="item.alt"/>
         @if(item.absolute) {
+<!--          <a-->
+<!--            class="menu-item"-->
+<!--            [href]="'externalRedirect'"-->
+<!--            (click)="openAbsoluteLink($event, item.href, item.target)"-->
+<!--          >{{ item.content }}</a>-->
           <a
             class="menu-item"
-            [href]="'externalRedirect'"
-            (click)="openAbsoluteLink($event, item.href, item.target)"
-          >{{ item.content }}</a>
+            [href]="item.href"
+            [target]="item.target"
+          >{{ content }}</a>
         }
 
         @if(!item.absolute) {

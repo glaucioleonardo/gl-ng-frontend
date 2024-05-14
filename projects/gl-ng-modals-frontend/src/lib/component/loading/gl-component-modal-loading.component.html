@@ -14,7 +14,7 @@
 
     <div class="status-container">
       <div class="user-content">
-        <ng-content select="[slot=user-content]"></ng-content>
+        <ng-content select="{{ '[slot=' + slot + ']' }}"></ng-content>
       </div>
       <h2 class="subtitle loading-status">{{ service._loadingStatus }}</h2>
     </div>

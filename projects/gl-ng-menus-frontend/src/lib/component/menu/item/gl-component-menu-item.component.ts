@@ -66,15 +66,28 @@ export class GlComponentMenuItemComponent {
 
   }
 
-  openAbsoluteLink(event, href, target: TUrlTarget = '_self'): void {
-    this._router.navigate(['/externalRedirect', { externalUrl: href, target}], {
-      skipLocationChange: true,
-    }).then(() => {
-      console.log(`Redirected to: ${href}`);
-    });
-
-    event.preventDefault();
-  }
+  // openAbsoluteLink(event, href, target: TUrlTarget = '_self'): void {
+  //   this._router.navigate(['/externalRedirect', { externalUrl: href, target}], {
+  //     skipLocationChange: true,
+  //   }).then(() => {
+  //     console.log(`Redirected to: ${href}`);
+  //   });
+  //
+  //   event.preventDefault();
+  // }
+  // openAbsoluteLink(event, href, target: TUrlTarget = '_self'): void {
+  //   this._router.navigate([href, target], {
+  //     skipLocationChange: true,
+  //   })
+  //
+  //   // this._router.navigate(['/externalRedirect', { externalUrl: href, target}], {
+  //   //   skipLocationChange: true,
+  //   // }).then(() => {
+  //   //   console.log(`Redirected to: ${href}`);
+  //   // });
+  //
+  //   event.preventDefault();
+  // }
 
   toggleActive(): void {
     this.active = !this.active;

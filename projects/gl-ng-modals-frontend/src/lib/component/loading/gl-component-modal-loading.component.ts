@@ -14,6 +14,7 @@ export class GlComponentModalLoadingComponent implements AfterViewChecked {
 
   @Input() defaultMessage: string;
   @Input() customLoading: false;
+  @Input() slot: 'user-content' = 'user-content';
 
   loaded = false;
 
