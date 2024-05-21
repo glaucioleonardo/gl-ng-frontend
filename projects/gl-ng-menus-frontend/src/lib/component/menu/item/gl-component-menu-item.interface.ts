@@ -18,7 +18,7 @@ export interface IMenuItemComplex {
   alt: string;
   content: string;
   absolute?: boolean;
-  class?: 'translucid' | 'dark' | '';
+  class?: TMenuItemTheme;
   hasSubitem?: boolean;
   active?: boolean;
   subItems?: IMenuItem[];
