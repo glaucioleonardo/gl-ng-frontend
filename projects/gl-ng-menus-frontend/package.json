@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-menus-frontend",
-  "version": "9.2.3",
+  "version": "9.3.0",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_menus.ts",
   "types": "gl-ng-menus-frontend.d.ts",

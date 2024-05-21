@@ -6,7 +6,7 @@ export interface IMenuItem {
   alt: string;
   content: string;
   absolute?: boolean;
-  class?: 'translucid' | 'dark' | '';
+  class?: TMenuItemTheme;
   target?: TUrlTarget;
 }
 
@@ -26,4 +26,6 @@ export interface IMenuItemComplex {
 }
 
 export type TUrlTarget = '_self' | '_blank' | '_parent' | '_top';
-export type TMenuItemTheme = 'translucid' | 'dark' | '';
+export type TMenuItemTheme = 'translucid' | 'dark' | '' | 'left-blue' |
+  'left-green' | 'left-yellow' | 'left-red' | 'left-orange' | 'left-pink' |
+  'left-purple' | string

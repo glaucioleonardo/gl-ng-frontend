@@ -100,6 +100,29 @@
     }
   }
 
+  .menu-title.left-blue {
+    border-left: solid #00ffff70  0.2em;
+  }
+  .menu-title.left-green {
+    border-left: solid #00ffa570  0.2em;
+  }
+  .menu-title.left-yellow {
+    border-left: solid #fffb0070  0.2em;
+  }
+  .menu-title.left-red {
+    border-left: solid #ff000070  0.2em;
+  }
+  .menu-title.left-orange {
+    border-left: solid #ff860070  0.2em;
+  }
+  .menu-title.left-pink {
+    border-left: solid #ff007170  0.2em;
+  }
+  .menu-title.left-purple {
+    border-left: solid #8a00ff70  0.2em;
+  }
+
+
   .subitem-container, .menu-title, .menu-item {
     outline: none !important;
     user-select: none;
