@@ -19,6 +19,7 @@ export class GlComponentInputTextAreaLabelComponent {
   @Input() placeholder: string;
   @Input() itemContentAlignment: THorizontalAlignment;
   @Input() theme: TTheme = '';
+  @Input() autoScroll: boolean = false;
 
   @Input() value = '';
   @Input() maxLength: number;
