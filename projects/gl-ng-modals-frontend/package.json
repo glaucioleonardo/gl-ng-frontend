@@ -1,6 +1,6 @@
 {
   "name": "gl-ng-modals-frontend",
-  "version": "9.2.1",
+  "version": "9.2.3",
   "description": "Common code and components designed for Angular 2+ to be used among web front-end development.",
   "main": "wrapper_modals.ts",
   "types": "gl-ng-modals-frontend.d.ts",
