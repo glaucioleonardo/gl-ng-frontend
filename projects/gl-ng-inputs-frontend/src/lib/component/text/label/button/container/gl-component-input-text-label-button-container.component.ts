@@ -4,6 +4,7 @@ import { THorizontalAlignment, TTheme } from '../../../../../core/interfaces/ali
 import { TInputTextMask, TInputType } from '../../../simple/gl-component-input-text-simple.interface';
 import { GlComponentInputTextSimpleComponent } from '../../../simple/gl-component-input-text-simple.component';
 import { GlComponentTitleLabelButtonContainerComponent } from '../../../../../../../../gl-ng-titles-frontend/src/lib/component/label/button/container/gl-component-title-label-button-container.component';
+import { TLabelColor, TLabelTheme } from '../../../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.interface';
 
 @Component({
     selector: 'gl-component-input-text-label-button-container',
@@ -23,6 +24,9 @@ export class GlComponentInputTextLabelButtonContainerComponent {
   @Input() theme: TTheme = '';
   @Input() value: string = null;
   @Input() type: TInputType = 'text';
+
+  @Input() labelTheme: TLabelTheme = ''
+  @Input() labelColor: TLabelColor = '';
 
   @Input() mask: TInputTextMask;
   @Input() decimalSeparator: TDecimalSeparators = ',';

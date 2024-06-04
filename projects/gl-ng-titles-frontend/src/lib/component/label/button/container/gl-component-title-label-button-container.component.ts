@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TTheme } from '../../../../interfaces/global.interface';
-import { THorizontalAlignment } from '../../simple/gl-component-title-label-simple.interface';
+import { THorizontalAlignment, TLabelColor, TLabelTheme } from '../../simple/gl-component-title-label-simple.interface';
 import { GlComponentTitleLabelSimpleComponent } from '../../simple/gl-component-title-label-simple.component';
 
 @Component({
@@ -16,7 +15,8 @@ export class GlComponentTitleLabelButtonContainerComponent {
   @Input() id;
   @Input() labelAlignment: THorizontalAlignment;
   @Input() required = false;
-  @Input() theme: TTheme = '';
+  @Input() theme: TLabelTheme = '';
+  @Input() labelColor: TLabelColor = '';
   @Input() requiredFieldDescription = 'Required field';
 
   constructor() { }

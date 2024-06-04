@@ -39,5 +39,21 @@
     &.dark {
       background-color: c-gray-dark.$d3-4;
     }
+
+    &.color-black {
+      color: black;
+    }
+    &.color-white {
+      color: white;
+    }
+    &.color-springgreen {
+      color: springgreen;
+    }
+    &.color-greenyellow {
+      color: greenyellow;
+    }
+    &.color-deepskyblue {
+      color: deepskyblue;
+    }
   }
 }

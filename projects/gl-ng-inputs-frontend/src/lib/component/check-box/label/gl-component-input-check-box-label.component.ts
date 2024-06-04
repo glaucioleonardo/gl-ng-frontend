@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { THorizontalAlignment } from '../../../core/interfaces/alignments.interface';
 import { GlComponentInputCheckBoxSimpleComponent } from '../simple/gl-component-input-check-box-simple.component';
 import { GlComponentTitleLabelSimpleComponent } from '../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.component';
+import { TLabelColor, TLabelTheme } from '../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.interface';
 
 @Component({
     selector: 'gl-component-input-check-box-label',
@@ -20,6 +21,8 @@ export class GlComponentInputCheckBoxLabelComponent {
   @Input() required: boolean;
   @Input() labelValue: string;
   @Input() requiredLabelDescription: string;
+  @Input() labelTheme: TLabelTheme = ''
+  @Input() labelColor: TLabelColor = '';
 
   @Output() checked$: EventEmitter<boolean> = new EventEmitter();
 

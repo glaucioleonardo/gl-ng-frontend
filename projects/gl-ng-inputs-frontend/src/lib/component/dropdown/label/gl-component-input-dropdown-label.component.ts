@@ -3,6 +3,7 @@ import { THorizontalAlignment } from '../../../core/interfaces/alignments.interf
 import { IDropdownSettings, ListItem } from '../simple/gl-component-input-dropdown-simple.model';
 import { GlComponentInputDropdownSimpleComponent } from '../simple/gl-component-input-dropdown-simple.component';
 import { GlComponentTitleLabelSimpleComponent } from '../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.component';
+import { TLabelColor, TLabelTheme } from '../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.interface';
 
 @Component({
     selector: 'gl-component-input-dropdown-label',
@@ -23,6 +24,9 @@ export class GlComponentInputDropdownLabelComponent {
   @Input() settings: IDropdownSettings;
   @Input() selected: ListItem[];
   @Input() data: ListItem[];
+
+  @Input() labelTheme: TLabelTheme = ''
+  @Input() labelColor: TLabelColor = '';
 
   @Input() iconPreview: string;
   @Input() showIcon = false;

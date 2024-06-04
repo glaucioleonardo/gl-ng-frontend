@@ -5,6 +5,7 @@ import { IDatePickerMonthYearOutput } from '../simple/month-year/gl-component-in
 import { GlComponentInputDatepickerSimpleMonthYearComponent } from '../simple/month-year/gl-component-input-datepicker-simple-month-year.component';
 import { GlComponentTitleLabelSimpleComponent } from '../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.component';
 import { GlComponentInputDatepickerSimpleDayMonthYearComponent } from '../simple/day-month-year/gl-component-input-datepicker-simple-day-month-year.component';
+import { TLabelColor, TLabelTheme } from '../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.interface';
 
 @Component({
     selector: 'gl-component-input-datepicker-label',
@@ -21,6 +22,9 @@ export class GlComponentInputDatepickerLabelComponent implements OnInit {
   @Input() theme: TTheme = '';
   @Input() value: Date = null;
   @Input() dateFormat: 'MM/YYYY' | 'DD/MM/YYYY' = 'DD/MM/YYYY';
+
+  @Input() labelTheme: TLabelTheme = ''
+  @Input() labelColor: TLabelColor = '';
 
   @Input() maxLength = 255;
   @Input() labelValue: string;

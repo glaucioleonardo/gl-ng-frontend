@@ -40,21 +40,46 @@
     &.light {
       background-color: c-black-translucid.$t3;
     }
-
     &.dark {
       background-color: c-gray-dark.$d3-4;
     }
-
     &.category-title {
       @extend %title;
       background-color: c-pink-dark.$d;
     }
-
     &.category-title-light {
       @extend %title;
       background-color: white;
       color: c-gray-dark.$d3-2;
     }
+
+    &.simple {
+      border-radius: unset;
+      text-transform: unset;
+      padding: unset;
+
+      margin: 0.5em;
+      display: block;
+      font-size: 0.8em;
+      font-weight: 700;
+    }
+
+    &.color-black {
+      color: black;
+    }
+    &.color-white {
+      color: white;
+    }
+    &.color-springgreen {
+      color: springgreen;
+    }
+    &.color-greenyellow {
+      color: greenyellow;
+    }
+    &.color-deepskyblue {
+      color: deepskyblue;
+    }
+
 
     &.left {
       text-align: left;

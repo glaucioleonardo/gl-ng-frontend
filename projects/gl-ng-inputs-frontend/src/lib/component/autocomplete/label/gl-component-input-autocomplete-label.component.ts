@@ -3,6 +3,7 @@ import { IComboBoxData } from 'gl-w-combobox-frontend';
 import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignments.interface';
 import { GlComponentTitleLabelSimpleComponent } from '../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.component';
 import { GlComponentInputAutocompleteSimpleComponent } from '../simple/gl-component-input-autocomplete-simple.component';
+import { TLabelColor, TLabelTheme } from '../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.interface';
 
 @Component({
     selector: 'gl-component-input-autocomplete-label',
@@ -26,6 +27,8 @@ export class GlComponentInputAutocompleteLabelComponent {
   @Input() theme: TTheme = '';
   @Input() value;
   @Input() required: boolean;
+  @Input() labelTheme: TLabelTheme = ''
+  @Input() labelColor: TLabelColor = '';
 
   @Input() custom: boolean;
   @Input() baseUrl: string;

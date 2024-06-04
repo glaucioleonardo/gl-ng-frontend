@@ -1,7 +1,8 @@
 <!--suppress XmlInvalidId -->
 <label
   #label
-  class="header-data {{ labelAlignment }} {{ theme }}"
+  class="header-data {{ labelAlignment }} {{ theme }} {{ labelColor }}"
+  [style.color]="customLabelColor"
   [attr.for]="id">{{ labelValue }}
 </label>
 

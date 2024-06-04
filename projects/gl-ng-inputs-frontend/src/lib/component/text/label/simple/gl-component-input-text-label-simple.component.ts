@@ -4,6 +4,7 @@ import { THorizontalAlignment, TTheme } from '../../../../core/interfaces/alignm
 import { TInputTextMask, TInputType } from '../../simple/gl-component-input-text-simple.interface';
 import { GlComponentInputTextSimpleComponent } from '../../simple/gl-component-input-text-simple.component';
 import { GlComponentTitleLabelSimpleComponent } from '../../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.component';
+import { TLabelColor, TLabelTheme } from '../../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.interface';
 
 @Component({
     selector: 'gl-component-input-text-label-simple',
@@ -23,6 +24,9 @@ export class GlComponentInputTextLabelSimpleComponent {
   @Input() theme: TTheme = '';
   @Input() value: string = null;
   @Input() type: TInputType = 'text';
+  @Input() labelTheme: TLabelTheme = ''
+  @Input() labelColor: TLabelColor = '';
+  @Input() customLabelColor: string = '';
 
   @Input() allowMinus = true;
   @Input() rightAlign = true;

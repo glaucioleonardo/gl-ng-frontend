@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { THorizontalAlignment, TLabelTheme } from './gl-component-title-label-simple.interface';
+import { THorizontalAlignment, TLabelColor, TLabelTheme } from './gl-component-title-label-simple.interface';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -15,6 +15,8 @@ export class GlComponentTitleLabelSimpleComponent implements AfterViewInit {
   @Input() labelValue;
   @Input() id;
   @Input() labelAlignment: THorizontalAlignment;
+  @Input() labelColor: TLabelColor = '';
+  @Input() customLabelColor: string = '';
   @Input() theme: TLabelTheme = '';
 
   @Input() required = false;
