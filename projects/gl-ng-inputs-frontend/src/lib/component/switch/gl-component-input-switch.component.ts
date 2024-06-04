@@ -9,7 +9,7 @@ import { NgOptimizedImage } from '@angular/common';
   imports: [NgOptimizedImage]
 })
 export class GlComponentInputSwitchComponent {
-  @Input() enabled = true;
+  @Input() disabled = false;
   @Input() active = false;
   @Input() label: string;
   @Input() labelColor: 'white' | 'black' = 'white';
@@ -23,7 +23,7 @@ export class GlComponentInputSwitchComponent {
   constructor() { }
 
   activate(): void {
-    if (this.enabled) {
+    if (this.disabled) {
       this.active = !this.active;
       this.active$.emit(this.active);
     }

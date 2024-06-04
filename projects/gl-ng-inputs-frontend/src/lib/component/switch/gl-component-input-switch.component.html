@@ -1,4 +1,4 @@
-<div class="switch-main-container {{ enabled ? '' : 'disabled' }} {{ showAsInputButton ? 'show-as-button' : '' }}"
+<div class="switch-main-container {{ disabled ? 'disabled' : '' }} {{ showAsInputButton ? 'show-as-button' : '' }}"
   (click)="onContainerClick()">
   @if (showAsInputButton && buttonIconSrc?.length > 0) {
     <img

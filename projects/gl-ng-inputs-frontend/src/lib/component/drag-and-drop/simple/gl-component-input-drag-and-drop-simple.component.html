@@ -1,7 +1,7 @@
 @if (showContinueUpload) {
   <gl-component-input-switch
     [active]="continueUpload"
-    [enabled]="!readOnly"
+    [disabled]="!readOnly"
     [label]="continueUploadLabel"
     (active$)="onContinueUpload($event)"
     class="drag-and-drop-continue-switch"
