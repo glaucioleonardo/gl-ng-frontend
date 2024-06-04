@@ -4,34 +4,43 @@
   width: 100%;
   align-items: stretch;
   justify-content: stretch;
-  margin: 1px;
 
-  gl-component-input-autocomplete-simple {
-    font-size: 1em;
+  .item-container {
+    display: flex;
+    flex: 1 1 auto;
+    width: 100%;
+    align-items: stretch;
+    justify-content: stretch;
+    margin: 1px;
 
-    .item-content {
-      font-size: 1em;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-    }
+    &.default-label {
+      gl-component-input-autocomplete-simple {
+        font-size: 1em;
 
-    .custom-combobox {
-      border-bottom-left-radius: 0.5em;
-      border-bottom-right-radius: 0.5em;
+        .item-content {
+          font-size: 1em;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
 
-      .combobox-container {
-        input {
-          border-radius: 0.5em;
+        .custom-combobox {
+          border-bottom-left-radius: 0.5em;
+          border-bottom-right-radius: 0.5em;
+
+          .combobox-container {
+            input {
+              border-radius: 0.5em;
+            }
+          }
         }
       }
-    }
-  }
-
-  gl-component-title-label-simple {
-    .header-data {
-      font-size: 1em;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+      gl-component-title-label-simple {
+        .header-data {
+          font-size: 1em;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
     }
   }
 }

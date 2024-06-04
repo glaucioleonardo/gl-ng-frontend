@@ -3,6 +3,7 @@ import { THorizontalAlignment, TTheme } from '../../../core/interfaces/alignment
 import { ISimpleTextAreaResult } from '../simple/gl-component-input-text-area-simple.interface';
 import { GlComponentTitleLabelSimpleComponent } from '../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.component';
 import { GlComponentInputTextAreaSimpleComponent } from '../simple/gl-component-input-text-area-simple.component';
+import { TLabelColor, TLabelTheme } from '../../../../../../gl-ng-titles-frontend/src/lib/component/label/simple/gl-component-title-label-simple.interface';
 
 @Component({
     selector: 'gl-component-input-text-area-label',
@@ -20,6 +21,10 @@ export class GlComponentInputTextAreaLabelComponent {
   @Input() itemContentAlignment: THorizontalAlignment;
   @Input() theme: TTheme = '';
   @Input() autoScroll: boolean = false;
+
+  @Input() labelTheme: TLabelTheme = ''
+  @Input() labelColor: TLabelColor = '';
+  @Input() customLabelColor: string = '';
 
   @Input() value = '';
   @Input() maxLength: number;

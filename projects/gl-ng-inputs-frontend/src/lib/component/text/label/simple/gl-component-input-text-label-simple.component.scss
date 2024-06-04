@@ -17,22 +17,24 @@
     width: 100%;
     flex: 1 1 auto;
 
-    gl-component-title-label-simple {
-      font-size: 1em;
-      .header-data {
+    &.default-label {
+      gl-component-title-label-simple {
         font-size: 1em;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        .header-data {
+          font-size: 1em;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
       }
-    }
 
-    gl-component-input-text-simple {
-      font-size: 1em;
-
-      .item-content {
+      gl-component-input-text-simple {
         font-size: 1em;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+
+        .item-content {
+          font-size: 1em;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
       }
     }
   }

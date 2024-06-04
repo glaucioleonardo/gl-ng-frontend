@@ -5,21 +5,30 @@
   width: 100%;
   align-items: stretch;
   justify-content: stretch;
-  margin: 1px;
 
-  gl-component-title-label-simple {
-    .header-data {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-  }
+  .item-container {
+    font-size: 1em;
+    display: flex;
+    flex: 1 1 auto;
+    width: 100%;
+    align-items: stretch;
+    justify-content: stretch;
+    margin: 1px;
 
-  gl-component-input-text-area-simple {
-    .item-content {
-      border-top-left-radius: 0 !important;
-      border-top-right-radius: 0 !important;
+    &.default-label {
+      gl-component-title-label-simple {
+        .header-data {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+
+      gl-component-input-text-area-simple {
+        .item-content {
+          border-top-left-radius: 0 !important;
+          border-top-right-radius: 0 !important;
+        }
+      }
     }
   }
 }
-
-

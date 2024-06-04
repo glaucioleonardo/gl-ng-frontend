@@ -8,21 +8,25 @@
   margin: 1px;
   position: relative;
 
-  gl-component-input-dropdown-simple {
-    font-size: 1em;
+  .item-container {
+    &.default-label {
+      gl-component-input-dropdown-simple {
+        font-size: 1em;
 
-    .dropdown-btn {
-      font-size: 1em;
-      border-top-left-radius: 0 !important;
-      border-top-right-radius: 0 !important;
-    }
-  }
+        .dropdown-btn {
+          font-size: 1em;
+          border-top-left-radius: 0 !important;
+          border-top-right-radius: 0 !important;
+        }
+      }
 
-  gl-component-title-label-simple {
-    .header-data {
-      font-size: 1em;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+      gl-component-title-label-simple {
+        .header-data {
+          font-size: 1em;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
     }
   }
 }

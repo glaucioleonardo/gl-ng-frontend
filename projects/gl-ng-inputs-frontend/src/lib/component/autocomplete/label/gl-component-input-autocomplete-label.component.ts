@@ -29,6 +29,7 @@ export class GlComponentInputAutocompleteLabelComponent {
   @Input() required: boolean;
   @Input() labelTheme: TLabelTheme = ''
   @Input() labelColor: TLabelColor = '';
+  @Input() customLabelColor: string = '';
 
   @Input() custom: boolean;
   @Input() baseUrl: string;

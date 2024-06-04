@@ -53,10 +53,32 @@
       color: c-gray-dark.$d3-2;
     }
 
+    &.left {
+      text-align: left;
+    }
+    &.center {
+      text-align: center;
+    }
+    &.right {
+      text-align: right;
+    }
+
+    &.report {
+      @include fonts.font-family-custom(thin);
+      text-transform: uppercase;
+      font-size: 1em;
+      padding: 0.5em;
+      color: white;
+      font-weight: 100;
+      background-color: rgba(c-black.$d, 0.1);
+    }
+
+
     &.simple {
       border-radius: unset;
       text-transform: unset;
       padding: unset;
+      background-color: unset;
 
       margin: 0.5em;
       display: block;
@@ -78,27 +100,6 @@
     }
     &.color-deepskyblue {
       color: deepskyblue;
-    }
-
-
-    &.left {
-      text-align: left;
-    }
-    &.center {
-      text-align: center;
-    }
-    &.right {
-      text-align: right;
-    }
-
-    &.report {
-      @include fonts.font-family-custom(thin);
-      text-transform: uppercase;
-      font-size: 1em;
-      padding: 0.5em;
-      color: white;
-      font-weight: 100;
-      background-color: rgba(c-black.$d, 0.1);
     }
   }
 

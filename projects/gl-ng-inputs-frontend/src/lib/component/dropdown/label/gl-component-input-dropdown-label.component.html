@@ -1,25 +1,28 @@
-<gl-component-title-label-simple
-  [labelAlignment]="labelAlignment"
-  [required]="required"
-  [labelValue]="labelValue"
-  [requiredLabel]="requiredLabelDescription"
-  [id]="labelId"
-  [labelColor]="labelColor"
-  [theme]="labelTheme"
-></gl-component-title-label-simple>
+<div class="item-container {{ labelTheme !== 'simple' ? 'default-label' : '' }}">
+  <gl-component-title-label-simple
+    [labelAlignment]="labelAlignment"
+    [required]="required"
+    [labelValue]="labelValue"
+    [requiredLabel]="requiredLabelDescription"
+    [id]="labelId"
+    [labelColor]="labelColor"
+    [customLabelColor]="customLabelColor"
+    [theme]="labelTheme"
+  ></gl-component-title-label-simple>
 
-<gl-component-input-dropdown-simple
-  [placeholder]="placeholder"
-  [disabled]="disabled"
-  [settings]="settings"
-  [selected]="selected"
-  [data]="data"
-  [showIcon]="showIcon"
-  [iconPreview]="iconPreview"
-  ($filterChange)="$filterChange.emit($event)"
-  ($dropDownClose)="$dropDownClose.emit($event)"
-  ($select)="$select.emit($event)"
-  ($deselect)="$deselect.emit($event)"
-  ($selectAll)="$selectAll.emit($event)"
-  ($deselectAll)="$deselectAll.emit($event)"
-></gl-component-input-dropdown-simple>
+  <gl-component-input-dropdown-simple
+    [placeholder]="placeholder"
+    [disabled]="disabled"
+    [settings]="settings"
+    [selected]="selected"
+    [data]="data"
+    [showIcon]="showIcon"
+    [iconPreview]="iconPreview"
+    ($filterChange)="$filterChange.emit($event)"
+    ($dropDownClose)="$dropDownClose.emit($event)"
+    ($select)="$select.emit($event)"
+    ($deselect)="$deselect.emit($event)"
+    ($selectAll)="$selectAll.emit($event)"
+    ($deselectAll)="$deselectAll.emit($event)"
+  ></gl-component-input-dropdown-simple>
+</div>

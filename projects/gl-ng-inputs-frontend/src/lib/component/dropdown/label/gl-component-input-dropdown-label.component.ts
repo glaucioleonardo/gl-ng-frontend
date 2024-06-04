@@ -27,6 +27,7 @@ export class GlComponentInputDropdownLabelComponent {
 
   @Input() labelTheme: TLabelTheme = ''
   @Input() labelColor: TLabelColor = '';
+  @Input() customLabelColor: string = '';
 
   @Input() iconPreview: string;
   @Input() showIcon = false;

@@ -25,6 +25,7 @@ export class GlComponentInputDatepickerLabelComponent implements OnInit {
 
   @Input() labelTheme: TLabelTheme = ''
   @Input() labelColor: TLabelColor = '';
+  @Input() customLabelColor: string = '';
 
   @Input() maxLength = 255;
   @Input() labelValue: string;

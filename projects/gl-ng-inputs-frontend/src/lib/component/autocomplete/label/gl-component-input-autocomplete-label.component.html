@@ -1,18 +1,19 @@
-<gl-component-input-autocomplete-simple
-  [theme]="theme"
-  [value]="value"
-  [listName]="listName"
-  (currentValue)="onCurrentValue($event)"
-  [id]="id"
-  [itemContentAlignment]="itemContentAlignment"
-  [placeholder]="placeholder"
-  [listItems]="listItems"
-  [disabled]="disabled"
+<div class="item-container {{ labelTheme !== 'simple' ? 'default-label' : '' }}">
+  <gl-component-input-autocomplete-simple
+    [theme]="theme"
+    [value]="value"
+    [listName]="listName"
+    (currentValue)="onCurrentValue($event)"
+    [id]="id"
+    [itemContentAlignment]="itemContentAlignment"
+    [placeholder]="placeholder"
+    [listItems]="listItems"
+    [disabled]="disabled"
 
-  [custom]="custom"
-  [baseUrl]="baseUrl"
-  [valueField]="valueField"
-  [textField]="textField"
+    [custom]="custom"
+    [baseUrl]="baseUrl"
+    [valueField]="valueField"
+    [textField]="textField"
   ><gl-component-title-label-simple
     [id]="id"
     [labelAlignment]="labelAlignment"
@@ -21,5 +22,8 @@
     [requiredLabel]="requiredField"
     [theme]="labelTheme"
     [labelColor]="labelColor"
+    [customLabelColor]="customLabelColor"
   ></gl-component-title-label-simple>
-</gl-component-input-autocomplete-simple>
+  </gl-component-input-autocomplete-simple>
+</div>
+

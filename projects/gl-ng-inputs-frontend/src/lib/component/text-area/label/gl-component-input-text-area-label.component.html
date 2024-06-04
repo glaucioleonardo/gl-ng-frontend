@@ -1,3 +1,6 @@
+<div class="item-container {{ labelTheme !== 'simple' ? 'default-label' : '' }}">
+
+</div>
 <gl-component-input-text-area-simple
   [theme]="theme"
   [id]="id"
@@ -9,10 +12,13 @@
   [maxLength]="maxLength"
   [autoScroll]="autoScroll">
   <gl-component-title-label-simple
-    [theme]="theme"
+    [theme]="labelTheme"
+    [labelColor]="labelColor"
+    [customLabelColor]="customLabelColor"
     [labelAlignment]="labelAlignment"
     [id]="id"
     [labelValue]="labelValue"
+
     [required]="required"
     [requiredLabel]="requiredLabel"
   ></gl-component-title-label-simple>
