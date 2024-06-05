@@ -64,7 +64,8 @@ export class GlComponentInputTextSimpleComponent implements AfterViewInit, OnDes
       case 'PageDown': case 'NumLock':
         break;
       default:
-        if (!event.altKey && !event.ctrlKey) {
+        const pastedValue = event.ctrlKey && event.key === 'v' || event.ctrlKey && event.key === 'V'
+        if ((!event.altKey && !event.ctrlKey) || pastedValue) {
           let parsedValue: string = value;
 
           if (this.mask != null) {
