@@ -7,7 +7,7 @@
 
 <input
   #inputElement
-  class="item-content {{ itemContentAlignment }} {{ theme }} {{ showIcon ? 'show-icon' : '' }}"
+  class="item-content {{ disabled ? 'disabled' : '' }} {{ itemContentAlignment }} {{ theme }} {{ showIcon ? 'show-icon' : '' }}"
   [type]="type"
   [id]="id"
   [value]="value"

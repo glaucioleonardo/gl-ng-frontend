@@ -76,6 +76,10 @@
     &.show-icon {
       padding-left: 4em;
     }
+
+    &.disabled {
+      background-color: rgb(220, 220, 220);
+    }
   }
 
   .item-content:-ms-input-placeholder {

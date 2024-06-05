@@ -23,7 +23,7 @@ export class GlComponentInputSwitchComponent {
   constructor() { }
 
   activate(): void {
-    if (this.disabled) {
+    if (!this.disabled) {
       this.active = !this.active;
       this.active$.emit(this.active);
     }
