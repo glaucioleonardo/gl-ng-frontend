@@ -3,7 +3,7 @@
   <!--suppress HtmlFormInputWithoutLabel -->
   <textarea
     #textArea
-    class="item-content {{ itemContentAlignment }} {{ theme }}"
+    class="item-content {{ disabled ? 'disabled' : '' }} {{ itemContentAlignment }} {{ theme }}"
     [id]="id"
     [placeholder]="placeholder"
     (keyup)="onKeyUp($event)"

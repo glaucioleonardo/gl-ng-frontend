@@ -63,6 +63,10 @@
       &.dark {
         background-color: c-gray-dark.$d3-2;
       }
+
+      &.disabled {
+        background-color: rgb(180, 180, 180);
+      }
     }
 
     .item-content:-ms-input-placeholder {
